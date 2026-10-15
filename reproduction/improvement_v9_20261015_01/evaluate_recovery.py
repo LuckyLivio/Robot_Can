@@ -35,7 +35,7 @@ def run(job,out):
     cls,cfg_cls=controller_class(job['version'])
     cfg=cfg_cls(**job.get('config',{}));env=make_env(False);rows=[]
     payload={'status':'running','job':job,'records':rows,'input':'PRIVILEGED_CURRENT_STATE_AND_FIXED_TASK_GOAL',
-             'supervisor_note':'Observation history only. Reward/contact/success are not used in choose(). No learned weight changes.'}
+             'supervisor_note':'Original 23D observation history plus current 7 arm joint positions for v9 joint-aware variants only; fixed FK asset. No contact/reward/success/future rollout in choose(). Frozen BC/WM inputs unchanged.'}
     dataset=ROOT/job['dataset'] if job.get('dataset') else DATA
     with (out/'result.json').open('x',encoding='utf-8') as result,(out/'trace.jsonl').open('x',encoding='utf-8') as trace,h5py.File(dataset) as data:
         def save(status):
@@ -46,12 +46,17 @@ def run(job,out):
                 obs=restore_demo(env,data['data'][name]);verify_control(env)
                 x0=pack_obs(obs);target=env.target_bin_placements[env.object_to_id['can']].copy()
                 supervisor=cls(target,env.bin2_pos[2],x0,job.get('enabled',True),cfg)
+                joint_ids=[env.sim.model.joint_name2id('robot0_joint'+str(i)) for i in range(1,8)]
+                joint_qadr=env.sim.model.jnt_qposadr[joint_ids]
                 pending=deque([np.zeros(7,np.float32) for _ in range(2)],maxlen=3)
                 rng=np.random.default_rng(70000+int(name.split('_')[1]));previous=np.zeros(7,np.float32)
                 peak=0.;ever_contact=False;success=False;interventions=0;stable_steps=0;decisions=[];normal_choices=[];modes=Counter()
                 fault_left=0;fault_step=None;start=time.perf_counter()
                 for step in range(job.get('steps',400)):
-                    x=pack_obs(obs);base=policy.best(torch.from_numpy(x[None]))[0].numpy();tic=time.perf_counter()
+                    total_tic=time.perf_counter()
+                    x=pack_obs(obs);joints=env.sim.data.qpos[joint_qadr].copy()
+                    if hasattr(supervisor,'set_joint_positions'):supervisor.set_joint_positions(joints)
+                    base=policy.best(torch.from_numpy(x[None]))[0].numpy();tic=time.perf_counter()
                     if model is None:proposal=base[2].copy();selected=2;scores=None
                     else:
                         seq=sequences(list(pending),base[:4],8);_,_,scores=predict(model,x,seq)
@@ -68,7 +73,8 @@ def run(job,out):
                     injected=fault_left>0
                     if injected:action[6]=-1.;fault_left-=1
                     decisions.append(time.perf_counter()-tic);normal_choices.append(selected)
-                    row={'demo':name,'step':step+1,'state_before':x.tolist(),'base_chunk':base.tolist(),
+                    row={'demo':name,'step':step+1,'state_before':x.tolist(),'joint_positions':joints.tolist(),'base_chunk':base.tolist(),
+                         'total_policy_and_supervisor_ms':1000*(time.perf_counter()-total_tic),
                          'queue_before':np.asarray(pending).tolist(),'original_proposal':proposal.tolist(),
                          'original_selected':selected,'original_scores':None if scores is None else scores.tolist(),
                          'submitted_action':action.tolist(),'recovery':diagnostic,'fault_injected':injected}
@@ -90,6 +96,8 @@ def run(job,out):
                          'failed_attempts':supervisor.failed_attempts,'phases':dict(modes),'events':supervisor.events,
                          'guard_events':getattr(supervisor,'guard_events',[]),
                          'geometry_events':getattr(supervisor,'geometry_events',[]),
+                         'joint_events':getattr(supervisor,'joint_events',[]),
+                         'planning_events':getattr(supervisor,'planning_events',[]),
                          'pose_events':getattr(supervisor,'pose_events',[]),
                          'pose_replans':getattr(supervisor,'pose_replans',0),
                          'fault_step':fault_step,'mean_decision_ms':float(np.mean(decisions)*1000),

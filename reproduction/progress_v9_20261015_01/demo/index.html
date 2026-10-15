@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light"><meta name="description" content="世界模型驱动的延迟机器人操控：预测候选后果、同起点机器人对比、受控实验与论文改进贡献。">
+  <title>CAN LAB · 世界模型驱动的机器人操控</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231d1d1f'/%3E%3Cpath d='M42 19a17 17 0 1 0 0 26' fill='none' stroke='white' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=5979a72f43a8"><link rel="stylesheet" href="consolidation.css?v=81a7b251d1c5"><link rel="stylesheet" href="world-model.css?v=fae4de9028b2">
+  <script src="data.js?v=3d60ebbb66ac" defer></script><script src="evidence.js?v=99e5ca4dd276" defer></script><script src="app.js?v=8f6b194b5b36" defer></script><script src="consolidation.js?v=782d7bd5576a" defer></script><script src="world-model-data.js?v=7d6426535ad5" defer></script><script src="world-model.js?v=32668b717136" defer></script>
+<link rel="stylesheet" href="progress.css?v=34bd0b62bff9"><script src="progress.js?v=ac924f249ae8" defer></script>
+<script src="recovery-media.js?v=3a67bc5fb759" defer></script><script src="recovery-player.js?v=91103a094877" defer></script>
+</head>
+<body>
+<a class="skip" href="#overview">跳到世界模型方法</a>
+<header class="site-header"><div class="nav-wrap">
+  <a href="#top" class="wordmark"><span class="brand-icon" aria-hidden="true">C</span> CAN LAB<span class="brand-sub">ROBOTICS</span></a>
+  <nav aria-label="主导航"><a href="#latest">最新进展</a><a href="#demo">原始演示</a><a href="#candidate-demo">恢复对比</a><a href="#trajectory">日志动画</a><a href="#results">结果</a><a href="#innovation">贡献</a><a href="#evidence">证据</a></nav>
+  <span class="release-status"><span></span> 实验进展 · 2026.10.15</span>
+</div></header>
+<main id="top">
+<section id="latest" class="wrap latest-section" aria-labelledby="latest-title">
+<div class="latest-heading"><div><p class="eyebrow">RESEARCH LOG / 每一步改进，都有证据</p><h2 id="latest-title">当前进展，公开呈现。</h2></div><p id="progress-time">正在读取状态…</p></div>
+<div class="progress-grid"><article class="progress-card"><h3>已采用的主版本</h3><strong>v5 · 结果冻结</strong><p>开发 236/240；独立原生确认 464/480。已有成果保留，后续候选不会自动替换。</p></article><article class="progress-card"><h3>v6 / v7 · 候选修复</h3><strong>机制改善 ≠ 全面提升</strong><p>v6 开发仍为 236/240；v7 合用小测试 30/37，低于 v6 的 31/37，尚未采用。</p></article><article class="progress-card dark"><h3>v9 · 本轮迭代</h3><strong id="v9-state">读取中</strong><p>关节限位下的等价姿态选择与规划耗时。小测试和消融达标后才进入 240 回合开发对照，保持 400 步预算。</p></article></div>
+<details class="progress-details"><summary>查看候选消融与证据</summary><p>不同阶段分开统计；37 条件为已知诊断，不是独立确认。</p><table><thead><tr><th>版本 / 阶段</th><th>成功 / 回合</th><th>判断</th></tr></thead><tbody id="progress-table"></tbody></table></details>
+<p id="progress-error" hidden role="alert">最新状态加载失败，请通过项目根目录的 HTTP 服务打开，或查看下方报告。</p>
+<div class="progress-links"><a href="../../improvement_v9_20261015_01/README.md">v9 当前计划 ↗</a><a href="../../improvement_v6_20261015_01/REPORT.md">v6 完整报告 ↗</a><a href="../../improvement_v7_20261015_01/REPORT.md">v7 负结果与原因 ↗</a><a href="../../improvement_v7_20261015_01/FRONTEND_AUDIT.md">运动与帧率核查 ↗</a><a href="../../consolidation_20261012_01/demo/index.html">历史整合页 ↗</a></div>
+</section>
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-text"><p class="eyebrow">WORLD MODEL / 世界模型驱动的延迟机器人操控</p>
+      <h1 id="hero-title">先预测后果。<br><span>再决定动作。</span></h1>
+      <p class="hero-copy">机器人发出的指令，要在 100 ms 后执行。<br>世界模型为四个候选预估未来，再选择下一步。</p>
+      <div class="hero-actions"><a class="primary-link" href="#demo">看机器人对比 ↗</a><a href="#innovation">看论文改进与贡献 →</a></div>
+      <p class="scope-line">Panda · PickPlaceCan · 23维低维仿真状态<br>400步预算 · 3个训练种子 · 原独立确认60个起点</p>
+    </div>
+    <div class="hero-visual"><div class="visual-top"><span>ACTION → FUTURE</span><span id="visual-stage">读取状态</span></div>
+      <h2>同一个现在。<br>比较不同的未来。</h2>
+      <svg class="branch-svg" viewBox="0 0 420 190" role="img" aria-labelledby="branch-title branch-desc">
+        <title id="branch-title">世界模型候选展开机制示意</title><desc id="branch-desc">共同的两步FIFO命令前缀，接入四个不同动作候选，预测后结合进展与风险评分，再提交一个动作。线条是概念示意，不是实验轨迹。</desc>
+        <defs><linearGradient id="branch-blue"><stop stop-color="#50afff"/><stop offset="1" stop-color="#95d3ff"/></linearGradient></defs>
+        <rect x="2" y="63" width="105" height="65" rx="15" fill="#303746" stroke="#4a556a"/>
+        <text x="54" y="88" text-anchor="middle" fill="#edf4ff" font-size="12">当前状态</text><text x="54" y="110" text-anchor="middle" fill="#9faec5" font-size="10">2步待执行命令</text>
+        <g fill="none" stroke="#56667f" stroke-width="2"><path d="M107 96H130Q145 96 145 24H172"/><path d="M107 96H140Q153 96 153 71H172"/><path d="M107 96H140Q153 96 153 120H172"/><path d="M107 96H130Q145 96 145 167H172"/></g>
+        <g fill="#d0dded" font-size="10"><text x="181" y="19">k=0</text><text x="181" y="66">k=1</text><text x="181" y="115">k=2</text><text x="181" y="162">k=3</text></g>
+        <g fill="none" stroke-width="2.6" stroke-linecap="round"><path d="M174 27C216 27 227 42 286 28" stroke="#677589"/><path d="M174 75C215 75 234 58 286 69" stroke="url(#branch-blue)"/><path d="M174 124C221 124 232 116 286 123" stroke="#8996aa"/><path d="M174 171C221 171 235 146 286 166" stroke="#677589"/></g>
+        <g fill="none" stroke="#51647c" stroke-width="1.7"><path d="M293 28H300Q315 28 315 91H329"/><path d="M293 69H306Q315 69 315 91H329"/><path d="M293 123H306Q315 123 315 99H329"/><path d="M293 166H300Q315 166 315 99H329"/></g>
+        <rect x="329" y="62" width="87" height="66" rx="15" fill="#173b64" stroke="#468fd6"/>
+        <text x="372" y="88" text-anchor="middle" fill="#e2f1ff" font-size="12">进展 / 风险</text><text x="372" y="110" text-anchor="middle" fill="#9dc4ee" font-size="10">门限 + 回退</text>
+      </svg>
+      <p class="visual-caption">4 个候选 · H=8（含2步队列前缀）· 提交1个动作<br>机制示意，线条不代表实际预测轨迹。</p>
+    </div>
+  </section>
+  <div class="highlight-strip wrap" aria-label="世界模型证据概览">
+    <article><h3>原独立确认 · 干净成功率</h3><div class="highlight-value"><span id="headline-success">90</span><small>%</small></div><p>Full 三种子均值<br>BC k=2：85%</p></article>
+    <article><h3>原独立确认 · 两条件等权增益</h3><div class="highlight-value"><span id="headline-effect">+4.72</span><small> pp</small></div><p>Full 相对 BC k=2<br>95% 配对区间 [0.56, 10.28]</p></article>
+    <article><h3>开发集诊断 · 物体预测误差</h3><div class="highlight-value">−<span data-object-gain>32.8</span><small>%</small></div><p>Full 相对状态保持弱基线<br><span class="metric-source">复用的8个开发父起点；非独立确认</span></p></article>
+  </div>
+
+  <section id="overview" class="wrap overview" aria-labelledby="overview-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / HOW IT WORKS</p><h2 id="overview-title">把动作，先放进模型里试一遍。</h2></div><a class="quiet-link" href="../../../CONTRIBUTIONS.md">方法与贡献边界 ↗</a></div>
+    <div class="method-steps" role="group" aria-label="世界模型决策流程">
+      <button type="button" data-model-step="0" aria-pressed="true"><span>01 / OBSERVE</span><strong>读取同一状态</strong><small>固定BC提出四个动作候选</small></button>
+      <button type="button" data-model-step="1" aria-pressed="false"><span>02 / ALIGN DELAY</span><strong>还原实际延迟</strong><small>先展开队列里的两条命令</small></button>
+      <button type="button" data-model-step="2" aria-pressed="false"><span>03 / IMAGINE</span><strong>预测候选后果</strong><small>未来8步，比较进展和失抓风险</small></button>
+      <button type="button" data-model-step="3" aria-pressed="false"><span>04 / REPLAN</span><strong>执行，再规划</strong><small>优势足够才替换强BC回退</small></button>
+    </div>
+    <p class="method-note" id="model-step-detail" aria-live="polite"></p>
+  </section>
+
+  <section id="demo" class="demo-section wrap" aria-labelledby="demo-title">
+    <div class="section-heading"><div><p class="eyebrow">02 / SEE THE DIFFERENCE</p><h2 id="demo-title">这个起点，Full 完成了搬运。</h2></div>
+      <div class="segmented" role="group" aria-label="执行条件"><button type="button" data-condition="clean" aria-pressed="true">干净执行</button><button type="button" data-condition="noise005" aria-pressed="false">加入扰动</button></div>
+    </div>
+    <p class="version-note">原始 BC / Full / Plain · 演示固定 seed17 · 逐控制步回放 20 fps · 不含后续恢复。统计汇总包含 17 / 23 / 41 三个种子。成功后停帧属于终点保持。</p><p class="section-intro">默认展示 Full 独胜：同一起点，Full 在133步完成，BC k=2与Plain在400步内未完成。也可切换共同成功和失败，查看适用边界。视频均未加入后续共享恢复。</p>
+    <div class="case-tabs" role="group" aria-label="案例类型">
+      <button type="button" data-case="shared_success" aria-pressed="false"><span class="case-num">01</span><span><strong>共同成功</strong><small>强基线也能完成任务</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
+      <button type="button" data-case="full_only_success" aria-pressed="true"><span class="case-num">02</span><span><strong>Full 独胜</strong><small>观察不同动作的后果</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
+      <button type="button" data-case="shared_failure" aria-pressed="false"><span class="case-num">03</span><span><strong>共同未完成</strong><small>保留失败边界</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
+    </div>
+    <div class="theater"><div class="theater-top"><span>原始仿真视频</span><span id="scene-label">同一起点 / 同一时间轴</span><span id="scene-number" class="scene-number">01 / 06</span></div>
+      <video id="player" controls playsinline preload="metadata" aria-label="原始BC、Full、Plain对比视频" aria-describedby="scene-description"></video>
+      <p id="media-error" role="alert" hidden>视频未能加载，可使用下载链接直接打开原视频。</p>
+    </div>
+    <div class="playback-tools"><p id="case-info" aria-live="polite"></p><div class="playback-actions"><button type="button" class="text-button" id="play-button">播放演示 ▶</button><label class="sr-only" for="speed">视频速度</label><select id="speed" aria-label="视频速度"><option value="0.5">0.5× 速度</option><option value="1" selected>1× 速度</option><option value="2">2× 速度</option></select><a id="download" download>下载视频 ↓</a></div></div>
+    <div class="outcomes" id="outcomes" aria-label="原始视频案例结果"></div>
+    <div class="scene-note"><span class="note-mark" aria-hidden="true">↳</span><p id="scene-description"></p></div>
+    <p class="selection-note">说明性案例：结果已知后按类别选取最小编号，世界模型固定种子17；不计入新的确认样本。</p>
+  </section>
+
+  <section id="results" class="results-section" aria-labelledby="results-title"><div class="wrap">
+    <div class="section-heading"><div><p class="eyebrow">03 / WORLD-MODEL EVIDENCE</p><h2 id="results-title">从一个案例，回到整组实验。</h2></div><p class="section-aside">独立起点 60 个<br>没有共享恢复 · 840 次执行</p></div>
+    <div class="result-grid">
+      <article class="result-card"><div class="result-title"><h3>干净执行</h3><span>σ = 0</span></div><div id="clean-bars"></div><div class="effect"><strong>+5.00 <small>个百分点</small></strong><p>Full − BC<br>95% 配对区间 [0.00, 11.67]</p></div></article>
+      <article class="result-card"><div class="result-title"><h3>加入扰动</h3><span>σ = 0.05</span></div><div id="noise-bars"></div><div class="effect"><strong>+4.44 <small>个百分点</small></strong><p>Full − BC<br>95% 配对区间 [0.00, 10.00]</p></div></article>
+    </div>
+    <div class="joint-result"><strong>+4.72 个百分点</strong><p>原确认的两种预设条件等权汇总：Full相对BC k=2为正向收益，95%配对区间[0.56,10.28]。60个独立起点、三训练种子；并不表示每个起点都改善。</p></div>
+    <p class="result-footnote">Full / Plain为三种子均值，每种子每条件60回合；BC一个固定权重。排序独立增益仍不足以确立。不得将本表与后续不同起点的恢复结果直接相减。</p>
+    <a class="detail-link" href="../../confirmation_20261012_01/analysis/report.txt">原始确认报告 ↗</a>
+  </div></section>
+
+  <section id="prediction" class="wrap prediction-section" aria-labelledby="prediction-title">
+    <div class="section-heading"><div><p class="eyebrow">04 / PREDICTION EVIDENCE</p><h2 id="prediction-title">预测到动作后果，才有比较的依据。</h2></div><a class="quiet-link" href="../../extensions_20261012_01/offline_metrics.json">已有开发集测量 ↗</a></div>
+    <div class="prediction-layout"><div><h3>会变化的物体，<br>不能只用“原地不动”预测。</h3><div class="prediction-gain">−<span data-object-gain>32.8</span><span>%</span></div><p>Full 的物体位置 RMSE<br>相对持续性弱基线降低</p><p>52.03 mm → 34.95 mm<br>开发机制诊断，三种子均值</p></div>
+      <figure><picture><source media="(max-width:600px)" srcset="../figures/prediction_rmse_mobile.svg"><img src="../../consolidation_20261012_01/figures/prediction_rmse.svg" alt="开发集位置RMSE，单位毫米：持续性末端59.17物体52.03；Plain末端29.96物体26.97；Full末端31.04物体34.95。越低越好。" loading="lazy"></picture><figcaption>64组分支 · 8个已复用开发父起点 · 所有方法同时展示</figcaption></figure>
+    </div>
+    <p class="dataset-note">这些父起点参与过开发与检查点选择，不能证明独立泛化。Plain的这两项位置误差更低；状态误差更小，也不自动意味着任务成功率更高。</p>
+    <details><summary>完整误差、短期真值对照与实验范围<span aria-hidden="true">+</span></summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>方法</th><th>末端 RMSE /mm</th><th>物体 RMSE /mm</th><th>归一化状态 MSE</th></tr></thead><tbody id="prediction-table"></tbody></table></div><p>持续性将23维状态保持为当前观测，无动作依赖。真值短期候选排序、H=1与候选数扫描均已完成；完美的短期仿真也不能替代长期抓持和搬运。</p><a href="../../extensions_20261012_01/REPORT.md">查看补充实验与负结果 ↗</a></div></details>
+  </section>
+
+  <section id="innovation" class="innovation-section" aria-labelledby="innovation-title"><div class="wrap">
+    <div class="section-heading"><div><p class="eyebrow">05 / THESIS CONTRIBUTIONS</p><h2 id="innovation-title">论文改进与贡献，落在具体问题上。</h2></div></div>
+    <p class="section-intro">世界模型提供候选后果，项目把它接入有延迟的执行闭环，并通过对照定位收益和失败。以下是已有实现与证据支持的贡献范围。</p>
+    <div class="innovation-grid">
+      <article><span class="line-index">01 / 延迟一致的候选预测</span><h3>预测和真实执行，<br>使用同一条命令队列。</h3><p>把控制器、传感器与FIFO状态纳入分支恢复，修正采集不一致；模型先预测待执行命令，再比较候选。</p><span class="innovation-tag">系统实现与一致性验证</span></article>
+      <article><span class="line-index">02 / 面向任务的候选评分</span><h3>比较任务进展，<br>也考虑失抓后果。</h3><p>结合动力学、进展与风险学习，加入候选排序和BC回退门限。三种子、Plain与真值对照检验机制；排序独立增益尚未确立。</p><span class="innovation-tag">方法设计与受控实验</span></article>
+      <article><span class="line-index">03 / 有限预算的失败恢复</span><h3>确认抓持，<br>再安排剩余搬运。</h3><p>抓持确认、无进展检测与几何/剩余时间约束，在400步内最多恢复两次。BC和Full共享这层控制，收益单独报告。</p><span class="innovation-tag">工程扩展与边界分析</span></article>
+    </div>
+    <a class="detail-link" href="../../../CONTRIBUTIONS.md">查看贡献、外部来源与不能夸大的结论 ↗</a>
+  </div></section>
+
+  <section id="recovery" class="wrap recovery-section" aria-labelledby="recovery-title">
+    <div class="section-heading"><div><p class="eyebrow">06 / SHARED RECOVERY</p><h2 id="recovery-title">在同样的预算里，多完成一些。</h2></div><a class="quiet-link" href="../../recovery_v5_20261012_01/ASSESSMENT.md">完整 v5 评估 ↗</a></div>
+    <p class="secondary-label">辅助模块 · 以下收益属于共享恢复控制</p>
+    <div class="recovery-summary">
+      <div><span class="big-value">464<span>/480</span></span><p>v5 组合 · 八种预定执行条件的合计</p></div>
+      <div><span class="big-value">+1.46<span> pp</span></span><p>相对 v4 · 95% 配对区间 [0, 4.17]</p></div>
+      <div><span class="big-value">2<span> 个起点</span></span><p>贡献了 7 次救回，未新增 v4 相对失败</p></div>
+    </div>
+    <p class="section-intro">另一批 60 个新原生起点，五版共 2400 次执行。BC 与 Full 共用同版恢复控制；整体成功率不能被解释为世界模型单独贡献。</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="v5独立确认全部版本"><table><thead><tr><th>版本</th><th>BC 干净 /60</th><th>BC 噪声 /60</th><th>Full 干净 /180</th><th>Full 噪声 /180</th><th>合计 /480</th></tr></thead><tbody id="recovery-table"></tbody></table></div>
+    <div class="findings-grid"><article><h3>时间安排</h3><p>时间单项 463/480。一个新起点的六种执行在剩余预算内完成了释放；提前启动机制本身的新起点证据仍不足。</p></article><article><h3>侧倒间隙</h3><p>侧倒单项 458/480，只救回一次新原生执行。几何压力测试没有新增侧倒任务成功，不能宣称全面解决。</p></article><article><h3>世界模型边界</h3><p>v5下，BC干净100%、噪声96.67%；Full为97.78%、94.44%。恢复收益与世界模型增益需要分别分析。</p></article></div>
+    <details><summary>单独的 16 个几何压力起点<span aria-hidden="true">+</span></summary><div class="detail-body"><p>每类仅4个起点，固定静止张爪提议、第80步启动恢复；不是原生策略分布，不并入上表。</p><div class="table-scroll"><table><thead><tr><th>版本</th><th>远端对齐 /4</th><th>目标角落 /4</th><th>源箱侧倒 /4</th><th>目标箱侧倒 /4</th><th>合计 /16</th></tr></thead><tbody id="geometry-table"></tbody></table></div><a href="../../recovery_v5_20261012_01/analysis_geometry_confirmation/summary.json">原始压力汇总 ↗</a></div></details>
+  </section>
+
+<section id="candidate-demo" class="wrap latest-section" aria-labelledby="candidate-title"><div class="latest-heading"><div><p class="eyebrow">CANDIDATE REPLAY / 新版本，也展示失败</p><h2 id="candidate-title">把恢复过程，放在一起看。</h2></div><a href="../../improvement_v8_20261015_01/REPORT.md">v8 历史实验报告 ↗</a></div>
+<p class="version-note">历史 v6 与 v8 的保存动作对比，均为候选版本。v8 未达到采用门槛；本区尚不是 v9 的机器人视频。提供 Full 的 17、23、41 三个训练种子及 BC 退步案例；每段视频内部是同一起点，不同选项可能是不同起点。它们是已知诊断，不是新的独立确认。</p>
+<div class="recovery-select"><label for="recovery-case">选择策略 / 起点</label><select id="recovery-case" aria-label="恢复演示策略与起点"></select><button id="recovery-play" type="button" class="text-button">播放对比 ▶</button><a id="recovery-download" download>下载当前对比 ↓</a></div>
+<video id="recovery-player" class="recovery-player" controls playsinline preload="metadata" aria-label="v6与v8恢复控制同起点对比"></video>
+<p id="recovery-media-error" hidden role="alert">候选视频加载失败，请使用下载链接或检查 HTTP 服务。</p><p id="recovery-case-description" aria-live="polite"></p><div id="recovery-sources" class="progress-links"></div>
+<p class="selection-note">20 fps，逐控制步渲染。未平滑机械臂动作，成功面板保持真实终点；所有状态、奖励和成功标记与保存记录核对。<a href="../../progress_20261015_01/candidate_replay_validation.json">回放核验 ↗</a></p></section>
+  <section id="trajectory" class="trajectory-section" aria-labelledby="trajectory-title"><div class="wrap">
+    <div class="section-heading"><div><p class="eyebrow">07 / RECOVERY IN DETAIL</p><h2 id="trajectory-title">沿着记录，看见恢复和失抓。</h2></div><p class="section-aside">已有 v5 日志的观测轨迹<br>不是新增三维机器人视频</p></div>
+    <div class="case-tabs" role="group" aria-label="日志轨迹案例">
+      <button type="button" data-trace-case="timing" aria-pressed="true"><span class="case-num">01</span><span><strong>时间安排</strong><small>留出释放的时间</small></span></button>
+      <button type="button" data-trace-case="side" aria-pressed="false"><span class="case-num">02</span><span><strong>侧倒间隙</strong><small>一个新起点救回</small></span></button>
+      <button type="button" data-trace-case="loss" aria-pressed="false"><span class="case-num">03</span><span><strong>失抓边界</strong><small>抓起仍可能失败</small></span></button>
+    </div>
+    <div class="trace-panel">
+      <div class="trace-head"><p id="trace-title"></p><span><i class="legend-dot baseline"></i> v4　<i class="legend-dot improved"></i> v5</span></div>
+      <div class="trace-canvases"><figure><canvas id="xy-chart" width="1000" height="650" role="img" aria-label="末端与物体XY观测轨迹"></canvas><figcaption>XY俯视观测 · 实线为罐体，虚线为末端</figcaption></figure><figure><canvas id="height-chart" width="1000" height="650" role="img" aria-label="罐体高度随控制步变化"></canvas><figcaption>罐体高度 · 横轴为实际控制步</figcaption></figure></div>
+      <p class="version-note">历史 v4 / v5 恢复轨迹。原始采样 20 Hz；尚不是 v6、v7 或 v8 / v9 的动画。</p><label class="version-note"><input id="trace-interpolation" type="checkbox" checked> 动画游标插值：仅让游标在原始样点间移动；折线和数值保留原始 20 Hz 记录，可关闭。</label><div class="trace-controls"><button type="button" id="trace-play">播放轨迹 ▶</button><label for="trace-step">控制步 <output id="trace-step-label">1 / 400</output></label><input id="trace-step" type="range" min="1" max="400" value="1" aria-label="轨迹控制步"><button type="button" id="trace-end">到终点 ↗</button></div>
+      <div id="trace-status" class="trace-status" aria-live="polite"></div>
+    </div>
+    <p id="trace-explanation" class="trace-explanation"></p>
+    <p class="selection-note">事后选例，包含两类救回和失抓失败。XY/高度为执行后观测，阶段为该步提交命令的阶段；2步FIFO仍生效。较早结束的轨迹保持末观测，不增加样本。</p>
+  </div></section>
+
+  <section id="evidence" class="evidence-section wrap" aria-labelledby="evidence-title">
+    <div class="section-heading"><div><p class="eyebrow">08 / RESEARCH & DELIVERY</p><h2 id="evidence-title">每一个结论，都有来处。</h2></div><a class="quiet-link" href="../../../PROJECT_AUDIT.md">完整度与适用性 ↗</a></div>
+    <div class="principles"><article><span>01</span><h3>已有的四组对照</h3><p>v2/v3已经比较BC、Full与各自恢复版。共享恢复同时帮助两者；最新v5起点的关闭恢复组尚未补。</p><a href="../../consolidation_20261012_01/FACTORIAL_REVIEW.md">查看同起点分析 ↗</a></article><article><span>02</span><h3>贡献与外部来源</h3><p>公共数据与仿真、固定BC、预测模型与规则恢复分别说明。对照结果允许正面和负面结论同时存在。</p><a href="../../../CONTRIBUTIONS.md">查看贡献边界 ↗</a></article><article><span>03</span><h3>相关工作与论文准备</h3><p>8篇官方文献元数据及相关方法核查，提供对照与BibTeX。文献表与提纲不是论文全文或首创证明。</p><a href="../../../RELATED_WORK.md">查看相关工作 ↗</a></article></div>
+    <details><summary>当前未解决的问题<span aria-hidden="true">+</span></summary><div class="detail-body"><p>v5原生确认有16次失败，涉及7个起点：6次物体落至恢复高度以下，4次失抓后耗尽尝试，6次其他尝试耗尽。相对v2仍有一次继承的角落退步。窄格侧倒需要实际开度、整段路径余量和抓持保持的进一步分析。</p><div class="evidence-links"><a href="../../recovery_v5_20261012_01/posthoc_failure_review.json">逐例失败 ↗</a><a href="../../consolidation_20261012_01/FOLLOWUP_PLAN.md">后续候选方案 ↗</a></div></div></details>
+    <details><summary>全部原视频案例<span aria-hidden="true">+</span></summary><div class="detail-body"><div class="table-scroll"><table><thead><tr><th>条件 / 类别</th><th>起点</th><th>BC k=2</th><th>Full</th><th>Plain</th></tr></thead><tbody id="case-table"></tbody></table></div></div></details>
+    <details><summary>原始记录、运行指南与交付清单<span aria-hidden="true">+</span></summary><div class="detail-body"><p>本次整合没有新训练或策略回合。结果与图来自已冻结资产；旧根文档、旧页面、权重和记录保留。</p><div class="evidence-links"><a href="../../../RESULTS.md">完整结果 ↗</a><a href="../../../STATISTICS.md">统计口径 ↗</a><a href="../../../PROGRAM_GUIDE.md">运行与复核 ↗</a><a href="../../../THESIS_OUTLINE.md">更新提纲 ↗</a><a href="../../../DELIVERY_CHECKLIST.md">交付清单 ↗</a><a href="../../consolidation_20261012_01/evidence.json">本页数值与来源 ↗</a><a href="../../consolidation_20261012_01/references_verified.bib">已核查书目 ↗</a></div></div></details>
+  </section>
+</main>
+<footer class="wrap"><span>CAN LAB · WORLD MODEL / ROBOTICS</span><p>低维仿真 · 原始结果保留 · 文档与展示整合</p><a href="#top">返回顶部 ↑</a></footer>
+<noscript><p class="noscript">交互轨迹需要JavaScript。可直接阅读<a href="../../../RESULTS.md">结果</a>与<a href="../../../DEMO_GUIDE.md">视频清单</a>。</p></noscript>
+</body></html>
