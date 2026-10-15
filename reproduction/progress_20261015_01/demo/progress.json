@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15 17:12 +08:00",
+  "updated": "2026-10-15 17:31 +08:00",
   "v6": {
     "development_success": 236,
     "development_episodes": 240,
@@ -43,9 +43,9 @@
     }
   },
   "v8": {
-    "status": "第 2 轮五路消融运行中",
+    "status": "小测试未达标 · 保留候选，不替换",
     "pilot": {
-      "stage": "pilot_a",
+      "stage": "pilot_b",
       "complete": true,
       "incomplete_jobs": [],
       "variants": {
@@ -1421,8 +1421,9 @@
               "phases": {
                 "NORMAL": 120,
                 "RETRACT": 18,
-                "ALIGN": 140,
-                "EXHAUSTED": 122
+                "POSE_WAIT": 91,
+                "ALIGN": 70,
+                "POSE_BLOCKED": 101
               },
               "events": [
                 [
@@ -1432,23 +1433,28 @@
                 ],
                 [
                   129,
-                  "ALIGN",
-                  "retracted"
+                  "POSE_WAIT",
+                  "mesh_plan_relocate_before_alignment"
                 ],
                 [
-                  200,
+                  160,
+                  "ALIGN",
+                  "replanned_settled_pose"
+                ],
+                [
+                  231,
                   "RETRACT",
                   "phase_timeout"
                 ],
                 [
-                  208,
-                  "ALIGN",
-                  "retracted"
+                  239,
+                  "POSE_WAIT",
+                  "mesh_plan_relocate_before_alignment"
                 ],
                 [
-                  279,
-                  "EXHAUSTED",
-                  "attempt_limit"
+                  299,
+                  "POSE_BLOCKED",
+                  "unknown_or_unsettled_timeout"
                 ]
               ],
               "guard_events": []
@@ -1654,7 +1660,75 @@
     },
     "development": null,
     "adopted": false,
-    "stage": "pilot_a"
+    "stage": "pilot_b",
+    "pilot_gate_passed": false,
+    "dev_240_launched": false,
+    "completed_episodes": 370,
+    "stages": [
+      "pilot_a",
+      "pilot_b"
+    ],
+    "reason": "Both revisions retain 30/37 versus v6 31/37; no rescues and one regression.",
+    "outcomes": {
+      "v6": {
+        "success": 31,
+        "episodes": 37,
+        "rescues": [],
+        "regressions": []
+      },
+      "v7": {
+        "success": 30,
+        "episodes": 37,
+        "rescues": [],
+        "regressions": [
+          [
+            "regression_6000005",
+            "demo_6000005"
+          ]
+        ]
+      },
+      "geometry": {
+        "success": 30,
+        "episodes": 37,
+        "rescues": [],
+        "regressions": [
+          [
+            "regression_6000005",
+            "demo_6000005"
+          ]
+        ]
+      },
+      "retreat": {
+        "success": 30,
+        "episodes": 37,
+        "rescues": [],
+        "regressions": [
+          [
+            "regression_6000005",
+            "demo_6000005"
+          ]
+        ]
+      },
+      "v8": {
+        "success": 30,
+        "episodes": 37,
+        "rescues": [],
+        "regressions": [
+          [
+            "regression_6000005",
+            "demo_6000005"
+          ]
+        ]
+      }
+    },
+    "replay_steps": 104284,
+    "physics_replay_episodes": 20,
+    "physics_replay_steps": 6566,
+    "protected_files_or_backups": 8217,
+    "weights_changed": false,
+    "training_performed": false,
+    "paper_written": false,
+    "motion_metric_definition": "Large reversal: both adjacent EEF increments exceed 0.5mm and their angle exceeds120deg. Descriptive, not a standard safety threshold; episode lengths differ."
   },
   "source": "Frozen JSON result summaries; stage-specific denominators. Known diagnostics are not independent confirmation."
 }

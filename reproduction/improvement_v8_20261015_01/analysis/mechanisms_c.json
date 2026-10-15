@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "off_episodes": 37,
+  "off_steps": 10391,
+  "checks": [
+    "flags_off_exact_frozen_v7",
+    "expanded_supported_plan_enters_bounded_relocation_before_alignment",
+    "actual_hull_recognizes_side_floor_and_upright_wall_top",
+    "airborne_and_outside_not_treated_as_supported",
+    "hand_sweep_rejects_wall_and_accepts_high_free_segment",
+    "collision_mesh_uses_actual_8cm_height"
+  ],
+  "geometry_probes": [
+    {
+      "job": "v7_known_side_s41",
+      "domain": "floor",
+      "reason": "mesh_no_feasible_hand_path",
+      "plan_ok": false,
+      "geometry": [
+        {
+          "step": 0,
+          "reason": "mesh_supported_no_hand_path",
+          "candidates": 306,
+          "chosen": false
+        }
+      ],
+      "plan_ms": 1787.5966000010521
+    },
+    {
+      "job": "v7_regression_6000005",
+      "domain": "wall_top",
+      "reason": "mesh_validated_hand_path",
+      "plan_ok": true,
+      "geometry": [
+        {
+          "step": 0,
+          "reason": "mesh_supported_wall_top",
+          "candidates": 24,
+          "chosen": true
+        }
+      ],
+      "plan_ms": 18.359800000325777
+    }
+  ],
+  "source_sha256": {
+    "geometry.py": "9fcc0be8b80a383513874013b6248aaae30b29ed2291ee74daf7fcbb7dff4ebb",
+    "recovery_controller.py": "e3c5a578dab5f60bc71d86aacc231a68654a8195d52bbb60320d0489cd20371e",
+    "scene_geometry.json": "1da8c12b670d53fe3d7af0784df907cb492e435e45ef8b667e2c759e1fc10efe",
+    "__init__.py": "a6512208024d7b10c0aedc619d509502eec9ab3ea557f7b5bf05a373f4ce05c1"
+  }
+}

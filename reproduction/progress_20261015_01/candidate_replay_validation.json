@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "case": "full17",
+      "version": "v6",
+      "steps": 367,
+      "states_rewards_success_exact": true,
+      "source_sha256": "a773747d469c78b0faf9550cf53044706558cc631ba027983ac515ee14b38a2e"
+    },
+    {
+      "case": "full17",
+      "version": "v8",
+      "steps": 299,
+      "states_rewards_success_exact": true,
+      "source_sha256": "521c5d88de0148320144c21dad151d7694ac2deb34c8c6ec7af1a80d6c14a67c"
+    },
+    {
+      "case": "full23",
+      "version": "v6",
+      "steps": 400,
+      "states_rewards_success_exact": true,
+      "source_sha256": "d97ef55506a04f740dfe2d74b88d55f26e65c7858d2065970036f07abf7daea2"
+    },
+    {
+      "case": "full23",
+      "version": "v8",
+      "steps": 400,
+      "states_rewards_success_exact": true,
+      "source_sha256": "e8fabfc2dbdd953450822459d9d933c67614bfa8e55d80960bfeedffe7e3cb4d"
+    },
+    {
+      "case": "full41",
+      "version": "v6",
+      "steps": 400,
+      "states_rewards_success_exact": true,
+      "source_sha256": "7eaad53873d3cdf805376b59be6d7e766e7b5011258b83928638ca222cafe64a"
+    },
+    {
+      "case": "full41",
+      "version": "v8",
+      "steps": 400,
+      "states_rewards_success_exact": true,
+      "source_sha256": "e3204b8f9f9ba4511c65f6ddba2491b7a4ba0675edf793f62d3f766af73b3520"
+    },
+    {
+      "case": "bc_edge",
+      "version": "v6",
+      "steps": 311,
+      "states_rewards_success_exact": true,
+      "source_sha256": "b98f041016b94ff65d86c13cfd59a413c04354327e221340cc3e0b6ebf355986"
+    },
+    {
+      "case": "bc_edge",
+      "version": "v8",
+      "steps": 400,
+      "states_rewards_success_exact": true,
+      "source_sha256": "2643e7a248f8c61898aab48fa8132e5b77ce930bd87ef15b6acd90bda88c4525"
+    }
+  ],
+  "cases": [
+    {
+      "id": "full17",
+      "label": "Full \u00b7 seed17",
+      "demo": "demo_97",
+      "video": "recovery20/full17.mp4",
+      "poster": "recovery20/full17.png",
+      "fps": 20,
+      "frames": 388,
+      "sha256": "f38dcc18f1c7ea0d79bbb8590d032c74ce778182fdd08468330dc0af71e97d54",
+      "sources": [
+        "reproduction/improvement_v8_20261015_01/pilot_b/v6_known_side_s17/result.json",
+        "reproduction/improvement_v8_20261015_01/pilot_b/v8_known_side_s17/result.json"
+      ],
+      "results": {
+        "v6": {
+          "success": true,
+          "steps": 367
+        },
+        "v8": {
+          "success": true,
+          "steps": 299
+        }
+      }
+    },
+    {
+      "id": "full23",
+      "label": "Full \u00b7 seed23",
+      "demo": "demo_188",
+      "video": "recovery20/full23.mp4",
+      "poster": "recovery20/full23.png",
+      "fps": 20,
+      "frames": 421,
+      "sha256": "d13c53acefd06715312d4eb5b1194ee6b510a3889ce3ffc275e93a3a5f511eec",
+      "sources": [
+        "reproduction/improvement_v8_20261015_01/pilot_b/v6_known_side_s23/result.json",
+        "reproduction/improvement_v8_20261015_01/pilot_b/v8_known_side_s23/result.json"
+      ],
+      "results": {
+        "v6": {
+          "success": false,
+          "steps": 400
+        },
+        "v8": {
+          "success": false,
+          "steps": 400
+        }
+      }
+    },
+    {
+      "id": "full41",
+      "label": "Full \u00b7 seed41",
+      "demo": "demo_97",
+      "video": "recovery20/full41.mp4",
+      "poster": "recovery20/full41.png",
+      "fps": 20,
+      "frames": 421,
+      "sha256": "d653a6c8ecb168890f60fb0aa93c5840dc83e457167bdc689d37f9993df0d6ef",
+      "sources": [
+        "reproduction/improvement_v8_20261015_01/pilot_b/v6_known_side_s41/result.json",
+        "reproduction/improvement_v8_20261015_01/pilot_b/v8_known_side_s41/result.json"
+      ],
+      "results": {
+        "v6": {
+          "success": false,
+          "steps": 400
+        },
+        "v8": {
+          "success": false,
+          "steps": 400
+        }
+      }
+    },
+    {
+      "id": "bc_edge",
+      "label": "BC k=2 \u00b7 \u7bb1\u6cbf\u9000\u6b65",
+      "demo": "demo_6000005",
+      "video": "recovery20/bc_edge.mp4",
+      "poster": "recovery20/bc_edge.png",
+      "fps": 20,
+      "frames": 421,
+      "sha256": "821ac585e0f585fcb2505b8c7bb836c64051d61285716ef89519e88a819d6ad5",
+      "sources": [
+        "reproduction/improvement_v8_20261015_01/pilot_b/v6_regression_6000005/result.json",
+        "reproduction/improvement_v8_20261015_01/pilot_b/v8_regression_6000005/result.json"
+      ],
+      "results": {
+        "v6": {
+          "success": true,
+          "steps": 311
+        },
+        "v8": {
+          "success": false,
+          "steps": 400
+        }
+      }
+    }
+  ],
+  "selection": "Known diagnostics covering Full seeds17/23/41 and the v8 regression; different seeds may use different cases. Only comparisons within a video share an initial state."
+}

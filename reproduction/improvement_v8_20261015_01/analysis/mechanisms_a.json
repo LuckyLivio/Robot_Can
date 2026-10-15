@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "off_episodes": 37,
+  "off_steps": 10391,
+  "checks": [
+    "flags_off_exact_frozen_v7",
+    "actual_hull_recognizes_side_floor_and_upright_wall_top",
+    "airborne_and_outside_not_treated_as_supported",
+    "hand_sweep_rejects_wall_and_accepts_high_free_segment",
+    "collision_mesh_uses_actual_8cm_height"
+  ],
+  "geometry_probes": [
+    {
+      "job": "v7_known_side_s41",
+      "domain": "floor",
+      "reason": "mesh_validated_hand_path",
+      "plan_ok": false,
+      "geometry": [
+        {
+          "step": 0,
+          "reason": "mesh_supported_no_hand_path",
+          "candidates": 18,
+          "chosen": false
+        }
+      ],
+      "plan_ms": 77.46129999941331
+    },
+    {
+      "job": "v7_regression_6000005",
+      "domain": "wall_top",
+      "reason": "mesh_validated_hand_path",
+      "plan_ok": true,
+      "geometry": [
+        {
+          "step": 0,
+          "reason": "mesh_supported_wall_top",
+          "candidates": 24,
+          "chosen": true
+        }
+      ],
+      "plan_ms": 17.723499999192427
+    }
+  ]
+}

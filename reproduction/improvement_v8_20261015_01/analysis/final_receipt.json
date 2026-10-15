@@ -1,0 +1,73 @@
+{
+  "status": "小测试未达标 · 保留候选，不替换",
+  "adopted": false,
+  "pilot_gate_passed": false,
+  "development": null,
+  "dev_240_launched": false,
+  "completed_episodes": 370,
+  "stages": [
+    "pilot_a",
+    "pilot_b"
+  ],
+  "reason": "Both revisions retain 30/37 versus v6 31/37; no rescues and one regression.",
+  "outcomes": {
+    "v6": {
+      "success": 31,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": []
+    },
+    "v7": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ]
+    },
+    "geometry": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ]
+    },
+    "retreat": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ]
+    },
+    "v8": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ]
+    }
+  },
+  "replay_steps": 104284,
+  "physics_replay_episodes": 20,
+  "physics_replay_steps": 6566,
+  "protected_files_or_backups": 8217,
+  "weights_changed": false,
+  "training_performed": false,
+  "paper_written": false,
+  "motion_metric_definition": "Large reversal: both adjacent EEF increments exceed 0.5mm and their angle exceeds120deg. Descriptive, not a standard safety threshold; episode lengths differ."
+}
