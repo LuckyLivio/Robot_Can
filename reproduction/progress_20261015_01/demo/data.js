@@ -6,13 +6,13 @@ const DEMO_DATA = {
       "condition": "clean",
       "state_name": "demo_1000001",
       "eligible_count": 51,
-      "video": "../../release_20261012_01/demo/videos/clean_shared_success.mp4",
-      "poster": "../../release_20261012_01/demo/posters/clean_shared_success.png",
-      "frames": 59,
-      "fps": 10,
-      "duration_s": 5.9,
+      "video": "videos20/clean_shared_success.mp4",
+      "poster": "videos20/clean_shared_success.png",
+      "frames": 116,
+      "fps": 20,
+      "duration_s": 5.8,
       "control_steps": 95,
-      "sha256": "0f82a9ecc63910e596a3a093eed4f821ab9d9734b8d661d905cca172467d22ef",
+      "sha256": "badff539539a0cf5e596cac54f260a62c79a8475d697c583b061db308c1a30b3",
       "elapsed_render_s": 5.050939599999765,
       "results": {
         "bc_k2": {
@@ -28,7 +28,7 @@ const DEMO_DATA = {
           "steps": 95
         }
       },
-      "firstFrame": "../../review_20261012_01/demo/posters/clean_shared_success_first.jpg"
+      "firstFrame": "videos20/clean_shared_success.png"
     },
     {
       "id": "clean_full_only_success",
@@ -36,13 +36,13 @@ const DEMO_DATA = {
       "condition": "clean",
       "state_name": "demo_1000026",
       "eligible_count": 1,
-      "video": "../../release_20261012_01/demo/videos/clean_full_only_success.mp4",
-      "poster": "../../release_20261012_01/demo/posters/clean_full_only_success.png",
-      "frames": 211,
-      "fps": 10,
-      "duration_s": 21.1,
+      "video": "videos20/clean_full_only_success.mp4",
+      "poster": "videos20/clean_full_only_success.png",
+      "frames": 421,
+      "fps": 20,
+      "duration_s": 21.05,
       "control_steps": 400,
-      "sha256": "6eb234be82340b437909d29dcc95e2e64d0cc00b79cefd5d09eb44d7e5e0ffd4",
+      "sha256": "c1680b9a0f69c8de81be67fc4b76641cb807a35426b2f9a1a5ab9110afa60a5a",
       "elapsed_render_s": 11.46932469999956,
       "results": {
         "bc_k2": {
@@ -58,7 +58,7 @@ const DEMO_DATA = {
           "steps": 400
         }
       },
-      "firstFrame": "../../review_20261012_01/demo/posters/clean_full_only_success_first.jpg"
+      "firstFrame": "videos20/clean_full_only_success.png"
     },
     {
       "id": "clean_shared_failure",
@@ -66,13 +66,13 @@ const DEMO_DATA = {
       "condition": "clean",
       "state_name": "demo_1000000",
       "eligible_count": 6,
-      "video": "../../release_20261012_01/demo/videos/clean_shared_failure.mp4",
-      "poster": "../../release_20261012_01/demo/posters/clean_shared_failure.png",
-      "frames": 211,
-      "fps": 10,
-      "duration_s": 21.1,
+      "video": "videos20/clean_shared_failure.mp4",
+      "poster": "videos20/clean_shared_failure.png",
+      "frames": 421,
+      "fps": 20,
+      "duration_s": 21.05,
       "control_steps": 400,
-      "sha256": "7e717c4137045b7c5368513bff5e60e711114bc35a6149a80af36c7322604f7b",
+      "sha256": "60b66c7c85c9456415b16478e8e7f25ef44097405a57b8ed0872945668ae5486",
       "elapsed_render_s": 15.51588399999855,
       "results": {
         "bc_k2": {
@@ -88,7 +88,7 @@ const DEMO_DATA = {
           "steps": 400
         }
       },
-      "firstFrame": "../../review_20261012_01/demo/posters/clean_shared_failure_first.jpg"
+      "firstFrame": "videos20/clean_shared_failure.png"
     },
     {
       "id": "noise005_shared_success",
@@ -96,13 +96,13 @@ const DEMO_DATA = {
       "condition": "noise005",
       "state_name": "demo_1000002",
       "eligible_count": 49,
-      "video": "../../release_20261012_01/demo/videos/noise005_shared_success.mp4",
-      "poster": "../../release_20261012_01/demo/posters/noise005_shared_success.png",
-      "frames": 66,
-      "fps": 10,
-      "duration_s": 6.6,
+      "video": "videos20/noise005_shared_success.mp4",
+      "poster": "videos20/noise005_shared_success.png",
+      "frames": 131,
+      "fps": 20,
+      "duration_s": 6.55,
       "control_steps": 110,
-      "sha256": "2380d532f9d96f247132284f0a9af902bbe976558b132970013de5775d2d7fc6",
+      "sha256": "88fad24dd38424d04599502532d95fd749c760b9fa3a2ca96a4fcb6922f03a35",
       "elapsed_render_s": 5.208734899999399,
       "results": {
         "bc_k2": {
@@ -118,7 +118,7 @@ const DEMO_DATA = {
           "steps": 110
         }
       },
-      "firstFrame": "../../review_20261012_01/demo/posters/noise005_shared_success_first.jpg"
+      "firstFrame": "videos20/noise005_shared_success.png"
     },
     {
       "id": "noise005_full_only_success",
@@ -126,13 +126,13 @@ const DEMO_DATA = {
       "condition": "noise005",
       "state_name": "demo_1000011",
       "eligible_count": 2,
-      "video": "../../release_20261012_01/demo/videos/noise005_full_only_success.mp4",
-      "poster": "../../release_20261012_01/demo/posters/noise005_full_only_success.png",
-      "frames": 211,
-      "fps": 10,
-      "duration_s": 21.1,
+      "video": "videos20/noise005_full_only_success.mp4",
+      "poster": "videos20/noise005_full_only_success.png",
+      "frames": 421,
+      "fps": 20,
+      "duration_s": 21.05,
       "control_steps": 400,
-      "sha256": "f57cfe274160c2709f07a0ae808891bda0e55c8e5ce62d91a5acad2c510302d3",
+      "sha256": "37133f6e0688884af18dabfbe5b4d04a82bd2b1ce650760d7435066f5f5e2e0b",
       "elapsed_render_s": 11.62310830000024,
       "results": {
         "bc_k2": {
@@ -148,7 +148,7 @@ const DEMO_DATA = {
           "steps": 400
         }
       },
-      "firstFrame": "../../review_20261012_01/demo/posters/noise005_full_only_success_first.jpg"
+      "firstFrame": "videos20/noise005_full_only_success.png"
     },
     {
       "id": "noise005_shared_failure",
@@ -156,13 +156,13 @@ const DEMO_DATA = {
       "condition": "noise005",
       "state_name": "demo_1000000",
       "eligible_count": 8,
-      "video": "../../release_20261012_01/demo/videos/noise005_shared_failure.mp4",
-      "poster": "../../release_20261012_01/demo/posters/noise005_shared_failure.png",
-      "frames": 211,
-      "fps": 10,
-      "duration_s": 21.1,
+      "video": "videos20/noise005_shared_failure.mp4",
+      "poster": "videos20/noise005_shared_failure.png",
+      "frames": 421,
+      "fps": 20,
+      "duration_s": 21.05,
       "control_steps": 400,
-      "sha256": "b9b3ba9a141e2008c7e8716f62ea8dd579728cb655ddade19a5fc8495925d64f",
+      "sha256": "76541f9154ab94c5ae57d8130799f5a8bcf477059514c46b0fa73b6ad268528f",
       "elapsed_render_s": 14.208406299998387,
       "results": {
         "bc_k2": {
@@ -178,7 +178,7 @@ const DEMO_DATA = {
           "steps": 400
         }
       },
-      "firstFrame": "../../review_20261012_01/demo/posters/noise005_shared_failure_first.jpg"
+      "firstFrame": "videos20/noise005_shared_failure.png"
     }
   ],
   "statistics": [

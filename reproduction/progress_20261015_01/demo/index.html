@@ -69,7 +69,7 @@
     <div class="section-heading"><div><p class="eyebrow">02 / SEE THE DIFFERENCE</p><h2 id="demo-title">这个起点，Full 完成了搬运。</h2></div>
       <div class="segmented" role="group" aria-label="执行条件"><button type="button" data-condition="clean" aria-pressed="true">干净执行</button><button type="button" data-condition="noise005" aria-pressed="false">加入扰动</button></div>
     </div>
-    <p class="version-note">原始 BC / Full / Plain · 演示固定 seed17 · 当前录像 10 fps · 不含后续恢复。统计汇总包含 17 / 23 / 41 三个种子。成功后停帧属于终点保持。</p><p class="section-intro">默认展示 Full 独胜：同一起点，Full 在133步完成，BC k=2与Plain在400步内未完成。也可切换共同成功和失败，查看适用边界。视频均未加入后续共享恢复。</p>
+    <p class="version-note">原始 BC / Full / Plain · 演示固定 seed17 · 逐控制步回放 20 fps · 不含后续恢复。统计汇总包含 17 / 23 / 41 三个种子。成功后停帧属于终点保持。</p><p class="section-intro">默认展示 Full 独胜：同一起点，Full 在133步完成，BC k=2与Plain在400步内未完成。也可切换共同成功和失败，查看适用边界。视频均未加入后续共享恢复。</p>
     <div class="case-tabs" role="group" aria-label="案例类型">
       <button type="button" data-case="shared_success" aria-pressed="false"><span class="case-num">01</span><span><strong>共同成功</strong><small>强基线也能完成任务</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
       <button type="button" data-case="full_only_success" aria-pressed="true"><span class="case-num">02</span><span><strong>Full 独胜</strong><small>观察不同动作的后果</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
@@ -140,7 +140,7 @@
     <div class="trace-panel">
       <div class="trace-head"><p id="trace-title"></p><span><i class="legend-dot baseline"></i> v4　<i class="legend-dot improved"></i> v5</span></div>
       <div class="trace-canvases"><figure><canvas id="xy-chart" width="1000" height="650" role="img" aria-label="末端与物体XY观测轨迹"></canvas><figcaption>XY俯视观测 · 实线为罐体，虚线为末端</figcaption></figure><figure><canvas id="height-chart" width="1000" height="650" role="img" aria-label="罐体高度随控制步变化"></canvas><figcaption>罐体高度 · 横轴为实际控制步</figcaption></figure></div>
-      <p class="version-note">历史 v4 / v5 恢复轨迹。原始采样 20 Hz；尚不是 v6、v7 或本轮 v8 的动画。</p><div class="trace-controls"><button type="button" id="trace-play">播放轨迹 ▶</button><label for="trace-step">控制步 <output id="trace-step-label">1 / 400</output></label><input id="trace-step" type="range" min="1" max="400" value="1" aria-label="轨迹控制步"><button type="button" id="trace-end">到终点 ↗</button></div>
+      <p class="version-note">历史 v4 / v5 恢复轨迹。原始采样 20 Hz；尚不是 v6、v7 或本轮 v8 的动画。</p><label class="version-note"><input id="trace-interpolation" type="checkbox" checked> 动画游标插值：仅让游标在原始样点间移动；折线和数值保留原始 20 Hz 记录，可关闭。</label><div class="trace-controls"><button type="button" id="trace-play">播放轨迹 ▶</button><label for="trace-step">控制步 <output id="trace-step-label">1 / 400</output></label><input id="trace-step" type="range" min="1" max="400" value="1" aria-label="轨迹控制步"><button type="button" id="trace-end">到终点 ↗</button></div>
       <div id="trace-status" class="trace-status" aria-live="polite"></div>
     </div>
     <p id="trace-explanation" class="trace-explanation"></p>

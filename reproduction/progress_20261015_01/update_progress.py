@@ -10,6 +10,7 @@ def main():
     for name in ['pilot_a','pilot_b']:
         p=v8/'analysis'/f'{name}.json'
         if p.exists():current.update(status='小测试已完成，正在核验',pilot=json.loads(p.read_text()),stage=name)
+    if (v8/'pilot_b/started.json').exists() and not (v8/'pilot_b/completed.json').exists():current['status']='第 2 轮五路消融运行中'
     if (v8/'analysis/final_receipt.json').exists():current.update(json.loads((v8/'analysis/final_receipt.json').read_text()))
     payload={'updated':datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).strftime('%Y-%m-%d %H:%M +08:00'),
              'v6':{'development_success':236,'development_episodes':240,'improvement_vs_v5':0,'adopted':False},
