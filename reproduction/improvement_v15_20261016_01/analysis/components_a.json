@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "empty_translation_and_turn_exclusive",
+      "passed": true,
+      "scope": "Real geometry helper on saved state; checks nominal command shape, not acceptance or physics"
+    },
+    {
+      "name": "segmented_rejection_and_five_frame_arrival",
+      "passed": true,
+      "scope": "Stub positive/negative margins and support; checks 1mm/joint guards, zero rejected commands, 9mm/.08rad/gap and one clock tick"
+    },
+    {
+      "name": "budget_shared_arrival_protection",
+      "passed": true,
+      "scope": "Stub tail clearance and transition recorder; forecast,3mm,gap,5frames remain required and each call advances one tick"
+    },
+    {
+      "name": "transient_hold_preserves_path_real_parent_loss_guard",
+      "passed": true,
+      "scope": "Real inherited choose with only observable_hold stubbed false; path retained for four frames, parent recovery on fifth"
+    },
+    {
+      "name": "current_pose_both_exact_parent_endpoints",
+      "passed": true,
+      "scope": "Instant IK stub isolates endpoint sequencing; failed placement IK cannot preserve current route"
+    },
+    {
+      "name": "placement_translation_rotation_exclusive",
+      "passed": true,
+      "scope": "Stub parent action and accepted certificates; ensures one clock and no unchecked simultaneous translation/rotation"
+    }
+  ],
+  "source_sha256": {
+    "reproduction/improvement_v15_20261016_01/recovery/carry_path.py": "cb926f1bddd73734c5f13a824dd9467bb20aa22637d04ab6a7d28664eb4b25e7",
+    "reproduction/improvement_v15_20261016_01/recovery/edge_path.py": "e04a4c8c2ad03645ef1e1a76ec880082c30664ee55c08c0d72b9855923e82ec6",
+    "reproduction/improvement_v15_20261016_01/recovery/recovery_controller.py": "57aab4ac4024e3f9915b760981603b5d9f5f8b305832a32de207b1bdd09f462e",
+    "reproduction/improvement_v15_20261016_01/verify_components.py": "a37d50194321db94484d28e1f9a3b793b7ee9f467d99470f7a1b41c61de4a72d",
+    "reproduction/improvement_v14_20261016_01/smoke_b/v14_known13_bc_k2_noise005_demo_13000021/trace.jsonl": "9368367452b1755c26214cf69016250efb054c9bfd49fc57e092e47cbda283d8"
+  },
+  "new_evaluation_samples": 0,
+  "physical_simulation_run": false,
+  "scope": "Focused enabled control-flow tests. Geometry/IK stubs are explicitly identified; no claim of physical success, generality, or full-arm safety."
+}

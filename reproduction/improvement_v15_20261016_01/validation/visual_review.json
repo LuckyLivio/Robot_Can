@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "review": "Assistant visually inspected exported figures, PDF raster previews and actual browser screenshots.",
+  "figures": ["V15_smoke_a_profiles", "V15_smoke_a_targets"],
+  "pdf_previews": ["artifacts_previews/V15_smoke_a_profiles.png", "artifacts_previews/V15_smoke_a_targets.png"],
+  "checks": {
+    "chinese_labels_readable": true,
+    "no_text_overlap_or_cropped_labels": true,
+    "categorical_cases_not_connected_by_lines": true,
+    "equal_integer_count_ticks_0_2_4_6_8": true,
+    "standard_and_reused_budget_profile_separated": true,
+    "success_labels_and_400_step_failures_match_raw_results": true,
+    "no_generalization_intervals_for_selected_diagnostic_cases": true,
+    "browser_five_variants_and_failed_gate_visible": true
+  },
+  "initial_figure_exports_preserved": "../figures/initial_render/",
+  "revision_note": "Initial exports used valid but unevenly selected integer tick labels. Final exports use uniformly spaced ticks; raw data and counts are unchanged. Initial rendering files remain preserved.",
+  "limitations": "Desktop viewport checked. No new video or mobile-device validation is claimed."
+}

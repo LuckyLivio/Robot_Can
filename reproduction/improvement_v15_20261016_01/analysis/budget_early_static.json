@@ -1,0 +1,3625 @@
+{
+  "passed": true,
+  "validation_scope": "Exact saved-input replay and offline geometry/IK checks; no new physical episodes.",
+  "frozen_controller_sha256": "3344a7817212fb952ac44d3846ec688c76daef93ea32b6a2489a024fa1e3eb3e",
+  "replayed_steps": 780,
+  "cases": [
+    {
+      "source_job": "v13_regression_6000005",
+      "success": true,
+      "replayed_steps": 380,
+      "events": [
+        {
+          "step": 121,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "near_object_stall",
+          "attempt": 1,
+          "object_position": [
+            0.2911778390407562,
+            0.3068481981754303,
+            0.9418637156486511
+          ]
+        },
+        {
+          "step": 121,
+          "from": "RETRACT",
+          "to": "RETRACT",
+          "reason": "bounded_mesh_ready",
+          "attempt": 1,
+          "object_position": [
+            0.29221752285957336,
+            0.31156647205352783,
+            0.9422163963317871
+          ]
+        },
+        {
+          "step": 129,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "mesh_plan_relocate_before_alignment",
+          "attempt": 1,
+          "object_position": [
+            0.2958747148513794,
+            0.3080000579357147,
+            0.940239667892456
+          ]
+        },
+        {
+          "step": 160,
+          "from": "POSE_WAIT",
+          "to": "RETRACT",
+          "reason": "bounded_mesh_ready",
+          "attempt": 1,
+          "object_position": [
+            0.295874685049057,
+            0.30800309777259827,
+            0.940239429473877
+          ]
+        },
+        {
+          "step": 168,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.2958645224571228,
+            0.30800214409828186,
+            0.9402452707290649
+          ]
+        },
+        {
+          "step": 192,
+          "from": "ALIGN",
+          "to": "EDGE_ROTATE",
+          "reason": "edge_path_validated",
+          "attempt": 1,
+          "object_position": [
+            0.2958565056324005,
+            0.30800333619117737,
+            0.9402441382408142
+          ]
+        },
+        {
+          "step": 258,
+          "from": "EDGE_ROTATE",
+          "to": "EDGE_APPROACH",
+          "reason": "edge_rotation_settled",
+          "attempt": 1,
+          "object_position": [
+            0.2958781123161316,
+            0.3080018162727356,
+            0.9402368664741516
+          ]
+        },
+        {
+          "step": 284,
+          "from": "EDGE_APPROACH",
+          "to": "DESCEND",
+          "reason": "edge_approach_and_aperture_validated",
+          "attempt": 1,
+          "object_position": [
+            0.29585596919059753,
+            0.30800190567970276,
+            0.9402503967285156
+          ]
+        },
+        {
+          "step": 298,
+          "from": "DESCEND",
+          "to": "CLOSE",
+          "reason": "at_grasp_pose",
+          "attempt": 1,
+          "object_position": [
+            0.29586565494537354,
+            0.30800163745880127,
+            0.9402436017990112
+          ]
+        },
+        {
+          "step": 316,
+          "from": "CLOSE",
+          "to": "TEST_LIFT",
+          "reason": "close_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.29516133666038513,
+            0.30787909030914307,
+            0.9400526285171509
+          ]
+        },
+        {
+          "step": 323,
+          "from": "TEST_LIFT",
+          "to": "LIFT",
+          "reason": "lift_follow_confirmed",
+          "attempt": 1,
+          "object_position": [
+            0.29532137513160706,
+            0.3071466386318207,
+            0.9614405035972595
+          ]
+        },
+        {
+          "step": 334,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.2942449450492859,
+            0.3071329891681671,
+            1.0667357444763184
+          ]
+        },
+        {
+          "step": 347,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.22790125012397766,
+            0.37537044286727905,
+            1.0848987102508545
+          ]
+        },
+        {
+          "step": 370,
+          "from": "PLACE",
+          "to": "RELEASE",
+          "reason": "at_release_height",
+          "attempt": 1,
+          "object_position": [
+            0.18793554604053497,
+            0.4014222025871277,
+            0.8961664438247681
+          ]
+        }
+      ],
+      "phases": {
+        "NORMAL": 120,
+        "RETRACT": 15,
+        "PLAN_WAIT": 27,
+        "POSE_WAIT": 31,
+        "EDGE_ROTATE": 65,
+        "EDGE_APPROACH": 26,
+        "DESCEND": 14,
+        "CLOSE": 18,
+        "TEST_LIFT": 7,
+        "LIFT": 11,
+        "CARRY": 13,
+        "PLACE": 23,
+        "RELEASE": 10
+      },
+      "recenter_control_steps": [],
+      "settle_window_280_284": [
+        {
+          "step": 280,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 21,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.006194318286615946,
+          "orientation_error_rad": 0.01693891765382104,
+          "side_error_m": 0.004942045903652583,
+          "closure_axis_error_m": -0.0030068715185365084,
+          "observed_motion_m_per_step": [
+            0.0018710792064666748,
+            -0.0034459829330444336,
+            0.00042068958282470703
+          ],
+          "predicted_position_to_above_m": 0.006636922008854015,
+          "predicted_side_error_m": 0.005845197161034432,
+          "remaining_descent_can_margin_m": 0.005035793268154287,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.25158267782715815,
+              0.28531029423330895,
+              1.0227184312907656
+            ],
+            "box_margin_m": 0.109575324284416,
+            "can_margin_m": 0.044803837126283774,
+            "tail_can_margin_m": 0.005035793268154287,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35650122417994257,
+                1.0505766829582006,
+                0.13964457624841,
+                -1.2582277215563142,
+                -0.31486465020443727,
+                2.9225443211906423,
+                0.9849930845609176
+              ],
+              "position_error_m": 0.00012751332342940633,
+              "angle_error_rad": 0.0003077228082965049,
+              "limit_margin_rad": 0.7122233170417993
+            }
+          }
+        },
+        {
+          "step": 281,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 22,
+          "edge_settled_before": 1,
+          "position_to_above_m": 0.004800426838650436,
+          "orientation_error_rad": 0.01692220052429623,
+          "side_error_m": 0.003454813670180957,
+          "closure_axis_error_m": 0.00023205017040820076,
+          "observed_motion_m_per_step": [
+            0.0016155391931533813,
+            -0.0028059184551239014,
+            0.0005991458892822266
+          ],
+          "predicted_position_to_above_m": 0.007579299895675836,
+          "predicted_side_error_m": 0.0071516938075703515,
+          "remaining_descent_can_margin_m": 0.005034088164985073,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.2513743274526491,
+              0.28520908775204307,
+              1.02304510168465
+            ],
+            "box_margin_m": 0.11015188656641421,
+            "can_margin_m": 0.04579615333856435,
+            "tail_can_margin_m": 0.005034088164985073,
+            "ik": {
+              "success": true,
+              "iterations": 0,
+              "q": [
+                0.355692847298579,
+                1.0433074137786718,
+                0.13780507130017927,
+                -1.276638621306635,
+                -0.3055123602352264,
+                2.9333608417212855,
+                0.9762227733410619
+              ],
+              "position_error_m": 0.0034439126876157937,
+              "angle_error_rad": 0.00033610529851561225,
+              "limit_margin_rad": 0.7194925862213282
+            }
+          }
+        },
+        {
+          "step": 282,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 23,
+          "edge_settled_before": 2,
+          "position_to_above_m": 0.005167299703741195,
+          "orientation_error_rad": 0.01737230804061352,
+          "side_error_m": 0.003980182528243244,
+          "closure_axis_error_m": 0.0026743055194199065,
+          "observed_motion_m_per_step": [
+            0.0014611035585403442,
+            -0.0019994378089904785,
+            0.00031363964080810547
+          ],
+          "predicted_position_to_above_m": 0.008449877687215212,
+          "predicted_side_error_m": 0.00781376218497862,
+          "remaining_descent_can_margin_m": 0.005032453670152814,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.2513574200563588,
+              0.2851964240446147,
+              1.023072445888157
+            ],
+            "box_margin_m": 0.1104524806353746,
+            "can_margin_m": 0.045622811846531164,
+            "tail_can_margin_m": 0.005032453670152814,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35673662237879084,
+                1.0488641615349197,
+                0.14053546269988554,
+                -1.2605881410448454,
+                -0.29432704586938435,
+                2.922459852360996,
+                0.9638634511371833
+              ],
+              "position_error_m": 7.993222719742364e-05,
+              "angle_error_rad": 0.0001572238690061379,
+              "limit_margin_rad": 0.7139358384650802
+            }
+          }
+        },
+        {
+          "step": 283,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 24,
+          "edge_settled_before": 3,
+          "position_to_above_m": 0.006334049209720057,
+          "orientation_error_rad": 0.01660268261390713,
+          "side_error_m": 0.0056010050590313285,
+          "closure_axis_error_m": 0.004982301022197615,
+          "observed_motion_m_per_step": [
+            0.0011740326881408691,
+            -0.001995980739593506,
+            0.0004999637603759766
+          ],
+          "predicted_position_to_above_m": 0.010031555187554069,
+          "predicted_side_error_m": 0.00976675095307033,
+          "remaining_descent_can_margin_m": 0.00503669861189926,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.2511949942642136,
+              0.2851089108253246,
+              1.0233493011715138
+            ],
+            "box_margin_m": 0.11098632514642995,
+            "can_margin_m": 0.044819611083138367,
+            "tail_can_margin_m": 0.00503669861189926,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.356972110452231,
+                1.047511581159029,
+                0.14084316824491977,
+                -1.2615138322742656,
+                -0.28587963915199754,
+                2.920203848758233,
+                0.9552961695385158
+              ],
+              "position_error_m": 7.791540028665568e-05,
+              "angle_error_rad": 0.00022805654440851387,
+              "limit_margin_rad": 0.7152884188409709
+            }
+          }
+        },
+        {
+          "step": 284,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 25,
+          "edge_settled_before": 4,
+          "position_to_above_m": 0.0076801410203737284,
+          "orientation_error_rad": 0.01600548405898109,
+          "side_error_m": 0.007315476506336646,
+          "closure_axis_error_m": 0.007033841095612383,
+          "observed_motion_m_per_step": [
+            0.0010217130184173584,
+            -0.0017845332622528076,
+            0.000826716423034668
+          ],
+          "predicted_position_to_above_m": 0.011233202504068172,
+          "predicted_side_error_m": 0.011178869687783527,
+          "remaining_descent_can_margin_m": 0.005041311327658615,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.25088088864262315,
+              0.2849449806054627,
+              1.02386135318697
+            ],
+            "box_margin_m": 0.11183591694632748,
+            "can_margin_m": 0.044652188667546666,
+            "tail_can_margin_m": 0.005041311327658615,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.3572352541240653,
+                1.0450466069238638,
+                0.1408551701923263,
+                -1.2638154836891224,
+                -0.2787058244769609,
+                2.918254061567006,
+                0.9483605044081175
+              ],
+              "position_error_m": 7.043814427806586e-05,
+              "angle_error_rad": 0.0003116163942274648,
+              "limit_margin_rad": 0.7177533930761362
+            }
+          }
+        }
+      ],
+      "descent_minimum_can_margin_m": 0.003241727517113435,
+      "measurements": [
+        {
+          "step": 259,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 0,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.1367314411885694,
+          "orientation_error_rad": 0.02204885492772003,
+          "side_error_m": 0.13662992023698223,
+          "closure_axis_error_m": -0.1359016539212672,
+          "observed_motion_m_per_step": [
+            -1.7777085304260254e-05,
+            9.754300117492676e-05,
+            0.00017142295837402344
+          ],
+          "predicted_position_to_above_m": 0.13695469506856592,
+          "predicted_side_error_m": 0.13684403354955058,
+          "remaining_descent_can_margin_m": -0.021764576697883453,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 260,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 1,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.1369766222206921,
+          "orientation_error_rad": 0.016490583648012997,
+          "side_error_m": 0.1368785056175637,
+          "closure_axis_error_m": -0.13617286125755929,
+          "observed_motion_m_per_step": [
+            -0.0003699064254760742,
+            0.00010058283805847168,
+            6.80685043334961e-05
+          ],
+          "predicted_position_to_above_m": 0.1374689803989154,
+          "predicted_side_error_m": 0.1373539074759088,
+          "remaining_descent_can_margin_m": -0.021784793771494226,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 261,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 2,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.1368866660433898,
+          "orientation_error_rad": 0.012319562198751726,
+          "side_error_m": 0.13678990397651747,
+          "closure_axis_error_m": -0.13610468696722616,
+          "observed_motion_m_per_step": [
+            -8.606910705566406e-05,
+            -0.0001201629638671875,
+            -0.00016558170318603516
+          ],
+          "predicted_position_to_above_m": 0.13670765720112474,
+          "predicted_side_error_m": 0.13661529721878246,
+          "remaining_descent_can_margin_m": -0.021796409360499314,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 262,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 3,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.13318229539260085,
+          "orientation_error_rad": 0.012081678932307714,
+          "side_error_m": 0.1330545469123043,
+          "closure_axis_error_m": -0.13235094642179798,
+          "observed_motion_m_per_step": [
+            0.0013556182384490967,
+            -0.0035223960876464844,
+            0.0005458593368530273
+          ],
+          "predicted_position_to_above_m": 0.12579312525615535,
+          "predicted_side_error_m": 0.125587467469637,
+          "remaining_descent_can_margin_m": -0.021275171491913214,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 263,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 4,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.12706284821142202,
+          "orientation_error_rad": 0.01776177432693288,
+          "side_error_m": 0.1268486875142361,
+          "closure_axis_error_m": -0.1261206133510446,
+          "observed_motion_m_per_step": [
+            0.0019904226064682007,
+            -0.005980700254440308,
+            0.0012028217315673828
+          ],
+          "predicted_position_to_above_m": 0.11492135833488498,
+          "predicted_side_error_m": 0.1144455586568688,
+          "remaining_descent_can_margin_m": -0.01760940954340917,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 264,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 5,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.12041211857569731,
+          "orientation_error_rad": 0.023120223050827365,
+          "side_error_m": 0.12008986343641231,
+          "closure_axis_error_m": -0.11937421222669892,
+          "observed_motion_m_per_step": [
+            0.002035871148109436,
+            -0.006531864404678345,
+            0.0008352994918823242
+          ],
+          "predicted_position_to_above_m": 0.10720236286346166,
+          "predicted_side_error_m": 0.10658467020853991,
+          "remaining_descent_can_margin_m": -0.01645240438390916,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 265,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 6,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.11346640393382287,
+          "orientation_error_rad": 0.025682134489182395,
+          "side_error_m": 0.11306851090101504,
+          "closure_axis_error_m": -0.1123767032208672,
+          "observed_motion_m_per_step": [
+            0.0023560523986816406,
+            -0.006663709878921509,
+            0.0002968311309814453
+          ],
+          "predicted_position_to_above_m": 0.0996292255871806,
+          "predicted_side_error_m": 0.09901231809064243,
+          "remaining_descent_can_margin_m": -0.01637235864783171,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 266,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 7,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.10564437183969941,
+          "orientation_error_rad": 0.02646370160207469,
+          "side_error_m": 0.10526219439983277,
+          "closure_axis_error_m": -0.10464992187871601,
+          "observed_motion_m_per_step": [
+            0.002979278564453125,
+            -0.0071485042572021484,
+            -0.001142740249633789
+          ],
+          "predicted_position_to_above_m": 0.09000360368238039,
+          "predicted_side_error_m": 0.08966456207494902,
+          "remaining_descent_can_margin_m": -0.016321778774574913,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 267,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 8,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.09681835418729301,
+          "orientation_error_rad": 0.027296921940610185,
+          "side_error_m": 0.09651656468888072,
+          "closure_axis_error_m": -0.09605881194455676,
+          "observed_motion_m_per_step": [
+            0.003200054168701172,
+            -0.008009076118469238,
+            -0.002257227897644043
+          ],
+          "predicted_position_to_above_m": 0.07922625113063696,
+          "predicted_side_error_m": 0.07907493513632338,
+          "remaining_descent_can_margin_m": -0.01384503950545335,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 268,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 9,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.08784203283847637,
+          "orientation_error_rad": 0.026344437272394612,
+          "side_error_m": 0.0876245275913549,
+          "closure_axis_error_m": -0.08729808743420475,
+          "observed_motion_m_per_step": [
+            0.003347352147102356,
+            -0.008141428232192993,
+            -0.002130746841430664
+          ],
+          "predicted_position_to_above_m": 0.06995174763699054,
+          "predicted_side_error_m": 0.06986358126994677,
+          "remaining_descent_can_margin_m": -0.012220448906266612,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 269,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 10,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.07932541914343769,
+          "orientation_error_rad": 0.024476002361956087,
+          "side_error_m": 0.07914291051009448,
+          "closure_axis_error_m": -0.0789373253314247,
+          "observed_motion_m_per_step": [
+            0.0029242634773254395,
+            -0.007885724306106567,
+            -0.0018287897109985352
+          ],
+          "predicted_position_to_above_m": 0.06236668597574386,
+          "predicted_side_error_m": 0.06226582739673541,
+          "remaining_descent_can_margin_m": -0.01224629195606114,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 270,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 11,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.07133901245270394,
+          "orientation_error_rad": 0.0221218601283793,
+          "side_error_m": 0.07116695382011881,
+          "closure_axis_error_m": -0.07106887299462303,
+          "observed_motion_m_per_step": [
+            0.002364620566368103,
+            -0.007632195949554443,
+            -0.0014535188674926758
+          ],
+          "predicted_position_to_above_m": 0.055483756396063025,
+          "predicted_side_error_m": 0.055328292645329395,
+          "remaining_descent_can_margin_m": -0.0110359201497226,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 271,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 12,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.06297719421208277,
+          "orientation_error_rad": 0.018562010382678767,
+          "side_error_m": 0.06284712546762693,
+          "closure_axis_error_m": -0.06280460600438989,
+          "observed_motion_m_per_step": [
+            0.003181159496307373,
+            -0.007659494876861572,
+            -0.0015245676040649414
+          ],
+          "predicted_position_to_above_m": 0.04633080228486183,
+          "predicted_side_error_m": 0.04627307248064056,
+          "remaining_descent_can_margin_m": -0.009863606251085622,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 272,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 13,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.05433185138147377,
+          "orientation_error_rad": 0.015743211863847036,
+          "side_error_m": 0.054269920962065656,
+          "closure_axis_error_m": -0.05426251520841603,
+          "observed_motion_m_per_step": [
+            0.003605589270591736,
+            -0.007751196622848511,
+            -0.0019979476928710938
+          ],
+          "predicted_position_to_above_m": 0.03722949033104209,
+          "predicted_side_error_m": 0.037227723502613504,
+          "remaining_descent_can_margin_m": -0.0074203791964332355,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 273,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 14,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.045835351059688834,
+          "orientation_error_rad": 0.014110185273533063,
+          "side_error_m": 0.0458176959527541,
+          "closure_axis_error_m": -0.04581715773250722,
+          "observed_motion_m_per_step": [
+            0.00381450355052948,
+            -0.007529139518737793,
+            -0.0019028186798095703
+          ],
+          "predicted_position_to_above_m": 0.029118596466257918,
+          "predicted_side_error_m": 0.029042102228900076,
+          "remaining_descent_can_margin_m": -0.007324482848574176,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 274,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 15,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.037966541882634264,
+          "orientation_error_rad": 0.013530501210725137,
+          "side_error_m": 0.03796655891107247,
+          "closure_axis_error_m": -0.03794190548497575,
+          "observed_motion_m_per_step": [
+            0.00345456600189209,
+            -0.00708654522895813,
+            -0.0017610788345336914
+          ],
+          "predicted_position_to_above_m": 0.022674730059634027,
+          "predicted_side_error_m": 0.022475731795176774,
+          "remaining_descent_can_margin_m": -0.006179616255579112,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 275,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 16,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.030809998352077764,
+          "orientation_error_rad": 0.013026317364550566,
+          "side_error_m": 0.030796090292660443,
+          "closure_axis_error_m": -0.0306936379594534,
+          "observed_motion_m_per_step": [
+            0.002766430377960205,
+            -0.006723880767822266,
+            -0.0011239051818847656
+          ],
+          "predicted_position_to_above_m": 0.01701800884817647,
+          "predicted_side_error_m": 0.01689632784404574,
+          "remaining_descent_can_margin_m": -0.00118046138142347,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 276,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 17,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.023919903654587887,
+          "orientation_error_rad": 0.013530408523970226,
+          "side_error_m": 0.023849058418151232,
+          "closure_axis_error_m": -0.023578352348049784,
+          "observed_motion_m_per_step": [
+            0.002966061234474182,
+            -0.006477534770965576,
+            -0.0014148950576782227
+          ],
+          "predicted_position_to_above_m": 0.011598310200369553,
+          "predicted_side_error_m": 0.010957265502293393,
+          "remaining_descent_can_margin_m": -0.0012085557726858598,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 277,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 18,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.017915386297826744,
+          "orientation_error_rad": 0.014708307557778041,
+          "side_error_m": 0.017609634718407683,
+          "closure_axis_error_m": -0.017028850899581782,
+          "observed_motion_m_per_step": [
+            0.003068596124649048,
+            -0.0057867467403411865,
+            -0.0017038583755493164
+          ],
+          "predicted_position_to_above_m": 0.009664095258920067,
+          "predicted_side_error_m": 0.0074178510655700984,
+          "remaining_descent_can_margin_m": 0.003003924024185506,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.25137645597051583,
+              0.285200294753093,
+              1.0230699560745569
+            ],
+            "box_margin_m": 0.10968441324653692,
+            "can_margin_m": 0.04194608148644818,
+            "tail_can_margin_m": 0.005057377094466964,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35222536726455067,
+                1.0491234612823102,
+                0.14356985136170455,
+                -1.2574297120114182,
+                -0.3524708807483983,
+                2.915374648198869,
+                1.0200109725038142
+              ],
+              "position_error_m": 0.0003357505624743702,
+              "angle_error_rad": 0.0010906005563781614,
+              "limit_margin_rad": 0.7136765387176898
+            }
+          }
+        },
+        {
+          "step": 278,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 19,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.01295515930813829,
+          "orientation_error_rad": 0.016325189404701946,
+          "side_error_m": 0.012345282867318754,
+          "closure_axis_error_m": -0.01149199023477802,
+          "observed_motion_m_per_step": [
+            0.0028160959482192993,
+            -0.004775136709213257,
+            -0.0005216598510742188
+          ],
+          "predicted_position_to_above_m": 0.006900221850481745,
+          "predicted_side_error_m": 0.004591440848964678,
+          "remaining_descent_can_margin_m": 0.00335485907705102,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.2516846630131173,
+              0.28536152619606375,
+              1.0225624963799855
+            ],
+            "box_margin_m": 0.10913264794471371,
+            "can_margin_m": 0.041539827140627206,
+            "tail_can_margin_m": 0.005045720920685559,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35437631588470775,
+                1.0514445146565543,
+                0.141297412132828,
+                -1.2559770461983488,
+                -0.3393490274647881,
+                2.91942643418435,
+                1.0083455191890422
+              ],
+              "position_error_m": 0.0002430938024180295,
+              "angle_error_rad": 0.0007708162603870596,
+              "limit_margin_rad": 0.7113554853434456
+            }
+          }
+        },
+        {
+          "step": 279,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 20,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.009065767930432577,
+          "orientation_error_rad": 0.017104539961163477,
+          "side_error_m": 0.008125579216962326,
+          "closure_axis_error_m": -0.006924539891307634,
+          "observed_motion_m_per_step": [
+            0.002326458692550659,
+            -0.0039362311363220215,
+            7.2479248046875e-05
+          ],
+          "predicted_position_to_above_m": 0.00603005905406012,
+          "predicted_side_error_m": 0.004322543782645977,
+          "remaining_descent_can_margin_m": 0.003317510926775985,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.25173904282968584,
+              0.28539317605195036,
+              1.0224867376290165
+            ],
+            "box_margin_m": 0.10917711372324827,
+            "can_margin_m": 0.042965280131064654,
+            "tail_can_margin_m": 0.005038942989183504,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.3556731610400287,
+                1.0517957513094913,
+                0.14017059498963283,
+                -1.2564170191818531,
+                -0.3267232221438126,
+                2.9218419716504758,
+                0.9964509391299379
+              ],
+              "position_error_m": 0.00017295656962541613,
+              "angle_error_rad": 0.0005117357903608934,
+              "limit_margin_rad": 0.7110042486905086
+            }
+          }
+        },
+        {
+          "step": 280,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 21,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.006194318286615946,
+          "orientation_error_rad": 0.01693891765382104,
+          "side_error_m": 0.004942045903652583,
+          "closure_axis_error_m": -0.0030068715185365084,
+          "observed_motion_m_per_step": [
+            0.0018710792064666748,
+            -0.0034459829330444336,
+            0.00042068958282470703
+          ],
+          "predicted_position_to_above_m": 0.006636922008854015,
+          "predicted_side_error_m": 0.005845197161034432,
+          "remaining_descent_can_margin_m": 0.005035793268154287,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.25158267782715815,
+              0.28531029423330895,
+              1.0227184312907656
+            ],
+            "box_margin_m": 0.109575324284416,
+            "can_margin_m": 0.044803837126283774,
+            "tail_can_margin_m": 0.005035793268154287,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35650122417994257,
+                1.0505766829582006,
+                0.13964457624841,
+                -1.2582277215563142,
+                -0.31486465020443727,
+                2.9225443211906423,
+                0.9849930845609176
+              ],
+              "position_error_m": 0.00012751332342940633,
+              "angle_error_rad": 0.0003077228082965049,
+              "limit_margin_rad": 0.7122233170417993
+            }
+          }
+        },
+        {
+          "step": 281,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 22,
+          "edge_settled_before": 1,
+          "position_to_above_m": 0.004800426838650436,
+          "orientation_error_rad": 0.01692220052429623,
+          "side_error_m": 0.003454813670180957,
+          "closure_axis_error_m": 0.00023205017040820076,
+          "observed_motion_m_per_step": [
+            0.0016155391931533813,
+            -0.0028059184551239014,
+            0.0005991458892822266
+          ],
+          "predicted_position_to_above_m": 0.007579299895675836,
+          "predicted_side_error_m": 0.0071516938075703515,
+          "remaining_descent_can_margin_m": 0.005034088164985073,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.2513743274526491,
+              0.28520908775204307,
+              1.02304510168465
+            ],
+            "box_margin_m": 0.11015188656641421,
+            "can_margin_m": 0.04579615333856435,
+            "tail_can_margin_m": 0.005034088164985073,
+            "ik": {
+              "success": true,
+              "iterations": 0,
+              "q": [
+                0.355692847298579,
+                1.0433074137786718,
+                0.13780507130017927,
+                -1.276638621306635,
+                -0.3055123602352264,
+                2.9333608417212855,
+                0.9762227733410619
+              ],
+              "position_error_m": 0.0034439126876157937,
+              "angle_error_rad": 0.00033610529851561225,
+              "limit_margin_rad": 0.7194925862213282
+            }
+          }
+        },
+        {
+          "step": 282,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 23,
+          "edge_settled_before": 2,
+          "position_to_above_m": 0.005167299703741195,
+          "orientation_error_rad": 0.01737230804061352,
+          "side_error_m": 0.003980182528243244,
+          "closure_axis_error_m": 0.0026743055194199065,
+          "observed_motion_m_per_step": [
+            0.0014611035585403442,
+            -0.0019994378089904785,
+            0.00031363964080810547
+          ],
+          "predicted_position_to_above_m": 0.008449877687215212,
+          "predicted_side_error_m": 0.00781376218497862,
+          "remaining_descent_can_margin_m": 0.005032453670152814,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.2513574200563588,
+              0.2851964240446147,
+              1.023072445888157
+            ],
+            "box_margin_m": 0.1104524806353746,
+            "can_margin_m": 0.045622811846531164,
+            "tail_can_margin_m": 0.005032453670152814,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35673662237879084,
+                1.0488641615349197,
+                0.14053546269988554,
+                -1.2605881410448454,
+                -0.29432704586938435,
+                2.922459852360996,
+                0.9638634511371833
+              ],
+              "position_error_m": 7.993222719742364e-05,
+              "angle_error_rad": 0.0001572238690061379,
+              "limit_margin_rad": 0.7139358384650802
+            }
+          }
+        },
+        {
+          "step": 283,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 24,
+          "edge_settled_before": 3,
+          "position_to_above_m": 0.006334049209720057,
+          "orientation_error_rad": 0.01660268261390713,
+          "side_error_m": 0.0056010050590313285,
+          "closure_axis_error_m": 0.004982301022197615,
+          "observed_motion_m_per_step": [
+            0.0011740326881408691,
+            -0.001995980739593506,
+            0.0004999637603759766
+          ],
+          "predicted_position_to_above_m": 0.010031555187554069,
+          "predicted_side_error_m": 0.00976675095307033,
+          "remaining_descent_can_margin_m": 0.00503669861189926,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.2511949942642136,
+              0.2851089108253246,
+              1.0233493011715138
+            ],
+            "box_margin_m": 0.11098632514642995,
+            "can_margin_m": 0.044819611083138367,
+            "tail_can_margin_m": 0.00503669861189926,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.356972110452231,
+                1.047511581159029,
+                0.14084316824491977,
+                -1.2615138322742656,
+                -0.28587963915199754,
+                2.920203848758233,
+                0.9552961695385158
+              ],
+              "position_error_m": 7.791540028665568e-05,
+              "angle_error_rad": 0.00022805654440851387,
+              "limit_margin_rad": 0.7152884188409709
+            }
+          }
+        },
+        {
+          "step": 284,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 25,
+          "edge_settled_before": 4,
+          "position_to_above_m": 0.0076801410203737284,
+          "orientation_error_rad": 0.01600548405898109,
+          "side_error_m": 0.007315476506336646,
+          "closure_axis_error_m": 0.007033841095612383,
+          "observed_motion_m_per_step": [
+            0.0010217130184173584,
+            -0.0017845332622528076,
+            0.000826716423034668
+          ],
+          "predicted_position_to_above_m": 0.011233202504068172,
+          "predicted_side_error_m": 0.011178869687783527,
+          "remaining_descent_can_margin_m": 0.005041311327658615,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.25088088864262315,
+              0.2849449806054627,
+              1.02386135318697
+            ],
+            "box_margin_m": 0.11183591694632748,
+            "can_margin_m": 0.044652188667546666,
+            "tail_can_margin_m": 0.005041311327658615,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.3572352541240653,
+                1.0450466069238638,
+                0.1408551701923263,
+                -1.2638154836891224,
+                -0.2787058244769609,
+                2.918254061567006,
+                0.9483605044081175
+              ],
+              "position_error_m": 7.043814427806586e-05,
+              "angle_error_rad": 0.0003116163942274648,
+              "limit_margin_rad": 0.7177533930761362
+            }
+          }
+        },
+        {
+          "step": 285,
+          "phase": "DESCEND",
+          "phase_age": 0,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.008731281882488229,
+          "orientation_error_rad": 0.01579114833270394,
+          "side_error_m": 0.00856500644730261,
+          "closure_axis_error_m": 0.008450392685828862,
+          "observed_motion_m_per_step": [
+            0.0007709264755249023,
+            -0.0011893808841705322,
+            0.0008552074432373047
+          ],
+          "predicted_position_to_above_m": 0.011277354454140881,
+          "predicted_side_error_m": 0.011272037840186006,
+          "remaining_descent_can_margin_m": 0.005045010476914635,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 286,
+          "phase": "DESCEND",
+          "phase_age": 1,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.009281242891468955,
+          "orientation_error_rad": 0.016248634138596015,
+          "side_error_m": 0.00919217814567969,
+          "closure_axis_error_m": 0.009166992668329781,
+          "observed_motion_m_per_step": [
+            0.0006527304649353027,
+            -0.00047025084495544434,
+            0.000738978385925293
+          ],
+          "predicted_position_to_above_m": 0.010635484664076149,
+          "predicted_side_error_m": 0.010627255681435093,
+          "remaining_descent_can_margin_m": 0.004818834627855498,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 287,
+          "phase": "DESCEND",
+          "phase_age": 2,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.009350025856255358,
+          "orientation_error_rad": 0.016710684384758607,
+          "side_error_m": 0.009257190423473612,
+          "closure_axis_error_m": 0.009257133278174035,
+          "observed_motion_m_per_step": [
+            0.0004964470863342285,
+            0.000141829252243042,
+            0.00040590763092041016
+          ],
+          "predicted_position_to_above_m": 0.009621539836430085,
+          "predicted_side_error_m": 0.009541617541093702,
+          "remaining_descent_can_margin_m": 0.004667821662404523,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 288,
+          "phase": "DESCEND",
+          "phase_age": 3,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.010524182190660186,
+          "orientation_error_rad": 0.018538562739761243,
+          "side_error_m": 0.00937234295908343,
+          "closure_axis_error_m": 0.009371082611282385,
+          "observed_motion_m_per_step": [
+            0.0019724667072296143,
+            0.0008831024169921875,
+            -0.0027582645416259766
+          ],
+          "predicted_position_to_above_m": 0.015201985848929298,
+          "predicted_side_error_m": 0.009613430596503797,
+          "remaining_descent_can_margin_m": 0.004152931620167236,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 289,
+          "phase": "DESCEND",
+          "phase_age": 4,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.016152843711395866,
+          "orientation_error_rad": 0.022269954548215617,
+          "side_error_m": 0.009257743771182264,
+          "closure_axis_error_m": 0.009214289533177416,
+          "observed_motion_m_per_step": [
+            0.003483414649963379,
+            0.001959472894668579,
+            -0.007524728775024414
+          ],
+          "predicted_position_to_above_m": 0.031572104571078716,
+          "predicted_side_error_m": 0.009392178209797283,
+          "remaining_descent_can_margin_m": 0.00356194280108027,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 290,
+          "phase": "DESCEND",
+          "phase_age": 5,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.02437019301190306,
+          "orientation_error_rad": 0.025458333146772205,
+          "side_error_m": 0.008950507281670956,
+          "closure_axis_error_m": 0.008637560944836926,
+          "observed_motion_m_per_step": [
+            0.0034800171852111816,
+            0.0024445652961730957,
+            -0.008569478988647461
+          ],
+          "predicted_position_to_above_m": 0.04253262909559671,
+          "predicted_side_error_m": 0.009138855845000312,
+          "remaining_descent_can_margin_m": 0.0033080644841560203,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 291,
+          "phase": "DESCEND",
+          "phase_age": 6,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.03317595229132001,
+          "orientation_error_rad": 0.028360840865928015,
+          "side_error_m": 0.008681239528521317,
+          "closure_axis_error_m": 0.007873627132455551,
+          "observed_motion_m_per_step": [
+            0.0034661293029785156,
+            0.0026393234729766846,
+            -0.008414864540100098
+          ],
+          "predicted_position_to_above_m": 0.05150591201252768,
+          "predicted_side_error_m": 0.008925597593504992,
+          "remaining_descent_can_margin_m": 0.003241727517113435,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 292,
+          "phase": "DESCEND",
+          "phase_age": 7,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.04229771597153504,
+          "orientation_error_rad": 0.030946261950351422,
+          "side_error_m": 0.008620491512105718,
+          "closure_axis_error_m": 0.0070273596374708066,
+          "observed_motion_m_per_step": [
+            0.003445863723754883,
+            0.0027045607566833496,
+            -0.008450567722320557
+          ],
+          "predicted_position_to_above_m": 0.06090654342077635,
+          "predicted_side_error_m": 0.00933309530816962,
+          "remaining_descent_can_margin_m": 0.0032740715968086753,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 293,
+          "phase": "DESCEND",
+          "phase_age": 8,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.05119715072879983,
+          "orientation_error_rad": 0.03344659272345797,
+          "side_error_m": 0.00862240721238756,
+          "closure_axis_error_m": 0.006002946296573752,
+          "observed_motion_m_per_step": [
+            0.003275752067565918,
+            0.0028383731842041016,
+            -0.008107900619506836
+          ],
+          "predicted_position_to_above_m": 0.06922716933260864,
+          "predicted_side_error_m": 0.009453717495513788,
+          "remaining_descent_can_margin_m": 0.003467167890219419,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 294,
+          "phase": "DESCEND",
+          "phase_age": 9,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.05969538446817489,
+          "orientation_error_rad": 0.035970406782246805,
+          "side_error_m": 0.008741309831225107,
+          "closure_axis_error_m": 0.004941821853213902,
+          "observed_motion_m_per_step": [
+            0.003152787685394287,
+            0.0028135180473327637,
+            -0.0076187849044799805
+          ],
+          "predicted_position_to_above_m": 0.0768357424600699,
+          "predicted_side_error_m": 0.009668683697399157,
+          "remaining_descent_can_margin_m": 0.0037252712030581697,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 295,
+          "phase": "DESCEND",
+          "phase_age": 10,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.06653217528970287,
+          "orientation_error_rad": 0.034975095751606844,
+          "side_error_m": 0.008799022892393706,
+          "closure_axis_error_m": 0.003682370929156579,
+          "observed_motion_m_per_step": [
+            0.002387315034866333,
+            0.002627134323120117,
+            -0.006091892719268799
+          ],
+          "predicted_position_to_above_m": 0.08031679015695153,
+          "predicted_side_error_m": 0.00960914503044228,
+          "remaining_descent_can_margin_m": 0.00433512117867399,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 296,
+          "phase": "DESCEND",
+          "phase_age": 11,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.07116230206333968,
+          "orientation_error_rad": 0.03246730180568399,
+          "side_error_m": 0.008162231457550536,
+          "closure_axis_error_m": 0.0027434192610526226,
+          "observed_motion_m_per_step": [
+            0.002188652753829956,
+            0.0021998584270477295,
+            -0.00372391939163208
+          ],
+          "predicted_position_to_above_m": 0.0804993287485687,
+          "predicted_side_error_m": 0.007171921237034971,
+          "remaining_descent_can_margin_m": 0.004665759103701858,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 297,
+          "phase": "DESCEND",
+          "phase_age": 12,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.07453950844071255,
+          "orientation_error_rad": 0.030593473738881893,
+          "side_error_m": 0.0069242345206820995,
+          "closure_axis_error_m": 0.0017893088171567306,
+          "observed_motion_m_per_step": [
+            0.0021017789840698242,
+            0.0021404922008514404,
+            -0.0023100972175598145
+          ],
+          "predicted_position_to_above_m": 0.08140198321495212,
+          "predicted_side_error_m": 0.004676250384337776,
+          "remaining_descent_can_margin_m": 0.004998488173575177,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 298,
+          "phase": "DESCEND",
+          "phase_age": 13,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.07703925771590585,
+          "orientation_error_rad": 0.027988697901621982,
+          "side_error_m": 0.005553043016153736,
+          "closure_axis_error_m": 0.0007515411841845865,
+          "observed_motion_m_per_step": [
+            0.0017461776733398438,
+            0.0020451247692108154,
+            -0.0014600753784179688
+          ],
+          "predicted_position_to_above_m": 0.08215257757661774,
+          "predicted_side_error_m": 0.0033620577693290656,
+          "remaining_descent_can_margin_m": 0.005009090144427519,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        }
+      ],
+      "close_config_steps": 16,
+      "delay_steps": 2,
+      "source_sha256": {
+        "reproduction/improvement_v14_20261016_01/smoke_b/v13_regression_6000005/trace.jsonl": "416d0b9a7854f2b9cf696221f29195c4f532b2b7757c3bfc22662a297970ceda",
+        "reproduction/improvement_v14_20261016_01/smoke_b/v13_regression_6000005/result.json": "91eb210c226e28028bd9e5d4daeb80e00fd53d8e4019f17366b1d0ddd3b4f080"
+      }
+    },
+    {
+      "source_job": "clearance_regression_6000005",
+      "success": false,
+      "replayed_steps": 400,
+      "events": [
+        {
+          "step": 121,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "near_object_stall",
+          "attempt": 1,
+          "object_position": [
+            0.2911778390407562,
+            0.3068481981754303,
+            0.9418637156486511
+          ]
+        },
+        {
+          "step": 121,
+          "from": "RETRACT",
+          "to": "RETRACT",
+          "reason": "bounded_mesh_ready",
+          "attempt": 1,
+          "object_position": [
+            0.29221752285957336,
+            0.31156647205352783,
+            0.9422163963317871
+          ]
+        },
+        {
+          "step": 129,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "mesh_plan_relocate_before_alignment",
+          "attempt": 1,
+          "object_position": [
+            0.2958747148513794,
+            0.3080000579357147,
+            0.940239667892456
+          ]
+        },
+        {
+          "step": 160,
+          "from": "POSE_WAIT",
+          "to": "RETRACT",
+          "reason": "bounded_mesh_ready",
+          "attempt": 1,
+          "object_position": [
+            0.295874685049057,
+            0.30800309777259827,
+            0.940239429473877
+          ]
+        },
+        {
+          "step": 168,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.2958645224571228,
+            0.30800214409828186,
+            0.9402452707290649
+          ]
+        },
+        {
+          "step": 192,
+          "from": "ALIGN",
+          "to": "EDGE_ROTATE",
+          "reason": "edge_path_validated",
+          "attempt": 1,
+          "object_position": [
+            0.2958565056324005,
+            0.30800333619117737,
+            0.9402441382408142
+          ]
+        },
+        {
+          "step": 258,
+          "from": "EDGE_ROTATE",
+          "to": "EDGE_APPROACH",
+          "reason": "edge_rotation_settled",
+          "attempt": 1,
+          "object_position": [
+            0.2958781123161316,
+            0.3080018162727356,
+            0.9402368664741516
+          ]
+        },
+        {
+          "step": 284,
+          "from": "EDGE_APPROACH",
+          "to": "DESCEND",
+          "reason": "edge_approach_and_aperture_validated",
+          "attempt": 1,
+          "object_position": [
+            0.29585596919059753,
+            0.30800190567970276,
+            0.9402503967285156
+          ]
+        },
+        {
+          "step": 322,
+          "from": "DESCEND",
+          "to": "CLOSE",
+          "reason": "at_grasp_pose",
+          "attempt": 1,
+          "object_position": [
+            0.29584693908691406,
+            0.3080037832260132,
+            0.9402530789375305
+          ]
+        },
+        {
+          "step": 340,
+          "from": "CLOSE",
+          "to": "TEST_LIFT",
+          "reason": "close_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.2943626344203949,
+            0.30698487162590027,
+            0.9486639499664307
+          ]
+        },
+        {
+          "step": 347,
+          "from": "TEST_LIFT",
+          "to": "LIFT",
+          "reason": "lift_follow_confirmed",
+          "attempt": 1,
+          "object_position": [
+            0.2955365777015686,
+            0.3088219463825226,
+            0.962126612663269
+          ]
+        },
+        {
+          "step": 358,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.2963642179965973,
+            0.3097122311592102,
+            1.0712695121765137
+          ]
+        },
+        {
+          "step": 370,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.22681380808353424,
+            0.3710719645023346,
+            1.0911868810653687
+          ]
+        },
+        {
+          "step": 392,
+          "from": "PLACE",
+          "to": "RELEASE",
+          "reason": "at_release_height",
+          "attempt": 1,
+          "object_position": [
+            0.18955571949481964,
+            0.4010637700557709,
+            0.8967946171760559
+          ]
+        }
+      ],
+      "phases": {
+        "NORMAL": 120,
+        "RETRACT": 15,
+        "PLAN_WAIT": 28,
+        "POSE_WAIT": 31,
+        "EDGE_ROTATE": 65,
+        "EDGE_APPROACH": 26,
+        "DESCEND": 20,
+        "PATH_RECENTER": 17,
+        "CLOSE": 18,
+        "TEST_LIFT": 7,
+        "LIFT": 11,
+        "CARRY": 12,
+        "PLACE": 22,
+        "RELEASE": 8
+      },
+      "recenter_control_steps": [
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306
+      ],
+      "settle_window_280_284": [
+        {
+          "step": 280,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 21,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.006194318286615946,
+          "orientation_error_rad": 0.01693891765382104,
+          "side_error_m": 0.004942045903652583,
+          "closure_axis_error_m": -0.0030068715185365084,
+          "observed_motion_m_per_step": [
+            0.0018710792064666748,
+            -0.0034459829330444336,
+            0.00042068958282470703
+          ],
+          "predicted_position_to_above_m": 0.006636922008854015,
+          "predicted_side_error_m": 0.005845197161034432,
+          "remaining_descent_can_margin_m": 0.005035793268154287,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.25158267782715815,
+              0.28531029423330895,
+              1.0227184312907656
+            ],
+            "box_margin_m": 0.109575324284416,
+            "can_margin_m": 0.044803837126283774,
+            "tail_can_margin_m": 0.005035793268154287,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35650122417994257,
+                1.0505766829582006,
+                0.13964457624841,
+                -1.2582277215563142,
+                -0.31486465020443727,
+                2.9225443211906423,
+                0.9849930845609176
+              ],
+              "position_error_m": 0.00012751332342940633,
+              "angle_error_rad": 0.0003077228082965049,
+              "limit_margin_rad": 0.7122233170417993
+            }
+          }
+        },
+        {
+          "step": 281,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 22,
+          "edge_settled_before": 1,
+          "position_to_above_m": 0.004800426838650436,
+          "orientation_error_rad": 0.01692220052429623,
+          "side_error_m": 0.003454813670180957,
+          "closure_axis_error_m": 0.00023205017040820076,
+          "observed_motion_m_per_step": [
+            0.0016155391931533813,
+            -0.0028059184551239014,
+            0.0005991458892822266
+          ],
+          "predicted_position_to_above_m": 0.007579299895675836,
+          "predicted_side_error_m": 0.0071516938075703515,
+          "remaining_descent_can_margin_m": 0.005034088164985073,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.2513743274526491,
+              0.28520908775204307,
+              1.02304510168465
+            ],
+            "box_margin_m": 0.11015188656641421,
+            "can_margin_m": 0.04579615333856435,
+            "tail_can_margin_m": 0.005034088164985073,
+            "ik": {
+              "success": true,
+              "iterations": 0,
+              "q": [
+                0.355692847298579,
+                1.0433074137786718,
+                0.13780507130017927,
+                -1.276638621306635,
+                -0.3055123602352264,
+                2.9333608417212855,
+                0.9762227733410619
+              ],
+              "position_error_m": 0.0034439126876157937,
+              "angle_error_rad": 0.00033610529851561225,
+              "limit_margin_rad": 0.7194925862213282
+            }
+          }
+        },
+        {
+          "step": 282,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 23,
+          "edge_settled_before": 2,
+          "position_to_above_m": 0.005167299703741195,
+          "orientation_error_rad": 0.01737230804061352,
+          "side_error_m": 0.003980182528243244,
+          "closure_axis_error_m": 0.0026743055194199065,
+          "observed_motion_m_per_step": [
+            0.0014611035585403442,
+            -0.0019994378089904785,
+            0.00031363964080810547
+          ],
+          "predicted_position_to_above_m": 0.008449877687215212,
+          "predicted_side_error_m": 0.00781376218497862,
+          "remaining_descent_can_margin_m": 0.005032453670152814,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.2513574200563588,
+              0.2851964240446147,
+              1.023072445888157
+            ],
+            "box_margin_m": 0.1104524806353746,
+            "can_margin_m": 0.045622811846531164,
+            "tail_can_margin_m": 0.005032453670152814,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35673662237879084,
+                1.0488641615349197,
+                0.14053546269988554,
+                -1.2605881410448454,
+                -0.29432704586938435,
+                2.922459852360996,
+                0.9638634511371833
+              ],
+              "position_error_m": 7.993222719742364e-05,
+              "angle_error_rad": 0.0001572238690061379,
+              "limit_margin_rad": 0.7139358384650802
+            }
+          }
+        },
+        {
+          "step": 283,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 24,
+          "edge_settled_before": 3,
+          "position_to_above_m": 0.006334049209720057,
+          "orientation_error_rad": 0.01660268261390713,
+          "side_error_m": 0.0056010050590313285,
+          "closure_axis_error_m": 0.004982301022197615,
+          "observed_motion_m_per_step": [
+            0.0011740326881408691,
+            -0.001995980739593506,
+            0.0004999637603759766
+          ],
+          "predicted_position_to_above_m": 0.010031555187554069,
+          "predicted_side_error_m": 0.00976675095307033,
+          "remaining_descent_can_margin_m": 0.00503669861189926,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.2511949942642136,
+              0.2851089108253246,
+              1.0233493011715138
+            ],
+            "box_margin_m": 0.11098632514642995,
+            "can_margin_m": 0.044819611083138367,
+            "tail_can_margin_m": 0.00503669861189926,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.356972110452231,
+                1.047511581159029,
+                0.14084316824491977,
+                -1.2615138322742656,
+                -0.28587963915199754,
+                2.920203848758233,
+                0.9552961695385158
+              ],
+              "position_error_m": 7.791540028665568e-05,
+              "angle_error_rad": 0.00022805654440851387,
+              "limit_margin_rad": 0.7152884188409709
+            }
+          }
+        },
+        {
+          "step": 284,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 25,
+          "edge_settled_before": 4,
+          "position_to_above_m": 0.0076801410203737284,
+          "orientation_error_rad": 0.01600548405898109,
+          "side_error_m": 0.007315476506336646,
+          "closure_axis_error_m": 0.007033841095612383,
+          "observed_motion_m_per_step": [
+            0.0010217130184173584,
+            -0.0017845332622528076,
+            0.000826716423034668
+          ],
+          "predicted_position_to_above_m": 0.011233202504068172,
+          "predicted_side_error_m": 0.011178869687783527,
+          "remaining_descent_can_margin_m": 0.005041311327658615,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.25088088864262315,
+              0.2849449806054627,
+              1.02386135318697
+            ],
+            "box_margin_m": 0.11183591694632748,
+            "can_margin_m": 0.044652188667546666,
+            "tail_can_margin_m": 0.005041311327658615,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.3572352541240653,
+                1.0450466069238638,
+                0.1408551701923263,
+                -1.2638154836891224,
+                -0.2787058244769609,
+                2.918254061567006,
+                0.9483605044081175
+              ],
+              "position_error_m": 7.043814427806586e-05,
+              "angle_error_rad": 0.0003116163942274648,
+              "limit_margin_rad": 0.7177533930761362
+            }
+          }
+        }
+      ],
+      "descent_minimum_can_margin_m": 0.003241727517113435,
+      "measurements": [
+        {
+          "step": 259,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 0,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.1367314411885694,
+          "orientation_error_rad": 0.02204885492772003,
+          "side_error_m": 0.13662992023698223,
+          "closure_axis_error_m": -0.1359016539212672,
+          "observed_motion_m_per_step": [
+            -1.7777085304260254e-05,
+            9.754300117492676e-05,
+            0.00017142295837402344
+          ],
+          "predicted_position_to_above_m": 0.13695469506856592,
+          "predicted_side_error_m": 0.13684403354955058,
+          "remaining_descent_can_margin_m": -0.021764576697883453,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 260,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 1,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.1369766222206921,
+          "orientation_error_rad": 0.016490583648012997,
+          "side_error_m": 0.1368785056175637,
+          "closure_axis_error_m": -0.13617286125755929,
+          "observed_motion_m_per_step": [
+            -0.0003699064254760742,
+            0.00010058283805847168,
+            6.80685043334961e-05
+          ],
+          "predicted_position_to_above_m": 0.1374689803989154,
+          "predicted_side_error_m": 0.1373539074759088,
+          "remaining_descent_can_margin_m": -0.021784793771494226,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 261,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 2,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.1368866660433898,
+          "orientation_error_rad": 0.012319562198751726,
+          "side_error_m": 0.13678990397651747,
+          "closure_axis_error_m": -0.13610468696722616,
+          "observed_motion_m_per_step": [
+            -8.606910705566406e-05,
+            -0.0001201629638671875,
+            -0.00016558170318603516
+          ],
+          "predicted_position_to_above_m": 0.13670765720112474,
+          "predicted_side_error_m": 0.13661529721878246,
+          "remaining_descent_can_margin_m": -0.021796409360499314,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 262,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 3,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.13318229539260085,
+          "orientation_error_rad": 0.012081678932307714,
+          "side_error_m": 0.1330545469123043,
+          "closure_axis_error_m": -0.13235094642179798,
+          "observed_motion_m_per_step": [
+            0.0013556182384490967,
+            -0.0035223960876464844,
+            0.0005458593368530273
+          ],
+          "predicted_position_to_above_m": 0.12579312525615535,
+          "predicted_side_error_m": 0.125587467469637,
+          "remaining_descent_can_margin_m": -0.021275171491913214,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 263,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 4,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.12706284821142202,
+          "orientation_error_rad": 0.01776177432693288,
+          "side_error_m": 0.1268486875142361,
+          "closure_axis_error_m": -0.1261206133510446,
+          "observed_motion_m_per_step": [
+            0.0019904226064682007,
+            -0.005980700254440308,
+            0.0012028217315673828
+          ],
+          "predicted_position_to_above_m": 0.11492135833488498,
+          "predicted_side_error_m": 0.1144455586568688,
+          "remaining_descent_can_margin_m": -0.01760940954340917,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 264,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 5,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.12041211857569731,
+          "orientation_error_rad": 0.023120223050827365,
+          "side_error_m": 0.12008986343641231,
+          "closure_axis_error_m": -0.11937421222669892,
+          "observed_motion_m_per_step": [
+            0.002035871148109436,
+            -0.006531864404678345,
+            0.0008352994918823242
+          ],
+          "predicted_position_to_above_m": 0.10720236286346166,
+          "predicted_side_error_m": 0.10658467020853991,
+          "remaining_descent_can_margin_m": -0.01645240438390916,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 265,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 6,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.11346640393382287,
+          "orientation_error_rad": 0.025682134489182395,
+          "side_error_m": 0.11306851090101504,
+          "closure_axis_error_m": -0.1123767032208672,
+          "observed_motion_m_per_step": [
+            0.0023560523986816406,
+            -0.006663709878921509,
+            0.0002968311309814453
+          ],
+          "predicted_position_to_above_m": 0.0996292255871806,
+          "predicted_side_error_m": 0.09901231809064243,
+          "remaining_descent_can_margin_m": -0.01637235864783171,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 266,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 7,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.10564437183969941,
+          "orientation_error_rad": 0.02646370160207469,
+          "side_error_m": 0.10526219439983277,
+          "closure_axis_error_m": -0.10464992187871601,
+          "observed_motion_m_per_step": [
+            0.002979278564453125,
+            -0.0071485042572021484,
+            -0.001142740249633789
+          ],
+          "predicted_position_to_above_m": 0.09000360368238039,
+          "predicted_side_error_m": 0.08966456207494902,
+          "remaining_descent_can_margin_m": -0.016321778774574913,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 267,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 8,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.09681835418729301,
+          "orientation_error_rad": 0.027296921940610185,
+          "side_error_m": 0.09651656468888072,
+          "closure_axis_error_m": -0.09605881194455676,
+          "observed_motion_m_per_step": [
+            0.003200054168701172,
+            -0.008009076118469238,
+            -0.002257227897644043
+          ],
+          "predicted_position_to_above_m": 0.07922625113063696,
+          "predicted_side_error_m": 0.07907493513632338,
+          "remaining_descent_can_margin_m": -0.01384503950545335,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 268,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 9,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.08784203283847637,
+          "orientation_error_rad": 0.026344437272394612,
+          "side_error_m": 0.0876245275913549,
+          "closure_axis_error_m": -0.08729808743420475,
+          "observed_motion_m_per_step": [
+            0.003347352147102356,
+            -0.008141428232192993,
+            -0.002130746841430664
+          ],
+          "predicted_position_to_above_m": 0.06995174763699054,
+          "predicted_side_error_m": 0.06986358126994677,
+          "remaining_descent_can_margin_m": -0.012220448906266612,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 269,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 10,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.07932541914343769,
+          "orientation_error_rad": 0.024476002361956087,
+          "side_error_m": 0.07914291051009448,
+          "closure_axis_error_m": -0.0789373253314247,
+          "observed_motion_m_per_step": [
+            0.0029242634773254395,
+            -0.007885724306106567,
+            -0.0018287897109985352
+          ],
+          "predicted_position_to_above_m": 0.06236668597574386,
+          "predicted_side_error_m": 0.06226582739673541,
+          "remaining_descent_can_margin_m": -0.01224629195606114,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 270,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 11,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.07133901245270394,
+          "orientation_error_rad": 0.0221218601283793,
+          "side_error_m": 0.07116695382011881,
+          "closure_axis_error_m": -0.07106887299462303,
+          "observed_motion_m_per_step": [
+            0.002364620566368103,
+            -0.007632195949554443,
+            -0.0014535188674926758
+          ],
+          "predicted_position_to_above_m": 0.055483756396063025,
+          "predicted_side_error_m": 0.055328292645329395,
+          "remaining_descent_can_margin_m": -0.0110359201497226,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 271,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 12,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.06297719421208277,
+          "orientation_error_rad": 0.018562010382678767,
+          "side_error_m": 0.06284712546762693,
+          "closure_axis_error_m": -0.06280460600438989,
+          "observed_motion_m_per_step": [
+            0.003181159496307373,
+            -0.007659494876861572,
+            -0.0015245676040649414
+          ],
+          "predicted_position_to_above_m": 0.04633080228486183,
+          "predicted_side_error_m": 0.04627307248064056,
+          "remaining_descent_can_margin_m": -0.009863606251085622,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 272,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 13,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.05433185138147377,
+          "orientation_error_rad": 0.015743211863847036,
+          "side_error_m": 0.054269920962065656,
+          "closure_axis_error_m": -0.05426251520841603,
+          "observed_motion_m_per_step": [
+            0.003605589270591736,
+            -0.007751196622848511,
+            -0.0019979476928710938
+          ],
+          "predicted_position_to_above_m": 0.03722949033104209,
+          "predicted_side_error_m": 0.037227723502613504,
+          "remaining_descent_can_margin_m": -0.0074203791964332355,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 273,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 14,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.045835351059688834,
+          "orientation_error_rad": 0.014110185273533063,
+          "side_error_m": 0.0458176959527541,
+          "closure_axis_error_m": -0.04581715773250722,
+          "observed_motion_m_per_step": [
+            0.00381450355052948,
+            -0.007529139518737793,
+            -0.0019028186798095703
+          ],
+          "predicted_position_to_above_m": 0.029118596466257918,
+          "predicted_side_error_m": 0.029042102228900076,
+          "remaining_descent_can_margin_m": -0.007324482848574176,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 274,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 15,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.037966541882634264,
+          "orientation_error_rad": 0.013530501210725137,
+          "side_error_m": 0.03796655891107247,
+          "closure_axis_error_m": -0.03794190548497575,
+          "observed_motion_m_per_step": [
+            0.00345456600189209,
+            -0.00708654522895813,
+            -0.0017610788345336914
+          ],
+          "predicted_position_to_above_m": 0.022674730059634027,
+          "predicted_side_error_m": 0.022475731795176774,
+          "remaining_descent_can_margin_m": -0.006179616255579112,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 275,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 16,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.030809998352077764,
+          "orientation_error_rad": 0.013026317364550566,
+          "side_error_m": 0.030796090292660443,
+          "closure_axis_error_m": -0.0306936379594534,
+          "observed_motion_m_per_step": [
+            0.002766430377960205,
+            -0.006723880767822266,
+            -0.0011239051818847656
+          ],
+          "predicted_position_to_above_m": 0.01701800884817647,
+          "predicted_side_error_m": 0.01689632784404574,
+          "remaining_descent_can_margin_m": -0.00118046138142347,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 276,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 17,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.023919903654587887,
+          "orientation_error_rad": 0.013530408523970226,
+          "side_error_m": 0.023849058418151232,
+          "closure_axis_error_m": -0.023578352348049784,
+          "observed_motion_m_per_step": [
+            0.002966061234474182,
+            -0.006477534770965576,
+            -0.0014148950576782227
+          ],
+          "predicted_position_to_above_m": 0.011598310200369553,
+          "predicted_side_error_m": 0.010957265502293393,
+          "remaining_descent_can_margin_m": -0.0012085557726858598,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 277,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 18,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.017915386297826744,
+          "orientation_error_rad": 0.014708307557778041,
+          "side_error_m": 0.017609634718407683,
+          "closure_axis_error_m": -0.017028850899581782,
+          "observed_motion_m_per_step": [
+            0.003068596124649048,
+            -0.0057867467403411865,
+            -0.0017038583755493164
+          ],
+          "predicted_position_to_above_m": 0.009664095258920067,
+          "predicted_side_error_m": 0.0074178510655700984,
+          "remaining_descent_can_margin_m": 0.003003924024185506,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.25137645597051583,
+              0.285200294753093,
+              1.0230699560745569
+            ],
+            "box_margin_m": 0.10968441324653692,
+            "can_margin_m": 0.04194608148644818,
+            "tail_can_margin_m": 0.005057377094466964,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35222536726455067,
+                1.0491234612823102,
+                0.14356985136170455,
+                -1.2574297120114182,
+                -0.3524708807483983,
+                2.915374648198869,
+                1.0200109725038142
+              ],
+              "position_error_m": 0.0003357505624743702,
+              "angle_error_rad": 0.0010906005563781614,
+              "limit_margin_rad": 0.7136765387176898
+            }
+          }
+        },
+        {
+          "step": 278,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 19,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.01295515930813829,
+          "orientation_error_rad": 0.016325189404701946,
+          "side_error_m": 0.012345282867318754,
+          "closure_axis_error_m": -0.01149199023477802,
+          "observed_motion_m_per_step": [
+            0.0028160959482192993,
+            -0.004775136709213257,
+            -0.0005216598510742188
+          ],
+          "predicted_position_to_above_m": 0.006900221850481745,
+          "predicted_side_error_m": 0.004591440848964678,
+          "remaining_descent_can_margin_m": 0.00335485907705102,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.2516846630131173,
+              0.28536152619606375,
+              1.0225624963799855
+            ],
+            "box_margin_m": 0.10913264794471371,
+            "can_margin_m": 0.041539827140627206,
+            "tail_can_margin_m": 0.005045720920685559,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35437631588470775,
+                1.0514445146565543,
+                0.141297412132828,
+                -1.2559770461983488,
+                -0.3393490274647881,
+                2.91942643418435,
+                1.0083455191890422
+              ],
+              "position_error_m": 0.0002430938024180295,
+              "angle_error_rad": 0.0007708162603870596,
+              "limit_margin_rad": 0.7113554853434456
+            }
+          }
+        },
+        {
+          "step": 279,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 20,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.009065767930432577,
+          "orientation_error_rad": 0.017104539961163477,
+          "side_error_m": 0.008125579216962326,
+          "closure_axis_error_m": -0.006924539891307634,
+          "observed_motion_m_per_step": [
+            0.002326458692550659,
+            -0.0039362311363220215,
+            7.2479248046875e-05
+          ],
+          "predicted_position_to_above_m": 0.00603005905406012,
+          "predicted_side_error_m": 0.004322543782645977,
+          "remaining_descent_can_margin_m": 0.003317510926775985,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.25173904282968584,
+              0.28539317605195036,
+              1.0224867376290165
+            ],
+            "box_margin_m": 0.10917711372324827,
+            "can_margin_m": 0.042965280131064654,
+            "tail_can_margin_m": 0.005038942989183504,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.3556731610400287,
+                1.0517957513094913,
+                0.14017059498963283,
+                -1.2564170191818531,
+                -0.3267232221438126,
+                2.9218419716504758,
+                0.9964509391299379
+              ],
+              "position_error_m": 0.00017295656962541613,
+              "angle_error_rad": 0.0005117357903608934,
+              "limit_margin_rad": 0.7110042486905086
+            }
+          }
+        },
+        {
+          "step": 280,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 21,
+          "edge_settled_before": 0,
+          "position_to_above_m": 0.006194318286615946,
+          "orientation_error_rad": 0.01693891765382104,
+          "side_error_m": 0.004942045903652583,
+          "closure_axis_error_m": -0.0030068715185365084,
+          "observed_motion_m_per_step": [
+            0.0018710792064666748,
+            -0.0034459829330444336,
+            0.00042068958282470703
+          ],
+          "predicted_position_to_above_m": 0.006636922008854015,
+          "predicted_side_error_m": 0.005845197161034432,
+          "remaining_descent_can_margin_m": 0.005035793268154287,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.25158267782715815,
+              0.28531029423330895,
+              1.0227184312907656
+            ],
+            "box_margin_m": 0.109575324284416,
+            "can_margin_m": 0.044803837126283774,
+            "tail_can_margin_m": 0.005035793268154287,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35650122417994257,
+                1.0505766829582006,
+                0.13964457624841,
+                -1.2582277215563142,
+                -0.31486465020443727,
+                2.9225443211906423,
+                0.9849930845609176
+              ],
+              "position_error_m": 0.00012751332342940633,
+              "angle_error_rad": 0.0003077228082965049,
+              "limit_margin_rad": 0.7122233170417993
+            }
+          }
+        },
+        {
+          "step": 281,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 22,
+          "edge_settled_before": 1,
+          "position_to_above_m": 0.004800426838650436,
+          "orientation_error_rad": 0.01692220052429623,
+          "side_error_m": 0.003454813670180957,
+          "closure_axis_error_m": 0.00023205017040820076,
+          "observed_motion_m_per_step": [
+            0.0016155391931533813,
+            -0.0028059184551239014,
+            0.0005991458892822266
+          ],
+          "predicted_position_to_above_m": 0.007579299895675836,
+          "predicted_side_error_m": 0.0071516938075703515,
+          "remaining_descent_can_margin_m": 0.005034088164985073,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.2513743274526491,
+              0.28520908775204307,
+              1.02304510168465
+            ],
+            "box_margin_m": 0.11015188656641421,
+            "can_margin_m": 0.04579615333856435,
+            "tail_can_margin_m": 0.005034088164985073,
+            "ik": {
+              "success": true,
+              "iterations": 0,
+              "q": [
+                0.355692847298579,
+                1.0433074137786718,
+                0.13780507130017927,
+                -1.276638621306635,
+                -0.3055123602352264,
+                2.9333608417212855,
+                0.9762227733410619
+              ],
+              "position_error_m": 0.0034439126876157937,
+              "angle_error_rad": 0.00033610529851561225,
+              "limit_margin_rad": 0.7194925862213282
+            }
+          }
+        },
+        {
+          "step": 282,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 23,
+          "edge_settled_before": 2,
+          "position_to_above_m": 0.005167299703741195,
+          "orientation_error_rad": 0.01737230804061352,
+          "side_error_m": 0.003980182528243244,
+          "closure_axis_error_m": 0.0026743055194199065,
+          "observed_motion_m_per_step": [
+            0.0014611035585403442,
+            -0.0019994378089904785,
+            0.00031363964080810547
+          ],
+          "predicted_position_to_above_m": 0.008449877687215212,
+          "predicted_side_error_m": 0.00781376218497862,
+          "remaining_descent_can_margin_m": 0.005032453670152814,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": true,
+          "same_depth_center_check": {
+            "goal": [
+              0.2513574200563588,
+              0.2851964240446147,
+              1.023072445888157
+            ],
+            "box_margin_m": 0.1104524806353746,
+            "can_margin_m": 0.045622811846531164,
+            "tail_can_margin_m": 0.005032453670152814,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.35673662237879084,
+                1.0488641615349197,
+                0.14053546269988554,
+                -1.2605881410448454,
+                -0.29432704586938435,
+                2.922459852360996,
+                0.9638634511371833
+              ],
+              "position_error_m": 7.993222719742364e-05,
+              "angle_error_rad": 0.0001572238690061379,
+              "limit_margin_rad": 0.7139358384650802
+            }
+          }
+        },
+        {
+          "step": 283,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 24,
+          "edge_settled_before": 3,
+          "position_to_above_m": 0.006334049209720057,
+          "orientation_error_rad": 0.01660268261390713,
+          "side_error_m": 0.0056010050590313285,
+          "closure_axis_error_m": 0.004982301022197615,
+          "observed_motion_m_per_step": [
+            0.0011740326881408691,
+            -0.001995980739593506,
+            0.0004999637603759766
+          ],
+          "predicted_position_to_above_m": 0.010031555187554069,
+          "predicted_side_error_m": 0.00976675095307033,
+          "remaining_descent_can_margin_m": 0.00503669861189926,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.2511949942642136,
+              0.2851089108253246,
+              1.0233493011715138
+            ],
+            "box_margin_m": 0.11098632514642995,
+            "can_margin_m": 0.044819611083138367,
+            "tail_can_margin_m": 0.00503669861189926,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.356972110452231,
+                1.047511581159029,
+                0.14084316824491977,
+                -1.2615138322742656,
+                -0.28587963915199754,
+                2.920203848758233,
+                0.9552961695385158
+              ],
+              "position_error_m": 7.791540028665568e-05,
+              "angle_error_rad": 0.00022805654440851387,
+              "limit_margin_rad": 0.7152884188409709
+            }
+          }
+        },
+        {
+          "step": 284,
+          "phase": "EDGE_APPROACH",
+          "phase_age": 25,
+          "edge_settled_before": 4,
+          "position_to_above_m": 0.0076801410203737284,
+          "orientation_error_rad": 0.01600548405898109,
+          "side_error_m": 0.007315476506336646,
+          "closure_axis_error_m": 0.007033841095612383,
+          "observed_motion_m_per_step": [
+            0.0010217130184173584,
+            -0.0017845332622528076,
+            0.000826716423034668
+          ],
+          "predicted_position_to_above_m": 0.011233202504068172,
+          "predicted_side_error_m": 0.011178869687783527,
+          "remaining_descent_can_margin_m": 0.005041311327658615,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false,
+          "same_depth_center_check": {
+            "goal": [
+              0.25088088864262315,
+              0.2849449806054627,
+              1.02386135318697
+            ],
+            "box_margin_m": 0.11183591694632748,
+            "can_margin_m": 0.044652188667546666,
+            "tail_can_margin_m": 0.005041311327658615,
+            "ik": {
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.3572352541240653,
+                1.0450466069238638,
+                0.1408551701923263,
+                -1.2638154836891224,
+                -0.2787058244769609,
+                2.918254061567006,
+                0.9483605044081175
+              ],
+              "position_error_m": 7.043814427806586e-05,
+              "angle_error_rad": 0.0003116163942274648,
+              "limit_margin_rad": 0.7177533930761362
+            }
+          }
+        },
+        {
+          "step": 285,
+          "phase": "DESCEND",
+          "phase_age": 0,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.008731281882488229,
+          "orientation_error_rad": 0.01579114833270394,
+          "side_error_m": 0.00856500644730261,
+          "closure_axis_error_m": 0.008450392685828862,
+          "observed_motion_m_per_step": [
+            0.0007709264755249023,
+            -0.0011893808841705322,
+            0.0008552074432373047
+          ],
+          "predicted_position_to_above_m": 0.011277354454140881,
+          "predicted_side_error_m": 0.011272037840186006,
+          "remaining_descent_can_margin_m": 0.005045010476914635,
+          "aperture_ready": true,
+          "existing_settle_pass": true,
+          "existing_plus_3mm_descent_pass": true,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 286,
+          "phase": "DESCEND",
+          "phase_age": 1,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.009281242891468955,
+          "orientation_error_rad": 0.016248634138596015,
+          "side_error_m": 0.00919217814567969,
+          "closure_axis_error_m": 0.009166992668329781,
+          "observed_motion_m_per_step": [
+            0.0006527304649353027,
+            -0.00047025084495544434,
+            0.000738978385925293
+          ],
+          "predicted_position_to_above_m": 0.010635484664076149,
+          "predicted_side_error_m": 0.010627255681435093,
+          "remaining_descent_can_margin_m": 0.004818834627855498,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 287,
+          "phase": "DESCEND",
+          "phase_age": 2,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.009350025856255358,
+          "orientation_error_rad": 0.016710684384758607,
+          "side_error_m": 0.009257190423473612,
+          "closure_axis_error_m": 0.009257133278174035,
+          "observed_motion_m_per_step": [
+            0.0004964470863342285,
+            0.000141829252243042,
+            0.00040590763092041016
+          ],
+          "predicted_position_to_above_m": 0.009621539836430085,
+          "predicted_side_error_m": 0.009541617541093702,
+          "remaining_descent_can_margin_m": 0.004667821662404523,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 288,
+          "phase": "DESCEND",
+          "phase_age": 3,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.010524182190660186,
+          "orientation_error_rad": 0.018538562739761243,
+          "side_error_m": 0.00937234295908343,
+          "closure_axis_error_m": 0.009371082611282385,
+          "observed_motion_m_per_step": [
+            0.0019724667072296143,
+            0.0008831024169921875,
+            -0.0027582645416259766
+          ],
+          "predicted_position_to_above_m": 0.015201985848929298,
+          "predicted_side_error_m": 0.009613430596503797,
+          "remaining_descent_can_margin_m": 0.004152931620167236,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 289,
+          "phase": "DESCEND",
+          "phase_age": 4,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.016152843711395866,
+          "orientation_error_rad": 0.022269954548215617,
+          "side_error_m": 0.009257743771182264,
+          "closure_axis_error_m": 0.009214289533177416,
+          "observed_motion_m_per_step": [
+            0.003483414649963379,
+            0.001959472894668579,
+            -0.007524728775024414
+          ],
+          "predicted_position_to_above_m": 0.031572104571078716,
+          "predicted_side_error_m": 0.009392178209797283,
+          "remaining_descent_can_margin_m": 0.00356194280108027,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 290,
+          "phase": "DESCEND",
+          "phase_age": 5,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.02437019301190306,
+          "orientation_error_rad": 0.025458333146772205,
+          "side_error_m": 0.008950507281670956,
+          "closure_axis_error_m": 0.008637560944836926,
+          "observed_motion_m_per_step": [
+            0.0034800171852111816,
+            0.0024445652961730957,
+            -0.008569478988647461
+          ],
+          "predicted_position_to_above_m": 0.04253262909559671,
+          "predicted_side_error_m": 0.009138855845000312,
+          "remaining_descent_can_margin_m": 0.0033080644841560203,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 291,
+          "phase": "DESCEND",
+          "phase_age": 6,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.03317595229132001,
+          "orientation_error_rad": 0.028360840865928015,
+          "side_error_m": 0.008681239528521317,
+          "closure_axis_error_m": 0.007873627132455551,
+          "observed_motion_m_per_step": [
+            0.0034661293029785156,
+            0.0026393234729766846,
+            -0.008414864540100098
+          ],
+          "predicted_position_to_above_m": 0.05150591201252768,
+          "predicted_side_error_m": 0.008925597593504992,
+          "remaining_descent_can_margin_m": 0.003241727517113435,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 292,
+          "phase": "DESCEND",
+          "phase_age": 7,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.040678005152082516,
+          "orientation_error_rad": 0.025476798301193936,
+          "side_error_m": 0.009197937437704496,
+          "closure_axis_error_m": 0.007165476082566249,
+          "observed_motion_m_per_step": [
+            0.0020332932472229004,
+            0.001825183629989624,
+            -0.007431983947753906
+          ],
+          "predicted_position_to_above_m": 0.05602689051927663,
+          "predicted_side_error_m": 0.011515361484495116,
+          "remaining_descent_can_margin_m": 0.0034543924178155466,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 293,
+          "phase": "DESCEND",
+          "phase_age": 8,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.04316250622269087,
+          "orientation_error_rad": 0.02017515539522667,
+          "side_error_m": 0.008622916097553102,
+          "closure_axis_error_m": 0.006010258150168151,
+          "observed_motion_m_per_step": [
+            0.0005244910717010498,
+            0.0015749037265777588,
+            -0.002427518367767334
+          ],
+          "predicted_position_to_above_m": 0.048285558631070674,
+          "predicted_side_error_m": 0.007934268995455839,
+          "remaining_descent_can_margin_m": 0.004361869009887914,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 294,
+          "phase": "DESCEND",
+          "phase_age": 9,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.04058443486660982,
+          "orientation_error_rad": 0.01640303522915515,
+          "side_error_m": 0.00586421389052044,
+          "closure_axis_error_m": 0.004512587229332039,
+          "observed_motion_m_per_step": [
+            3.516674041748047e-06,
+            0.0016895830631256104,
+            0.0031461715698242188
+          ],
+          "predicted_position_to_above_m": 0.03594167172690264,
+          "predicted_side_error_m": 0.001886200978532534,
+          "remaining_descent_can_margin_m": 0.005048492148252648,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 295,
+          "phase": "DESCEND",
+          "phase_age": 10,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.03481574487844592,
+          "orientation_error_rad": 0.01466447688187729,
+          "side_error_m": 0.0030011416946033173,
+          "closure_axis_error_m": 0.002994288756464631,
+          "observed_motion_m_per_step": [
+            -0.0008926689624786377,
+            0.0012364983558654785,
+            0.006520330905914307
+          ],
+          "predicted_position_to_above_m": 0.024723644038418438,
+          "predicted_side_error_m": 0.00689989917793871,
+          "remaining_descent_can_margin_m": 0.0050769114731537,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 296,
+          "phase": "DESCEND",
+          "phase_age": 11,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.02824901373225121,
+          "orientation_error_rad": 0.015959395351961718,
+          "side_error_m": 0.004399577605837639,
+          "closure_axis_error_m": 0.0020867498805365353,
+          "observed_motion_m_per_step": [
+            -0.0009281635284423828,
+            0.0005666911602020264,
+            0.007877230644226074
+          ],
+          "predicted_position_to_above_m": 0.018685515294638834,
+          "predicted_side_error_m": 0.011982218974213964,
+          "remaining_descent_can_margin_m": 0.005096905237500504,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 297,
+          "phase": "DESCEND",
+          "phase_age": 12,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.024063697104887257,
+          "orientation_error_rad": 0.016553119854947913,
+          "side_error_m": 0.007278499135101783,
+          "closure_axis_error_m": 0.0015047373383428825,
+          "observed_motion_m_per_step": [
+            -0.00042375922203063965,
+            0.00042760372161865234,
+            0.005937814712524414
+          ],
+          "predicted_position_to_above_m": 0.01883856055183251,
+          "predicted_side_error_m": 0.01363931209083638,
+          "remaining_descent_can_margin_m": 0.0051040159716087,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 298,
+          "phase": "DESCEND",
+          "phase_age": 13,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.02246536918216095,
+          "orientation_error_rad": 0.016073682131820737,
+          "side_error_m": 0.009006558404096912,
+          "closure_axis_error_m": 0.0010762147731154337,
+          "observed_motion_m_per_step": [
+            -5.9157609939575195e-05,
+            0.00043770670890808105,
+            0.0029845237731933594
+          ],
+          "predicted_position_to_above_m": 0.02026253227986082,
+          "predicted_side_error_m": 0.012608975706071281,
+          "remaining_descent_can_margin_m": 0.005102387005852749,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 299,
+          "phase": "DESCEND",
+          "phase_age": 14,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.0221353904430886,
+          "orientation_error_rad": 0.015484912314682237,
+          "side_error_m": 0.009473272559551568,
+          "closure_axis_error_m": 0.001257353005990364,
+          "observed_motion_m_per_step": [
+            0.00011712312698364258,
+            -0.0001480579376220703,
+            0.000728607177734375
+          ],
+          "predicted_position_to_above_m": 0.021539265298928845,
+          "predicted_side_error_m": 0.010413379416383994,
+          "remaining_descent_can_margin_m": 0.005102346045950168,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 300,
+          "phase": "DESCEND",
+          "phase_age": 15,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.021413153034749187,
+          "orientation_error_rad": 0.016161518977970232,
+          "side_error_m": 0.009497427458952701,
+          "closure_axis_error_m": 0.0014960063522598077,
+          "observed_motion_m_per_step": [
+            -0.00033342838287353516,
+            -0.00041306018829345703,
+            0.0006406307220458984
+          ],
+          "predicted_position_to_above_m": 0.0199942880368103,
+          "predicted_side_error_m": 0.009516079070977825,
+          "remaining_descent_can_margin_m": 0.0051075600536408805,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 301,
+          "phase": "DESCEND",
+          "phase_age": 16,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.0194343185260763,
+          "orientation_error_rad": 0.019538185492537184,
+          "side_error_m": 0.009139272284525478,
+          "closure_axis_error_m": 0.0014980392935584552,
+          "observed_motion_m_per_step": [
+            -0.0012988746166229248,
+            -0.0006763339042663574,
+            0.001469731330871582
+          ],
+          "predicted_position_to_above_m": 0.015551837253780643,
+          "predicted_side_error_m": 0.008439952451921407,
+          "remaining_descent_can_margin_m": 0.0051270576365782805,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 302,
+          "phase": "DESCEND",
+          "phase_age": 17,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.017484063610438347,
+          "orientation_error_rad": 0.021901458232168425,
+          "side_error_m": 0.008801512964967888,
+          "closure_axis_error_m": 0.0012387476062058185,
+          "observed_motion_m_per_step": [
+            -0.0013870298862457275,
+            -0.0004133284091949463,
+            0.0014928579330444336
+          ],
+          "predicted_position_to_above_m": 0.013697878316740113,
+          "predicted_side_error_m": 0.008126360487475032,
+          "remaining_descent_can_margin_m": 0.0051363196621884155,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 303,
+          "phase": "DESCEND",
+          "phase_age": 18,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.01623745966344473,
+          "orientation_error_rad": 0.022484308755078744,
+          "side_error_m": 0.00837650816483767,
+          "closure_axis_error_m": 0.0007706213059326465,
+          "observed_motion_m_per_step": [
+            -0.0010885000228881836,
+            -3.999471664428711e-05,
+            0.000779271125793457
+          ],
+          "predicted_position_to_above_m": 0.013796466956665742,
+          "predicted_side_error_m": 0.00761962988977857,
+          "remaining_descent_can_margin_m": 0.005137685064016906,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 304,
+          "phase": "DESCEND",
+          "phase_age": 19,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.015111934105107238,
+          "orientation_error_rad": 0.023129899200962537,
+          "side_error_m": 0.00770310247992589,
+          "closure_axis_error_m": 0.000467670023701853,
+          "observed_motion_m_per_step": [
+            -0.001069396734237671,
+            -0.00021773576736450195,
+            0.00038123130798339844
+          ],
+          "predicted_position_to_above_m": 0.012877095862265259,
+          "predicted_side_error_m": 0.006405562750681744,
+          "remaining_descent_can_margin_m": 0.005140289025831191,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 305,
+          "phase": "DESCEND",
+          "phase_age": 20,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.014465853490158772,
+          "orientation_error_rad": 0.022426771100906847,
+          "side_error_m": 0.0071128183818085396,
+          "closure_axis_error_m": 0.0007317379024008708,
+          "observed_motion_m_per_step": [
+            -0.0005402266979217529,
+            -0.0005658268928527832,
+            -2.944469451904297e-05
+          ],
+          "predicted_position_to_above_m": 0.013218126890341117,
+          "predicted_side_error_m": 0.005962428643083727,
+          "remaining_descent_can_margin_m": 0.00513745981695346,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 306,
+          "phase": "DESCEND",
+          "phase_age": 21,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.014555358750833207,
+          "orientation_error_rad": 0.020872083163730876,
+          "side_error_m": 0.006534298660169869,
+          "closure_axis_error_m": 0.0010273978986285878,
+          "observed_motion_m_per_step": [
+            -0.00011155009269714355,
+            -0.00038865208625793457,
+            -0.0006963014602661133
+          ],
+          "predicted_position_to_above_m": 0.014864169948043033,
+          "predicted_side_error_m": 0.005446808996652645,
+          "remaining_descent_can_margin_m": 0.005129859171504325,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 307,
+          "phase": "DESCEND",
+          "phase_age": 22,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.014631962203330053,
+          "orientation_error_rad": 0.020790954325683366,
+          "side_error_m": 0.005661595027163518,
+          "closure_axis_error_m": 0.0008568748237092976,
+          "observed_motion_m_per_step": [
+            -0.000453948974609375,
+            -4.1544437408447266e-05,
+            -0.0008883476257324219
+          ],
+          "predicted_position_to_above_m": 0.014984917741648156,
+          "predicted_side_error_m": 0.0039186538052969795,
+          "remaining_descent_can_margin_m": 0.005127247199886553,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 308,
+          "phase": "DESCEND",
+          "phase_age": 23,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.013737258961228477,
+          "orientation_error_rad": 0.022368279391302908,
+          "side_error_m": 0.004890632922696878,
+          "closure_axis_error_m": 0.0006101780640664964,
+          "observed_motion_m_per_step": [
+            -0.0009864568710327148,
+            -0.00023153424263000488,
+            0.00011301040649414062
+          ],
+          "predicted_position_to_above_m": 0.01200770898879387,
+          "predicted_side_error_m": 0.0033730828438257522,
+          "remaining_descent_can_margin_m": 0.005133826205595882,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 309,
+          "phase": "DESCEND",
+          "phase_age": 24,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.01309048449556327,
+          "orientation_error_rad": 0.022904254771276937,
+          "side_error_m": 0.00424288708119904,
+          "closure_axis_error_m": 0.00033365910512926655,
+          "observed_motion_m_per_step": [
+            -0.0008075833320617676,
+            -0.00010645389556884766,
+            1.8596649169921875e-05
+          ],
+          "predicted_position_to_above_m": 0.011859215829170138,
+          "predicted_side_error_m": 0.003001770139349738,
+          "remaining_descent_can_margin_m": 0.0051351346949121135,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 310,
+          "phase": "DESCEND",
+          "phase_age": 25,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.01657457238798208,
+          "orientation_error_rad": 0.01860495394609265,
+          "side_error_m": 0.002850019527627527,
+          "closure_axis_error_m": 0.00034202550670440536,
+          "observed_motion_m_per_step": [
+            0.000990450382232666,
+            0.0005054771900177002,
+            -0.004037618637084961
+          ],
+          "predicted_position_to_above_m": 0.024221085056685267,
+          "predicted_side_error_m": 0.00034664009382490813,
+          "remaining_descent_can_margin_m": 0.005110638256821121,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 311,
+          "phase": "DESCEND",
+          "phase_age": 26,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.024703287668523255,
+          "orientation_error_rad": 0.01436745838303208,
+          "side_error_m": 0.0008278577784483352,
+          "closure_axis_error_m": 0.0008129783129603324,
+          "observed_motion_m_per_step": [
+            0.002538532018661499,
+            0.0007652938365936279,
+            -0.008380889892578125
+          ],
+          "predicted_position_to_above_m": 0.04177246909578389,
+          "predicted_side_error_m": 0.005477894255425712,
+          "remaining_descent_can_margin_m": 0.00507631318316959,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 312,
+          "phase": "DESCEND",
+          "phase_age": 27,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.03452440925205614,
+          "orientation_error_rad": 0.015994374646865376,
+          "side_error_m": 0.0032187703670948564,
+          "closure_axis_error_m": 0.0013763403107024802,
+          "observed_motion_m_per_step": [
+            0.002965867519378662,
+            0.0008886754512786865,
+            -0.009691059589385986
+          ],
+          "predicted_position_to_above_m": 0.05455562446104157,
+          "predicted_side_error_m": 0.009378278019081188,
+          "remaining_descent_can_margin_m": 0.005045596323558388,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 313,
+          "phase": "DESCEND",
+          "phase_age": 28,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.044179817249398144,
+          "orientation_error_rad": 0.02106155323022998,
+          "side_error_m": 0.006029351590474092,
+          "closure_axis_error_m": 0.0019948713225958663,
+          "observed_motion_m_per_step": [
+            0.0030486881732940674,
+            0.0008761286735534668,
+            -0.009287476539611816
+          ],
+          "predicted_position_to_above_m": 0.06363658552429104,
+          "predicted_side_error_m": 0.011695670326530435,
+          "remaining_descent_can_margin_m": 0.005022161101217337,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 314,
+          "phase": "DESCEND",
+          "phase_age": 29,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.05251989670869296,
+          "orientation_error_rad": 0.025058275313690773,
+          "side_error_m": 0.008361096244952005,
+          "closure_axis_error_m": 0.0022303025148448278,
+          "observed_motion_m_per_step": [
+            0.002507239580154419,
+            0.0010132789611816406,
+            -0.007981479167938232
+          ],
+          "predicted_position_to_above_m": 0.06926332443751951,
+          "predicted_side_error_m": 0.013086167176281185,
+          "remaining_descent_can_margin_m": 0.005009795929715732,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 315,
+          "phase": "DESCEND",
+          "phase_age": 30,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.059456483358945544,
+          "orientation_error_rad": 0.027764103168321327,
+          "side_error_m": 0.010033428145131335,
+          "closure_axis_error_m": 0.0019405547093072745,
+          "observed_motion_m_per_step": [
+            0.002016693353652954,
+            0.001353830099105835,
+            -0.006555795669555664
+          ],
+          "predicted_position_to_above_m": 0.07336082966365236,
+          "predicted_side_error_m": 0.013482416591558301,
+          "remaining_descent_can_margin_m": 0.005002818399042375,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 316,
+          "phase": "DESCEND",
+          "phase_age": 31,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.06530307033458435,
+          "orientation_error_rad": 0.029074036399859424,
+          "side_error_m": 0.011233175087815789,
+          "closure_axis_error_m": 0.0015406994261957837,
+          "observed_motion_m_per_step": [
+            0.0018050670623779297,
+            0.0013738572597503662,
+            -0.0054264068603515625
+          ],
+          "predicted_position_to_above_m": 0.07701218093424832,
+          "predicted_side_error_m": 0.013713646381316662,
+          "remaining_descent_can_margin_m": 0.005000701473291347,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 317,
+          "phase": "DESCEND",
+          "phase_age": 32,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.07040015960491973,
+          "orientation_error_rad": 0.029591108708254397,
+          "side_error_m": 0.012113073658360904,
+          "closure_axis_error_m": 0.000990360484338643,
+          "observed_motion_m_per_step": [
+            0.0016163289546966553,
+            0.0014530420303344727,
+            -0.0046569108963012695
+          ],
+          "predicted_position_to_above_m": 0.08061035568780207,
+          "predicted_side_error_m": 0.01397280401675533,
+          "remaining_descent_can_margin_m": 0.004999981649063123,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 318,
+          "phase": "DESCEND",
+          "phase_age": 33,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.07442417166154393,
+          "orientation_error_rad": 0.030256706853482928,
+          "side_error_m": 0.012224660489044022,
+          "closure_axis_error_m": 1.0582965598076668e-05,
+          "observed_motion_m_per_step": [
+            0.001516878604888916,
+            0.0018797516822814941,
+            -0.0034148097038269043
+          ],
+          "predicted_position_to_above_m": 0.08251956684410489,
+          "predicted_side_error_m": 0.01267661925415156,
+          "remaining_descent_can_margin_m": 0.00499987051449291,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 319,
+          "phase": "DESCEND",
+          "phase_age": 34,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.07694958952633073,
+          "orientation_error_rad": 0.02700927177434302,
+          "side_error_m": 0.011879853087021096,
+          "closure_axis_error_m": -0.0008356069616812181,
+          "observed_motion_m_per_step": [
+            0.0012351274490356445,
+            0.0015687346458435059,
+            -0.0019220709800720215
+          ],
+          "predicted_position_to_above_m": 0.08204808517046354,
+          "predicted_side_error_m": 0.011360812568051392,
+          "remaining_descent_can_margin_m": 0.005011578935140815,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 320,
+          "phase": "DESCEND",
+          "phase_age": 35,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.07758723749867275,
+          "orientation_error_rad": 0.01993202711278689,
+          "side_error_m": 0.010700936704604171,
+          "closure_axis_error_m": -0.0008870831468064583,
+          "observed_motion_m_per_step": [
+            0.0012290775775909424,
+            0.0007171928882598877,
+            -1.7881393432617188e-07
+          ],
+          "predicted_position_to_above_m": 0.07892407487998113,
+          "predicted_side_error_m": 0.008401304379656353,
+          "remaining_descent_can_margin_m": 0.005029956881913322,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 321,
+          "phase": "DESCEND",
+          "phase_age": 36,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.07788281556968893,
+          "orientation_error_rad": 0.016462398892647376,
+          "side_error_m": 0.009064998280236145,
+          "closure_axis_error_m": -0.0007790274496705241,
+          "observed_motion_m_per_step": [
+            0.0015091001987457275,
+            0.0006403923034667969,
+            0.0005235671997070312
+          ],
+          "predicted_position_to_above_m": 0.07858377496522079,
+          "predicted_side_error_m": 0.00577758936766778,
+          "remaining_descent_can_margin_m": 0.005042849583792641,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        },
+        {
+          "step": 322,
+          "phase": "DESCEND",
+          "phase_age": 37,
+          "edge_settled_before": 5,
+          "position_to_above_m": 0.07887924069496731,
+          "orientation_error_rad": 0.017044132783901923,
+          "side_error_m": 0.0076902157941876985,
+          "closure_axis_error_m": -0.0007994446008286882,
+          "observed_motion_m_per_step": [
+            0.0015884637832641602,
+            0.0008377134799957275,
+            -0.00014710426330566406
+          ],
+          "predicted_position_to_above_m": 0.08095565230480786,
+          "predicted_side_error_m": 0.004947404138854395,
+          "remaining_descent_can_margin_m": 0.005042166199692444,
+          "aperture_ready": true,
+          "existing_settle_pass": false,
+          "existing_plus_3mm_descent_pass": false,
+          "plus_d2_position_pass": false
+        }
+      ],
+      "close_config_steps": 16,
+      "delay_steps": 2,
+      "source_sha256": {
+        "reproduction/improvement_v14_20261016_01/smoke_b/clearance_regression_6000005/trace.jsonl": "07642354029309b89354906cc659459454916b0ae3b6e457c37b10d57b7d9742",
+        "reproduction/improvement_v14_20261016_01/smoke_b/clearance_regression_6000005/result.json": "121d7841bc8923ad55c5df797b87c85685f3fa879d243bb9a41c98f70a3bde27"
+      }
+    }
+  ],
+  "findings": [
+    "All five original approach-settling frames280..284 already satisfy position<9mm, angle<.08rad, stable aperture and descent margin>=3mm. Adding only the3mm test would not change this transition.",
+    "The closure-axis error moves from-3.007mm to+7.034mm during those five frames; motion has not settled. The observation-based D2 forecast leaves the9mm waypoint ball in the final two frames.",
+    "The original v13 descent remains above3mm throughout (minimum3.242mm) and succeeds at380. The v14C4mm early-warning trigger causes a checked but unnecessary-for-this-record recenter; this does not authorize lowering protection thresholds.",
+    "The recenter occupies18 actual control calls289..306, including one planning call. CLOSE is24steps later and RELEASE22steps later than v13; the physical timing cost is larger than the recenter call count alone.",
+    "A minimal prospective change is to brake near the approach endpoint and accumulate one shared5-frame confirmation requiring all original checks,3mm descent margin,and a D2 motion forecast still inside the same9mm ball. Reset that shared count if any requirement fails; never reuse nonconforming history.",
+    "Reuse only the shared approach-settling counter, never a permanent clearance exemption. If the4mm early warning or1mm hard descent guard later triggers, continue to handle it; a changed pose invalidates the previous evidence. Earlier braking may prevent that second cycle but cannot be assumed to do so.",
+    "No saved trace establishes the success or step saving of the proposed control change. It requires the planned small closed-loop comparison. Keep close configuration16plusD2, existing release duration16, and total400 unchanged."
+  ]
+}

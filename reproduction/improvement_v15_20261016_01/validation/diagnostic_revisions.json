@@ -1,0 +1,21 @@
+{
+  "purpose": "Preserve all diagnostic revisions and identify the evidence applicable to smoke_a",
+  "final_disabled_replay": "analysis/mechanisms_c.json",
+  "final_enabled_component_checks": "analysis/components_a.json",
+  "final_static_carry_check": "analysis/carry_path_offline_c.json",
+  "prior_diagnostics": [
+    {
+      "files": ["analysis/mechanisms_a.json", "analysis/mechanisms_b.json"],
+      "status": "Passed against their recorded earlier source hashes; mechanisms_c covers the final evaluated source. These are saved-input replays, not additional experiments."
+    },
+    {
+      "files": ["analysis/carry_path_offline_a.json", "analysis/carry_path_offline_b.json"],
+      "status": "Earlier static planner revisions. The first preserves the slower candidate ordering; the final receipt c includes the exact parent transport and placement endpoint checks."
+    },
+    {
+      "files": ["analysis/smoke_a_carry_tracking_initial.json"],
+      "status": "Superseded: target_event_windows was accidentally drawn from a regression case. The corrected analysis/smoke_a_carry_tracking.json recomputes target events from the target source. Original physical results, 34 translation / 36 rotation steps, final errors and regression comparisons were unaffected."
+    }
+  ],
+  "new_physical_experiments": 0
+}

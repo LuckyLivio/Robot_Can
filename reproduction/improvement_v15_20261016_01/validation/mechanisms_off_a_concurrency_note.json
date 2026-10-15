@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-15T23:41:59.511926+00:00",
+  "status": "not_accepted_due_to_concurrent_source_change",
+  "command": "verify_mechanisms.py --name mechanisms_off_a",
+  "saved_input_profiles_replayed_before_hash_check": 9,
+  "saved_input_controls_replayed_before_hash_check": 3158,
+  "terminal_check": "Source changed during replay",
+  "passed_receipt_written": false,
+  "physical_simulation_run": false,
+  "new_evaluation_samples": 0,
+  "explanation": "All nine per-profile input replays finished, but the final source-stability assertion rejected the run because runtime source was edited concurrently. This is a diagnostic note only, not a passing mechanism result. Primary agent reruns the check against stable source as mechanisms_a."
+}

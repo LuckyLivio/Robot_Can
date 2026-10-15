@@ -1,27 +1,25 @@
 # 项目运行指南（当前入口）
 
-v14 两轮小测试共64次；最终 v13 / T / C / v14 为6/8、6/8、5/8、6/8。门槛未通过，未采用；未运行大规模消融、240次开发或全新起点确认。
+**v15已完成45次五组小测试：v14 / 仅搬运A / 仅分段B / 仅预算C / 完整v15为6/9、3/9、6/9、7/9、4/9。小测试未通过，v15未采用。**
 
-## 环境
+沿用现有 `.venv\Scripts\python.exe`，在PyCharm选择它作为解释器。权重与依赖无需替换。
 
-使用项目现有 `.venv\Scripts\python.exe`。在PyCharm将项目解释器设置为该文件；沿用现有依赖和数据路径，不需要为本轮重新安装或替换权重。
-
-## 启动展示
+## 启动前端
 
 ```powershell
 Set-Location 'C:\Users\Livio\Desktop\robot_can'
 & '.\.venv\Scripts\python.exe' -m http.server 8766 --bind 127.0.0.1 --directory 'C:\Users\Livio\Desktop\robot_can'
 ```
 
-打开完整地址：**http://127.0.0.1:8766/reproduction/improvement_v14_20261016_01/index.html** 。如果8766服务已经运行，直接打开即可；终端保持运行，Ctrl+C关闭。
+打开完整地址：**http://127.0.0.1:8766/reproduction/improvement_v15_20261016_01/index.html** 。已有8766服务时直接打开，无需再启动；终端保持运行，Ctrl+C停止。
 
 
-## 实验与检查
+## 核验与实验
 
-本轮控制代码在 `reproduction/improvement_v14_20261016_01/recovery/`，运行器、逐步动作审计、物理回放和完整度检查均在同一目录。[本轮README](reproduction/improvement_v14_20261016_01/README.md)提供只读核验和新目录复跑命令。[执行前协议](reproduction/improvement_v14_20261016_01/protocols/PLAN.md)定义阶段门槛。
+预算模块单独运行救回时间不足案例且未损失旧成功；搬运模块的局部IK误拒和转向耗时导致三个旧成功退步，两个主难例仍未完成。因此不替换既有正式成果，不进入470次消融、两版各240次开发或1440次全新起点确认。
 
-`protocols/pilot_jobs.json`代表已准备的372次作业，当前并未运行。开发冻结脚本会拒绝未过关的小测试；不要绕过它启动开发或独立确认。全新起点必须在版本冻结后生成，本轮尚未生成。
+[本轮README](reproduction/improvement_v15_20261016_01/README.md)提供只读核验命令。[执行前协议](reproduction/improvement_v15_20261016_01/protocols/PLAN.md)定义阶段顺序。`protocols/pilot_jobs.json`是已准备的470次作业，不是实验结果。开发冻结脚本同时检查结果、机制、保存输入和物理核验；本轮小测试失败，不能绕过它生成开发或确认结果。
 
-[本轮检查报告](reproduction/improvement_v14_20261016_01/REPORT.md) · [v14前端](reproduction/improvement_v14_20261016_01/index.html) · [执行前协议](reproduction/improvement_v14_20261016_01/protocols/PLAN.md) · [v13原报告](reproduction/improvement_v13_20261016_01/REPORT.md)
+[本轮完整报告](reproduction/improvement_v15_20261016_01/REPORT.md) · [v15前端](reproduction/improvement_v15_20261016_01/index.html) · [执行前协议](reproduction/improvement_v15_20261016_01/protocols/PLAN.md) · [v14原报告](reproduction/improvement_v14_20261016_01/REPORT.md)
 
-早期数据、训练和历史复现实验说明保留在[此前完整指南快照](reproduction/improvement_v14_20261016_01/before/PROGRAM_GUIDE.md)。它们对应各自冻结版本，请按原版本目录运行，不能与v14的64次诊断混为同一实验。
+早期数据、训练和历史运行步骤保留在[此前指南原样快照](reproduction/improvement_v15_20261016_01/before/PROGRAM_GUIDE.md)，请按对应版本使用。

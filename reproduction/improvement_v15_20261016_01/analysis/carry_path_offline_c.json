@@ -1,0 +1,5278 @@
+{
+  "passed": true,
+  "revision": "original_transport_and_place_exact",
+  "new_physical_episodes": 0,
+  "source_sha256": "cb926f1bddd73734c5f13a824dd9467bb20aa22637d04ab6a7d28664eb4b25e7",
+  "diagnostic_script_sha256": "51355b6ba94cc8616dd3c8c62d923f97aa686db8718088e0c3ddac62a868674a",
+  "input_trace": "reproduction/improvement_v14_20261016_01/smoke_b/v14_known13_bc_k2_noise005_demo_13000021/trace.jsonl",
+  "input_trace_sha256": "9368367452b1755c26214cf69016250efb054c9bfd49fc57e092e47cbda283d8",
+  "samples": [
+    {
+      "step": 311,
+      "recorded_mode": "LIFT",
+      "recorded_stable_hold": true,
+      "candidate_order": [
+        "current",
+        "outward_30",
+        "outward_15",
+        "outward_25",
+        "outward_35",
+        "outward_0",
+        "outward_30_equivalent",
+        "outward_15_equivalent",
+        "outward_25_equivalent",
+        "outward_35_equivalent",
+        "outward_0_equivalent"
+      ],
+      "work_units": 156,
+      "control_slices_required": 11,
+      "slices": [
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.447400001983624
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.168400002119597
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.3031000018818304
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.730100000917446
+        },
+        {
+          "work": 11,
+          "geometry_checks": 4,
+          "elapsed_ms": 20.060999995621387
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 18.401100001938175
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 19.024700006411877
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 19.79890000075102
+        },
+        {
+          "work": 16,
+          "geometry_checks": 4,
+          "elapsed_ms": 21.39069999975618
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.693499998713378
+        },
+        {
+          "work": 13,
+          "geometry_checks": 1,
+          "elapsed_ms": 7.565100000647362
+        }
+      ],
+      "chosen": {
+        "candidate": "outward_30",
+        "preserve_current": false,
+        "stages": [
+          {
+            "label": "clearance",
+            "kind": "translate",
+            "start": [
+              -0.03532985597848892,
+              -0.1791372001171112,
+              1.0646017789840698
+            ],
+            "goal": [
+              -0.03532985597848892,
+              -0.1791372001171112,
+              1.0792873668670655
+            ],
+            "start_rotation": [
+              [
+                0.6803653210411428,
+                0.0745295250798276,
+                -0.729073644987911
+              ],
+              [
+                0.049593456358421883,
+                -0.9972173377591794,
+                -0.055660312242389376
+              ],
+              [
+                -0.7311932159224458,
+                0.0017120642132599506,
+                -0.6821682709017779
+              ]
+            ],
+            "rotation": [
+              [
+                0.6803653210411428,
+                0.0745295250798276,
+                -0.729073644987911
+              ],
+              [
+                0.049593456358421883,
+                -0.9972173377591794,
+                -0.055660312242389376
+              ],
+              [
+                -0.7311932159224458,
+                0.0017120642132599506,
+                -0.6821682709017779
+              ]
+            ]
+          },
+          {
+            "label": "reorient",
+            "kind": "rotate",
+            "start": [
+              -0.03532985597848892,
+              -0.1791372001171112,
+              1.0792873668670655
+            ],
+            "goal": [
+              -0.03532985597848892,
+              -0.1791372001171112,
+              1.0792873668670655
+            ],
+            "start_rotation": [
+              [
+                0.6803653210411428,
+                0.0745295250798276,
+                -0.729073644987911
+              ],
+              [
+                0.049593456358421883,
+                -0.9972173377591794,
+                -0.055660312242389376
+              ],
+              [
+                -0.7311932159224458,
+                0.0017120642132599506,
+                -0.6821682709017779
+              ]
+            ],
+            "rotation": [
+              [
+                0.9047698316726667,
+                0.12965996671983965,
+                0.40568441518651477
+              ],
+              [
+                0.0059991688949207755,
+                -0.9563178627934306,
+                0.292267266854801
+              ],
+              [
+                0.42585861699346256,
+                -0.26200083651090755,
+                -0.8660254037844386
+              ]
+            ]
+          },
+          {
+            "label": "transport",
+            "kind": "translate",
+            "start": [
+              -0.03532985597848892,
+              -0.1791372001171112,
+              1.0792873668670655
+            ],
+            "goal": [
+              0.19911765401231638,
+              0.4020692899599186,
+              1.0825682643873684
+            ],
+            "start_rotation": [
+              [
+                0.9047698316726667,
+                0.12965996671983965,
+                0.40568441518651477
+              ],
+              [
+                0.0059991688949207755,
+                -0.9563178627934306,
+                0.292267266854801
+              ],
+              [
+                0.42585861699346256,
+                -0.26200083651090755,
+                -0.8660254037844386
+              ]
+            ],
+            "rotation": [
+              [
+                0.9047698316726667,
+                0.12965996671983965,
+                0.40568441518651477
+              ],
+              [
+                0.0059991688949207755,
+                -0.9563178627934306,
+                0.292267266854801
+              ],
+              [
+                0.42585861699346256,
+                -0.26200083651090755,
+                -0.8660254037844386
+              ]
+            ]
+          }
+        ],
+        "placement": {
+          "label": "placement_validation",
+          "kind": "translate",
+          "start": [
+            0.19911765401231638,
+            0.4020692899599186,
+            1.0825682643873684
+          ],
+          "goal": [
+            0.19911765401231638,
+            0.4020692899599186,
+            0.8875682643873684
+          ],
+          "start_rotation": [
+            [
+              0.9047698316726667,
+              0.12965996671983965,
+              0.40568441518651477
+            ],
+            [
+              0.0059991688949207755,
+              -0.9563178627934306,
+              0.292267266854801
+            ],
+            [
+              0.42585861699346256,
+              -0.26200083651090755,
+              -0.8660254037844386
+            ]
+          ],
+          "rotation": [
+            [
+              0.9047698316726667,
+              0.12965996671983965,
+              0.40568441518651477
+            ],
+            [
+              0.0059991688949207755,
+              -0.9563178627934306,
+              0.292267266854801
+            ],
+            [
+              0.42585861699346256,
+              -0.26200083651090755,
+              -0.8660254037844386
+            ]
+          ]
+        },
+        "rotation": [
+          [
+            0.9047698316726667,
+            0.12965996671983965,
+            0.40568441518651477
+          ],
+          [
+            0.0059991688949207755,
+            -0.9563178627934306,
+            0.292267266854801
+          ],
+          [
+            0.42585861699346256,
+            -0.26200083651090755,
+            -0.8660254037844386
+          ]
+        ],
+        "held_offset": [
+          0.0016176540123163578,
+          -0.0004307100400814186,
+          0.0025682643873683178
+        ],
+        "held_relative_position": [
+          -0.0025547381662311326,
+          5.1246747456183784e-05,
+          0.0016938076273566786
+        ],
+        "held_relative_rotation": [
+          [
+            0.011107994356880813,
+            -0.005291068490994338,
+            -0.9999243056629793
+          ],
+          [
+            -0.432131922956343,
+            -0.9018104015507955,
+            -2.8580524514578527e-05
+          ],
+          [
+            -0.9017419883888189,
+            0.43209953048923433,
+            -0.012303744452909715
+          ]
+        ],
+        "minimum_joint_margin_rad": 0.2068044052632838,
+        "minimum_hand_margin_m": 0.0011693224134727842,
+        "minimum_carried_can_margin_m": 0.0269992082805587,
+        "proxy": "Observed rigid hand-can transform; not a force or full-arm safety certificate."
+      },
+      "receipts": [
+        {
+          "index": 0,
+          "candidate": "current",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.4395284483371402,
+                1.3535976227787316,
+                0.382589211061632,
+                -0.34782875042181327,
+                0.04812828321064746,
+                1.335067194378283,
+                1.4012337239341683
+              ],
+              "position_error_m": 0.12816673810811247,
+              "angle_error_rad": 0.36917686660393423,
+              "limit_margin_rad": 0.2780287504218133
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 1,
+          "candidate": "outward_30",
+          "accepted": true,
+          "prefilter_ik": [
+            {
+              "success": true,
+              "iterations": 10,
+              "q": [
+                0.6210380411171447,
+                1.0018005160308672,
+                0.004547393286935195,
+                -1.1209709149519043,
+                -0.004892779026545342,
+                2.647905976834869,
+                1.3370716132365041
+              ],
+              "position_error_m": 0.002007120369676067,
+              "angle_error_rad": 0.0026270412638762196,
+              "limit_margin_rad": 0.7609994839691328
+            },
+            {
+              "success": true,
+              "iterations": 4,
+              "q": [
+                0.6210352381047543,
+                1.5232679666033622,
+                0.0038140730180473595,
+                -0.6712317810014321,
+                -0.004312585509974108,
+                2.719909830478433,
+                1.3367954054161895
+              ],
+              "position_error_m": 0.003179889631288028,
+              "angle_error_rad": 0.0018170534617587876,
+              "limit_margin_rad": 0.23953203339663776
+            }
+          ],
+          "path_ik": [
+            {
+              "stage": "clearance",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.027587362559517853,
+                0.4869066135067949,
+                -0.09050222971295846,
+                -1.844614253221913,
+                -0.10494928097569163,
+                1.5222998270623516,
+                0.6261348403659578
+              ],
+              "position_error_m": 0.00018016667322060022,
+              "angle_error_rad": 0.00013178660777437618,
+              "limit_margin_rad": 1.2271857467780871
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 0,
+              "q": [
+                -0.027587362559517853,
+                0.4869066135067949,
+                -0.09050222971295846,
+                -1.844614253221913,
+                -0.10494928097569163,
+                1.5222998270623516,
+                0.6261348403659578
+              ],
+              "position_error_m": 0.00018016667322060022,
+              "angle_error_rad": 0.00013178660777437618,
+              "limit_margin_rad": 1.2271857467780871
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.03735473145637307,
+                0.4400865694391753,
+                -0.08892917171846584,
+                -1.901858671007642,
+                -0.08813691097633387,
+                1.6031784772759021,
+                0.6175136049527277
+              ],
+              "position_error_m": 0.0003986654779972375,
+              "angle_error_rad": 0.0015810407081251862,
+              "limit_margin_rad": 1.1699413289923581
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.0476180703799999,
+                0.39347788487984126,
+                -0.08749188258277475,
+                -1.9614684420776138,
+                -0.0700324489478461,
+                1.6873260265585914,
+                0.605362952485707
+              ],
+              "position_error_m": 0.0004158278919428085,
+              "angle_error_rad": 0.0017674873315055735,
+              "limit_margin_rad": 1.1103315579223862
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.05806946945706794,
+                0.34855269822273294,
+                -0.08623959160506846,
+                -2.0205197151173926,
+                -0.050267334289962884,
+                1.7721203145801823,
+                0.590277124810286
+              ],
+              "position_error_m": 0.0004376607973395391,
+              "angle_error_rad": 0.0019294228529171018,
+              "limit_margin_rad": 1.0512802848826075
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.06866072636777945,
+                0.30551381234155706,
+                -0.08507745599811242,
+                -2.078859302349869,
+                -0.028316197306287736,
+                1.8574618877937492,
+                0.5720154133472631
+              ],
+              "position_error_m": 0.0004711721372942766,
+              "angle_error_rad": 0.002143044342887587,
+              "limit_margin_rad": 0.9929406976501309
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.07936225756522367,
+                0.2645827893444298,
+                -0.08388459136796896,
+                -2.1363261155646858,
+                -0.003518543924456278,
+                1.9432695567420901,
+                0.5501454901378398
+              ],
+              "position_error_m": 0.0005196575072246086,
+              "angle_error_rad": 0.0024249393793119678,
+              "limit_margin_rad": 0.9354738844353143
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.0901295525310282,
+                0.22599940377551875,
+                -0.08250799317898216,
+                -2.1927355076983313,
+                0.024963388943445557,
+                2.0294252315705696,
+                0.5240755778501965
+              ],
+              "position_error_m": 0.0005865514109647771,
+              "angle_error_rad": 0.0027934345742558087,
+              "limit_margin_rad": 0.8790644923016688
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.10089204008894125,
+                0.1900206009228283,
+                -0.08075598583132446,
+                -2.2478673588349953,
+                0.058211104594560414,
+                2.1157514005484246,
+                0.4930067200496881
+              ],
+              "position_error_m": 0.0006761373476962118,
+              "angle_error_rad": 0.0032722687907785182,
+              "limit_margin_rad": 0.8239326411650048
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.1115390646442424,
+                0.1569190930033879,
+                -0.07839039276344971,
+                -2.3014480438127998,
+                0.09764406153187632,
+                2.2019770421797666,
+                0.45586193422953836
+              ],
+              "position_error_m": 0.0007935595240747039,
+              "angle_error_rad": 0.0038923528606419396,
+              "limit_margin_rad": 0.7703519561872003
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.12190045778363987,
+                0.12698002062177513,
+                -0.07511889041680994,
+                -2.35312182153537,
+                0.14514634373137836,
+                2.2876848701436967,
+                0.4111884549738915
+              ],
+              "position_error_m": 0.0009443953820079446,
+              "angle_error_rad": 0.004692990707437246,
+              "limit_margin_rad": 0.7186781784646299
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.13172143377978826,
+                0.10049490154495136,
+                -0.07059108592056987,
+                -2.4024044245679095,
+                0.20322789275795733,
+                2.3722294859983206,
+                0.35702947262440077
+              ],
+              "position_error_m": 0.0011331402983534985,
+              "angle_error_rad": 0.005720863127288056,
+              "limit_margin_rad": 0.6693955754320906
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.14063575669230424,
+                0.07775184581048404,
+                -0.06440727191566946,
+                -2.448608304994486,
+                0.27520161533953225,
+                2.4546118240380035,
+                0.29077455153885834
+              ],
+              "position_error_m": 0.001359131734836395,
+              "angle_error_rad": 0.007021885320359432,
+              "limit_margin_rad": 0.6231916950055143
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.14815410762603975,
+                0.059019999529442216,
+                -0.05616072389966179,
+                -2.490729448454947,
+                0.36529360346110445,
+                2.533294925781593,
+                0.20904009832034293
+              ],
+              "position_error_m": 0.0016070960966459986,
+              "angle_error_rad": 0.008614580096793494,
+              "limit_margin_rad": 0.5810705515450532
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.1537169207565683,
+                0.04452218041877738,
+                -0.04555663145000017,
+                -2.527307139746219,
+                0.47844367250567754,
+                2.6059659893547735,
+                0.10774083573261976
+              ],
+              "position_error_m": 0.0018287929454011672,
+              "angle_error_rad": 0.010424294182364933,
+              "limit_margin_rad": 0.5444928602537811
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.15691616958736385,
+                0.0343772550351624,
+                -0.03267632499176933,
+                -2.556358748747167,
+                0.6192592582209675,
+                2.669333834503048,
+                -0.017272867126469763
+              ],
+              "position_error_m": 0.0019190095782291535,
+              "angle_error_rad": 0.012162841098908353,
+              "limit_margin_rad": 0.5154412512528332
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.1578652058824116,
+                0.029170565405049306,
+                -0.02011161625466186,
+                -2.573421256158341,
+                0.7692592582209675,
+                2.713341924668807,
+                -0.150548961591718
+              ],
+              "position_error_m": 0.0015531769201181339,
+              "angle_error_rad": 0.019237159652566577,
+              "limit_margin_rad": 0.49837874384165914
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.15814724421114046,
+                0.026720280856332938,
+                -0.009385961666154323,
+                -2.581997126271575,
+                0.9192592582209675,
+                2.7420151881378665,
+                -0.28527926273148996
+              ],
+              "position_error_m": 0.0012305975099621601,
+              "angle_error_rad": 0.034383288663213586,
+              "limit_margin_rad": 0.48980287372842524
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                -0.16126972340356197,
+                0.027487470333430963,
+                0.0032974539695389098,
+                -2.581476368334095,
+                1.1968535232730921,
+                2.757699832458594,
+                -0.543851204958419
+              ],
+              "position_error_m": 0.0004885282441475431,
+              "angle_error_rad": 0.004685935413698734,
+              "limit_margin_rad": 0.490323631665905
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                -0.06302776292119205,
+                0.0804846852770365,
+                0.0990492815304661,
+                -2.5264662077209574,
+                1.2686048940201742,
+                2.8541501038517807,
+                -0.44672062896395154
+              ],
+              "position_error_m": 0.0001308404727142235,
+              "angle_error_rad": 0.0005677204243561622,
+              "limit_margin_rad": 0.5453337922790427
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.031635513303390844,
+                0.15996084701874697,
+                0.17360669339016732,
+                -2.4391071406741744,
+                1.251654519764316,
+                2.950278431998019,
+                -0.29178363877916463
+              ],
+              "position_error_m": 0.0002704598024647965,
+              "angle_error_rad": 0.001771231289975028,
+              "limit_margin_rad": 0.6326928593258256
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.1433354670243679,
+                0.25609608373861487,
+                0.19785065917383454,
+                -2.334117088265533,
+                1.121638848567717,
+                3.030286974200434,
+                -0.05868586476456589
+              ],
+              "position_error_m": 0.0006302078083539604,
+              "angle_error_rad": 0.005285618462553522,
+              "limit_margin_rad": 0.722213025799566
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.319604561729646,
+                0.3555519970353762,
+                0.11684277379944813,
+                -2.2158381691656355,
+                0.905680008728956,
+                3.0617666502759753,
+                0.2413141352354341
+              ],
+              "position_error_m": 0.0023861948556867436,
+              "angle_error_rad": 0.009861471287418669,
+              "limit_margin_rad": 0.6907333497240247
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.5553242453009873,
+                0.4713044913141286,
+                -0.05918103117853346,
+                -2.0471093884253175,
+                0.7052440885665233,
+                3.0153300254821267,
+                0.5385162137053698
+              ],
+              "position_error_m": 0.002129204271837558,
+              "angle_error_rad": 0.008888760724276901,
+              "limit_margin_rad": 0.7371699745178732
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.7200298433472794,
+                0.6183500961476716,
+                -0.1895644139378637,
+                -1.817401053497633,
+                0.5918930070925579,
+                2.9188612044468307,
+                0.7580652235237226
+              ],
+              "position_error_m": 0.0012899091131818902,
+              "angle_error_rad": 0.003239858664879451,
+              "limit_margin_rad": 0.8336387955531692
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.8156915456594926,
+                0.7936688837404205,
+                -0.2738081074630493,
+                -1.5309279877143467,
+                0.5180800952771197,
+                2.7962334189193543,
+                0.9371413955945942
+              ],
+              "position_error_m": 0.0026603345848607144,
+              "angle_error_rad": 0.0036805516351218156,
+              "limit_margin_rad": 0.9562665810806457
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 3,
+              "q": [
+                0.8380774952753237,
+                1.0358158021291737,
+                -0.3315481252226874,
+                -1.1055010860414498,
+                0.4556919508307592,
+                2.6097764082690413,
+                1.1153613208678814
+              ],
+              "position_error_m": 0.0022023779509399606,
+              "angle_error_rad": 0.001647319186607924,
+              "limit_margin_rad": 0.7269841978708262
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.8159420437524099,
+                1.1502611009835715,
+                -0.3007930724210119,
+                -1.0607767131050558,
+                0.47533710842290006,
+                2.682576030596227,
+                1.103446841058082
+              ],
+              "position_error_m": 0.003700481157928487,
+              "angle_error_rad": 0.0033345597547580165,
+              "limit_margin_rad": 0.6125388990164284
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.7873992991133144,
+                1.3243989561536569,
+                -0.28458464899702784,
+                -0.9035630395833917,
+                0.47362779891795104,
+                2.7079111109435505,
+                1.1202373005528614
+              ],
+              "position_error_m": 0.0005709225475650115,
+              "angle_error_rad": 0.0006386913711336204,
+              "limit_margin_rad": 0.43840104384634304
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.7471059502392218,
+                1.5559955947367161,
+                -0.2901838001127713,
+                -0.6372295296879382,
+                0.4495336023638468,
+                2.6844103465054916,
+                1.1763980898566129
+              ],
+              "position_error_m": 0.0031244045498017197,
+              "angle_error_rad": 0.001913578768278464,
+              "limit_margin_rad": 0.2068044052632838
+            }
+          ],
+          "geometry": [
+            {
+              "stage": "clearance",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.1574916257649607,
+              "carried_can_margin_m": 0.12039996421773407,
+              "accepted": true
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16510226903692493,
+              "carried_can_margin_m": 0.13321852114643876,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1690951405893316,
+              "carried_can_margin_m": 0.13368857992602326,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16834667152061988,
+              "carried_can_margin_m": 0.13441032170336234,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16737033156413933,
+              "carried_can_margin_m": 0.13536035395155802,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16656039429270883,
+              "carried_can_margin_m": 0.13647485188874134,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16720633964139694,
+              "carried_can_margin_m": 0.13782156297101492,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16778488648179996,
+              "carried_can_margin_m": 0.1393926853872958,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16740354292795712,
+              "carried_can_margin_m": 0.14117911725935509,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16614060444708098,
+              "carried_can_margin_m": 0.14317050937111978,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16553001985668278,
+              "carried_can_margin_m": 0.1453553251240927,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1646026081514249,
+              "carried_can_margin_m": 0.1477209073715551,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1619790855335924,
+              "carried_can_margin_m": 0.1502535517443673,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16080259671044764,
+              "carried_can_margin_m": 0.14842913463950083,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15977633069680566,
+              "carried_can_margin_m": 0.145711785966856,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15880632601864633,
+              "carried_can_margin_m": 0.14318125763469072,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15789820213908115,
+              "carried_can_margin_m": 0.14085220958324565,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1570572200313374,
+              "carried_can_margin_m": 0.13873813453055076,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15628825170071362,
+              "carried_can_margin_m": 0.1368512798059647,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007066068641715011,
+              "carried_can_arc_bound_m": 0.0018670309542909956
+            },
+            {
+              "stage": "transport",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.15853435362461316,
+              "carried_can_margin_m": 0.1387183107602557,
+              "accepted": true
+            },
+            {
+              "stage": "placement_validation",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.0011693224134727842,
+              "carried_can_margin_m": 0.0269992082805587,
+              "accepted": true
+            }
+          ],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "current_joint_path_hand_and_carried_can_validated"
+        }
+      ]
+    },
+    {
+      "step": 312,
+      "recorded_mode": "CARRY",
+      "recorded_stable_hold": true,
+      "candidate_order": [
+        "current",
+        "outward_30",
+        "outward_15",
+        "outward_25",
+        "outward_35",
+        "outward_0",
+        "outward_30_equivalent",
+        "outward_15_equivalent",
+        "outward_25_equivalent",
+        "outward_35_equivalent",
+        "outward_0_equivalent"
+      ],
+      "work_units": 156,
+      "control_slices_required": 11,
+      "slices": [
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.6579000041238032
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1833999999216758
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.261599998746533
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.5748999978532083
+        },
+        {
+          "work": 11,
+          "geometry_checks": 4,
+          "elapsed_ms": 22.917500005860347
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 21.850800003448967
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 21.947999994154088
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 23.237900000822265
+        },
+        {
+          "work": 16,
+          "geometry_checks": 4,
+          "elapsed_ms": 22.135499995783903
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 3.1091999990167096
+        },
+        {
+          "work": 13,
+          "geometry_checks": 1,
+          "elapsed_ms": 8.639400002721231
+        }
+      ],
+      "chosen": {
+        "candidate": "outward_30",
+        "preserve_current": false,
+        "stages": [
+          {
+            "label": "clearance",
+            "kind": "translate",
+            "start": [
+              -0.035709403455257416,
+              -0.1790667027235031,
+              1.0688114166259766
+            ],
+            "goal": [
+              -0.035709403455257416,
+              -0.1790667027235031,
+              1.0793031024932862
+            ],
+            "start_rotation": [
+              [
+                0.6842740591476978,
+                0.07532829966303592,
+                -0.7253238306076873
+              ],
+              [
+                0.0501507051255855,
+                -0.9971565489536579,
+                -0.05624698795702834
+              ],
+              [
+                -0.7274983977665791,
+                0.0021128532148212004,
+                -0.686106126702242
+              ]
+            ],
+            "rotation": [
+              [
+                0.6842740591476978,
+                0.07532829966303592,
+                -0.7253238306076873
+              ],
+              [
+                0.0501507051255855,
+                -0.9971565489536579,
+                -0.05624698795702834
+              ],
+              [
+                -0.7274983977665791,
+                0.0021128532148212004,
+                -0.686106126702242
+              ]
+            ]
+          },
+          {
+            "label": "reorient",
+            "kind": "rotate",
+            "start": [
+              -0.035709403455257416,
+              -0.1790667027235031,
+              1.0793031024932862
+            ],
+            "goal": [
+              -0.035709403455257416,
+              -0.1790667027235031,
+              1.0793031024932862
+            ],
+            "start_rotation": [
+              [
+                0.6842740591476978,
+                0.07532829966303592,
+                -0.7253238306076873
+              ],
+              [
+                0.0501507051255855,
+                -0.9971565489536579,
+                -0.05624698795702834
+              ],
+              [
+                -0.7274983977665791,
+                0.0021128532148212004,
+                -0.686106126702242
+              ]
+            ],
+            "rotation": [
+              [
+                0.9047184321442162,
+                0.130018128787054,
+                0.4056844151865148
+              ],
+              [
+                0.006377747027515257,
+                -0.9563154129616848,
+                0.29226726685480103
+              ],
+              [
+                0.4259623021833793,
+                -0.26183223086288576,
+                -0.8660254037844387
+              ]
+            ]
+          },
+          {
+            "label": "transport",
+            "kind": "translate",
+            "start": [
+              -0.035709403455257416,
+              -0.1790667027235031,
+              1.0793031024932862
+            ],
+            "goal": [
+              0.19911703097450406,
+              0.40207178529705634,
+              1.0825668302159963
+            ],
+            "start_rotation": [
+              [
+                0.9047184321442162,
+                0.130018128787054,
+                0.4056844151865148
+              ],
+              [
+                0.006377747027515257,
+                -0.9563154129616848,
+                0.29226726685480103
+              ],
+              [
+                0.4259623021833793,
+                -0.26183223086288576,
+                -0.8660254037844387
+              ]
+            ],
+            "rotation": [
+              [
+                0.9047184321442162,
+                0.130018128787054,
+                0.4056844151865148
+              ],
+              [
+                0.006377747027515257,
+                -0.9563154129616848,
+                0.29226726685480103
+              ],
+              [
+                0.4259623021833793,
+                -0.26183223086288576,
+                -0.8660254037844387
+              ]
+            ]
+          }
+        ],
+        "placement": {
+          "label": "placement_validation",
+          "kind": "translate",
+          "start": [
+            0.19911703097450406,
+            0.40207178529705634,
+            1.0825668302159963
+          ],
+          "goal": [
+            0.19911703097450406,
+            0.40207178529705634,
+            0.8875668302159964
+          ],
+          "start_rotation": [
+            [
+              0.9047184321442162,
+              0.130018128787054,
+              0.4056844151865148
+            ],
+            [
+              0.006377747027515257,
+              -0.9563154129616848,
+              0.29226726685480103
+            ],
+            [
+              0.4259623021833793,
+              -0.26183223086288576,
+              -0.8660254037844387
+            ]
+          ],
+          "rotation": [
+            [
+              0.9047184321442162,
+              0.130018128787054,
+              0.4056844151865148
+            ],
+            [
+              0.006377747027515257,
+              -0.9563154129616848,
+              0.29226726685480103
+            ],
+            [
+              0.4259623021833793,
+              -0.26183223086288576,
+              -0.8660254037844387
+            ]
+          ]
+        },
+        "rotation": [
+          [
+            0.9047184321442162,
+            0.130018128787054,
+            0.4056844151865148
+          ],
+          [
+            0.006377747027515257,
+            -0.9563154129616848,
+            0.29226726685480103
+          ],
+          [
+            0.4259623021833793,
+            -0.26183223086288576,
+            -0.8660254037844387
+          ]
+        ],
+        "held_offset": [
+          0.001617030974504062,
+          -0.00042821470294368834,
+          0.0025668302159963506
+        ],
+        "held_relative_position": [
+          -0.002553599591052777,
+          5.23272197230044e-05,
+          0.0016920890498805694
+        ],
+        "held_relative_rotation": [
+          [
+            0.011116368061880433,
+            -0.005291170117718319,
+            -0.9999242120680438
+          ],
+          [
+            -0.4315392323014136,
+            -0.9020941693680812,
+            -2.4017047277888727e-05
+          ],
+          [
+            -0.9020256744382721,
+            0.4315067938177768,
+            -0.012311358303748188
+          ]
+        ],
+        "minimum_joint_margin_rad": 0.20672570568523208,
+        "minimum_hand_margin_m": 0.001168306054199264,
+        "minimum_carried_can_margin_m": 0.026997796359352972,
+        "proxy": "Observed rigid hand-can transform; not a force or full-arm safety certificate."
+      },
+      "receipts": [
+        {
+          "index": 0,
+          "candidate": "current",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.44157594010831563,
+                1.348855967867416,
+                0.36678480008572334,
+                -0.35338586375890124,
+                0.05649294009817933,
+                1.3308073990771645,
+                1.39583215145955
+              ],
+              "position_error_m": 0.1294723912372179,
+              "angle_error_rad": 0.3592653239598831,
+              "limit_margin_rad": 0.28358586375890127
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 1,
+          "candidate": "outward_30",
+          "accepted": true,
+          "prefilter_ik": [
+            {
+              "success": true,
+              "iterations": 10,
+              "q": [
+                0.6207662912150818,
+                1.001597467490082,
+                0.005019444385574556,
+                -1.1213611684495945,
+                -0.005575703594184377,
+                2.648117388499308,
+                1.337005038376765
+              ],
+              "position_error_m": 0.0020620248543425034,
+              "angle_error_rad": 0.0026913633595958357,
+              "limit_margin_rad": 0.7612025325099179
+            },
+            {
+              "success": true,
+              "iterations": 4,
+              "q": [
+                0.620850897644852,
+                1.523217906846174,
+                0.00421797396426426,
+                -0.6713297319404017,
+                -0.004968012289088831,
+                2.7199572997134545,
+                1.3366546447682304
+              ],
+              "position_error_m": 0.0031848266943168358,
+              "angle_error_rad": 0.00181787499783117,
+              "limit_margin_rad": 0.23958209315382595
+            }
+          ],
+          "path_ik": [
+            {
+              "stage": "clearance",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.027678652885954468,
+                0.48233113513318093,
+                -0.09024943679069275,
+                -1.850676446451945,
+                -0.10533085628320246,
+                1.5292120252568788,
+                0.6263201751155418
+              ],
+              "position_error_m": 9.54858294035248e-05,
+              "angle_error_rad": 9.803565539347605e-05,
+              "limit_margin_rad": 1.2211235535480551
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 0,
+              "q": [
+                -0.027678652885954468,
+                0.48233113513318093,
+                -0.09024943679069275,
+                -1.850676446451945,
+                -0.10533085628320246,
+                1.5292120252568788,
+                0.6263201751155418
+              ],
+              "position_error_m": 9.54858294035248e-05,
+              "angle_error_rad": 9.803565539347605e-05,
+              "limit_margin_rad": 1.2211235535480551
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.03745863937148074,
+                0.4355891595075153,
+                -0.08870960456376434,
+                -1.907978872953447,
+                -0.08851135894077419,
+                1.6099513630127893,
+                0.6175920097828852
+              ],
+              "position_error_m": 0.00039455326593592076,
+              "angle_error_rad": 0.001581315474457646,
+              "limit_margin_rad": 1.163821127046553
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.04773087456463449,
+                0.3893006618929443,
+                -0.08730183453590631,
+                -1.9672208057679756,
+                -0.07037289659702908,
+                1.6937474271982278,
+                0.6053076564145313
+              ],
+              "position_error_m": 0.00041448113578225417,
+              "angle_error_rad": 0.0017647497467407978,
+              "limit_margin_rad": 1.1045791942320244
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.05818545196179077,
+                0.3446941111726685,
+                -0.08607577772923497,
+                -2.025910989854352,
+                -0.050550095350135604,
+                1.7781860692620794,
+                0.5900952619612281
+              ],
+              "position_error_m": 0.0004366181424824321,
+              "angle_error_rad": 0.0019280206939925298,
+              "limit_margin_rad": 1.0458890101456482
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.06877452290719954,
+                0.30196928434146875,
+                -0.08493752198092167,
+                -2.0838929793635,
+                -0.028520928655895384,
+                1.8631672623951208,
+                0.5717057982489668
+              ],
+              "position_error_m": 0.0004704074194173163,
+              "angle_error_rad": 0.0021428533801819147,
+              "limit_margin_rad": 0.9879070206364999
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.07946743172371099,
+                0.2613465854496747,
+                -0.08376646232426302,
+                -2.1410059361962577,
+                -0.003623352004142051,
+                1.9486085718366117,
+                0.5497036793446737
+              ],
+              "position_error_m": 0.0005191152903048494,
+              "angle_error_rad": 0.0024258816109411067,
+              "limit_margin_rad": 0.9307940638037424
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.0902180809215313,
+                0.2230642929867742,
+                -0.08241010020449349,
+                -2.1970654033014134,
+                0.02498262967009214,
+                2.034390248183945,
+                0.5234937001543895
+              ],
+              "position_error_m": 0.0005861652750647847,
+              "angle_error_rad": 0.002795393453832932,
+              "limit_margin_rad": 0.8747345966985867
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.10095373689834028,
+                0.1873775027431471,
+                -0.08067766827114407,
+                -2.251851354207939,
+                0.058381573860181765,
+                2.120332594085712,
+                0.4922733357168348
+              ],
+              "position_error_m": 0.0006758153705266394,
+              "angle_error_rad": 0.0032750601054970328,
+              "limit_margin_rad": 0.8199486457920613
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.11156082389591204,
+                0.15455666156383535,
+                -0.07833254741790886,
+                -2.3050900908270546,
+                0.0979966329375132,
+                2.2061617505314786,
+                0.4549619496374311
+              ],
+              "position_error_m": 0.0007931567512717592,
+              "angle_error_rad": 0.003895657057189476,
+              "limit_margin_rad": 0.7667099091729455
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.12186529053723445,
+                0.12488417738696533,
+                -0.07508503216486612,
+                -2.3564255134999748,
+                0.14571566619658302,
+                2.291456802777938,
+                0.41010339005868274
+              ],
+              "position_error_m": 0.0009436657382463541,
+              "angle_error_rad": 0.004696214800293726,
+              "limit_margin_rad": 0.7153744865000253
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.13160734740626936,
+                0.09864834085575036,
+                -0.07058907687424118,
+                -2.405372562445928,
+                0.20405101261767059,
+                2.3755678435151295,
+                0.35573874135191397
+              ],
+              "position_error_m": 0.0011316541783164464,
+              "angle_error_rad": 0.005722864032157458,
+              "limit_margin_rad": 0.6664274375540722
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.1404147463358128,
+                0.07613355078110953,
+                -0.06445208735166573,
+                -2.451242409433949,
+                0.2763131383402073,
+                2.4574905756712146,
+                0.28925919527008936
+              ],
+              "position_error_m": 0.0013561438018653536,
+              "angle_error_rad": 0.007020443453135395,
+              "limit_margin_rad": 0.620557590566051
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.1477920995393015,
+                0.05760479869276684,
+                -0.05627862069459856,
+                -2.493029757935201,
+                0.36671337467053855,
+                2.535683045540865,
+                0.2072918638439047
+              ],
+              "position_error_m": 0.0016013748026426026,
+              "angle_error_rad": 0.008605512062645627,
+              "limit_margin_rad": 0.5787702420647989
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.15317662386769298,
+                0.043280304686790345,
+                -0.04579046207960279,
+                -2.529274863418826,
+                0.48015044912423044,
+                2.607830781905798,
+                0.10578140049335247
+              ],
+              "position_error_m": 0.0018185641178805998,
+              "angle_error_rad": 0.010400399336897417,
+              "limit_margin_rad": 0.5425251365811743
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.15616583203180692,
+                0.03327373910687981,
+                -0.033089151017775056,
+                -2.5580046134510295,
+                0.6211455926409563,
+                2.6706517887535677,
+                -0.01935832534353299
+              ],
+              "position_error_m": 0.0019025756908984334,
+              "angle_error_rad": 0.012114192798788044,
+              "limit_margin_rad": 0.5137953865489706
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.15691995991065014,
+                0.028151286585934597,
+                -0.02074500511379133,
+                -2.5748241977566724,
+                0.7711455926409563,
+                2.714201562008652,
+                -0.1526284577796313
+              ],
+              "position_error_m": 0.001534629185035739,
+              "angle_error_rad": 0.01913380763840482,
+              "limit_margin_rad": 0.4969758022433277
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.15704025815022937,
+                0.025747532040599784,
+                -0.010238758019460795,
+                -2.5832417110794204,
+                0.9211455926409563,
+                2.742534996576444,
+                -0.28737517038680704
+              ],
+              "position_error_m": 0.001212587805213841,
+              "angle_error_rad": 0.03411166602587106,
+              "limit_margin_rad": 0.48855828892057973
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                -0.15994382776887806,
+                0.026550207495090006,
+                0.002009232320407074,
+                -2.58259249024701,
+                1.197479587336094,
+                2.75769487950505,
+                -0.5448568269059476
+              ],
+              "position_error_m": 0.0004895510797244824,
+              "angle_error_rad": 0.0046049667420993735,
+              "limit_margin_rad": 0.48920750975299
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                -0.061641194459834264,
+                0.07969655216861832,
+                0.09788263520412473,
+                -2.527407380910718,
+                1.269459887460888,
+                2.8541729723292097,
+                -0.44771167710742255
+              ],
+              "position_error_m": 0.00013119153098787635,
+              "angle_error_rad": 0.0005679337820741271,
+              "limit_margin_rad": 0.5443926190892823
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.03294420730571708,
+                0.1593274537312235,
+                0.17258710723843446,
+                -2.439827402241989,
+                1.2528077971314426,
+                2.950260064008708,
+                -0.2929355912953255
+              ],
+              "position_error_m": 0.00027031721836538064,
+              "angle_error_rad": 0.0017698643634410237,
+              "limit_margin_rad": 0.6319725977580113
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.14438395470804855,
+                0.25561265496238134,
+                0.19711276843914083,
+                -2.3346336419938307,
+                1.1229704777613787,
+                3.0302875585224025,
+                -0.05996921036677974
+              ],
+              "position_error_m": 0.0006289855078132371,
+              "angle_error_rad": 0.0052796113728759125,
+              "limit_margin_rad": 0.7222124414775974
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.3202178705656691,
+                0.355191296388372,
+                0.1165225127242282,
+                -2.2162825230535708,
+                0.9069277659257661,
+                3.0618821711864306,
+                0.24003078963322025
+              ],
+              "position_error_m": 0.002397355537381296,
+              "angle_error_rad": 0.009875557258542616,
+              "limit_margin_rad": 0.6906178288135694
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.5559165260657233,
+                0.47105923311911896,
+                -0.059539929672773134,
+                -2.0474999353975063,
+                0.7060383157643944,
+                3.015477017478838,
+                0.5376067174151594
+              ],
+              "position_error_m": 0.0021358997241582777,
+              "angle_error_rad": 0.008920832677503737,
+              "limit_margin_rad": 0.7370229825211618
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.7205725507152406,
+                0.6182160360738179,
+                -0.1899836931819303,
+                -1.8176734415545195,
+                0.5925310928169474,
+                2.9189073616429067,
+                0.7572929894784187
+              ],
+              "position_error_m": 0.0012934148384628906,
+              "angle_error_rad": 0.003250052805514322,
+              "limit_margin_rad": 0.8335926383570933
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.8161128572005008,
+                0.7936374645108761,
+                -0.27421775368637424,
+                -1.5310794085598118,
+                0.5186609640916112,
+                2.7962166055326607,
+                0.9364236197803261
+              ],
+              "position_error_m": 0.00266464374837478,
+              "angle_error_rad": 0.003686639941711095,
+              "limit_margin_rad": 0.9562833944673392
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 3,
+              "q": [
+                0.8383325900491915,
+                1.035886908014592,
+                -0.3319503067550467,
+                -1.105491719143173,
+                0.45622215143642003,
+                2.609701587013265,
+                1.1147270460714624
+              ],
+              "position_error_m": 0.002207677142207073,
+              "angle_error_rad": 0.0016497015987338658,
+              "limit_margin_rad": 0.7269130919854079
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.8161667720853555,
+                1.1503434149682215,
+                -0.3011661521745429,
+                -1.0607255996194322,
+                0.47588728413498405,
+                2.6824825687656886,
+                1.1028096268798577
+              ],
+              "position_error_m": 0.0037013465103481018,
+              "angle_error_rad": 0.003338480036305401,
+              "limit_margin_rad": 0.6124565850317785
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.7875912211772794,
+                1.324477054349474,
+                -0.2849445892760402,
+                -0.9035023770462729,
+                0.4741761046843224,
+                2.707821589469024,
+                1.1196241518243306
+              ],
+              "position_error_m": 0.0005710807631648935,
+              "angle_error_rad": 0.0006387846979372958,
+              "limit_margin_rad": 0.438322945650526
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.7472446643809264,
+                1.5560742943147678,
+                -0.29055090480958157,
+                -0.637152177976676,
+                0.45005412104723985,
+                2.684331891104447,
+                1.1758520441308753
+              ],
+              "position_error_m": 0.0031255494626575655,
+              "angle_error_rad": 0.0019141125585321968,
+              "limit_margin_rad": 0.20672570568523208
+            }
+          ],
+          "geometry": [
+            {
+              "stage": "clearance",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.16142038371301604,
+              "carried_can_margin_m": 0.12463367556846187,
+              "accepted": true
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1648691080539079,
+              "carried_can_margin_m": 0.13326571624341033,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16899366511862893,
+              "carried_can_margin_m": 0.13375118724685464,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16836249437263276,
+              "carried_can_margin_m": 0.1344861290379442,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16744953706339435,
+              "carried_can_margin_m": 0.13544705471776997,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16642295409961677,
+              "carried_can_margin_m": 0.13656991295339704,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16720444663182457,
+              "carried_can_margin_m": 0.13792274717334463,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16775103521933268,
+              "carried_can_margin_m": 0.13949778134365798,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1673488341766591,
+              "carried_can_margin_m": 0.1412859622344529,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.166099318383389,
+              "carried_can_margin_m": 0.14327701145749838,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.165475053415559,
+              "carried_can_margin_m": 0.14545948454595914,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16454287380651267,
+              "carried_can_margin_m": 0.14782083673670643,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16192181346862186,
+              "carried_can_margin_m": 0.1503474950770871,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16084483732550944,
+              "carried_can_margin_m": 0.14839063552084397,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15982071402423922,
+              "carried_can_margin_m": 0.1456883382542309,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15885245493525754,
+              "carried_can_margin_m": 0.143171685566009,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15794562557091027,
+              "carried_can_margin_m": 0.1408551430695315,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15710543834808086,
+              "carried_can_margin_m": 0.13875202615322135,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.156336722627438,
+              "carried_can_margin_m": 0.13687442344428158,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007038440658977614,
+              "carried_can_arc_bound_m": 0.0018596451923612056
+            },
+            {
+              "stage": "transport",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.158556624164977,
+              "carried_can_margin_m": 0.13873406863664278,
+              "accepted": true
+            },
+            {
+              "stage": "placement_validation",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.001168306054199264,
+              "carried_can_margin_m": 0.026997796359352972,
+              "accepted": true
+            }
+          ],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "current_joint_path_hand_and_carried_can_validated"
+        }
+      ]
+    },
+    {
+      "step": 320,
+      "recorded_mode": "CARRY",
+      "recorded_stable_hold": true,
+      "candidate_order": [
+        "current",
+        "outward_30",
+        "outward_15",
+        "outward_25",
+        "outward_35",
+        "outward_0",
+        "outward_30_equivalent",
+        "outward_15_equivalent",
+        "outward_25_equivalent",
+        "outward_35_equivalent",
+        "outward_0_equivalent"
+      ],
+      "work_units": 153,
+      "control_slices_required": 11,
+      "slices": [
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.344499996979721
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.344100001209881
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.5059999970835634
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.6378000038675964
+        },
+        {
+          "work": 11,
+          "geometry_checks": 4,
+          "elapsed_ms": 22.01019999483833
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 21.038600003521424
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 24.522800005797762
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 17.966200000955723
+        },
+        {
+          "work": 16,
+          "geometry_checks": 3,
+          "elapsed_ms": 15.240900000208057
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.8531999996630475
+        },
+        {
+          "work": 10,
+          "geometry_checks": 1,
+          "elapsed_ms": 6.6034999981638975
+        }
+      ],
+      "chosen": {
+        "candidate": "outward_30",
+        "preserve_current": false,
+        "stages": [
+          {
+            "label": "clearance",
+            "kind": "translate",
+            "start": [
+              -0.022444000467658043,
+              -0.11532710492610931,
+              1.0748510360717773
+            ],
+            "goal": [
+              -0.022444000467658043,
+              -0.11532710492610931,
+              1.0794107484817506
+            ],
+            "start_rotation": [
+              [
+                0.7039333705256825,
+                0.08139906866551902,
+                -0.7055862820950661
+              ],
+              [
+                0.06287156555608406,
+                -0.9966527772603146,
+                -0.05225330442975422
+              ],
+              [
+                -0.7074778979621054,
+                -0.007578469481872102,
+                -0.7066948356224438
+              ]
+            ],
+            "rotation": [
+              [
+                0.7039333705256825,
+                0.08139906866551902,
+                -0.7055862820950661
+              ],
+              [
+                0.06287156555608406,
+                -0.9966527772603146,
+                -0.05225330442975422
+              ],
+              [
+                -0.7074778979621054,
+                -0.007578469481872102,
+                -0.7066948356224438
+              ]
+            ]
+          },
+          {
+            "label": "reorient",
+            "kind": "rotate",
+            "start": [
+              -0.022444000467658043,
+              -0.11532710492610931,
+              1.0794107484817506
+            ],
+            "goal": [
+              -0.022444000467658043,
+              -0.11532710492610931,
+              1.0794107484817506
+            ],
+            "start_rotation": [
+              [
+                0.7039333705256825,
+                0.08139906866551902,
+                -0.7055862820950661
+              ],
+              [
+                0.06287156555608406,
+                -0.9966527772603146,
+                -0.05225330442975422
+              ],
+              [
+                -0.7074778979621054,
+                -0.007578469481872102,
+                -0.7066948356224438
+              ]
+            ],
+            "rotation": [
+              [
+                0.9025341695251501,
+                0.14440300590473643,
+                0.4056844151865148
+              ],
+              [
+                0.021599612558691722,
+                -0.9560927263934911,
+                0.29226726685480103
+              ],
+              [
+                0.43007619043241896,
+                -0.2550185687810551,
+                -0.8660254037844387
+              ]
+            ]
+          },
+          {
+            "label": "transport",
+            "kind": "translate",
+            "start": [
+              -0.022444000467658043,
+              -0.11532710492610931,
+              1.0794107484817506
+            ],
+            "goal": [
+              0.1990615740872819,
+              0.40218379830248613,
+              1.0825491033531078
+            ],
+            "start_rotation": [
+              [
+                0.9025341695251501,
+                0.14440300590473643,
+                0.4056844151865148
+              ],
+              [
+                0.021599612558691722,
+                -0.9560927263934911,
+                0.29226726685480103
+              ],
+              [
+                0.43007619043241896,
+                -0.2550185687810551,
+                -0.8660254037844387
+              ]
+            ],
+            "rotation": [
+              [
+                0.9025341695251501,
+                0.14440300590473643,
+                0.4056844151865148
+              ],
+              [
+                0.021599612558691722,
+                -0.9560927263934911,
+                0.29226726685480103
+              ],
+              [
+                0.43007619043241896,
+                -0.2550185687810551,
+                -0.8660254037844387
+              ]
+            ]
+          }
+        ],
+        "placement": {
+          "label": "placement_validation",
+          "kind": "translate",
+          "start": [
+            0.1990615740872819,
+            0.40218379830248613,
+            1.0825491033531078
+          ],
+          "goal": [
+            0.1990615740872819,
+            0.40218379830248613,
+            0.8875491033531079
+          ],
+          "start_rotation": [
+            [
+              0.9025341695251501,
+              0.14440300590473643,
+              0.4056844151865148
+            ],
+            [
+              0.021599612558691722,
+              -0.9560927263934911,
+              0.29226726685480103
+            ],
+            [
+              0.43007619043241896,
+              -0.2550185687810551,
+              -0.8660254037844387
+            ]
+          ],
+          "rotation": [
+            [
+              0.9025341695251501,
+              0.14440300590473643,
+              0.4056844151865148
+            ],
+            [
+              0.021599612558691722,
+              -0.9560927263934911,
+              0.29226726685480103
+            ],
+            [
+              0.43007619043241896,
+              -0.2550185687810551,
+              -0.8660254037844387
+            ]
+          ]
+        },
+        "rotation": [
+          [
+            0.9025341695251501,
+            0.14440300590473643,
+            0.4056844151865148
+          ],
+          [
+            0.021599612558691722,
+            -0.9560927263934911,
+            0.29226726685480103
+          ],
+          [
+            0.43007619043241896,
+            -0.2550185687810551,
+            -0.8660254037844387
+          ]
+        ],
+        "held_offset": [
+          0.0015615740872818897,
+          -0.00031620169751391783,
+          0.002549103353107854
+        ],
+        "held_relative_position": [
+          -0.002498852796983384,
+          0.0001222545535717717,
+          0.0016664973962013682
+        ],
+        "held_relative_rotation": [
+          [
+            0.011051501412938036,
+            -0.005164757759260619,
+            -0.9999255920286305
+          ],
+          [
+            -0.42655255938540343,
+            -0.9044627754954386,
+            -4.271825361622933e-05
+          ],
+          [
+            -0.9043952556257031,
+            0.4265212925756174,
+            -0.012198712282155966
+          ]
+        ],
+        "minimum_joint_margin_rad": 0.20802428826558406,
+        "minimum_hand_margin_m": 0.0011699196486635623,
+        "minimum_carried_can_margin_m": 0.026885676319196822,
+        "proxy": "Observed rigid hand-can transform; not a force or full-arm safety certificate."
+      },
+      "receipts": [
+        {
+          "index": 0,
+          "candidate": "current",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.44376206544100205,
+                1.3638200842455008,
+                0.42184224688600747,
+                -0.32952139069696684,
+                0.002228978278411128,
+                1.3753177812618735,
+                1.3898403995362716
+              ],
+              "position_error_m": 0.11802882901143293,
+              "angle_error_rad": 0.3872092793647725,
+              "limit_margin_rad": 0.25972139069696687
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 1,
+          "candidate": "outward_30",
+          "accepted": true,
+          "prefilter_ik": [
+            {
+              "success": true,
+              "iterations": 10,
+              "q": [
+                0.6020148569032675,
+                1.0072532691442204,
+                0.03204461276939848,
+                -1.1112766015755682,
+                -0.04319444262972973,
+                2.64239824575353,
+                1.3404555995000833
+              ],
+              "position_error_m": 0.0007436408233326799,
+              "angle_error_rad": 0.0009735949010611921,
+              "limit_margin_rad": 0.7555467308557795
+            },
+            {
+              "success": true,
+              "iterations": 4,
+              "q": [
+                0.6102898506665434,
+                1.5253441750225538,
+                0.027538837311326333,
+                -0.6676565361034547,
+                -0.04262640013717031,
+                2.7180866173714833,
+                1.335266638119614
+              ],
+              "position_error_m": 0.0030887692504542185,
+              "angle_error_rad": 0.0018093272655119988,
+              "limit_margin_rad": 0.2374558249774461
+            }
+          ],
+          "path_ik": [
+            {
+              "stage": "clearance",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.0005673611642177909,
+                0.4875317264455656,
+                -0.007436730705991517,
+                -1.8297179399563066,
+                -0.05488349945068134,
+                1.5331184736961159,
+                0.7133203747358182
+              ],
+              "position_error_m": 2.1134716512436505e-05,
+              "angle_error_rad": 3.270175274399472e-05,
+              "limit_margin_rad": 1.2420820600436935
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 0,
+              "q": [
+                -0.0005673611642177909,
+                0.4875317264455656,
+                -0.007436730705991517,
+                -1.8297179399563066,
+                -0.05488349945068134,
+                1.5331184736961159,
+                0.7133203747358182
+              ],
+              "position_error_m": 2.1134716512436505e-05,
+              "angle_error_rad": 3.270175274399472e-05,
+              "limit_margin_rad": 1.2420820600436935
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.009830530772276455,
+                0.43734463031605014,
+                -0.0054482264618851365,
+                -1.8941018866186694,
+                -0.03999402972769651,
+                1.6218567467939218,
+                0.7029937967034695
+              ],
+              "position_error_m": 0.0004025125761643217,
+              "angle_error_rad": 0.0017164817408165613,
+              "limit_margin_rad": 1.1776981133813307
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.019446732668577663,
+                0.3881132954474361,
+                -0.00346726809257575,
+                -1.9597412335270556,
+                -0.02329774671252214,
+                1.7136222169940407,
+                0.6893437545928567
+              ],
+              "position_error_m": 0.00044258378786796046,
+              "angle_error_rad": 0.0019200016304848863,
+              "limit_margin_rad": 1.1120587664729444
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.029098130701574146,
+                0.3408861577390837,
+                -0.0015682075690989419,
+                -2.0244818270109297,
+                -0.004604624678399463,
+                1.8060796007095035,
+                0.6729416105539839
+              ],
+              "position_error_m": 0.0004826877700754834,
+              "angle_error_rad": 0.0021023768561724103,
+              "limit_margin_rad": 1.0473181729890704
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.03873534386629841,
+                0.2958863807607848,
+                0.00035944818939199694,
+                -2.088168012183973,
+                0.016628312141908803,
+                1.8991716012237079,
+                0.6534817326178888
+              ],
+              "position_error_m": 0.0005363907835630417,
+              "angle_error_rad": 0.0023451194828846555,
+              "limit_margin_rad": 0.9836319878160271
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.04832476617129965,
+                0.25337276715090135,
+                0.0024677889749100393,
+                -2.1506347003198956,
+                0.04113212807492357,
+                1.992867620238425,
+                0.6304490684605943
+              ],
+              "position_error_m": 0.0006075682626202958,
+              "angle_error_rad": 0.0026715166317683005,
+              "limit_margin_rad": 0.9211652996801045
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.05781870942518537,
+                0.21363351491577287,
+                0.004953737925922043,
+                -2.211679514984051,
+                0.06987288261160135,
+                2.087098830921941,
+                0.6031237488020089
+              ],
+              "position_error_m": 0.0007007158370088798,
+              "angle_error_rad": 0.0031087589702300466,
+              "limit_margin_rad": 0.860120485015949
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.0671426588310379,
+                0.17698603805700006,
+                0.00807138594204516,
+                -2.2710461086736475,
+                0.10415453159110355,
+                2.1817305263959144,
+                0.5705044043038431
+              ],
+              "position_error_m": 0.0008220880702275892,
+              "angle_error_rad": 0.0036940568227193387,
+              "limit_margin_rad": 0.8007538913263526
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.0761780919435228,
+                0.1437762844590502,
+                0.012149300568186867,
+                -2.328397609715783,
+                0.14577402235828302,
+                2.276518016306258,
+                0.5311877748947643
+              ],
+              "position_error_m": 0.0009800550659284607,
+              "angle_error_rad": 0.004479292570093364,
+              "limit_margin_rad": 0.7434023902842171
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.08473797749627496,
+                0.11437588957998895,
+                0.017612981034674322,
+                -2.3832708939378153,
+                0.19724933285951063,
+                2.3710328035047046,
+                0.4831879217347024
+              ],
+              "position_error_m": 0.0011849191597086085,
+              "angle_error_rad": 0.005536446376084773,
+              "limit_margin_rad": 0.6885291060621848
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.09253505889680672,
+                0.08917610523172886,
+                0.025010676772767367,
+                -2.4349954451514875,
+                0.2621440511263994,
+                2.4645378526345048,
+                0.4236718379473444
+              ],
+              "position_error_m": 0.0014469327000484176,
+              "angle_error_rad": 0.006961364545235184,
+              "limit_margin_rad": 0.6368045548485126
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.09915195985082914,
+                0.06857690752300502,
+                0.035031691336123376,
+                -2.4825488242507503,
+                0.3454832469724702,
+                2.5557774405072684,
+                0.3486020322022534
+              ],
+              "position_error_m": 0.0017690355780660705,
+              "angle_error_rad": 0.008865881308672078,
+              "limit_margin_rad": 0.5892511757492498
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.1040523181922481,
+                0.05296666940684852,
+                0.04847673791333534,
+                -2.524312920365573,
+                0.45411731961338964,
+                2.6426368412167,
+                0.25236164799656835
+              ],
+              "position_error_m": 0.002126187731397996,
+              "angle_error_rad": 0.011327788692587397,
+              "limit_margin_rad": 0.5474870796344269
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.10675072510371525,
+                0.04267333705151179,
+                0.06605758084267813,
+                -2.5577439096691554,
+                0.5964425977892698,
+                2.721665638115078,
+                0.12773657444263173
+              ],
+              "position_error_m": 0.0024190669885712068,
+              "angle_error_rad": 0.01422798113629201,
+              "limit_margin_rad": 0.5140560903308447
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.10725446098012954,
+                0.03870413590139263,
+                0.08378394691738301,
+                -2.5753380978362497,
+                0.7464425977892698,
+                2.7756546309911085,
+                -0.003399610272977721
+              ],
+              "position_error_m": 0.0020253522339950527,
+              "angle_error_rad": 0.026042081255212467,
+              "limit_margin_rad": 0.4964619021637504
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                -0.10852302515561273,
+                0.03998504406414925,
+                0.1117864137878067,
+                -2.579755962624382,
+                1.0262264537272017,
+                2.826427446818993,
+                -0.25424799958568156
+              ],
+              "position_error_m": 0.00031467989613215156,
+              "angle_error_rad": 0.006362401055813553,
+              "limit_margin_rad": 0.4920440373756181
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                -0.10994922918843206,
+                0.04085623982233482,
+                0.12386987293683858,
+                -2.5778516966230165,
+                1.1762264537272016,
+                2.8451513941009132,
+                -0.39160857527108905
+              ],
+              "position_error_m": 0.0005448425574790277,
+              "angle_error_rad": 0.036246244162841335,
+              "limit_margin_rad": 0.4939483033769836
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                -0.030181901796063306,
+                0.11640647445388287,
+                0.20514374271301078,
+                -2.4924205389880454,
+                1.2890864808521463,
+                2.934884353127275,
+                -0.3701205984676218
+              ],
+              "position_error_m": 9.085244213170752e-05,
+              "angle_error_rad": 0.00010279454054788509,
+              "limit_margin_rad": 0.5793794610119547
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.05936292105834946,
+                0.20492514224833439,
+                0.24826606309705979,
+                -2.397634960222807,
+                1.203239978290263,
+                3.01821437225792,
+                -0.18466447004684017
+              ],
+              "position_error_m": 0.0004193902129099844,
+              "angle_error_rad": 0.0028211236728261976,
+              "limit_margin_rad": 0.674165039777193
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.1937300907220313,
+                0.2979776444564779,
+                0.21390882233370886,
+                -2.2957748391801776,
+                1.0140337622944815,
+                3.072010028694757,
+                0.08007601934265512
+              ],
+              "position_error_m": 0.0011289867502432675,
+              "angle_error_rad": 0.007744605578266008,
+              "limit_margin_rad": 0.680489971305243
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.40663429697169773,
+                0.3921190790873369,
+                0.06565059980078641,
+                -2.169750901406326,
+                0.7964422227094028,
+                3.0625800470432183,
+                0.37393736694422974
+              ],
+              "position_error_m": 0.0016925738150761367,
+              "angle_error_rad": 0.008743716272867772,
+              "limit_margin_rad": 0.6899199529567817
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.6081450839063396,
+                0.5071740184176281,
+                -0.09424185238307455,
+                -1.9934205592162617,
+                0.6477465935967358,
+                2.9954901213666765,
+                0.6128826482993306
+              ],
+              "position_error_m": 0.001106951026364688,
+              "angle_error_rad": 0.004550019471386644,
+              "limit_margin_rad": 0.7570098786333235
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.7386842742604739,
+                0.646940107291258,
+                -0.19966017528502417,
+                -1.771617015133936,
+                0.5599461136386535,
+                2.9020017161922405,
+                0.7935507794679172
+              ],
+              "position_error_m": 0.0007318256018765773,
+              "angle_error_rad": 0.0016355225102358698,
+              "limit_margin_rad": 0.8504982838077595
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.8152321376429521,
+                0.8111588085834291,
+                -0.2710433714353465,
+                -1.4994803418496274,
+                0.4974780386094839,
+                2.784607695107645,
+                0.9483237123261663
+              ],
+              "position_error_m": 0.002087092098619486,
+              "angle_error_rad": 0.0027143534440163593,
+              "limit_margin_rad": 0.9516411914165708
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 3,
+              "q": [
+                0.8307941941761575,
+                1.036826732007646,
+                -0.32177133667924296,
+                -1.1004767206925912,
+                0.4420735826907188,
+                2.6091202675069107,
+                1.1064093828317494
+              ],
+              "position_error_m": 0.001452934407687067,
+              "angle_error_rad": 0.0012193234851715967,
+              "limit_margin_rad": 0.7259732679923538
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.810627553748339,
+                1.148743583152793,
+                -0.29185375391353996,
+                -1.0611704146157237,
+                0.4612824368568806,
+                2.6844403645855524,
+                1.0938724773060102
+              ],
+              "position_error_m": 0.0036283845919886475,
+              "angle_error_rad": 0.003150276432834013,
+              "limit_margin_rad": 0.6140564168472069
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.7827903771325792,
+                1.322922386421273,
+                -0.275777276917174,
+                -0.904397749730249,
+                0.45976477223543544,
+                2.709902679692443,
+                1.1098959236573875
+              ],
+              "position_error_m": 0.0005681136394066929,
+              "angle_error_rad": 0.0006366673185565415,
+              "limit_margin_rad": 0.439877613578727
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.743720293539892,
+                1.5547757117344159,
+                -0.28127120748703155,
+                -0.6379446869217923,
+                0.4362679959202321,
+                2.685911157716859,
+                1.1645534171012426
+              ],
+              "position_error_m": 0.0031158395752799366,
+              "angle_error_rad": 0.001909394382888904,
+              "limit_margin_rad": 0.20802428826558406
+            }
+          ],
+          "geometry": [
+            {
+              "stage": "clearance",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.16687577517124239,
+              "carried_can_margin_m": 0.1308277613480811,
+              "accepted": true
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16411929510581125,
+              "carried_can_margin_m": 0.13345683750432188,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16602111679755233,
+              "carried_can_margin_m": 0.1340768728543071,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16795808811172064,
+              "carried_can_margin_m": 0.13494978759476736,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16991599890453252,
+              "carried_can_margin_m": 0.1360029614177873,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.17188130441842447,
+              "carried_can_margin_m": 0.13730890025632855,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.17268166016980224,
+              "carried_can_margin_m": 0.13885949497370273,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1717770191904741,
+              "carried_can_margin_m": 0.1406451172595011,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.17090608242058314,
+              "carried_can_margin_m": 0.14265467941592133,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16985937371691456,
+              "carried_can_margin_m": 0.14487570320605833,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16814856834959557,
+              "carried_can_margin_m": 0.14729439733665092,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1629361691432984,
+              "carried_can_margin_m": 0.14989574309416206,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.16095089486671565,
+              "carried_can_margin_m": 0.14886483326865615,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15990193559390897,
+              "carried_can_margin_m": 0.14602712361805167,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15891275929253135,
+              "carried_can_margin_m": 0.14338774090213444,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15798950818425495,
+              "carried_can_margin_m": 0.1409630741849137,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15713791513283593,
+              "carried_can_margin_m": 0.1387681792662898,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15636326804629375,
+              "carried_can_margin_m": 0.13681668519410703,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007316060699715757,
+              "carried_can_arc_bound_m": 0.0019306362537324468
+            },
+            {
+              "stage": "transport",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.15891827392488606,
+              "carried_can_margin_m": 0.13874732144783947,
+              "accepted": true
+            },
+            {
+              "stage": "placement_validation",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.0011699196486635623,
+              "carried_can_margin_m": 0.026885676319196822,
+              "accepted": true
+            }
+          ],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "current_joint_path_hand_and_carried_can_validated"
+        }
+      ]
+    },
+    {
+      "step": 350,
+      "recorded_mode": "CARRY",
+      "recorded_stable_hold": true,
+      "candidate_order": [
+        "current",
+        "outward_30",
+        "outward_15",
+        "outward_25",
+        "outward_35",
+        "outward_0",
+        "outward_30_equivalent",
+        "outward_15_equivalent",
+        "outward_25_equivalent",
+        "outward_35_equivalent",
+        "outward_0_equivalent"
+      ],
+      "work_units": 137,
+      "control_slices_required": 10,
+      "slices": [
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2585999977309257
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2651999970548786
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2951999999349937
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2434999991673976
+        },
+        {
+          "work": 14,
+          "geometry_checks": 4,
+          "elapsed_ms": 22.98579999478534
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 24.449399999866728
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 24.256199998490047
+        },
+        {
+          "work": 12,
+          "geometry_checks": 4,
+          "elapsed_ms": 22.53280000149971
+        },
+        {
+          "work": 16,
+          "geometry_checks": 3,
+          "elapsed_ms": 19.624700005806517
+        },
+        {
+          "work": 7,
+          "geometry_checks": 0,
+          "elapsed_ms": 1.2959000014234334
+        }
+      ],
+      "chosen": {
+        "candidate": "outward_30",
+        "preserve_current": false,
+        "stages": [
+          {
+            "label": "clearance",
+            "kind": "translate",
+            "start": [
+              0.08605082333087921,
+              0.2229917198419571,
+              1.0678766965866089
+            ],
+            "goal": [
+              0.08605082333087921,
+              0.2229917198419571,
+              1.0796007680892945
+            ],
+            "start_rotation": [
+              [
+                0.7519139267777085,
+                0.037757504920114864,
+                -0.6581791682664642
+              ],
+              [
+                0.055093610787600396,
+                -0.9984651443978146,
+                0.005661225400551022
+              ],
+              [
+                -0.6569552045368934,
+                -0.04051822114628115,
+                -0.752840044755212
+              ]
+            ],
+            "rotation": [
+              [
+                0.7519139267777085,
+                0.037757504920114864,
+                -0.6581791682664642
+              ],
+              [
+                0.055093610787600396,
+                -0.9984651443978146,
+                0.005661225400551022
+              ],
+              [
+                -0.6569552045368934,
+                -0.04051822114628115,
+                -0.752840044755212
+              ]
+            ]
+          },
+          {
+            "label": "reorient",
+            "kind": "rotate",
+            "start": [
+              0.08605082333087921,
+              0.2229917198419571,
+              1.0796007680892945
+            ],
+            "goal": [
+              0.08605082333087921,
+              0.2229917198419571,
+              1.0796007680892945
+            ],
+            "start_rotation": [
+              [
+                0.7519139267777085,
+                0.037757504920114864,
+                -0.6581791682664642
+              ],
+              [
+                0.055093610787600396,
+                -0.9984651443978146,
+                0.005661225400551022
+              ],
+              [
+                -0.6569552045368934,
+                -0.04051822114628115,
+                -0.752840044755212
+              ]
+            ],
+            "rotation": [
+              [
+                0.9047209165623604,
+                0.13000084003320164,
+                0.4056844151865148
+              ],
+              [
+                0.006359472302978314,
+                -0.9563155346627243,
+                0.29226726685480103
+              ],
+              [
+                0.4259572986187586,
+                -0.26184037074792293,
+                -0.8660254037844387
+              ]
+            ]
+          },
+          {
+            "label": "transport",
+            "kind": "translate",
+            "start": [
+              0.08605082333087921,
+              0.2229917198419571,
+              1.0796007680892945
+            ],
+            "goal": [
+              0.1988078521331958,
+              0.40250946007959776,
+              1.0820540300871182
+            ],
+            "start_rotation": [
+              [
+                0.9047209165623604,
+                0.13000084003320164,
+                0.4056844151865148
+              ],
+              [
+                0.006359472302978314,
+                -0.9563155346627243,
+                0.29226726685480103
+              ],
+              [
+                0.4259572986187586,
+                -0.26184037074792293,
+                -0.8660254037844387
+              ]
+            ],
+            "rotation": [
+              [
+                0.9047209165623604,
+                0.13000084003320164,
+                0.4056844151865148
+              ],
+              [
+                0.006359472302978314,
+                -0.9563155346627243,
+                0.29226726685480103
+              ],
+              [
+                0.4259572986187586,
+                -0.26184037074792293,
+                -0.8660254037844387
+              ]
+            ]
+          }
+        ],
+        "placement": {
+          "label": "placement_validation",
+          "kind": "translate",
+          "start": [
+            0.1988078521331958,
+            0.40250946007959776,
+            1.0820540300871182
+          ],
+          "goal": [
+            0.1988078521331958,
+            0.40250946007959776,
+            0.8870540300871181
+          ],
+          "start_rotation": [
+            [
+              0.9047209165623604,
+              0.13000084003320164,
+              0.4056844151865148
+            ],
+            [
+              0.006359472302978314,
+              -0.9563155346627243,
+              0.29226726685480103
+            ],
+            [
+              0.4259572986187586,
+              -0.26184037074792293,
+              -0.8660254037844387
+            ]
+          ],
+          "rotation": [
+            [
+              0.9047209165623604,
+              0.13000084003320164,
+              0.4056844151865148
+            ],
+            [
+              0.006359472302978314,
+              -0.9563155346627243,
+              0.29226726685480103
+            ],
+            [
+              0.4259572986187586,
+              -0.26184037074792293,
+              -0.8660254037844387
+            ]
+          ]
+        },
+        "rotation": [
+          [
+            0.9047209165623604,
+            0.13000084003320164,
+            0.4056844151865148
+          ],
+          [
+            0.006359472302978314,
+            -0.9563155346627243,
+            0.29226726685480103
+          ],
+          [
+            0.4259572986187586,
+            -0.26184037074792293,
+            -0.8660254037844387
+          ]
+        ],
+        "held_offset": [
+          0.0013078521331957946,
+          9.460079597759896e-06,
+          0.0020540300871180923
+        ],
+        "held_relative_position": [
+          -0.0020582304489775993,
+          0.0003768529446622055,
+          0.0012455021361675938
+        ],
+        "held_relative_rotation": [
+          [
+            0.010876478444145632,
+            -0.004713440346609282,
+            -0.9999297403801697
+          ],
+          [
+            -0.4035958985740167,
+            -0.9149373446819365,
+            -7.720492033085058e-05
+          ],
+          [
+            -0.9148726976311439,
+            0.4035683817972694,
+            -0.011853621499241573
+          ]
+        ],
+        "minimum_joint_margin_rad": 0.2297961944430964,
+        "minimum_hand_margin_m": 0.0014791618169431864,
+        "minimum_carried_can_margin_m": 0.027026935403068792,
+        "proxy": "Observed rigid hand-can transform; not a force or full-arm safety certificate."
+      },
+      "receipts": [
+        {
+          "index": 0,
+          "candidate": "current",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.4037339400620372,
+                1.2590739841063425,
+                0.4002458509403749,
+                -0.5343572408008077,
+                0.02467201051828772,
+                1.471859428157925,
+                1.3951978572016959
+              ],
+              "position_error_m": 0.11571643051907576,
+              "angle_error_rad": 0.3032272573042129,
+              "limit_margin_rad": 0.46455724080080774
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 1,
+          "candidate": "outward_30",
+          "accepted": true,
+          "prefilter_ik": [
+            {
+              "success": true,
+              "iterations": 11,
+              "q": [
+                0.531783930582546,
+                1.0170479491451934,
+                0.14016587886765072,
+                -1.1020225140891362,
+                -0.1930921824669537,
+                2.6329611874105745,
+                1.4301982571245229
+              ],
+              "position_error_m": 0.00013313052062760748,
+              "angle_error_rad": 0.00045823869296231787,
+              "limit_margin_rad": 0.7457520508548066
+            },
+            {
+              "success": true,
+              "iterations": 4,
+              "q": [
+                0.5689038491564269,
+                1.5330516250053532,
+                0.12062076351957919,
+                -0.6591558763077263,
+                -0.19109697205856996,
+                2.7114349464461913,
+                1.4071907892309234
+              ],
+              "position_error_m": 0.0031452738286680396,
+              "angle_error_rad": 0.0018645733451621636,
+              "limit_margin_rad": 0.22974837499464673
+            }
+          ],
+          "path_ik": [
+            {
+              "stage": "clearance",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.31099502507000587,
+                1.2404603760971689,
+                0.30644475227805157,
+                -0.5308579164001083,
+                0.04842832590806624,
+                1.1126127274481081,
+                1.2506192874606634
+              ],
+              "position_error_m": 0.00024137202912436541,
+              "angle_error_rad": 0.0005794609631614552,
+              "limit_margin_rad": 0.4610579164001083
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 0,
+              "q": [
+                0.31099502507000587,
+                1.2404603760971689,
+                0.30644475227805157,
+                -0.5308579164001083,
+                0.04842832590806624,
+                1.1126127274481081,
+                1.2506192874606634
+              ],
+              "position_error_m": 0.00024137202912436541,
+              "angle_error_rad": 0.0005794609631614552,
+              "limit_margin_rad": 0.4610579164001083
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.27298291491680704,
+                1.0809905547018408,
+                0.3037988986707718,
+                -0.8189794478803507,
+                0.04630132175688566,
+                1.2979876932852241,
+                1.228976661132613
+              ],
+              "position_error_m": 0.0019297290456858846,
+              "angle_error_rad": 0.015188557004171842,
+              "limit_margin_rad": 0.6818094452981591
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.24028998819299685,
+                0.9402382322743422,
+                0.30771885972047597,
+                -1.0678928730865787,
+                0.04752250925421342,
+                1.492011094023107,
+                1.2097259650199859
+              ],
+              "position_error_m": 0.000268905900539902,
+              "angle_error_rad": 0.003335948465229594,
+              "limit_margin_rad": 0.8225617677256577
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.2240434340097891,
+                0.8562387431339508,
+                0.3095898356739886,
+                -1.2134741680505565,
+                0.04471286777873808,
+                1.6286738677189554,
+                1.1958760235515933
+              ],
+              "position_error_m": 0.001049621173901721,
+              "angle_error_rad": 0.004678246955528888,
+              "limit_margin_rad": 0.9065612568660492
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.21221241155671705,
+                0.7872854177173612,
+                0.31187483891656637,
+                -1.3338508706866485,
+                0.042808444950685906,
+                1.7582637960649112,
+                1.184962952201498
+              ],
+              "position_error_m": 0.0008240274068886171,
+              "angle_error_rad": 0.0034895408616165977,
+              "limit_margin_rad": 0.9755145822826388
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.20296653951917087,
+                0.7272329043914763,
+                0.3139625729882346,
+                -1.4409252992124284,
+                0.04083925443249224,
+                1.8833473457655945,
+                1.1757193298002273
+              ],
+              "position_error_m": 0.0007698131165698803,
+              "angle_error_rad": 0.0028965458528129756,
+              "limit_margin_rad": 1.0355670956085237
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.19592123165903264,
+                0.6745247192205255,
+                0.3157665230901358,
+                -1.537793449252028,
+                0.038663743571185516,
+                2.0057352734355276,
+                1.1680953476564613
+              ],
+              "position_error_m": 0.000760740215955569,
+              "angle_error_rad": 0.0025001759018145548,
+              "limit_margin_rad": 1.0882752807794744
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.19087517330433568,
+                0.628303912446205,
+                0.3171216970698427,
+                -1.6264564804298438,
+                0.03598834850141902,
+                2.12656764403671,
+                1.162107158248438
+              ],
+              "position_error_m": 0.0007774370175255159,
+              "angle_error_rad": 0.0022177223466060387,
+              "limit_margin_rad": 1.1344960875537948
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.1877901189555166,
+                0.5881656680493713,
+                0.31778988625057353,
+                -1.7080599722164345,
+                0.03241395411529134,
+                2.2465598458721714,
+                1.1579151596755843
+              ],
+              "position_error_m": 0.0008088243259126602,
+              "angle_error_rad": 0.0020145297774139576,
+              "limit_margin_rad": 1.1746343319506285
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.18676540545403816,
+                0.5539432064953103,
+                0.31741082506068224,
+                -1.7832794717647102,
+                0.027414778090192313,
+                2.3661893792650655,
+                1.1558292457421964
+              ],
+              "position_error_m": 0.0008502832866987663,
+              "angle_error_rad": 0.0018912089143178507,
+              "limit_margin_rad": 1.2088567935046897
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.18807532655380288,
+                0.5255988684005027,
+                0.31541966913615666,
+                -1.852490375227447,
+                0.020308141585562683,
+                2.48577277969076,
+                1.1563438247580782
+              ],
+              "position_error_m": 0.0009006577967527416,
+              "angle_error_rad": 0.0018802117117655253,
+              "limit_margin_rad": 1.219309624772553
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.1922728676945214,
+                0.5031456579859974,
+                0.31090309273309347,
+                -1.9158613939499274,
+                0.010225002106836203,
+                2.605497855889334,
+                1.1601914855610547
+              ],
+              "position_error_m": 0.000961225116907599,
+              "angle_error_rad": 0.002045070577785592,
+              "limit_margin_rad": 1.1470021441106661
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.2004002550147721,
+                0.48657469852240015,
+                0.302349779227259,
+                -1.9734074921275493,
+                -0.003881166793378646,
+                2.725433238623123,
+                1.1683983311621835
+              ],
+              "position_error_m": 0.0010350422525660212,
+              "angle_error_rad": 0.002462371240664585,
+              "limit_margin_rad": 1.0270667613768771
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.21437634283036908,
+                0.4757772410808131,
+                0.2872363351438096,
+                -2.025018645266866,
+                -0.023074927233593334,
+                2.8455302457651315,
+                1.1822704017567047
+              ],
+              "position_error_m": 0.0011253145478878276,
+              "angle_error_rad": 0.0031900011097707607,
+              "limit_margin_rad": 0.9069697542348685
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.2376159272530102,
+                0.47047609488747477,
+                0.2614481472293221,
+                -2.070475465757316,
+                -0.047827165202872945,
+                2.965640553031342,
+                1.2030814051077559
+              ],
+              "position_error_m": 0.0012311613468158017,
+              "angle_error_rad": 0.004229964264566357,
+              "limit_margin_rad": 0.7868594469686578
+            },
+            {
+              "stage": "reorient",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.27564072525051997,
+                0.4702697689992202,
+                0.21894151999907185,
+                -2.109481915216111,
+                -0.07631612531581827,
+                3.085594687386776,
+                1.230879200244809
+              ],
+              "position_error_m": 0.0013445617044014002,
+              "angle_error_rad": 0.005428441429489402,
+              "limit_margin_rad": 0.666905312613224
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.42067657626925214,
+                0.6066193558776098,
+                0.12962057647573788,
+                -1.8571757430844122,
+                -0.09649952744285101,
+                2.9808078811823577,
+                1.3105606820372337
+              ],
+              "position_error_m": 0.0011240509357257136,
+              "angle_error_rad": 0.0012437024092557415,
+              "limit_margin_rad": 0.7716921188176422
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.507577906626277,
+                0.7685358144280466,
+                0.09234402412943055,
+                -1.5571757430844124,
+                -0.10520548304621476,
+                2.84646193685767,
+                1.361413957015052
+              ],
+              "position_error_m": 0.002663799695766443,
+              "angle_error_rad": 0.0014805112120734876,
+              "limit_margin_rad": 0.9060380631423302
+            },
+            {
+              "stage": "transport",
+              "success": true,
+              "iterations": 3,
+              "q": [
+                0.5727230040248048,
+                1.0027247988671297,
+                0.07609555388938928,
+                -1.1233847812476419,
+                -0.106025949297041,
+                2.6482593107522234,
+                1.3892090005142783
+              ],
+              "position_error_m": 0.0021001505673356167,
+              "angle_error_rad": 0.0015156143392042408,
+              "limit_margin_rad": 0.7600752011328702
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 1,
+              "q": [
+                0.5779456912290195,
+                1.121080381639929,
+                0.06833329072135992,
+                -1.079722862350885,
+                -0.11050559538497441,
+                2.7214161711657296,
+                1.3920451783642656
+              ],
+              "position_error_m": 0.003513272248794875,
+              "angle_error_rad": 0.0008707713352880692,
+              "limit_margin_rad": 0.6417196183600709
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.5846339577962021,
+                1.2984976419974497,
+                0.06438028792062002,
+                -0.9226721257671179,
+                -0.10980565675301504,
+                2.7430543845296,
+                1.3880218192610756
+              ],
+              "position_error_m": 0.0005515188191808946,
+              "angle_error_rad": 0.0006062234045340954,
+              "limit_margin_rad": 0.46430235800255026
+            },
+            {
+              "stage": "placement_validation",
+              "success": true,
+              "iterations": 2,
+              "q": [
+                0.5937488571180953,
+                1.5330038055569035,
+                0.06592061103402913,
+                -0.655899556320442,
+                -0.10390916057239591,
+                2.7124353888188666,
+                1.3745350244745405
+              ],
+              "position_error_m": 0.0028763870677227742,
+              "angle_error_rad": 0.0017740774080067423,
+              "limit_margin_rad": 0.2297961944430964
+            }
+          ],
+          "geometry": [
+            {
+              "stage": "clearance",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.15553400722560254,
+              "carried_can_margin_m": 0.12438893077587902,
+              "accepted": true
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1599391885487729,
+              "carried_can_margin_m": 0.13420470016449176,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15913250319159994,
+              "carried_can_margin_m": 0.1350309520280733,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15842918147718826,
+              "carried_can_margin_m": 0.13611816836284812,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15779273023387214,
+              "carried_can_margin_m": 0.13745959933691748,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15722710078096752,
+              "carried_can_margin_m": 0.13904691686203502,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15673580475052223,
+              "carried_can_margin_m": 0.14087026629738802,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1563218922858351,
+              "carried_can_margin_m": 0.14291832763076978,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15598793310506504,
+              "carried_can_margin_m": 0.1451783857573044,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15573600054748965,
+              "carried_can_margin_m": 0.14763640941941475,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15556765870146955,
+              "carried_can_margin_m": 0.15027713831793849,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15489003857109848,
+              "carried_can_margin_m": 0.1497090225433267,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15395700010844465,
+              "carried_can_margin_m": 0.14688952300673536,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15320198433686055,
+              "carried_can_margin_m": 0.14426423770652447,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.15255580560065182,
+              "carried_can_margin_m": 0.14184946536255,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1519970339392515,
+              "carried_can_margin_m": 0.139660197754161,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "reorient",
+              "kind": "rotation_geometry",
+              "hand_margin_m": 0.1515545800807338,
+              "carried_can_margin_m": 0.13766537129117223,
+              "accepted": true,
+              "hand_arc_bound_m": 0.007317763496243901,
+              "carried_can_arc_bound_m": 0.0019083021140729
+            },
+            {
+              "stage": "transport",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.15887234357697771,
+              "carried_can_margin_m": 0.13957367340524512,
+              "accepted": true
+            },
+            {
+              "stage": "placement_validation",
+              "kind": "translation_geometry",
+              "hand_margin_m": 0.0014791618169431864,
+              "carried_can_margin_m": 0.027026935403068792,
+              "accepted": true
+            }
+          ],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "current_joint_path_hand_and_carried_can_validated"
+        }
+      ]
+    },
+    {
+      "step": 365,
+      "recorded_mode": "CARRY",
+      "recorded_stable_hold": true,
+      "candidate_order": [
+        "current",
+        "outward_30",
+        "outward_15",
+        "outward_25",
+        "outward_35",
+        "outward_0",
+        "outward_30_equivalent",
+        "outward_15_equivalent",
+        "outward_25_equivalent",
+        "outward_35_equivalent",
+        "outward_0_equivalent"
+      ],
+      "work_units": 534,
+      "control_slices_required": 34,
+      "slices": [
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.579599997261539
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.553400001488626
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.312999997229781
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2660000031464733
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.174099994590506
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.264800001285039
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.3102999984985217
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2408000004361384
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1898999984841794
+        },
+        {
+          "work": 6,
+          "geometry_checks": 0,
+          "elapsed_ms": 0.9592999995220453
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1906000038143247
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1602999986498617
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.3212000014609657
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.14869999763323
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.315800003998447
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.885599998990074
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2183000037330203
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2640999959548935
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2500999984913506
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.15129999560304
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.221599999757018
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.6467999996384606
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.4332000029971823
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1422999998321757
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.241499998490326
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1573999983957037
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.138399999239482
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.301599997736048
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.9323999988264404
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.252899997984059
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2776999976485968
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2181000022101216
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1333000040613115
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.251600002637133
+        }
+      ],
+      "chosen": null,
+      "receipts": [
+        {
+          "index": 0,
+          "candidate": "current",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.41290639317485245,
+                1.2538410840327372,
+                0.37539289009369653,
+                -0.5455570528627216,
+                0.05183139808842638,
+                1.6135901273824451,
+                1.3903581790137904
+              ],
+              "position_error_m": 0.08661217224122651,
+              "angle_error_rad": 0.22902718757543417,
+              "limit_margin_rad": 0.47575705286272163
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 1,
+          "candidate": "outward_30",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.634428499869792,
+                1.7428,
+                0.029270058313047374,
+                -0.0898,
+                -0.0259267735241201,
+                1.7871312321902215,
+                1.3493631426833497
+              ],
+              "position_error_m": 0.21992343015759408,
+              "angle_error_rad": 0.5694479629866962,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 2,
+          "candidate": "outward_15",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": true,
+              "iterations": 5,
+              "q": [
+                0.6143782996263197,
+                1.3389312774936817,
+                0.03562215007135704,
+                -0.3990596295703959,
+                -0.03454633823871224,
+                2.0061865538655903,
+                1.3614898833542735
+              ],
+              "position_error_m": 0.003469100505242569,
+              "angle_error_rad": 0.0069555735900829856,
+              "limit_margin_rad": 0.3292596295703959
+            },
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6217292679491602,
+                1.5343545058427683,
+                0.005345112909519669,
+                -0.5394598917980116,
+                -0.006380218261920505,
+                2.371291655252757,
+                1.3598335792896838
+              ],
+              "position_error_m": 0.02310076967519883,
+              "angle_error_rad": 0.03568634879939329,
+              "limit_margin_rad": 0.2284454941572316
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 3,
+          "candidate": "outward_25",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6314599076508876,
+                1.7428,
+                0.031049895999270227,
+                -0.0898,
+                -0.02838261515639022,
+                1.7858383001475422,
+                1.3518054796469319
+              ],
+              "position_error_m": 0.2200006474316241,
+              "angle_error_rad": 0.4833426766481582,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 4,
+          "candidate": "outward_35",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6378814387847903,
+                1.7428,
+                0.027932671932339437,
+                -0.0898,
+                -0.02448120460287955,
+                1.76444207742154,
+                1.3464178761549626
+              ],
+              "position_error_m": 0.22365705978964734,
+              "angle_error_rad": 0.6795616978776308,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 5,
+          "candidate": "outward_0",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6188174284950213,
+                1.2479216910077098,
+                0.01596745222110923,
+                -0.5161253250877704,
+                -0.015820168250478914,
+                1.8555006219188321,
+                1.3616274401674093
+              ],
+              "position_error_m": 0.03673152336278677,
+              "angle_error_rad": 0.09151521507759196,
+              "limit_margin_rad": 0.44632532508777045
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 6,
+          "candidate": "outward_30_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.8450779612580142,
+                1.7428,
+                0.34410479162638963,
+                -0.0898,
+                0.5639157004686998,
+                1.4346618844773356,
+                2.8773
+              ],
+              "position_error_m": 0.41117780262870524,
+              "angle_error_rad": 1.9510081140816349,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 7,
+          "candidate": "outward_15_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.5953327086996232,
+                1.7428,
+                0.06325464287252272,
+                -0.0898,
+                0.3228216979524215,
+                1.7717466709137772,
+                2.8773
+              ],
+              "position_error_m": 0.21137540536942181,
+              "angle_error_rad": 1.5221263166035048,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 8,
+          "candidate": "outward_25_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.7037414777904312,
+                1.7428,
+                0.2163072741516765,
+                -0.0898,
+                0.4742341338831088,
+                1.6309874858258153,
+                2.8773
+              ],
+              "position_error_m": 0.2819345069225183,
+              "angle_error_rad": 1.6712138734128243,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 9,
+          "candidate": "outward_35_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.9981192096575932,
+                1.7428,
+                0.44818831900791606,
+                -0.0898,
+                0.6450626019896922,
+                1.2799801995936586,
+                2.8773
+              ],
+              "position_error_m": 0.5440235290923953,
+              "angle_error_rad": 2.240670430068984,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 10,
+          "candidate": "outward_0_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.7435701326793575,
+                1.291133064335092,
+                -0.3740090305740715,
+                -0.4749176896082419,
+                0.28884583711713496,
+                1.8351891748264846,
+                2.8773
+              ],
+              "position_error_m": 0.03218598444844709,
+              "angle_error_rad": 1.5922365732054573,
+              "limit_margin_rad": 0.020000000000000018
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        }
+      ]
+    },
+    {
+      "step": 400,
+      "recorded_mode": "CARRY",
+      "recorded_stable_hold": true,
+      "candidate_order": [
+        "current",
+        "outward_30",
+        "outward_15",
+        "outward_25",
+        "outward_35",
+        "outward_0",
+        "outward_30_equivalent",
+        "outward_15_equivalent",
+        "outward_25_equivalent",
+        "outward_35_equivalent",
+        "outward_0_equivalent"
+      ],
+      "work_units": 533,
+      "control_slices_required": 34,
+      "slices": [
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.272699995955918
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1429000044008717
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2848000007797964
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.132299996446818
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1550000019487925
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2587999992538244
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2180000014486723
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.435700000205543
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.710300002945587
+        },
+        {
+          "work": 5,
+          "geometry_checks": 0,
+          "elapsed_ms": 0.8371999938390218
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.218399997218512
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1923000022070482
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.282199995534029
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.275200000440236
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.387000000453554
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2540999998454936
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1675000025425106
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1195000008447096
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.245499999844469
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.186099998652935
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.103800004988443
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.244700001028832
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.26459999976214
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1044999957666732
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.275700004247483
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1244999952614307
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.098700002534315
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2587999992538244
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.583599998615682
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.1473000015248545
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 3.3873000065796077
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.2946000026422553
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.4754999976721592
+        },
+        {
+          "work": 16,
+          "geometry_checks": 0,
+          "elapsed_ms": 2.3805000018910505
+        }
+      ],
+      "chosen": null,
+      "receipts": [
+        {
+          "index": 0,
+          "candidate": "current",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.4088778909233142,
+                1.29362041201858,
+                0.42656905446845056,
+                -0.5016476565013767,
+                0.02440588491386529,
+                1.7577699222729934,
+                1.3961325962818538
+              ],
+              "position_error_m": 0.0534284077658629,
+              "angle_error_rad": 0.1439801433732269,
+              "limit_margin_rad": 0.4318476565013767
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 1,
+          "candidate": "outward_30",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6523028897554984,
+                1.7428,
+                0.07552585367627922,
+                -0.0898,
+                -0.06769592726815911,
+                1.7871165444261712,
+                1.3782926451577517
+              ],
+              "position_error_m": 0.22120970438802817,
+              "angle_error_rad": 0.5716432339002873,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 2,
+          "candidate": "outward_15",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": true,
+              "iterations": 4,
+              "q": [
+                0.6038634331979663,
+                1.3165086239124406,
+                0.07642815502645645,
+                -0.4426611045470803,
+                -0.07905262789243772,
+                2.026533979008978,
+                1.415725868560673
+              ],
+              "position_error_m": 0.002971894555167689,
+              "angle_error_rad": 0.006820584549656229,
+              "limit_margin_rad": 0.3728611045470803
+            },
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6233544106109834,
+                1.561108699592645,
+                0.0023758371626068447,
+                -0.49161895716135295,
+                -0.002807805148164111,
+                2.352350525036134,
+                1.4019967375939335
+              ],
+              "position_error_m": 0.022378124694482946,
+              "angle_error_rad": 0.03782500552257335,
+              "limit_margin_rad": 0.20169130040735483
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 3,
+          "candidate": "outward_25",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6439199968482964,
+                1.7428,
+                0.07737565168044648,
+                -0.0898,
+                -0.07142520903197856,
+                1.7845801538183097,
+                1.3850618124144882
+              ],
+              "position_error_m": 0.22080026424657548,
+              "angle_error_rad": 0.4859226643830461,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 4,
+          "candidate": "outward_35",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6614735701086301,
+                1.7428,
+                0.07449891111989837,
+                -0.0898,
+                -0.0654125614332792,
+                1.7763233967875862,
+                1.370457433712135
+              ],
+              "position_error_m": 0.22399445720604147,
+              "angle_error_rad": 0.6708716107187906,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 5,
+          "candidate": "outward_0",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6187955087640704,
+                1.2561735819466622,
+                0.018268613162291163,
+                -0.5016476565013767,
+                -0.018116718115252187,
+                1.8512559733757419,
+                1.4049857783151105
+              ],
+              "position_error_m": 0.036136552650279305,
+              "angle_error_rad": 0.09351351339755738,
+              "limit_margin_rad": 0.4318476565013767
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 6,
+          "candidate": "outward_30_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.9208422449183188,
+                1.7428,
+                0.4325167895397107,
+                -0.0898,
+                0.5284833698126068,
+                1.3064445884671716,
+                2.8773
+              ],
+              "position_error_m": 0.4805189388647468,
+              "angle_error_rad": 2.158049177168959,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 7,
+          "candidate": "outward_15_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.6099272013822202,
+                1.7428,
+                0.12505667636679632,
+                -0.0898,
+                0.26494825606052136,
+                1.7654626892662584,
+                2.8773
+              ],
+              "position_error_m": 0.2161960109206486,
+              "angle_error_rad": 1.5836013281721408,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 8,
+          "candidate": "outward_25_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.7597606024160813,
+                1.7428,
+                0.30668305193083745,
+                -0.0898,
+                0.4430427223969716,
+                1.533217015361937,
+                2.8773
+              ],
+              "position_error_m": 0.33430640388765376,
+              "angle_error_rad": 1.8258613397396468,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 9,
+          "candidate": "outward_35_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                1.0972269628867586,
+                1.7428,
+                0.5373817623700405,
+                -0.0898,
+                0.6083046276919488,
+                1.132156633902537,
+                2.8773
+              ],
+              "position_error_m": 0.6235285824201298,
+              "angle_error_rad": 2.4917459394899715,
+              "limit_margin_rad": 0.020000000000000004
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        },
+        {
+          "index": 10,
+          "candidate": "outward_0_equivalent",
+          "accepted": false,
+          "prefilter_ik": [
+            {
+              "success": false,
+              "iterations": 48,
+              "q": [
+                0.7375357693590376,
+                1.2896830643724415,
+                -0.34717709458963614,
+                -0.4744412466574611,
+                0.25700014061543447,
+                1.8328088575202308,
+                2.8773
+              ],
+              "position_error_m": 0.03316921175303712,
+              "angle_error_rad": 1.6416757122500092,
+              "limit_margin_rad": 0.020000000000000018
+            }
+          ],
+          "path_ik": [],
+          "geometry": [],
+          "required_joint_margin_rad": 0.04,
+          "required_box_margin_m": 0.001,
+          "reason": "transport_or_placement_endpoint_ik_unconfirmed"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "actual_observed_can_hull_and_world_held_offset_reconstructed",
+      "passed": true
+    },
+    {
+      "check": "bounded_16_work_units_4_geometry_checks_per_advance",
+      "passed": true
+    },
+    {
+      "check": "chosen_paths_keep_0_04rad_IK_and_1mm_hand_and_carried_can_clearance",
+      "passed": true
+    },
+    {
+      "check": "clear_hand_with_colliding_can_is_rejected",
+      "passed": true,
+      "synthetic_not_a_valid_grasp_state": true,
+      "hand_margin_m": 0.34560003265804223,
+      "carried_can_margin_m": -0.05970302803170545,
+      "accepted": false
+    }
+  ],
+  "interpretation": "Known saved-state planning diagnostics only. Control slices are real budget costs if integrated; timings describe offline checks, not achieved control-loop timing.",
+  "limitations": [
+    "Observed rigid hand-can proxy; no grasp-force or full-arm collision certificate.",
+    "IK waypoint validity does not guarantee the operational-space controller follows the same joint branch.",
+    "Current-orientation preserve_current returns only original-endpoint reachability, not a new geometry certificate.",
+    "These diagnostics do not establish success-rate improvement."
+  ]
+}

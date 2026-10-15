@@ -1,5 +1,21 @@
 # 写作材料交接状态 · 当前入口
 
+**v15已完成45次五组小测试：v14 / 仅搬运A / 仅分段B / 仅预算C / 完整v15为6/9、3/9、6/9、7/9、4/9。小测试未通过，v15未采用。**
+
+9个条件包含8个标准条件和1个复用6000005起点的预算配置profile，不能当作9个独立起点。标准条件下完整v15为3/8、父v14为6/8；预算专用profile为v15成功、父版失败。
+
+预算模块单独运行救回时间不足案例且未损失旧成功；搬运模块的局部IK误拒和转向耗时导致三个旧成功退步，两个主难例仍未完成。因此不替换既有正式成果，不进入470次消融、两版各240次开发或1440次全新起点确认。
+
+[本轮完整报告](reproduction/improvement_v15_20261016_01/REPORT.md) · [v15前端](reproduction/improvement_v15_20261016_01/index.html) · [执行前协议](reproduction/improvement_v15_20261016_01/protocols/PLAN.md) · [v14原报告](reproduction/improvement_v14_20261016_01/REPORT.md)
+
+既有跨设备写作包属于此前封存材料，不包含本轮v15。以后写作可把本轮作为消融与失败分析，不得写成已确认的总体提升；本轮不更新论文正文。
+
+[本轮逐条件配对表](reproduction/improvement_v15_20261016_01/analysis/smoke_a_pairs.csv) · [图表与来源](reproduction/improvement_v15_20261016_01/figures/CATALOG.json) · [完整度检查](reproduction/improvement_v15_20261016_01/verify_integrity.py)
+
+## 历史内容（以下按各自版本和时间解释）
+
+# 写作材料交接状态 · 当前入口
+
 **v14 两轮小测试共64次；最终 v13 / T / C / v14 为6/8、6/8、5/8、6/8。门槛未通过，未采用；未运行大规模消融、240次开发或全新起点确认。**
 
 [本轮检查报告](reproduction/improvement_v14_20261016_01/REPORT.md) · [v14前端](reproduction/improvement_v14_20261016_01/index.html) · [执行前协议](reproduction/improvement_v14_20261016_01/protocols/PLAN.md) · [v13原报告](reproduction/improvement_v13_20261016_01/REPORT.md)
