@@ -1,3 +1,5 @@
+> 2026-10-15复查：主文仍以原世界模型确认和v5恢复确认为主；v6—v11用于局部机制与负结果分析。详细旧提纲的版本边界见[当前交接说明](THESIS_HANDOFF_LATEST.md)。
+
 # 本科论文提纲：动作延迟下的机器人抓取搬运与失败恢复
 
 建议题目：**考虑动作延迟的机器人抓取搬运与失败恢复系统设计及实验分析**。本页为更新的结构与证据映射，不是论文正文。实际题目、篇幅和模板需导师/学校确认。
@@ -37,6 +39,7 @@ BC混合密度动作块；k=2含义；四候选与H=8队列前缀；GRU残差动
 5. v5新确认464/480对v4 457/480；7救回来自2起点，差+1.46，[0,4.17]。BC/Full分别报告，压力测试分开。
 6. 已有v2/v3同起点四组分析，注明当前是旧数据的事后描述性分析；不拼成v5关闭恢复组。
 7. 时间救回、侧倒救回、失抓失败和角落退步；真实已有视频/日志与逐步物理回放证据。
+8. 可选附录：v6—v11受控诊断、箱沿380步局部修复、235/240开发退步及持物等待状态转换。不得把11个版本列为11项独立创新。
 
 ## 第七章 讨论与局限
 
@@ -55,7 +58,7 @@ BC混合密度动作块；k=2含义；四候选与H=8队列前缀；GRU残差动
 | v5主表/效应区间/压力 | [v5评估与图](reproduction/recovery_v5_20261012_01/ASSESSMENT.md) |
 | 已有四组分析 | [汇总表](reproduction/consolidation_20261012_01/FACTORIAL_REVIEW.md)、[数值JSON](reproduction/consolidation_20261012_01/factorial_analysis.json) |
 | 选定文献 | [对照](RELATED_WORK.md)、[官方元数据BibTeX](reproduction/consolidation_20261012_01/references_verified.bib) |
-| 原始视频与新日志图 | [当前演示](reproduction/consolidation_20261012_01/demo/index.html)、[来源SHA](reproduction/consolidation_20261012_01/evidence.json) |
+| 原始视频与新日志图 | [当前演示](reproduction/progress_v11_20261015_01/demo/index.html)、[来源SHA](reproduction/consolidation_20261012_01/evidence.json) |
 
 文字、图表和结论应能回到上述原始数据；不同确认批次不得直接相减或合并为独立样本。
 

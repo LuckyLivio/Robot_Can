@@ -29,3 +29,13 @@
 正式写作前，继续查找执行延迟补偿、抓取失败检测、状态机/行为树恢复与碰撞余量建模的直接相关研究，逐篇确认适用假设和本项目差异。当前8篇仅为可信的起点，不以“文献数量已足够”替代完整相关工作。
 
 不要引用未经核实的书目、把arXiv提交年自动当会议年、用其他论文的成功率直接排名，或把网页摘要核查写成“全文均已审阅”。
+
+## 2026-10-15直接相关研究补查
+
+以下只补项目定位，未生成新的BibTeX或声称阅读全文：
+
+- [Real-Time Execution of Action Chunking Flow Policies（RTC）](https://www.pi.website/download/real_time_chunking.pdf)：官方论文摘要及首页机制说明已核查；通过冻结必然执行的动作前缀、生成后续动作处理异步推理。当前固定D2、低维BC候选评分不同于流策略inpainting，但“考虑待执行前缀”本身不是首创。
+- [Real-Time Robot Execution with Masked Action Chunking（REMAC）](https://arxiv.org/abs/2601.20130)：官方摘要/元信息已核查；讨论异步执行中块内不一致与前缀保持。当前系统未实现该训练机制，不与其跨平台成功率直接排名。
+- [Recovery RL](https://arxiv.org/abs/2010.15920)官方摘要复核：任务与恢复策略分离已有直接相关工作；本项目规则状态机不等同于安全评论器和学习恢复策略。
+
+正式写作仍需阅读直接相关方法与假设，不以网页核查代替完整文献工作。当前工程与诊断贡献见[全仓审查](reproduction/project_audit_20261015_01/REPORT.md)。

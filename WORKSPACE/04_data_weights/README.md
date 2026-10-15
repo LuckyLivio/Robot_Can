@@ -10,3 +10,6 @@
 - [冻结BC权重](../../policy/bc_chunk_dev_v4/policy_15000.pt) — `policy/bc_chunk_dev_v4/policy_15000.pt`
 - [Full s17；s23/s41同类目录](../../models/multiseed_20261012_01_full_s17/model.pt) — `models/multiseed_20261012_01_full_s17/model.pt`
 - [Plain s17；不择优只报告单种子](../../models/multiseed_20261012_01_plain_s17/model.pt) — `models/multiseed_20261012_01_plain_s17/model.pt`
+
+
+当前版本补充：[全项目审查](../../reproduction/project_audit_20261015_01/REPORT.md) · [最新交接说明](../../THESIS_HANDOFF_LATEST.md) · [候选v11](../../reproduction/improvement_v11_20261015_01/REPORT.md)。旧迁移包为c8bbe86快照，不含后续候选。

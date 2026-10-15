@@ -1,46 +1,47 @@
 # 当前项目运行与模块指南
 
-工作目录 `C:\Users\Livio\Desktop\robot_can`；PyCharm解释器沿用 `.venv\Scripts\python.exe`。环境版本与兼容说明见[ENVIRONMENT_GUIDE](ENVIRONMENT_GUIDE.md)。
+更新：2026-10-15。项目根为 `C:\Users\Livio\Desktop\robot_can`，PyCharm解释器为 `.venv\Scripts\python.exe`。
 
 ## 先看成果
-
-当前[展示页面](reproduction/consolidation_20261012_01/demo/index.html)包含原始视频、v5结果和日志轨迹。用PowerShell启动静态服务：
 
 ```powershell
 Set-Location 'C:\Users\Livio\Desktop\robot_can'
 & '.\.venv\Scripts\python.exe' -m http.server 8766 --bind 127.0.0.1
 ```
 
-浏览器打开 `http://127.0.0.1:8766/reproduction/consolidation_20261012_01/demo/index.html`。这是文件服务，不训练或运行机器人。若端口已经由项目文件服务使用，复用该服务。
+保持终端运行，打开 **http://127.0.0.1:8766/** 。根入口自动跳到[v11当前展示](reproduction/progress_v11_20261015_01/demo/index.html)。若端口已有本项目服务，直接使用。前端是静态文件服务，不会运行机器人或训练。
 
-## 当前只读完整性复核
+全项目[审查页面](reproduction/project_audit_20261015_01/index.html)与[分类导航](WORKSPACE/index.html)另行提供。当前展示保留v5主结果，v11仅作为未采用候选。
+
+## 只读完整性检查
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\playback_fix_20261012_01\verify.py
+& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\project_audit_20261015_01\verify.py
 ```
 
-该入口验证原项目资产、成果整合版本及当前播放补丁：旧文件对应归档副本、其他文件保持原位，当前页面和文档按补丁清单检查；不调用训练、策略或物理回放。本次只修复轨迹播放计时和动画取消，实验结果不变。旧consolidation/review/v5验收脚本绑定历史页面或根文档，直接调用可能提示这些授权变化。历史清单保持原样；当前检查将其映射到字节相同的归档。
+验证审查前10,146个登记文件：授权改动的活动文档按before原样备份核对，其他文件在原位置核对；另验当前交付清单。不训练、不创建环境、不物理回放。历史verify绑定当时根文档，可能因后续授权文档更新失败；不要改旧manifest或删除结果绕过检查。
 
-## 实验复核/重跑入口
+## 环境与模型
 
-当前查看成果不需要重新训练。v5逐步/物理核验与另开目录完整重跑命令见[v5 README](reproduction/recovery_v5_20261012_01/README.md)；它们会执行仿真，需主动选择。最新根文档已更新，如其旧全项目保护检查提示根文档变动，先用当前verify核对归档，不删除结果或改历史保护清单。
+```powershell
+& '.\.venv\Scripts\python.exe' -m pip check
+```
 
-各实验原脚本仍在原目录，重跑应在新的副本/输出目录进行，并重新登记。prepare生成器、统计图脚本常为排他写入，不能删除旧产物强行运行。不得把已看过的起点重复运行称新的独立确认。
+当前版本、CUDA和主权重前向已核对，见[环境指南](ENVIRONMENT_GUIDE.md)。`requirements-repro.txt`是旧建议，不是当前可移植锁文件。看已有视频无需重装仿真环境。
 
-## 模块
+## 模块与入口选择
 
-| 模块 | 作用 |
+| 模块 | 用途 |
 |---|---|
-| common.py | 环境/数据、23维观测、控制器/传感器恢复、BC加载 |
-| train_policy.py / ChunkPolicy | 混合密度动作块BC；当前冻结权重沿用 |
-| collect_rollout_branches.py | 完整历史回放、真实队列同状态分支采集 |
-| world_model.py / train_world.py | GRU残差状态预测、进度/抓持丢失头、组内排序 |
-| evaluate_delay.py | 原世界模型候选门限与延迟闭环 |
-| extensions/evaluate.py | 持续性、短期oracle、H/K开发诊断 |
-| recovery_v5/recovery_controller.py / clearance.py | 共享恢复状态机与固定夹爪几何筛选 |
-| consolidation/build_evidence.py | 读取已有结果统计和轨迹；没有策略运行 |
-| consolidation/demo | 静态前端，读取既有结果与视频 |
+| common.py | 数据/23维观测、BC加载、控制器和传感器状态恢复 |
+| collect_rollout_branches.py | 同历史/同FIFO候选采集 |
+| world_model.py / train_world.py | 残差动力学、进展/失抓头、排序；根训练入口为历史入口 |
+| reproduction/multiseed_20261012_01/train_suite.py | 匹配三种子与公平训练 |
+| reproduction/confirmation_20261012_01/ | 冻结世界模型确认协议与结果 |
+| reproduction/recovery_v5_20261012_01/ | 当前冻结恢复主线与精确状态重跑包装 |
+| reproduction/improvement_v6_… 至 v11_… | 分离候选与负结果，不能自动视为已采用 |
+| reproduction/progress_v11_20261015_01/demo/ | 当前展示、历史视频和v11新视频 |
 
-根目录33个原Python脚本未改动；旧探索资产见原[模块清单](reproduction/review_20261012_01/module_inventory.json)，不要逐个运行默认参数来代替当前复核。
+33个根Python入口包含旧探索路线。不要逐个按默认参数运行来“验收整个项目”：例如evaluate_delay默认候选数、门限与冻结主协议不同。旧任务JSON含本机命令路径，迁移时需新包装器处理，保留旧协议。
 
-版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/
+完整v5重跑命令在[v5 README](reproduction/recovery_v5_20261012_01/README.md)。这些命令会仿真且拒绝覆盖；只读审查不执行它们。重跑必须新输出目录，已看过的起点重复执行不称独立确认。新机器方案见[调整计划](reproduction/project_audit_20261015_01/IMPROVEMENT_PLAN.md)。

@@ -4,6 +4,6 @@
 
 短期oracle干净/噪声均25/30；BC为25/30、24/30。真值短期后果并未解决全部任务，不能把oracle叫长期成功的数学上界。持续性和H=1等回退至k=2；K=8新增候选超出训练支持，未稳定改善。
 
-后续共享恢复已发展至v5，详情见[统一结果](RESULTS.md)与[v5评估](reproduction/recovery_v5_20261012_01/ASSESSMENT.md)。本阶段只是整合原补充结果，没有重复运行900回合。
+冻结共享恢复主线为v5，后续v6—v11为未采用候选，详情见[统一结果](RESULTS.md)与[v5评估](reproduction/recovery_v5_20261012_01/ASSESSMENT.md)。本阶段只是整合原补充结果，没有重复运行900回合。
 
 版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/

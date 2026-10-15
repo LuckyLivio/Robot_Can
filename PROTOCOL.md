@@ -9,7 +9,7 @@
 | 三种子匹配训练/开发 | [multiseed protocol](reproduction/multiseed_20261012_01/protocol.json) |
 | 原世界模型确认 | [design](reproduction/confirmation_20261012_01/design.json)、[lock](reproduction/confirmation_20261012_01/lock.json) |
 | 补充诊断 | [extensions protocol](reproduction/extensions_20261012_01/protocol.json) |
-| 最新恢复 | [v5 study_plan](reproduction/recovery_v5_20261012_01/study_plan.json)、[freeze](reproduction/recovery_v5_20261012_01/freeze_before_states.json)、[lock](reproduction/recovery_v5_20261012_01/confirmation_lock.json) |
+| 冻结恢复主线 | [v5 study_plan](reproduction/recovery_v5_20261012_01/study_plan.json)、[freeze](reproduction/recovery_v5_20261012_01/freeze_before_states.json)、[lock](reproduction/recovery_v5_20261012_01/confirmation_lock.json) |
 | 本阶段整合 | [before_manifest](reproduction/consolidation_20261012_01/before_manifest.json)，不新增策略实验 |
 
 主线训练/开发按父轨迹隔离；保留强BC k=2及全部种子，不挑确认表现最好的种子。旧sealed和全部既有确认已查看，不能继续冒充未见数据。人工压力测试与原生初始化、开发与确认、重复物理回放与新策略回合分开。
@@ -19,3 +19,7 @@
 若改算法，另建目录并在运行前固定开发推进标准、配置、种子与统计方案，通过后冻结再生成新起点。后续候选草案不算已执行登记，见[FOLLOWUP_PLAN](reproduction/consolidation_20261012_01/FOLLOWUP_PLAN.md)。
 
 版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/
+
+## 后续候选与当前审查
+
+v6—v11各有独立协议，见[EVIDENCE_INDEX](EVIDENCE_INDEX.md)。最新[v11计划](reproduction/improvement_v11_20261015_01/protocols/PLAN.md)与[开发冻结](reproduction/improvement_v11_20261015_01/protocols/development_freeze.json)保留原字节。本轮审查不新增实验、不修改历史门槛；[当前报告](reproduction/project_audit_20261015_01/REPORT.md)。

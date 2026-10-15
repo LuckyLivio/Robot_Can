@@ -1,13 +1,13 @@
-# 冻结实验环境与提交说明
+# 当前环境、冻结版本与新设备说明
 
-PyCharm沿用项目 `.venv\Scripts\python.exe`，工作目录项目根。已有实验快照：Python3.10.9、torch2.14.1+cu130、NumPy1.26.4、robosuite1.5.1、MuJoCo3.3.0，完整字段在[environment.json](reproduction/review_20261012_01/environment.json)、[已安装版本](reproduction/review_20261012_01/environment-freeze.txt)。本整合阶段没有重新测试CUDA、运行模型或重装依赖。
+更新：2026-10-15。PyCharm使用项目 `.venv\Scripts\python.exe`。本轮实测Python3.10.9、torch2.14.1+cu130、NumPy1.26.4、robosuite1.5.1、MuJoCo3.3.0、h5py3.11.0、SciPy1.15.3。pip check通过；RTX5080 Laptop CUDA可用且小张量计算通过；BC及Full/Plain各三种子在一个保存观测上前向通过。
 
-`requirements-repro.txt`保留的是旧安装建议，其torch2.9.1注释不是实际冻结版本，不应据此降级当前环境。完整版本快照也不是已验证的跨电脑离线安装包。
+[本轮环境与推理凭据](reproduction/project_audit_20261015_01/environment_and_inference.json) · [完整pip快照](reproduction/project_audit_20261015_01/environment-freeze-current.txt)。这是实际环境快照，不是已验证可在任意机器安装的锁文件。本轮没有新建环境或运行闭环机器人。
 
-Windows兼容记录在 `data/windows_compatibility.json`。`setup_windows.py`仅面向当前项目虚拟环境，复制MuJoCo DLL并设置WGL相关宏；它有写入，不要在已工作的环境中为“看演示”反复执行。新电脑需要根据其系统单独确认，不能直接复制`.venv`当完整安装方案。
+`requirements-repro.txt`保留历史安装建议，其torch2.9.1注释不是实际冻结版本。不要按旧注释降级当前环境；新设备需核对该设备系统、GPU和可用包，再在新环境验证。[新设备方案](reproduction/project_audit_20261015_01/IMPROVEMENT_PLAN.md)
 
-数据：[来源和SHA](data/can_ph_lowdim_v15.manifest.json)。BC：[冻结路径](policy/bc_chunk_dev_v4/policy_15000.pt)。Full/Plain：models/multiseed_20261012_01_{full,plain}_s{17,23,41}/model.pt。原学习权重在本阶段不变。
+Windows兼容记录在 `data/windows_compatibility.json`；setup_windows.py会写项目虚拟环境中的DLL/WGL配置，已工作环境看演示不需要反复执行。不把.venv直接复制到另一台电脑。
 
-提交副本建议包含源码、必要权重、数据下载校验与划分、协议/配置、主结果/验证记录、演示与文档；虚拟环境和IDE缓存不当作研究成果。先整理清单，后续在目标演示电脑做独立安装/展示验证。
+原示范来源与SHA见[data manifest](data/can_ph_lowdim_v15.manifest.json)。BC主权重为 `policy/bc_chunk_dev_v4/policy_15000.pt`，Full/Plain为 `models/multiseed_20261012_01_{full,plain}_s{17,23,41}/model.pt`。原用户model.pt存于 `models/full_future_delay2_shift_v0/model.pt`；它保留为早期模型，并非当前三种子模型。两份导入权重均与最初替换凭据的SHA一致；桌面原文件目前不在该路径，不能重新直接比对桌面副本。
 
-版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/
+前端已有视频只需标准库HTTP服务；生成新视频另需ffmpeg和渲染依赖。历史任务JSON含原机器命令路径，新机器不能原样照搬命令数组。

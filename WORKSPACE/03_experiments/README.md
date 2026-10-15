@@ -8,3 +8,6 @@
 - [v5独立确认与压力测试](../../reproduction/recovery_v5_20261012_01/ASSESSMENT.md) — `reproduction/recovery_v5_20261012_01/ASSESSMENT.md`
 - [旧同起点四组事后分析](../../reproduction/consolidation_20261012_01/FACTORIAL_REVIEW.md) — `reproduction/consolidation_20261012_01/FACTORIAL_REVIEW.md`
 - [训练泛化与评分敏感性深核查](../../reproduction/figures_deepcheck_20261014_01/REPORT.md) — `reproduction/figures_deepcheck_20261014_01/REPORT.md`
+
+
+当前版本补充：[全项目审查](../../reproduction/project_audit_20261015_01/REPORT.md) · [最新交接说明](../../THESIS_HANDOFF_LATEST.md) · [候选v11](../../reproduction/improvement_v11_20261015_01/REPORT.md)。旧迁移包为c8bbe86快照，不含后续候选。

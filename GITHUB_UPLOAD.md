@@ -30,9 +30,13 @@ Set-Location Robot_can
 ## 本机原始资产完整性
 
 ```powershell
-& .\.venv\Scripts\python.exe -X utf8 -B .\reproduction\github_upload_20261015_01\verify.py
+& .\.venv\Scripts\python.exe -X utf8 -B .\reproduction\project_audit_20261015_01\verify.py
 ```
 
-本次为上传补充 `.gitignore`，并更新 README 的当前校验入口，改前文件逐字节保存在上述目录；旧校验清单不改写。新入口映射授权修改的两个文件后核对原始资产。旧环境中已存在的 DEMO_GUIDE.md 历史差异仍会单独报告。
+当前入口校验审查前10,146个受管理路径；本轮活动文档更新映射到before备份，其他旧文件保持原路径，历史清单不改写。
 
 部分历史脚本保留本机绝对路径或创建新输出的保护条件，直接克隆后重跑旧脚本可能需要调整路径；`git clone` 与完整性核对不等于所有历史脚本已在另一台机器重跑。查看已有前端与图表不需要重新训练。
+
+## 当前发布边界（2026-10-15）
+
+主仓库已有v11及完整原始JSONL，受管理文件约8.99 GiB，Git对象另占约1.42 GiB。旧写作包内652份gzip和本地两份ZIP被.git/info/exclude排除，不会随克隆出现；使用完整迁移包须另外传输FULL ZIP。当前恢复主版本仍v5，v11开发未采用。[当前资料交接](THESIS_HANDOFF_LATEST.md)。

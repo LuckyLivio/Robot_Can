@@ -25,3 +25,7 @@
 原统计：[原确认](reproduction/confirmation_20261012_01/analysis/paired_comparisons.csv)、[v5](reproduction/recovery_v5_20261012_01/analysis_confirmation/summary.json)、[新四组分析](reproduction/consolidation_20261012_01/factorial_analysis.json)。
 
 版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/
+
+## 2026-10-15补充口径
+
+v11的37条件是已知诊断；240开发为30起点×8种执行条件，不是240独立起点。397新执行包括小测试和消融，不包含核验回放。其决策耗时含BC/WM选择和监督器，仍不含完整物理/渲染链路；与早期仅选择器计时不可直接当等价实时基准。

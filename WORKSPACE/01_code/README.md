@@ -10,3 +10,6 @@
 - [冻结世界模型确认的控制语义](../../reproduction/confirmation_20261012_01/evaluator_core.py) — `reproduction/confirmation_20261012_01/evaluator_core.py`
 - [v5共享恢复状态机](../../reproduction/recovery_v5_20261012_01/recovery_controller.py) — `reproduction/recovery_v5_20261012_01/recovery_controller.py`
 - [侧倒几何间隙判定](../../reproduction/recovery_v5_20261012_01/clearance.py) — `reproduction/recovery_v5_20261012_01/clearance.py`
+
+
+当前版本补充：[全项目审查](../../reproduction/project_audit_20261015_01/REPORT.md) · [最新交接说明](../../THESIS_HANDOFF_LATEST.md) · [候选v11](../../reproduction/improvement_v11_20261015_01/REPORT.md)。旧迁移包为c8bbe86快照，不含后续候选。
