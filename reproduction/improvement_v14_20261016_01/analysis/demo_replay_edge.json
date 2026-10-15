@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "case": "edge",
+  "source_stage": "smoke_b",
+  "demo": "demo_13000022",
+  "checks": [
+    {
+      "version": "v13",
+      "steps": 400,
+      "success": false,
+      "physical_states_exact": true,
+      "joint_positions_exact": true,
+      "staged_rewards_exact": true,
+      "success_flags_exact": true,
+      "trace_sha256": "2fdfb090edba6b0f1fe5be471e4431a4a6bf20bfb1856627454fda29ca6a3d8d",
+      "result_sha256": "38294cbb0308037fdeb53a90db41f7416b4427f5e2ee8f3f6d778aeab6110a89",
+      "dataset_sha256": "b74dad4f861ffe13c8e506cf0ed9430193ba5e256ca027118f1d2ac756e8b8b0"
+    },
+    {
+      "version": "v14",
+      "steps": 400,
+      "success": false,
+      "physical_states_exact": true,
+      "joint_positions_exact": true,
+      "staged_rewards_exact": true,
+      "success_flags_exact": true,
+      "trace_sha256": "d5ead4501f7c75b6dcec610b382f697cf92cddb33784aa57b8245f01c146a7e5",
+      "result_sha256": "b61ccb21c75446156c1b893578c854de8069187fb8213aa6e5dcf3a96fa4f1a2",
+      "dataset_sha256": "b74dad4f861ffe13c8e506cf0ed9430193ba5e256ca027118f1d2ac756e8b8b0"
+    }
+  ],
+  "same_initial_physics_and_controller_state": true,
+  "same_initial_state": true,
+  "both_failed_at_400_steps": true,
+  "fps": 20,
+  "frames": 421,
+  "resolution": [
+    960,
+    660
+  ],
+  "duration_s": 21.05,
+  "video_sha256": "611897f25653e94de9976c16833a0d37578a8b6a3d2686708480b7f7580d5eee",
+  "poster_sha256": "e89d9811f68e8e29538b665510806ad48f8e16e413f7c237c1f3c9be9f3bf1d8",
+  "final_sha256": "64f04aebd5e43bc26e6135e722a3467be4ff2698ef0f59dd160bce23dc7ddeec",
+  "render_script_sha256": "23eca298f1beb05e54e529219530197db233207400901556d4296b4cf9be3519",
+  "selection": "Two preselected known smoke_b diagnostic failures; exact saved-command physical replay only, excluded from all statistical episode counts.",
+  "disclosure": "已知诊断案例，不代表总体成功率",
+  "motion_interpolation": false,
+  "endpoint_hold_frames": 20,
+  "additional_statistical_episodes": 0
+}

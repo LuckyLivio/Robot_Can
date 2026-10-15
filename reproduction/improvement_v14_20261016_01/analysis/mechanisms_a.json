@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "new_physical_episodes": 0,
+  "source_sha256": "9bdf6a39787ec34324077890a969990a379fc7a37081f401aa7b11b9f76bfac3",
+  "all_inherited_config_fields_exact": 88,
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Livio\\Desktop\\robot_can\\reproduction\\improvement_v14_20261016_01\\test_mechanisms.py\", line 231, in main\n    result['off_replay'] = replay_off()\n  File \"C:\\Users\\Livio\\Desktop\\robot_can\\reproduction\\improvement_v14_20261016_01\\test_mechanisms.py\", line 63, in replay_off\n    np.testing.assert_allclose(a, row['submitted_action'], rtol=0, atol=1e-7)\n  File \"C:\\Users\\Livio\\Desktop\\robot_can\\.venv\\lib\\site-packages\\numpy\\testing\\_private\\utils.py\", line 1504, in assert_allclose\n    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),\n  File \"C:\\Program Files\\Python310\\lib\\contextlib.py\", line 79, in inner\n    return func(*args, **kwds)\n  File \"C:\\Users\\Livio\\Desktop\\robot_can\\.venv\\lib\\site-packages\\numpy\\testing\\_private\\utils.py\", line 797, in assert_array_compare\n    raise AssertionError(msg)\nAssertionError: \nNot equal to tolerance rtol=0, atol=1e-07\n\nMismatched elements: 1 / 7 (14.3%)\nMax absolute difference: 1.99999934\nMax relative difference: 1.99999934\n x: array([ 0.347053,  0.999998,  0.813171,  0.046114,  0.125305, -0.173257,\n        0.999999], dtype=float32)\n y: array([ 0.347053,  0.999998,  0.813171,  0.046114,  0.125305, -0.173257,\n       -1.      ])\n"
+}

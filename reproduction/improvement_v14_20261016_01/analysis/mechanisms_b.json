@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "new_physical_episodes": 0,
+  "source_sha256": "3344a7817212fb952ac44d3846ec688c76daef93ea32b6a2489a024fa1e3eb3e",
+  "all_inherited_config_fields_exact": 88,
+  "off_replay": {
+    "episodes": 50,
+    "steps": 14704,
+    "actions_exact": true,
+    "diagnostics_exact_except_measured_planning_time": true,
+    "inherited_events_exact": true,
+    "rerun_this_receipt": false,
+    "referenced_receipt": "analysis/mechanisms_a_harness2.json",
+    "referenced_receipt_sha256": "d487dfc808cfb0386e0c32ed12c19b97893ed60a97ab446a351671ada8878812",
+    "referenced_controller_sha256": "9bdf6a39787ec34324077890a969990a379fc7a37081f401aa7b11b9f76bfac3",
+    "same_initializer_parent_pose_call_and_choose_off_dispatch_ast": true,
+    "both_pose_activation_expressions_false_when_flags_disabled": true
+  },
+  "targeted_checks": [
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000021",
+      "step": 207
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000021",
+      "step": 260
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000021",
+      "step": 365
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000021",
+      "step": 370
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000022",
+      "step": 365
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000022",
+      "step": 371
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000022",
+      "step": 372
+    },
+    {
+      "kind": "explicit_v11_dispatch_reaches_v14_pose_action",
+      "passed": true
+    },
+    {
+      "kind": "joint_warning_current_joint_replan_no_clock_or_attempt_reset",
+      "passed": true
+    },
+    {
+      "kind": "joint_warning_without_forecast_breach_keeps_checked_path",
+      "passed": true
+    },
+    {
+      "kind": "joint_replan_limit_false_branch_waits_and_ticks_once",
+      "passed": true
+    },
+    {
+      "kind": "synthetic_recenter_accepted_then_bounded_ik_ticks_once",
+      "passed": true
+    },
+    {
+      "kind": "synthetic_below_1mm_box_margin_rejected",
+      "passed": true
+    },
+    {
+      "kind": "synthetic_below_3mm_planned_can_margin_rejected",
+      "passed": true
+    },
+    {
+      "kind": "recenter_rejects_unknown_feasibility",
+      "passed": true
+    },
+    {
+      "kind": "recenter_rejects_unsettled_gap",
+      "passed": true
+    },
+    {
+      "kind": "recenter_rejects_moved_12_1mm",
+      "passed": true
+    },
+    {
+      "kind": "recenter_rejects_too_open",
+      "passed": true
+    },
+    {
+      "kind": "adequate_live_clearance_does_not_recenter_for_lateral_motion_alone",
+      "passed": true
+    },
+    {
+      "kind": "recenter_command_zero_rotation_collinear_and_inside_certified_segment",
+      "passed": true
+    },
+    {
+      "kind": "recenter_arrival_threshold_and_five_frames",
+      "distance_m": 0.0089,
+      "angle_rad": 0.079,
+      "accepted": true
+    },
+    {
+      "kind": "recenter_arrival_threshold_and_five_frames",
+      "distance_m": 0.0091,
+      "angle_rad": 0.0,
+      "accepted": false
+    },
+    {
+      "kind": "recenter_arrival_threshold_and_five_frames",
+      "distance_m": 0.001,
+      "angle_rad": 0.081,
+      "accepted": false
+    },
+    {
+      "kind": "recenter_preserves_70_step_phase_timeout",
+      "passed": true
+    },
+    {
+      "kind": "both_flags_disabled_no_new_mechanism_events",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Saved-input replay and synthetic control-flow checks only.",
+    "Closed-loop success and physical clearance require subsequent smoke/ablation runs.",
+    "Inherited flipped EDGE_ROTATE overwrites rotational damping with its existing capped command."
+  ]
+}

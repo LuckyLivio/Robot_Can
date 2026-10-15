@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "script": "freeze_development.py",
+      "refused": true,
+      "reason": "AssertionError: Small-test outcome gate failed; development remains disabled"
+    },
+    {
+      "script": "prepare_confirmation.py",
+      "refused": true,
+      "reason": "AssertionError: No passed development result; confirmation remains disabled"
+    }
+  ],
+  "no_later_stage_or_freeze_written": [
+    "dev_a",
+    "confirmation",
+    "confirmation_starts.hdf5",
+    "protocols/development_freeze.json",
+    "protocols/freeze_before_states.json"
+  ]
+}

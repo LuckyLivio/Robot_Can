@@ -1,22 +1,17 @@
-> **v13更新（2026-10-16）**：v13完成：开发236/240；全新60起点确认v6 445/480、v12 437/480、v13 448/480。未通过本轮对照采用门槛，保留为候选；主要配对区间未完全高于零，不能宣称总体成功率改善。 [报告](reproduction/improvement_v13_20261016_01/REPORT.md) · [前端](reproduction/improvement_v13_20261016_01/index.html)。旧代码、权重、结果保留。
-
-# 演示启动与讲解顺序
+# 前端与机器人演示
 
 ```powershell
 Set-Location 'C:\Users\Livio\Desktop\robot_can'
-& '.\.venv\Scripts\python.exe' -m http.server 8766 --bind 127.0.0.1
+& '.\.venv\Scripts\python.exe' -m http.server 8766 --bind 127.0.0.1 --directory 'C:\Users\Livio\Desktop\robot_can'
 ```
 
-保持终端运行，打开 **http://127.0.0.1:8766/** 。根入口自动跳到v13。已有该端口服务时直接打开，不必重复启动。关闭服务按`Ctrl+C`；另用端口时命令和网址一起修改。
+打开完整地址：**http://127.0.0.1:8766/reproduction/improvement_v14_20261016_01/index.html** 。如果8766服务已经运行，直接打开即可；终端保持运行，Ctrl+C关闭。
 
 
-1. 打开[v13页面](reproduction/improvement_v13_20261016_01/index.html)，先说明400步、D2、20Hz及冻结权重。
-2. 核对四阶段结果。小测试和消融是已知诊断；开发30起点；独立确认60新起点，每个起点八个关联条件。
-3. 播放“斜靠物体”对比：Full s23、噪声0.05；v13在391步完成，时间余量仍窄。再播放“侧倒箱沿”：BC k=2干净；v13在291步完成。这两例预先选自已知失败，不能替代确认统计。
-4. 看独立确认表、配对区间及报告。按门槛如实讲解救回和新增失败，不只展示成功视频。
-5. 阅读[曲线解释](reproduction/improvement_v13_20261016_01/FIGURE_GUIDE.md)：等待平台、抬升/放置高度变化、开度折点均为原始轨迹；图不平滑、成功终点不延长。
-6. 从顶部进入[v12历史成果](reproduction/improvement_v12_20261015_01/index.html)及[完整世界模型/v5展示](reproduction/progress_v11_20261015_01/demo/index.html)。不同批起点不得直接比较成功数。
+建议演示顺序：先看“未通过门槛”及四组结果，再播放斜靠和箱沿两段同起点对比，最后查看原始证据与改进计划。两段都是预先指定的已知难例，均未在400步完成；它们解释失败机制，不能充当总体成功率证据。
 
-BC k=2选动作块第三项，不读取真实未来；噪声0.05作用在出队动作前三个归一化分量，不是5厘米物体位置噪声。S/R共享恢复不是世界模型训练。输入是真值状态，支撑筛查不等于全臂安全证明。
+每个视频20fps对应20Hz控制，421帧、21.05秒；逐步重放实际动作，末尾保持终点，无平滑插帧。页面支持浏览器原生播放、暂停与进度定位。演示前端不启动训练或新物理控制实验。
 
-两段新视频为960×660、20fps、421帧，每个控制步一帧，成功后保持终点便于对照；已做保存动作物理回放、全文件解码和浏览器播放检查。没有用视频插值掩盖动作振荡，也没有验证任意设备负载下的无丢帧性能。
+[本轮检查报告](reproduction/improvement_v14_20261016_01/REPORT.md) · [v14前端](reproduction/improvement_v14_20261016_01/index.html) · [执行前协议](reproduction/improvement_v14_20261016_01/protocols/PLAN.md) · [v13原报告](reproduction/improvement_v13_20261016_01/REPORT.md)
+
+历史演示说明：[此前DEMO_GUIDE快照](reproduction/improvement_v14_20261016_01/before/DEMO_GUIDE.md)。

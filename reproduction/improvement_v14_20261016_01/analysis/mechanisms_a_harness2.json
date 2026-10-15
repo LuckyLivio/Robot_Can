@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "new_physical_episodes": 0,
+  "source_sha256": "9bdf6a39787ec34324077890a969990a379fc7a37081f401aa7b11b9f76bfac3",
+  "all_inherited_config_fields_exact": 88,
+  "off_replay": {
+    "episodes": 50,
+    "steps": 14704,
+    "actions_exact": true,
+    "diagnostics_exact_except_measured_planning_time": true,
+    "inherited_events_exact": true
+  },
+  "targeted_checks": [
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000021",
+      "step": 207
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000021",
+      "step": 260
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000021",
+      "step": 365
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000021",
+      "step": 370
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000022",
+      "step": 365
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000022",
+      "step": 371
+    },
+    {
+      "kind": "saved_input_one_decision_clock_budget",
+      "demo": "demo_13000022",
+      "step": 372
+    },
+    {
+      "kind": "explicit_v11_dispatch_reaches_v14_pose_action",
+      "passed": true
+    },
+    {
+      "kind": "joint_warning_current_joint_replan_no_clock_or_attempt_reset",
+      "passed": true
+    },
+    {
+      "kind": "joint_replan_limit_false_branch_waits_and_ticks_once",
+      "passed": true
+    },
+    {
+      "kind": "synthetic_recenter_accepted_then_bounded_ik_ticks_once",
+      "passed": true
+    },
+    {
+      "kind": "synthetic_below_1mm_box_margin_rejected",
+      "passed": true
+    },
+    {
+      "kind": "synthetic_below_3mm_planned_can_margin_rejected",
+      "passed": true
+    },
+    {
+      "kind": "recenter_preserves_70_step_phase_timeout",
+      "passed": true
+    },
+    {
+      "kind": "both_flags_disabled_no_new_mechanism_events",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Saved-input replay and synthetic control-flow checks only.",
+    "Closed-loop success and physical clearance require subsequent smoke/ablation runs.",
+    "Inherited flipped EDGE_ROTATE overwrites rotational damping with its existing capped command.",
+    "Current recenter implementation can issue rotational corrections although its segment check uses fixed current rotation; requires revision before development.",
+    "Current recenter implementation does not require gap_ready before beginning; requires revision before development."
+  ]
+}

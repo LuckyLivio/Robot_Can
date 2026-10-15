@@ -1,0 +1,173 @@
+{
+  "status": "smoke_gate_failed_not_adopted",
+  "latest_revision": "smoke_b",
+  "headline": "v14小测试未达标：斜靠首次接近和抓取已改善，搬运与箱沿耗时仍失败；未进入大规模消融、开发或独立确认。",
+  "completed_evaluation_executions": 64,
+  "completed_stages": {
+    "smoke_a": 32,
+    "smoke_b": 32
+  },
+  "action_replay_controls": 22174,
+  "physical_replay_episodes": 64,
+  "physical_replay_steps": 22174,
+  "partial_failed_stage_episodes": 0,
+  "new_training_runs": 0,
+  "new_weights": 0,
+  "pilot_executions": 0,
+  "development_executions": 0,
+  "independent_confirmation_executions": 0,
+  "adopted": false,
+  "frozen_for_confirmation": false,
+  "mechanism_checks": 25,
+  "inherited_config_fields_unchanged": 88,
+  "off_replay_episodes": 50,
+  "off_replay_steps": 14704,
+  "latest_complete_variants": {
+    "v13": {
+      "success": 6,
+      "episodes": 8,
+      "regressed_vs_v6": [
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "regressed_vs_v13": [],
+      "rescued_vs_v13": [],
+      "target_rescues": [],
+      "failures": [
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "paired_reference_v6": 7,
+      "paired_reference_v13": 8
+    },
+    "track": {
+      "success": 6,
+      "episodes": 8,
+      "regressed_vs_v6": [
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "regressed_vs_v13": [],
+      "rescued_vs_v13": [],
+      "target_rescues": [],
+      "failures": [
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "paired_reference_v6": 7,
+      "paired_reference_v13": 8
+    },
+    "clearance": {
+      "success": 5,
+      "episodes": 8,
+      "regressed_vs_v6": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "regressed_vs_v13": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "rescued_vs_v13": [],
+      "target_rescues": [],
+      "failures": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "paired_reference_v6": 7,
+      "paired_reference_v13": 8
+    },
+    "v14": {
+      "success": 6,
+      "episodes": 8,
+      "regressed_vs_v6": [
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "regressed_vs_v13": [],
+      "rescued_vs_v13": [],
+      "target_rescues": [],
+      "failures": [
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "paired_reference_v6": 7,
+      "paired_reference_v13": 8
+    }
+  },
+  "combined_exactly_equals_tracking_on_latest_smoke": [
+    "v14_regression_6000005",
+    "v14_known_side_s17",
+    "v14_held_wait_demo87",
+    "v14_known_bc_k2_clean_demo_12000011",
+    "v14_known_full_s23_clean_demo_12000036",
+    "v14_known_full_s23_noise005_demo_12000021",
+    "v14_known13_bc_k2_noise005_demo_13000021",
+    "v14_known13_full_s41_noise005_demo_13000022"
+  ],
+  "limitations": [
+    "8 deliberately selected known conditions per variant; no generalization estimate.",
+    "Both target episodes still fail within400 steps.",
+    "Clearance-only loses one parent success and shows no episode-level gain.",
+    "Combined C is inactive on this smoke panel; outcome matches T exactly.",
+    "Hand/can segment and local IK checks are not a full-arm or physical safety proof."
+  ]
+}
