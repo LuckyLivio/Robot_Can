@@ -16,10 +16,10 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 ## 只读完整性检查
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\project_audit_20261015_01\verify.py
+& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\portable_delivery_20261015_01\launcher.py verify
 ```
 
-验证审查前10,146个登记文件：授权改动的活动文档按before原样备份核对，其他文件在原位置核对；另验当前交付清单。不训练、不创建环境、不物理回放。历史verify绑定当时根文档，可能因后续授权文档更新失败；不要改旧manifest或删除结果绕过检查。
+验证交付整理前10,230个登记文件：授权改动的活动文档按before原样备份核对，其他文件在原位置核对；另验当前交付清单。不训练、不创建环境、不物理回放。历史verify绑定当时根文档，可能因后续授权文档更新失败；不要改旧manifest或删除结果绕过检查。
 
 ## 环境与模型
 
@@ -45,3 +45,9 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 33个根Python入口包含旧探索路线。不要逐个按默认参数运行来“验收整个项目”：例如evaluate_delay默认候选数、门限与冻结主协议不同。旧任务JSON含本机命令路径，迁移时需新包装器处理，保留旧协议。
 
 完整v5重跑命令在[v5 README](reproduction/recovery_v5_20261012_01/README.md)。这些命令会仿真且拒绝覆盖；只读审查不执行它们。重跑必须新输出目录，已看过的起点重复执行不称独立确认。新机器方案见[调整计划](reproduction/project_audit_20261015_01/IMPROVEMENT_PLAN.md)。
+
+## 换设备或只展示
+
+[便携交付说明](reproduction/portable_delivery_20261015_01/README.md)提供展示包、v6—v11写作增补和三个ZIP的集中迁移目录。解压展示包后，在CAN_LAB_DEMO目录执行 `python -B portable.py serve --port 8767 --open`，首页为 http://127.0.0.1:8767/ 。无需安装仿真依赖。
+
+新重跑包装入口在 `reproduction/portable_delivery_20261015_01/launcher.py`：无参数只显示帮助，rerun默认只列计划，必须显式实验名、新output及--execute才会仿真；源代码/权重/数据先做589项哈希核验。历史jobs保留原样。第二台电脑按[清单](reproduction/portable_delivery_20261015_01/TARGET_DEVICE_CHECKLIST.md)逐项验收。

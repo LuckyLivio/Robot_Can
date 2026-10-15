@@ -1,3 +1,5 @@
+> 跨设备交付已整理：[使用说明](reproduction/portable_delivery_20261015_01/README.md) · [下载与验收页面](reproduction/portable_delivery_20261015_01/index.html)。含独立展示包、v6—v11增补与三个ZIP的迁移文件夹；第二台电脑实际验收仍待完成。
+
 > 全项目审查已完成：[详细报告](reproduction/project_audit_20261015_01/REPORT.md) · [检查清单](reproduction/project_audit_20261015_01/CHECKLIST.csv) · [调整计划](reproduction/project_audit_20261015_01/IMPROVEMENT_PLAN.md)。未新增训练或仿真。
 
 > v11实验已完成：箱沿案例修复，开发235/240低于v6的236/240，未采用。旧资产保留，主版本仍为v5。[本轮报告](reproduction/improvement_v11_20261015_01/REPORT.md) · [当前前端](http://127.0.0.1:8766/)。
@@ -104,10 +106,10 @@ v5 相对 v4 救回 7 次执行且没有新增失败，但收益集中于两个�
 检查已有成果和本次 README 更新：
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\project_audit_20261015_01\verify.py
+& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\portable_delivery_20261015_01\launcher.py verify
 ```
 
-该入口只读核对本轮开始前的 10,146 个路径，以及本轮代码、结果与前端交付清单。本轮授权更新的活动文档和分类入口按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
+该入口只读核对本轮开始前的 10,230 个路径，以及本轮交付工具、文档与打包凭据清单。本轮授权更新的活动文档和分类入口按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
 
 完整 v5 重跑、控制步骤复核和物理回放命令见 [v5 README](reproduction/recovery_v5_20261012_01/README.md)，整体运行指南见 [PROGRAM_GUIDE.md](PROGRAM_GUIDE.md)。这些实验入口会执行仿真，并检查历史根文档；如提示文档更新，先使用当前完整性检查核对归档。不要删除结果或改写旧保护清单来跳过核验。
 
