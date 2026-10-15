@@ -17,9 +17,9 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 **[打开前端：http://127.0.0.1:8766/](http://127.0.0.1:8766/)**
 
-项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/progress_20261015_01/demo/index.html)。
+项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/progress_v9_20261015_01/demo/index.html)。
 
-当前整合版包含版本状态、20 fps 机器人视频、世界模型与 v5 冻结主结果，以及 v6/v8 同起点恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
+当前整合版包含 v9 的实验状态、20 fps 历史机器人视频、世界模型与 v5 冻结主结果，以及 v6/v8 同起点历史恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
 
 这是静态 HTML/CSS/JavaScript 前端，不需要 npm、Node.js 或额外前端依赖。启动命令只提供本地文件服务；训练和机器人仿真有独立入口。请通过 HTTP 地址访问，使数据与视频按项目路径加载。
 
@@ -32,7 +32,7 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 | 页面 | 地址 |
 |---|---|
-| 当前整合版，推荐 | http://127.0.0.1:8766/reproduction/progress_20261015_01/demo/index.html |
+| 当前整合版，推荐 | http://127.0.0.1:8766/reproduction/progress_v9_20261015_01/demo/index.html |
 | review 历史版 | http://127.0.0.1:8766/reproduction/review_20261012_01/demo/index.html |
 | release 历史版 | http://127.0.0.1:8766/reproduction/release_20261012_01/demo/index.html |
 
@@ -64,13 +64,16 @@ C:\Users\Livio\Desktop\robot_can\.venv\Scripts\python.exe
 | `evaluate_delay.py` | 动作延迟下的 BC 与世界模型闭环评估 |
 | `reproduction/extensions_20261012_01/` | 持续性、真值短期排序、预测长度及候选数量实验 |
 | `reproduction/recovery_v5_20261012_01/` | v5 恢复控制、消融、独立确认和失败分析 |
-| `reproduction/consolidation_20261012_01/demo/` | 当前成果展示前端 |
+| `reproduction/progress_v9_20261015_01/demo/` | 当前进度与成果展示前端 |
+| `reproduction/improvement_v9_20261015_01/` | 关节姿态检查与规划耗时消融，旧结果保留 |
 | `data/` | 数据、划分与来源校验 |
 | `policy/`、`models/` | 策略和世界模型权重、实验结果 |
 
 BC 提供候选动作，世界模型预测并评分，执行器通过 FIFO 队列模拟延迟。共享恢复控制器监测抓持与无进展状态，必要时接管重新抓取、搬运和放置。世界模型与共享恢复的收益分别评价。
 
 ## 当前实验结果
+
+本轮 v9 的关节可达性与规划耗时结果见 [v9 完整报告](reproduction/improvement_v9_20261015_01/REPORT.md)。新监督器额外读取七个关节角度，BC 和 Full 公平共享；原策略/世界模型输入仍为 23 维。未达到门槛的候选不会替换下列冻结主结果。
 
 完整世界模型主实验、补充诊断及恢复实验见 [RESULTS.md](RESULTS.md) 和 [EVIDENCE_INDEX.md](EVIDENCE_INDEX.md)。不同阶段的起点与条件不能直接拼接成同一批对照。
 
@@ -95,10 +98,10 @@ v5 相对 v4 救回 7 次执行且没有新增失败，但收益集中于两个�
 检查已有成果和本次 README 更新：
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\improvement_v8_20261015_01\verify_integrity.py
+& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\improvement_v9_20261015_01\verify_integrity.py
 ```
 
-该入口只读核对本轮开始前的 8,217 个路径，以及本轮代码、结果与前端交付清单。授权修改的根 README 和入口页面按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
+该入口只读核对本轮开始前的 8,802 个路径，以及本轮代码、结果与前端交付清单。授权修改的根 README 和入口页面按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
 
 完整 v5 重跑、控制步骤复核和物理回放命令见 [v5 README](reproduction/recovery_v5_20261012_01/README.md)，整体运行指南见 [PROGRAM_GUIDE.md](PROGRAM_GUIDE.md)。这些实验入口会执行仿真，并检查历史根文档；如提示文档更新，先使用当前完整性检查核对归档。不要删除结果或改写旧保护清单来跳过核验。
 
@@ -142,6 +145,12 @@ README 更新日期：2026-10-14。更新前版本保存在 [README_before.md](r
 
 v6 开发集仍为 236/240；v7 合用诊断为 30/37，未通过保留 v6 全部成功案例的门槛。二者均未替换主版本。v8 已完成两轮五路消融，共 370 回合；每轮 v8 为 30/37、v6 为 31/37，未通过门槛，未启动开发对照。已核对实际碰撞几何并执行撤离重规划，但仍存在关节接近限位时的对齐超时和几何规划耗时问题。没有泛化训练或论文写作。
 
-详见 [v6 报告](reproduction/improvement_v6_20261015_01/REPORT.md)、[v7 报告](reproduction/improvement_v7_20261015_01/REPORT.md) 和 [本轮预登记](reproduction/improvement_v8_20261015_01/protocols/study_plan.json)。本次根 README 与入口改前文件保存在 `reproduction/improvement_v8_20261015_01/before/`，旧保护清单保留。
+详见 [v6 报告](reproduction/improvement_v6_20261015_01/REPORT.md)、[v7 报告](reproduction/improvement_v7_20261015_01/REPORT.md) 和 [v8 预登记](reproduction/improvement_v8_20261015_01/protocols/study_plan.json)。v8 开始前的根 README 与入口保存在 `reproduction/improvement_v8_20261015_01/before/`，旧保护清单保留。
 
-本轮详情：[v8 报告](reproduction/improvement_v8_20261015_01/REPORT.md) · [新前端与回放说明](reproduction/progress_20261015_01/README.md)。
+v8 历史详情：[v8 报告](reproduction/improvement_v8_20261015_01/REPORT.md) · [新前端与回放说明](reproduction/progress_20261015_01/README.md)。
+
+## v9 进展（2026-10-15）
+
+新增关节姿态检查和缓存/分步规划，保持400步预算。最终五路对照：v6为31/37，其余四版均为30/37；没有新增救回，未进入240回合开发集。最大策略与控制计算实测由v8的1783 ms降至v9的49 ms，不能据此保证完整实时链路。
+
+本轮包含一次明确登记的末端坐标系验证修复，修复前记录保留，最终结论使用pilot_b。详见 [v9完整报告](reproduction/improvement_v9_20261015_01/REPORT.md) 和 [新版前端说明](reproduction/progress_v9_20261015_01/README.md)。本轮根文件改前备份在 `reproduction/improvement_v9_20261015_01/before/`。

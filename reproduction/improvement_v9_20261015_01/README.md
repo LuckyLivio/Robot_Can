@@ -2,6 +2,8 @@
 
 在新目录开发；旧代码、权重和结果保留。当前主版本仍是 v5，v6/v7/v8 和本目录均为候选证据。研究过程同步至 GitHub 和新版前端，未写论文。
 
+**本轮已完成：最终 v9 30/37，v6 31/37；没有进入 240 回合开发对照。最大策略与控制计算耗时从 v8 的约1783 ms降至 v9 的约49 ms，但不是完整实时链路保证。** 结果、坐标系验证修复及未解决的问题见 [REPORT.md](REPORT.md)。
+
 ## 范围与约束
 
 - 基于冻结 v8 revision B，加入当前七个机械臂关节角度与固定运动学链。只有共享恢复控制器使用额外输入，BC 和 Full 公平共享。原策略和世界模型仍接收原 23 维状态。
@@ -10,7 +12,7 @@
 - 先机制测试和五路消融。必须保留 v6 的全部小测试成功并新增救回，才进入 240 回合开发集。已知诊断起点不能作为独立泛化证据。
 - 规划按候选/迭代数限制单步工作量，另测真实耗时。不能仅凭逻辑控制频率声称满足硬实时。
 
-执行前协议：[study_plan.json](protocols/study_plan.json)。当前单位测试：[mechanisms_a.json](analysis/mechanisms_a.json)。
+执行前协议：[study_plan.json](protocols/study_plan.json)。当前单位测试：[mechanisms_c.json](analysis/mechanisms_c.json)，运动学坐标系交叉验证：[frame_validation.json](analysis/frame_validation.json)。
 
 ## 查看前端
 

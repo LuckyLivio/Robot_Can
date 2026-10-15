@@ -1,0 +1,168 @@
+{
+  "variants": {
+    "v6": {
+      "selection_and_supervisor": {
+        "steps": 10490,
+        "median_ms": 0.2656999986356823,
+        "p95_ms": 1.654015001076913,
+        "p99_ms": 2.2639409996190825,
+        "max_ms": 76.74709999992047,
+        "over_50ms": 2
+      },
+      "policy_and_selection_and_supervisor": {
+        "steps": 10490,
+        "median_ms": 0.7007999993220437,
+        "p95_ms": 2.1806750010000537,
+        "p99_ms": 2.928973000744017,
+        "max_ms": 77.2843999984616,
+        "over_50ms": 2
+      },
+      "supervisor_only": null
+    },
+    "v8": {
+      "selection_and_supervisor": {
+        "steps": 10435,
+        "median_ms": 0.3252000024076551,
+        "p95_ms": 7.102949999534754,
+        "p99_ms": 10.788525999596454,
+        "max_ms": 1781.6554000019096,
+        "over_50ms": 2
+      },
+      "policy_and_selection_and_supervisor": {
+        "steps": 10435,
+        "median_ms": 0.7600999997521285,
+        "p95_ms": 7.659750000311756,
+        "p99_ms": 11.544144000581571,
+        "max_ms": 1782.6186999991478,
+        "over_50ms": 3
+      },
+      "supervisor_only": null
+    },
+    "joint": {
+      "selection_and_supervisor": {
+        "steps": 10435,
+        "median_ms": 0.3155999984301161,
+        "p95_ms": 2.073619999646325,
+        "p99_ms": 9.016629998732242,
+        "max_ms": 1736.8820999981835,
+        "over_50ms": 2
+      },
+      "policy_and_selection_and_supervisor": {
+        "steps": 10435,
+        "median_ms": 0.752799998736009,
+        "p95_ms": 2.662599999530355,
+        "p99_ms": 9.652613998696323,
+        "max_ms": 1737.3107999992499,
+        "over_50ms": 3
+      },
+      "supervisor_only": {
+        "steps": 10435,
+        "median_ms": 0.28250000104890205,
+        "p95_ms": 0.675199998659081,
+        "p99_ms": 7.846929998340782,
+        "max_ms": 1735.8678999989934,
+        "over_50ms": 2
+      }
+    },
+    "bounded": {
+      "selection_and_supervisor": {
+        "steps": 10435,
+        "median_ms": 0.32469999860040843,
+        "p95_ms": 2.073309998741023,
+        "p99_ms": 15.093423997896021,
+        "max_ms": 50.735299999359995,
+        "over_50ms": 1
+      },
+      "policy_and_selection_and_supervisor": {
+        "steps": 10435,
+        "median_ms": 0.7734999999229331,
+        "p95_ms": 2.70144999703916,
+        "p99_ms": 15.684331999509592,
+        "max_ms": 51.36789999960456,
+        "over_50ms": 1
+      },
+      "supervisor_only": {
+        "steps": 10435,
+        "median_ms": 0.2851000026566908,
+        "p95_ms": 0.6773100016289378,
+        "p99_ms": 14.890459999951418,
+        "max_ms": 47.797999999602325,
+        "over_50ms": 0
+      }
+    },
+    "v9": {
+      "selection_and_supervisor": {
+        "steps": 10436,
+        "median_ms": 0.3251999987696763,
+        "p95_ms": 1.7552499984958558,
+        "p99_ms": 2.883295000719951,
+        "max_ms": 48.230899999907706,
+        "over_50ms": 0
+      },
+      "policy_and_selection_and_supervisor": {
+        "steps": 10436,
+        "median_ms": 0.7801500014466001,
+        "p95_ms": 2.297899998666253,
+        "p99_ms": 4.0173400015191785,
+        "max_ms": 48.65269999936572,
+        "over_50ms": 0
+      },
+      "supervisor_only": {
+        "steps": 10436,
+        "median_ms": 0.28605000079551246,
+        "p95_ms": 0.5810749999000109,
+        "p99_ms": 1.0889549997955326,
+        "max_ms": 45.1178000002983,
+        "over_50ms": 0
+      }
+    }
+  },
+  "mechanisms": {
+    "v6": {
+      "planning_wait_steps": 0,
+      "joint_check_count": 0,
+      "chosen_original": 0,
+      "chosen_equivalent": 0,
+      "no_validated_solution": 0,
+      "max_mesh_candidates_per_wait_step": 0,
+      "max_joint_work_per_wait_step": 0
+    },
+    "v8": {
+      "planning_wait_steps": 0,
+      "joint_check_count": 0,
+      "chosen_original": 0,
+      "chosen_equivalent": 0,
+      "no_validated_solution": 0,
+      "max_mesh_candidates_per_wait_step": 0,
+      "max_joint_work_per_wait_step": 0
+    },
+    "joint": {
+      "planning_wait_steps": 2,
+      "joint_check_count": 2,
+      "chosen_original": 1,
+      "chosen_equivalent": 0,
+      "no_validated_solution": 1,
+      "max_mesh_candidates_per_wait_step": 0,
+      "max_joint_work_per_wait_step": 96
+    },
+    "bounded": {
+      "planning_wait_steps": 43,
+      "joint_check_count": 0,
+      "chosen_original": 0,
+      "chosen_equivalent": 0,
+      "no_validated_solution": 0,
+      "max_mesh_candidates_per_wait_step": 8,
+      "max_joint_work_per_wait_step": 0
+    },
+    "v9": {
+      "planning_wait_steps": 49,
+      "joint_check_count": 2,
+      "chosen_original": 1,
+      "chosen_equivalent": 0,
+      "no_validated_solution": 1,
+      "max_mesh_candidates_per_wait_step": 8,
+      "max_joint_work_per_wait_step": 16
+    }
+  },
+  "scope": "Measured during four-worker evaluation; not worst-case execution certification. Total includes BC and WM selection and supervisor but excludes physics, rendering and file writes."
+}

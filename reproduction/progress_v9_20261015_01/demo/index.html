@@ -7,7 +7,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231d1d1f'/%3E%3Cpath d='M42 19a17 17 0 1 0 0 26' fill='none' stroke='white' stroke-width='6'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css?v=5979a72f43a8"><link rel="stylesheet" href="consolidation.css?v=81a7b251d1c5"><link rel="stylesheet" href="world-model.css?v=fae4de9028b2">
   <script src="data.js?v=3d60ebbb66ac" defer></script><script src="evidence.js?v=99e5ca4dd276" defer></script><script src="app.js?v=8f6b194b5b36" defer></script><script src="consolidation.js?v=782d7bd5576a" defer></script><script src="world-model-data.js?v=7d6426535ad5" defer></script><script src="world-model.js?v=32668b717136" defer></script>
-<link rel="stylesheet" href="progress.css?v=34bd0b62bff9"><script src="progress.js?v=ac924f249ae8" defer></script>
+<link rel="stylesheet" href="progress.css?v=34bd0b62bff9"><script src="progress.js?v=114ad053b5b2" defer></script>
 <script src="recovery-media.js?v=3a67bc5fb759" defer></script><script src="recovery-player.js?v=91103a094877" defer></script>
 </head>
 <body>
@@ -22,8 +22,10 @@
 <div class="latest-heading"><div><p class="eyebrow">RESEARCH LOG / 每一步改进，都有证据</p><h2 id="latest-title">当前进展，公开呈现。</h2></div><p id="progress-time">正在读取状态…</p></div>
 <div class="progress-grid"><article class="progress-card"><h3>已采用的主版本</h3><strong>v5 · 结果冻结</strong><p>开发 236/240；独立原生确认 464/480。已有成果保留，后续候选不会自动替换。</p></article><article class="progress-card"><h3>v6 / v7 · 候选修复</h3><strong>机制改善 ≠ 全面提升</strong><p>v6 开发仍为 236/240；v7 合用小测试 30/37，低于 v6 的 31/37，尚未采用。</p></article><article class="progress-card dark"><h3>v9 · 本轮迭代</h3><strong id="v9-state">读取中</strong><p>关节限位下的等价姿态选择与规划耗时。小测试和消融达标后才进入 240 回合开发对照，保持 400 步预算。</p></article></div>
 <details class="progress-details"><summary>查看候选消融与证据</summary><p>不同阶段分开统计；37 条件为已知诊断，不是独立确认。</p><table><thead><tr><th>版本 / 阶段</th><th>成功 / 回合</th><th>判断</th></tr></thead><tbody id="progress-table"></tbody></table></details>
+<p id="progress-metrics" class="selection-note">耗时核验完成后在此展示；控制计算与任务成功率分别评价。</p>
+<p class="selection-note">v9 的共享恢复器额外读取七个关节角度，BC 与 Full 使用同一规则。400 步包含规划等待。首轮曾发现末端坐标系偏置，修复后的 pilot_b 才用于本轮结论；全过程保留。</p>
 <p id="progress-error" hidden role="alert">最新状态加载失败，请通过项目根目录的 HTTP 服务打开，或查看下方报告。</p>
-<div class="progress-links"><a href="../../improvement_v9_20261015_01/README.md">v9 当前计划 ↗</a><a href="../../improvement_v6_20261015_01/REPORT.md">v6 完整报告 ↗</a><a href="../../improvement_v7_20261015_01/REPORT.md">v7 负结果与原因 ↗</a><a href="../../improvement_v7_20261015_01/FRONTEND_AUDIT.md">运动与帧率核查 ↗</a><a href="../../consolidation_20261012_01/demo/index.html">历史整合页 ↗</a></div>
+<div class="progress-links"><a href="../../improvement_v9_20261015_01/REPORT.md">v9 完整结果与耗时 ↗</a><a href="../../improvement_v9_20261015_01/protocols/verification_repair_c.md">坐标系修复记录 ↗</a><a href="../../improvement_v6_20261015_01/REPORT.md">v6 完整报告 ↗</a><a href="../../improvement_v7_20261015_01/FRONTEND_AUDIT.md">运动与帧率核查 ↗</a><a href="../../consolidation_20261012_01/demo/index.html">历史整合页 ↗</a></div>
 </section>
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-text"><p class="eyebrow">WORLD MODEL / 世界模型驱动的延迟机器人操控</p>
