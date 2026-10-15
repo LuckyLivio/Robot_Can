@@ -1,0 +1,65 @@
+{
+  "model": "headcal_20261012_01_calibrated_s17",
+  "selected_step": 250,
+  "selected_model_sha256": "ffd505e48e87537f9380e23c811e6d729c061d16f1bd913de9619867d5a89ebd",
+  "offline_metrics": {
+    "train": {
+      "predicted": {
+        "label_loss": 0.415920227766037,
+        "score_mae": 0.043898772448301315,
+        "progress_mae": 0.01703435741364956,
+        "risk_brier": 0.0035590275656431913,
+        "rank": {
+          "mean_regret": 0.0005283624632284045,
+          "wrong_pair_rate": 0.0,
+          "optimal_within_025": 1.0,
+          "groups": 160,
+          "nontrivial_pairs": 96
+        }
+      },
+      "real": {
+        "label_loss": 0.44010603427886963,
+        "score_mae": 0.03663455322384834,
+        "progress_mae": 0.020600920543074608,
+        "risk_brier": 0.01743750087916851,
+        "rank": {
+          "mean_regret": 0.009857701137661934,
+          "wrong_pair_rate": 0.13541666666666666,
+          "optimal_within_025": 0.96875,
+          "groups": 160,
+          "nontrivial_pairs": 96
+        }
+      }
+    },
+    "dev": {
+      "predicted": {
+        "label_loss": 0.4645298719406128,
+        "score_mae": 0.10619185864925385,
+        "progress_mae": 0.04611468315124512,
+        "risk_brier": 0.022930631414055824,
+        "rank": {
+          "mean_regret": 0.0004955234471708536,
+          "wrong_pair_rate": 0.0,
+          "optimal_within_025": 1.0,
+          "groups": 64,
+          "nontrivial_pairs": 39
+        }
+      },
+      "real": {
+        "label_loss": 0.46924883127212524,
+        "score_mae": 0.06622868031263351,
+        "progress_mae": 0.037769488990306854,
+        "risk_brier": 0.02901230752468109,
+        "rank": {
+          "mean_regret": 0.002846247050911188,
+          "wrong_pair_rate": 0.20512820512820512,
+          "optimal_within_025": 0.953125,
+          "groups": 64,
+          "nontrivial_pairs": 39
+        }
+      }
+    }
+  },
+  "frozen_tensors_unchanged": true,
+  "minibatch_sha256": "0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938"
+}

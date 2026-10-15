@@ -1,0 +1,65 @@
+{
+  "model": "multiseed_20261012_01_head_s41_calibrated_s41",
+  "selected_step": 2750,
+  "selected_model_sha256": "b848ad599244301e82fe4590b054d189c5d041c0ab7333a27a8f11193c6a8953",
+  "offline_metrics": {
+    "train": {
+      "predicted": {
+        "label_loss": 0.4155852198600769,
+        "score_mae": 0.04358738660812378,
+        "progress_mae": 0.018157273530960083,
+        "risk_brier": 0.003523044753819704,
+        "rank": {
+          "mean_regret": 0.0005728430114686489,
+          "wrong_pair_rate": 0.0,
+          "optimal_within_025": 1.0,
+          "groups": 160,
+          "nontrivial_pairs": 96
+        }
+      },
+      "real": {
+        "label_loss": 0.4237326383590698,
+        "score_mae": 0.03132346644997597,
+        "progress_mae": 0.01691090315580368,
+        "risk_brier": 0.00908002257347107,
+        "rank": {
+          "mean_regret": 0.00165458582341671,
+          "wrong_pair_rate": 0.041666666666666664,
+          "optimal_within_025": 0.9875,
+          "groups": 160,
+          "nontrivial_pairs": 96
+        }
+      }
+    },
+    "dev": {
+      "predicted": {
+        "label_loss": 0.4832366108894348,
+        "score_mae": 0.10832415521144867,
+        "progress_mae": 0.050784267485141754,
+        "risk_brier": 0.026462405920028687,
+        "rank": {
+          "mean_regret": 0.00016917574976105243,
+          "wrong_pair_rate": 0.05128205128205128,
+          "optimal_within_025": 1.0,
+          "groups": 64,
+          "nontrivial_pairs": 39
+        }
+      },
+      "real": {
+        "label_loss": 0.5663204193115234,
+        "score_mae": 0.08375424146652222,
+        "progress_mae": 0.043290454894304276,
+        "risk_brier": 0.02558191865682602,
+        "rank": {
+          "mean_regret": 0.001573338289745152,
+          "wrong_pair_rate": 0.07692307692307693,
+          "optimal_within_025": 0.984375,
+          "groups": 64,
+          "nontrivial_pairs": 39
+        }
+      }
+    }
+  },
+  "frozen_tensors_unchanged": true,
+  "minibatch_sha256": "f5f735eec263d92ecd2d5261138cf5fce87e02097561dc4a82af04e9d4b98e8c"
+}

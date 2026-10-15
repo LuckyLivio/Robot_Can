@@ -1,0 +1,109 @@
+{
+  "status": "complete",
+  "job": {
+    "id": "held_stall",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "demos": [
+      "demo_54"
+    ],
+    "fault": "policy emits zero motion and closed gripper after the object is lifted; supervisor may override"
+  },
+  "records": [
+    {
+      "demo": "demo_54",
+      "success": true,
+      "steps": 237,
+      "peak_stage_reward": 0.6628972169065758,
+      "ever_grasped": true,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": true,
+      "stable_hold_steps": 157,
+      "intervention_steps": 123,
+      "intervention_fraction": 0.5189873417721519,
+      "attempts": 1,
+      "verified_regrasps": 0,
+      "failed_attempts": 0,
+      "phases": {
+        "NORMAL": 114,
+        "LIFT": 20,
+        "CARRY": 64,
+        "PLACE": 19,
+        "RELEASE": 16,
+        "RETREAT": 4
+      },
+      "events": [
+        {
+          "step": 115,
+          "from": "NORMAL",
+          "to": "LIFT",
+          "reason": "held_stall",
+          "attempt": 1,
+          "object_position": [
+            0.06971745938062668,
+            -0.1449144184589386,
+            0.9320078492164612
+          ]
+        },
+        {
+          "step": 134,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.06609221547842026,
+            -0.14565694332122803,
+            1.0659619569778442
+          ]
+        },
+        {
+          "step": 198,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.18069526553153992,
+            0.36751940846443176,
+            1.0665178298950195
+          ]
+        },
+        {
+          "step": 217,
+          "from": "PLACE",
+          "to": "RELEASE",
+          "reason": "at_release_height",
+          "attempt": 1,
+          "object_position": [
+            0.1759389340877533,
+            0.38702380657196045,
+            0.8952354788780212
+          ]
+        },
+        {
+          "step": 233,
+          "from": "RELEASE",
+          "to": "RETREAT",
+          "reason": "release_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.1695406585931778,
+            0.3849165737628937,
+            0.860072910785675
+          ]
+        }
+      ],
+      "fault_step": null,
+      "mean_decision_ms": 0.10152320681276873,
+      "original_selection_counts": {
+        "2": 237
+      },
+      "elapsed_s": 1.7037178999999014
+    }
+  ],
+  "input": "PRIVILEGED_CURRENT_STATE_AND_FIXED_TASK_GOAL",
+  "supervisor_note": "Observation history only. Reward/contact/success are not used in choose(). No learned weight changes."
+}

@@ -1,0 +1,19 @@
+{
+  "registered_utc": "2026-10-12T04:49:18.326897+00:00",
+  "scope": "new version, no learned weight changes, D2 and 400 steps unchanged",
+  "training_pilot": "first eight train starts, plus predetermined sideways/bin-edge/stalled-policy synthetic training diagnostics; preserve all revisions",
+  "development": "240 episodes: same30 dev starts, clean/noise0.05, fixed BC plus Full seeds17/23/41; compare to both recovery v1 and original",
+  "promotion_gate": {
+    "minimum_new_successes": 224,
+    "bc_clean_minimum": 28,
+    "bc_noise_minimum": 27,
+    "full_clean_minimum": 79,
+    "full_noise_minimum": 86,
+    "maximum_paired_v1_regressions": 2,
+    "maximum_per_job_v1_regressions": 1
+  },
+  "selection": "no confirmation state generation or outcomes before gate; report every pilot/development attempt and source hash",
+  "confirmation_if_promoted": "60 new native-reset states, seeds 426101201..426101260, names demo_3000000..demo_3000059. Same states/noise for both methods, versions v1/v2/disabled, Full seeds17/23/41. 60x2x4x3=1440 episodes. No tuning after freeze. Prior60 confirmation states excluded.",
+  "confirmation_primary": "paired task success of v2 versus v1; safety regressions; Full v2 versus BC v2. Paired-start bootstrap20000 seed20261013; three fixed Full seeds averaged within start.",
+  "boundaries": "privileged 23D current observations and static task geometry; no future or reward in controller; results only for simulated task"
+}

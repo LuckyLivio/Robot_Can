@@ -1,0 +1,108 @@
+{
+  "status": "frozen_before_counterfactual_rollouts",
+  "source_args": {
+    "method": "wm",
+    "model": "queuepair_20261012_01_real_s17",
+    "policy": "bc_chunk_dev_v4",
+    "policy_checkpoint": "policy_15000.pt",
+    "split": "dev",
+    "episodes": 8,
+    "steps": 400,
+    "delay": 2,
+    "shift_index": null,
+    "fallback_index": 2,
+    "candidates": 4,
+    "horizon": 8,
+    "noise": 0.0,
+    "risk_weight": 0.5,
+    "readout_weight": 0.02,
+    "gate_margin": 0.02,
+    "fallback": "shift",
+    "score_only": true,
+    "candidate_mode": "shift",
+    "demos": [
+      "demo_97",
+      "demo_179",
+      "demo_105"
+    ],
+    "output_dir": "reproduction/candidate_truth_20261012_01/traces_real",
+    "trace": true
+  },
+  "anchors": [
+    {
+      "demo": "demo_97",
+      "step": 35,
+      "reasons": [
+        "first_override"
+      ]
+    },
+    {
+      "demo": "demo_97",
+      "step": 58,
+      "reasons": [
+        "first_override_while_grasping"
+      ]
+    },
+    {
+      "demo": "demo_97",
+      "step": 90,
+      "reasons": [
+        "largest_predicted_advantage"
+      ]
+    },
+    {
+      "demo": "demo_179",
+      "step": 45,
+      "reasons": [
+        "first_override"
+      ]
+    },
+    {
+      "demo": "demo_179",
+      "step": 109,
+      "reasons": [
+        "first_override_while_grasping"
+      ]
+    },
+    {
+      "demo": "demo_179",
+      "step": 160,
+      "reasons": [
+        "largest_predicted_advantage"
+      ]
+    },
+    {
+      "demo": "demo_105",
+      "step": 70,
+      "reasons": [
+        "first_override"
+      ]
+    }
+  ],
+  "anchor_rule": "Failed real-vs-k2 dev demos 97 and 179: first override, maximum predicted override advantage, first override while grasping. Successful demo105: first override. Deduplicate; step<=393.",
+  "short_truth": "Eight executed steps, same pending FIFO, candidate submitted repeatedly. Exact model input match.",
+  "true_state_readout": "Replace predicted states with actual states in the unchanged future_only head.",
+  "continuations": {
+    "once_bc": "Submit candidate once, then original BC k=2 each step.",
+    "hold8_bc": "Submit same candidate eight times, then original BC k=2.",
+    "once_wm": "Submit candidate once, then unchanged deployed WM controller."
+  },
+  "budget": "400 total steps from initial demo, including replayed prefix; stop on success.",
+  "limitations": "Selected dev failure cases, one checkpoint, deterministic noise-free conditional continuations; no population success-rate estimate or sealed-test tuning.",
+  "sha256": {
+    "reproduction\\candidate_truth_20261012_01\\traces_real\\delay_wm_dev_d2_shift_fbshift_fbi2_gm0.02_score.json": "09c28c0320d5a7d78198c9ab465a0860d03c7bb13de9b1391aef2a25ef014d37",
+    "models\\queuepair_20261012_01_real_s17\\model.pt": "37dc0fe3e5e9de933c97b547d065a2b6d349dd3140a5fb8444328d8ddd34348d",
+    "policy\\bc_chunk_dev_v4\\policy_15000.pt": "ef375a81d5c2a5dce26662c68c2965e1954c736cd824e40085a084073777af14",
+    "data\\can_ph_lowdim_v15.hdf5": "3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962",
+    "data\\splits.json": "f2224a32befddd542c9f35790fcbddeb541a5149c4bf00bfc0b0dff160837cc2",
+    "diagnose_candidate_truth.py": "764eef448ff32427ccedf68729114493307507224adb37029002be615c3fdfb1",
+    "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+    "world_model.py": "ac82be1227b91e43da2df0cbb4cdfe35494068147ee9ec99bc526383bdf1946a",
+    "collect_rollout_branches.py": "134567dce9fd58a395789a4da07b0b0178fa9d1aface607b14f31d6955bb1099",
+    "collect_branches.py": "204f38acd87df3b88d91f8ff31b0e3df94d07aa3b8742383917e974454db8f4b",
+    "evaluate_delay.py": "acecd45a6b0b2ac7c61375c413309f3561e1940886e9585035051057b45ac841",
+    "reproduction\\candidate_truth_20261012_01\\traces_real\\traces\\wm_dev_d2_shift_fbshift_fbi2_gm0.02_score__demo_97.jsonl": "aebff924b83f1c44c55e36c98b0eeb5008a6c3071f341d22c65e404dc93afb0b",
+    "reproduction\\candidate_truth_20261012_01\\traces_real\\traces\\wm_dev_d2_shift_fbshift_fbi2_gm0.02_score__demo_179.jsonl": "f70aba7e2a3fde29f2dda0bb14596433121d22d997da50f469af2d2f7134f40a",
+    "reproduction\\candidate_truth_20261012_01\\traces_real\\traces\\wm_dev_d2_shift_fbshift_fbi2_gm0.02_score__demo_105.jsonl": "c2cefac52f42af4032450da9820a859358ea695a0140919ed5eb6e60a069ca20"
+  }
+}

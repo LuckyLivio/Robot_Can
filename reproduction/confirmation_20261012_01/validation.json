@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "evaluator_core_byte_identical": true,
+  "historical_trace_checks": [
+    {
+      "condition": "clean",
+      "historical_demo": "demo_105",
+      "trace_steps": 130,
+      "all_fields_except_timing_exact": true
+    },
+    {
+      "condition": "noise005",
+      "historical_demo": "demo_105",
+      "trace_steps": 400,
+      "all_fields_except_timing_exact": true
+    }
+  ],
+  "all60_noise_arrays_match_evaluator": true,
+  "models": [
+    {
+      "method": "full",
+      "seed": 17,
+      "load_ok": true,
+      "sha256": "c22b12bbe2b5e2d7d938f1589b43dc36e95432e16ed3649058072948bb65b8c1"
+    },
+    {
+      "method": "full",
+      "seed": 23,
+      "load_ok": true,
+      "sha256": "ffb60b99bd84a256c27842e9fce46d06b0031703188a6c9fa9082e23c55e6067"
+    },
+    {
+      "method": "full",
+      "seed": 41,
+      "load_ok": true,
+      "sha256": "724a009cc999ee63cf0e8b0d8ce094af06adb8e8995099d5ae4faf7e8c25bba0"
+    },
+    {
+      "method": "plain",
+      "seed": 17,
+      "load_ok": true,
+      "sha256": "89d997a4a65ec71c72d543b473a867454ee9762a466309f2a3b5f61761ecaaaf"
+    },
+    {
+      "method": "plain",
+      "seed": 23,
+      "load_ok": true,
+      "sha256": "4532746568875e827fa55e674bbebead9398429ee5e902d54ce3caf48a9a5611"
+    },
+    {
+      "method": "plain",
+      "seed": 41,
+      "load_ok": true,
+      "sha256": "80b6b28214204a77fee3eca46b15dffb2a26a128b92a1e20dce00bd35ca46316"
+    }
+  ],
+  "scope": "No confirmation policy rollout performed before lock. Historical demos only for evaluator regression; separate QA starts for state restoration."
+}

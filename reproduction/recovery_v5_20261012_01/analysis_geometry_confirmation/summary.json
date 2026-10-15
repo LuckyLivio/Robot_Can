@@ -1,0 +1,819 @@
+{
+  "stage": "geometry_confirmation",
+  "unique_starts": 16,
+  "new_executed_episodes": 80,
+  "totals": {
+    "v2": {
+      "source_far_alignment": {
+        "successes": 3,
+        "episodes": 4
+      },
+      "destination_corner": {
+        "successes": 0,
+        "episodes": 4
+      },
+      "sideways_source": {
+        "successes": 4,
+        "episodes": 4
+      },
+      "sideways_destination": {
+        "successes": 1,
+        "episodes": 4
+      },
+      "all": {
+        "successes": 8,
+        "episodes": 16
+      }
+    },
+    "v4": {
+      "source_far_alignment": {
+        "successes": 3,
+        "episodes": 4
+      },
+      "destination_corner": {
+        "successes": 3,
+        "episodes": 4
+      },
+      "sideways_source": {
+        "successes": 4,
+        "episodes": 4
+      },
+      "sideways_destination": {
+        "successes": 1,
+        "episodes": 4
+      },
+      "all": {
+        "successes": 11,
+        "episodes": 16
+      }
+    },
+    "timing_only": {
+      "source_far_alignment": {
+        "successes": 4,
+        "episodes": 4
+      },
+      "destination_corner": {
+        "successes": 3,
+        "episodes": 4
+      },
+      "sideways_source": {
+        "successes": 4,
+        "episodes": 4
+      },
+      "sideways_destination": {
+        "successes": 1,
+        "episodes": 4
+      },
+      "all": {
+        "successes": 12,
+        "episodes": 16
+      }
+    },
+    "side_only": {
+      "source_far_alignment": {
+        "successes": 3,
+        "episodes": 4
+      },
+      "destination_corner": {
+        "successes": 3,
+        "episodes": 4
+      },
+      "sideways_source": {
+        "successes": 4,
+        "episodes": 4
+      },
+      "sideways_destination": {
+        "successes": 1,
+        "episodes": 4
+      },
+      "all": {
+        "successes": 11,
+        "episodes": 16
+      }
+    },
+    "v5": {
+      "source_far_alignment": {
+        "successes": 4,
+        "episodes": 4
+      },
+      "destination_corner": {
+        "successes": 3,
+        "episodes": 4
+      },
+      "sideways_source": {
+        "successes": 4,
+        "episodes": 4
+      },
+      "sideways_destination": {
+        "successes": 1,
+        "episodes": 4
+      },
+      "all": {
+        "successes": 12,
+        "episodes": 16
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "version": "v4",
+      "reference": "v2",
+      "rescued_demos": [
+        "demo_11000004",
+        "demo_11000005",
+        "demo_11000007"
+      ],
+      "regressed_demos": []
+    },
+    {
+      "version": "timing_only",
+      "reference": "v4",
+      "rescued_demos": [
+        "demo_11000000"
+      ],
+      "regressed_demos": []
+    },
+    {
+      "version": "side_only",
+      "reference": "v4",
+      "rescued_demos": [],
+      "regressed_demos": []
+    },
+    {
+      "version": "v5",
+      "reference": "v4",
+      "rescued_demos": [
+        "demo_11000000"
+      ],
+      "regressed_demos": []
+    },
+    {
+      "version": "v5",
+      "reference": "v2",
+      "rescued_demos": [
+        "demo_11000000",
+        "demo_11000004",
+        "demo_11000005",
+        "demo_11000007"
+      ],
+      "regressed_demos": []
+    },
+    {
+      "version": "v5",
+      "reference": "timing_only",
+      "rescued_demos": [],
+      "regressed_demos": []
+    },
+    {
+      "version": "v5",
+      "reference": "side_only",
+      "rescued_demos": [
+        "demo_11000000"
+      ],
+      "regressed_demos": []
+    }
+  ],
+  "episodes": [
+    {
+      "version": "v2",
+      "group": "source_far_alignment",
+      "demo": "demo_11000000",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v2",
+      "group": "source_far_alignment",
+      "demo": "demo_11000001",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "v2",
+      "group": "source_far_alignment",
+      "demo": "demo_11000002",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "v2",
+      "group": "source_far_alignment",
+      "demo": "demo_11000003",
+      "success": true,
+      "steps": 352,
+      "attempts": 1
+    },
+    {
+      "version": "v2",
+      "group": "destination_corner",
+      "demo": "demo_11000004",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v2",
+      "group": "destination_corner",
+      "demo": "demo_11000005",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v2",
+      "group": "destination_corner",
+      "demo": "demo_11000006",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v2",
+      "group": "destination_corner",
+      "demo": "demo_11000007",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v2",
+      "group": "sideways_source",
+      "demo": "demo_11000008",
+      "success": true,
+      "steps": 301,
+      "attempts": 1
+    },
+    {
+      "version": "v2",
+      "group": "sideways_source",
+      "demo": "demo_11000009",
+      "success": true,
+      "steps": 291,
+      "attempts": 1
+    },
+    {
+      "version": "v2",
+      "group": "sideways_source",
+      "demo": "demo_11000010",
+      "success": true,
+      "steps": 283,
+      "attempts": 1
+    },
+    {
+      "version": "v2",
+      "group": "sideways_source",
+      "demo": "demo_11000011",
+      "success": true,
+      "steps": 299,
+      "attempts": 1
+    },
+    {
+      "version": "v2",
+      "group": "sideways_destination",
+      "demo": "demo_11000012",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v2",
+      "group": "sideways_destination",
+      "demo": "demo_11000013",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v2",
+      "group": "sideways_destination",
+      "demo": "demo_11000014",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v2",
+      "group": "sideways_destination",
+      "demo": "demo_11000015",
+      "success": true,
+      "steps": 253,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "source_far_alignment",
+      "demo": "demo_11000000",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v4",
+      "group": "source_far_alignment",
+      "demo": "demo_11000001",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "source_far_alignment",
+      "demo": "demo_11000002",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "source_far_alignment",
+      "demo": "demo_11000003",
+      "success": true,
+      "steps": 352,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "destination_corner",
+      "demo": "demo_11000004",
+      "success": true,
+      "steps": 294,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "destination_corner",
+      "demo": "demo_11000005",
+      "success": true,
+      "steps": 290,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "destination_corner",
+      "demo": "demo_11000006",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v4",
+      "group": "destination_corner",
+      "demo": "demo_11000007",
+      "success": true,
+      "steps": 280,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "sideways_source",
+      "demo": "demo_11000008",
+      "success": true,
+      "steps": 301,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "sideways_source",
+      "demo": "demo_11000009",
+      "success": true,
+      "steps": 291,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "sideways_source",
+      "demo": "demo_11000010",
+      "success": true,
+      "steps": 283,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "sideways_source",
+      "demo": "demo_11000011",
+      "success": true,
+      "steps": 299,
+      "attempts": 1
+    },
+    {
+      "version": "v4",
+      "group": "sideways_destination",
+      "demo": "demo_11000012",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v4",
+      "group": "sideways_destination",
+      "demo": "demo_11000013",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v4",
+      "group": "sideways_destination",
+      "demo": "demo_11000014",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v4",
+      "group": "sideways_destination",
+      "demo": "demo_11000015",
+      "success": true,
+      "steps": 253,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "source_far_alignment",
+      "demo": "demo_11000000",
+      "success": true,
+      "steps": 382,
+      "attempts": 2
+    },
+    {
+      "version": "timing_only",
+      "group": "source_far_alignment",
+      "demo": "demo_11000001",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "source_far_alignment",
+      "demo": "demo_11000002",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "source_far_alignment",
+      "demo": "demo_11000003",
+      "success": true,
+      "steps": 352,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "destination_corner",
+      "demo": "demo_11000004",
+      "success": true,
+      "steps": 294,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "destination_corner",
+      "demo": "demo_11000005",
+      "success": true,
+      "steps": 290,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "destination_corner",
+      "demo": "demo_11000006",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "timing_only",
+      "group": "destination_corner",
+      "demo": "demo_11000007",
+      "success": true,
+      "steps": 280,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "sideways_source",
+      "demo": "demo_11000008",
+      "success": true,
+      "steps": 301,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "sideways_source",
+      "demo": "demo_11000009",
+      "success": true,
+      "steps": 291,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "sideways_source",
+      "demo": "demo_11000010",
+      "success": true,
+      "steps": 283,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "sideways_source",
+      "demo": "demo_11000011",
+      "success": true,
+      "steps": 299,
+      "attempts": 1
+    },
+    {
+      "version": "timing_only",
+      "group": "sideways_destination",
+      "demo": "demo_11000012",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "timing_only",
+      "group": "sideways_destination",
+      "demo": "demo_11000013",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "timing_only",
+      "group": "sideways_destination",
+      "demo": "demo_11000014",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "timing_only",
+      "group": "sideways_destination",
+      "demo": "demo_11000015",
+      "success": true,
+      "steps": 253,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "source_far_alignment",
+      "demo": "demo_11000000",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "side_only",
+      "group": "source_far_alignment",
+      "demo": "demo_11000001",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "source_far_alignment",
+      "demo": "demo_11000002",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "source_far_alignment",
+      "demo": "demo_11000003",
+      "success": true,
+      "steps": 352,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "destination_corner",
+      "demo": "demo_11000004",
+      "success": true,
+      "steps": 294,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "destination_corner",
+      "demo": "demo_11000005",
+      "success": true,
+      "steps": 290,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "destination_corner",
+      "demo": "demo_11000006",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "side_only",
+      "group": "destination_corner",
+      "demo": "demo_11000007",
+      "success": true,
+      "steps": 280,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "sideways_source",
+      "demo": "demo_11000008",
+      "success": true,
+      "steps": 301,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "sideways_source",
+      "demo": "demo_11000009",
+      "success": true,
+      "steps": 291,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "sideways_source",
+      "demo": "demo_11000010",
+      "success": true,
+      "steps": 283,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "sideways_source",
+      "demo": "demo_11000011",
+      "success": true,
+      "steps": 299,
+      "attempts": 1
+    },
+    {
+      "version": "side_only",
+      "group": "sideways_destination",
+      "demo": "demo_11000012",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "side_only",
+      "group": "sideways_destination",
+      "demo": "demo_11000013",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "side_only",
+      "group": "sideways_destination",
+      "demo": "demo_11000014",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "side_only",
+      "group": "sideways_destination",
+      "demo": "demo_11000015",
+      "success": true,
+      "steps": 253,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "source_far_alignment",
+      "demo": "demo_11000000",
+      "success": true,
+      "steps": 382,
+      "attempts": 2
+    },
+    {
+      "version": "v5",
+      "group": "source_far_alignment",
+      "demo": "demo_11000001",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "source_far_alignment",
+      "demo": "demo_11000002",
+      "success": true,
+      "steps": 325,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "source_far_alignment",
+      "demo": "demo_11000003",
+      "success": true,
+      "steps": 352,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "destination_corner",
+      "demo": "demo_11000004",
+      "success": true,
+      "steps": 294,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "destination_corner",
+      "demo": "demo_11000005",
+      "success": true,
+      "steps": 290,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "destination_corner",
+      "demo": "demo_11000006",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v5",
+      "group": "destination_corner",
+      "demo": "demo_11000007",
+      "success": true,
+      "steps": 280,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "sideways_source",
+      "demo": "demo_11000008",
+      "success": true,
+      "steps": 301,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "sideways_source",
+      "demo": "demo_11000009",
+      "success": true,
+      "steps": 291,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "sideways_source",
+      "demo": "demo_11000010",
+      "success": true,
+      "steps": 283,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "sideways_source",
+      "demo": "demo_11000011",
+      "success": true,
+      "steps": 299,
+      "attempts": 1
+    },
+    {
+      "version": "v5",
+      "group": "sideways_destination",
+      "demo": "demo_11000012",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v5",
+      "group": "sideways_destination",
+      "demo": "demo_11000013",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v5",
+      "group": "sideways_destination",
+      "demo": "demo_11000014",
+      "success": false,
+      "steps": 400,
+      "attempts": 2
+    },
+    {
+      "version": "v5",
+      "group": "sideways_destination",
+      "demo": "demo_11000015",
+      "success": true,
+      "steps": 253,
+      "attempts": 1
+    }
+  ],
+  "scope": "Descriptive stress test, four starts per hand-specified geometry stratum. Stationary-open proposal and forced recovery at step 80; not learned-policy distribution, not pooled with native confirmation."
+}

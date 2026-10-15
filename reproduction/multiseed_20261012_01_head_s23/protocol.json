@@ -1,0 +1,89 @@
+{
+  "status": "frozen_before_training",
+  "args": {
+    "tag": "multiseed_20261012_01_head_s23",
+    "base_model": "multiseed_20261012_01_full_s23",
+    "dataset": "queuepair_20261012_01_real",
+    "seed": 23,
+    "updates": 3000,
+    "batch": 16,
+    "lr": 0.0003,
+    "real_weight": 1.0,
+    "eval_every": 250
+  },
+  "device": "cuda",
+  "base_selected_step": 1250,
+  "train_parents": [
+    "demo_1",
+    "demo_10",
+    "demo_101",
+    "demo_104",
+    "demo_108",
+    "demo_11",
+    "demo_129",
+    "demo_133",
+    "demo_136",
+    "demo_152",
+    "demo_159",
+    "demo_180",
+    "demo_33",
+    "demo_44",
+    "demo_47",
+    "demo_54",
+    "demo_74",
+    "demo_88",
+    "demo_92",
+    "demo_94"
+  ],
+  "dev_branch_parents": [
+    "demo_0",
+    "demo_105",
+    "demo_118",
+    "demo_124",
+    "demo_174",
+    "demo_28",
+    "demo_49",
+    "demo_62"
+  ],
+  "train_groups": 160,
+  "dev_groups": 64,
+  "trainable_parameters": 3330,
+  "frozen_parameters": 83991,
+  "trainable_names": [
+    "labels.0.weight",
+    "labels.0.bias",
+    "labels.2.weight",
+    "labels.2.bias"
+  ],
+  "objective": "BCE(pred_progress,target_progress) + 0.5*BCE(pred_risk,target_risk) + 0.2*predicted_group_rank_loss + real_weight*(BCE(real_state_progress,target_progress) + 0.5*BCE(real_state_risk,target_risk))",
+  "arm_weights": {
+    "control": 0.0,
+    "calibrated": 1.0
+  },
+  "optimizer": "Adam, original learning rate, clip_grad_norm=10; identical initial weights and minibatch indices",
+  "selection": "Original rule: minimum dev branch mean_regret on predicted-state scores; strict improvement, earliest tie. Step0 is a reference, not an eligible newly trained checkpoint. No closed-loop success or diagnostic anchor is used to choose a checkpoint.",
+  "frozen": [
+    "state predictor",
+    "normalization buffers",
+    "BC policy",
+    "score formula",
+    "gate margin 0.02",
+    "candidate expansion",
+    "FIFO/execution",
+    "train/dev parent split"
+  ],
+  "evaluation": "Both selected checkpoints on all 30 original dev episodes, D2/H8/K4, shift fallback k2, score-only, noise0, 400 steps. No sealed_test.",
+  "minibatch_sha256": "3385441fb9494b64b1425bf97e8a4393758cc809d65679eb12281fd16ede9f15",
+  "source_sha256": {
+    "models/multiseed_20261012_01_full_s23/model.pt": "ffb60b99bd84a256c27842e9fce46d06b0031703188a6c9fa9082e23c55e6067",
+    "data/branches_train_queuepair_20261012_01_real.npz": "28f9c7bc145d911adbfc290ed6a62ab1d2f82b5c0766f3103fe63a339c6b9a8c",
+    "data/branches_dev_queuepair_20261012_01_real.npz": "a4e700269544f3c853d014b9a1bcfbb6004c269ba91da6ea53dd953e3fd11a05",
+    "data/splits.json": "f2224a32befddd542c9f35790fcbddeb541a5149c4bf00bfc0b0dff160837cc2",
+    "calibrate_score_head.py": "f020a0c8d5cd8186acbc24aca2f0d917ee88fe6613678c64b84cac1ea51d6252",
+    "world_model.py": "ac82be1227b91e43da2df0cbb4cdfe35494068147ee9ec99bc526383bdf1946a",
+    "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+    "evaluate_delay.py": "acecd45a6b0b2ac7c61375c413309f3561e1940886e9585035051057b45ac841",
+    "train_world.py": "4931798d73f566195545b02134240c4322bad5bd59a8e4ab42f02489a321e101"
+  },
+  "limitations": "One calibration seed and one frozen pretrained dynamics model; no multi-seed performance claim."
+}

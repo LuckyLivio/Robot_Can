@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "old_files_unchanged": 2263,
+  "frozen_inputs_unchanged": true,
+  "verified_executed_episodes": 2672,
+  "verified_control_steps": 460361,
+  "physical_replays": [
+    {
+      "job": "full_s17_clean",
+      "demo": "demo_105",
+      "steps": 311,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "full_s17_noise005",
+      "demo": "demo_105",
+      "steps": 313,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "full_s17_clean",
+      "demo": "demo_105",
+      "steps": 310,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "full_s17_noise005",
+      "demo": "demo_105",
+      "steps": 313,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "full_s17_clean",
+      "demo": "demo_105",
+      "steps": 310,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "full_s17_noise005",
+      "demo": "demo_105",
+      "steps": 313,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v2_full_s17_clean",
+      "demo": "demo_6000000",
+      "steps": 364,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v2_full_s17_noise005",
+      "demo": "demo_6000000",
+      "steps": 369,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v3_full_s17_clean",
+      "demo": "demo_6000000",
+      "steps": 363,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v3_full_s17_noise005",
+      "demo": "demo_6000000",
+      "steps": 372,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v2_geometry",
+      "demo": "demo_7000000",
+      "steps": 336,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v3_geometry",
+      "demo": "demo_7000000",
+      "steps": 381,
+      "max_state_error": 0.0
+    }
+  ],
+  "summary_totals": {
+    "disabled": 373,
+    "v1": 419,
+    "v2": 436,
+    "v3": 434
+  },
+  "v3_rescues_vs_v2": 1,
+  "v3_regressions_vs_v2": 3,
+  "geometry_summary": [
+    {
+      "kind": "source_far_alignment",
+      "starts": 4,
+      "v2_successes": 4,
+      "v3_successes": 4,
+      "rescues": [],
+      "regressions": []
+    },
+    {
+      "kind": "destination_corner",
+      "starts": 4,
+      "v2_successes": 0,
+      "v3_successes": 1,
+      "rescues": [
+        "demo_7000006"
+      ],
+      "regressions": []
+    },
+    {
+      "kind": "sideways_source",
+      "starts": 4,
+      "v2_successes": 3,
+      "v3_successes": 3,
+      "rescues": [],
+      "regressions": []
+    },
+    {
+      "kind": "sideways_destination",
+      "starts": 4,
+      "v2_successes": 1,
+      "v3_successes": 2,
+      "rescues": [
+        "demo_7000013"
+      ],
+      "regressions": []
+    }
+  ],
+  "report_sha256": "d3b23028c1a1fa7569057c2fc1d3b76d624e165badd2bdc5df32af74ade8d666",
+  "receipts_sha256": {
+    "dev_a": "89e9312309c0a359fa08f39a3f918e150c6f5da22e533c487be39b3055a73f79",
+    "dev_b": "12d516f94b0ae6b0477d532c9a7ec3e98f16b56bc78f21cc806734493b46986d",
+    "dev_c": "bba4e179fbd1638d5dd312990d9c8612a537a1dada75205be1f0cba30f658979",
+    "confirmation": "96a49bcf24c3eb047b0e27b5e494b12bd11c71ac8472b90a96b04f4e64d18292",
+    "geometry_confirmation": "5862925a0b1b1c9aabb4f1eff20a1da96ce5c650c873a5beea1bca7a59318992"
+  }
+}

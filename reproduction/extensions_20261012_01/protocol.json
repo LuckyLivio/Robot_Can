@@ -1,0 +1,103 @@
+{
+  "registered_utc": "2026-10-12T03:28:58.286062+00:00",
+  "status": "frozen_before_supplemental_population_runs",
+  "split": "development_only",
+  "demos": [
+    "demo_105",
+    "demo_118",
+    "demo_62",
+    "demo_174",
+    "demo_124",
+    "demo_28",
+    "demo_0",
+    "demo_49",
+    "demo_73",
+    "demo_128",
+    "demo_173",
+    "demo_32",
+    "demo_26",
+    "demo_85",
+    "demo_21",
+    "demo_195",
+    "demo_150",
+    "demo_188",
+    "demo_97",
+    "demo_87",
+    "demo_7",
+    "demo_90",
+    "demo_111",
+    "demo_120",
+    "demo_22",
+    "demo_156",
+    "demo_185",
+    "demo_110",
+    "demo_179",
+    "demo_43"
+  ],
+  "training": "None; preserve all existing checkpoints and results",
+  "seeds": [
+    17,
+    23,
+    41
+  ],
+  "delay_steps": 2,
+  "step_limit": 400,
+  "control_hz": 20,
+  "noises": [
+    0.0,
+    0.05
+  ],
+  "execution_noise": "XYZ Gaussian; RNG70000+demo_id; clip[-1,1]; identical existing evaluator",
+  "candidate_semantics": "Constant submitted command BC chunk[k], appended behind real FIFO; commit one step and replan",
+  "score": "progress_final + 0.5 mean_progress - 0.5 max_grasp_loss",
+  "gate": "Fallback actual BC shift k=2 in EVERY set; require score advantage >=0.02",
+  "horizons": {
+    "new": [
+      1,
+      3
+    ],
+    "reused": [
+      4,
+      8
+    ],
+    "definition": "Total executed steps INCLUDING D=2 pending commands. H=1 sees no new candidate effect; H=3 sees exactly its first step."
+  },
+  "candidate_counts": {
+    "1": [
+      2
+    ],
+    "2": [
+      0,
+      2
+    ],
+    "4": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "8": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "caution": "K=8 adds shift values outside the K=4 branch-training distribution; this is a nested support/budget sensitivity, not a distribution-neutral compute scaling law"
+  },
+  "persistence": "No learned dynamics: x_future=x_current for all H steps and candidates. Same frozen Full future-only readout s17 and same gate. Scores tie, so action sequence must equal BC k=2. Dynamics is parameter-free; do not count copied seed outcomes as extra evidence. Check head invariance across all 3 seeds offline.",
+  "k1": "Only candidate is k=2: no search; one run per condition because trained seed cannot affect action choice",
+  "oracle": "Closed-loop true future labels from exact simulator counterfactuals at EVERY decision. H=8, K=4, same score/gate. Branches have no execution noise, even when live execution has noise .05; no privileged future-noise knowledge. One policy, no training seed replication. Diagnostic local oracle, not deployable and not guaranteed global-success upper bound.",
+  "oracle_recovery": "Full native MjData copy plus controller/gripper/observable/buffer Python fields; validated against complete history replay and reverse branch order",
+  "population_jobs": 88,
+  "new_closed_loop_episodes": 900,
+  "reused_baselines": "Existing exact-setting Full H8/K4, H4, Plain and BCk2; reference_jobs.json records immutable sources. Do not double count these as new runs.",
+  "offline": "Existing 64 dev branch groups/8 parents: Full/Plain dynamics versus state persistence, normalized state MSE and physical position error; same frozen head on predicted/true/persistent states, local ranking regret and gate agreement. No fitting or selection.",
+  "statistics": "20,000 paired bootstrap resamples of 30 start IDs and 3 trained seed IDs when applicable; deterministic policies broadcast for pairing but not treated as independently trained models. RNG2026101204. Exploratory intervals, no multiplicity-adjusted claim.",
+  "success_definition": "Unchanged env._check_success, stop on first success or 400 controls",
+  "confirmation": "Previous 60-start confirmation remains frozen and is NOT reused for new tuning/testing.",
+  "reporting": "Report every registered variant and failure; no winner selection on confirmation; no manuscript writing."
+}

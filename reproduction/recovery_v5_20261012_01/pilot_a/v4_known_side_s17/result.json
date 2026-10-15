@@ -1,0 +1,136 @@
+{
+  "status": "complete",
+  "job": {
+    "id": "v4_known_side_s17",
+    "method": "full",
+    "seed": 17,
+    "noise": 0.0,
+    "enabled": true,
+    "demos": [
+      "demo_97"
+    ],
+    "version": "v4",
+    "config": {}
+  },
+  "records": [
+    {
+      "demo": "demo_97",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.5279569908054668,
+      "ever_grasped": true,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": true,
+      "stable_hold_steps": 44,
+      "intervention_steps": 206,
+      "intervention_fraction": 0.515,
+      "attempts": 2,
+      "verified_regrasps": 0,
+      "failed_attempts": 2,
+      "phases": {
+        "NORMAL": 96,
+        "RETRACT": 29,
+        "ALIGN": 37,
+        "DESCEND": 140,
+        "EXHAUSTED": 98
+      },
+      "events": [
+        {
+          "step": 97,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "near_object_stall",
+          "attempt": 1,
+          "object_position": [
+            0.08326709270477295,
+            0.3582221567630768,
+            0.9399579167366028
+          ]
+        },
+        {
+          "step": 106,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.011805407702922821,
+            0.37882199883461,
+            0.8440530896186829
+          ]
+        },
+        {
+          "step": 135,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.011422543786466122,
+            0.38187935948371887,
+            0.8438156247138977
+          ]
+        },
+        {
+          "step": 206,
+          "from": "DESCEND",
+          "to": "RETRACT",
+          "reason": "phase_timeout",
+          "attempt": 2,
+          "object_position": [
+            0.011423720978200436,
+            0.38187870383262634,
+            0.843812108039856
+          ]
+        },
+        {
+          "step": 224,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 2,
+          "object_position": [
+            0.011387364938855171,
+            0.38188496232032776,
+            0.8438122272491455
+          ]
+        },
+        {
+          "step": 232,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 2,
+          "object_position": [
+            0.011386476457118988,
+            0.3818788528442383,
+            0.8438135981559753
+          ]
+        },
+        {
+          "step": 303,
+          "from": "DESCEND",
+          "to": "EXHAUSTED",
+          "reason": "attempt_limit",
+          "attempt": 2,
+          "object_position": [
+            0.011410600505769253,
+            0.38188520073890686,
+            0.8438155055046082
+          ]
+        }
+      ],
+      "fault_step": null,
+      "mean_decision_ms": 1.2446347501736454,
+      "original_selection_counts": {
+        "2": 355,
+        "3": 3,
+        "0": 37,
+        "1": 5
+      },
+      "elapsed_s": 3.5968618000006245
+    }
+  ],
+  "input": "PRIVILEGED_CURRENT_STATE_AND_FIXED_TASK_GOAL",
+  "supervisor_note": "Observation history only. Reward/contact/success are not used in choose(). No learned weight changes."
+}

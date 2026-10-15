@@ -1,0 +1,353 @@
+{
+  "status": "frozen_before_training_and_closed_loop_results",
+  "seeds": [
+    17,
+    23,
+    41
+  ],
+  "dataset": "queuepair_20261012_01_real",
+  "data": {
+    "train": {
+      "parents": [
+        "demo_1",
+        "demo_10",
+        "demo_101",
+        "demo_104",
+        "demo_108",
+        "demo_11",
+        "demo_129",
+        "demo_133",
+        "demo_136",
+        "demo_152",
+        "demo_159",
+        "demo_180",
+        "demo_33",
+        "demo_44",
+        "demo_47",
+        "demo_54",
+        "demo_74",
+        "demo_88",
+        "demo_92",
+        "demo_94"
+      ],
+      "groups": 160,
+      "shape_a": [
+        160,
+        4,
+        8,
+        7
+      ],
+      "sha256": "28f9c7bc145d911adbfc290ed6a62ab1d2f82b5c0766f3103fe63a339c6b9a8c"
+    },
+    "dev": {
+      "parents": [
+        "demo_0",
+        "demo_105",
+        "demo_118",
+        "demo_124",
+        "demo_174",
+        "demo_28",
+        "demo_49",
+        "demo_62"
+      ],
+      "groups": 64,
+      "shape_a": [
+        64,
+        4,
+        8,
+        7
+      ],
+      "sha256": "a4e700269544f3c853d014b9a1bcfbb6004c269ba91da6ea53dd953e3fd11a05"
+    }
+  },
+  "train_methods": [
+    "full",
+    "plain",
+    "direct",
+    "prediction_only"
+  ],
+  "parameters": {
+    "full": 87321,
+    "plain": 87321,
+    "direct": 87364,
+    "prediction_only": 87321
+  },
+  "initialization_hashes": {
+    "17": {
+      "full": "bd5303d97478dde3bb2abb46f3d4e9b36a1ce76bd982bff454585479154a99ab",
+      "plain": "bd5303d97478dde3bb2abb46f3d4e9b36a1ce76bd982bff454585479154a99ab",
+      "direct": "bb328d04a5d436ab13f06c7d39ba980e7ed0313f6530b445f4e81671f2ac8ff9",
+      "prediction_only": "bd5303d97478dde3bb2abb46f3d4e9b36a1ce76bd982bff454585479154a99ab"
+    },
+    "23": {
+      "full": "d8036ff54968bef5e7ad3e75d21f6faab54cda29266b4a5e7198e5cdcd3576e5",
+      "plain": "d8036ff54968bef5e7ad3e75d21f6faab54cda29266b4a5e7198e5cdcd3576e5",
+      "direct": "254ebe0ee5ed569d4ef019b75b614bce26bce9c5e8bcd46226c773906496b26d",
+      "prediction_only": "d8036ff54968bef5e7ad3e75d21f6faab54cda29266b4a5e7198e5cdcd3576e5"
+    },
+    "41": {
+      "full": "31d039f827d28e5acad78577a72fcb627edc72bdb953f691aabca65a1f71e63b",
+      "plain": "31d039f827d28e5acad78577a72fcb627edc72bdb953f691aabca65a1f71e63b",
+      "direct": "25fdab2733ebd53a95b28c9a5902164209ce5d4a3d5f513a7517da5a75e03cff",
+      "prediction_only": "31d039f827d28e5acad78577a72fcb627edc72bdb953f691aabca65a1f71e63b"
+    }
+  },
+  "training_updates": 3000,
+  "batch_groups": 16,
+  "optimizer": "Adam lr=0.0003, clip=10, float32, deterministic algorithms, highest matmul precision",
+  "minibatches": "CPU torch.Generator(seed), 3000x16 indices; identical across all methods within a seed; independent of architecture RNG.",
+  "model_initialization": "Full, Plain and prediction-only share initial tensors within seed. Direct matches total parameter count to within 0.1%.",
+  "losses": {
+    "full": "state MSE + progress BCE + 0.5 risk BCE + 0.2 rank",
+    "plain": "state MSE + progress BCE + 0.5 risk BCE",
+    "direct": "progress BCE + 0.5 risk BCE + 0.2 rank; no future-state output or state MSE",
+    "prediction_only": "state MSE only; unused random label head frozen and ignored at deployment",
+    "head_control": "additional 3000 head-only updates on selected Full; original label and ranking objective",
+    "calibrated": "same additional 3000 head-only updates and batches; add weight1 true-future-state label loss"
+  },
+  "selection": "Check every250 steps. Full/Plain/Direct: minimum dev branch score regret; prediction-only: minimum dev normalized state MSE. Earliest exact tie. Head arms retain existing predicted-score-regret selection. Never select from closed-loop successes.",
+  "evaluation_settings": [
+    {
+      "method": "full",
+      "seed": 17,
+      "model": "multiseed_20261012_01_full_s17"
+    },
+    {
+      "method": "plain",
+      "seed": 17,
+      "model": "multiseed_20261012_01_plain_s17"
+    },
+    {
+      "method": "direct",
+      "seed": 17,
+      "model": "multiseed_20261012_01_direct_s17"
+    },
+    {
+      "method": "prediction_only",
+      "seed": 17,
+      "model": "multiseed_20261012_01_prediction_only_s17"
+    },
+    {
+      "method": "head_control",
+      "seed": 17,
+      "model": "multiseed_20261012_01_head_s17_control_s17"
+    },
+    {
+      "method": "calibrated",
+      "seed": 17,
+      "model": "multiseed_20261012_01_head_s17_calibrated_s17"
+    },
+    {
+      "method": "no_risk_score",
+      "seed": 17,
+      "model": "multiseed_20261012_01_full_s17"
+    },
+    {
+      "method": "no_gate",
+      "seed": 17,
+      "model": "multiseed_20261012_01_full_s17"
+    },
+    {
+      "method": "horizon4",
+      "seed": 17,
+      "model": "multiseed_20261012_01_full_s17"
+    },
+    {
+      "method": "full",
+      "seed": 23,
+      "model": "multiseed_20261012_01_full_s23"
+    },
+    {
+      "method": "plain",
+      "seed": 23,
+      "model": "multiseed_20261012_01_plain_s23"
+    },
+    {
+      "method": "direct",
+      "seed": 23,
+      "model": "multiseed_20261012_01_direct_s23"
+    },
+    {
+      "method": "prediction_only",
+      "seed": 23,
+      "model": "multiseed_20261012_01_prediction_only_s23"
+    },
+    {
+      "method": "head_control",
+      "seed": 23,
+      "model": "multiseed_20261012_01_head_s23_control_s23"
+    },
+    {
+      "method": "calibrated",
+      "seed": 23,
+      "model": "multiseed_20261012_01_head_s23_calibrated_s23"
+    },
+    {
+      "method": "no_risk_score",
+      "seed": 23,
+      "model": "multiseed_20261012_01_full_s23"
+    },
+    {
+      "method": "no_gate",
+      "seed": 23,
+      "model": "multiseed_20261012_01_full_s23"
+    },
+    {
+      "method": "horizon4",
+      "seed": 23,
+      "model": "multiseed_20261012_01_full_s23"
+    },
+    {
+      "method": "full",
+      "seed": 41,
+      "model": "multiseed_20261012_01_full_s41"
+    },
+    {
+      "method": "plain",
+      "seed": 41,
+      "model": "multiseed_20261012_01_plain_s41"
+    },
+    {
+      "method": "direct",
+      "seed": 41,
+      "model": "multiseed_20261012_01_direct_s41"
+    },
+    {
+      "method": "prediction_only",
+      "seed": 41,
+      "model": "multiseed_20261012_01_prediction_only_s41"
+    },
+    {
+      "method": "head_control",
+      "seed": 41,
+      "model": "multiseed_20261012_01_head_s41_control_s41"
+    },
+    {
+      "method": "calibrated",
+      "seed": 41,
+      "model": "multiseed_20261012_01_head_s41_calibrated_s41"
+    },
+    {
+      "method": "no_risk_score",
+      "seed": 41,
+      "model": "multiseed_20261012_01_full_s41"
+    },
+    {
+      "method": "no_gate",
+      "seed": 41,
+      "model": "multiseed_20261012_01_full_s41"
+    },
+    {
+      "method": "horizon4",
+      "seed": 41,
+      "model": "multiseed_20261012_01_full_s41"
+    },
+    {
+      "method": "bc_k0",
+      "seed": null,
+      "model": "multiseed_20261012_01_full_s17"
+    },
+    {
+      "method": "bc_k1",
+      "seed": null,
+      "model": "multiseed_20261012_01_full_s17"
+    },
+    {
+      "method": "bc_k2",
+      "seed": null,
+      "model": "multiseed_20261012_01_full_s17"
+    }
+  ],
+  "evaluation_workers": 3,
+  "closed_loop_split": "dev",
+  "demos": [
+    "demo_105",
+    "demo_118",
+    "demo_62",
+    "demo_174",
+    "demo_124",
+    "demo_28",
+    "demo_0",
+    "demo_49",
+    "demo_73",
+    "demo_128",
+    "demo_173",
+    "demo_32",
+    "demo_26",
+    "demo_85",
+    "demo_21",
+    "demo_195",
+    "demo_150",
+    "demo_188",
+    "demo_97",
+    "demo_87",
+    "demo_7",
+    "demo_90",
+    "demo_111",
+    "demo_120",
+    "demo_22",
+    "demo_156",
+    "demo_185",
+    "demo_110",
+    "demo_179",
+    "demo_43"
+  ],
+  "noise_std": [
+    0.0,
+    0.05
+  ],
+  "delay": 2,
+  "horizon": 8,
+  "candidates": 4,
+  "fallback_index": 2,
+  "gate_margin": 0.02,
+  "risk_weight": 0.5,
+  "steps": 400,
+  "candidate_rollout": "Repeat constant candidate submission; commit one real command then replan each observation.",
+  "paired_noise": "numpy default_rng(70000+demo_number); same per-step positional Gaussian draws within condition for every method.",
+  "inference_ablations": {
+    "no_risk_score": "Same Full checkpoint, risk_weight=0 only; training risk supervision remains. Isolates risk term at decision time.",
+    "no_gate": "Same Full checkpoint, gate_margin=0; always choose score argmax.",
+    "horizon4": "Same Full checkpoint, prediction horizon=4 rather than8; all candidates and other parameters unchanged."
+  },
+  "prediction_only_caveat": "Use existing physical_cost on predicted future state, with known bin geometry and holding heuristic. Gate margin0.02 is in distance-cost units, not learned-score units; this is a label-free alternative controller, not a strict one-factor score-scale ablation. No random-head use.",
+  "fairness_scope": "Matched data, per-seed batches, candidate set and common learned-score controller; Full/Plain share architecture; Direct has matched parameter count, not identical FLOPs. Head calibration has extra training; compare primarily with head_control, not only raw Full.",
+  "primary_metric": "Per-seed success/30 in each condition, paired episode differences versus BC k2 and matched ablations. Average all three seeds, never choose best seed.",
+  "uncertainty": "Paired bootstrap over parent episodes per seed; crossed seed and parent bootstrap for mean paired difference. Repeated seeds/conditions are not independent task samples; n=3 seed uncertainty is limited. Descriptive development intervals.",
+  "no_tuning": "No hyperparameter or seed selection after outcomes; no sealed_test or new confirmation testing in this suite.",
+  "input": "23D privileged simulator state including object state; not vision-only.",
+  "job_count": 75,
+  "evaluation_jobs": 60,
+  "evaluation_episode_records": 1800,
+  "source_sha256": {
+    "data/can_ph_lowdim_v15.hdf5": "3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962",
+    "data/splits.json": "f2224a32befddd542c9f35790fcbddeb541a5149c4bf00bfc0b0dff160837cc2",
+    "policy/bc_chunk_dev_v4/policy_15000.pt": "ef375a81d5c2a5dce26662c68c2965e1954c736cd824e40085a084073777af14",
+    "data/branches_train_queuepair_20261012_01_real.npz": "28f9c7bc145d911adbfc290ed6a62ab1d2f82b5c0766f3103fe63a339c6b9a8c",
+    "data/branches_train_queuepair_20261012_01_real.json": "ead1cd70f49a7dc8f00fe4c1fad8eea1881f723a1e96c0529435a5cc22440f8d",
+    "data/branches_dev_queuepair_20261012_01_real.npz": "a4e700269544f3c853d014b9a1bcfbb6004c269ba91da6ea53dd953e3fd11a05",
+    "data/branches_dev_queuepair_20261012_01_real.json": "de0d952ee5821831b00e64391f20d62ed0793f62372d2e64cf0007403bb319fe",
+    "world_model.py": "ac82be1227b91e43da2df0cbb4cdfe35494068147ee9ec99bc526383bdf1946a",
+    "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+    "collect_branches.py": "204f38acd87df3b88d91f8ff31b0e3df94d07aa3b8742383917e974454db8f4b",
+    "evaluate_delay.py": "acecd45a6b0b2ac7c61375c413309f3561e1940886e9585035051057b45ac841",
+    "calibrate_score_head.py": "f020a0c8d5cd8186acbc24aca2f0d917ee88fe6613678c64b84cac1ea51d6252",
+    "reproduction/multiseed_20261012_01/train_suite.py": "2720d2f9ef03b2b6a7595750ea185ca53789303407b89c35bd19fec138256094",
+    "reproduction/multiseed_20261012_01/evaluate_suite.py": "14293545ae3ac23fa11a4d8d62efeec2a56338dfbf91bd422b79e7285e3bce68",
+    "reproduction/multiseed_20261012_01/run_suite.py": "ffbba91726585f0e439dbbfc114cc7b90320f2a31205ebb7f7727bd90b372324",
+    "reproduction/multiseed_20261012_01/register_suite.py": "1d1579735594f9aaf471a89918385660ed6fbdeb2dc90d245f33b8072e649f7a"
+  },
+  "jobs_sha256": "8c07bedf00723eab417baf1a5014c208fb5fb33374e76eff56fc7ef94a5f8e23",
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "numpy": "1.26.4",
+    "robosuite": "1.5.1",
+    "mujoco": "3.3.0",
+    "h5py": "3.11.0"
+  },
+  "limitations": [
+    "Same fixed BC checkpoint, branch dataset and 30 repeatedly inspected dev parents; seeds vary WM initialization and minibatches only.",
+    "Branch training covers20 parents, development branch selection8 parents. No claim of using all140 training demonstrations for WM branches.",
+    "This completes multiseed development comparison, not untouched confirmation or a formal school graduation review."
+  ]
+}

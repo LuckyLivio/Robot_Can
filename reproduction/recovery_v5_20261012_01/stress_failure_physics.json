@@ -1,0 +1,5569 @@
+{
+  "post_hoc": true,
+  "selection": "Four v5 failures in the 16-start stress test, plus v4 for the sole initially feasible new side-plan failure. No tuning.",
+  "measurement": "Physical contacts are sampled at 20 Hz control boundaries, not every physics substep. Diagnostics only, never inputs to control.",
+  "results": [
+    {
+      "version": "v5",
+      "demo": "demo_11000006",
+      "exact_physics_replay": true,
+      "controls": 400,
+      "success": false,
+      "phases": {
+        "NORMAL": 79,
+        "RETRACT": 26,
+        "ALIGN": 56,
+        "DESCEND": 140,
+        "EXHAUSTED": 99
+      },
+      "wall_robot_contact_boundaries": {
+        "bin2 / gripper0_right_leftfinger": 10,
+        "bin2 / gripper0_right_rightfinger": 162,
+        "bin2 / gripper0_right_right_gripper": 56
+      },
+      "contacts_by_phase": {
+        "DESCEND: bin2 / gripper0_right_leftfinger": 10,
+        "DESCEND: bin2 / gripper0_right_rightfinger": 63,
+        "RETRACT: bin2 / gripper0_right_right_gripper": 1,
+        "DESCEND: bin2 / gripper0_right_right_gripper": 52,
+        "EXHAUSTED: bin2 / gripper0_right_right_gripper": 3,
+        "EXHAUSTED: bin2 / gripper0_right_rightfinger": 99
+      },
+      "descent_observations": [
+        {
+          "step": 124,
+          "attempt": 1,
+          "position_error_m": 0.12911498838749674,
+          "angle_error_rad": 0.011239267740647155,
+          "observed_gap_m": 0.03937872126698494,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 125,
+          "attempt": 1,
+          "position_error_m": 0.12996939531611743,
+          "angle_error_rad": 0.015717982333073255,
+          "observed_gap_m": 0.04478037357330322,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 126,
+          "attempt": 1,
+          "position_error_m": 0.1308982110874374,
+          "angle_error_rad": 0.019970044001058573,
+          "observed_gap_m": 0.051323000341653824,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 127,
+          "attempt": 1,
+          "position_error_m": 0.12808205038499526,
+          "angle_error_rad": 0.0236564974490986,
+          "observed_gap_m": 0.05850520730018616,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 128,
+          "attempt": 1,
+          "position_error_m": 0.12087043014197917,
+          "angle_error_rad": 0.026595003800098507,
+          "observed_gap_m": 0.0660460814833641,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 129,
+          "attempt": 1,
+          "position_error_m": 0.11270591177154064,
+          "angle_error_rad": 0.028646146934361818,
+          "observed_gap_m": 0.07127698510885239,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 130,
+          "attempt": 1,
+          "position_error_m": 0.10430019724631238,
+          "angle_error_rad": 0.029789918784032317,
+          "observed_gap_m": 0.07423755526542664,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 131,
+          "attempt": 1,
+          "position_error_m": 0.09578505493032266,
+          "angle_error_rad": 0.030086235526343003,
+          "observed_gap_m": 0.07462256401777267,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 132,
+          "attempt": 1,
+          "position_error_m": 0.0872018947405793,
+          "angle_error_rad": 0.029633739887240197,
+          "observed_gap_m": 0.071844682097435,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 133,
+          "attempt": 1,
+          "position_error_m": 0.0785294490518978,
+          "angle_error_rad": 0.028558038776622337,
+          "observed_gap_m": 0.06678412854671478,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 134,
+          "attempt": 1,
+          "position_error_m": 0.06977713168238514,
+          "angle_error_rad": 0.02697649257215332,
+          "observed_gap_m": 0.060432612895965576,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 135,
+          "attempt": 1,
+          "position_error_m": 0.060958112348580125,
+          "angle_error_rad": 0.025013483192817983,
+          "observed_gap_m": 0.05335760861635208,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 136,
+          "attempt": 1,
+          "position_error_m": 0.052032864310117596,
+          "angle_error_rad": 0.022774014734008058,
+          "observed_gap_m": 0.04587685689330101,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 137,
+          "attempt": 1,
+          "position_error_m": 0.04306373448842288,
+          "angle_error_rad": 0.020352886938876602,
+          "observed_gap_m": 0.03816841542720795,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 138,
+          "attempt": 1,
+          "position_error_m": 0.036118289558021974,
+          "angle_error_rad": 0.017568764097306448,
+          "observed_gap_m": 0.03558121621608734,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 139,
+          "attempt": 1,
+          "position_error_m": 0.03455774678116029,
+          "angle_error_rad": 0.012315657165594804,
+          "observed_gap_m": 0.03557199984788895,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 140,
+          "attempt": 1,
+          "position_error_m": 0.03368162183081039,
+          "angle_error_rad": 0.007057540227334777,
+          "observed_gap_m": 0.03575911372900009,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 141,
+          "attempt": 1,
+          "position_error_m": 0.0334519740017535,
+          "angle_error_rad": 0.002602953810069731,
+          "observed_gap_m": 0.03612515330314636,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 142,
+          "attempt": 1,
+          "position_error_m": 0.03367167564810371,
+          "angle_error_rad": 0.0029173233429937344,
+          "observed_gap_m": 0.03789028525352478,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 143,
+          "attempt": 1,
+          "position_error_m": 0.031156270968837777,
+          "angle_error_rad": 0.005961354797975039,
+          "observed_gap_m": 0.050360020250082016,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 144,
+          "attempt": 1,
+          "position_error_m": 0.029711592924189893,
+          "angle_error_rad": 0.010458865848434435,
+          "observed_gap_m": 0.06214270740747452,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 145,
+          "attempt": 1,
+          "position_error_m": 0.02862173386180664,
+          "angle_error_rad": 0.013600712749507231,
+          "observed_gap_m": 0.0705002173781395,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 146,
+          "attempt": 1,
+          "position_error_m": 0.027813154354350913,
+          "angle_error_rad": 0.01551734937912099,
+          "observed_gap_m": 0.07570180296897888,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 147,
+          "attempt": 1,
+          "position_error_m": 0.027042253785384107,
+          "angle_error_rad": 0.016217429826977908,
+          "observed_gap_m": 0.07700642943382263,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 148,
+          "attempt": 1,
+          "position_error_m": 0.02624585228962671,
+          "angle_error_rad": 0.016103706133404748,
+          "observed_gap_m": 0.0753527283668518,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 149,
+          "attempt": 1,
+          "position_error_m": 0.02554452915320527,
+          "angle_error_rad": 0.015399082694559035,
+          "observed_gap_m": 0.07126884907484055,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 150,
+          "attempt": 1,
+          "position_error_m": 0.0251094945556921,
+          "angle_error_rad": 0.014200815702450336,
+          "observed_gap_m": 0.0657133013010025,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 151,
+          "attempt": 1,
+          "position_error_m": 0.025033281447643115,
+          "angle_error_rad": 0.012850948988717328,
+          "observed_gap_m": 0.059318430721759796,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 152,
+          "attempt": 1,
+          "position_error_m": 0.025407419765076725,
+          "angle_error_rad": 0.011318410542405889,
+          "observed_gap_m": 0.052375905215740204,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 153,
+          "attempt": 1,
+          "position_error_m": 0.02623842272227743,
+          "angle_error_rad": 0.009716636900565232,
+          "observed_gap_m": 0.045124754309654236,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 154,
+          "attempt": 1,
+          "position_error_m": 0.026782284113318792,
+          "angle_error_rad": 0.00794062311022619,
+          "observed_gap_m": 0.04347730427980423,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 155,
+          "attempt": 1,
+          "position_error_m": 0.027087049103039638,
+          "angle_error_rad": 0.006681015195273011,
+          "observed_gap_m": 0.043836966156959534,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 156,
+          "attempt": 1,
+          "position_error_m": 0.026782493375225234,
+          "angle_error_rad": 0.00644249593805502,
+          "observed_gap_m": 0.045779768377542496,
+          "planned_gap_m": 0.06
+        },
+        {
+          "step": 157,
+          "attempt": 1,
+          "position_error_m": 0.031154788170906472,
+          "angle_error_rad": 1.0418941543850766,
+          "observed_gap_m": 0.049021124839782715,
+          "planned_gap_m": null
+        },
+        {
+          "step": 158,
+          "attempt": 1,
+          "position_error_m": 0.031186494360040527,
+          "angle_error_rad": 1.042298379624866,
+          "observed_gap_m": 0.05238384008407593,
+          "planned_gap_m": null
+        },
+        {
+          "step": 159,
+          "attempt": 1,
+          "position_error_m": 0.0310910149490507,
+          "angle_error_rad": 1.0427778063438606,
+          "observed_gap_m": 0.05690571665763855,
+          "planned_gap_m": null
+        },
+        {
+          "step": 160,
+          "attempt": 1,
+          "position_error_m": 0.030160184764475066,
+          "angle_error_rad": 1.0304455869188809,
+          "observed_gap_m": 0.06277379393577576,
+          "planned_gap_m": null
+        },
+        {
+          "step": 161,
+          "attempt": 1,
+          "position_error_m": 0.028756237707966793,
+          "angle_error_rad": 1.003425770616786,
+          "observed_gap_m": 0.06743066012859344,
+          "planned_gap_m": null
+        },
+        {
+          "step": 162,
+          "attempt": 1,
+          "position_error_m": 0.027482600516945458,
+          "angle_error_rad": 0.9740041228156967,
+          "observed_gap_m": 0.07045289874076843,
+          "planned_gap_m": null
+        },
+        {
+          "step": 163,
+          "attempt": 1,
+          "position_error_m": 0.026128536201877297,
+          "angle_error_rad": 0.9437751736533584,
+          "observed_gap_m": 0.0723189115524292,
+          "planned_gap_m": null
+        },
+        {
+          "step": 164,
+          "attempt": 1,
+          "position_error_m": 0.024730396174839377,
+          "angle_error_rad": 0.9130107444710156,
+          "observed_gap_m": 0.07351570576429367,
+          "planned_gap_m": null
+        },
+        {
+          "step": 165,
+          "attempt": 1,
+          "position_error_m": 0.02327886963984629,
+          "angle_error_rad": 0.881739817177921,
+          "observed_gap_m": 0.07440344989299774,
+          "planned_gap_m": null
+        },
+        {
+          "step": 166,
+          "attempt": 1,
+          "position_error_m": 0.021821363334048282,
+          "angle_error_rad": 0.8500333037775837,
+          "observed_gap_m": 0.07514555752277374,
+          "planned_gap_m": null
+        },
+        {
+          "step": 167,
+          "attempt": 1,
+          "position_error_m": 0.020255299777325902,
+          "angle_error_rad": 0.8179990196116858,
+          "observed_gap_m": 0.07589156925678253,
+          "planned_gap_m": null
+        },
+        {
+          "step": 168,
+          "attempt": 1,
+          "position_error_m": 0.018683680481887174,
+          "angle_error_rad": 0.7857261873653534,
+          "observed_gap_m": 0.07654954493045807,
+          "planned_gap_m": null
+        },
+        {
+          "step": 169,
+          "attempt": 1,
+          "position_error_m": 0.01710088884570639,
+          "angle_error_rad": 0.7533464430786598,
+          "observed_gap_m": 0.07715358585119247,
+          "planned_gap_m": null
+        },
+        {
+          "step": 170,
+          "attempt": 1,
+          "position_error_m": 0.015468377025287994,
+          "angle_error_rad": 0.7209508470499548,
+          "observed_gap_m": 0.07771085947751999,
+          "planned_gap_m": null
+        },
+        {
+          "step": 171,
+          "attempt": 1,
+          "position_error_m": 0.013875168644765571,
+          "angle_error_rad": 0.6885561760558363,
+          "observed_gap_m": 0.07823638617992401,
+          "planned_gap_m": null
+        },
+        {
+          "step": 172,
+          "attempt": 1,
+          "position_error_m": 0.012327920134499955,
+          "angle_error_rad": 0.6561761713260404,
+          "observed_gap_m": 0.0786866843700409,
+          "planned_gap_m": null
+        },
+        {
+          "step": 173,
+          "attempt": 1,
+          "position_error_m": 0.010924060329924592,
+          "angle_error_rad": 0.6237893114979788,
+          "observed_gap_m": 0.07900753617286682,
+          "planned_gap_m": null
+        },
+        {
+          "step": 174,
+          "attempt": 1,
+          "position_error_m": 0.009821952799950129,
+          "angle_error_rad": 0.5913564954231694,
+          "observed_gap_m": 0.07917912304401398,
+          "planned_gap_m": null
+        },
+        {
+          "step": 175,
+          "attempt": 1,
+          "position_error_m": 0.009527149233178937,
+          "angle_error_rad": 0.5592038242995219,
+          "observed_gap_m": 0.07882247120141983,
+          "planned_gap_m": null
+        },
+        {
+          "step": 176,
+          "attempt": 1,
+          "position_error_m": 0.009411922601403182,
+          "angle_error_rad": 0.5279327593259144,
+          "observed_gap_m": 0.07824447005987167,
+          "planned_gap_m": null
+        },
+        {
+          "step": 177,
+          "attempt": 1,
+          "position_error_m": 0.009783220234567081,
+          "angle_error_rad": 0.49671116073692273,
+          "observed_gap_m": 0.0778554379940033,
+          "planned_gap_m": null
+        },
+        {
+          "step": 178,
+          "attempt": 1,
+          "position_error_m": 0.009883616970622087,
+          "angle_error_rad": 0.46541916674261075,
+          "observed_gap_m": 0.07758258283138275,
+          "planned_gap_m": null
+        },
+        {
+          "step": 179,
+          "attempt": 1,
+          "position_error_m": 0.010370931658467013,
+          "angle_error_rad": 0.43405633541611327,
+          "observed_gap_m": 0.07738654315471649,
+          "planned_gap_m": null
+        },
+        {
+          "step": 180,
+          "attempt": 1,
+          "position_error_m": 0.010545415873268899,
+          "angle_error_rad": 0.4026419254611546,
+          "observed_gap_m": 0.07725697010755539,
+          "planned_gap_m": null
+        },
+        {
+          "step": 181,
+          "attempt": 1,
+          "position_error_m": 0.010577813769601204,
+          "angle_error_rad": 0.37120482794196974,
+          "observed_gap_m": 0.07717382907867432,
+          "planned_gap_m": null
+        },
+        {
+          "step": 182,
+          "attempt": 1,
+          "position_error_m": 0.010717931538630853,
+          "angle_error_rad": 0.33971580728612516,
+          "observed_gap_m": 0.07715122401714325,
+          "planned_gap_m": null
+        },
+        {
+          "step": 183,
+          "attempt": 1,
+          "position_error_m": 0.011202877740557211,
+          "angle_error_rad": 0.30815972722269186,
+          "observed_gap_m": 0.07717540860176086,
+          "planned_gap_m": null
+        },
+        {
+          "step": 184,
+          "attempt": 1,
+          "position_error_m": 0.011683093351438445,
+          "angle_error_rad": 0.2765152071220009,
+          "observed_gap_m": 0.07722028344869614,
+          "planned_gap_m": null
+        },
+        {
+          "step": 185,
+          "attempt": 1,
+          "position_error_m": 0.01421490069110041,
+          "angle_error_rad": 0.24477689421066742,
+          "observed_gap_m": 0.07727399468421936,
+          "planned_gap_m": null
+        },
+        {
+          "step": 186,
+          "attempt": 1,
+          "position_error_m": 0.021438242188362048,
+          "angle_error_rad": 0.2129500777910461,
+          "observed_gap_m": 0.07730522751808167,
+          "planned_gap_m": null
+        },
+        {
+          "step": 187,
+          "attempt": 1,
+          "position_error_m": 0.02582188347741705,
+          "angle_error_rad": 0.18213307915844326,
+          "observed_gap_m": 0.07733403891324997,
+          "planned_gap_m": null
+        },
+        {
+          "step": 188,
+          "attempt": 1,
+          "position_error_m": 0.025430206586784295,
+          "angle_error_rad": 0.15372445417348302,
+          "observed_gap_m": 0.07739745825529099,
+          "planned_gap_m": null
+        },
+        {
+          "step": 189,
+          "attempt": 1,
+          "position_error_m": 0.024223547437655733,
+          "angle_error_rad": 0.12827605839492387,
+          "observed_gap_m": 0.07755009829998016,
+          "planned_gap_m": null
+        },
+        {
+          "step": 190,
+          "attempt": 1,
+          "position_error_m": 0.02211487375792091,
+          "angle_error_rad": 0.10583303468721801,
+          "observed_gap_m": 0.07766062766313553,
+          "planned_gap_m": null
+        },
+        {
+          "step": 191,
+          "attempt": 1,
+          "position_error_m": 0.019530586524295096,
+          "angle_error_rad": 0.0862692252583707,
+          "observed_gap_m": 0.07777807116508484,
+          "planned_gap_m": null
+        },
+        {
+          "step": 192,
+          "attempt": 1,
+          "position_error_m": 0.016871684532606415,
+          "angle_error_rad": 0.06936387657112139,
+          "observed_gap_m": 0.07790657877922058,
+          "planned_gap_m": null
+        },
+        {
+          "step": 193,
+          "attempt": 1,
+          "position_error_m": 0.014298972982521068,
+          "angle_error_rad": 0.05496657895557802,
+          "observed_gap_m": 0.07811538130044937,
+          "planned_gap_m": null
+        },
+        {
+          "step": 232,
+          "attempt": 2,
+          "position_error_m": 0.14244445115799712,
+          "angle_error_rad": 0.10924902488000308,
+          "observed_gap_m": 0.07976231724023819,
+          "planned_gap_m": null
+        },
+        {
+          "step": 233,
+          "attempt": 2,
+          "position_error_m": 0.14247506341950283,
+          "angle_error_rad": 0.08852535548011109,
+          "observed_gap_m": 0.07977258414030075,
+          "planned_gap_m": null
+        },
+        {
+          "step": 234,
+          "attempt": 2,
+          "position_error_m": 0.14251119151865543,
+          "angle_error_rad": 0.07077591597436804,
+          "observed_gap_m": 0.0797823891043663,
+          "planned_gap_m": null
+        },
+        {
+          "step": 235,
+          "attempt": 2,
+          "position_error_m": 0.13873721579616557,
+          "angle_error_rad": 0.055871550696651694,
+          "observed_gap_m": 0.07979175448417664,
+          "planned_gap_m": null
+        },
+        {
+          "step": 236,
+          "attempt": 2,
+          "position_error_m": 0.13051444294195028,
+          "angle_error_rad": 0.04355822319603066,
+          "observed_gap_m": 0.07980071753263474,
+          "planned_gap_m": null
+        },
+        {
+          "step": 237,
+          "attempt": 2,
+          "position_error_m": 0.1213607249918813,
+          "angle_error_rad": 0.033571211913128125,
+          "observed_gap_m": 0.0798092782497406,
+          "planned_gap_m": null
+        },
+        {
+          "step": 238,
+          "attempt": 2,
+          "position_error_m": 0.11200498902280812,
+          "angle_error_rad": 0.02573043972470905,
+          "observed_gap_m": 0.07981747388839722,
+          "planned_gap_m": null
+        },
+        {
+          "step": 239,
+          "attempt": 2,
+          "position_error_m": 0.10259246474247088,
+          "angle_error_rad": 0.019826928080128453,
+          "observed_gap_m": 0.07982531189918518,
+          "planned_gap_m": null
+        },
+        {
+          "step": 240,
+          "attempt": 2,
+          "position_error_m": 0.09315124290130901,
+          "angle_error_rad": 0.015657723040144803,
+          "observed_gap_m": 0.07983280718326569,
+          "planned_gap_m": null
+        },
+        {
+          "step": 241,
+          "attempt": 2,
+          "position_error_m": 0.08368723959104674,
+          "angle_error_rad": 0.012996819743376579,
+          "observed_gap_m": 0.07983997464179993,
+          "planned_gap_m": null
+        },
+        {
+          "step": 242,
+          "attempt": 2,
+          "position_error_m": 0.0742044375225726,
+          "angle_error_rad": 0.011489773992386893,
+          "observed_gap_m": 0.07984684407711029,
+          "planned_gap_m": null
+        },
+        {
+          "step": 243,
+          "attempt": 2,
+          "position_error_m": 0.0647065028162082,
+          "angle_error_rad": 0.010929495084191972,
+          "observed_gap_m": 0.07985341548919678,
+          "planned_gap_m": null
+        },
+        {
+          "step": 244,
+          "attempt": 2,
+          "position_error_m": 0.05519573360696036,
+          "angle_error_rad": 0.011002771072059419,
+          "observed_gap_m": 0.07985970377922058,
+          "planned_gap_m": null
+        },
+        {
+          "step": 245,
+          "attempt": 2,
+          "position_error_m": 0.04567589254484433,
+          "angle_error_rad": 0.011432275320741779,
+          "observed_gap_m": 0.0798657238483429,
+          "planned_gap_m": null
+        },
+        {
+          "step": 246,
+          "attempt": 2,
+          "position_error_m": 0.03644456945873461,
+          "angle_error_rad": 0.011891245615655676,
+          "observed_gap_m": 0.07987147569656372,
+          "planned_gap_m": null
+        },
+        {
+          "step": 247,
+          "attempt": 2,
+          "position_error_m": 0.02951023171382919,
+          "angle_error_rad": 0.013861600187822736,
+          "observed_gap_m": 0.07826699316501617,
+          "planned_gap_m": null
+        },
+        {
+          "step": 248,
+          "attempt": 2,
+          "position_error_m": 0.023869550150798644,
+          "angle_error_rad": 0.014762032365967345,
+          "observed_gap_m": 0.0775609165430069,
+          "planned_gap_m": null
+        },
+        {
+          "step": 249,
+          "attempt": 2,
+          "position_error_m": 0.01938124780697673,
+          "angle_error_rad": 0.014601288973878464,
+          "observed_gap_m": 0.07741911709308624,
+          "planned_gap_m": null
+        },
+        {
+          "step": 250,
+          "attempt": 2,
+          "position_error_m": 0.015669964727890288,
+          "angle_error_rad": 0.013159096906296073,
+          "observed_gap_m": 0.0777784138917923,
+          "planned_gap_m": null
+        },
+        {
+          "step": 251,
+          "attempt": 2,
+          "position_error_m": 0.012963911541447447,
+          "angle_error_rad": 0.008961988825266057,
+          "observed_gap_m": 0.07829509675502777,
+          "planned_gap_m": null
+        },
+        {
+          "step": 252,
+          "attempt": 2,
+          "position_error_m": 0.012579937146260305,
+          "angle_error_rad": 0.00230400481104062,
+          "observed_gap_m": 0.07860036939382553,
+          "planned_gap_m": null
+        },
+        {
+          "step": 253,
+          "attempt": 2,
+          "position_error_m": 0.012228992553213944,
+          "angle_error_rad": 0.006916686415100566,
+          "observed_gap_m": 0.07869690656661987,
+          "planned_gap_m": null
+        },
+        {
+          "step": 254,
+          "attempt": 2,
+          "position_error_m": 0.011942634925314466,
+          "angle_error_rad": 0.01224034872702626,
+          "observed_gap_m": 0.07872757315635681,
+          "planned_gap_m": null
+        },
+        {
+          "step": 255,
+          "attempt": 2,
+          "position_error_m": 0.011707174261252288,
+          "angle_error_rad": 0.016425576720882188,
+          "observed_gap_m": 0.07879146933555603,
+          "planned_gap_m": null
+        },
+        {
+          "step": 256,
+          "attempt": 2,
+          "position_error_m": 0.011521087052390749,
+          "angle_error_rad": 0.01955889890426957,
+          "observed_gap_m": 0.07884647697210312,
+          "planned_gap_m": null
+        },
+        {
+          "step": 257,
+          "attempt": 2,
+          "position_error_m": 0.011387728642667893,
+          "angle_error_rad": 0.021749562817751634,
+          "observed_gap_m": 0.07888712733983994,
+          "planned_gap_m": null
+        },
+        {
+          "step": 258,
+          "attempt": 2,
+          "position_error_m": 0.011305473489728126,
+          "angle_error_rad": 0.02309941433230498,
+          "observed_gap_m": 0.07891514897346497,
+          "planned_gap_m": null
+        },
+        {
+          "step": 259,
+          "attempt": 2,
+          "position_error_m": 0.011266888459159187,
+          "angle_error_rad": 0.023721251671827037,
+          "observed_gap_m": 0.07893051207065582,
+          "planned_gap_m": null
+        },
+        {
+          "step": 260,
+          "attempt": 2,
+          "position_error_m": 0.01126511747843596,
+          "angle_error_rad": 0.023776183799090907,
+          "observed_gap_m": 0.07893995940685272,
+          "planned_gap_m": null
+        },
+        {
+          "step": 261,
+          "attempt": 2,
+          "position_error_m": 0.01128091227763378,
+          "angle_error_rad": 0.023565009452976356,
+          "observed_gap_m": 0.07894644141197205,
+          "planned_gap_m": null
+        },
+        {
+          "step": 262,
+          "attempt": 2,
+          "position_error_m": 0.011308705367510902,
+          "angle_error_rad": 0.02314962326969335,
+          "observed_gap_m": 0.07895121723413467,
+          "planned_gap_m": null
+        },
+        {
+          "step": 263,
+          "attempt": 2,
+          "position_error_m": 0.011345303832337129,
+          "angle_error_rad": 0.02257775270984671,
+          "observed_gap_m": 0.07895492762327194,
+          "planned_gap_m": null
+        },
+        {
+          "step": 264,
+          "attempt": 2,
+          "position_error_m": 0.011387746919977688,
+          "angle_error_rad": 0.021900588999547905,
+          "observed_gap_m": 0.07895778119564056,
+          "planned_gap_m": null
+        },
+        {
+          "step": 265,
+          "attempt": 2,
+          "position_error_m": 0.011433926197431539,
+          "angle_error_rad": 0.021164660047880854,
+          "observed_gap_m": 0.07896003127098083,
+          "planned_gap_m": null
+        },
+        {
+          "step": 266,
+          "attempt": 2,
+          "position_error_m": 0.011481535313378786,
+          "angle_error_rad": 0.02040941616078985,
+          "observed_gap_m": 0.07896188646554947,
+          "planned_gap_m": null
+        },
+        {
+          "step": 267,
+          "attempt": 2,
+          "position_error_m": 0.011528523704822066,
+          "angle_error_rad": 0.019667275154259235,
+          "observed_gap_m": 0.07896352559328079,
+          "planned_gap_m": null
+        },
+        {
+          "step": 268,
+          "attempt": 2,
+          "position_error_m": 0.011573346623884144,
+          "angle_error_rad": 0.018963985250008676,
+          "observed_gap_m": 0.07896506786346436,
+          "planned_gap_m": null
+        },
+        {
+          "step": 269,
+          "attempt": 2,
+          "position_error_m": 0.011614664778769148,
+          "angle_error_rad": 0.01831890671116243,
+          "observed_gap_m": 0.07896658033132553,
+          "planned_gap_m": null
+        },
+        {
+          "step": 270,
+          "attempt": 2,
+          "position_error_m": 0.01165165229689167,
+          "angle_error_rad": 0.01774555308421622,
+          "observed_gap_m": 0.0789681226015091,
+          "planned_gap_m": null
+        },
+        {
+          "step": 271,
+          "attempt": 2,
+          "position_error_m": 0.011683816506745463,
+          "angle_error_rad": 0.017252091115736317,
+          "observed_gap_m": 0.07896971702575684,
+          "planned_gap_m": null
+        },
+        {
+          "step": 272,
+          "attempt": 2,
+          "position_error_m": 0.011710747837371197,
+          "angle_error_rad": 0.016842131990191054,
+          "observed_gap_m": 0.07897136360406876,
+          "planned_gap_m": null
+        },
+        {
+          "step": 273,
+          "attempt": 2,
+          "position_error_m": 0.011732544836647502,
+          "angle_error_rad": 0.016515357845279983,
+          "observed_gap_m": 0.07897305488586426,
+          "planned_gap_m": null
+        },
+        {
+          "step": 274,
+          "attempt": 2,
+          "position_error_m": 0.011749283732806627,
+          "angle_error_rad": 0.016268417531833803,
+          "observed_gap_m": 0.07897476851940155,
+          "planned_gap_m": null
+        },
+        {
+          "step": 275,
+          "attempt": 2,
+          "position_error_m": 0.011761392035972582,
+          "angle_error_rad": 0.0160954875636726,
+          "observed_gap_m": 0.07897648215293884,
+          "planned_gap_m": null
+        },
+        {
+          "step": 276,
+          "attempt": 2,
+          "position_error_m": 0.011769390324103355,
+          "angle_error_rad": 0.015989018918445418,
+          "observed_gap_m": 0.07897821068763733,
+          "planned_gap_m": null
+        },
+        {
+          "step": 277,
+          "attempt": 2,
+          "position_error_m": 0.011773868279273356,
+          "angle_error_rad": 0.015939918899392724,
+          "observed_gap_m": 0.0789799839258194,
+          "planned_gap_m": null
+        },
+        {
+          "step": 278,
+          "attempt": 2,
+          "position_error_m": 0.011776222419651735,
+          "angle_error_rad": 0.01592555074459317,
+          "observed_gap_m": 0.07898180186748505,
+          "planned_gap_m": null
+        },
+        {
+          "step": 279,
+          "attempt": 2,
+          "position_error_m": 0.011778298427191997,
+          "angle_error_rad": 0.01591399925731086,
+          "observed_gap_m": 0.07898362725973129,
+          "planned_gap_m": null
+        },
+        {
+          "step": 280,
+          "attempt": 2,
+          "position_error_m": 0.011780208631942766,
+          "angle_error_rad": 0.01590237371831561,
+          "observed_gap_m": 0.07898548245429993,
+          "planned_gap_m": null
+        },
+        {
+          "step": 281,
+          "attempt": 2,
+          "position_error_m": 0.011782174360257537,
+          "angle_error_rad": 0.01589064803750624,
+          "observed_gap_m": 0.07898735255002975,
+          "planned_gap_m": null
+        },
+        {
+          "step": 282,
+          "attempt": 2,
+          "position_error_m": 0.011784138189515228,
+          "angle_error_rad": 0.015878813646625755,
+          "observed_gap_m": 0.07898923754692078,
+          "planned_gap_m": null
+        },
+        {
+          "step": 283,
+          "attempt": 2,
+          "position_error_m": 0.011786051589564304,
+          "angle_error_rad": 0.015866937114642033,
+          "observed_gap_m": 0.0789911299943924,
+          "planned_gap_m": null
+        },
+        {
+          "step": 284,
+          "attempt": 2,
+          "position_error_m": 0.011787957669863508,
+          "angle_error_rad": 0.01585501995005489,
+          "observed_gap_m": 0.07899302989244461,
+          "planned_gap_m": null
+        },
+        {
+          "step": 285,
+          "attempt": 2,
+          "position_error_m": 0.011789809579416157,
+          "angle_error_rad": 0.015843091892613917,
+          "observed_gap_m": 0.07899493724107742,
+          "planned_gap_m": null
+        },
+        {
+          "step": 286,
+          "attempt": 2,
+          "position_error_m": 0.011791717532097505,
+          "angle_error_rad": 0.015831162920308207,
+          "observed_gap_m": 0.07899685204029083,
+          "planned_gap_m": null
+        },
+        {
+          "step": 287,
+          "attempt": 2,
+          "position_error_m": 0.011793568701303977,
+          "angle_error_rad": 0.015819244845267942,
+          "observed_gap_m": 0.07899876683950424,
+          "planned_gap_m": null
+        },
+        {
+          "step": 288,
+          "attempt": 2,
+          "position_error_m": 0.011795417181168773,
+          "angle_error_rad": 0.015807330423976272,
+          "observed_gap_m": 0.07900068163871765,
+          "planned_gap_m": null
+        },
+        {
+          "step": 289,
+          "attempt": 2,
+          "position_error_m": 0.011797216253750638,
+          "angle_error_rad": 0.01579543562340264,
+          "observed_gap_m": 0.07900260388851166,
+          "planned_gap_m": null
+        },
+        {
+          "step": 290,
+          "attempt": 2,
+          "position_error_m": 0.011799069245266131,
+          "angle_error_rad": 0.01578355247822693,
+          "observed_gap_m": 0.07900452613830566,
+          "planned_gap_m": null
+        },
+        {
+          "step": 291,
+          "attempt": 2,
+          "position_error_m": 0.011800920176517765,
+          "angle_error_rad": 0.01577170301734177,
+          "observed_gap_m": 0.07900644838809967,
+          "planned_gap_m": null
+        },
+        {
+          "step": 292,
+          "attempt": 2,
+          "position_error_m": 0.011802772468512043,
+          "angle_error_rad": 0.015759869745417845,
+          "observed_gap_m": 0.07900837063789368,
+          "planned_gap_m": null
+        },
+        {
+          "step": 293,
+          "attempt": 2,
+          "position_error_m": 0.011804621848825811,
+          "angle_error_rad": 0.015748073642277427,
+          "observed_gap_m": 0.07901029288768768,
+          "planned_gap_m": null
+        },
+        {
+          "step": 294,
+          "attempt": 2,
+          "position_error_m": 0.011806473924928439,
+          "angle_error_rad": 0.01573629383236302,
+          "observed_gap_m": 0.07901221513748169,
+          "planned_gap_m": null
+        },
+        {
+          "step": 295,
+          "attempt": 2,
+          "position_error_m": 0.011808324731717279,
+          "angle_error_rad": 0.0157245194891744,
+          "observed_gap_m": 0.0790141373872757,
+          "planned_gap_m": null
+        },
+        {
+          "step": 296,
+          "attempt": 2,
+          "position_error_m": 0.011810121872720174,
+          "angle_error_rad": 0.015712793595098223,
+          "observed_gap_m": 0.0790160596370697,
+          "planned_gap_m": null
+        },
+        {
+          "step": 297,
+          "attempt": 2,
+          "position_error_m": 0.011811970489011173,
+          "angle_error_rad": 0.01570108540085971,
+          "observed_gap_m": 0.07901798188686371,
+          "planned_gap_m": null
+        },
+        {
+          "step": 298,
+          "attempt": 2,
+          "position_error_m": 0.011813823815354283,
+          "angle_error_rad": 0.015689405410746534,
+          "observed_gap_m": 0.07901990413665771,
+          "planned_gap_m": null
+        },
+        {
+          "step": 299,
+          "attempt": 2,
+          "position_error_m": 0.011815677426349504,
+          "angle_error_rad": 0.015677753146747048,
+          "observed_gap_m": 0.07902182638645172,
+          "planned_gap_m": null
+        },
+        {
+          "step": 300,
+          "attempt": 2,
+          "position_error_m": 0.011817472226230427,
+          "angle_error_rad": 0.015666129083739138,
+          "observed_gap_m": 0.07902374863624573,
+          "planned_gap_m": null
+        },
+        {
+          "step": 301,
+          "attempt": 2,
+          "position_error_m": 0.011819324619858051,
+          "angle_error_rad": 0.015654510402955478,
+          "observed_gap_m": 0.07902567088603973,
+          "planned_gap_m": null
+        }
+      ],
+      "events": [
+        {
+          "step": 79,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "diagnostic_forced_start",
+          "attempt": 1,
+          "object_position": [
+            0.14736971259117126,
+            0.0848914235830307,
+            0.8600564002990723
+          ]
+        },
+        {
+          "step": 87,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.14738675951957703,
+            0.0849032998085022,
+            0.860053300857544
+          ]
+        },
+        {
+          "step": 123,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.14738240838050842,
+            0.08487125486135483,
+            0.8600643873214722
+          ]
+        },
+        {
+          "step": 194,
+          "from": "DESCEND",
+          "to": "RETRACT",
+          "reason": "phase_timeout",
+          "attempt": 2,
+          "object_position": [
+            0.17249678075313568,
+            0.08566047996282578,
+            0.8504603505134583
+          ]
+        },
+        {
+          "step": 211,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 2,
+          "object_position": [
+            0.17249706387519836,
+            0.08568300306797028,
+            0.8504517078399658
+          ]
+        },
+        {
+          "step": 231,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 2,
+          "object_position": [
+            0.17249789834022522,
+            0.0856870636343956,
+            0.8504201769828796
+          ]
+        },
+        {
+          "step": 302,
+          "from": "DESCEND",
+          "to": "EXHAUSTED",
+          "reason": "attempt_limit",
+          "attempt": 2,
+          "object_position": [
+            0.17250092327594757,
+            0.0857011079788208,
+            0.8503068685531616
+          ]
+        }
+      ]
+    },
+    {
+      "version": "v5",
+      "demo": "demo_11000012",
+      "exact_physics_replay": true,
+      "controls": 400,
+      "success": false,
+      "phases": {
+        "NORMAL": 79,
+        "RETRACT": 24,
+        "ALIGN": 43,
+        "DESCEND": 127,
+        "EXHAUSTED": 127
+      },
+      "wall_robot_contact_boundaries": {
+        "bin2 / gripper0_right_right_gripper": 173
+      },
+      "contacts_by_phase": {
+        "DESCEND: bin2 / gripper0_right_right_gripper": 92,
+        "RETRACT: bin2 / gripper0_right_right_gripper": 2,
+        "EXHAUSTED: bin2 / gripper0_right_right_gripper": 79
+      },
+      "descent_observations": [
+        {
+          "step": 123,
+          "attempt": 1,
+          "position_error_m": 0.14938664315758593,
+          "angle_error_rad": 0.1110903595808745,
+          "observed_gap_m": 0.07996106147766113,
+          "planned_gap_m": null
+        },
+        {
+          "step": 124,
+          "attempt": 1,
+          "position_error_m": 0.14993119239255617,
+          "angle_error_rad": 0.09093952603587752,
+          "observed_gap_m": 0.07996279746294022,
+          "planned_gap_m": null
+        },
+        {
+          "step": 125,
+          "attempt": 1,
+          "position_error_m": 0.15041240743336914,
+          "angle_error_rad": 0.07370764413250822,
+          "observed_gap_m": 0.07996444404125214,
+          "planned_gap_m": null
+        },
+        {
+          "step": 126,
+          "attempt": 1,
+          "position_error_m": 0.14719349010869,
+          "angle_error_rad": 0.059370120302397834,
+          "observed_gap_m": 0.07996600866317749,
+          "planned_gap_m": null
+        },
+        {
+          "step": 127,
+          "attempt": 1,
+          "position_error_m": 0.13978851678396048,
+          "angle_error_rad": 0.04760541898700263,
+          "observed_gap_m": 0.07996749877929688,
+          "planned_gap_m": null
+        },
+        {
+          "step": 128,
+          "attempt": 1,
+          "position_error_m": 0.13143958911405154,
+          "angle_error_rad": 0.03815701202089315,
+          "observed_gap_m": 0.07996891438961029,
+          "planned_gap_m": null
+        },
+        {
+          "step": 129,
+          "attempt": 1,
+          "position_error_m": 0.1228149813022682,
+          "angle_error_rad": 0.030922860312626,
+          "observed_gap_m": 0.07997025549411774,
+          "planned_gap_m": null
+        },
+        {
+          "step": 130,
+          "attempt": 1,
+          "position_error_m": 0.1140383483434054,
+          "angle_error_rad": 0.025543446389796724,
+          "observed_gap_m": 0.079971544444561,
+          "planned_gap_m": null
+        },
+        {
+          "step": 131,
+          "attempt": 1,
+          "position_error_m": 0.1051669558977195,
+          "angle_error_rad": 0.02149569105046501,
+          "observed_gap_m": 0.0799727737903595,
+          "planned_gap_m": null
+        },
+        {
+          "step": 132,
+          "attempt": 1,
+          "position_error_m": 0.09622393474714122,
+          "angle_error_rad": 0.018444950904037492,
+          "observed_gap_m": 0.07997364550828934,
+          "planned_gap_m": null
+        },
+        {
+          "step": 133,
+          "attempt": 1,
+          "position_error_m": 0.08722016973112609,
+          "angle_error_rad": 0.016114134983577885,
+          "observed_gap_m": 0.07997402548789978,
+          "planned_gap_m": null
+        },
+        {
+          "step": 134,
+          "attempt": 1,
+          "position_error_m": 0.07816346336275329,
+          "angle_error_rad": 0.014237415014039783,
+          "observed_gap_m": 0.07997430860996246,
+          "planned_gap_m": null
+        },
+        {
+          "step": 135,
+          "attempt": 1,
+          "position_error_m": 0.06906068160316471,
+          "angle_error_rad": 0.012631667967438408,
+          "observed_gap_m": 0.07997456192970276,
+          "planned_gap_m": null
+        },
+        {
+          "step": 136,
+          "attempt": 1,
+          "position_error_m": 0.05988547348986618,
+          "angle_error_rad": 0.011195096750092462,
+          "observed_gap_m": 0.07997484505176544,
+          "planned_gap_m": null
+        },
+        {
+          "step": 137,
+          "attempt": 1,
+          "position_error_m": 0.05064889203727538,
+          "angle_error_rad": 0.00988511915317467,
+          "observed_gap_m": 0.0799751728773117,
+          "planned_gap_m": null
+        },
+        {
+          "step": 138,
+          "attempt": 1,
+          "position_error_m": 0.041424644920271425,
+          "angle_error_rad": 0.00868032039591029,
+          "observed_gap_m": 0.07997554540634155,
+          "planned_gap_m": null
+        },
+        {
+          "step": 139,
+          "attempt": 1,
+          "position_error_m": 0.03269916471868144,
+          "angle_error_rad": 0.007440406712180452,
+          "observed_gap_m": 0.07997597754001617,
+          "planned_gap_m": null
+        },
+        {
+          "step": 140,
+          "attempt": 1,
+          "position_error_m": 0.02498665854195788,
+          "angle_error_rad": 0.006184105072490997,
+          "observed_gap_m": 0.07997645437717438,
+          "planned_gap_m": null
+        },
+        {
+          "step": 141,
+          "attempt": 1,
+          "position_error_m": 0.018408631820568455,
+          "angle_error_rad": 0.005135744389542388,
+          "observed_gap_m": 0.07997702062129974,
+          "planned_gap_m": null
+        },
+        {
+          "step": 142,
+          "attempt": 1,
+          "position_error_m": 0.016482179843939217,
+          "angle_error_rad": 0.006617886820577431,
+          "observed_gap_m": 0.07997789978981018,
+          "planned_gap_m": null
+        },
+        {
+          "step": 143,
+          "attempt": 1,
+          "position_error_m": 0.016236977322266324,
+          "angle_error_rad": 0.015629477252607844,
+          "observed_gap_m": 0.07997885346412659,
+          "planned_gap_m": null
+        },
+        {
+          "step": 144,
+          "attempt": 1,
+          "position_error_m": 0.015858806453507807,
+          "angle_error_rad": 0.02330798926177596,
+          "observed_gap_m": 0.0799797773361206,
+          "planned_gap_m": null
+        },
+        {
+          "step": 145,
+          "attempt": 1,
+          "position_error_m": 0.015528645546315221,
+          "angle_error_rad": 0.029403650205314092,
+          "observed_gap_m": 0.07998064160346985,
+          "planned_gap_m": null
+        },
+        {
+          "step": 146,
+          "attempt": 1,
+          "position_error_m": 0.015280846254763182,
+          "angle_error_rad": 0.034094929561529326,
+          "observed_gap_m": 0.0799814760684967,
+          "planned_gap_m": null
+        },
+        {
+          "step": 147,
+          "attempt": 1,
+          "position_error_m": 0.015130832540229398,
+          "angle_error_rad": 0.037545644351096356,
+          "observed_gap_m": 0.07998227328062057,
+          "planned_gap_m": null
+        },
+        {
+          "step": 148,
+          "attempt": 1,
+          "position_error_m": 0.015018853153684612,
+          "angle_error_rad": 0.03991568899366068,
+          "observed_gap_m": 0.07998304069042206,
+          "planned_gap_m": null
+        },
+        {
+          "step": 149,
+          "attempt": 1,
+          "position_error_m": 0.014941080204785247,
+          "angle_error_rad": 0.0413449801490527,
+          "observed_gap_m": 0.07998376339673996,
+          "planned_gap_m": null
+        },
+        {
+          "step": 150,
+          "attempt": 1,
+          "position_error_m": 0.01490226410422161,
+          "angle_error_rad": 0.04202295614163448,
+          "observed_gap_m": 0.07998445630073547,
+          "planned_gap_m": null
+        },
+        {
+          "step": 151,
+          "attempt": 1,
+          "position_error_m": 0.014905043130149722,
+          "angle_error_rad": 0.042287141351913346,
+          "observed_gap_m": 0.0799851268529892,
+          "planned_gap_m": null
+        },
+        {
+          "step": 152,
+          "attempt": 1,
+          "position_error_m": 0.014941276847525031,
+          "angle_error_rad": 0.04229478504757048,
+          "observed_gap_m": 0.07998576760292053,
+          "planned_gap_m": null
+        },
+        {
+          "step": 153,
+          "attempt": 1,
+          "position_error_m": 0.015013271077223767,
+          "angle_error_rad": 0.04206600747241078,
+          "observed_gap_m": 0.07998637855052948,
+          "planned_gap_m": null
+        },
+        {
+          "step": 154,
+          "attempt": 1,
+          "position_error_m": 0.015064688604159491,
+          "angle_error_rad": 0.04167070882787722,
+          "observed_gap_m": 0.07998695969581604,
+          "planned_gap_m": null
+        },
+        {
+          "step": 155,
+          "attempt": 1,
+          "position_error_m": 0.015105872912314576,
+          "angle_error_rad": 0.04116985919035286,
+          "observed_gap_m": 0.07998751848936081,
+          "planned_gap_m": null
+        },
+        {
+          "step": 156,
+          "attempt": 1,
+          "position_error_m": 0.015150918951921262,
+          "angle_error_rad": 0.04060907317379844,
+          "observed_gap_m": 0.07998775690793991,
+          "planned_gap_m": null
+        },
+        {
+          "step": 157,
+          "attempt": 1,
+          "position_error_m": 0.015200385834394505,
+          "angle_error_rad": 0.0400267491409796,
+          "observed_gap_m": 0.07998742163181305,
+          "planned_gap_m": null
+        },
+        {
+          "step": 158,
+          "attempt": 1,
+          "position_error_m": 0.015261946219133684,
+          "angle_error_rad": 0.03945586594643276,
+          "observed_gap_m": 0.07998698204755783,
+          "planned_gap_m": null
+        },
+        {
+          "step": 159,
+          "attempt": 1,
+          "position_error_m": 0.015335768796657738,
+          "angle_error_rad": 0.038923075424708055,
+          "observed_gap_m": 0.07998651266098022,
+          "planned_gap_m": null
+        },
+        {
+          "step": 160,
+          "attempt": 1,
+          "position_error_m": 0.015376207918843676,
+          "angle_error_rad": 0.03844565613987906,
+          "observed_gap_m": 0.07998606562614441,
+          "planned_gap_m": null
+        },
+        {
+          "step": 161,
+          "attempt": 1,
+          "position_error_m": 0.015399663802157846,
+          "angle_error_rad": 0.038030840828376836,
+          "observed_gap_m": 0.07998563349246979,
+          "planned_gap_m": null
+        },
+        {
+          "step": 162,
+          "attempt": 1,
+          "position_error_m": 0.015414265655982346,
+          "angle_error_rad": 0.03768134190551643,
+          "observed_gap_m": 0.07998523116111755,
+          "planned_gap_m": null
+        },
+        {
+          "step": 163,
+          "attempt": 1,
+          "position_error_m": 0.015434541199926998,
+          "angle_error_rad": 0.037398147610779364,
+          "observed_gap_m": 0.0799848660826683,
+          "planned_gap_m": null
+        },
+        {
+          "step": 164,
+          "attempt": 1,
+          "position_error_m": 0.015463953721038004,
+          "angle_error_rad": 0.03717801995634019,
+          "observed_gap_m": 0.07998453080654144,
+          "planned_gap_m": null
+        },
+        {
+          "step": 165,
+          "attempt": 1,
+          "position_error_m": 0.01550398104368142,
+          "angle_error_rad": 0.03701685785634452,
+          "observed_gap_m": 0.07998421788215637,
+          "planned_gap_m": null
+        },
+        {
+          "step": 166,
+          "attempt": 1,
+          "position_error_m": 0.015518307362032257,
+          "angle_error_rad": 0.036908861351258815,
+          "observed_gap_m": 0.07998392730951309,
+          "planned_gap_m": null
+        },
+        {
+          "step": 167,
+          "attempt": 1,
+          "position_error_m": 0.015505553476898111,
+          "angle_error_rad": 0.036843921234223045,
+          "observed_gap_m": 0.0799836590886116,
+          "planned_gap_m": null
+        },
+        {
+          "step": 168,
+          "attempt": 1,
+          "position_error_m": 0.015501061041922089,
+          "angle_error_rad": 0.03681205301024733,
+          "observed_gap_m": 0.07998339831829071,
+          "planned_gap_m": null
+        },
+        {
+          "step": 169,
+          "attempt": 1,
+          "position_error_m": 0.015494057388769508,
+          "angle_error_rad": 0.036801985797398344,
+          "observed_gap_m": 0.07998315989971161,
+          "planned_gap_m": null
+        },
+        {
+          "step": 170,
+          "attempt": 1,
+          "position_error_m": 0.01549960817688769,
+          "angle_error_rad": 0.03679782716636725,
+          "observed_gap_m": 0.0799829363822937,
+          "planned_gap_m": null
+        },
+        {
+          "step": 171,
+          "attempt": 1,
+          "position_error_m": 0.015526931752621903,
+          "angle_error_rad": 0.036795320719424894,
+          "observed_gap_m": 0.07998272776603699,
+          "planned_gap_m": null
+        },
+        {
+          "step": 172,
+          "attempt": 1,
+          "position_error_m": 0.0155259480101056,
+          "angle_error_rad": 0.036792682050634046,
+          "observed_gap_m": 0.07998251914978027,
+          "planned_gap_m": null
+        },
+        {
+          "step": 173,
+          "attempt": 1,
+          "position_error_m": 0.015513283684325372,
+          "angle_error_rad": 0.03678998683133888,
+          "observed_gap_m": 0.07998232543468475,
+          "planned_gap_m": null
+        },
+        {
+          "step": 174,
+          "attempt": 1,
+          "position_error_m": 0.015499954316010279,
+          "angle_error_rad": 0.036786493687276635,
+          "observed_gap_m": 0.07998213917016983,
+          "planned_gap_m": null
+        },
+        {
+          "step": 175,
+          "attempt": 1,
+          "position_error_m": 0.01549358642555356,
+          "angle_error_rad": 0.03678185489368442,
+          "observed_gap_m": 0.0799819603562355,
+          "planned_gap_m": null
+        },
+        {
+          "step": 176,
+          "attempt": 1,
+          "position_error_m": 0.015500332807913277,
+          "angle_error_rad": 0.03677705571118503,
+          "observed_gap_m": 0.07998178899288177,
+          "planned_gap_m": null
+        },
+        {
+          "step": 177,
+          "attempt": 1,
+          "position_error_m": 0.015531148993735333,
+          "angle_error_rad": 0.036773776162119194,
+          "observed_gap_m": 0.07998162508010864,
+          "planned_gap_m": null
+        },
+        {
+          "step": 178,
+          "attempt": 1,
+          "position_error_m": 0.015528971755597797,
+          "angle_error_rad": 0.036771138364131234,
+          "observed_gap_m": 0.07998146861791611,
+          "planned_gap_m": null
+        },
+        {
+          "step": 179,
+          "attempt": 1,
+          "position_error_m": 0.015516542320694895,
+          "angle_error_rad": 0.03676843349975848,
+          "observed_gap_m": 0.07998131960630417,
+          "planned_gap_m": null
+        },
+        {
+          "step": 204,
+          "attempt": 2,
+          "position_error_m": 0.148812727995588,
+          "angle_error_rad": 0.01471746439468836,
+          "observed_gap_m": 0.07997551560401917,
+          "planned_gap_m": null
+        },
+        {
+          "step": 205,
+          "attempt": 2,
+          "position_error_m": 0.1490233479361831,
+          "angle_error_rad": 0.010760408765768711,
+          "observed_gap_m": 0.07997633516788483,
+          "planned_gap_m": null
+        },
+        {
+          "step": 206,
+          "attempt": 2,
+          "position_error_m": 0.14919107705849835,
+          "angle_error_rad": 0.007506982850198232,
+          "observed_gap_m": 0.07997721433639526,
+          "planned_gap_m": null
+        },
+        {
+          "step": 207,
+          "attempt": 2,
+          "position_error_m": 0.14570360080299632,
+          "angle_error_rad": 0.005679308117092882,
+          "observed_gap_m": 0.0799776092171669,
+          "planned_gap_m": null
+        },
+        {
+          "step": 208,
+          "attempt": 2,
+          "position_error_m": 0.13805774596407802,
+          "angle_error_rad": 0.006434908506860446,
+          "observed_gap_m": 0.07997798919677734,
+          "planned_gap_m": null
+        },
+        {
+          "step": 209,
+          "attempt": 2,
+          "position_error_m": 0.1294791711871313,
+          "angle_error_rad": 0.008031874707882077,
+          "observed_gap_m": 0.07997888326644897,
+          "planned_gap_m": null
+        },
+        {
+          "step": 210,
+          "attempt": 2,
+          "position_error_m": 0.12063486824934767,
+          "angle_error_rad": 0.009482831811624055,
+          "observed_gap_m": 0.0799797922372818,
+          "planned_gap_m": null
+        },
+        {
+          "step": 211,
+          "attempt": 2,
+          "position_error_m": 0.11168812056107477,
+          "angle_error_rad": 0.010454965498676314,
+          "observed_gap_m": 0.07998065650463104,
+          "planned_gap_m": null
+        },
+        {
+          "step": 212,
+          "attempt": 2,
+          "position_error_m": 0.10269166448545695,
+          "angle_error_rad": 0.010919251286070266,
+          "observed_gap_m": 0.0799814909696579,
+          "planned_gap_m": null
+        },
+        {
+          "step": 213,
+          "attempt": 2,
+          "position_error_m": 0.09365877983139155,
+          "angle_error_rad": 0.010940228770864834,
+          "observed_gap_m": 0.07998228073120117,
+          "planned_gap_m": null
+        },
+        {
+          "step": 214,
+          "attempt": 2,
+          "position_error_m": 0.08454784195897762,
+          "angle_error_rad": 0.01060012550096746,
+          "observed_gap_m": 0.07998304069042206,
+          "planned_gap_m": null
+        },
+        {
+          "step": 215,
+          "attempt": 2,
+          "position_error_m": 0.0753893220510389,
+          "angle_error_rad": 0.009986843244376858,
+          "observed_gap_m": 0.07998377084732056,
+          "planned_gap_m": null
+        },
+        {
+          "step": 216,
+          "attempt": 2,
+          "position_error_m": 0.066181077024347,
+          "angle_error_rad": 0.009183327007911095,
+          "observed_gap_m": 0.07998446375131607,
+          "planned_gap_m": null
+        },
+        {
+          "step": 217,
+          "attempt": 2,
+          "position_error_m": 0.05693986685465881,
+          "angle_error_rad": 0.008264757904571344,
+          "observed_gap_m": 0.0799851268529892,
+          "planned_gap_m": null
+        },
+        {
+          "step": 218,
+          "attempt": 2,
+          "position_error_m": 0.04767332322459973,
+          "angle_error_rad": 0.007300971580577616,
+          "observed_gap_m": 0.07998576760292053,
+          "planned_gap_m": null
+        },
+        {
+          "step": 219,
+          "attempt": 2,
+          "position_error_m": 0.03858396034741011,
+          "angle_error_rad": 0.006287372984982128,
+          "observed_gap_m": 0.07998637855052948,
+          "planned_gap_m": null
+        },
+        {
+          "step": 220,
+          "attempt": 2,
+          "position_error_m": 0.03015446997952864,
+          "angle_error_rad": 0.005174714243301928,
+          "observed_gap_m": 0.07998695969581604,
+          "planned_gap_m": null
+        },
+        {
+          "step": 221,
+          "attempt": 2,
+          "position_error_m": 0.022773645018504693,
+          "angle_error_rad": 0.004081930493446101,
+          "observed_gap_m": 0.0799875259399414,
+          "planned_gap_m": null
+        },
+        {
+          "step": 222,
+          "attempt": 2,
+          "position_error_m": 0.016750961508277724,
+          "angle_error_rad": 0.0031816658596430323,
+          "observed_gap_m": 0.07998806238174438,
+          "planned_gap_m": null
+        },
+        {
+          "step": 223,
+          "attempt": 2,
+          "position_error_m": 0.016254469749668283,
+          "angle_error_rad": 0.009647067417192018,
+          "observed_gap_m": 0.07998858392238617,
+          "planned_gap_m": null
+        },
+        {
+          "step": 224,
+          "attempt": 2,
+          "position_error_m": 0.01595721406593816,
+          "angle_error_rad": 0.018675439819375295,
+          "observed_gap_m": 0.07998908311128616,
+          "planned_gap_m": null
+        },
+        {
+          "step": 225,
+          "attempt": 2,
+          "position_error_m": 0.015609100963094657,
+          "angle_error_rad": 0.025929904612817432,
+          "observed_gap_m": 0.07998955994844437,
+          "planned_gap_m": null
+        },
+        {
+          "step": 226,
+          "attempt": 2,
+          "position_error_m": 0.015303056164019486,
+          "angle_error_rad": 0.031622529302241915,
+          "observed_gap_m": 0.07999001443386078,
+          "planned_gap_m": null
+        },
+        {
+          "step": 227,
+          "attempt": 2,
+          "position_error_m": 0.015055080720874267,
+          "angle_error_rad": 0.03596971682080378,
+          "observed_gap_m": 0.0799904391169548,
+          "planned_gap_m": null
+        },
+        {
+          "step": 228,
+          "attempt": 2,
+          "position_error_m": 0.014875764212639142,
+          "angle_error_rad": 0.039129103037398916,
+          "observed_gap_m": 0.07999040931463242,
+          "planned_gap_m": null
+        },
+        {
+          "step": 229,
+          "attempt": 2,
+          "position_error_m": 0.014766719128625157,
+          "angle_error_rad": 0.04125937879866716,
+          "observed_gap_m": 0.07998993992805481,
+          "planned_gap_m": null
+        },
+        {
+          "step": 230,
+          "attempt": 2,
+          "position_error_m": 0.014716356417645123,
+          "angle_error_rad": 0.04249926881859419,
+          "observed_gap_m": 0.07998932152986526,
+          "planned_gap_m": null
+        },
+        {
+          "step": 231,
+          "attempt": 2,
+          "position_error_m": 0.014727129619839881,
+          "angle_error_rad": 0.04311372515883114,
+          "observed_gap_m": 0.07998862862586975,
+          "planned_gap_m": null
+        },
+        {
+          "step": 232,
+          "attempt": 2,
+          "position_error_m": 0.014741145259384504,
+          "angle_error_rad": 0.043339062177747835,
+          "observed_gap_m": 0.07998792827129364,
+          "planned_gap_m": null
+        },
+        {
+          "step": 233,
+          "attempt": 2,
+          "position_error_m": 0.01476366656406062,
+          "angle_error_rad": 0.043311053282956584,
+          "observed_gap_m": 0.07998722791671753,
+          "planned_gap_m": null
+        },
+        {
+          "step": 234,
+          "attempt": 2,
+          "position_error_m": 0.014794314019641354,
+          "angle_error_rad": 0.04307063250860845,
+          "observed_gap_m": 0.07998654246330261,
+          "planned_gap_m": null
+        },
+        {
+          "step": 235,
+          "attempt": 2,
+          "position_error_m": 0.014841601997266512,
+          "angle_error_rad": 0.04267982272298202,
+          "observed_gap_m": 0.07998590171337128,
+          "planned_gap_m": null
+        },
+        {
+          "step": 236,
+          "attempt": 2,
+          "position_error_m": 0.014909950624641153,
+          "angle_error_rad": 0.04219949160456521,
+          "observed_gap_m": 0.07998530566692352,
+          "planned_gap_m": null
+        },
+        {
+          "step": 237,
+          "attempt": 2,
+          "position_error_m": 0.014996654751357762,
+          "angle_error_rad": 0.0416749393363095,
+          "observed_gap_m": 0.07998476177453995,
+          "planned_gap_m": null
+        },
+        {
+          "step": 238,
+          "attempt": 2,
+          "position_error_m": 0.015049120631615159,
+          "angle_error_rad": 0.04114070443268935,
+          "observed_gap_m": 0.07998426258563995,
+          "planned_gap_m": null
+        },
+        {
+          "step": 239,
+          "attempt": 2,
+          "position_error_m": 0.015087168965304645,
+          "angle_error_rad": 0.040621627112233195,
+          "observed_gap_m": 0.07998380810022354,
+          "planned_gap_m": null
+        },
+        {
+          "step": 240,
+          "attempt": 2,
+          "position_error_m": 0.015120499231130449,
+          "angle_error_rad": 0.04013612807472465,
+          "observed_gap_m": 0.07998339831829071,
+          "planned_gap_m": null
+        },
+        {
+          "step": 241,
+          "attempt": 2,
+          "position_error_m": 0.015152560324636678,
+          "angle_error_rad": 0.03969939758779366,
+          "observed_gap_m": 0.07998304069042206,
+          "planned_gap_m": null
+        },
+        {
+          "step": 242,
+          "attempt": 2,
+          "position_error_m": 0.01519631452331717,
+          "angle_error_rad": 0.03932252017892861,
+          "observed_gap_m": 0.0799827128648758,
+          "planned_gap_m": null
+        },
+        {
+          "step": 243,
+          "attempt": 2,
+          "position_error_m": 0.015250128954400605,
+          "angle_error_rad": 0.039012224699869535,
+          "observed_gap_m": 0.07998241484165192,
+          "planned_gap_m": null
+        },
+        {
+          "step": 244,
+          "attempt": 2,
+          "position_error_m": 0.015274480984476537,
+          "angle_error_rad": 0.038766340429345944,
+          "observed_gap_m": 0.07998216152191162,
+          "planned_gap_m": null
+        },
+        {
+          "step": 245,
+          "attempt": 2,
+          "position_error_m": 0.015283139402634293,
+          "angle_error_rad": 0.03857657833574722,
+          "observed_gap_m": 0.07998191565275192,
+          "planned_gap_m": null
+        },
+        {
+          "step": 246,
+          "attempt": 2,
+          "position_error_m": 0.015280229335226107,
+          "angle_error_rad": 0.03843543259412325,
+          "observed_gap_m": 0.07998169958591461,
+          "planned_gap_m": null
+        },
+        {
+          "step": 247,
+          "attempt": 2,
+          "position_error_m": 0.015282180846189588,
+          "angle_error_rad": 0.03833692289000535,
+          "observed_gap_m": 0.07998150587081909,
+          "planned_gap_m": null
+        },
+        {
+          "step": 248,
+          "attempt": 2,
+          "position_error_m": 0.01529670946744768,
+          "angle_error_rad": 0.03827763965095589,
+          "observed_gap_m": 0.07998131960630417,
+          "planned_gap_m": null
+        },
+        {
+          "step": 249,
+          "attempt": 2,
+          "position_error_m": 0.01532663352014877,
+          "angle_error_rad": 0.038253040997052457,
+          "observed_gap_m": 0.07998114824295044,
+          "planned_gap_m": null
+        },
+        {
+          "step": 250,
+          "attempt": 2,
+          "position_error_m": 0.01532950511572965,
+          "angle_error_rad": 0.03824059370928204,
+          "observed_gap_m": 0.0799809917807579,
+          "planned_gap_m": null
+        },
+        {
+          "step": 251,
+          "attempt": 2,
+          "position_error_m": 0.015317419306751252,
+          "angle_error_rad": 0.038230334638316946,
+          "observed_gap_m": 0.07998083531856537,
+          "planned_gap_m": null
+        },
+        {
+          "step": 252,
+          "attempt": 2,
+          "position_error_m": 0.015302071228539606,
+          "angle_error_rad": 0.038218843729506485,
+          "observed_gap_m": 0.07998070120811462,
+          "planned_gap_m": null
+        },
+        {
+          "step": 253,
+          "attempt": 2,
+          "position_error_m": 0.015294448239917522,
+          "angle_error_rad": 0.03820601636906807,
+          "observed_gap_m": 0.07998055964708328,
+          "planned_gap_m": null
+        },
+        {
+          "step": 254,
+          "attempt": 2,
+          "position_error_m": 0.015305384484925907,
+          "angle_error_rad": 0.038193221432011995,
+          "observed_gap_m": 0.07998043298721313,
+          "planned_gap_m": null
+        },
+        {
+          "step": 255,
+          "attempt": 2,
+          "position_error_m": 0.015329561131888153,
+          "angle_error_rad": 0.0381812768764084,
+          "observed_gap_m": 0.07998030632734299,
+          "planned_gap_m": null
+        },
+        {
+          "step": 256,
+          "attempt": 2,
+          "position_error_m": 0.015328358605540039,
+          "angle_error_rad": 0.03816981535329931,
+          "observed_gap_m": 0.07998018711805344,
+          "planned_gap_m": null
+        },
+        {
+          "step": 257,
+          "attempt": 2,
+          "position_error_m": 0.015318134393212625,
+          "angle_error_rad": 0.038158164735971355,
+          "observed_gap_m": 0.07998007535934448,
+          "planned_gap_m": null
+        },
+        {
+          "step": 258,
+          "attempt": 2,
+          "position_error_m": 0.015304361607203242,
+          "angle_error_rad": 0.038145873816006155,
+          "observed_gap_m": 0.07997996360063553,
+          "planned_gap_m": null
+        },
+        {
+          "step": 259,
+          "attempt": 2,
+          "position_error_m": 0.015299202158973835,
+          "angle_error_rad": 0.03813353987067033,
+          "observed_gap_m": 0.07997985929250717,
+          "planned_gap_m": null
+        },
+        {
+          "step": 260,
+          "attempt": 2,
+          "position_error_m": 0.015302415351593265,
+          "angle_error_rad": 0.038121696173756846,
+          "observed_gap_m": 0.07997976243495941,
+          "planned_gap_m": null
+        },
+        {
+          "step": 261,
+          "attempt": 2,
+          "position_error_m": 0.015325927448171284,
+          "angle_error_rad": 0.03811071716270982,
+          "observed_gap_m": 0.07997966557741165,
+          "planned_gap_m": null
+        },
+        {
+          "step": 262,
+          "attempt": 2,
+          "position_error_m": 0.015328812494807907,
+          "angle_error_rad": 0.03810021151198286,
+          "observed_gap_m": 0.07997956871986389,
+          "planned_gap_m": null
+        },
+        {
+          "step": 263,
+          "attempt": 2,
+          "position_error_m": 0.015316093111398102,
+          "angle_error_rad": 0.03808960959596945,
+          "observed_gap_m": 0.07997948676347733,
+          "planned_gap_m": null
+        },
+        {
+          "step": 264,
+          "attempt": 2,
+          "position_error_m": 0.015303799619034768,
+          "angle_error_rad": 0.038078397533640666,
+          "observed_gap_m": 0.07997940480709076,
+          "planned_gap_m": null
+        },
+        {
+          "step": 265,
+          "attempt": 2,
+          "position_error_m": 0.01530000156823655,
+          "angle_error_rad": 0.038067147386274654,
+          "observed_gap_m": 0.0799793228507042,
+          "planned_gap_m": null
+        },
+        {
+          "step": 266,
+          "attempt": 2,
+          "position_error_m": 0.01530656959663239,
+          "angle_error_rad": 0.03805642600127478,
+          "observed_gap_m": 0.07997924089431763,
+          "planned_gap_m": null
+        },
+        {
+          "step": 267,
+          "attempt": 2,
+          "position_error_m": 0.015329557578022185,
+          "angle_error_rad": 0.038046600732547814,
+          "observed_gap_m": 0.07997917383909225,
+          "planned_gap_m": null
+        },
+        {
+          "step": 268,
+          "attempt": 2,
+          "position_error_m": 0.015326832417863897,
+          "angle_error_rad": 0.038037176399275376,
+          "observed_gap_m": 0.07997910678386688,
+          "planned_gap_m": null
+        },
+        {
+          "step": 269,
+          "attempt": 2,
+          "position_error_m": 0.015315739115069355,
+          "angle_error_rad": 0.0380275326185651,
+          "observed_gap_m": 0.07997903227806091,
+          "planned_gap_m": null
+        },
+        {
+          "step": 270,
+          "attempt": 2,
+          "position_error_m": 0.015303976828940583,
+          "angle_error_rad": 0.03801736278751526,
+          "observed_gap_m": 0.07997897267341614,
+          "planned_gap_m": null
+        },
+        {
+          "step": 271,
+          "attempt": 2,
+          "position_error_m": 0.015296120469771583,
+          "angle_error_rad": 0.038007066954913044,
+          "observed_gap_m": 0.07997891306877136,
+          "planned_gap_m": null
+        },
+        {
+          "step": 272,
+          "attempt": 2,
+          "position_error_m": 0.015303868666969147,
+          "angle_error_rad": 0.03799718830238336,
+          "observed_gap_m": 0.07997885346412659,
+          "planned_gap_m": null
+        },
+        {
+          "step": 273,
+          "attempt": 2,
+          "position_error_m": 0.015329488841835586,
+          "angle_error_rad": 0.03798849254715519,
+          "observed_gap_m": 0.07997879385948181,
+          "planned_gap_m": null
+        }
+      ],
+      "events": [
+        {
+          "step": 79,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "diagnostic_forced_start",
+          "attempt": 1,
+          "object_position": [
+            0.00925376731902361,
+            0.1565725952386856,
+            0.843752384185791
+          ]
+        },
+        {
+          "step": 87,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.009241310879588127,
+            0.1565321981906891,
+            0.8437457084655762
+          ]
+        },
+        {
+          "step": 122,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.009276894852519035,
+            0.15656882524490356,
+            0.843755304813385
+          ]
+        },
+        {
+          "step": 180,
+          "from": "DESCEND",
+          "to": "RETRACT",
+          "reason": "descent_stalled_preserve_budget",
+          "attempt": 2,
+          "object_position": [
+            0.009271979331970215,
+            0.1565975546836853,
+            0.84375
+          ]
+        },
+        {
+          "step": 195,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 2,
+          "object_position": [
+            0.00925000011920929,
+            0.15654368698596954,
+            0.8437500596046448
+          ]
+        },
+        {
+          "step": 203,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 2,
+          "object_position": [
+            0.009262730367481709,
+            0.15655694901943207,
+            0.8437567949295044
+          ]
+        },
+        {
+          "step": 274,
+          "from": "DESCEND",
+          "to": "EXHAUSTED",
+          "reason": "attempt_limit",
+          "attempt": 2,
+          "object_position": [
+            0.00924637820571661,
+            0.15655234456062317,
+            0.843751072883606
+          ]
+        }
+      ]
+    },
+    {
+      "version": "v5",
+      "demo": "demo_11000013",
+      "exact_physics_replay": true,
+      "controls": 400,
+      "success": false,
+      "phases": {
+        "NORMAL": 79,
+        "RETRACT": 17,
+        "ALIGN": 46,
+        "DESCEND": 91,
+        "CLOSE": 18,
+        "TEST_LIFT": 7,
+        "LIFT": 16,
+        "EXHAUSTED": 126
+      },
+      "wall_robot_contact_boundaries": {
+        "bin2 / gripper0_right_right_gripper": 175
+      },
+      "contacts_by_phase": {
+        "CLOSE: bin2 / gripper0_right_right_gripper": 4,
+        "DESCEND: bin2 / gripper0_right_right_gripper": 53,
+        "EXHAUSTED: bin2 / gripper0_right_right_gripper": 118
+      },
+      "descent_observations": [
+        {
+          "step": 126,
+          "attempt": 1,
+          "position_error_m": 0.13404344025638518,
+          "angle_error_rad": 0.11793359722202124,
+          "observed_gap_m": 0.0660463348031044,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 127,
+          "attempt": 1,
+          "position_error_m": 0.1344218062581327,
+          "angle_error_rad": 0.09708917445662787,
+          "observed_gap_m": 0.07127711176872253,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 128,
+          "attempt": 1,
+          "position_error_m": 0.13481416757480175,
+          "angle_error_rad": 0.07892937453500287,
+          "observed_gap_m": 0.07227670401334763,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 129,
+          "attempt": 1,
+          "position_error_m": 0.13160255510565902,
+          "angle_error_rad": 0.06319640771739773,
+          "observed_gap_m": 0.07030605524778366,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 130,
+          "attempt": 1,
+          "position_error_m": 0.1245337591465403,
+          "angle_error_rad": 0.04976992732473924,
+          "observed_gap_m": 0.06591671705245972,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 131,
+          "attempt": 1,
+          "position_error_m": 0.11663959962043963,
+          "angle_error_rad": 0.038842880138919685,
+          "observed_gap_m": 0.05994713306427002,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 132,
+          "attempt": 1,
+          "position_error_m": 0.10849251649166668,
+          "angle_error_rad": 0.030706585948723834,
+          "observed_gap_m": 0.053085871040821075,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 133,
+          "attempt": 1,
+          "position_error_m": 0.1002640262490813,
+          "angle_error_rad": 0.02531081063137728,
+          "observed_gap_m": 0.04572466388344765,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 134,
+          "attempt": 1,
+          "position_error_m": 0.09196684501374867,
+          "angle_error_rad": 0.022278443956303497,
+          "observed_gap_m": 0.03808308392763138,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 135,
+          "attempt": 1,
+          "position_error_m": 0.08362420092867905,
+          "angle_error_rad": 0.02088616398677366,
+          "observed_gap_m": 0.035310178995132446,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 136,
+          "attempt": 1,
+          "position_error_m": 0.07524734607804957,
+          "angle_error_rad": 0.020486267120923076,
+          "observed_gap_m": 0.03596377372741699,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 137,
+          "attempt": 1,
+          "position_error_m": 0.06684652900838708,
+          "angle_error_rad": 0.020483436192685646,
+          "observed_gap_m": 0.03936253488063812,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 138,
+          "attempt": 1,
+          "position_error_m": 0.05839259916814973,
+          "angle_error_rad": 0.020498168916121436,
+          "observed_gap_m": 0.04477067291736603,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 139,
+          "attempt": 1,
+          "position_error_m": 0.04989359487717767,
+          "angle_error_rad": 0.02035309465140313,
+          "observed_gap_m": 0.05131605267524719,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 140,
+          "attempt": 1,
+          "position_error_m": 0.041526017981721175,
+          "angle_error_rad": 0.019889214705723652,
+          "observed_gap_m": 0.05849883705377579,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 141,
+          "attempt": 1,
+          "position_error_m": 0.0337305642041704,
+          "angle_error_rad": 0.01888561441813624,
+          "observed_gap_m": 0.06603918969631195,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 142,
+          "attempt": 1,
+          "position_error_m": 0.026776607680614527,
+          "angle_error_rad": 0.017307211808517846,
+          "observed_gap_m": 0.07126909494400024,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 143,
+          "attempt": 1,
+          "position_error_m": 0.020734962022912508,
+          "angle_error_rad": 0.015260732462365312,
+          "observed_gap_m": 0.07226862013339996,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 144,
+          "attempt": 1,
+          "position_error_m": 0.015567176321762417,
+          "angle_error_rad": 0.012873755544614738,
+          "observed_gap_m": 0.07030268758535385,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 145,
+          "attempt": 1,
+          "position_error_m": 0.011226052504262573,
+          "angle_error_rad": 0.010294078160194623,
+          "observed_gap_m": 0.0659184604883194,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 146,
+          "attempt": 1,
+          "position_error_m": 0.007580317693294064,
+          "angle_error_rad": 0.007698847971300142,
+          "observed_gap_m": 0.05995175614953041,
+          "planned_gap_m": 0.056
+        },
+        {
+          "step": 205,
+          "attempt": 2,
+          "position_error_m": 0.15112885672914378,
+          "angle_error_rad": 0.08037459237498322,
+          "observed_gap_m": 0.0772983580827713,
+          "planned_gap_m": null
+        },
+        {
+          "step": 206,
+          "attempt": 2,
+          "position_error_m": 0.14874115780747826,
+          "angle_error_rad": 0.06748033548346435,
+          "observed_gap_m": 0.07760746777057648,
+          "planned_gap_m": null
+        },
+        {
+          "step": 207,
+          "attempt": 2,
+          "position_error_m": 0.14716766033433862,
+          "angle_error_rad": 0.05609071710415148,
+          "observed_gap_m": 0.07778069376945496,
+          "planned_gap_m": null
+        },
+        {
+          "step": 208,
+          "attempt": 2,
+          "position_error_m": 0.14283102030263697,
+          "angle_error_rad": 0.0442392922972893,
+          "observed_gap_m": 0.07789063453674316,
+          "planned_gap_m": null
+        },
+        {
+          "step": 209,
+          "attempt": 2,
+          "position_error_m": 0.13505574189600814,
+          "angle_error_rad": 0.03301820809328683,
+          "observed_gap_m": 0.07798134535551071,
+          "planned_gap_m": null
+        },
+        {
+          "step": 210,
+          "attempt": 2,
+          "position_error_m": 0.12654393706198602,
+          "angle_error_rad": 0.023658796306286037,
+          "observed_gap_m": 0.07806792855262756,
+          "planned_gap_m": null
+        },
+        {
+          "step": 211,
+          "attempt": 2,
+          "position_error_m": 0.11784392046672036,
+          "angle_error_rad": 0.016261231839962104,
+          "observed_gap_m": 0.07815079391002655,
+          "planned_gap_m": null
+        },
+        {
+          "step": 212,
+          "attempt": 2,
+          "position_error_m": 0.10909783560540652,
+          "angle_error_rad": 0.011111570863126863,
+          "observed_gap_m": 0.07823009788990021,
+          "planned_gap_m": null
+        },
+        {
+          "step": 213,
+          "attempt": 2,
+          "position_error_m": 0.10033597046954722,
+          "angle_error_rad": 0.008688995130963105,
+          "observed_gap_m": 0.07830600440502167,
+          "planned_gap_m": null
+        },
+        {
+          "step": 214,
+          "attempt": 2,
+          "position_error_m": 0.09155969573627479,
+          "angle_error_rad": 0.008843496980212927,
+          "observed_gap_m": 0.07837864756584167,
+          "planned_gap_m": null
+        },
+        {
+          "step": 215,
+          "attempt": 2,
+          "position_error_m": 0.08277339039626458,
+          "angle_error_rad": 0.01013693776278923,
+          "observed_gap_m": 0.07844818383455276,
+          "planned_gap_m": null
+        },
+        {
+          "step": 216,
+          "attempt": 2,
+          "position_error_m": 0.07393225609997316,
+          "angle_error_rad": 0.011457933015848456,
+          "observed_gap_m": 0.07851473987102509,
+          "planned_gap_m": null
+        },
+        {
+          "step": 217,
+          "attempt": 2,
+          "position_error_m": 0.06504227989684978,
+          "angle_error_rad": 0.012408028659344412,
+          "observed_gap_m": 0.07857843488454819,
+          "planned_gap_m": null
+        },
+        {
+          "step": 218,
+          "attempt": 2,
+          "position_error_m": 0.056116180688960564,
+          "angle_error_rad": 0.012907329004139904,
+          "observed_gap_m": 0.07863940298557281,
+          "planned_gap_m": null
+        },
+        {
+          "step": 219,
+          "attempt": 2,
+          "position_error_m": 0.047150220545387624,
+          "angle_error_rad": 0.012986258273350225,
+          "observed_gap_m": 0.07869775593280792,
+          "planned_gap_m": null
+        },
+        {
+          "step": 220,
+          "attempt": 2,
+          "position_error_m": 0.0384101592440666,
+          "angle_error_rad": 0.012617011923626216,
+          "observed_gap_m": 0.07875361293554306,
+          "planned_gap_m": null
+        },
+        {
+          "step": 221,
+          "attempt": 2,
+          "position_error_m": 0.03040072087178253,
+          "angle_error_rad": 0.011764832635473798,
+          "observed_gap_m": 0.07880707085132599,
+          "planned_gap_m": null
+        },
+        {
+          "step": 222,
+          "attempt": 2,
+          "position_error_m": 0.02338160001170644,
+          "angle_error_rad": 0.010502807158841323,
+          "observed_gap_m": 0.07885822653770447,
+          "planned_gap_m": null
+        },
+        {
+          "step": 223,
+          "attempt": 2,
+          "position_error_m": 0.017612419831807318,
+          "angle_error_rad": 0.008618563500793222,
+          "observed_gap_m": 0.07890719175338745,
+          "planned_gap_m": null
+        },
+        {
+          "step": 224,
+          "attempt": 2,
+          "position_error_m": 0.017265234866814944,
+          "angle_error_rad": 0.0009465308428523343,
+          "observed_gap_m": 0.07895407825708389,
+          "planned_gap_m": null
+        },
+        {
+          "step": 225,
+          "attempt": 2,
+          "position_error_m": 0.017690521857172955,
+          "angle_error_rad": 0.004234041646508189,
+          "observed_gap_m": 0.07899893820285797,
+          "planned_gap_m": null
+        },
+        {
+          "step": 226,
+          "attempt": 2,
+          "position_error_m": 0.017915375826684402,
+          "angle_error_rad": 0.006255653441249065,
+          "observed_gap_m": 0.07904187589883804,
+          "planned_gap_m": null
+        },
+        {
+          "step": 227,
+          "attempt": 2,
+          "position_error_m": 0.017990605435476953,
+          "angle_error_rad": 0.007281135880438499,
+          "observed_gap_m": 0.07908297330141068,
+          "planned_gap_m": null
+        },
+        {
+          "step": 228,
+          "attempt": 2,
+          "position_error_m": 0.017933464294586633,
+          "angle_error_rad": 0.008005875049210466,
+          "observed_gap_m": 0.07912230491638184,
+          "planned_gap_m": null
+        },
+        {
+          "step": 229,
+          "attempt": 2,
+          "position_error_m": 0.017789178616712694,
+          "angle_error_rad": 0.008790267579181756,
+          "observed_gap_m": 0.0791599452495575,
+          "planned_gap_m": null
+        },
+        {
+          "step": 230,
+          "attempt": 2,
+          "position_error_m": 0.01759167185630015,
+          "angle_error_rad": 0.009938455011846141,
+          "observed_gap_m": 0.07919597625732422,
+          "planned_gap_m": null
+        },
+        {
+          "step": 231,
+          "attempt": 2,
+          "position_error_m": 0.017421487054433468,
+          "angle_error_rad": 0.011065421787540594,
+          "observed_gap_m": 0.07923046499490738,
+          "planned_gap_m": null
+        },
+        {
+          "step": 232,
+          "attempt": 2,
+          "position_error_m": 0.017514467433750337,
+          "angle_error_rad": 0.00905977994616004,
+          "observed_gap_m": 0.07926347851753235,
+          "planned_gap_m": null
+        },
+        {
+          "step": 233,
+          "attempt": 2,
+          "position_error_m": 0.017542337846003647,
+          "angle_error_rad": 0.006023945742405837,
+          "observed_gap_m": 0.0792950689792633,
+          "planned_gap_m": null
+        },
+        {
+          "step": 234,
+          "attempt": 2,
+          "position_error_m": 0.017514408233556086,
+          "angle_error_rad": 0.0038669973820519565,
+          "observed_gap_m": 0.07932530343532562,
+          "planned_gap_m": null
+        },
+        {
+          "step": 235,
+          "attempt": 2,
+          "position_error_m": 0.01750944789005084,
+          "angle_error_rad": 0.003885808375462567,
+          "observed_gap_m": 0.07935424149036407,
+          "planned_gap_m": null
+        },
+        {
+          "step": 236,
+          "attempt": 2,
+          "position_error_m": 0.017496946658135032,
+          "angle_error_rad": 0.0038617239870081515,
+          "observed_gap_m": 0.07938193529844284,
+          "planned_gap_m": null
+        },
+        {
+          "step": 237,
+          "attempt": 2,
+          "position_error_m": 0.017490778683706996,
+          "angle_error_rad": 0.0038511615841940777,
+          "observed_gap_m": 0.0794084444642067,
+          "planned_gap_m": null
+        },
+        {
+          "step": 238,
+          "attempt": 2,
+          "position_error_m": 0.017501346951015347,
+          "angle_error_rad": 0.0038483048689359946,
+          "observed_gap_m": 0.07943381369113922,
+          "planned_gap_m": null
+        },
+        {
+          "step": 239,
+          "attempt": 2,
+          "position_error_m": 0.017527416123615133,
+          "angle_error_rad": 0.0038450005972067353,
+          "observed_gap_m": 0.07945810258388519,
+          "planned_gap_m": null
+        },
+        {
+          "step": 240,
+          "attempt": 2,
+          "position_error_m": 0.017521270182549765,
+          "angle_error_rad": 0.0038418631309859383,
+          "observed_gap_m": 0.079481340944767,
+          "planned_gap_m": null
+        },
+        {
+          "step": 241,
+          "attempt": 2,
+          "position_error_m": 0.017515054723226307,
+          "angle_error_rad": 0.003839738504919289,
+          "observed_gap_m": 0.07950358837842941,
+          "planned_gap_m": null
+        },
+        {
+          "step": 242,
+          "attempt": 2,
+          "position_error_m": 0.017499224520016197,
+          "angle_error_rad": 0.00383854624998665,
+          "observed_gap_m": 0.07952487468719482,
+          "planned_gap_m": null
+        },
+        {
+          "step": 243,
+          "attempt": 2,
+          "position_error_m": 0.017493523736150696,
+          "angle_error_rad": 0.0038377293912263636,
+          "observed_gap_m": 0.07954525947570801,
+          "planned_gap_m": null
+        },
+        {
+          "step": 244,
+          "attempt": 2,
+          "position_error_m": 0.017504382260504322,
+          "angle_error_rad": 0.0038369814126577163,
+          "observed_gap_m": 0.07956476509571075,
+          "planned_gap_m": null
+        },
+        {
+          "step": 245,
+          "attempt": 2,
+          "position_error_m": 0.017524941171721004,
+          "angle_error_rad": 0.0038362365932341188,
+          "observed_gap_m": 0.07958343625068665,
+          "planned_gap_m": null
+        },
+        {
+          "step": 246,
+          "attempt": 2,
+          "position_error_m": 0.01752857237687573,
+          "angle_error_rad": 0.0038355606352654024,
+          "observed_gap_m": 0.07960130274295807,
+          "planned_gap_m": null
+        },
+        {
+          "step": 247,
+          "attempt": 2,
+          "position_error_m": 0.017516175446868846,
+          "angle_error_rad": 0.0038348144504470215,
+          "observed_gap_m": 0.07961839437484741,
+          "planned_gap_m": null
+        },
+        {
+          "step": 248,
+          "attempt": 2,
+          "position_error_m": 0.017499493769755247,
+          "angle_error_rad": 0.0038340654566355803,
+          "observed_gap_m": 0.07963476330041885,
+          "planned_gap_m": null
+        },
+        {
+          "step": 249,
+          "attempt": 2,
+          "position_error_m": 0.01749173694471009,
+          "angle_error_rad": 0.0038333164521510104,
+          "observed_gap_m": 0.07965043187141418,
+          "planned_gap_m": null
+        },
+        {
+          "step": 250,
+          "attempt": 2,
+          "position_error_m": 0.01749819458731697,
+          "angle_error_rad": 0.0038326378801625777,
+          "observed_gap_m": 0.0796654224395752,
+          "planned_gap_m": null
+        },
+        {
+          "step": 251,
+          "attempt": 2,
+          "position_error_m": 0.017525795918839314,
+          "angle_error_rad": 0.0038318998317247504,
+          "observed_gap_m": 0.07967977225780487,
+          "planned_gap_m": null
+        },
+        {
+          "step": 252,
+          "attempt": 2,
+          "position_error_m": 0.017523902696634175,
+          "angle_error_rad": 0.0038311674134474116,
+          "observed_gap_m": 0.0796935111284256,
+          "planned_gap_m": null
+        },
+        {
+          "step": 253,
+          "attempt": 2,
+          "position_error_m": 0.017519140246650185,
+          "angle_error_rad": 0.0038305032448840864,
+          "observed_gap_m": 0.07970665395259857,
+          "planned_gap_m": null
+        },
+        {
+          "step": 254,
+          "attempt": 2,
+          "position_error_m": 0.017502879917366657,
+          "angle_error_rad": 0.0038297684459369418,
+          "observed_gap_m": 0.07971923053264618,
+          "planned_gap_m": null
+        },
+        {
+          "step": 255,
+          "attempt": 2,
+          "position_error_m": 0.017497821057038666,
+          "angle_error_rad": 0.003829033834217329,
+          "observed_gap_m": 0.0797312781214714,
+          "planned_gap_m": null
+        },
+        {
+          "step": 256,
+          "attempt": 2,
+          "position_error_m": 0.017506452043809073,
+          "angle_error_rad": 0.0038283686675668785,
+          "observed_gap_m": 0.07974280416965485,
+          "planned_gap_m": null
+        },
+        {
+          "step": 257,
+          "attempt": 2,
+          "position_error_m": 0.01753216621054647,
+          "angle_error_rad": 0.0038276426590243386,
+          "observed_gap_m": 0.0797538310289383,
+          "planned_gap_m": null
+        },
+        {
+          "step": 258,
+          "attempt": 2,
+          "position_error_m": 0.01753161394656367,
+          "angle_error_rad": 0.003826989367484514,
+          "observed_gap_m": 0.07976439595222473,
+          "planned_gap_m": null
+        },
+        {
+          "step": 259,
+          "attempt": 2,
+          "position_error_m": 0.017515830941847332,
+          "angle_error_rad": 0.003826357759774679,
+          "observed_gap_m": 0.07977449893951416,
+          "planned_gap_m": null
+        },
+        {
+          "step": 260,
+          "attempt": 2,
+          "position_error_m": 0.01750629049302172,
+          "angle_error_rad": 0.0038256322001510423,
+          "observed_gap_m": 0.07978416979312897,
+          "planned_gap_m": null
+        },
+        {
+          "step": 261,
+          "attempt": 2,
+          "position_error_m": 0.01749422618116859,
+          "angle_error_rad": 0.0038249738667973563,
+          "observed_gap_m": 0.07979342341423035,
+          "planned_gap_m": null
+        },
+        {
+          "step": 262,
+          "attempt": 2,
+          "position_error_m": 0.017499432252623424,
+          "angle_error_rad": 0.003824253002277966,
+          "observed_gap_m": 0.07980228960514069,
+          "planned_gap_m": null
+        },
+        {
+          "step": 263,
+          "attempt": 2,
+          "position_error_m": 0.017529163916807866,
+          "angle_error_rad": 0.003823607086303811,
+          "observed_gap_m": 0.07981076836585999,
+          "planned_gap_m": null
+        },
+        {
+          "step": 264,
+          "attempt": 2,
+          "position_error_m": 0.01752627109007041,
+          "angle_error_rad": 0.0038228999883175197,
+          "observed_gap_m": 0.07981888204813004,
+          "planned_gap_m": null
+        },
+        {
+          "step": 265,
+          "attempt": 2,
+          "position_error_m": 0.017520171227907114,
+          "angle_error_rad": 0.0038222829648837556,
+          "observed_gap_m": 0.07982665300369263,
+          "planned_gap_m": null
+        },
+        {
+          "step": 266,
+          "attempt": 2,
+          "position_error_m": 0.017504271988836854,
+          "angle_error_rad": 0.0038216386823690693,
+          "observed_gap_m": 0.07983408868312836,
+          "planned_gap_m": null
+        },
+        {
+          "step": 267,
+          "attempt": 2,
+          "position_error_m": 0.017499174543928502,
+          "angle_error_rad": 0.003820926900024067,
+          "observed_gap_m": 0.07984120398759842,
+          "planned_gap_m": null
+        },
+        {
+          "step": 268,
+          "attempt": 2,
+          "position_error_m": 0.017507963074356613,
+          "angle_error_rad": 0.0038202855836658623,
+          "observed_gap_m": 0.07984801381826401,
+          "planned_gap_m": null
+        },
+        {
+          "step": 269,
+          "attempt": 2,
+          "position_error_m": 0.01752810586539081,
+          "angle_error_rad": 0.003819583454935396,
+          "observed_gap_m": 0.07985453307628632,
+          "planned_gap_m": null
+        },
+        {
+          "step": 270,
+          "attempt": 2,
+          "position_error_m": 0.01752836732030632,
+          "angle_error_rad": 0.003819042851372514,
+          "observed_gap_m": 0.07986077666282654,
+          "planned_gap_m": null
+        },
+        {
+          "step": 271,
+          "attempt": 2,
+          "position_error_m": 0.01751531224923167,
+          "angle_error_rad": 0.003818343486126303,
+          "observed_gap_m": 0.07986674457788467,
+          "planned_gap_m": null
+        },
+        {
+          "step": 272,
+          "attempt": 2,
+          "position_error_m": 0.017500843420689548,
+          "angle_error_rad": 0.003817708102685286,
+          "observed_gap_m": 0.07987245917320251,
+          "planned_gap_m": null
+        },
+        {
+          "step": 273,
+          "attempt": 2,
+          "position_error_m": 0.017498733470936622,
+          "angle_error_rad": 0.0038170054212193234,
+          "observed_gap_m": 0.07987792789936066,
+          "planned_gap_m": null
+        },
+        {
+          "step": 274,
+          "attempt": 2,
+          "position_error_m": 0.017504005019674324,
+          "angle_error_rad": 0.003816462669753495,
+          "observed_gap_m": 0.0798831656575203,
+          "planned_gap_m": null
+        }
+      ],
+      "events": [
+        {
+          "step": 79,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "diagnostic_forced_start",
+          "attempt": 1,
+          "object_position": [
+            0.020722290500998497,
+            0.16306735575199127,
+            0.8437838554382324
+          ]
+        },
+        {
+          "step": 87,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.020720861852169037,
+            0.16307374835014343,
+            0.8437764048576355
+          ]
+        },
+        {
+          "step": 125,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.020716648548841476,
+            0.16304288804531097,
+            0.8437804579734802
+          ]
+        },
+        {
+          "step": 146,
+          "from": "DESCEND",
+          "to": "CLOSE",
+          "reason": "at_grasp_pose",
+          "attempt": 1,
+          "object_position": [
+            0.02070775255560875,
+            0.1630525141954422,
+            0.8437802791595459
+          ]
+        },
+        {
+          "step": 164,
+          "from": "CLOSE",
+          "to": "TEST_LIFT",
+          "reason": "close_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.021397536620497704,
+            0.16379719972610474,
+            0.8433448076248169
+          ]
+        },
+        {
+          "step": 171,
+          "from": "TEST_LIFT",
+          "to": "LIFT",
+          "reason": "lift_follow_confirmed",
+          "attempt": 1,
+          "object_position": [
+            0.019490236416459084,
+            0.16180354356765747,
+            0.8659345507621765
+          ]
+        },
+        {
+          "step": 188,
+          "from": "LIFT",
+          "to": "RETRACT",
+          "reason": "observed_grasp_loss",
+          "attempt": 2,
+          "object_position": [
+            -0.000641576771158725,
+            0.16343288123607635,
+            0.8441390991210938
+          ]
+        },
+        {
+          "step": 196,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 2,
+          "object_position": [
+            0.00022634747438132763,
+            0.16314946115016937,
+            0.8437742590904236
+          ]
+        },
+        {
+          "step": 204,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 2,
+          "object_position": [
+            0.00020357361063361168,
+            0.1631060093641281,
+            0.8437700867652893
+          ]
+        },
+        {
+          "step": 275,
+          "from": "DESCEND",
+          "to": "EXHAUSTED",
+          "reason": "attempt_limit",
+          "attempt": 2,
+          "object_position": [
+            0.0002201599272666499,
+            0.16311679780483246,
+            0.843768298625946
+          ]
+        }
+      ]
+    },
+    {
+      "version": "v5",
+      "demo": "demo_11000014",
+      "exact_physics_replay": true,
+      "controls": 400,
+      "success": false,
+      "phases": {
+        "NORMAL": 79,
+        "RETRACT": 25,
+        "ALIGN": 46,
+        "DESCEND": 123,
+        "EXHAUSTED": 127
+      },
+      "wall_robot_contact_boundaries": {
+        "bin2 / gripper0_right_right_gripper": 198
+      },
+      "contacts_by_phase": {
+        "DESCEND: bin2 / gripper0_right_right_gripper": 88,
+        "RETRACT: bin2 / gripper0_right_right_gripper": 2,
+        "EXHAUSTED: bin2 / gripper0_right_right_gripper": 108
+      },
+      "descent_observations": [
+        {
+          "step": 126,
+          "attempt": 1,
+          "position_error_m": 0.1501843055521411,
+          "angle_error_rad": 0.10626989635914498,
+          "observed_gap_m": 0.07996585965156555,
+          "planned_gap_m": null
+        },
+        {
+          "step": 127,
+          "attempt": 1,
+          "position_error_m": 0.1505619252897489,
+          "angle_error_rad": 0.08657891735818977,
+          "observed_gap_m": 0.07996737957000732,
+          "planned_gap_m": null
+        },
+        {
+          "step": 128,
+          "attempt": 1,
+          "position_error_m": 0.15087964403494938,
+          "angle_error_rad": 0.06974095820911763,
+          "observed_gap_m": 0.07996883988380432,
+          "planned_gap_m": null
+        },
+        {
+          "step": 129,
+          "attempt": 1,
+          "position_error_m": 0.14754759720009125,
+          "angle_error_rad": 0.05577811632813671,
+          "observed_gap_m": 0.07997021079063416,
+          "planned_gap_m": null
+        },
+        {
+          "step": 130,
+          "attempt": 1,
+          "position_error_m": 0.1400335807178476,
+          "angle_error_rad": 0.04433091811380063,
+          "observed_gap_m": 0.07997150719165802,
+          "planned_gap_m": null
+        },
+        {
+          "step": 131,
+          "attempt": 1,
+          "position_error_m": 0.1315666627522319,
+          "angle_error_rad": 0.03509408417842681,
+          "observed_gap_m": 0.0799727514386177,
+          "planned_gap_m": null
+        },
+        {
+          "step": 132,
+          "attempt": 1,
+          "position_error_m": 0.12280561777626417,
+          "angle_error_rad": 0.027975609563347187,
+          "observed_gap_m": 0.07997393608093262,
+          "planned_gap_m": null
+        },
+        {
+          "step": 133,
+          "attempt": 1,
+          "position_error_m": 0.11393080375704279,
+          "angle_error_rad": 0.022640122543475236,
+          "observed_gap_m": 0.07997506111860275,
+          "planned_gap_m": null
+        },
+        {
+          "step": 134,
+          "attempt": 1,
+          "position_error_m": 0.10499076457903912,
+          "angle_error_rad": 0.018611483908393657,
+          "observed_gap_m": 0.07997606694698334,
+          "planned_gap_m": null
+        },
+        {
+          "step": 135,
+          "attempt": 1,
+          "position_error_m": 0.09599805365921153,
+          "angle_error_rad": 0.01566663431298167,
+          "observed_gap_m": 0.07997644692659378,
+          "planned_gap_m": null
+        },
+        {
+          "step": 136,
+          "attempt": 1,
+          "position_error_m": 0.08692180914394089,
+          "angle_error_rad": 0.01352596328909605,
+          "observed_gap_m": 0.0799766555428505,
+          "planned_gap_m": null
+        },
+        {
+          "step": 137,
+          "attempt": 1,
+          "position_error_m": 0.07778375173438368,
+          "angle_error_rad": 0.011923239409740601,
+          "observed_gap_m": 0.07997683435678482,
+          "planned_gap_m": null
+        },
+        {
+          "step": 138,
+          "attempt": 1,
+          "position_error_m": 0.06859796858438791,
+          "angle_error_rad": 0.010656004146974757,
+          "observed_gap_m": 0.07997703552246094,
+          "planned_gap_m": null
+        },
+        {
+          "step": 139,
+          "attempt": 1,
+          "position_error_m": 0.05936789477105683,
+          "angle_error_rad": 0.009595004190367446,
+          "observed_gap_m": 0.07997727394104004,
+          "planned_gap_m": null
+        },
+        {
+          "step": 140,
+          "attempt": 1,
+          "position_error_m": 0.05010718514476942,
+          "angle_error_rad": 0.008678502211382945,
+          "observed_gap_m": 0.07997755706310272,
+          "planned_gap_m": null
+        },
+        {
+          "step": 141,
+          "attempt": 1,
+          "position_error_m": 0.040895674973777565,
+          "angle_error_rad": 0.007865346086285693,
+          "observed_gap_m": 0.07997790724039078,
+          "planned_gap_m": null
+        },
+        {
+          "step": 142,
+          "attempt": 1,
+          "position_error_m": 0.032200438103216746,
+          "angle_error_rad": 0.0070242948583792925,
+          "observed_gap_m": 0.07997830957174301,
+          "planned_gap_m": null
+        },
+        {
+          "step": 143,
+          "attempt": 1,
+          "position_error_m": 0.024516695881539124,
+          "angle_error_rad": 0.00620061909921812,
+          "observed_gap_m": 0.07997876405715942,
+          "planned_gap_m": null
+        },
+        {
+          "step": 144,
+          "attempt": 1,
+          "position_error_m": 0.01797186356639962,
+          "angle_error_rad": 0.005601539431336986,
+          "observed_gap_m": 0.0799793154001236,
+          "planned_gap_m": null
+        },
+        {
+          "step": 145,
+          "attempt": 1,
+          "position_error_m": 0.016331847760869208,
+          "angle_error_rad": 0.008644233388534234,
+          "observed_gap_m": 0.07998013496398926,
+          "planned_gap_m": null
+        },
+        {
+          "step": 146,
+          "attempt": 1,
+          "position_error_m": 0.01608433837248193,
+          "angle_error_rad": 0.01757439096276592,
+          "observed_gap_m": 0.0799809992313385,
+          "planned_gap_m": null
+        },
+        {
+          "step": 147,
+          "attempt": 1,
+          "position_error_m": 0.01571836477894186,
+          "angle_error_rad": 0.025185691054680416,
+          "observed_gap_m": 0.07998181879520416,
+          "planned_gap_m": null
+        },
+        {
+          "step": 148,
+          "attempt": 1,
+          "position_error_m": 0.01537893553714287,
+          "angle_error_rad": 0.03124669650099192,
+          "observed_gap_m": 0.07998260855674744,
+          "planned_gap_m": null
+        },
+        {
+          "step": 149,
+          "attempt": 1,
+          "position_error_m": 0.015101635162770067,
+          "angle_error_rad": 0.03592081870863625,
+          "observed_gap_m": 0.07998335361480713,
+          "planned_gap_m": null
+        },
+        {
+          "step": 150,
+          "attempt": 1,
+          "position_error_m": 0.014903936370855582,
+          "angle_error_rad": 0.03935704335057878,
+          "observed_gap_m": 0.07998406887054443,
+          "planned_gap_m": null
+        },
+        {
+          "step": 151,
+          "attempt": 1,
+          "position_error_m": 0.014777827612920664,
+          "angle_error_rad": 0.041710268430102164,
+          "observed_gap_m": 0.07998475432395935,
+          "planned_gap_m": null
+        },
+        {
+          "step": 152,
+          "attempt": 1,
+          "position_error_m": 0.014721131849514804,
+          "angle_error_rad": 0.04312295377160859,
+          "observed_gap_m": 0.07998540997505188,
+          "planned_gap_m": null
+        },
+        {
+          "step": 153,
+          "attempt": 1,
+          "position_error_m": 0.014723610449130653,
+          "angle_error_rad": 0.04378236296380578,
+          "observed_gap_m": 0.07998603582382202,
+          "planned_gap_m": null
+        },
+        {
+          "step": 154,
+          "attempt": 1,
+          "position_error_m": 0.014734596526309563,
+          "angle_error_rad": 0.04402488041522748,
+          "observed_gap_m": 0.07998663187026978,
+          "planned_gap_m": null
+        },
+        {
+          "step": 155,
+          "attempt": 1,
+          "position_error_m": 0.014748341778674165,
+          "angle_error_rad": 0.0440102202741849,
+          "observed_gap_m": 0.07998720556497574,
+          "planned_gap_m": null
+        },
+        {
+          "step": 156,
+          "attempt": 1,
+          "position_error_m": 0.014775259550330072,
+          "angle_error_rad": 0.043757612887384896,
+          "observed_gap_m": 0.07998774945735931,
+          "planned_gap_m": null
+        },
+        {
+          "step": 157,
+          "attempt": 1,
+          "position_error_m": 0.014820291550549355,
+          "angle_error_rad": 0.04333907906910029,
+          "observed_gap_m": 0.07998815178871155,
+          "planned_gap_m": null
+        },
+        {
+          "step": 158,
+          "attempt": 1,
+          "position_error_m": 0.014882547586206047,
+          "angle_error_rad": 0.0428176384727509,
+          "observed_gap_m": 0.0799877941608429,
+          "planned_gap_m": null
+        },
+        {
+          "step": 159,
+          "attempt": 1,
+          "position_error_m": 0.01496558219371088,
+          "angle_error_rad": 0.04224175944580519,
+          "observed_gap_m": 0.07998725026845932,
+          "planned_gap_m": null
+        },
+        {
+          "step": 160,
+          "attempt": 1,
+          "position_error_m": 0.015020497966383916,
+          "angle_error_rad": 0.04164939290416136,
+          "observed_gap_m": 0.07998666167259216,
+          "planned_gap_m": null
+        },
+        {
+          "step": 161,
+          "attempt": 1,
+          "position_error_m": 0.015057478358064803,
+          "angle_error_rad": 0.041067768872773774,
+          "observed_gap_m": 0.0799860805273056,
+          "planned_gap_m": null
+        },
+        {
+          "step": 162,
+          "attempt": 1,
+          "position_error_m": 0.015092219728839455,
+          "angle_error_rad": 0.04051887685158764,
+          "observed_gap_m": 0.07998551428318024,
+          "planned_gap_m": null
+        },
+        {
+          "step": 163,
+          "attempt": 1,
+          "position_error_m": 0.015130646168250824,
+          "angle_error_rad": 0.04001978212448561,
+          "observed_gap_m": 0.07998500019311905,
+          "planned_gap_m": null
+        },
+        {
+          "step": 164,
+          "attempt": 1,
+          "position_error_m": 0.015172440483717598,
+          "angle_error_rad": 0.0395845595215858,
+          "observed_gap_m": 0.07998452335596085,
+          "planned_gap_m": null
+        },
+        {
+          "step": 165,
+          "attempt": 1,
+          "position_error_m": 0.015227456474469579,
+          "angle_error_rad": 0.03922185047625983,
+          "observed_gap_m": 0.07998408377170563,
+          "planned_gap_m": null
+        },
+        {
+          "step": 166,
+          "attempt": 1,
+          "position_error_m": 0.015252346259541003,
+          "angle_error_rad": 0.03893252495973289,
+          "observed_gap_m": 0.0799836814403534,
+          "planned_gap_m": null
+        },
+        {
+          "step": 167,
+          "attempt": 1,
+          "position_error_m": 0.015260273373552184,
+          "angle_error_rad": 0.0387106514532516,
+          "observed_gap_m": 0.07998330891132355,
+          "planned_gap_m": null
+        },
+        {
+          "step": 168,
+          "attempt": 1,
+          "position_error_m": 0.015262839373169931,
+          "angle_error_rad": 0.038545973774756145,
+          "observed_gap_m": 0.07998297363519669,
+          "planned_gap_m": null
+        },
+        {
+          "step": 169,
+          "attempt": 1,
+          "position_error_m": 0.015268323276461137,
+          "angle_error_rad": 0.03843077707139096,
+          "observed_gap_m": 0.07998265326023102,
+          "planned_gap_m": null
+        },
+        {
+          "step": 170,
+          "attempt": 1,
+          "position_error_m": 0.015279073890240153,
+          "angle_error_rad": 0.038359197618662,
+          "observed_gap_m": 0.07998235523700714,
+          "planned_gap_m": null
+        },
+        {
+          "step": 171,
+          "attempt": 1,
+          "position_error_m": 0.01530623926754751,
+          "angle_error_rad": 0.03832725716379094,
+          "observed_gap_m": 0.07998207956552505,
+          "planned_gap_m": null
+        },
+        {
+          "step": 172,
+          "attempt": 1,
+          "position_error_m": 0.015306579241354073,
+          "angle_error_rad": 0.03831992745661227,
+          "observed_gap_m": 0.07998181879520416,
+          "planned_gap_m": null
+        },
+        {
+          "step": 173,
+          "attempt": 1,
+          "position_error_m": 0.01529708789599992,
+          "angle_error_rad": 0.038317460098193014,
+          "observed_gap_m": 0.07998156547546387,
+          "planned_gap_m": null
+        },
+        {
+          "step": 174,
+          "attempt": 1,
+          "position_error_m": 0.01528172372278677,
+          "angle_error_rad": 0.03831501093601843,
+          "observed_gap_m": 0.07998132705688477,
+          "planned_gap_m": null
+        },
+        {
+          "step": 175,
+          "attempt": 1,
+          "position_error_m": 0.01527888597548711,
+          "angle_error_rad": 0.03831244855630417,
+          "observed_gap_m": 0.07998110353946686,
+          "planned_gap_m": null
+        },
+        {
+          "step": 176,
+          "attempt": 1,
+          "position_error_m": 0.01528476022677188,
+          "angle_error_rad": 0.03830990521535918,
+          "observed_gap_m": 0.07998088002204895,
+          "planned_gap_m": null
+        },
+        {
+          "step": 177,
+          "attempt": 1,
+          "position_error_m": 0.015310017700896057,
+          "angle_error_rad": 0.038307490879238265,
+          "observed_gap_m": 0.07998067885637283,
+          "planned_gap_m": null
+        },
+        {
+          "step": 178,
+          "attempt": 1,
+          "position_error_m": 0.015309839030391653,
+          "angle_error_rad": 0.03830513213917931,
+          "observed_gap_m": 0.07998047769069672,
+          "planned_gap_m": null
+        },
+        {
+          "step": 204,
+          "attempt": 2,
+          "position_error_m": 0.1489053403625888,
+          "angle_error_rad": 0.014636774953651685,
+          "observed_gap_m": 0.07997417449951172,
+          "planned_gap_m": null
+        },
+        {
+          "step": 205,
+          "attempt": 2,
+          "position_error_m": 0.14902065829160077,
+          "angle_error_rad": 0.010735755152090085,
+          "observed_gap_m": 0.07997499406337738,
+          "planned_gap_m": null
+        },
+        {
+          "step": 206,
+          "attempt": 2,
+          "position_error_m": 0.14913034216019508,
+          "angle_error_rad": 0.0075304527029174595,
+          "observed_gap_m": 0.07997585833072662,
+          "planned_gap_m": null
+        },
+        {
+          "step": 207,
+          "attempt": 2,
+          "position_error_m": 0.14561306643949037,
+          "angle_error_rad": 0.0055599147438970846,
+          "observed_gap_m": 0.07997626066207886,
+          "planned_gap_m": null
+        },
+        {
+          "step": 208,
+          "attempt": 2,
+          "position_error_m": 0.13794664466235707,
+          "angle_error_rad": 0.006091250935138313,
+          "observed_gap_m": 0.07997666299343109,
+          "planned_gap_m": null
+        },
+        {
+          "step": 209,
+          "attempt": 2,
+          "position_error_m": 0.1293538873046757,
+          "angle_error_rad": 0.007592302851403626,
+          "observed_gap_m": 0.0799776017665863,
+          "planned_gap_m": null
+        },
+        {
+          "step": 210,
+          "attempt": 2,
+          "position_error_m": 0.12049845153112193,
+          "angle_error_rad": 0.009017451799840545,
+          "observed_gap_m": 0.0799785628914833,
+          "planned_gap_m": null
+        },
+        {
+          "step": 211,
+          "attempt": 2,
+          "position_error_m": 0.11154378823399717,
+          "angle_error_rad": 0.009995231748564239,
+          "observed_gap_m": 0.07997947931289673,
+          "planned_gap_m": null
+        },
+        {
+          "step": 212,
+          "attempt": 2,
+          "position_error_m": 0.10253734900555135,
+          "angle_error_rad": 0.01048167708591953,
+          "observed_gap_m": 0.07998035848140717,
+          "planned_gap_m": null
+        },
+        {
+          "step": 213,
+          "attempt": 2,
+          "position_error_m": 0.09349490570646024,
+          "angle_error_rad": 0.01053381101017449,
+          "observed_gap_m": 0.07998120784759521,
+          "planned_gap_m": null
+        },
+        {
+          "step": 214,
+          "attempt": 2,
+          "position_error_m": 0.08438228735540591,
+          "angle_error_rad": 0.010230672297127869,
+          "observed_gap_m": 0.07998201251029968,
+          "planned_gap_m": null
+        },
+        {
+          "step": 215,
+          "attempt": 2,
+          "position_error_m": 0.07521313137477185,
+          "angle_error_rad": 0.00965622414314661,
+          "observed_gap_m": 0.07998278737068176,
+          "planned_gap_m": null
+        },
+        {
+          "step": 216,
+          "attempt": 2,
+          "position_error_m": 0.06600483386548515,
+          "angle_error_rad": 0.008892181726514334,
+          "observed_gap_m": 0.07998351752758026,
+          "planned_gap_m": null
+        },
+        {
+          "step": 217,
+          "attempt": 2,
+          "position_error_m": 0.05675801078681639,
+          "angle_error_rad": 0.008012967963678183,
+          "observed_gap_m": 0.07998422533273697,
+          "planned_gap_m": null
+        },
+        {
+          "step": 218,
+          "attempt": 2,
+          "position_error_m": 0.047485070267733145,
+          "angle_error_rad": 0.0070879296790120686,
+          "observed_gap_m": 0.07998490333557129,
+          "planned_gap_m": null
+        },
+        {
+          "step": 219,
+          "attempt": 2,
+          "position_error_m": 0.038406982803661005,
+          "angle_error_rad": 0.006110655401573987,
+          "observed_gap_m": 0.07998555153608322,
+          "planned_gap_m": null
+        },
+        {
+          "step": 220,
+          "attempt": 2,
+          "position_error_m": 0.02999352107132753,
+          "angle_error_rad": 0.005037516851838139,
+          "observed_gap_m": 0.07998616993427277,
+          "planned_gap_m": null
+        },
+        {
+          "step": 221,
+          "attempt": 2,
+          "position_error_m": 0.022637981229622548,
+          "angle_error_rad": 0.0039940467617336755,
+          "observed_gap_m": 0.07998676598072052,
+          "planned_gap_m": null
+        },
+        {
+          "step": 222,
+          "attempt": 2,
+          "position_error_m": 0.0166452949014444,
+          "angle_error_rad": 0.003171193186164423,
+          "observed_gap_m": 0.07998733222484589,
+          "planned_gap_m": null
+        },
+        {
+          "step": 223,
+          "attempt": 2,
+          "position_error_m": 0.016223813412195483,
+          "angle_error_rad": 0.009805527173180995,
+          "observed_gap_m": 0.07998789101839066,
+          "planned_gap_m": null
+        },
+        {
+          "step": 224,
+          "attempt": 2,
+          "position_error_m": 0.01593495920406228,
+          "angle_error_rad": 0.018821771612372227,
+          "observed_gap_m": 0.07998842000961304,
+          "planned_gap_m": null
+        },
+        {
+          "step": 225,
+          "attempt": 2,
+          "position_error_m": 0.015592317593123042,
+          "angle_error_rad": 0.026074544406166182,
+          "observed_gap_m": 0.07998892664909363,
+          "planned_gap_m": null
+        },
+        {
+          "step": 226,
+          "attempt": 2,
+          "position_error_m": 0.015279310428073917,
+          "angle_error_rad": 0.03177700406699519,
+          "observed_gap_m": 0.07998940348625183,
+          "planned_gap_m": null
+        },
+        {
+          "step": 227,
+          "attempt": 2,
+          "position_error_m": 0.015029140626743577,
+          "angle_error_rad": 0.0361441612646678,
+          "observed_gap_m": 0.07998983561992645,
+          "planned_gap_m": null
+        },
+        {
+          "step": 228,
+          "attempt": 2,
+          "position_error_m": 0.014844448972620399,
+          "angle_error_rad": 0.03932761923621404,
+          "observed_gap_m": 0.07998962700366974,
+          "planned_gap_m": null
+        },
+        {
+          "step": 229,
+          "attempt": 2,
+          "position_error_m": 0.014733497662345925,
+          "angle_error_rad": 0.04148354757774937,
+          "observed_gap_m": 0.07998911291360855,
+          "planned_gap_m": null
+        },
+        {
+          "step": 230,
+          "attempt": 2,
+          "position_error_m": 0.01467976240937734,
+          "angle_error_rad": 0.04274658027413437,
+          "observed_gap_m": 0.07998847216367722,
+          "planned_gap_m": null
+        },
+        {
+          "step": 231,
+          "attempt": 2,
+          "position_error_m": 0.014688251683307786,
+          "angle_error_rad": 0.04337330845837012,
+          "observed_gap_m": 0.07998776435852051,
+          "planned_gap_m": null
+        },
+        {
+          "step": 232,
+          "attempt": 2,
+          "position_error_m": 0.014698084568221356,
+          "angle_error_rad": 0.04359552789800339,
+          "observed_gap_m": 0.07998703420162201,
+          "planned_gap_m": null
+        },
+        {
+          "step": 233,
+          "attempt": 2,
+          "position_error_m": 0.014717201850443824,
+          "angle_error_rad": 0.043557738839746736,
+          "observed_gap_m": 0.07998631149530411,
+          "planned_gap_m": null
+        },
+        {
+          "step": 234,
+          "attempt": 2,
+          "position_error_m": 0.014746897477312776,
+          "angle_error_rad": 0.043309026522264954,
+          "observed_gap_m": 0.0799856185913086,
+          "planned_gap_m": null
+        },
+        {
+          "step": 235,
+          "attempt": 2,
+          "position_error_m": 0.014788835822736672,
+          "angle_error_rad": 0.04291202843740752,
+          "observed_gap_m": 0.07998496294021606,
+          "planned_gap_m": null
+        },
+        {
+          "step": 236,
+          "attempt": 2,
+          "position_error_m": 0.014849967805669202,
+          "angle_error_rad": 0.04242504097761738,
+          "observed_gap_m": 0.07998434454202652,
+          "planned_gap_m": null
+        },
+        {
+          "step": 237,
+          "attempt": 2,
+          "position_error_m": 0.014929730517929254,
+          "angle_error_rad": 0.041892414263564284,
+          "observed_gap_m": 0.07998377829790115,
+          "planned_gap_m": null
+        },
+        {
+          "step": 238,
+          "attempt": 2,
+          "position_error_m": 0.014981583415204398,
+          "angle_error_rad": 0.041348727603859346,
+          "observed_gap_m": 0.07998326420783997,
+          "planned_gap_m": null
+        },
+        {
+          "step": 239,
+          "attempt": 2,
+          "position_error_m": 0.015020952017980045,
+          "angle_error_rad": 0.04081908030003962,
+          "observed_gap_m": 0.07998279482126236,
+          "planned_gap_m": null
+        },
+        {
+          "step": 240,
+          "attempt": 2,
+          "position_error_m": 0.015049579024086704,
+          "angle_error_rad": 0.040322945147414996,
+          "observed_gap_m": 0.07998237013816833,
+          "planned_gap_m": null
+        },
+        {
+          "step": 241,
+          "attempt": 2,
+          "position_error_m": 0.015082961944023164,
+          "angle_error_rad": 0.03987512716236318,
+          "observed_gap_m": 0.0799819827079773,
+          "planned_gap_m": null
+        },
+        {
+          "step": 242,
+          "attempt": 2,
+          "position_error_m": 0.015124834534352139,
+          "angle_error_rad": 0.03948714250502671,
+          "observed_gap_m": 0.07998163998126984,
+          "planned_gap_m": null
+        },
+        {
+          "step": 243,
+          "attempt": 2,
+          "position_error_m": 0.015179143563196912,
+          "angle_error_rad": 0.03916668586564261,
+          "observed_gap_m": 0.07998133450746536,
+          "planned_gap_m": null
+        },
+        {
+          "step": 244,
+          "attempt": 2,
+          "position_error_m": 0.015201547767517167,
+          "angle_error_rad": 0.03891340996067264,
+          "observed_gap_m": 0.07998105883598328,
+          "planned_gap_m": null
+        },
+        {
+          "step": 245,
+          "attempt": 2,
+          "position_error_m": 0.015211168639060408,
+          "angle_error_rad": 0.03871811079862192,
+          "observed_gap_m": 0.07998080551624298,
+          "planned_gap_m": null
+        },
+        {
+          "step": 246,
+          "attempt": 2,
+          "position_error_m": 0.015208063390158351,
+          "angle_error_rad": 0.038572828531513365,
+          "observed_gap_m": 0.07998056709766388,
+          "planned_gap_m": null
+        },
+        {
+          "step": 247,
+          "attempt": 2,
+          "position_error_m": 0.015210302484544282,
+          "angle_error_rad": 0.038472103566051,
+          "observed_gap_m": 0.07998035848140717,
+          "planned_gap_m": null
+        },
+        {
+          "step": 248,
+          "attempt": 2,
+          "position_error_m": 0.015221651590879423,
+          "angle_error_rad": 0.03841091472651101,
+          "observed_gap_m": 0.07998016476631165,
+          "planned_gap_m": null
+        },
+        {
+          "step": 249,
+          "attempt": 2,
+          "position_error_m": 0.015249639994660792,
+          "angle_error_rad": 0.038384060480772544,
+          "observed_gap_m": 0.07997997850179672,
+          "planned_gap_m": null
+        },
+        {
+          "step": 250,
+          "attempt": 2,
+          "position_error_m": 0.015249805937527514,
+          "angle_error_rad": 0.03837187228430764,
+          "observed_gap_m": 0.079979807138443,
+          "planned_gap_m": null
+        },
+        {
+          "step": 251,
+          "attempt": 2,
+          "position_error_m": 0.015235787142634512,
+          "angle_error_rad": 0.03836262792820545,
+          "observed_gap_m": 0.07997964322566986,
+          "planned_gap_m": null
+        },
+        {
+          "step": 252,
+          "attempt": 2,
+          "position_error_m": 0.015225961145498141,
+          "angle_error_rad": 0.03835214165994888,
+          "observed_gap_m": 0.07997949421405792,
+          "planned_gap_m": null
+        },
+        {
+          "step": 253,
+          "attempt": 2,
+          "position_error_m": 0.015219078081725457,
+          "angle_error_rad": 0.038340269026738115,
+          "observed_gap_m": 0.07997934520244598,
+          "planned_gap_m": null
+        },
+        {
+          "step": 254,
+          "attempt": 2,
+          "position_error_m": 0.015226067486653611,
+          "angle_error_rad": 0.03832836340716684,
+          "observed_gap_m": 0.07997919619083405,
+          "planned_gap_m": null
+        },
+        {
+          "step": 255,
+          "attempt": 2,
+          "position_error_m": 0.015252376357202436,
+          "angle_error_rad": 0.03831712584925257,
+          "observed_gap_m": 0.0799790620803833,
+          "planned_gap_m": null
+        },
+        {
+          "step": 256,
+          "attempt": 2,
+          "position_error_m": 0.015252647420667375,
+          "angle_error_rad": 0.03830643693197505,
+          "observed_gap_m": 0.07997893542051315,
+          "planned_gap_m": null
+        },
+        {
+          "step": 257,
+          "attempt": 2,
+          "position_error_m": 0.015239546998461098,
+          "angle_error_rad": 0.038295627948917,
+          "observed_gap_m": 0.079978808760643,
+          "planned_gap_m": null
+        },
+        {
+          "step": 258,
+          "attempt": 2,
+          "position_error_m": 0.015224211111470962,
+          "angle_error_rad": 0.038284367629026705,
+          "observed_gap_m": 0.07997868955135345,
+          "planned_gap_m": null
+        },
+        {
+          "step": 259,
+          "attempt": 2,
+          "position_error_m": 0.015223167705831705,
+          "angle_error_rad": 0.03827294795145497,
+          "observed_gap_m": 0.0799785852432251,
+          "planned_gap_m": null
+        },
+        {
+          "step": 260,
+          "attempt": 2,
+          "position_error_m": 0.015225200934809157,
+          "angle_error_rad": 0.038262055949049904,
+          "observed_gap_m": 0.07997847348451614,
+          "planned_gap_m": null
+        },
+        {
+          "step": 261,
+          "attempt": 2,
+          "position_error_m": 0.015251535584421601,
+          "angle_error_rad": 0.03825225509221963,
+          "observed_gap_m": 0.07997836917638779,
+          "planned_gap_m": null
+        },
+        {
+          "step": 262,
+          "attempt": 2,
+          "position_error_m": 0.015251419768863635,
+          "angle_error_rad": 0.03824314573870115,
+          "observed_gap_m": 0.07997827231884003,
+          "planned_gap_m": null
+        },
+        {
+          "step": 263,
+          "attempt": 2,
+          "position_error_m": 0.015241279062230606,
+          "angle_error_rad": 0.03823382846367142,
+          "observed_gap_m": 0.07997817546129227,
+          "planned_gap_m": null
+        },
+        {
+          "step": 264,
+          "attempt": 2,
+          "position_error_m": 0.015226132371814608,
+          "angle_error_rad": 0.03822379516408909,
+          "observed_gap_m": 0.0799780860543251,
+          "planned_gap_m": null
+        },
+        {
+          "step": 265,
+          "attempt": 2,
+          "position_error_m": 0.0152214253182938,
+          "angle_error_rad": 0.03821355629964247,
+          "observed_gap_m": 0.07997799664735794,
+          "planned_gap_m": null
+        },
+        {
+          "step": 266,
+          "attempt": 2,
+          "position_error_m": 0.015229823095887832,
+          "angle_error_rad": 0.038203953218633936,
+          "observed_gap_m": 0.07997791469097137,
+          "planned_gap_m": null
+        },
+        {
+          "step": 267,
+          "attempt": 2,
+          "position_error_m": 0.015256166286721216,
+          "angle_error_rad": 0.03819557666991385,
+          "observed_gap_m": 0.0799778401851654,
+          "planned_gap_m": null
+        },
+        {
+          "step": 268,
+          "attempt": 2,
+          "position_error_m": 0.015255808513579107,
+          "angle_error_rad": 0.038188315094461474,
+          "observed_gap_m": 0.07997775822877884,
+          "planned_gap_m": null
+        },
+        {
+          "step": 269,
+          "attempt": 2,
+          "position_error_m": 0.015243993670147138,
+          "angle_error_rad": 0.03818111074971241,
+          "observed_gap_m": 0.07997769117355347,
+          "planned_gap_m": null
+        },
+        {
+          "step": 270,
+          "attempt": 2,
+          "position_error_m": 0.015230028347215145,
+          "angle_error_rad": 0.038172797596764944,
+          "observed_gap_m": 0.0799776166677475,
+          "planned_gap_m": null
+        },
+        {
+          "step": 271,
+          "attempt": 2,
+          "position_error_m": 0.015223350735176087,
+          "angle_error_rad": 0.03816390270166768,
+          "observed_gap_m": 0.07997754961252213,
+          "planned_gap_m": null
+        },
+        {
+          "step": 272,
+          "attempt": 2,
+          "position_error_m": 0.015229127278877255,
+          "angle_error_rad": 0.03815542687588264,
+          "observed_gap_m": 0.07997748255729675,
+          "planned_gap_m": null
+        },
+        {
+          "step": 273,
+          "attempt": 2,
+          "position_error_m": 0.01525515013256163,
+          "angle_error_rad": 0.0381488397359451,
+          "observed_gap_m": 0.07997742295265198,
+          "planned_gap_m": null
+        }
+      ],
+      "events": [
+        {
+          "step": 79,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "diagnostic_forced_start",
+          "attempt": 1,
+          "object_position": [
+            0.010705579072237015,
+            0.1536872237920761,
+            0.8437568545341492
+          ]
+        },
+        {
+          "step": 87,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.010699979029595852,
+            0.1536434143781662,
+            0.8437496423721313
+          ]
+        },
+        {
+          "step": 125,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.010704646818339825,
+            0.15366517007350922,
+            0.8437528610229492
+          ]
+        },
+        {
+          "step": 179,
+          "from": "DESCEND",
+          "to": "RETRACT",
+          "reason": "descent_stalled_preserve_budget",
+          "attempt": 2,
+          "object_position": [
+            0.010700062848627567,
+            0.15367454290390015,
+            0.8437524437904358
+          ]
+        },
+        {
+          "step": 195,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 2,
+          "object_position": [
+            0.010701238177716732,
+            0.1536598950624466,
+            0.8437497615814209
+          ]
+        },
+        {
+          "step": 203,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 2,
+          "object_position": [
+            0.010704932734370232,
+            0.15367759764194489,
+            0.8437560796737671
+          ]
+        },
+        {
+          "step": 274,
+          "from": "DESCEND",
+          "to": "EXHAUSTED",
+          "reason": "attempt_limit",
+          "attempt": 2,
+          "object_position": [
+            0.010709143243730068,
+            0.15366490185260773,
+            0.8437498211860657
+          ]
+        }
+      ]
+    },
+    {
+      "version": "v4",
+      "demo": "demo_11000013",
+      "exact_physics_replay": true,
+      "controls": 400,
+      "success": false,
+      "phases": {
+        "NORMAL": 79,
+        "RETRACT": 27,
+        "ALIGN": 46,
+        "DESCEND": 140,
+        "EXHAUSTED": 108
+      },
+      "wall_robot_contact_boundaries": {
+        "bin2 / gripper0_right_right_gripper": 197
+      },
+      "contacts_by_phase": {
+        "DESCEND: bin2 / gripper0_right_right_gripper": 106,
+        "RETRACT: bin2 / gripper0_right_right_gripper": 2,
+        "EXHAUSTED: bin2 / gripper0_right_right_gripper": 89
+      },
+      "descent_observations": [
+        {
+          "step": 126,
+          "attempt": 1,
+          "position_error_m": 0.15025478846348614,
+          "angle_error_rad": 0.1201929994053775,
+          "observed_gap_m": 0.07996740937232971,
+          "planned_gap_m": null
+        },
+        {
+          "step": 127,
+          "attempt": 1,
+          "position_error_m": 0.15058237824899892,
+          "angle_error_rad": 0.09844926908630387,
+          "observed_gap_m": 0.0799688845872879,
+          "planned_gap_m": null
+        },
+        {
+          "step": 128,
+          "attempt": 1,
+          "position_error_m": 0.15086114270237191,
+          "angle_error_rad": 0.07968813414038839,
+          "observed_gap_m": 0.07997027039527893,
+          "planned_gap_m": null
+        },
+        {
+          "step": 129,
+          "attempt": 1,
+          "position_error_m": 0.14748558276451373,
+          "angle_error_rad": 0.06390185410501958,
+          "observed_gap_m": 0.07997159659862518,
+          "planned_gap_m": null
+        },
+        {
+          "step": 130,
+          "attempt": 1,
+          "position_error_m": 0.13991329382255235,
+          "angle_error_rad": 0.050743820932436415,
+          "observed_gap_m": 0.07997284829616547,
+          "planned_gap_m": null
+        },
+        {
+          "step": 131,
+          "attempt": 1,
+          "position_error_m": 0.13139350337630964,
+          "angle_error_rad": 0.03993527985936813,
+          "observed_gap_m": 0.07997404038906097,
+          "planned_gap_m": null
+        },
+        {
+          "step": 132,
+          "attempt": 1,
+          "position_error_m": 0.12260696246221124,
+          "angle_error_rad": 0.031384460595151153,
+          "observed_gap_m": 0.07997516542673111,
+          "planned_gap_m": null
+        },
+        {
+          "step": 133,
+          "attempt": 1,
+          "position_error_m": 0.11371865747815575,
+          "angle_error_rad": 0.024804095562728293,
+          "observed_gap_m": 0.07997623831033707,
+          "planned_gap_m": null
+        },
+        {
+          "step": 134,
+          "attempt": 1,
+          "position_error_m": 0.10473708748775233,
+          "angle_error_rad": 0.019789802207742364,
+          "observed_gap_m": 0.07997722923755646,
+          "planned_gap_m": null
+        },
+        {
+          "step": 135,
+          "attempt": 1,
+          "position_error_m": 0.09568900541988572,
+          "angle_error_rad": 0.016007506212468683,
+          "observed_gap_m": 0.0799776166677475,
+          "planned_gap_m": null
+        },
+        {
+          "step": 136,
+          "attempt": 1,
+          "position_error_m": 0.08658794903692384,
+          "angle_error_rad": 0.013269898046962847,
+          "observed_gap_m": 0.07997781783342361,
+          "planned_gap_m": null
+        },
+        {
+          "step": 137,
+          "attempt": 1,
+          "position_error_m": 0.07744896177033989,
+          "angle_error_rad": 0.011310757549976888,
+          "observed_gap_m": 0.07997797429561615,
+          "planned_gap_m": null
+        },
+        {
+          "step": 138,
+          "attempt": 1,
+          "position_error_m": 0.06824638470729952,
+          "angle_error_rad": 0.00988769219802586,
+          "observed_gap_m": 0.07997816801071167,
+          "planned_gap_m": null
+        },
+        {
+          "step": 139,
+          "attempt": 1,
+          "position_error_m": 0.05899250639593957,
+          "angle_error_rad": 0.00881494192254695,
+          "observed_gap_m": 0.07997839152812958,
+          "planned_gap_m": null
+        },
+        {
+          "step": 140,
+          "attempt": 1,
+          "position_error_m": 0.04970368675500365,
+          "angle_error_rad": 0.00797519265042817,
+          "observed_gap_m": 0.07997867465019226,
+          "planned_gap_m": null
+        },
+        {
+          "step": 141,
+          "attempt": 1,
+          "position_error_m": 0.0404901868274716,
+          "angle_error_rad": 0.007280160812251637,
+          "observed_gap_m": 0.07997901737689972,
+          "planned_gap_m": null
+        },
+        {
+          "step": 142,
+          "attempt": 1,
+          "position_error_m": 0.03182316946634346,
+          "angle_error_rad": 0.006584257551974902,
+          "observed_gap_m": 0.07997941970825195,
+          "planned_gap_m": null
+        },
+        {
+          "step": 143,
+          "attempt": 1,
+          "position_error_m": 0.02419493607292489,
+          "angle_error_rad": 0.0059189704805122974,
+          "observed_gap_m": 0.07997989654541016,
+          "planned_gap_m": null
+        },
+        {
+          "step": 144,
+          "attempt": 1,
+          "position_error_m": 0.01771901331427778,
+          "angle_error_rad": 0.005450140735415022,
+          "observed_gap_m": 0.07998046278953552,
+          "planned_gap_m": null
+        },
+        {
+          "step": 145,
+          "attempt": 1,
+          "position_error_m": 0.016384262314427425,
+          "angle_error_rad": 0.00853704439253464,
+          "observed_gap_m": 0.0799812525510788,
+          "planned_gap_m": null
+        },
+        {
+          "step": 146,
+          "attempt": 1,
+          "position_error_m": 0.01620854561304329,
+          "angle_error_rad": 0.016789032704415334,
+          "observed_gap_m": 0.07998207211494446,
+          "planned_gap_m": null
+        },
+        {
+          "step": 147,
+          "attempt": 1,
+          "position_error_m": 0.01588198483156657,
+          "angle_error_rad": 0.023846880993633413,
+          "observed_gap_m": 0.07998284697532654,
+          "planned_gap_m": null
+        },
+        {
+          "step": 148,
+          "attempt": 1,
+          "position_error_m": 0.01560327830974467,
+          "angle_error_rad": 0.029449158948274073,
+          "observed_gap_m": 0.07998359203338623,
+          "planned_gap_m": null
+        },
+        {
+          "step": 149,
+          "attempt": 1,
+          "position_error_m": 0.015395729054853865,
+          "angle_error_rad": 0.03374574276563957,
+          "observed_gap_m": 0.07998429238796234,
+          "planned_gap_m": null
+        },
+        {
+          "step": 150,
+          "attempt": 1,
+          "position_error_m": 0.015236798229964592,
+          "angle_error_rad": 0.03687749829269775,
+          "observed_gap_m": 0.07998497039079666,
+          "planned_gap_m": null
+        },
+        {
+          "step": 151,
+          "attempt": 1,
+          "position_error_m": 0.015130904536905437,
+          "angle_error_rad": 0.03899080660250344,
+          "observed_gap_m": 0.0799856185913086,
+          "planned_gap_m": null
+        },
+        {
+          "step": 152,
+          "attempt": 1,
+          "position_error_m": 0.015077933621696136,
+          "angle_error_rad": 0.0402174395112349,
+          "observed_gap_m": 0.07998622953891754,
+          "planned_gap_m": null
+        },
+        {
+          "step": 153,
+          "attempt": 1,
+          "position_error_m": 0.015075621281197406,
+          "angle_error_rad": 0.040783589475773915,
+          "observed_gap_m": 0.0799868255853653,
+          "planned_gap_m": null
+        },
+        {
+          "step": 154,
+          "attempt": 1,
+          "position_error_m": 0.015076887624068957,
+          "angle_error_rad": 0.040967932652591715,
+          "observed_gap_m": 0.07998739182949066,
+          "planned_gap_m": null
+        },
+        {
+          "step": 155,
+          "attempt": 1,
+          "position_error_m": 0.015093074494209926,
+          "angle_error_rad": 0.04093486831901457,
+          "observed_gap_m": 0.07998792827129364,
+          "planned_gap_m": null
+        },
+        {
+          "step": 156,
+          "attempt": 1,
+          "position_error_m": 0.01512457708917973,
+          "angle_error_rad": 0.0407188122675923,
+          "observed_gap_m": 0.07998844981193542,
+          "planned_gap_m": null
+        },
+        {
+          "step": 157,
+          "attempt": 1,
+          "position_error_m": 0.015175174275499153,
+          "angle_error_rad": 0.04037979396731621,
+          "observed_gap_m": 0.07998862862586975,
+          "planned_gap_m": null
+        },
+        {
+          "step": 158,
+          "attempt": 1,
+          "position_error_m": 0.015206657535205722,
+          "angle_error_rad": 0.039966540121779796,
+          "observed_gap_m": 0.07998819649219513,
+          "planned_gap_m": null
+        },
+        {
+          "step": 159,
+          "attempt": 1,
+          "position_error_m": 0.015233692028443184,
+          "angle_error_rad": 0.039513442929127354,
+          "observed_gap_m": 0.07998763024806976,
+          "planned_gap_m": null
+        },
+        {
+          "step": 160,
+          "attempt": 1,
+          "position_error_m": 0.015271982404790116,
+          "angle_error_rad": 0.03904890091291168,
+          "observed_gap_m": 0.07998703420162201,
+          "planned_gap_m": null
+        },
+        {
+          "step": 161,
+          "attempt": 1,
+          "position_error_m": 0.015317707264952957,
+          "angle_error_rad": 0.03859739643810534,
+          "observed_gap_m": 0.07998645305633545,
+          "planned_gap_m": null
+        },
+        {
+          "step": 162,
+          "attempt": 1,
+          "position_error_m": 0.01534634165703978,
+          "angle_error_rad": 0.03817865473016125,
+          "observed_gap_m": 0.07998589426279068,
+          "planned_gap_m": null
+        },
+        {
+          "step": 163,
+          "attempt": 1,
+          "position_error_m": 0.015366607858143928,
+          "angle_error_rad": 0.03780512051761115,
+          "observed_gap_m": 0.0799853727221489,
+          "planned_gap_m": null
+        },
+        {
+          "step": 164,
+          "attempt": 1,
+          "position_error_m": 0.015389559867207194,
+          "angle_error_rad": 0.03748282801587358,
+          "observed_gap_m": 0.0799848884344101,
+          "planned_gap_m": null
+        },
+        {
+          "step": 165,
+          "attempt": 1,
+          "position_error_m": 0.015421520035454269,
+          "angle_error_rad": 0.03721495440989487,
+          "observed_gap_m": 0.07998442649841309,
+          "planned_gap_m": null
+        },
+        {
+          "step": 166,
+          "attempt": 1,
+          "position_error_m": 0.01543261753516336,
+          "angle_error_rad": 0.03700196454739568,
+          "observed_gap_m": 0.07998400926589966,
+          "planned_gap_m": null
+        },
+        {
+          "step": 167,
+          "attempt": 1,
+          "position_error_m": 0.0154373014864471,
+          "angle_error_rad": 0.03684016336882779,
+          "observed_gap_m": 0.07998362183570862,
+          "planned_gap_m": null
+        },
+        {
+          "step": 168,
+          "attempt": 1,
+          "position_error_m": 0.015443295061550517,
+          "angle_error_rad": 0.03672227814756949,
+          "observed_gap_m": 0.07998324930667877,
+          "planned_gap_m": null
+        },
+        {
+          "step": 169,
+          "attempt": 1,
+          "position_error_m": 0.01546829399156338,
+          "angle_error_rad": 0.036642289811832894,
+          "observed_gap_m": 0.07998290657997131,
+          "planned_gap_m": null
+        },
+        {
+          "step": 170,
+          "attempt": 1,
+          "position_error_m": 0.015468957041544183,
+          "angle_error_rad": 0.036595835588282805,
+          "observed_gap_m": 0.07998257875442505,
+          "planned_gap_m": null
+        },
+        {
+          "step": 171,
+          "attempt": 1,
+          "position_error_m": 0.015461595687980086,
+          "angle_error_rad": 0.03657701750025732,
+          "observed_gap_m": 0.07998226583003998,
+          "planned_gap_m": null
+        },
+        {
+          "step": 172,
+          "attempt": 1,
+          "position_error_m": 0.015456807408859055,
+          "angle_error_rad": 0.03656960603399831,
+          "observed_gap_m": 0.0799819827079773,
+          "planned_gap_m": null
+        },
+        {
+          "step": 173,
+          "attempt": 1,
+          "position_error_m": 0.01547210281110171,
+          "angle_error_rad": 0.03656624076870023,
+          "observed_gap_m": 0.07998169958591461,
+          "planned_gap_m": null
+        },
+        {
+          "step": 174,
+          "attempt": 1,
+          "position_error_m": 0.015464992747869635,
+          "angle_error_rad": 0.03656417601414511,
+          "observed_gap_m": 0.07998143881559372,
+          "planned_gap_m": null
+        },
+        {
+          "step": 175,
+          "attempt": 1,
+          "position_error_m": 0.015456190912484407,
+          "angle_error_rad": 0.036562129496436335,
+          "observed_gap_m": 0.07998118549585342,
+          "planned_gap_m": null
+        },
+        {
+          "step": 176,
+          "attempt": 1,
+          "position_error_m": 0.015456110014002123,
+          "angle_error_rad": 0.03656001728387898,
+          "observed_gap_m": 0.07998093962669373,
+          "planned_gap_m": null
+        },
+        {
+          "step": 177,
+          "attempt": 1,
+          "position_error_m": 0.015472366735858873,
+          "angle_error_rad": 0.03655789888261503,
+          "observed_gap_m": 0.07998071610927582,
+          "planned_gap_m": null
+        },
+        {
+          "step": 178,
+          "attempt": 1,
+          "position_error_m": 0.015471129279724731,
+          "angle_error_rad": 0.03655586931855469,
+          "observed_gap_m": 0.07998049259185791,
+          "planned_gap_m": null
+        },
+        {
+          "step": 179,
+          "attempt": 1,
+          "position_error_m": 0.015460522674491302,
+          "angle_error_rad": 0.036553755461256915,
+          "observed_gap_m": 0.0799802765250206,
+          "planned_gap_m": null
+        },
+        {
+          "step": 180,
+          "attempt": 1,
+          "position_error_m": 0.015461623726894927,
+          "angle_error_rad": 0.03655162371161175,
+          "observed_gap_m": 0.07998007535934448,
+          "planned_gap_m": null
+        },
+        {
+          "step": 181,
+          "attempt": 1,
+          "position_error_m": 0.01547341867789383,
+          "angle_error_rad": 0.036549482439619085,
+          "observed_gap_m": 0.07997988164424896,
+          "planned_gap_m": null
+        },
+        {
+          "step": 182,
+          "attempt": 1,
+          "position_error_m": 0.015469226384000717,
+          "angle_error_rad": 0.03654744592048399,
+          "observed_gap_m": 0.07997969537973404,
+          "planned_gap_m": null
+        },
+        {
+          "step": 183,
+          "attempt": 1,
+          "position_error_m": 0.0154623863378372,
+          "angle_error_rad": 0.03654538792751199,
+          "observed_gap_m": 0.07997951656579971,
+          "planned_gap_m": null
+        },
+        {
+          "step": 184,
+          "attempt": 1,
+          "position_error_m": 0.015458326994021162,
+          "angle_error_rad": 0.03654334352376512,
+          "observed_gap_m": 0.07997934520244598,
+          "planned_gap_m": null
+        },
+        {
+          "step": 185,
+          "attempt": 1,
+          "position_error_m": 0.015471517692597088,
+          "angle_error_rad": 0.036541212601628736,
+          "observed_gap_m": 0.07997918128967285,
+          "planned_gap_m": null
+        },
+        {
+          "step": 186,
+          "attempt": 1,
+          "position_error_m": 0.015471870147566194,
+          "angle_error_rad": 0.03653913705330703,
+          "observed_gap_m": 0.07997903227806091,
+          "planned_gap_m": null
+        },
+        {
+          "step": 187,
+          "attempt": 1,
+          "position_error_m": 0.015466512900062422,
+          "angle_error_rad": 0.036537046484491846,
+          "observed_gap_m": 0.07997888326644897,
+          "planned_gap_m": null
+        },
+        {
+          "step": 188,
+          "attempt": 1,
+          "position_error_m": 0.015465015781150055,
+          "angle_error_rad": 0.03653495445720235,
+          "observed_gap_m": 0.07997873425483704,
+          "planned_gap_m": null
+        },
+        {
+          "step": 189,
+          "attempt": 1,
+          "position_error_m": 0.01547414771726138,
+          "angle_error_rad": 0.03653274418906673,
+          "observed_gap_m": 0.07997860014438629,
+          "planned_gap_m": null
+        },
+        {
+          "step": 190,
+          "attempt": 1,
+          "position_error_m": 0.015470308430210583,
+          "angle_error_rad": 0.0365306381101547,
+          "observed_gap_m": 0.07997846603393555,
+          "planned_gap_m": null
+        },
+        {
+          "step": 191,
+          "attempt": 1,
+          "position_error_m": 0.015460275984496062,
+          "angle_error_rad": 0.03652857343181079,
+          "observed_gap_m": 0.079978346824646,
+          "planned_gap_m": null
+        },
+        {
+          "step": 192,
+          "attempt": 1,
+          "position_error_m": 0.015460961793116571,
+          "angle_error_rad": 0.036526412962768325,
+          "observed_gap_m": 0.07997822761535645,
+          "planned_gap_m": null
+        },
+        {
+          "step": 193,
+          "attempt": 1,
+          "position_error_m": 0.015473615094024132,
+          "angle_error_rad": 0.03652425671405214,
+          "observed_gap_m": 0.0799781084060669,
+          "planned_gap_m": null
+        },
+        {
+          "step": 194,
+          "attempt": 1,
+          "position_error_m": 0.015470548775181663,
+          "angle_error_rad": 0.036522157526506165,
+          "observed_gap_m": 0.07997800409793854,
+          "planned_gap_m": null
+        },
+        {
+          "step": 195,
+          "attempt": 1,
+          "position_error_m": 0.015461963331622195,
+          "angle_error_rad": 0.03652009673281439,
+          "observed_gap_m": 0.07997789978981018,
+          "planned_gap_m": null
+        },
+        {
+          "step": 223,
+          "attempt": 2,
+          "position_error_m": 0.14821762604023908,
+          "angle_error_rad": 0.01594847896431504,
+          "observed_gap_m": 0.07997322827577591,
+          "planned_gap_m": null
+        },
+        {
+          "step": 224,
+          "attempt": 2,
+          "position_error_m": 0.14839991540399175,
+          "angle_error_rad": 0.012266869941014455,
+          "observed_gap_m": 0.07997394353151321,
+          "planned_gap_m": null
+        },
+        {
+          "step": 225,
+          "attempt": 2,
+          "position_error_m": 0.14856214630335005,
+          "angle_error_rad": 0.009135614411834855,
+          "observed_gap_m": 0.07997474074363708,
+          "planned_gap_m": null
+        },
+        {
+          "step": 226,
+          "attempt": 2,
+          "position_error_m": 0.14501347658537234,
+          "angle_error_rad": 0.006710798946987793,
+          "observed_gap_m": 0.0799751728773117,
+          "planned_gap_m": null
+        },
+        {
+          "step": 227,
+          "attempt": 2,
+          "position_error_m": 0.1372758251619051,
+          "angle_error_rad": 0.0060792436238429285,
+          "observed_gap_m": 0.07997561991214752,
+          "planned_gap_m": null
+        },
+        {
+          "step": 228,
+          "attempt": 2,
+          "position_error_m": 0.1286254795841067,
+          "angle_error_rad": 0.00677474711428838,
+          "observed_gap_m": 0.07997657358646393,
+          "planned_gap_m": null
+        },
+        {
+          "step": 229,
+          "attempt": 2,
+          "position_error_m": 0.11973249433052324,
+          "angle_error_rad": 0.007830079517988923,
+          "observed_gap_m": 0.07997757196426392,
+          "planned_gap_m": null
+        },
+        {
+          "step": 230,
+          "attempt": 2,
+          "position_error_m": 0.11072991542801526,
+          "angle_error_rad": 0.008667872853807282,
+          "observed_gap_m": 0.07997854053974152,
+          "planned_gap_m": null
+        },
+        {
+          "step": 231,
+          "attempt": 2,
+          "position_error_m": 0.10166858769331764,
+          "angle_error_rad": 0.009131030797563904,
+          "observed_gap_m": 0.07997946441173553,
+          "planned_gap_m": null
+        },
+        {
+          "step": 232,
+          "attempt": 2,
+          "position_error_m": 0.09256843680597124,
+          "angle_error_rad": 0.009225579188918084,
+          "observed_gap_m": 0.07998034358024597,
+          "planned_gap_m": null
+        },
+        {
+          "step": 233,
+          "attempt": 2,
+          "position_error_m": 0.08343843204980785,
+          "angle_error_rad": 0.009002345745703823,
+          "observed_gap_m": 0.07998117804527283,
+          "planned_gap_m": null
+        },
+        {
+          "step": 234,
+          "attempt": 2,
+          "position_error_m": 0.07425161008371203,
+          "angle_error_rad": 0.008528681874565474,
+          "observed_gap_m": 0.07998199015855789,
+          "planned_gap_m": null
+        },
+        {
+          "step": 235,
+          "attempt": 2,
+          "position_error_m": 0.06502103872018536,
+          "angle_error_rad": 0.007875119820625075,
+          "observed_gap_m": 0.07998275756835938,
+          "planned_gap_m": null
+        },
+        {
+          "step": 236,
+          "attempt": 2,
+          "position_error_m": 0.05575983025492271,
+          "angle_error_rad": 0.007110935517730693,
+          "observed_gap_m": 0.07998350262641907,
+          "planned_gap_m": null
+        },
+        {
+          "step": 237,
+          "attempt": 2,
+          "position_error_m": 0.04647685600723656,
+          "angle_error_rad": 0.006303688493315042,
+          "observed_gap_m": 0.07998421043157578,
+          "planned_gap_m": null
+        },
+        {
+          "step": 238,
+          "attempt": 2,
+          "position_error_m": 0.03741028826041999,
+          "angle_error_rad": 0.005438935443769027,
+          "observed_gap_m": 0.0799848884344101,
+          "planned_gap_m": null
+        },
+        {
+          "step": 239,
+          "attempt": 2,
+          "position_error_m": 0.02910088394638834,
+          "angle_error_rad": 0.004497600914404779,
+          "observed_gap_m": 0.07998553663492203,
+          "planned_gap_m": null
+        },
+        {
+          "step": 240,
+          "attempt": 2,
+          "position_error_m": 0.0218896069547333,
+          "angle_error_rad": 0.0036166973172727913,
+          "observed_gap_m": 0.07998615503311157,
+          "planned_gap_m": null
+        },
+        {
+          "step": 241,
+          "attempt": 2,
+          "position_error_m": 0.01647285371324949,
+          "angle_error_rad": 0.002879962904172259,
+          "observed_gap_m": 0.07998675107955933,
+          "planned_gap_m": null
+        },
+        {
+          "step": 242,
+          "attempt": 2,
+          "position_error_m": 0.01632095784420258,
+          "angle_error_rad": 0.009949654346440578,
+          "observed_gap_m": 0.07998733222484589,
+          "planned_gap_m": null
+        },
+        {
+          "step": 243,
+          "attempt": 2,
+          "position_error_m": 0.016070242695014184,
+          "angle_error_rad": 0.01809566485824447,
+          "observed_gap_m": 0.07998788356781006,
+          "planned_gap_m": null
+        },
+        {
+          "step": 244,
+          "attempt": 2,
+          "position_error_m": 0.015770022419096554,
+          "angle_error_rad": 0.024668871558183703,
+          "observed_gap_m": 0.07998840510845184,
+          "planned_gap_m": null
+        },
+        {
+          "step": 245,
+          "attempt": 2,
+          "position_error_m": 0.015526719139001114,
+          "angle_error_rad": 0.029828113840604877,
+          "observed_gap_m": 0.07998891174793243,
+          "planned_gap_m": null
+        },
+        {
+          "step": 246,
+          "attempt": 2,
+          "position_error_m": 0.015326655617072488,
+          "angle_error_rad": 0.033766311894375615,
+          "observed_gap_m": 0.07998913526535034,
+          "planned_gap_m": null
+        },
+        {
+          "step": 247,
+          "attempt": 2,
+          "position_error_m": 0.015179200186191934,
+          "angle_error_rad": 0.03661949202075433,
+          "observed_gap_m": 0.07998882234096527,
+          "planned_gap_m": null
+        },
+        {
+          "step": 248,
+          "attempt": 2,
+          "position_error_m": 0.015091058593179453,
+          "angle_error_rad": 0.038524911852008736,
+          "observed_gap_m": 0.07998833060264587,
+          "planned_gap_m": null
+        },
+        {
+          "step": 249,
+          "attempt": 2,
+          "position_error_m": 0.015056384929785461,
+          "angle_error_rad": 0.039621199443301926,
+          "observed_gap_m": 0.07998774945735931,
+          "planned_gap_m": null
+        },
+        {
+          "step": 250,
+          "attempt": 2,
+          "position_error_m": 0.015035951900796238,
+          "angle_error_rad": 0.0402120445240512,
+          "observed_gap_m": 0.07998710125684738,
+          "planned_gap_m": null
+        },
+        {
+          "step": 251,
+          "attempt": 2,
+          "position_error_m": 0.015034400481747102,
+          "angle_error_rad": 0.040401980805550596,
+          "observed_gap_m": 0.07998645305633545,
+          "planned_gap_m": null
+        },
+        {
+          "step": 252,
+          "attempt": 2,
+          "position_error_m": 0.015057647990089636,
+          "angle_error_rad": 0.040347082526477486,
+          "observed_gap_m": 0.07998579740524292,
+          "planned_gap_m": null
+        },
+        {
+          "step": 253,
+          "attempt": 2,
+          "position_error_m": 0.015102435018006054,
+          "angle_error_rad": 0.040148237624630705,
+          "observed_gap_m": 0.07998517155647278,
+          "planned_gap_m": null
+        },
+        {
+          "step": 254,
+          "attempt": 2,
+          "position_error_m": 0.015132969207460926,
+          "angle_error_rad": 0.03984423341209195,
+          "observed_gap_m": 0.07998458296060562,
+          "planned_gap_m": null
+        },
+        {
+          "step": 255,
+          "attempt": 2,
+          "position_error_m": 0.015159140525927652,
+          "angle_error_rad": 0.03947563172084105,
+          "observed_gap_m": 0.07998402416706085,
+          "planned_gap_m": null
+        },
+        {
+          "step": 256,
+          "attempt": 2,
+          "position_error_m": 0.015194371388610453,
+          "angle_error_rad": 0.03907505884068003,
+          "observed_gap_m": 0.07998351752758026,
+          "planned_gap_m": null
+        },
+        {
+          "step": 257,
+          "attempt": 2,
+          "position_error_m": 0.015242883341630565,
+          "angle_error_rad": 0.03866986539179601,
+          "observed_gap_m": 0.07998304069042206,
+          "planned_gap_m": null
+        },
+        {
+          "step": 258,
+          "attempt": 2,
+          "position_error_m": 0.015270569912576802,
+          "angle_error_rad": 0.038282729422107004,
+          "observed_gap_m": 0.07998260855674744,
+          "planned_gap_m": null
+        },
+        {
+          "step": 259,
+          "attempt": 2,
+          "position_error_m": 0.015288626945875329,
+          "angle_error_rad": 0.037928639876456366,
+          "observed_gap_m": 0.0799822136759758,
+          "planned_gap_m": null
+        },
+        {
+          "step": 260,
+          "attempt": 2,
+          "position_error_m": 0.015312146731275669,
+          "angle_error_rad": 0.037615270466568554,
+          "observed_gap_m": 0.07998185604810715,
+          "planned_gap_m": null
+        },
+        {
+          "step": 261,
+          "attempt": 2,
+          "position_error_m": 0.01534660473304491,
+          "angle_error_rad": 0.03734573028980197,
+          "observed_gap_m": 0.07998152077198029,
+          "planned_gap_m": null
+        },
+        {
+          "step": 262,
+          "attempt": 2,
+          "position_error_m": 0.015359632893599564,
+          "angle_error_rad": 0.03712253515063013,
+          "observed_gap_m": 0.07998122274875641,
+          "planned_gap_m": null
+        },
+        {
+          "step": 263,
+          "attempt": 2,
+          "position_error_m": 0.015363089811214847,
+          "angle_error_rad": 0.03694472401223975,
+          "observed_gap_m": 0.07998093962669373,
+          "planned_gap_m": null
+        },
+        {
+          "step": 264,
+          "attempt": 2,
+          "position_error_m": 0.015372612071482201,
+          "angle_error_rad": 0.036807811346948244,
+          "observed_gap_m": 0.07998068630695343,
+          "planned_gap_m": null
+        },
+        {
+          "step": 265,
+          "attempt": 2,
+          "position_error_m": 0.015394056404398086,
+          "angle_error_rad": 0.03670796988244795,
+          "observed_gap_m": 0.07998044788837433,
+          "planned_gap_m": null
+        },
+        {
+          "step": 266,
+          "attempt": 2,
+          "position_error_m": 0.015395219039956753,
+          "angle_error_rad": 0.036642818253468615,
+          "observed_gap_m": 0.07998022437095642,
+          "planned_gap_m": null
+        },
+        {
+          "step": 267,
+          "attempt": 2,
+          "position_error_m": 0.015388249228939497,
+          "angle_error_rad": 0.036607643305672434,
+          "observed_gap_m": 0.07998001575469971,
+          "planned_gap_m": null
+        },
+        {
+          "step": 268,
+          "attempt": 2,
+          "position_error_m": 0.015388872906785823,
+          "angle_error_rad": 0.03659018051567654,
+          "observed_gap_m": 0.07997982203960419,
+          "planned_gap_m": null
+        },
+        {
+          "step": 269,
+          "attempt": 2,
+          "position_error_m": 0.01540369879596898,
+          "angle_error_rad": 0.03657705543201417,
+          "observed_gap_m": 0.07997963577508926,
+          "planned_gap_m": null
+        },
+        {
+          "step": 270,
+          "attempt": 2,
+          "position_error_m": 0.015400368549421898,
+          "angle_error_rad": 0.03656575246459343,
+          "observed_gap_m": 0.07997946441173553,
+          "planned_gap_m": null
+        },
+        {
+          "step": 271,
+          "attempt": 2,
+          "position_error_m": 0.015390797529269612,
+          "angle_error_rad": 0.03655402091998647,
+          "observed_gap_m": 0.0799793004989624,
+          "planned_gap_m": null
+        },
+        {
+          "step": 272,
+          "attempt": 2,
+          "position_error_m": 0.015390231168908372,
+          "angle_error_rad": 0.03654115814972164,
+          "observed_gap_m": 0.07997913658618927,
+          "planned_gap_m": null
+        },
+        {
+          "step": 273,
+          "attempt": 2,
+          "position_error_m": 0.01540440263539472,
+          "angle_error_rad": 0.03652804942773773,
+          "observed_gap_m": 0.07997898012399673,
+          "planned_gap_m": null
+        },
+        {
+          "step": 274,
+          "attempt": 2,
+          "position_error_m": 0.015400855823756849,
+          "angle_error_rad": 0.036515639384464296,
+          "observed_gap_m": 0.0799788385629654,
+          "planned_gap_m": null
+        },
+        {
+          "step": 275,
+          "attempt": 2,
+          "position_error_m": 0.015391268009251498,
+          "angle_error_rad": 0.03650393305087358,
+          "observed_gap_m": 0.07997868955135345,
+          "planned_gap_m": null
+        },
+        {
+          "step": 276,
+          "attempt": 2,
+          "position_error_m": 0.015390828408214586,
+          "angle_error_rad": 0.03649216934241406,
+          "observed_gap_m": 0.07997855544090271,
+          "planned_gap_m": null
+        },
+        {
+          "step": 277,
+          "attempt": 2,
+          "position_error_m": 0.015404932954983172,
+          "angle_error_rad": 0.036480565975000316,
+          "observed_gap_m": 0.07997843623161316,
+          "planned_gap_m": null
+        },
+        {
+          "step": 278,
+          "attempt": 2,
+          "position_error_m": 0.015401242873507331,
+          "angle_error_rad": 0.03646990026825259,
+          "observed_gap_m": 0.07997830957174301,
+          "planned_gap_m": null
+        },
+        {
+          "step": 279,
+          "attempt": 2,
+          "position_error_m": 0.015391509562210633,
+          "angle_error_rad": 0.036460271091229485,
+          "observed_gap_m": 0.07997819036245346,
+          "planned_gap_m": null
+        },
+        {
+          "step": 280,
+          "attempt": 2,
+          "position_error_m": 0.015390917577583879,
+          "angle_error_rad": 0.03645077069054583,
+          "observed_gap_m": 0.0799780786037445,
+          "planned_gap_m": null
+        },
+        {
+          "step": 281,
+          "attempt": 2,
+          "position_error_m": 0.015405264785089951,
+          "angle_error_rad": 0.03644148946073583,
+          "observed_gap_m": 0.07997797429561615,
+          "planned_gap_m": null
+        },
+        {
+          "step": 282,
+          "attempt": 2,
+          "position_error_m": 0.015401894951288042,
+          "angle_error_rad": 0.03643350553275443,
+          "observed_gap_m": 0.07997786998748779,
+          "planned_gap_m": null
+        },
+        {
+          "step": 283,
+          "attempt": 2,
+          "position_error_m": 0.015392483220681645,
+          "angle_error_rad": 0.036426866504415935,
+          "observed_gap_m": 0.07997776567935944,
+          "planned_gap_m": null
+        },
+        {
+          "step": 284,
+          "attempt": 2,
+          "position_error_m": 0.015392109406950506,
+          "angle_error_rad": 0.036420383990059035,
+          "observed_gap_m": 0.07997767627239227,
+          "planned_gap_m": null
+        },
+        {
+          "step": 285,
+          "attempt": 2,
+          "position_error_m": 0.015406328878995732,
+          "angle_error_rad": 0.03641399809928082,
+          "observed_gap_m": 0.07997758686542511,
+          "planned_gap_m": null
+        },
+        {
+          "step": 286,
+          "attempt": 2,
+          "position_error_m": 0.015402762501700066,
+          "angle_error_rad": 0.03640850567239525,
+          "observed_gap_m": 0.07997749745845795,
+          "planned_gap_m": null
+        },
+        {
+          "step": 287,
+          "attempt": 2,
+          "position_error_m": 0.015393083804121818,
+          "angle_error_rad": 0.0364038903564929,
+          "observed_gap_m": 0.07997740805149078,
+          "planned_gap_m": null
+        },
+        {
+          "step": 288,
+          "attempt": 2,
+          "position_error_m": 0.015392540618871561,
+          "angle_error_rad": 0.036399042827455375,
+          "observed_gap_m": 0.07997733354568481,
+          "planned_gap_m": null
+        },
+        {
+          "step": 289,
+          "attempt": 2,
+          "position_error_m": 0.015406684927065237,
+          "angle_error_rad": 0.03639399422922602,
+          "observed_gap_m": 0.07997725903987885,
+          "planned_gap_m": null
+        },
+        {
+          "step": 290,
+          "attempt": 2,
+          "position_error_m": 0.015403108463542127,
+          "angle_error_rad": 0.03638988246717175,
+          "observed_gap_m": 0.07997718453407288,
+          "planned_gap_m": null
+        },
+        {
+          "step": 291,
+          "attempt": 2,
+          "position_error_m": 0.015393521471272346,
+          "angle_error_rad": 0.03638664158737761,
+          "observed_gap_m": 0.0799771174788475,
+          "planned_gap_m": null
+        },
+        {
+          "step": 292,
+          "attempt": 2,
+          "position_error_m": 0.015392927951685518,
+          "angle_error_rad": 0.03638319432462911,
+          "observed_gap_m": 0.07997705042362213,
+          "planned_gap_m": null
+        }
+      ],
+      "events": [
+        {
+          "step": 79,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "diagnostic_forced_start",
+          "attempt": 1,
+          "object_position": [
+            0.020722290500998497,
+            0.16306735575199127,
+            0.8437838554382324
+          ]
+        },
+        {
+          "step": 87,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.020720861852169037,
+            0.16307374835014343,
+            0.8437764048576355
+          ]
+        },
+        {
+          "step": 125,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.020716648548841476,
+            0.16304288804531097,
+            0.8437804579734802
+          ]
+        },
+        {
+          "step": 196,
+          "from": "DESCEND",
+          "to": "RETRACT",
+          "reason": "phase_timeout",
+          "attempt": 2,
+          "object_position": [
+            0.020721418783068657,
+            0.1630789041519165,
+            0.8437831401824951
+          ]
+        },
+        {
+          "step": 214,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 2,
+          "object_position": [
+            0.020711028948426247,
+            0.16305962204933167,
+            0.843783438205719
+          ]
+        },
+        {
+          "step": 222,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 2,
+          "object_position": [
+            0.02071303315460682,
+            0.16306059062480927,
+            0.8437836170196533
+          ]
+        },
+        {
+          "step": 293,
+          "from": "DESCEND",
+          "to": "EXHAUSTED",
+          "reason": "attempt_limit",
+          "attempt": 2,
+          "object_position": [
+            0.02071569859981537,
+            0.16306966543197632,
+            0.8437814712524414
+          ]
+        }
+      ]
+    }
+  ]
+}

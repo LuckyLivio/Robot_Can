@@ -1,0 +1,24 @@
+{
+  "registered_before_any_policy_evaluation_utc": "2026-10-12T07:09:01.762746+00:00",
+  "reason": "Two validation initialization errors: native regeneration reused a serialized XML model; env.step observations were compared with restored-state observations without first refreshing forward kinematics. Separate native models and identical sim.forward plus double observable refresh resolve both.",
+  "repair_scope": "Validation environment separation and observation refresh only; all 76 existing generated states and every frozen source remain byte-identical. All policies still use the unchanged restore_demo and identical saved state. No policy outputs inspected; no filtering or seed changes.",
+  "original_generator_failure_max_state_error": 0.80964663,
+  "reproduced_mixed_model_error": 0.8096466293707045,
+  "native_vs_serialized_model_max_differences": {
+    "body_pos": 0.0,
+    "body_quat": 1.0066920869133966e-07,
+    "body_mass": 14.485309649148729,
+    "body_inertia": 0.6192607852209199,
+    "geom_pos": 0.0,
+    "geom_quat": 9.142143725382468e-08,
+    "geom_size": 0.0
+  },
+  "max_raw_geometry_observation_error": 0.001272294670343399,
+  "max_canonical_geometry_observation_error": 2.384185791015625e-07,
+  "unchanged_generated_files": {
+    "reproduction/recovery_v5_20261012_01/confirmation_starts.hdf5": "574d426df4065b42a6fecaead3200260099c5c635756a9ba6f76b76aeee140d6",
+    "reproduction/recovery_v5_20261012_01/geometry_starts.hdf5": "dddd2b22134050bfdd69c5363e174bed5b7c37fecf91daaee846edad4bb4f6c4",
+    "reproduction/recovery_v5_20261012_01/geometry_confirmation_design.json": "59fafcf7e4c4775ce42f9a32542b5f4bb3e9b1faf107314c2acab95a66500302"
+  },
+  "validator_sha256": "76f77c72795dce0df464e1d34a0fa1b56272d788e0d3ce109e3e8953f8c258da"
+}

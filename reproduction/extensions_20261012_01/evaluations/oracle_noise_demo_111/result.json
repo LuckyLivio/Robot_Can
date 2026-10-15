@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "job": {
+    "id": "oracle_noise_demo_111",
+    "variant": "oracle",
+    "method": "oracle",
+    "seed": null,
+    "noise": 0.05,
+    "condition": "noise",
+    "horizon": 8,
+    "candidate_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "demos": [
+      "demo_111"
+    ]
+  },
+  "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+  "records": [
+    {
+      "demo": "demo_111",
+      "success": true,
+      "steps": 117,
+      "peak_stage_reward": 0.5967614452315175,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_override": 0.03418803418803418,
+      "selection_counts": {
+        "0": 4,
+        "2": 113
+      },
+      "max_score_spread": 0.3141280710697174,
+      "mean_decision_ms": 246.08954957278536,
+      "elapsed_s": 29.723485900000014
+    }
+  ],
+  "split": "dev",
+  "resolved_demos": [
+    "demo_111"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "root_scripts": 33,
+  "groups": [
+    {
+      "files": [
+        "common.py",
+        "world_model.py"
+      ],
+      "scope": "当前主线公共实现",
+      "evidence_and_limit": "18份世界模型和BC前向测试、历史闭环哈希；本次smoke_env恢复检查"
+    },
+    {
+      "files": [
+        "bootstrap.py",
+        "inspect_data.py"
+      ],
+      "scope": "数据准备",
+      "evidence_and_limit": "原HDF5哈希、200轨迹、140/30/30划分；已有下载/检查清单；本次未重复下载"
+    },
+    {
+      "files": [
+        "download_wheel.py",
+        "setup_windows.py"
+      ],
+      "scope": "历史环境辅助",
+      "evidence_and_limit": "历史Windows DLL兼容记录；当前依赖检查和Panda仿真通过；本次未执行安装/补丁脚本"
+    },
+    {
+      "files": [
+        "smoke_env.py"
+      ],
+      "scope": "恢复验证",
+      "evidence_and_limit": "本次实际执行，两个父轨迹、四个中途分支位置、顺逆序和XML重复检查通过"
+    },
+    {
+      "files": [
+        "train_policy.py",
+        "evaluate_policy.py"
+      ],
+      "scope": "BC训练/评估",
+      "evidence_and_limit": "历史BC日志/权重/评估存在；当前固定BC前向和确认输出已核对；本次未重训BC"
+    },
+    {
+      "files": [
+        "collect_branches.py",
+        "collect_delay_branches.py"
+      ],
+      "scope": "历史分支采集及标签工具",
+      "evidence_and_limit": "历史NPZ/JSON存在；现行采集使用collect_rollout_branches；旧数据不混入现行主表"
+    },
+    {
+      "files": [
+        "collect_rollout_branches.py"
+      ],
+      "scope": "当前真实队列分支采集",
+      "evidence_and_limit": "160训练组/64开发组、20/8父轨迹、数据哈希与队首一致性通过"
+    },
+    {
+      "files": [
+        "train_world.py"
+      ],
+      "scope": "通用世界模型训练入口",
+      "evidence_and_limit": "历史训练权重/日志存在；当前三种子主线通过multiseed/train_suite.py执行"
+    },
+    {
+      "files": [
+        "evaluate_delay.py"
+      ],
+      "scope": "当前FIFO闭环核心",
+      "evidence_and_limit": "60开发任务和14确认任务全部完成；确认适配器核心锁定，演示18回放已验收"
+    },
+    {
+      "files": [
+        "analyze_delay_traces.py"
+      ],
+      "scope": "轨迹诊断",
+      "evidence_and_limit": "decision_diagnostic/final_analysis/analysis.json与diagnosis.txt"
+    },
+    {
+      "files": [
+        "run_queue_coverage_probe.py",
+        "analyze_queue_coverage.py"
+      ],
+      "scope": "队列覆盖诊断",
+      "evidence_and_limit": "queuepair_20261012_01/analysis/analysis.json及诊断图"
+    },
+    {
+      "files": [
+        "diagnose_candidate_truth.py"
+      ],
+      "scope": "同状态真实后果诊断",
+      "evidence_and_limit": "7起点、28候选、84续接；仅局部诊断，非全面oracle闭环"
+    },
+    {
+      "files": [
+        "calibrate_score_head.py",
+        "analyze_head_calibration.py"
+      ],
+      "scope": "评分头控制/校准",
+      "evidence_and_limit": "单种子探索及三种子匹配预算控制/校准；18份选点权重中包含6份评分头变体"
+    },
+    {
+      "files": [
+        "evaluate_candidate_rollout.py"
+      ],
+      "scope": "候选续接探索",
+      "evidence_and_limit": "tailprobe_20261012_01保留结果；不纳入60新起点主确认"
+    },
+    {
+      "files": [
+        "evaluate_world_control.py",
+        "evaluate_gated_mpc.py",
+        "evaluate_state_mpc.py",
+        "evaluate_task_mpc.py"
+      ],
+      "scope": "早期MPC探索",
+      "evidence_and_limit": "models内control_、gated_、state_mpc_、taskmpc_结果存在；本次仅存量核对，未重新运行"
+    },
+    {
+      "files": [
+        "adaptive_model.py",
+        "collect_response.py",
+        "train_response.py",
+        "fit_linear_response.py",
+        "evaluate_adaptive.py"
+      ],
+      "scope": "执行偏差适应探索",
+      "evidence_and_limit": "response数据/模型及evaluation内7份结果；独立历史分支，未纳入当前三种子主线"
+    },
+    {
+      "files": [
+        "train_wm_aug_policy.py"
+      ],
+      "scope": "世界模型辅助BC探索",
+      "evidence_and_limit": "policy/wm_aug_low20权重、日志和eval_dev_0.0_policy.json存在；非当前主方法"
+    },
+    {
+      "files": [
+        "queue_v2.py"
+      ],
+      "scope": "队列补偿探索",
+      "evidence_and_limit": "2个已训练模型；results子目录中5组D=4试验，每组12回合；非当前确认"
+    },
+    {
+      "files": [
+        "make_figures.py"
+      ],
+      "scope": "历史绘图",
+      "evidence_and_limit": "硬编码旧结果；仅保留归档用途，当前图由两轮analysis脚本读取原始JSON生成"
+    }
+  ]
+}

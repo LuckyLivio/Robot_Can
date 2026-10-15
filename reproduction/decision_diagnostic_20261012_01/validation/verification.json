@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "check": "wm_trace_on_off_full_trajectory",
+      "passed": true,
+      "sha256": "de81e67d3133b008f3efe3733aed7068a953fca8b4d07e942b79694998839be9",
+      "steps": 800
+    },
+    {
+      "check": "k2_trace_on_off_full_trajectory",
+      "passed": true,
+      "sha256": "c0ff6df3d7f88a240fb8f1baa88c6102a58cdab05791a9f3c4308fe383ab5301",
+      "steps": 422
+    },
+    {
+      "check": "noise_005_delay_2_trace_parity_and_fifo",
+      "passed": true,
+      "sha256": "5f1494cf6a0215000ab2de6874049a07ef916efe04ab124fa83050c9ca82f930",
+      "steps": 70
+    },
+    {
+      "check": "noise_005_delay_0_trace_parity_and_fifo",
+      "passed": true,
+      "sha256": "0f5de5dcb200ad3d87925a9163dc8fb15e6d03c29c699c7aa9925c3ef120684a",
+      "steps": 12
+    },
+    {
+      "check": "existing_output",
+      "passed": true
+    },
+    {
+      "check": "duplicate_demo",
+      "passed": true
+    },
+    {
+      "check": "cross_split_demo",
+      "passed": true
+    },
+    {
+      "check": "missing_diagnostic_output",
+      "passed": true
+    },
+    {
+      "check": "four_episodes_match_original_saved_behavior",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "note": "Trajectory hashes were measured with in-memory env.step instrumentation; float32 action and observation bytes matched with trace enabled/disabled. Wall-clock timing excluded. Noise/delay checks are short diagnostics, not performance experiments."
+}

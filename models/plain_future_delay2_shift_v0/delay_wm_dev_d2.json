@@ -1,0 +1,112 @@
+{
+  "args": {
+    "method": "wm",
+    "model": "plain_future_delay2_shift_v0",
+    "policy": "bc_chunk_dev_v4",
+    "policy_checkpoint": "policy_15000.pt",
+    "split": "dev",
+    "episodes": 8,
+    "steps": 400,
+    "delay": 2,
+    "candidates": 4,
+    "horizon": 8,
+    "noise": 0.0,
+    "risk_weight": 0.5,
+    "readout_weight": 0.02,
+    "gate_margin": 0.0,
+    "score_only": true,
+    "candidate_mode": "shift"
+  },
+  "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+  "records": [
+    {
+      "demo": "demo_105",
+      "success": true,
+      "steps": 137,
+      "peak_stage_reward": 0.5812551340874873,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.41605839416058393,
+      "mean_decision_ms": 1.5682737227447712,
+      "elapsed_s": 1.4403929999098182
+    },
+    {
+      "demo": "demo_118",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.5514020519488843,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.2625,
+      "mean_decision_ms": 1.3519340034690686,
+      "elapsed_s": 3.9324383001076058
+    },
+    {
+      "demo": "demo_62",
+      "success": true,
+      "steps": 121,
+      "peak_stage_reward": 0.5890345297067135,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.4214876033057851,
+      "mean_decision_ms": 1.417787605126904,
+      "elapsed_s": 1.2002950999885798
+    },
+    {
+      "demo": "demo_174",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.35479295862928173,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.3825,
+      "mean_decision_ms": 1.3573215040378273,
+      "elapsed_s": 3.9790114000206813
+    },
+    {
+      "demo": "demo_124",
+      "success": true,
+      "steps": 211,
+      "peak_stage_reward": 0.5571379535215089,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.2843601895734597,
+      "mean_decision_ms": 1.3845687190300269,
+      "elapsed_s": 2.0505118999863043
+    },
+    {
+      "demo": "demo_28",
+      "success": true,
+      "steps": 117,
+      "peak_stage_reward": 0.6117295982244285,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.4700854700854701,
+      "mean_decision_ms": 1.3861316286075192,
+      "elapsed_s": 1.123905700049363
+    },
+    {
+      "demo": "demo_0",
+      "success": true,
+      "steps": 101,
+      "peak_stage_reward": 0.652467024177904,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.39603960396039606,
+      "mean_decision_ms": 1.3914504941405341,
+      "elapsed_s": 0.9840930999489501
+    },
+    {
+      "demo": "demo_49",
+      "success": true,
+      "steps": 108,
+      "peak_stage_reward": 0.6438464419752788,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.6018518518518519,
+      "mean_decision_ms": 1.397208335455852,
+      "elapsed_s": 1.0646587999071926
+    }
+  ],
+  "success_rate": 0.75
+}

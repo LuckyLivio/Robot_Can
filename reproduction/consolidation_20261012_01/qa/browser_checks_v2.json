@@ -1,0 +1,136 @@
+{
+  "checkedAt": "2026-10-12T09:23:10.019Z",
+  "coreCases": [
+    {
+      "category": "shared_success",
+      "condition": "clean",
+      "heading": "同一起点，对照也能完成。",
+      "label": "demo_1000001 · 共同成功 · 5.9 秒",
+      "media": {
+        "duration": 5.9,
+        "error": null,
+        "readyState": 4
+      },
+      "outcomes": "BC k=2\n\n固定动作偏移\n\n成功 · 95 步\nFull\n\n世界模型 · 种子 17\n\n成功 · 95 步\nPlain\n\n去排序 · 种子 17\n\n成功 · 95 步"
+    },
+    {
+      "category": "full_only_success",
+      "condition": "clean",
+      "heading": "这个起点，Full 完成了搬运。",
+      "label": "demo_1000026 · Full 独胜 · 21.1 秒",
+      "media": {
+        "duration": 21.1,
+        "error": null,
+        "readyState": 4
+      },
+      "outcomes": "BC k=2\n\n固定动作偏移\n\n未完成 · 400 步\nFull\n\n世界模型 · 种子 17\n\n成功 · 133 步\nPlain\n\n去排序 · 种子 17\n\n未完成 · 400 步"
+    },
+    {
+      "category": "shared_failure",
+      "condition": "clean",
+      "heading": "同一起点，仍有共同失败。",
+      "label": "demo_1000000 · 共同未完成 · 21.1 秒",
+      "media": {
+        "duration": 21.1,
+        "error": null,
+        "readyState": 4
+      },
+      "outcomes": "BC k=2\n\n固定动作偏移\n\n未完成 · 400 步\nFull\n\n世界模型 · 种子 17\n\n未完成 · 400 步\nPlain\n\n去排序 · 种子 17\n\n未完成 · 400 步"
+    },
+    {
+      "category": "shared_success",
+      "condition": "noise005",
+      "heading": "同一起点，对照也能完成。",
+      "label": "demo_1000002 · 共同成功 · 6.6 秒",
+      "media": {
+        "duration": 6.6,
+        "error": null,
+        "readyState": 4
+      },
+      "outcomes": "BC k=2\n\n固定动作偏移\n\n成功 · 110 步\nFull\n\n世界模型 · 种子 17\n\n成功 · 109 步\nPlain\n\n去排序 · 种子 17\n\n成功 · 110 步"
+    },
+    {
+      "category": "full_only_success",
+      "condition": "noise005",
+      "heading": "这个起点，Full 完成了搬运。",
+      "label": "demo_1000011 · Full 独胜 · 21.1 秒",
+      "media": {
+        "duration": 21.1,
+        "error": null,
+        "readyState": 4
+      },
+      "outcomes": "BC k=2\n\n固定动作偏移\n\n未完成 · 400 步\nFull\n\n世界模型 · 种子 17\n\n成功 · 165 步\nPlain\n\n去排序 · 种子 17\n\n未完成 · 400 步"
+    },
+    {
+      "category": "shared_failure",
+      "condition": "noise005",
+      "heading": "同一起点，仍有共同失败。",
+      "label": "demo_1000000 · 共同未完成 · 21.1 秒",
+      "media": {
+        "duration": 21.1,
+        "error": null,
+        "readyState": 4
+      },
+      "outcomes": "BC k=2\n\n固定动作偏移\n\n未完成 · 400 步\nFull\n\n世界模型 · 种子 17\n\n未完成 · 400 步\nPlain\n\n去排序 · 种子 17\n\n未完成 · 400 步"
+    }
+  ],
+  "timingStatus": "v4 · 400步未完成　罐体高度 0.860 m · 指间距 76.1 mm · 400步\nv5 · 成功，已结束　罐体高度 0.860 m · 指间距 77.9 mm · 384步",
+  "playbackStarted": "1 / 400",
+  "pausedButton": "播放轨迹 ▶",
+  "mobileWidth": {
+    "client": 375,
+    "heroColumns": "1.1fr 1fr",
+    "methodColumns": "164.333px 164.333px",
+    "scroll": 375
+  },
+  "consoleErrors": [],
+  "newPolicyEpisodes": 0,
+  "worldModel": {
+    "defaultCase": "demo_1000026 · Full 独胜 · 21.1 秒",
+    "stages": [
+      {
+        "detail": "读取23维仿真状态，固定BC提出k=0/1/2/3四个动作候选。k=2指动作块的第三项，并不是预测两步后的真实状态。",
+        "pressed": "0",
+        "stage": "读取状态"
+      },
+      {
+        "detail": "将实际FIFO中待执行的两条命令作为每个候选共同的预测前缀，再接入候选动作。预测考虑命令延迟，不能从空队列假设起算。",
+        "pressed": "1",
+        "stage": "还原延迟"
+      },
+      {
+        "detail": "GRU动力学模型向前展开H=8步。学习评分结合任务进展与失抓风险比较候选；8步包含前面两步等待命令，不是8步全由新动作驱动。",
+        "pressed": "2",
+        "stage": "预测候选"
+      },
+      {
+        "detail": "候选评分优势超过0.02才替换BC k=2；否则回退。每次只提交一个动作，在下一次观测后重新规划。门限不是经过校准的安全保证。",
+        "pressed": "3",
+        "stage": "执行再规划"
+      }
+    ],
+    "predictionRows": [
+      "持续性（状态保持）59.1752.030.1303",
+      "Plain（去排序）29.9626.970.1367",
+      "Full（世界模型）31.0434.950.1238"
+    ],
+    "plotLoaded": true,
+    "traceChecks": [
+      {
+        "case": "timing",
+        "status": "v4 · 400步未完成　罐体高度 0.860 m · 指间距 76.1 mm · 400步\nv5 · 成功，已结束　罐体高度 0.860 m · 指间距 77.9 mm · 384步",
+        "step": "400 / 400"
+      },
+      {
+        "case": "side",
+        "status": "v4 · 400步未完成　罐体高度 0.844 m · 指间距 79.5 mm · 400步\nv5 · 成功，已结束　罐体高度 0.865 m · 指间距 54.4 mm · 274步",
+        "step": "400 / 400"
+      },
+      {
+        "case": "loss",
+        "status": "v4 · 400步未完成　罐体高度 0.844 m · 指间距 80.0 mm · 400步\nv5 · 400步未完成　罐体高度 0.844 m · 指间距 80.0 mm · 400步",
+        "step": "400 / 400"
+      }
+    ]
+  }
+}

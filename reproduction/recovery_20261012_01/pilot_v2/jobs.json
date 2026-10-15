@@ -1,0 +1,70 @@
+[
+  {
+    "id": "bc_original",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": false,
+    "demos": [
+      "demo_54",
+      "demo_133",
+      "demo_47",
+      "demo_159",
+      "demo_129",
+      "demo_33",
+      "demo_94",
+      "demo_136"
+    ]
+  },
+  {
+    "id": "bc_recovery",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "demos": [
+      "demo_54",
+      "demo_133",
+      "demo_47",
+      "demo_159",
+      "demo_129",
+      "demo_33",
+      "demo_94",
+      "demo_136"
+    ]
+  },
+  {
+    "id": "bc_k2_disabled_noise",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.05,
+    "enabled": false,
+    "demos": [
+      "demo_54",
+      "demo_133"
+    ]
+  },
+  {
+    "id": "full_disabled_noise",
+    "method": "full",
+    "seed": 17,
+    "noise": 0.05,
+    "enabled": false,
+    "demos": [
+      "demo_54",
+      "demo_133"
+    ]
+  },
+  {
+    "id": "bc_forced_loss",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "fault": "open_after_verified_lift",
+    "demos": [
+      "demo_54",
+      "demo_133"
+    ]
+  }
+]

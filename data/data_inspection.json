@@ -1,0 +1,117 @@
+{
+  "python": "3.10.20",
+  "numpy": "1.26.4",
+  "h5py": "3.16.0",
+  "n_trajectories": 200,
+  "n_transitions": 23207,
+  "env_args": {
+    "env_name": "PickPlaceCan",
+    "env_version": "1.5.1",
+    "type": 1,
+    "env_kwargs": {
+      "has_renderer": false,
+      "has_offscreen_renderer": false,
+      "ignore_done": true,
+      "use_object_obs": true,
+      "use_camera_obs": false,
+      "control_freq": 20,
+      "controller_configs": {
+        "type": "BASIC",
+        "body_parts": {
+          "right": {
+            "type": "OSC_POSE",
+            "input_max": 1,
+            "input_min": -1,
+            "output_max": [
+              0.05,
+              0.05,
+              0.05,
+              0.5,
+              0.5,
+              0.5
+            ],
+            "output_min": [
+              -0.05,
+              -0.05,
+              -0.05,
+              -0.5,
+              -0.5,
+              -0.5
+            ],
+            "kp": 150,
+            "damping": 1,
+            "impedance_mode": "fixed",
+            "kp_limits": [
+              0,
+              300
+            ],
+            "damping_limits": [
+              0,
+              10
+            ],
+            "position_limits": null,
+            "orientation_limits": null,
+            "uncouple_pos_ori": true,
+            "control_delta": true,
+            "interpolation": null,
+            "ramp_ratio": 0.2,
+            "input_ref_frame": "world",
+            "gripper": {
+              "type": "GRIP"
+            }
+          }
+        }
+      },
+      "robots": [
+        "Panda"
+      ],
+      "camera_depths": false,
+      "camera_heights": 84,
+      "camera_widths": 84,
+      "lite_physics": false,
+      "reward_shaping": false
+    }
+  },
+  "obs_shapes": {
+    "object": [
+      118,
+      14
+    ],
+    "robot0_eef_pos": [
+      118,
+      3
+    ],
+    "robot0_eef_quat": [
+      118,
+      4
+    ],
+    "robot0_eef_quat_site": [
+      118,
+      4
+    ],
+    "robot0_gripper_qpos": [
+      118,
+      2
+    ],
+    "robot0_gripper_qvel": [
+      118,
+      2
+    ],
+    "robot0_joint_pos": [
+      118,
+      7
+    ],
+    "robot0_joint_pos_cos": [
+      118,
+      7
+    ],
+    "robot0_joint_pos_sin": [
+      118,
+      7
+    ],
+    "robot0_joint_vel": [
+      118,
+      7
+    ]
+  }
+}

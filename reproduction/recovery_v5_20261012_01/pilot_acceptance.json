@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "revision": "pilot_b",
+  "checks": {
+    "v4_train": 8,
+    "v4_loss": 2,
+    "v4_held_stall": 1,
+    "v4_old_geometry": 4,
+    "v4_full_noise": 2,
+    "v4_regression_6000049": 1,
+    "v4_regression_6000000": 1,
+    "v4_regression_6000005": 1,
+    "timing_only_train": 8,
+    "timing_only_loss": 2,
+    "timing_only_held_stall": 1,
+    "timing_only_old_geometry": 4,
+    "timing_only_full_noise": 2,
+    "timing_only_regression_6000049": 1,
+    "timing_only_regression_6000000": 1,
+    "timing_only_regression_6000005": 1,
+    "side_only_train": 8,
+    "side_only_loss": 2,
+    "side_only_held_stall": 1,
+    "side_only_old_geometry": 4,
+    "side_only_full_noise": 2,
+    "side_only_regression_6000049": 1,
+    "side_only_regression_6000000": 1,
+    "side_only_regression_6000005": 1,
+    "v5_train": 8,
+    "v5_loss": 2,
+    "v5_held_stall": 1,
+    "v5_old_geometry": 4,
+    "v5_full_noise": 2,
+    "v5_regression_6000049": 1,
+    "v5_regression_6000000": 1,
+    "v5_regression_6000005": 1
+  },
+  "mechanisms": {
+    "timing_only_timing": [
+      {
+        "case": "known_alignment",
+        "steps": 351
+      },
+      {
+        "case": "known_budget",
+        "steps": 376
+      }
+    ],
+    "v5_timing": [
+      {
+        "case": "known_alignment",
+        "steps": 351
+      },
+      {
+        "case": "known_budget",
+        "steps": 376
+      }
+    ],
+    "side_only_side": [
+      "demo_6200000",
+      "demo_6200001"
+    ],
+    "v5_side": [
+      "demo_6200000",
+      "demo_6200001"
+    ]
+  },
+  "verified_episodes": 132,
+  "verified_control_steps": 37629,
+  "physical_replays": [
+    {
+      "job": "v4_regression_6000049",
+      "demo": "demo_6000049",
+      "steps": 344,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v4_full_noise",
+      "demo": "demo_133",
+      "steps": 306,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "timing_only_regression_6000049",
+      "demo": "demo_6000049",
+      "steps": 337,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "timing_only_full_noise",
+      "demo": "demo_133",
+      "steps": 306,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "side_only_regression_6000049",
+      "demo": "demo_6000049",
+      "steps": 344,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "side_only_full_noise",
+      "demo": "demo_133",
+      "steps": 306,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v5_regression_6000049",
+      "demo": "demo_6000049",
+      "steps": 337,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v5_full_noise",
+      "demo": "demo_133",
+      "steps": 306,
+      "max_state_error": 0.0
+    }
+  ],
+  "source_sha256": {
+    "recovery_controller.py": "88ee635f5cefbe30927d549910a5237b82f8275c0ea88da273874c4e7b637ecf",
+    "evaluate_recovery.py": "3ad31d5a9ace8fbc532fba93d26ac34d320531432357b82cfac216a8a3128954",
+    "clearance.py": "9b6e90f85f2e59b464337c8e898f292cec213951eefe1a6e904919a72431a79e",
+    "gripper_geometry.json": "62b3cc5c39077551e89251313831b227e0db84444d7c179a7b00b86c1f724c32",
+    "variants.py": "f6016c1ca982392486e6223a68dff0a9ef06312f848b8aa5685f455f639004c9"
+  }
+}

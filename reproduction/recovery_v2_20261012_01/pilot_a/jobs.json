@@ -1,0 +1,108 @@
+[
+  {
+    "id": "v1_train",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v1",
+    "demos": [
+      "demo_54",
+      "demo_133",
+      "demo_47",
+      "demo_159",
+      "demo_129",
+      "demo_33",
+      "demo_94",
+      "demo_136"
+    ]
+  },
+  {
+    "id": "v1_loss",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v1",
+    "demos": [
+      "demo_54",
+      "demo_133"
+    ],
+    "fault": "open_after_verified_lift"
+  },
+  {
+    "id": "v2_train",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v2",
+    "demos": [
+      "demo_54",
+      "demo_133",
+      "demo_47",
+      "demo_159",
+      "demo_129",
+      "demo_33",
+      "demo_94",
+      "demo_136"
+    ]
+  },
+  {
+    "id": "v2_loss",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v2",
+    "demos": [
+      "demo_54",
+      "demo_133"
+    ],
+    "fault": "open_after_verified_lift"
+  },
+  {
+    "id": "v2_held_stall",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v2",
+    "demos": [
+      "demo_54"
+    ],
+    "fault_policy": "stationary_after_lift"
+  },
+  {
+    "id": "v1_geometry",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v1",
+    "dataset": "reproduction/recovery_v2_20261012_01/pilot_starts_fixed.hdf5",
+    "demos": [
+      "demo_4000000",
+      "demo_4000001",
+      "demo_4000002",
+      "demo_4000003"
+    ],
+    "fault_policy": "stationary_open"
+  },
+  {
+    "id": "v2_geometry",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v2",
+    "dataset": "reproduction/recovery_v2_20261012_01/pilot_starts_fixed.hdf5",
+    "demos": [
+      "demo_4000000",
+      "demo_4000001",
+      "demo_4000002",
+      "demo_4000003"
+    ],
+    "fault_policy": "stationary_open"
+  }
+]

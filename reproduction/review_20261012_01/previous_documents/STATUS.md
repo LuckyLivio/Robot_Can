@@ -1,0 +1,27 @@
+# 项目当前状态
+
+版本：2026-10-12 冻结确认后的文档整理版。历史文档完整保存在 [previous_documents](reproduction/release_20261012_01/previous_documents/)。
+
+## 已完成
+
+- 本地`.venv`环境及仿真运行验证；Python 3.10.9、PyTorch 2.14.1+cu130、robosuite 1.5.1、MuJoCo 3.3.0。
+- 分支恢复与FIFO采集一致性修复；相同状态下候选预测/真实后果诊断。
+- 三种子公平训练、参数匹配Direct、同预算评分头对照与开发消融。
+- 冻结BC k=2、Full、Plain后的60个新起点确认，14组840回合及配对统计。
+- 当前成果哈希锁定，旧文档归档，项目文档/论文提纲统一；同起点演示及其验收入口见[DEMO_GUIDE](DEMO_GUIDE.md)。
+
+## 结论边界
+
+Full确认均值为干净90.00%、噪声86.11%，BC为85.00%、81.67%，Plain为88.33%、83.89%。观察到正向趋势；分条件和排序项比较不足以支持稳定显著优势。校准离线改善不等价于闭环提升。完整数值见[RESULTS](RESULTS.md)。
+
+## 尚需完成
+
+论文正文、正式参考文献格式、学校模板排版、导师审阅及答辩材料仍未完成。本轮是提纲和演示整理，不生成或宣称完成全文。题目建议“考虑动作延迟的机器人世界模型控制方法实现与实验分析”；未提供正式任务书，不能据此保证毕业审核通过。
+
+纯视觉、真机、多任务、更多独立训练数据集不在当前已完成范围。无需为包装结果继续围绕已看过的60个确认起点调参。若另立性能研究，需先新版本/新协议，再使用新的确认起点。
+
+## 当前证据入口
+
+[三种子开发消融](reproduction/multiseed_20261012_01/analysis/report.txt) · [独立确认报告](reproduction/confirmation_20261012_01/analysis/report.txt) · [冻结哈希清单](reproduction/release_20261012_01/frozen_results.json)
+
+[原始总体评估](reproduction/confirmation_20261012_01/analysis/overall_assessment.txt)是本次文档整理之前的冻结历史快照，其中“旧文档未更新/演示未完成”描述的是当时状态；交付现状以本页及[release验收](reproduction/release_20261012_01/release_validation.json)为准。

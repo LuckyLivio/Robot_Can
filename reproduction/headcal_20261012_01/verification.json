@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "protected_existing_files_unchanged": 532,
+  "only_changed_model_tensors": {
+    "control": {
+      "changed_tensors": [
+        "labels.0.weight",
+        "labels.0.bias",
+        "labels.2.weight",
+        "labels.2.bias"
+      ],
+      "selected_step_verified": 1250
+    },
+    "calibrated": {
+      "changed_tensors": [
+        "labels.0.weight",
+        "labels.0.bias",
+        "labels.2.weight",
+        "labels.2.bias"
+      ],
+      "selected_step_verified": 250
+    }
+  },
+  "state_prediction_checks": {
+    "train": {
+      "groups": 160,
+      "max_state_difference": 0.0
+    },
+    "dev": {
+      "groups": 64,
+      "max_state_difference": 0.0
+    }
+  },
+  "same_minibatch_sequences": true,
+  "training_updates_per_arm": 3000,
+  "saved_checkpoints_per_arm": 12,
+  "selected_step_control": 1250,
+  "selected_step_calibrated": 250,
+  "evaluated_dev_episodes_per_arm": 30,
+  "no_sealed_test": true,
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "numpy": "1.26.4",
+    "robosuite": "1.5.1",
+    "mujoco": "3.3.0",
+    "h5py": "3.11.0",
+    "matplotlib": "3.9.4"
+  },
+  "cuda_device": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "figures_visually_checked": [
+    "analysis/head_calibration.png"
+  ]
+}

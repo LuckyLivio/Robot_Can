@@ -1,0 +1,128 @@
+{
+  "args": {
+    "method": "wm",
+    "model": "multiseed_20261012_01_full_s17",
+    "policy": "bc_chunk_dev_v4",
+    "policy_checkpoint": "policy_15000.pt",
+    "split": "confirmation_demo",
+    "episodes": 3,
+    "steps": 400,
+    "delay": 2,
+    "shift_index": 2,
+    "fallback_index": 2,
+    "candidates": 4,
+    "horizon": 8,
+    "noise": 0.0,
+    "risk_weight": 0.5,
+    "readout_weight": 0.02,
+    "gate_margin": 0.02,
+    "fallback": "shift",
+    "score_only": true,
+    "candidate_mode": "shift",
+    "demos": [
+      "demo_1000001",
+      "demo_1000026",
+      "demo_1000000"
+    ],
+    "output_dir": "C:\\Users\\Livio\\Desktop\\robot_can\\reproduction\\release_20261012_01\\demo\\traces\\full_clean",
+    "trace": true
+  },
+  "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+  "status": "complete",
+  "resolved_demos": [
+    "demo_1000001",
+    "demo_1000026",
+    "demo_1000000"
+  ],
+  "records": [
+    {
+      "demo": "demo_1000001",
+      "success": true,
+      "steps": 95,
+      "peak_stage_reward": 0.6407675393851556,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.15789473684210525,
+      "mean_decision_ms": 1.0944389473335927,
+      "elapsed_s": 0.8264082000005146,
+      "selection_counts": {
+        "0": 15,
+        "1": 1,
+        "2": 63,
+        "3": 16
+      },
+      "fraction_fallback_selected": 0.6631578947368421,
+      "fraction_override": 0.33684210526315794
+    },
+    {
+      "demo": "demo_1000026",
+      "success": true,
+      "steps": 133,
+      "peak_stage_reward": 0.5626256286882878,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.23308270676691728,
+      "mean_decision_ms": 1.131472932287497,
+      "elapsed_s": 1.1922878000004857,
+      "selection_counts": {
+        "0": 31,
+        "1": 10,
+        "2": 86,
+        "3": 6
+      },
+      "fraction_fallback_selected": 0.6466165413533834,
+      "fraction_override": 0.3533834586466166
+    },
+    {
+      "demo": "demo_1000000",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.35104871985020036,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.0,
+      "mean_decision_ms": 1.1163537500351595,
+      "elapsed_s": 4.176662400000168,
+      "selection_counts": {
+        "2": 400
+      },
+      "fraction_fallback_selected": 1.0,
+      "fraction_override": 0.0
+    }
+  ],
+  "success_rate": 0.6666666666666666,
+  "trace_schema_version": 1,
+  "trace_files": {
+    "demo_1000001": "traces/demo_1000001.jsonl",
+    "demo_1000026": "traces/demo_1000026.jsonl",
+    "demo_1000000": "traces/demo_1000000.jsonl"
+  },
+  "provenance": {
+    "sha256": {
+      "reproduction\\confirmation_20261012_01\\starts.hdf5": "1d0729bfe1f39ffbb59b76f2dc286dd35e25195f4d1d896a30083bd019ff7784",
+      "data\\splits.json": "f2224a32befddd542c9f35790fcbddeb541a5149c4bf00bfc0b0dff160837cc2",
+      "policy\\bc_chunk_dev_v4\\policy_15000.pt": "ef375a81d5c2a5dce26662c68c2965e1954c736cd824e40085a084073777af14",
+      "models\\multiseed_20261012_01_full_s17\\model.pt": "c22b12bbe2b5e2d7d938f1589b43dc36e95432e16ed3649058072948bb65b8c1",
+      "evaluate_delay.py": "acecd45a6b0b2ac7c61375c413309f3561e1940886e9585035051057b45ac841",
+      "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+      "world_model.py": "ac82be1227b91e43da2df0cbb4cdfe35494068147ee9ec99bc526383bdf1946a",
+      "collect_branches.py": "204f38acd87df3b88d91f8ff31b0e3df94d07aa3b8742383917e974454db8f4b",
+      "reproduction\\confirmation_20261012_01\\evaluator_core.py": "14293545ae3ac23fa11a4d8d62efeec2a56338dfbf91bd422b79e7285e3bce68",
+      "data\\branches_train_queuepair_20261012_01_real.npz": "28f9c7bc145d911adbfc290ed6a62ab1d2f82b5c0766f3103fe63a339c6b9a8c",
+      "data\\branches_dev_queuepair_20261012_01_real.npz": "a4e700269544f3c853d014b9a1bcfbb6004c269ba91da6ea53dd953e3fd11a05"
+    },
+    "packages": {
+      "torch": "2.14.1+cu130",
+      "numpy": "1.26.4",
+      "robosuite": "1.5.1",
+      "mujoco": "3.3.0",
+      "h5py": "3.11.0"
+    },
+    "trace_note": "Diagnostic logging adds runtime overhead. Predictions assume constant future candidate commands; actual control replans each step.",
+    "confirmation_wrapper_sha256": "57aad8c47bf64bf706701932f1b5930ad0343b4bb4cf9262da86ef72690146f5",
+    "registered_design_sha256": "2ced2c7232b512b03bbb0760578838badf2ecb3de51e8e31ec9c78fb6210f69f",
+    "execution_started_at": "2026-10-12T02:43:18.236971+00:00",
+    "purpose": "Illustrative replay; excluded from all success-rate statistics.",
+    "demo_design_sha256": "4795a3b0be7d237668f35b3276479159b30ff0d383d04b8c66fe581fc06b5068"
+  }
+}

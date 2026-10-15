@@ -1,0 +1,33 @@
+{"job": "bc_k2_clean", "episodes": 30, "controls": 4820}
+{"job": "full_s17_clean", "episodes": 30, "controls": 4988}
+{"job": "full_s23_clean", "episodes": 30, "controls": 5166}
+{"job": "full_s41_clean", "episodes": 30, "controls": 5187}
+{"job": "bc_k2_noise005", "episodes": 30, "controls": 4754}
+{"job": "full_s17_noise005", "episodes": 30, "controls": 4370}
+{"job": "full_s23_noise005", "episodes": 30, "controls": 4376}
+{"job": "full_s41_noise005", "episodes": 30, "controls": 4683}
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly, otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+{
+  "passed": true,
+  "stage": "dev_c",
+  "verified_utc": "2026-10-12T05:47:05.579545+00:00",
+  "old_files_unchanged": 2263,
+  "frozen_inputs_unchanged": true,
+  "episodes": 240,
+  "controls_checked": 38344,
+  "physical_replays": [
+    {
+      "job": "full_s17_clean",
+      "demo": "demo_105",
+      "steps": 310,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "full_s17_noise005",
+      "demo": "demo_105",
+      "steps": 313,
+      "max_state_error": 0.0
+    }
+  ]
+}

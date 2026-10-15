@@ -1,0 +1,49 @@
+{
+  "args": {
+    "method": "wm",
+    "model": "user_weights_check_20261011_01",
+    "policy": "bc_chunk_dev_v4",
+    "policy_checkpoint": "policy_15000.pt",
+    "split": "dev",
+    "episodes": 2,
+    "steps": 400,
+    "delay": 2,
+    "shift_index": null,
+    "fallback_index": 1,
+    "candidates": 4,
+    "horizon": 8,
+    "noise": 0.0,
+    "risk_weight": 0.5,
+    "readout_weight": 0.02,
+    "gate_margin": 0.02,
+    "fallback": "shift",
+    "score_only": true,
+    "candidate_mode": "shift"
+  },
+  "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+  "records": [
+    {
+      "demo": "demo_105",
+      "success": true,
+      "steps": 172,
+      "peak_stage_reward": 0.5934915395858132,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.040697674418604654,
+      "mean_decision_ms": 1.0632156975398808,
+      "elapsed_s": 1.436804299999494
+    },
+    {
+      "demo": "demo_118",
+      "success": true,
+      "steps": 89,
+      "peak_stage_reward": 0.5838435557538395,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.02247191011235955,
+      "mean_decision_ms": 1.0758921344767147,
+      "elapsed_s": 0.7066816000005929
+    }
+  ],
+  "success_rate": 1.0
+}
