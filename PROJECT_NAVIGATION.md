@@ -1,3 +1,5 @@
+> **v13更新（2026-10-16）**：v13进行中：小测试v13为6/6，v12为3/6；正在按门槛推进消融、开发与独立确认。 [本轮前端](reproduction/improvement_v13_20261016_01/index.html) · [本轮说明](reproduction/improvement_v13_20261016_01/README.md)。旧v12及其他代码、权重和结果保留。
+
 > **v12更新（2026-10-15）**：v12已完成：开发236/240；全新60起点确认v12 465/480、v6 473/480；救回1、退步9。对照门槛未通过；配对区间没有高于零，不能宣称总体成功率提升。 [报告](reproduction/improvement_v12_20261015_01/REPORT.md) · [新前端](reproduction/improvement_v12_20261015_01/index.html)。旧v5冻结证据及全部旧资产保留。
 
 > 历史阶段：2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
