@@ -1,0 +1,26 @@
+[
+  {
+    "id": "V12_F01_wait_trace",
+    "caption": "Full s41、噪声0.05、已知demo87。每20Hz控制步的实际执行后状态，无平滑。v11和history轨迹逐值一致，合并为一条；v12到实际成功264步即停止。竖线为149步确认。此图是诊断，不是独立泛化证据。",
+    "width_mm": 180.34,
+    "dpi": 600,
+    "no_smoothing": true,
+    "rows": 664,
+    "sources": {
+      "reproduction/improvement_v12_20261015_01/pilot_a/v11_held_wait_demo87/trace.jsonl": "bc170883eb81915bdce376ace8446d1ca63c4651a333899a4040013ad1887773",
+      "reproduction/improvement_v12_20261015_01/pilot_a/history_held_wait_demo87/trace.jsonl": "8325bfa5ef3b17485f3ac54124b0355b49fb6a5cb8374bf6709cc08b252e1592",
+      "reproduction/improvement_v12_20261015_01/pilot_a/v12_held_wait_demo87/trace.jsonl": "717995fecf019329be39d339e5bb11e9ada6d834ac099e08a235edcb62c38f8b"
+    }
+  },
+  {
+    "id": "V12_F02_ablation",
+    "caption": "每组38次已知条件执行；包含同起点不同设置，不作为38个独立确认样本。无推断区间；核心37个条件三组均31成功，完整v12额外救回已知demo87。",
+    "width_mm": 180.34,
+    "dpi": 600,
+    "no_smoothing": true,
+    "rows": 3,
+    "sources": {
+      "reproduction/improvement_v12_20261015_01/analysis/pilot_a.json": "a3981b3a7b51c57d344d584034b290d83ca3cae2e0463b84841ba5c7d66f9b90"
+    }
+  }
+]

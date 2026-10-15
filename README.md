@@ -1,3 +1,5 @@
+> **v12 进行中（2026-10-15）**：[最新前端](reproduction/improvement_v12_20261015_01/index.html) · [执行前协议](reproduction/improvement_v12_20261015_01/protocols/PLAN.md)。9次小测试与114次消融通过，已冻结进入240回合开发；尚无独立确认结论。旧版成果与权重保留。
+
 > 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
 
 > 跨设备交付已整理：[使用说明](reproduction/portable_delivery_20261015_01/README.md) · [下载与验收页面](reproduction/portable_delivery_20261015_01/index.html)。含独立展示包、v6—v11增补与三个ZIP的迁移文件夹；第二台电脑实际验收仍待完成。
