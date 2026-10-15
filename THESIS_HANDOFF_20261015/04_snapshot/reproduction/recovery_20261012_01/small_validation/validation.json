@@ -1,0 +1,37 @@
+{
+  "physical": {
+    "open_gap_m": 0.07798957824707031,
+    "closed_gap_m": 0.0020133769139647484,
+    "initial_height_m": 1.0236073732376099,
+    "negative_positive_z_heights_m": [
+      1.0106639862060547,
+      1.0364545583724976
+    ],
+    "rotation_error_before_after_rad": [
+      1.5256871835466257,
+      0.00518392197610561
+    ]
+  },
+  "equivalence": [
+    {
+      "job": "bc_original",
+      "exact_steps": 510,
+      "episodes": 2
+    },
+    {
+      "job": "bc_k2_disabled_noise",
+      "exact_steps": 511,
+      "episodes": 2
+    },
+    {
+      "job": "full_disabled_noise",
+      "exact_steps": 511,
+      "episodes": 2
+    }
+  ],
+  "passed": true,
+  "source_sha256": {
+    "recovery_controller.py": "5d575323e8f53781dbb33a167511421ec4ef90bd228b4fb33a7bca73e8802286",
+    "evaluate_recovery.py": "f9b5eef6f3be41005beb75721d931c88c3063dcc192adcdf6a5738b2379f28ae"
+  }
+}

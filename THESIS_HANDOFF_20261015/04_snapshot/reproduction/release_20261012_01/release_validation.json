@@ -1,0 +1,305 @@
+{
+  "completed_at": "2026-10-12T02:53:27.609846+00:00",
+  "passed": true,
+  "preexisting_files": 1327,
+  "changed_existing_files": [
+    "ADAPTIVE_PROTOCOL.md",
+    "DELAY_PROTOCOL.md",
+    "PROGRAM_GUIDE.md",
+    "PROTOCOL.md",
+    "REPRODUCTION_PLAN.md",
+    "RESULTS.md",
+    "STATISTICS.md",
+    "STATUS.md",
+    "THESIS_OUTLINE.md"
+  ],
+  "deleted_existing_files": [],
+  "preserved_frozen_experiment_files": 1283,
+  "archived_original_documents": 9,
+  "current_documents": 11,
+  "local_document_links_checked": 92,
+  "original_controller_code_unchanged": true,
+  "weights_results_data_and_old_figures_unchanged": true,
+  "demonstration_episode_replays": 18,
+  "replayed_steps": 4912,
+  "video_checks": [
+    {
+      "id": "clean_shared_success",
+      "decoded_frames": 59,
+      "codec": "h264",
+      "dimensions": [
+        1440,
+        660
+      ],
+      "all_three_panels_nonblack_at_every_frame": true,
+      "minimum_panel_std": [
+        64.36692434702577,
+        64.65168762854246,
+        64.64321429079128
+      ],
+      "minimum_panel_mean": [
+        130.29227513227514,
+        129.3646875,
+        129.90779265873016
+      ]
+    },
+    {
+      "id": "clean_full_only_success",
+      "decoded_frames": 211,
+      "codec": "h264",
+      "dimensions": [
+        1440,
+        660
+      ],
+      "all_three_panels_nonblack_at_every_frame": true,
+      "minimum_panel_std": [
+        64.29161515563509,
+        64.63248228613735,
+        64.56339695652042
+      ],
+      "minimum_panel_mean": [
+        130.8567972883598,
+        130.45585648148148,
+        130.31400132275132
+      ]
+    },
+    {
+      "id": "clean_shared_failure",
+      "decoded_frames": 211,
+      "codec": "h264",
+      "dimensions": [
+        1440,
+        660
+      ],
+      "all_three_panels_nonblack_at_every_frame": true,
+      "minimum_panel_std": [
+        64.9579794445465,
+        65.27610148830566,
+        65.27502610365264
+      ],
+      "minimum_panel_mean": [
+        130.25717096560845,
+        129.70087797619047,
+        129.6914203042328
+      ]
+    },
+    {
+      "id": "noise005_shared_success",
+      "decoded_frames": 66,
+      "codec": "h264",
+      "dimensions": [
+        1440,
+        660
+      ],
+      "all_three_panels_nonblack_at_every_frame": true,
+      "minimum_panel_std": [
+        63.96408279238465,
+        64.25890914603626,
+        64.29860055176354
+      ],
+      "minimum_panel_mean": [
+        130.62436507936508,
+        129.74390707671958,
+        129.8830505952381
+      ]
+    },
+    {
+      "id": "noise005_full_only_success",
+      "decoded_frames": 211,
+      "codec": "h264",
+      "dimensions": [
+        1440,
+        660
+      ],
+      "all_three_panels_nonblack_at_every_frame": true,
+      "minimum_panel_std": [
+        64.72528698140269,
+        65.04137591966203,
+        65.04106372947072
+      ],
+      "minimum_panel_mean": [
+        132.27337632275132,
+        128.20695767195767,
+        131.76885085978836
+      ]
+    },
+    {
+      "id": "noise005_shared_failure",
+      "decoded_frames": 211,
+      "codec": "h264",
+      "dimensions": [
+        1440,
+        660
+      ],
+      "all_three_panels_nonblack_at_every_frame": true,
+      "minimum_panel_std": [
+        64.94762268307973,
+        65.25927827976297,
+        65.26120648552137
+      ],
+      "minimum_panel_mean": [
+        130.38125661375662,
+        129.8316402116402,
+        129.8404332010582
+      ]
+    }
+  ],
+  "browser_validation": {
+    "passed": true,
+    "tool": "cua_repl Codex in-app browser",
+    "url": "http://127.0.0.1:8766/reproduction/release_20261012_01/demo/index.html",
+    "cases_observed": [
+      "clean_shared_success",
+      "clean_full_only_success",
+      "noise005_full_only_success"
+    ],
+    "clean_full_video_playback_observed": {
+      "paused": false,
+      "current_time": 18.598709,
+      "duration": 21.1,
+      "error": null
+    },
+    "case_switch_updates_caption_and_download_link": true,
+    "speed_control_2x_selected_then_restored_1x": true,
+    "final_video_metadata": {
+      "readyState": 4,
+      "width": 1440,
+      "height": 660,
+      "duration": 21.1,
+      "playbackRate": 1,
+      "error": null
+    },
+    "screenshot": "demo/browser_preview.jpg",
+    "tab_retained_for_user": true,
+    "scope": "Native media playback and controls checked for selected cases; all6files decoded separately in final validation."
+  },
+  "visual_review": {
+    "passed": true,
+    "review_method": "Visual inspection of actual saved simulation images and the browser screenshot",
+    "reviewed_images": [
+      "demo/all_cases_contact_sheet.jpg",
+      "demo/posters/clean_shared_success.png",
+      "demo/browser_preview.jpg"
+    ],
+    "all_six_final_posters_reviewed": true,
+    "all_eighteen_robot_panels_visible": true,
+    "same_camera_and_panel_order": true,
+    "method_labels_and_outcomes_match_demo_guide": true,
+    "chinese_labels_legible_in_full_size_preview": true,
+    "browser_case_controls_and_statistics_visible": true,
+    "earlier_black_panel_render_replaced": true,
+    "invalid_attempt_archive": "render_attempt01/FAILURE_NOTE.txt",
+    "scope": "Human-style visual inspection of selected full-size images and all six final posters. Full video frame decoding and nonblack checks are separate checks in release_validation.json."
+  },
+  "release_sha256": {
+    "ADAPTIVE_PROTOCOL.md": "e2c133bed9183b7fa40fe7ccb0acee0cc987e8f98325face9af00ef803b9bf0d",
+    "DELAY_PROTOCOL.md": "f3d67cfe27d4ccf89a47db287ed5a5c769a9c6b06e52390a0ac392896c40bd0d",
+    "DEMO_GUIDE.md": "d61c5d0c84fabccb50a319644b3b3cc2ef0ab4fc0c171bd2dfba91822c2bdc87",
+    "PROGRAM_GUIDE.md": "69d1b6054a2dd9f8549b69c444319034b1756245b6471ab33a422aac56257b01",
+    "PROTOCOL.md": "4ab3252f500d8895b36f785362007414c327c019e096e3aa8bc498ae62087fb5",
+    "README.md": "3d4e9cff8d9cb8672a08576073ab66eea1b4b21225e9ef73029564047b9836ea",
+    "REPRODUCTION_PLAN.md": "57156a756e6efb6fc89cb882a03f525932e86fcc109f067de70e879b5ff7c691",
+    "RESULTS.md": "0b6e2773515f5f4d40ac672d1f9bdee63760f5e95038fa4107d3d92a0a2672d6",
+    "STATISTICS.md": "9186a5282a684f7b2bbce0efc64b2fb62a410c6cee1ddb41f6f90fd9cf7b6992",
+    "STATUS.md": "27bd502a8ddd90e667466dae689a5147b8f9fd19a938af3d1bed2b349d20a0cd",
+    "THESIS_OUTLINE.md": "51ec1dd456fae3a73b2f7c1f395445e01677df3b76c66985ed3ad819d1d01521",
+    "reproduction/release_20261012_01/before_manifest.json": "e4319c6c1a11c38bec48c0fde545647d935dc79d9066eac66cf5630a90c5579a",
+    "reproduction/release_20261012_01/browser_validation.json": "822b50e79f7154f33baf2551ffa6eb9f580a95497968b053b57fd4ee76f8409c",
+    "reproduction/release_20261012_01/demo_design.json": "4795a3b0be7d237668f35b3276479159b30ff0d383d04b8c66fe581fc06b5068",
+    "reproduction/release_20261012_01/documentation_sources.json": "9b704a0845232d5cada615e92de2c2bbcd3eb1a9517db020d65e962c1de242bf",
+    "reproduction/release_20261012_01/finalize_release.py": "e43753f0cacd6aec8f2d1d8f1df135d33c4f4a4d28fe8bd055853b7dbba0f252",
+    "reproduction/release_20261012_01/frozen_results.json": "3d31933ad37a8796d05661e3cf03e46357c63f0e2c6024fa4c88a99d4de7b9f1",
+    "reproduction/release_20261012_01/make_demo.py": "08055ae8550db163e0cc6cbfe9a34487175bd26c20c62e6930907cad8fb13f4b",
+    "reproduction/release_20261012_01/prepare_demo.py": "94be66ebc7a638d39b0411c7ef5a3f2b876f3fcfd402dc0feef83aac079b8954",
+    "reproduction/release_20261012_01/render_probe.json": "042cf6c1cfecf6451402d57e589424f1626968e38fbd3c00cccfa04c1a412da5",
+    "reproduction/release_20261012_01/render_probe.png": "4516e37aeb73868debb8141a4165d71eb2f242e3ab173ed01b8a34bc41f1d57c",
+    "reproduction/release_20261012_01/render_probe.py": "0d5c3caf0302a5ece2a6149baa9ebbde235c42508adc9914e925a47e027ed9de",
+    "reproduction/release_20261012_01/render_probe_visual.png": "d7298ae3b637f1110144bdd53ef8604269cb04184ef32f3be9af0c41275540dd",
+    "reproduction/release_20261012_01/render_validation.json": "42c39025b815fa1e84264d8a77abb3915ed33f5dd2d4ca776048bb262a1d87c7",
+    "reproduction/release_20261012_01/serve_demo.py": "1138605cbff3ae9cf8fc51e8aa6ab623fa32503b54836bef60e1594dd3ef8406",
+    "reproduction/release_20261012_01/update_documents.py": "2d32e64c4ff0e7e3feb52285cda56dc81f66abb8520e496b52acf8dac3eb1b67",
+    "reproduction/release_20261012_01/verify_release.py": "74020b23a2b23109975c44f3a9526e451e2cb1ed48545b55406d8e608aae2293",
+    "reproduction/release_20261012_01/visual_review.json": "a9ddacb6583fe8e753c56e6b91aba21059c0b60601e3ced4e1b7228b5160604d",
+    "reproduction/release_20261012_01/demo/all_cases_contact_sheet.jpg": "e6e34c13942a0637c77436c942ed5f58b38dc1f5bf5493df3f7b2f4f899e37c6",
+    "reproduction/release_20261012_01/demo/browser_preview.jpg": "710fb9b0451e7b7d1bba745121d1f2d12d88c2f072947843a686a79bccbb7135",
+    "reproduction/release_20261012_01/demo/index.html": "4cfef0ccba00b1c9505c470271e3f10e9d50fb80dd409f44db5742efc6035bcd",
+    "reproduction/release_20261012_01/demo/media_manifest.json": "d06922ea53702bcabfc79187968fd70ca1539e58310906c7b3064c4460467f2f",
+    "reproduction/release_20261012_01/demo/replay_validation.json": "6131bf90c92dbb6379fa14caaf1a244f4c8dd83bf52c0d2b5d4f77f638d5c381",
+    "reproduction/release_20261012_01/demo/trace_validation.json": "d3c799fbdc66cfbffa95ee69dbc0ad89ad57c13be6da318dfe8184569b66e64f",
+    "reproduction/release_20261012_01/demo/posters/clean_full_only_success.png": "a2c62cab2e37c4ba1b2965bee8a140ada97587f34e32ffe0cd756ad3df8eeaa3",
+    "reproduction/release_20261012_01/demo/posters/clean_full_only_success_storyboard.jpg": "bad6ba3dc6a1b2d63f73f666bd7967f019b058a06635a016e65b82f7dfd594ce",
+    "reproduction/release_20261012_01/demo/posters/clean_shared_failure.png": "9254923b3b12ecd9bc5573efd17362cabb6ab29ed16a45629a6743794cbf6451",
+    "reproduction/release_20261012_01/demo/posters/clean_shared_failure_storyboard.jpg": "c7e36766eba0f1dc5920752a87f9078f769598ba15783a82cbaad509b6b0c76d",
+    "reproduction/release_20261012_01/demo/posters/clean_shared_success.png": "3c13593cc33725510fc01e91ed74212724688bfe6c53a5a5f770a55a5e13fa4c",
+    "reproduction/release_20261012_01/demo/posters/clean_shared_success_storyboard.jpg": "83f5a89a573256c86acd1f362e42a2bf284aa3f4f3f44d8198030c9030a892eb",
+    "reproduction/release_20261012_01/demo/posters/noise005_full_only_success.png": "8fe5c4681e816c7819e5d99c755932c2a654003d5d24ebcba3b6fbdf9d45f897",
+    "reproduction/release_20261012_01/demo/posters/noise005_full_only_success_storyboard.jpg": "9a070e1893cbeb7d33c1803b576845cb96a9d6bd5673970f72e3c0c58a0b7fab",
+    "reproduction/release_20261012_01/demo/posters/noise005_shared_failure.png": "2379bc36e8e05b4783235c904d6c15f740a16bec1e9e6b0e0b4ecdd2158a074f",
+    "reproduction/release_20261012_01/demo/posters/noise005_shared_failure_storyboard.jpg": "264b4e01f2e6b062a8ae41cdd6ae989ded6de6c9157ab5590a26fb0e73bf5a92",
+    "reproduction/release_20261012_01/demo/posters/noise005_shared_success.png": "64848d610de5d92c92d8b3dd0b384348970cbfe309995a9f7bc76de0fa573799",
+    "reproduction/release_20261012_01/demo/posters/noise005_shared_success_storyboard.jpg": "59253a9f4a76868a43af0c4abb529ff69fcfd69089c192ff869838748981f9c5",
+    "reproduction/release_20261012_01/demo/traces/bc_k2_clean/results.json": "e598a03862d764d432ca72da4f27fb58b47a413642bdacd939a4e75091c16568",
+    "reproduction/release_20261012_01/demo/traces/bc_k2_clean/traces/demo_1000000.jsonl": "910deab84e0b9568ee7079a80dd9b778411d1df79a7b9a8a7652c531ad8858f2",
+    "reproduction/release_20261012_01/demo/traces/bc_k2_clean/traces/demo_1000001.jsonl": "9b350c7338d4b58e2dcd02ea41e1c8074e912d5e667069e36e1357003812c74b",
+    "reproduction/release_20261012_01/demo/traces/bc_k2_clean/traces/demo_1000026.jsonl": "6a6f94af22ea66bdcca34fcd519ba28116ef1e6a3a3aa3785678c0cf2a9357fc",
+    "reproduction/release_20261012_01/demo/traces/bc_k2_noise005/results.json": "17907347430e45add9fb53b1f03070b30f911e3e0bace4453287c26d12ea94f7",
+    "reproduction/release_20261012_01/demo/traces/bc_k2_noise005/traces/demo_1000000.jsonl": "18f734b4c53e7265685c0b611bfa73feb39feac7b705208fcc87234320ff0b62",
+    "reproduction/release_20261012_01/demo/traces/bc_k2_noise005/traces/demo_1000002.jsonl": "c5c408cf9cbec7685845ae0f0830fac264b4ce1e37086a34c550799be100a32e",
+    "reproduction/release_20261012_01/demo/traces/bc_k2_noise005/traces/demo_1000011.jsonl": "c0ba27a992a755bceb51e15b09ea97ec728d18f2431474f16b1aa5e01d59be22",
+    "reproduction/release_20261012_01/demo/traces/full_clean/results.json": "388391c968709ac0771a5996daa01d4f8452ada193ed57879513f3e33f444fc7",
+    "reproduction/release_20261012_01/demo/traces/full_clean/traces/demo_1000000.jsonl": "6e1cb7ec25c4a0b327a5dfed7764df37d86ad64b65a85db3fca8ec4f536de588",
+    "reproduction/release_20261012_01/demo/traces/full_clean/traces/demo_1000001.jsonl": "6be2a881c7e4d97165911958b5adf201e49bfa3c5e9b827534077bab61cc404a",
+    "reproduction/release_20261012_01/demo/traces/full_clean/traces/demo_1000026.jsonl": "18d05a3f41bf9aaad3be2a5fc08545d6cab3123daa69612258942a4f72fc9754",
+    "reproduction/release_20261012_01/demo/traces/full_noise005/results.json": "53ca5929c1ddd216478686750888d8f814fbd723d5d4d92c6269e94f51c7b9a1",
+    "reproduction/release_20261012_01/demo/traces/full_noise005/traces/demo_1000000.jsonl": "bb894d1347756075e5182a4f010dc8cdee6c50b25838c72134088f3d9afd6421",
+    "reproduction/release_20261012_01/demo/traces/full_noise005/traces/demo_1000002.jsonl": "f218e23f6c4f51cca3973ae83b4657c54e02f1151514d210448787286cbd335c",
+    "reproduction/release_20261012_01/demo/traces/full_noise005/traces/demo_1000011.jsonl": "a5b53eb0158d4fd15d028aa6f3de8c73133531a75493a701d4f438d8165f5f15",
+    "reproduction/release_20261012_01/demo/traces/plain_clean/results.json": "d1c8b2f10ce4610647c3be40d0f511ba9ca2973e0051042d860a0ab1420e3ad0",
+    "reproduction/release_20261012_01/demo/traces/plain_clean/traces/demo_1000000.jsonl": "1401be29869233c3e77623390ccd00915c7e1fd5327103d65088df4cd8874783",
+    "reproduction/release_20261012_01/demo/traces/plain_clean/traces/demo_1000001.jsonl": "570bd3d46a9c4a7db37a6e012f241c99a13f04e105cfc487870c4aa01c142598",
+    "reproduction/release_20261012_01/demo/traces/plain_clean/traces/demo_1000026.jsonl": "5ff64ad3c913c00f3f83cf1e1eee69057d178a4a8c40bf12eb2006daa36f918f",
+    "reproduction/release_20261012_01/demo/traces/plain_noise005/results.json": "e54b1f75df276d2b473c98611a6cc5cf874852e790c2174c33ba153ec15ba159",
+    "reproduction/release_20261012_01/demo/traces/plain_noise005/traces/demo_1000000.jsonl": "e6c624c63e5cd30fce60d3ba4fc2e3937a3b59d96a62d91ae5bbed3692df4e0d",
+    "reproduction/release_20261012_01/demo/traces/plain_noise005/traces/demo_1000002.jsonl": "6287cd7d9abcc2a9b480ad7fbb09bca9e91cfe6391466f58dde3b7bdb22e4d49",
+    "reproduction/release_20261012_01/demo/traces/plain_noise005/traces/demo_1000011.jsonl": "d1279210fd02bbfa3b06f1b8b22723d5696df6cf75c827bb052fa89aa30ec57f",
+    "reproduction/release_20261012_01/demo/videos/clean_full_only_success.mp4": "6eb234be82340b437909d29dcc95e2e64d0cc00b79cefd5d09eb44d7e5e0ffd4",
+    "reproduction/release_20261012_01/demo/videos/clean_shared_failure.mp4": "7e717c4137045b7c5368513bff5e60e711114bc35a6149a80af36c7322604f7b",
+    "reproduction/release_20261012_01/demo/videos/clean_shared_success.mp4": "0f82a9ecc63910e596a3a093eed4f821ab9d9734b8d661d905cca172467d22ef",
+    "reproduction/release_20261012_01/demo/videos/noise005_full_only_success.mp4": "f57cfe274160c2709f07a0ae808891bda0e55c8e5ce62d91a5acad2c510302d3",
+    "reproduction/release_20261012_01/demo/videos/noise005_shared_failure.mp4": "b9b3ba9a141e2008c7e8716f62ea8dd579728cb655ddade19a5fc8495925d64f",
+    "reproduction/release_20261012_01/demo/videos/noise005_shared_success.mp4": "2380d532f9d96f247132284f0a9af902bbe976558b132970013de5775d2d7fc6",
+    "reproduction/release_20261012_01/previous_documents/ADAPTIVE_PROTOCOL.md": "c8f69c22852b957cf7771297c27407d0ab4391321983d4feb7de50eb0fd55d86",
+    "reproduction/release_20261012_01/previous_documents/DELAY_PROTOCOL.md": "ea3e1968bdc4dfc24e17f623b87e419c901ce657b64d3024dc32e34fd0076a6e",
+    "reproduction/release_20261012_01/previous_documents/PROGRAM_GUIDE.md": "2b74ae172f8123eb7a8c71adde59282ab3ef4608165bba676d5b2fada3c52cdb",
+    "reproduction/release_20261012_01/previous_documents/PROTOCOL.md": "7843d71ab4f32b6c7a2dc12f8e6e6eb3eb4a8414c8795a11fc2621dca3e430b2",
+    "reproduction/release_20261012_01/previous_documents/REPRODUCTION_PLAN.md": "c276cc726795dcefa0ec830f2fa09acd5ee07022933205c6b8fc701322a1a923",
+    "reproduction/release_20261012_01/previous_documents/RESULTS.md": "5c76cc0439e72a67f939c36597340dfcfdad591a4f4d67c1e29817cb4d58277f",
+    "reproduction/release_20261012_01/previous_documents/STATISTICS.md": "861f866ae8dc099a89d7327df06839227238dee1587e271a2274afa0a8394924",
+    "reproduction/release_20261012_01/previous_documents/STATUS.md": "91680573eb9b2cf7bf13d781de691c11231cb42733522ec95556723228530c55",
+    "reproduction/release_20261012_01/previous_documents/THESIS_OUTLINE.md": "b40cb3a2cffb979ad58e4d34f1c4f79fa0892dd8ff396fd892888e75cefffa1f",
+    "reproduction/release_20261012_01/render_attempt01/FAILURE_NOTE.txt": "22e787adf32262016d076a513b5b94b4c6a84ff64cc49b84eed689933336f3ab",
+    "reproduction/release_20261012_01/render_attempt01/index.html": "b7af6c11dd34151f156572f43fa5dc2d1e2ebc6000632b0e92b741c6a0173888",
+    "reproduction/release_20261012_01/render_attempt01/make_demo.py": "c732477bc895ab8d7c815bd8aa82fb7d5d766f6c8ed12c2fecbad2f8ef5394ef",
+    "reproduction/release_20261012_01/render_attempt01/media_manifest.json": "f7940cafc15f643643ac33f971028c3243b164326fef7d3a9c18d17d13751874",
+    "reproduction/release_20261012_01/render_attempt01/replay_validation.json": "5114e77f1a6165f491c504910233ccb48c59c8a9d6f98c7431617a24d8b2cc8d",
+    "reproduction/release_20261012_01/render_attempt01/posters/clean_full_only_success.png": "868bfcb2129626154ca9c88ca7799c5ba2dae3f04adb231ddde92cb72d9e584f",
+    "reproduction/release_20261012_01/render_attempt01/posters/clean_full_only_success_storyboard.jpg": "5855402c57daf12a4d018fd212ff0dadfae126947fb74da3ed5a756c9a10ac60",
+    "reproduction/release_20261012_01/render_attempt01/posters/clean_shared_failure.png": "71569f11455c3858fb8a8b0a2458820df5ad06d840e941800b3d052f1ff36bed",
+    "reproduction/release_20261012_01/render_attempt01/posters/clean_shared_failure_storyboard.jpg": "e12a63e74d0d6686702fa737067472cbc60865df384eae912ed4206ca0307cc1",
+    "reproduction/release_20261012_01/render_attempt01/posters/clean_shared_success.png": "3ad99c32bda6fcb9214f04e31188f4c211074de4ec5bd8f6b985c80e18add5cb",
+    "reproduction/release_20261012_01/render_attempt01/posters/clean_shared_success_storyboard.jpg": "52bb607bbdb0a26c6f28c10b0c50e36d4c58054bda9d56c0cb975123b4fc801f",
+    "reproduction/release_20261012_01/render_attempt01/posters/noise005_full_only_success.png": "2eee15216195fc62bda0a4b691f2c5c90fb828d5e3b1919978f291700c89f146",
+    "reproduction/release_20261012_01/render_attempt01/posters/noise005_full_only_success_storyboard.jpg": "c401728da14b906cab24b1cccd3eb7e615de59acdb0b5991a45c3bc6b672a17d",
+    "reproduction/release_20261012_01/render_attempt01/posters/noise005_shared_failure.png": "ad25e2d061f2b3bdfcc7843475dc2588875a05a8f40c479548e86575554035f7",
+    "reproduction/release_20261012_01/render_attempt01/posters/noise005_shared_failure_storyboard.jpg": "d1dd9246a09ba841da681f57c4f66d5622c868e39fff8c9e97c1f85da88ee246",
+    "reproduction/release_20261012_01/render_attempt01/posters/noise005_shared_success.png": "d4accf165cd1a149b42bbae95f2b6c7f5de3f7ee819e7b1f74f97eb164dfcb11",
+    "reproduction/release_20261012_01/render_attempt01/posters/noise005_shared_success_storyboard.jpg": "64c6061a8ab79466beaec1f82763a421f274082175f902964f0c522d169a54d9",
+    "reproduction/release_20261012_01/render_attempt01/videos/clean_full_only_success.mp4": "99c19590d357d09b34b179377f6e96de0c6738c23b65bc0fe8aa9d937465b6ad",
+    "reproduction/release_20261012_01/render_attempt01/videos/clean_shared_failure.mp4": "35b557a14815c86f5469d3e17c53f69124f97d3e0da689587cef54a14f4de4ba",
+    "reproduction/release_20261012_01/render_attempt01/videos/clean_shared_success.mp4": "18e6c2a8d374f4d3d87ce578621c6be219e32ef5fdcbc1856eb96a0417ae7065",
+    "reproduction/release_20261012_01/render_attempt01/videos/noise005_full_only_success.mp4": "dd633bebf32259e0ce2f95e2f0962977f05d8f95b76d691a931e21b006d82554",
+    "reproduction/release_20261012_01/render_attempt01/videos/noise005_shared_failure.mp4": "e9494096f767f76de98f68c4f3dd522dad4c50105193e47862c208003830e5da",
+    "reproduction/release_20261012_01/render_attempt01/videos/noise005_shared_success.mp4": "40e267e7efc8d8302ce3269e468585ef51b98fda0ebdc2eb70656711bec31c46"
+  },
+  "manifest_excludes_itself": true
+}

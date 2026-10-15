@@ -1,0 +1,22 @@
+# 世界模型独立确认逐种子结果与截断步数
+
+独立确认：60 个全新起点，clean/noise 重用同一批起点；BC 固定权重，Full/Plain 各 3 个训练种子。联合结果等权平均两条件，仍只有 60 个独立起点。区间沿用原有配对交叉 bootstrap。
+
+完整数值：`T03_wm_confirmation_per_seed.csv`。Markdown 仅显示约 6 位有效数字。
+
+| method | seed | condition | success | episodes | success_percent | mean_steps_failures_capped_400 | pooled_override_percent | decision_ms_parallel_execution_not_latency_benchmark | source | independent_N | seed_count |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| bc_k2 |  | clean | 51 | 60 | 85.0 | 155.16666666666666 | 0.0 | 0.005138216973383057 | reproduction/confirmation_20261012_01/evaluations/bc_k2_clean/results.json | 60 | 0 |
+| bc_k2 |  | noise005 | 49 | 60 | 81.66666666666667 | 164.85 | 0.0 | 0.005174967142058419 | reproduction/confirmation_20261012_01/evaluations/bc_k2_noise005/results.json | 60 | 0 |
+| full | 17 | clean | 54 | 60 | 90.0 | 140.38333333333333 | 24.670544936483438 | 1.1542104475817005 | reproduction/confirmation_20261012_01/evaluations/full_s17_clean/results.json | 60 | 1 |
+| full | 17 | noise005 | 52 | 60 | 86.66666666666667 | 151.58333333333334 | 25.398570643210554 | 1.1465200439832397 | reproduction/confirmation_20261012_01/evaluations/full_s17_noise005/results.json | 60 | 1 |
+| full | 23 | clean | 54 | 60 | 90.0 | 141.01666666666668 | 28.152700626403497 | 1.1462653823428133 | reproduction/confirmation_20261012_01/evaluations/full_s23_clean/results.json | 60 | 1 |
+| full | 23 | noise005 | 52 | 60 | 86.66666666666667 | 151.96666666666667 | 25.970607589383636 | 1.1515699824489427 | reproduction/confirmation_20261012_01/evaluations/full_s23_noise005/results.json | 60 | 1 |
+| full | 41 | clean | 54 | 60 | 90.0 | 139.63333333333333 | 27.679637144903317 | 1.129307519692964 | reproduction/confirmation_20261012_01/evaluations/full_s41_clean/results.json | 60 | 1 |
+| full | 41 | noise005 | 51 | 60 | 85.0 | 155.18333333333334 | 26.7855225002685 | 1.1215710879703644 | reproduction/confirmation_20261012_01/evaluations/full_s41_noise005/results.json | 60 | 1 |
+| plain | 17 | clean | 53 | 60 | 88.33333333333333 | 145.45 | 9.419044345135786 | 1.1207167296947984 | reproduction/confirmation_20261012_01/evaluations/plain_s17_clean/results.json | 60 | 1 |
+| plain | 17 | noise005 | 50 | 60 | 83.33333333333334 | 160.98333333333332 | 8.800082824308936 | 1.146732280775037 | reproduction/confirmation_20261012_01/evaluations/plain_s17_noise005/results.json | 60 | 1 |
+| plain | 23 | clean | 53 | 60 | 88.33333333333333 | 146.76666666666668 | 9.538950715421304 | 1.143465194183346 | reproduction/confirmation_20261012_01/evaluations/plain_s23_clean/results.json | 60 | 1 |
+| plain | 23 | noise005 | 51 | 60 | 85.0 | 157.56666666666666 | 8.863972921514703 | 1.1462335519354383 | reproduction/confirmation_20261012_01/evaluations/plain_s23_noise005/results.json | 60 | 1 |
+| plain | 41 | clean | 53 | 60 | 88.33333333333333 | 146.98333333333332 | 11.599954643383603 | 1.117841206492279 | reproduction/confirmation_20261012_01/evaluations/plain_s41_clean/results.json | 60 | 1 |
+| plain | 41 | noise005 | 50 | 60 | 83.33333333333334 | 162.3 | 12.281782706921339 | 1.11677088724341 | reproduction/confirmation_20261012_01/evaluations/plain_s41_noise005/results.json | 60 | 1 |

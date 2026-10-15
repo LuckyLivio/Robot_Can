@@ -1,0 +1,132 @@
+{
+  "args": {
+    "split": "train",
+    "name": "queuepair_20261012_01_part05",
+    "demos": 5,
+    "start": 5,
+    "points": 8,
+    "steps": 400,
+    "delay": 2,
+    "horizon": 8,
+    "candidates": 4,
+    "shift_index": 2,
+    "policy": "bc_chunk_dev_v4",
+    "policy_checkpoint": "policy_15000.pt",
+    "verify_all": false
+  },
+  "queue_mode": "real",
+  "status": "complete",
+  "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+  "action_semantics": "executed_after_fifo",
+  "anchor_source": "closed_loop_bc_shift",
+  "point_semantics": "number_of_executed_prefix_steps",
+  "restore_method": "deterministic_replay_of_executed_prefix",
+  "groups": 40,
+  "parents": [
+    "demo_33",
+    "demo_94",
+    "demo_136",
+    "demo_74",
+    "demo_92"
+  ],
+  "episodes": [
+    {
+      "demo": "demo_33",
+      "rollout_steps": 110,
+      "success": true,
+      "sampled_points_zero_based": [
+        10,
+        23,
+        36,
+        49,
+        62,
+        75,
+        88,
+        101
+      ]
+    },
+    {
+      "demo": "demo_94",
+      "rollout_steps": 125,
+      "success": true,
+      "sampled_points_zero_based": [
+        10,
+        25,
+        40,
+        55,
+        70,
+        85,
+        100,
+        116
+      ]
+    },
+    {
+      "demo": "demo_136",
+      "rollout_steps": 122,
+      "success": true,
+      "sampled_points_zero_based": [
+        10,
+        24,
+        39,
+        54,
+        68,
+        83,
+        98,
+        113
+      ]
+    },
+    {
+      "demo": "demo_74",
+      "rollout_steps": 115,
+      "success": true,
+      "sampled_points_zero_based": [
+        10,
+        23,
+        37,
+        51,
+        64,
+        78,
+        92,
+        106
+      ]
+    },
+    {
+      "demo": "demo_92",
+      "rollout_steps": 112,
+      "success": true,
+      "sampled_points_zero_based": [
+        10,
+        23,
+        36,
+        49,
+        63,
+        76,
+        89,
+        103
+      ]
+    }
+  ],
+  "checks": {
+    "observation": 0.0,
+    "physics_controller": 0.0,
+    "stages": 0.0,
+    "common_prefix_states": 0.0,
+    "common_prefix_labels": 0.0,
+    "reverse_order_states": 0.0,
+    "reverse_order_labels": 0.0,
+    "matched_closed_loop_prefix": 0.0,
+    "fifo_actions": 0.0
+  },
+  "reverse_checks": "first_point_each_parent",
+  "nonzero_queue_groups": 40,
+  "source_sha256": {
+    "data\\can_ph_lowdim_v15.hdf5": "3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962",
+    "data\\splits.json": "f2224a32befddd542c9f35790fcbddeb541a5149c4bf00bfc0b0dff160837cc2",
+    "policy\\bc_chunk_dev_v4\\policy_15000.pt": "ef375a81d5c2a5dce26662c68c2965e1954c736cd824e40085a084073777af14",
+    "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+    "collect_branches.py": "204f38acd87df3b88d91f8ff31b0e3df94d07aa3b8742383917e974454db8f4b",
+    "collect_rollout_branches.py": "134567dce9fd58a395789a4da07b0b0178fa9d1aface607b14f31d6955bb1099"
+  },
+  "npz_sha256": "93855168cb2731b7ded94e9013d5057b08465cc2e0d69d902bce8bb86a8a3956",
+  "elapsed_s": 272.2516962000009
+}

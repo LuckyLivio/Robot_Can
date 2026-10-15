@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "revision": "pilot_b",
+  "checks": {
+    "v2_train": 8,
+    "v2_loss": 2,
+    "v2_held_stall": 1,
+    "v2_old_geometry": 4,
+    "v2_full_noise": 2,
+    "v2_regression_6000049": 1,
+    "v2_regression_6000000": 1,
+    "v2_regression_6000005": 1,
+    "align_only_train": 8,
+    "align_only_loss": 2,
+    "align_only_held_stall": 1,
+    "align_only_old_geometry": 4,
+    "align_only_full_noise": 2,
+    "align_only_regression_6000049": 1,
+    "align_only_regression_6000000": 1,
+    "align_only_regression_6000005": 1,
+    "region_only_train": 8,
+    "region_only_loss": 2,
+    "region_only_held_stall": 1,
+    "region_only_old_geometry": 4,
+    "region_only_full_noise": 2,
+    "region_only_regression_6000049": 1,
+    "region_only_regression_6000000": 1,
+    "region_only_regression_6000005": 1,
+    "v4_train": 8,
+    "v4_loss": 2,
+    "v4_held_stall": 1,
+    "v4_old_geometry": 4,
+    "v4_full_noise": 2,
+    "v4_regression_6000049": 1,
+    "v4_regression_6000000": 1,
+    "v4_regression_6000005": 1
+  },
+  "mechanisms": {
+    "align_only": [
+      {
+        "step": 222,
+        "from": "ALIGN",
+        "to": "RETRACT",
+        "reason": "alignment_stalled_switch_equivalent",
+        "attempt": 2,
+        "object_position": [
+          0.21674200892448425,
+          -0.37617227435112,
+          0.8600559234619141
+        ]
+      }
+    ],
+    "v4": [
+      {
+        "step": 222,
+        "from": "ALIGN",
+        "to": "RETRACT",
+        "reason": "alignment_stalled_switch_equivalent",
+        "attempt": 2,
+        "object_position": [
+          0.21674200892448425,
+          -0.37617227435112,
+          0.8600559234619141
+        ]
+      }
+    ],
+    "region_only_corner_successes": 2,
+    "v4_corner_successes": 2
+  },
+  "verified_episodes": 100,
+  "verified_control_steps": 26204,
+  "physical_replays": [
+    {
+      "job": "v2_regression_6000049",
+      "demo": "demo_6000049",
+      "steps": 344,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v2_full_noise",
+      "demo": "demo_133",
+      "steps": 306,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "align_only_regression_6000049",
+      "demo": "demo_6000049",
+      "steps": 344,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "align_only_full_noise",
+      "demo": "demo_133",
+      "steps": 306,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "region_only_regression_6000049",
+      "demo": "demo_6000049",
+      "steps": 344,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "region_only_full_noise",
+      "demo": "demo_133",
+      "steps": 306,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v4_regression_6000049",
+      "demo": "demo_6000049",
+      "steps": 344,
+      "max_state_error": 0.0
+    },
+    {
+      "job": "v4_full_noise",
+      "demo": "demo_133",
+      "steps": 306,
+      "max_state_error": 0.0
+    }
+  ],
+  "source_sha256": {
+    "recovery_controller.py": "ec2a2766892ce7bc95ceaf4161319c2d4abec8e6e8b134ebd6851e7dd176c096",
+    "evaluate_recovery.py": "967017d16f9fe341a2bf53ed221f6608539e96759ef9a03245979e5d905dda07"
+  }
+}

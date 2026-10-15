@@ -1,0 +1,117 @@
+{
+  "args": {
+    "model": "full_future_seed17_pilot_v1",
+    "policy": "bc_chunk_dev_v1",
+    "policy_checkpoint": "policy_5000.pt",
+    "split": "dev",
+    "episodes": 8,
+    "steps": 400,
+    "noise": 0.0,
+    "candidates": 6,
+    "risk_weight": 0.5
+  },
+  "model_config": {
+    "method": "full",
+    "dataset": "pilot_v0",
+    "run": "full_future_seed17_pilot_v1",
+    "seed": 17,
+    "width": 128,
+    "updates": 3000,
+    "batch": 16,
+    "lr": 0.0003,
+    "rank_weight": 0.2,
+    "risk_weight": 0.5,
+    "future_only": true,
+    "dim": 23,
+    "horizon": 8,
+    "device": "cuda",
+    "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+    "n_groups": 160,
+    "n_candidates": 6,
+    "parameters": 87321
+  },
+  "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+  "records": [
+    {
+      "demo": "demo_105",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.00016946425457334824,
+      "ever_grasped": false,
+      "elapsed_s": 5.137659400003031,
+      "mean_decision_ms": 2.7702184999361634,
+      "fraction_base_selected": 0.025
+    },
+    {
+      "demo": "demo_118",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.010493705148493316,
+      "ever_grasped": false,
+      "elapsed_s": 5.359303499921225,
+      "mean_decision_ms": 3.052118001796771,
+      "fraction_base_selected": 0.14
+    },
+    {
+      "demo": "demo_62",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.0004706766375460414,
+      "ever_grasped": false,
+      "elapsed_s": 5.072294099954888,
+      "mean_decision_ms": 2.955278755980544,
+      "fraction_base_selected": 0.145
+    },
+    {
+      "demo": "demo_174",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.0015576318929970913,
+      "ever_grasped": false,
+      "elapsed_s": 4.917923300061375,
+      "mean_decision_ms": 3.0400562490103766,
+      "fraction_base_selected": 0.13
+    },
+    {
+      "demo": "demo_124",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.0007481534103236931,
+      "ever_grasped": false,
+      "elapsed_s": 6.22372190002352,
+      "mean_decision_ms": 3.669168250344228,
+      "fraction_base_selected": 0.0525
+    },
+    {
+      "demo": "demo_28",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.0004459426059684524,
+      "ever_grasped": false,
+      "elapsed_s": 6.116303000017069,
+      "mean_decision_ms": 3.630696248728782,
+      "fraction_base_selected": 0.0275
+    },
+    {
+      "demo": "demo_0",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.0024364200927767033,
+      "ever_grasped": false,
+      "elapsed_s": 4.492319400073029,
+      "mean_decision_ms": 2.2876362476381473,
+      "fraction_base_selected": 0.06
+    },
+    {
+      "demo": "demo_49",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.00278538220246265,
+      "ever_grasped": false,
+      "elapsed_s": 4.072931699920446,
+      "mean_decision_ms": 1.9947887529269794,
+      "fraction_base_selected": 0.0375
+    }
+  ],
+  "success_rate": 0.0
+}

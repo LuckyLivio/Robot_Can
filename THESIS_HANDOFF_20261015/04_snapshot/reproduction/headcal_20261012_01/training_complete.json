@@ -1,0 +1,204 @@
+{
+  "status": "complete",
+  "arms": {
+    "control": {
+      "model": "headcal_20261012_01_control_s17",
+      "selected_step": 1250,
+      "selected_model_sha256": "e93b708eacad4ff86927ed8ba45aabd8b72c2928088bbf1bbccc3a89a26b7253",
+      "offline_metrics": {
+        "train": {
+          "predicted": {
+            "label_loss": 0.41189101338386536,
+            "score_mae": 0.04315958172082901,
+            "progress_mae": 0.016653239727020264,
+            "risk_brier": 0.0017247684299945831,
+            "rank": {
+              "mean_regret": 0.000521634821780026,
+              "wrong_pair_rate": 0.0,
+              "optimal_within_025": 1.0,
+              "groups": 160,
+              "nontrivial_pairs": 96
+            }
+          },
+          "real": {
+            "label_loss": 0.4669707417488098,
+            "score_mae": 0.046475738286972046,
+            "progress_mae": 0.023044442757964134,
+            "risk_brier": 0.023867735639214516,
+            "rank": {
+              "mean_regret": 0.012562383897602558,
+              "wrong_pair_rate": 0.23958333333333334,
+              "optimal_within_025": 0.9625,
+              "groups": 160,
+              "nontrivial_pairs": 96
+            }
+          }
+        },
+        "dev": {
+          "predicted": {
+            "label_loss": 0.5262740850448608,
+            "score_mae": 0.11418446898460388,
+            "progress_mae": 0.04764927178621292,
+            "risk_brier": 0.024225536733865738,
+            "rank": {
+              "mean_regret": 0.0004906125832349062,
+              "wrong_pair_rate": 0.0,
+              "optimal_within_025": 1.0,
+              "groups": 64,
+              "nontrivial_pairs": 39
+            }
+          },
+          "real": {
+            "label_loss": 0.5399186015129089,
+            "score_mae": 0.07192990928888321,
+            "progress_mae": 0.03897484391927719,
+            "risk_brier": 0.033874668180942535,
+            "rank": {
+              "mean_regret": 0.008482519537210464,
+              "wrong_pair_rate": 0.358974358974359,
+              "optimal_within_025": 0.9375,
+              "groups": 64,
+              "nontrivial_pairs": 39
+            }
+          }
+        }
+      },
+      "frozen_tensors_unchanged": true,
+      "minibatch_sha256": "0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938"
+    },
+    "calibrated": {
+      "model": "headcal_20261012_01_calibrated_s17",
+      "selected_step": 250,
+      "selected_model_sha256": "ffd505e48e87537f9380e23c811e6d729c061d16f1bd913de9619867d5a89ebd",
+      "offline_metrics": {
+        "train": {
+          "predicted": {
+            "label_loss": 0.415920227766037,
+            "score_mae": 0.043898772448301315,
+            "progress_mae": 0.01703435741364956,
+            "risk_brier": 0.0035590275656431913,
+            "rank": {
+              "mean_regret": 0.0005283624632284045,
+              "wrong_pair_rate": 0.0,
+              "optimal_within_025": 1.0,
+              "groups": 160,
+              "nontrivial_pairs": 96
+            }
+          },
+          "real": {
+            "label_loss": 0.44010603427886963,
+            "score_mae": 0.03663455322384834,
+            "progress_mae": 0.020600920543074608,
+            "risk_brier": 0.01743750087916851,
+            "rank": {
+              "mean_regret": 0.009857701137661934,
+              "wrong_pair_rate": 0.13541666666666666,
+              "optimal_within_025": 0.96875,
+              "groups": 160,
+              "nontrivial_pairs": 96
+            }
+          }
+        },
+        "dev": {
+          "predicted": {
+            "label_loss": 0.4645298719406128,
+            "score_mae": 0.10619185864925385,
+            "progress_mae": 0.04611468315124512,
+            "risk_brier": 0.022930631414055824,
+            "rank": {
+              "mean_regret": 0.0004955234471708536,
+              "wrong_pair_rate": 0.0,
+              "optimal_within_025": 1.0,
+              "groups": 64,
+              "nontrivial_pairs": 39
+            }
+          },
+          "real": {
+            "label_loss": 0.46924883127212524,
+            "score_mae": 0.06622868031263351,
+            "progress_mae": 0.037769488990306854,
+            "risk_brier": 0.02901230752468109,
+            "rank": {
+              "mean_regret": 0.002846247050911188,
+              "wrong_pair_rate": 0.20512820512820512,
+              "optimal_within_025": 0.953125,
+              "groups": 64,
+              "nontrivial_pairs": 39
+            }
+          }
+        }
+      },
+      "frozen_tensors_unchanged": true,
+      "minibatch_sha256": "0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938"
+    }
+  },
+  "original": {
+    "train": {
+      "predicted": {
+        "label_loss": 0.4145765006542206,
+        "score_mae": 0.045678433030843735,
+        "progress_mae": 0.018344692885875702,
+        "risk_brier": 0.0026564807631075382,
+        "rank": {
+          "mean_regret": 0.0005251309485174716,
+          "wrong_pair_rate": 0.0,
+          "optimal_within_025": 1.0,
+          "groups": 160,
+          "nontrivial_pairs": 96
+        }
+      },
+      "real": {
+        "label_loss": 0.4531990885734558,
+        "score_mae": 0.047359682619571686,
+        "progress_mae": 0.025292495265603065,
+        "risk_brier": 0.02294713258743286,
+        "rank": {
+          "mean_regret": 0.014934373088181019,
+          "wrong_pair_rate": 0.28125,
+          "optimal_within_025": 0.95625,
+          "groups": 160,
+          "nontrivial_pairs": 96
+        }
+      }
+    },
+    "dev": {
+      "predicted": {
+        "label_loss": 0.49499791860580444,
+        "score_mae": 0.11808879673480988,
+        "progress_mae": 0.045125916600227356,
+        "risk_brier": 0.040669895708560944,
+        "rank": {
+          "mean_regret": 0.0004961828235536814,
+          "wrong_pair_rate": 0.0,
+          "optimal_within_025": 1.0,
+          "groups": 64,
+          "nontrivial_pairs": 39
+        }
+      },
+      "real": {
+        "label_loss": 0.49377474188804626,
+        "score_mae": 0.08184804022312164,
+        "progress_mae": 0.03789082542061806,
+        "risk_brier": 0.04648313671350479,
+        "rank": {
+          "mean_regret": 0.016762463375926018,
+          "wrong_pair_rate": 0.38461538461538464,
+          "optimal_within_025": 0.921875,
+          "groups": 64,
+          "nontrivial_pairs": 39
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "models/queuepair_20261012_01_real_s17/model.pt": "37dc0fe3e5e9de933c97b547d065a2b6d349dd3140a5fb8444328d8ddd34348d",
+    "data/branches_train_queuepair_20261012_01_real.npz": "28f9c7bc145d911adbfc290ed6a62ab1d2f82b5c0766f3103fe63a339c6b9a8c",
+    "data/branches_dev_queuepair_20261012_01_real.npz": "a4e700269544f3c853d014b9a1bcfbb6004c269ba91da6ea53dd953e3fd11a05",
+    "data/splits.json": "f2224a32befddd542c9f35790fcbddeb541a5149c4bf00bfc0b0dff160837cc2",
+    "calibrate_score_head.py": "f020a0c8d5cd8186acbc24aca2f0d917ee88fe6613678c64b84cac1ea51d6252",
+    "world_model.py": "ac82be1227b91e43da2df0cbb4cdfe35494068147ee9ec99bc526383bdf1946a",
+    "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+    "evaluate_delay.py": "acecd45a6b0b2ac7c61375c413309f3561e1940886e9585035051057b45ac841",
+    "train_world.py": "4931798d73f566195545b02134240c4322bad5bd59a8e4ab42f02489a321e101"
+  }
+}

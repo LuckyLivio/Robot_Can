@@ -1,0 +1,92 @@
+# v5 dev_a 全部估计量及既有区间
+
+v5 开发比较：30 个复用起点。表含 5 版本共 1,200 条已存在记录，其中 v2/v4 共 480 条为沿用；本阶段只新执行 T/S/v5 720 回合。不是 1,200 个独立样本。区间按起点重采样，3 个固定 Full 种子在起点内平均。
+
+完整数值：`T25_recovery_statistical_comparisons.csv`。Markdown 仅显示约 6 位有效数字。
+
+| condition | estimand | estimate_percent_or_pp | ci95_low_percent_or_pp | ci95_high_percent_or_pp | unit | ci_method | independent_N | seed_count |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| clean | v2_bc | 93.3333 | 83.3333 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | v2_full | 93.3333 | 84.4444 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v4_bc | 96.6667 | 90 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | v4_full | 94.4444 | 86.6667 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | timing_only_bc | 96.6667 | 90 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | timing_only_full | 94.4444 | 86.6667 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | side_only_bc | 96.6667 | 90 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | side_only_full | 96.6667 | 91.1111 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v5_bc | 96.6667 | 90 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | v5_full | 96.6667 | 91.1111 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v4_bc_minus_v2 | 3.33333 | 0 | 10 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | v4_full_minus_v2 | 1.11111 | 0 | 3.33333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | timing_only_bc_minus_v2 | 3.33333 | 0 | 10 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | timing_only_full_minus_v2 | 1.11111 | 0 | 3.33333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | timing_only_bc_minus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | timing_only_full_minus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | side_only_bc_minus_v2 | 3.33333 | 0 | 10 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | side_only_full_minus_v2 | 3.33333 | 0 | 7.77778 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | side_only_bc_minus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | side_only_full_minus_v4 | 2.22222 | 0 | 5.55556 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v5_bc_minus_v2 | 3.33333 | 0 | 10 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | v5_full_minus_v2 | 3.33333 | 0 | 7.77778 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v5_bc_minus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | v5_full_minus_v4 | 2.22222 | 0 | 5.55556 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v5_bc_minus_timing_only | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | v5_full_minus_timing_only | 2.22222 | 0 | 5.55556 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v5_bc_minus_side_only | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | v5_full_minus_side_only | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | bc_interaction_TS_minus_T_minus_S_plus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| clean | full_interaction_TS_minus_T_minus_S_plus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v2_full_minus_bc | 0 | -10 | 10 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v4_full_minus_bc | -2.22222 | -12.2222 | 7.77778 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | timing_only_full_minus_bc | -2.22222 | -12.2222 | 7.77778 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | side_only_full_minus_bc | 0 | -7.77778 | 8.88889 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| clean | v5_full_minus_bc | 0 | -7.77778 | 8.88889 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v2_bc | 93.3333 | 83.3333 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | v2_full | 98.8889 | 96.6667 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v4_bc | 93.3333 | 83.3333 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | v4_full | 98.8889 | 96.6667 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | timing_only_bc | 100 | 100 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | timing_only_full | 100 | 100 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | side_only_bc | 93.3333 | 83.3333 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | side_only_full | 98.8889 | 96.6667 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v5_bc | 100 | 100 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | v5_full | 100 | 100 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v4_bc_minus_v2 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | v4_full_minus_v2 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | timing_only_bc_minus_v2 | 6.66667 | 0 | 16.6667 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | timing_only_full_minus_v2 | 1.11111 | 0 | 3.33333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | timing_only_bc_minus_v4 | 6.66667 | 0 | 16.6667 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | timing_only_full_minus_v4 | 1.11111 | 0 | 3.33333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | side_only_bc_minus_v2 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | side_only_full_minus_v2 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | side_only_bc_minus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | side_only_full_minus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v5_bc_minus_v2 | 6.66667 | 0 | 16.6667 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | v5_full_minus_v2 | 1.11111 | 0 | 3.33333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v5_bc_minus_v4 | 6.66667 | 0 | 16.6667 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | v5_full_minus_v4 | 1.11111 | 0 | 3.33333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v5_bc_minus_timing_only | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | v5_full_minus_timing_only | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v5_bc_minus_side_only | 6.66667 | 0 | 16.6667 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | v5_full_minus_side_only | 1.11111 | 0 | 3.33333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | bc_interaction_TS_minus_T_minus_S_plus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 0 |
+| noise005 | full_interaction_TS_minus_T_minus_S_plus_v4 | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v2_full_minus_bc | 5.55556 | 0 | 14.4444 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v4_full_minus_bc | 5.55556 | 0 | 14.4444 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | timing_only_full_minus_bc | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | side_only_full_minus_bc | 5.55556 | 0 | 14.4444 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| noise005 | v5_full_minus_bc | 0 | 0 | 0 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | v2 | 95.4167 | 90.8333 | 99.1667 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | v4 | 96.25 | 92.5 | 99.1667 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | timing_only | 97.5 | 94.5833 | 99.5833 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | side_only | 97.0833 | 93.75 | 99.5833 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | v5 | 98.3333 | 96.25 | 100 | percent | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | v4_minus_v2 | 0.833333 | 0 | 2.5 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | timing_only_minus_v2 | 2.08333 | 0 | 4.58333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | timing_only_minus_v4 | 1.25 | 0 | 3.33333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | side_only_minus_v2 | 1.66667 | 0 | 3.75 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | side_only_minus_v4 | 0.833333 | 0 | 2.08333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | v5_minus_v2 | 2.91667 | 0.833333 | 5.83333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | v5_minus_v4 | 2.08333 | 0.416667 | 4.16667 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | v5_minus_timing_only | 0.833333 | 0 | 2.08333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |
+| overall_execution_mix | v5_minus_side_only | 1.25 | 0 | 3.33333 | percentage_points | existing paired-start bootstrap; 3 fixed Full seeds averaged within start; pointwise 95% CI; no retraining uncertainty | 30 | 3 |

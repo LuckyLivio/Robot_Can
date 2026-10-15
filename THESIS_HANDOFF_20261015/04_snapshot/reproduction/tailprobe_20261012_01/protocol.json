@@ -1,0 +1,92 @@
+{
+  "registered_before_closed_loop_results": true,
+  "model": "headcal_20261012_01_calibrated_s17",
+  "primary_comparison": [
+    "repeat",
+    "bc_tail"
+  ],
+  "split": "dev",
+  "parents": [
+    "demo_105",
+    "demo_118",
+    "demo_62",
+    "demo_174",
+    "demo_124",
+    "demo_28",
+    "demo_0",
+    "demo_49",
+    "demo_73",
+    "demo_128",
+    "demo_173",
+    "demo_32",
+    "demo_26",
+    "demo_85",
+    "demo_21",
+    "demo_195",
+    "demo_150",
+    "demo_188",
+    "demo_97",
+    "demo_87",
+    "demo_7",
+    "demo_90",
+    "demo_111",
+    "demo_120",
+    "demo_22",
+    "demo_156",
+    "demo_185",
+    "demo_110",
+    "demo_179",
+    "demo_43"
+  ],
+  "training": false,
+  "hyperparameter_search": false,
+  "steps": 400,
+  "delay": 2,
+  "horizon": 8,
+  "candidates": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "fallback_index": 2,
+  "gate_margin": 0.02,
+  "risk_weight": 0.5,
+  "noise": 0.0,
+  "score_only": true,
+  "repeat": "Repeat the current candidate submission through the imagined horizon, after the existing FIFO prefix.",
+  "bc_tail": "Submit candidate once; every later imagined command is BC k=2 computed from that branch predicted state; retain WM recurrent hidden state.",
+  "execution": "Both modes commit only one command and replan using WM at every new real observation.",
+  "input": "Privileged 23D state; no image-only claim.",
+  "primary_metric": "Paired episode success over all 30 dev parents; report gains and losses, also compare fixed BC k=2.",
+  "secondary_metrics": [
+    "episode steps with failures capped at 400",
+    "override fraction",
+    "decision latency with trace overhead excluded"
+  ],
+  "integration_check": "Repeat must reproduce prior calibrated 30-parent outcomes; four traced parents must match original evaluator.",
+  "trace_parents": [
+    "demo_105",
+    "demo_124",
+    "demo_97",
+    "demo_179"
+  ],
+  "stop_rule": "No development success improvement versus repeat: stop this frozen-rollout branch, preserve negative result; do not tune or open sealed_test.",
+  "positive_rule": "A dev gain motivates a separately registered data-aligned training comparison; it does not establish formal superiority.",
+  "limitations": [
+    "Single trained seed and repeatedly inspected development parents.",
+    "Frozen WM trained using repeated candidate commands; BC-tail changes action sequence distribution.",
+    "BC continuation in imagination is an approximation to future WM replanning.",
+    "No sealed or new confirmation evaluation in this probe."
+  ],
+  "source_sha256": {
+    "evaluate_candidate_rollout.py": "01bc6cf47ab6d2a4a52f8dc3bf1d17c9a4d73300435aec79cd69c78d66bc4f73",
+    "evaluate_delay.py": "acecd45a6b0b2ac7c61375c413309f3561e1940886e9585035051057b45ac841",
+    "world_model.py": "ac82be1227b91e43da2df0cbb4cdfe35494068147ee9ec99bc526383bdf1946a",
+    "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+    "collect_branches.py": "204f38acd87df3b88d91f8ff31b0e3df94d07aa3b8742383917e974454db8f4b",
+    "data/splits.json": "f2224a32befddd542c9f35790fcbddeb541a5149c4bf00bfc0b0dff160837cc2",
+    "models/headcal_20261012_01_calibrated_s17/model.pt": "ffd505e48e87537f9380e23c811e6d729c061d16f1bd913de9619867d5a89ebd",
+    "policy/bc_chunk_dev_v4/policy_15000.pt": "ef375a81d5c2a5dce26662c68c2965e1954c736cd824e40085a084073777af14"
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "selected_at": "2026-10-12T02:33:29.497982+00:00",
+  "model_seed": 17,
+  "seed_rule": "First seed in the already registered [17,23,41], never best-seed selection.",
+  "case_rule": "For each clean/noise005 condition, choose smallest numeric ID in each category: all3 succeed; Full succeeds and BC/Plain fail; all3 fail. Categories are illustrative and selected AFTER confirmation, BEFORE rendering. Not a new independent test or representative sample.",
+  "methods": [
+    "bc_k2",
+    "full",
+    "plain"
+  ],
+  "conditions": [
+    "clean",
+    "noise005"
+  ],
+  "comparison": "Same saved XML and initial state, same execution-noise stream, same D2, H8, K4, gate0.02,400step cap. Same camera and time scale. Freeze completed panels instead of looping/speeding them up.",
+  "render": "Recompute and trace frozen controllers headlessly; verify original result metrics. Replay exact applied actions and compare every state before rendering. Camera is for presentation only; policy receives no images.",
+  "cases": [
+    {
+      "id": "clean_shared_success",
+      "label": "三种方法均成功",
+      "condition": "clean",
+      "noise": 0.0,
+      "state_name": "demo_1000001",
+      "eligible_count": 51,
+      "original_records": {
+        "bc_k2": {
+          "demo": "demo_1000001",
+          "success": true,
+          "steps": 95,
+          "peak_stage_reward": 0.6479605756271531,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 0.0028757894860494786,
+          "elapsed_s": 0.7044469000002209,
+          "selection_counts": {
+            "2": 95
+          }
+        },
+        "full": {
+          "demo": "demo_1000001",
+          "success": true,
+          "steps": 95,
+          "peak_stage_reward": 0.6407675393851556,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.15789473684210525,
+          "mean_decision_ms": 1.118638947359853,
+          "elapsed_s": 0.870861700000205,
+          "selection_counts": {
+            "0": 15,
+            "1": 1,
+            "2": 63,
+            "3": 16
+          },
+          "fraction_fallback_selected": 0.6631578947368421,
+          "fraction_override": 0.33684210526315794
+        },
+        "plain": {
+          "demo": "demo_1000001",
+          "success": true,
+          "steps": 95,
+          "peak_stage_reward": 0.6051191509925031,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.11578947368421053,
+          "mean_decision_ms": 1.1627115789547373,
+          "elapsed_s": 0.9060516999998072,
+          "selection_counts": {
+            "0": 11,
+            "1": 1,
+            "2": 80,
+            "3": 3
+          },
+          "fraction_fallback_selected": 0.8421052631578947,
+          "fraction_override": 0.1578947368421053
+        }
+      }
+    },
+    {
+      "id": "clean_full_only_success",
+      "label": "Full成功，BC与Plain未完成",
+      "condition": "clean",
+      "noise": 0.0,
+      "state_name": "demo_1000026",
+      "eligible_count": 1,
+      "original_records": {
+        "bc_k2": {
+          "demo": "demo_1000026",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.5400755599730167,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 0.005407250007465336,
+          "elapsed_s": 3.084737799999857,
+          "selection_counts": {
+            "2": 400
+          }
+        },
+        "full": {
+          "demo": "demo_1000026",
+          "success": true,
+          "steps": 133,
+          "peak_stage_reward": 0.5626256286882878,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.23308270676691728,
+          "mean_decision_ms": 1.1900481202971598,
+          "elapsed_s": 1.1536851000000752,
+          "selection_counts": {
+            "0": 31,
+            "1": 10,
+            "2": 86,
+            "3": 6
+          },
+          "fraction_fallback_selected": 0.6466165413533834,
+          "fraction_override": 0.3533834586466166
+        },
+        "plain": {
+          "demo": "demo_1000026",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.5425004176500063,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.015,
+          "mean_decision_ms": 1.1108369999533352,
+          "elapsed_s": 3.365026299999954,
+          "selection_counts": {
+            "0": 6,
+            "2": 394
+          },
+          "fraction_fallback_selected": 0.985,
+          "fraction_override": 0.015000000000000013
+        }
+      }
+    },
+    {
+      "id": "clean_shared_failure",
+      "label": "三种方法均未完成",
+      "condition": "clean",
+      "noise": 0.0,
+      "state_name": "demo_1000000",
+      "eligible_count": 6,
+      "original_records": {
+        "bc_k2": {
+          "demo": "demo_1000000",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.35104871985020036,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 0.0029642499839610537,
+          "elapsed_s": 3.66566419999981,
+          "selection_counts": {
+            "2": 400
+          }
+        },
+        "full": {
+          "demo": "demo_1000000",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.35104871985020036,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 1.1394330000030095,
+          "elapsed_s": 4.323862799999915,
+          "selection_counts": {
+            "2": 400
+          },
+          "fraction_fallback_selected": 1.0,
+          "fraction_override": 0.0
+        },
+        "plain": {
+          "demo": "demo_1000000",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.35104871985020036,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 1.156637249994219,
+          "elapsed_s": 4.438999599999988,
+          "selection_counts": {
+            "2": 400
+          },
+          "fraction_fallback_selected": 1.0,
+          "fraction_override": 0.0
+        }
+      }
+    },
+    {
+      "id": "noise005_shared_success",
+      "label": "三种方法均成功",
+      "condition": "noise005",
+      "noise": 0.05,
+      "state_name": "demo_1000002",
+      "eligible_count": 49,
+      "original_records": {
+        "bc_k2": {
+          "demo": "demo_1000002",
+          "success": true,
+          "steps": 110,
+          "peak_stage_reward": 0.5674247461977859,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 0.005586363658949267,
+          "elapsed_s": 0.8365866000003734,
+          "selection_counts": {
+            "2": 110
+          }
+        },
+        "full": {
+          "demo": "demo_1000002",
+          "success": true,
+          "steps": 109,
+          "peak_stage_reward": 0.6157850681927137,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.21100917431192662,
+          "mean_decision_ms": 1.132582568812439,
+          "elapsed_s": 0.9203150000003006,
+          "selection_counts": {
+            "0": 23,
+            "1": 4,
+            "2": 78,
+            "3": 4
+          },
+          "fraction_fallback_selected": 0.7155963302752294,
+          "fraction_override": 0.2844036697247706
+        },
+        "plain": {
+          "demo": "demo_1000002",
+          "success": true,
+          "steps": 110,
+          "peak_stage_reward": 0.6008350130059494,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.12727272727272726,
+          "mean_decision_ms": 1.1146909090877506,
+          "elapsed_s": 0.9548776000001453,
+          "selection_counts": {
+            "0": 14,
+            "2": 91,
+            "3": 5
+          },
+          "fraction_fallback_selected": 0.8272727272727273,
+          "fraction_override": 0.17272727272727273
+        }
+      }
+    },
+    {
+      "id": "noise005_full_only_success",
+      "label": "Full成功，BC与Plain未完成",
+      "condition": "noise005",
+      "noise": 0.05,
+      "state_name": "demo_1000011",
+      "eligible_count": 2,
+      "original_records": {
+        "bc_k2": {
+          "demo": "demo_1000011",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.3692549548474801,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 0.00523950001479534,
+          "elapsed_s": 2.8750217999995584,
+          "selection_counts": {
+            "2": 400
+          }
+        },
+        "full": {
+          "demo": "demo_1000011",
+          "success": true,
+          "steps": 165,
+          "peak_stage_reward": 0.6005608232337947,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.23030303030303031,
+          "mean_decision_ms": 1.154684242431937,
+          "elapsed_s": 1.442568299999948,
+          "selection_counts": {
+            "0": 38,
+            "1": 5,
+            "2": 122
+          },
+          "fraction_fallback_selected": 0.7393939393939394,
+          "fraction_override": 0.2606060606060606
+        },
+        "plain": {
+          "demo": "demo_1000011",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.3692549548474801,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 1.1518707500022174,
+          "elapsed_s": 3.4589771999999357,
+          "selection_counts": {
+            "2": 400
+          },
+          "fraction_fallback_selected": 1.0,
+          "fraction_override": 0.0
+        }
+      }
+    },
+    {
+      "id": "noise005_shared_failure",
+      "label": "三种方法均未完成",
+      "condition": "noise005",
+      "noise": 0.05,
+      "state_name": "demo_1000000",
+      "eligible_count": 8,
+      "original_records": {
+        "bc_k2": {
+          "demo": "demo_1000000",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.3505702704840458,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 0.00302674996191854,
+          "elapsed_s": 3.22024699999929,
+          "selection_counts": {
+            "2": 400
+          }
+        },
+        "full": {
+          "demo": "demo_1000000",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.3505702704840458,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0175,
+          "mean_decision_ms": 1.2093442500145102,
+          "elapsed_s": 4.028863000000456,
+          "selection_counts": {
+            "0": 7,
+            "2": 393
+          },
+          "fraction_fallback_selected": 0.9825,
+          "fraction_override": 0.01749999999999996
+        },
+        "plain": {
+          "demo": "demo_1000000",
+          "success": false,
+          "steps": 400,
+          "peak_stage_reward": 0.3505702704840458,
+          "ever_grasped": true,
+          "delay": 2,
+          "fraction_base_selected": 0.0,
+          "mean_decision_ms": 1.1265184999888334,
+          "elapsed_s": 3.898667899999964,
+          "selection_counts": {
+            "2": 400
+          },
+          "fraction_fallback_selected": 1.0,
+          "fraction_override": 0.0
+        }
+      }
+    }
+  ],
+  "source_sha256": {
+    "reproduction/confirmation_20261012_01/evaluations/bc_k2_clean/results.json": "4fbbc7c3efa77264cc84007bd62c6c2c27f0265f01964b79af290bc7b82ad598",
+    "reproduction/confirmation_20261012_01/evaluations/full_s17_clean/results.json": "e963448b665f48d88584bed795bf2ef316ae3e7e8e1e3048ada0b9d7be019bcb",
+    "reproduction/confirmation_20261012_01/evaluations/plain_s17_clean/results.json": "36f0da40d582d5ef684098b9140d85b912c045c2b51c500d0d8331bb873cb8d7",
+    "reproduction/confirmation_20261012_01/evaluations/bc_k2_noise005/results.json": "0505deadbbe518868cb98a8e9659b57dddc9408710b0f81bff9887047f354586",
+    "reproduction/confirmation_20261012_01/evaluations/full_s17_noise005/results.json": "d5813cd4e95aa68a3615aea08d48bbfbcd25b0d94565e7970af9e80f84010116",
+    "reproduction/confirmation_20261012_01/evaluations/plain_s17_noise005/results.json": "10845ac6daa2e8656d5583a8ff6c5caeaf17e5fa5b90af58830d7f4f19c64330"
+  }
+}

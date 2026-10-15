@@ -1,0 +1,384 @@
+{
+  "demo": "demo_179",
+  "step": 45,
+  "reasons": [
+    "first_override"
+  ],
+  "selected": 0,
+  "fallback": 2,
+  "initial_stages": [
+    0.012430117934215647,
+    0.0,
+    0.0,
+    4.910285771542177e-06
+  ],
+  "predicted_scores": [
+    1.0680290460586548,
+    1.045052170753479,
+    1.0346351861953735,
+    1.058459997177124
+  ],
+  "true_state_readout_scores": [
+    0.9332621693611145,
+    0.9722057580947876,
+    0.9891740083694458,
+    0.9510695338249207
+  ],
+  "true_short_scores": [
+    0.005933927372097969,
+    0.007188689429312944,
+    0.007807041052728891,
+    0.007014828268438578
+  ],
+  "predicted_advantage_vs_k2": 0.03339385986328125,
+  "true_state_readout_advantage_vs_k2": -0.0559118390083313,
+  "true_advantage_vs_k2": -0.0018731136806309223,
+  "raw_winners": {
+    "predicted": 0,
+    "true_state_readout": 2,
+    "true_short": 2
+  },
+  "gated_winners": {
+    "predicted": 0,
+    "true_state_readout": 2,
+    "true_short": 2
+  },
+  "candidates": [
+    {
+      "k": 0,
+      "predicted_score": 1.0680290460586548,
+      "true_state_readout_score": 0.9332621693611145,
+      "true_short_score": 0.005933927372097969,
+      "eef_error_mm_by_horizon": [
+        12.052543640136719,
+        21.67376708984375,
+        30.74144744873047,
+        38.41332244873047,
+        44.623291015625,
+        49.39152908325195,
+        53.081932067871094,
+        56.09828186035156
+      ],
+      "object_error_mm_by_horizon": [
+        12.684610366821289,
+        28.303970336914062,
+        42.16286087036133,
+        54.67786407470703,
+        66.04035949707031,
+        76.69617462158203,
+        86.65257263183594,
+        96.32551574707031
+      ],
+      "predicted_progress_mae": 0.7423540353775024,
+      "true_state_progress_mae": 0.649986743927002,
+      "predicted_max_risk": 0.00043000481673516333,
+      "true_state_max_risk": 0.00013649696484208107,
+      "true_max_risk": 0.0,
+      "continuations": {
+        "once_bc": {
+          "success": false,
+          "end_step": 400,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.5295978252783872,
+          "final_object_position": [
+            0.18969234824180603,
+            0.20332534611225128,
+            0.8438127636909485
+          ],
+          "final_stages": [
+            0.00017094983512232488,
+            0.0,
+            0.0,
+            0.00729714190347943
+          ]
+        },
+        "hold8_bc": {
+          "success": false,
+          "end_step": 400,
+          "ever_grasped_after_anchor": false,
+          "peak_stage_after_anchor": 0.06339742451278961,
+          "final_object_position": [
+            0.004320732317864895,
+            -0.12307632714509964,
+            0.8600562214851379
+          ],
+          "final_stages": [
+            1.8325698306620453e-06,
+            0.0,
+            0.0,
+            5.4775159428643845e-06
+          ]
+        },
+        "once_wm": {
+          "success": false,
+          "end_step": 400,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.5142371806222426,
+          "final_object_position": [
+            0.2365807443857193,
+            0.176521897315979,
+            0.8594531416893005
+          ],
+          "final_stages": [
+            6.859981677378447e-05,
+            0.0,
+            0.0,
+            0.004037431753897479
+          ]
+        }
+      }
+    },
+    {
+      "k": 1,
+      "predicted_score": 1.045052170753479,
+      "true_state_readout_score": 0.9722057580947876,
+      "true_short_score": 0.007188689429312944,
+      "eef_error_mm_by_horizon": [
+        12.052543640136719,
+        21.67376708984375,
+        29.016286849975586,
+        34.714332580566406,
+        40.21582794189453,
+        45.0141487121582,
+        49.084190368652344,
+        52.654884338378906
+      ],
+      "object_error_mm_by_horizon": [
+        12.684610366821289,
+        28.303970336914062,
+        41.49346923828125,
+        52.9512939453125,
+        62.93867492675781,
+        72.06057739257812,
+        80.38743591308594,
+        88.310546875
+      ],
+      "predicted_progress_mae": 0.7346672415733337,
+      "true_state_progress_mae": 0.6610832214355469,
+      "predicted_max_risk": 0.00047318197903223336,
+      "true_state_max_risk": 5.0789232773240656e-05,
+      "true_max_risk": 0.0,
+      "continuations": {
+        "once_bc": {
+          "success": true,
+          "end_step": 144,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.5754342652805424,
+          "final_object_position": [
+            0.19406165182590485,
+            0.32799971103668213,
+            0.8663874268531799
+          ],
+          "final_stages": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "hold8_bc": {
+          "success": true,
+          "end_step": 145,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.6194910741704635,
+          "final_object_position": [
+            0.18430879712104797,
+            0.36605408787727356,
+            0.886323094367981
+          ],
+          "final_stages": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "once_wm": {
+          "success": false,
+          "end_step": 400,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.5056858678490092,
+          "final_object_position": [
+            0.20607705414295197,
+            0.14944735169410706,
+            0.8438429832458496
+          ],
+          "final_stages": [
+            0.00018923347305136451,
+            0.0,
+            0.0,
+            0.002511035310255693
+          ]
+        }
+      }
+    },
+    {
+      "k": 2,
+      "predicted_score": 1.0346351861953735,
+      "true_state_readout_score": 0.9891740083694458,
+      "true_short_score": 0.007807041052728891,
+      "eef_error_mm_by_horizon": [
+        12.052543640136719,
+        21.67376708984375,
+        28.07465934753418,
+        32.52090072631836,
+        37.277347564697266,
+        41.60892868041992,
+        45.308250427246094,
+        48.50676345825195
+      ],
+      "object_error_mm_by_horizon": [
+        12.684610366821289,
+        28.303970336914062,
+        41.29386520385742,
+        52.458518981933594,
+        62.0976676940918,
+        70.86778259277344,
+        78.82450103759766,
+        86.36385345458984
+      ],
+      "predicted_progress_mae": 0.7313566207885742,
+      "true_state_progress_mae": 0.6668016910552979,
+      "predicted_max_risk": 0.0005223905900493264,
+      "true_state_max_risk": 5.799042264698073e-05,
+      "true_max_risk": 0.0,
+      "continuations": {
+        "once_bc": {
+          "success": true,
+          "end_step": 144,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.5734404006927185,
+          "final_object_position": [
+            0.1931464523077011,
+            0.32803231477737427,
+            0.8640038371086121
+          ],
+          "final_stages": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "hold8_bc": {
+          "success": true,
+          "end_step": 148,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.6000874918495771,
+          "final_object_position": [
+            0.1906254142522812,
+            0.3400188982486725,
+            0.8968032598495483
+          ],
+          "final_stages": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "once_wm": {
+          "success": false,
+          "end_step": 400,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.5455303619197426,
+          "final_object_position": [
+            0.30115705728530884,
+            0.1773533672094345,
+            0.924189031124115
+          ],
+          "final_stages": [
+            8.880556740277213e-05,
+            0.0,
+            0.0,
+            0.0027922420997635636
+          ]
+        }
+      }
+    },
+    {
+      "k": 3,
+      "predicted_score": 1.058459997177124,
+      "true_state_readout_score": 0.9510695338249207,
+      "true_short_score": 0.007014828268438578,
+      "eef_error_mm_by_horizon": [
+        12.052543640136719,
+        21.67376708984375,
+        28.162023544311523,
+        32.1396369934082,
+        35.727718353271484,
+        38.66237258911133,
+        40.80945587158203,
+        42.327239990234375
+      ],
+      "object_error_mm_by_horizon": [
+        12.684610366821289,
+        28.303970336914062,
+        41.770511627197266,
+        53.70951461791992,
+        64.30965423583984,
+        74.16546630859375,
+        83.34432220458984,
+        92.21806335449219
+      ],
+      "predicted_progress_mae": 0.7384235858917236,
+      "true_state_progress_mae": 0.6548255085945129,
+      "predicted_max_risk": 0.0004078477213624865,
+      "true_state_max_risk": 4.891102435067296e-05,
+      "true_max_risk": 0.0,
+      "continuations": {
+        "once_bc": {
+          "success": true,
+          "end_step": 143,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.5793895933827802,
+          "final_object_position": [
+            0.20040476322174072,
+            0.33264443278312683,
+            0.8875666260719299
+          ],
+          "final_stages": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "hold8_bc": {
+          "success": true,
+          "end_step": 153,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.5939578684067544,
+          "final_object_position": [
+            0.1987845003604889,
+            0.3454928398132324,
+            0.86106938123703
+          ],
+          "final_stages": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "once_wm": {
+          "success": true,
+          "end_step": 147,
+          "ever_grasped_after_anchor": true,
+          "peak_stage_after_anchor": 0.6157927679810903,
+          "final_object_position": [
+            0.1588919758796692,
+            0.42105352878570557,
+            0.8825516700744629
+          ],
+          "final_stages": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  ]
+}

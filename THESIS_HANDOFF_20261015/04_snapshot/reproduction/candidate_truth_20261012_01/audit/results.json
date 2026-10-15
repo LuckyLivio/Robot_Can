@@ -1,0 +1,2793 @@
+{
+  "status": "complete",
+  "source": "reproduction\\candidate_truth_20261012_01\\traces_real\\delay_wm_dev_d2_shift_fbshift_fbi2_gm0.02_score.json",
+  "checks": {
+    "trace_vs_previous_result": 0.0,
+    "trace_prefix_states": 0.0,
+    "trace_anchor_state": 0.0,
+    "trace_anchor_stages": 0.0,
+    "trace_fifo_actions": 0.0,
+    "trace_anchor_queue": 0.0,
+    "trace_candidates": 0.0,
+    "trace_predictions": 0.0,
+    "trace_scores": 0.0,
+    "trace_model_sequences": 0.0,
+    "trace_selection": 0.0,
+    "replay_observation": 0.0,
+    "replay_physics_controller": 0.0,
+    "replay_stages": 0.0,
+    "matched_prediction_actions": 0.0,
+    "reverse_order_a": 0.0,
+    "reverse_order_y": 0.0,
+    "reverse_order_labels": 0.0,
+    "common_fifo_states": 0.0,
+    "common_fifo_labels": 0.0,
+    "hold8_short_truth": 0.0,
+    "first_override_k2_baseline_states": 0.0,
+    "first_override_k2_baseline_actions": 0.0,
+    "first_override_k2_baseline_success": 0.0,
+    "deployed_continuation_states": 0.0,
+    "deployed_continuation_actions": 0.0,
+    "deployed_continuation_success": 0.0
+  },
+  "baselines": {
+    "demo_97": {
+      "success": true,
+      "end_step": 98,
+      "ever_grasped_after_anchor": true,
+      "peak_stage_after_anchor": 0.5494536082830188,
+      "final_object_position": [
+        0.14548693597316742,
+        0.3293039798736572,
+        0.8566034436225891
+      ],
+      "final_stages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "demo_179": {
+      "success": true,
+      "end_step": 144,
+      "ever_grasped_after_anchor": true,
+      "peak_stage_after_anchor": 0.5734404006927185,
+      "final_object_position": [
+        0.1931464523077011,
+        0.32803231477737427,
+        0.8640038371086121
+      ],
+      "final_stages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "demo_105": {
+      "success": true,
+      "end_step": 278,
+      "ever_grasped_after_anchor": true,
+      "peak_stage_after_anchor": 0.5843387183089729,
+      "final_object_position": [
+        0.2110607773065567,
+        0.4646454453468323,
+        0.861312210559845
+      ],
+      "final_stages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "anchors": [
+    {
+      "demo": "demo_97",
+      "step": 35,
+      "reasons": [
+        "first_override"
+      ],
+      "selected": 3,
+      "fallback": 2,
+      "initial_stages": [
+        0.06747938836759404,
+        0.0,
+        0.0,
+        7.274139555812907e-07
+      ],
+      "predicted_scores": [
+        0.1498643159866333,
+        0.15739460289478302,
+        0.1710987538099289,
+        0.19418200850486755
+      ],
+      "true_state_readout_scores": [
+        0.10329459607601166,
+        0.1044980064034462,
+        0.10365539789199829,
+        0.10357818007469177
+      ],
+      "true_short_scores": [
+        0.12766188383102417,
+        0.1291326880455017,
+        0.12578970193862915,
+        0.12270202487707138
+      ],
+      "predicted_advantage_vs_k2": 0.02308325469493866,
+      "true_state_readout_advantage_vs_k2": -7.721781730651855e-05,
+      "true_advantage_vs_k2": -0.0030876770615577698,
+      "raw_winners": {
+        "predicted": 3,
+        "true_state_readout": 1,
+        "true_short": 1
+      },
+      "gated_winners": {
+        "predicted": 3,
+        "true_state_readout": 2,
+        "true_short": 2
+      },
+      "candidates": [
+        {
+          "k": 0,
+          "predicted_score": 0.1498643159866333,
+          "true_state_readout_score": 0.10329459607601166,
+          "true_short_score": 0.12766188383102417,
+          "eef_error_mm_by_horizon": [
+            5.098317623138428,
+            7.239351272583008,
+            8.314451217651367,
+            7.990381717681885,
+            6.854219913482666,
+            5.671655654907227,
+            5.972036361694336,
+            8.281431198120117
+          ],
+          "object_error_mm_by_horizon": [
+            3.4359583854675293,
+            7.688560485839844,
+            10.651039123535156,
+            12.159933090209961,
+            12.66047191619873,
+            12.967695236206055,
+            13.431085586547852,
+            14.261441230773926
+          ],
+          "predicted_progress_mae": 0.013082710094749928,
+          "true_state_progress_mae": 0.013695841655135155,
+          "predicted_max_risk": 0.0003116962034255266,
+          "true_state_max_risk": 0.0002808550198096782,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 97,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5406887268691914,
+              "final_object_position": [
+                0.1408919245004654,
+                0.32801133394241333,
+                0.8818352222442627
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 102,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.592986678923078,
+              "final_object_position": [
+                0.16635043919086456,
+                0.35476019978523254,
+                0.8708030581474304
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": true,
+              "end_step": 120,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6110947643699947,
+              "final_object_position": [
+                0.16047702729701996,
+                0.39796462655067444,
+                0.8787397742271423
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        {
+          "k": 1,
+          "predicted_score": 0.15739460289478302,
+          "true_state_readout_score": 0.1044980064034462,
+          "true_short_score": 0.1291326880455017,
+          "eef_error_mm_by_horizon": [
+            5.098317623138428,
+            7.239351272583008,
+            8.099920272827148,
+            7.500789165496826,
+            6.041558265686035,
+            4.359530448913574,
+            3.9624874591827393,
+            5.946765422821045
+          ],
+          "object_error_mm_by_horizon": [
+            3.4359583854675293,
+            7.688560485839844,
+            10.5750732421875,
+            11.994823455810547,
+            12.359781265258789,
+            12.523968696594238,
+            12.855708122253418,
+            13.617084503173828
+          ],
+          "predicted_progress_mae": 0.015446527861058712,
+          "true_state_progress_mae": 0.013626661151647568,
+          "predicted_max_risk": 0.00030850069015286863,
+          "true_state_max_risk": 0.0002808550198096782,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 97,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5395448765476922,
+              "final_object_position": [
+                0.14041928946971893,
+                0.3293777406215668,
+                0.8840453624725342
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 104,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6152562679789442,
+              "final_object_position": [
+                0.18623152375221252,
+                0.3600100576877594,
+                0.8613033294677734
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.528437127957143,
+              "final_object_position": [
+                -0.024615079164505005,
+                0.35110464692115784,
+                0.8438397645950317
+              ],
+              "final_stages": [
+                1.977846031192554e-05,
+                0.0,
+                0.0,
+                0.004140927437303631
+              ]
+            }
+          }
+        },
+        {
+          "k": 2,
+          "predicted_score": 0.1710987538099289,
+          "true_state_readout_score": 0.10365539789199829,
+          "true_short_score": 0.12578970193862915,
+          "eef_error_mm_by_horizon": [
+            5.098317623138428,
+            7.239351272583008,
+            8.46296501159668,
+            8.426212310791016,
+            7.322014331817627,
+            5.461440563201904,
+            3.3360793590545654,
+            1.8016196489334106
+          ],
+          "object_error_mm_by_horizon": [
+            3.4359583854675293,
+            7.688560485839844,
+            10.606222152709961,
+            12.07187557220459,
+            12.467877388000488,
+            12.67507266998291,
+            13.098272323608398,
+            13.844160079956055
+          ],
+          "predicted_progress_mae": 0.020803257822990417,
+          "true_state_progress_mae": 0.013011472299695015,
+          "predicted_max_risk": 0.0003078349109273404,
+          "true_state_max_risk": 0.0002808550198096782,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 98,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5494536082830188,
+              "final_object_position": [
+                0.14548693597316742,
+                0.3293039798736572,
+                0.8566034436225891
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 106,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6312879736922246,
+              "final_object_position": [
+                0.1790897250175476,
+                0.37374523282051086,
+                0.8798086643218994
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5282903686892765,
+              "final_object_position": [
+                0.014581364579498768,
+                0.38050734996795654,
+                0.8437830805778503
+              ],
+              "final_stages": [
+                0.0002647278856133473,
+                0.0,
+                0.0,
+                0.00979243371633076
+              ]
+            }
+          }
+        },
+        {
+          "k": 3,
+          "predicted_score": 0.19418200850486755,
+          "true_state_readout_score": 0.10357818007469177,
+          "true_short_score": 0.12270202487707138,
+          "eef_error_mm_by_horizon": [
+            5.098317623138428,
+            7.239351272583008,
+            8.460009574890137,
+            8.45112419128418,
+            7.4297685623168945,
+            5.776413440704346,
+            4.147708415985107,
+            3.196462869644165
+          ],
+          "object_error_mm_by_horizon": [
+            3.4359583854675293,
+            7.688560485839844,
+            10.646486282348633,
+            12.18366813659668,
+            12.679431915283203,
+            13.028403282165527,
+            13.614043235778809,
+            14.491703987121582
+          ],
+          "predicted_progress_mae": 0.028239192441105843,
+          "true_state_progress_mae": 0.012032413855195045,
+          "predicted_max_risk": 0.00030700344359502196,
+          "true_state_max_risk": 0.0002808550198096782,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 97,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5450749298324588,
+              "final_object_position": [
+                0.14351432025432587,
+                0.3267250657081604,
+                0.8657147288322449
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 106,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.636897938773452,
+              "final_object_position": [
+                0.17154446244239807,
+                0.3930065333843231,
+                0.8601284027099609
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.021900011226534843,
+                0.33486661314964294,
+                0.8493994474411011
+              ],
+              "final_stages": [
+                1.2384646627028319e-05,
+                0.0,
+                0.0,
+                0.004013328541876703
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "demo": "demo_97",
+      "step": 58,
+      "reasons": [
+        "first_override_while_grasping"
+      ],
+      "selected": 0,
+      "fallback": 2,
+      "initial_stages": [
+        0.08212044749953686,
+        0.35,
+        0.3691295321933316,
+        0.36913537254713286
+      ],
+      "predicted_scores": [
+        0.8535519242286682,
+        0.844627857208252,
+        0.8261200785636902,
+        0.8030293583869934
+      ],
+      "true_state_readout_scores": [
+        0.7282239198684692,
+        0.7386667728424072,
+        0.746968686580658,
+        0.7559712529182434
+      ],
+      "true_short_scores": [
+        0.7160611152648926,
+        0.715862512588501,
+        0.7151331901550293,
+        0.7082472443580627
+      ],
+      "predicted_advantage_vs_k2": 0.027431845664978027,
+      "true_state_readout_advantage_vs_k2": -0.01874476671218872,
+      "true_advantage_vs_k2": 0.0009279251098632812,
+      "raw_winners": {
+        "predicted": 0,
+        "true_state_readout": 3,
+        "true_short": 0
+      },
+      "gated_winners": {
+        "predicted": 0,
+        "true_state_readout": 2,
+        "true_short": 2
+      },
+      "candidates": [
+        {
+          "k": 0,
+          "predicted_score": 0.8535519242286682,
+          "true_state_readout_score": 0.7282239198684692,
+          "true_short_score": 0.7160611152648926,
+          "eef_error_mm_by_horizon": [
+            11.864914894104004,
+            18.273632049560547,
+            22.087249755859375,
+            25.026525497436523,
+            27.766357421875,
+            30.725446701049805,
+            33.97816467285156,
+            37.440120697021484
+          ],
+          "object_error_mm_by_horizon": [
+            7.0352864265441895,
+            11.408146858215332,
+            15.67273998260498,
+            20.51966667175293,
+            25.77097511291504,
+            31.238420486450195,
+            36.82765579223633,
+            42.513206481933594
+          ],
+          "predicted_progress_mae": 0.10702691227197647,
+          "true_state_progress_mae": 0.045378606766462326,
+          "predicted_max_risk": 0.0002880973042920232,
+          "true_state_max_risk": 8.521207928424701e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5499820681458705,
+              "final_object_position": [
+                0.10767056047916412,
+                0.3630193769931793,
+                0.9400526881217957
+              ],
+              "final_stages": [
+                9.047015914198653e-09,
+                0.0,
+                0.0,
+                0.5492931566673562
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 100,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5493315763382576,
+              "final_object_position": [
+                0.17120926082134247,
+                0.3201864957809448,
+                0.8969811797142029
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.021900011226534843,
+                0.33486661314964294,
+                0.8493994474411011
+              ],
+              "final_stages": [
+                1.2384646627028319e-05,
+                0.0,
+                0.0,
+                0.004013328541876703
+              ]
+            }
+          }
+        },
+        {
+          "k": 1,
+          "predicted_score": 0.844627857208252,
+          "true_state_readout_score": 0.7386667728424072,
+          "true_short_score": 0.715862512588501,
+          "eef_error_mm_by_horizon": [
+            11.864914894104004,
+            18.273632049560547,
+            21.924131393432617,
+            24.47579574584961,
+            26.768857955932617,
+            29.24904441833496,
+            32.008827209472656,
+            34.99596405029297
+          ],
+          "object_error_mm_by_horizon": [
+            7.0352864265441895,
+            11.408146858215332,
+            15.528017044067383,
+            19.947050094604492,
+            24.693744659423828,
+            29.633203506469727,
+            34.69064712524414,
+            39.859413146972656
+          ],
+          "predicted_progress_mae": 0.10471048206090927,
+          "true_state_progress_mae": 0.04734344407916069,
+          "predicted_max_risk": 0.0003026117046829313,
+          "true_state_max_risk": 8.521207928424701e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5515981492511636,
+              "final_object_position": [
+                0.10830903798341751,
+                0.3628290891647339,
+                0.9400730133056641
+              ],
+              "final_stages": [
+                1.3374481344641254e-08,
+                0.0,
+                0.0,
+                0.5497076891707664
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 97,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5578395265582572,
+              "final_object_position": [
+                0.1746310293674469,
+                0.3219461143016815,
+                0.8947877883911133
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260201613212075,
+              "final_object_position": [
+                -0.020461907610297203,
+                0.33494579792022705,
+                0.8508588671684265
+              ],
+              "final_stages": [
+                1.4355392102449739e-05,
+                0.0,
+                0.0,
+                0.00412589816504647
+              ]
+            }
+          }
+        },
+        {
+          "k": 2,
+          "predicted_score": 0.8261200785636902,
+          "true_state_readout_score": 0.746968686580658,
+          "true_short_score": 0.7151331901550293,
+          "eef_error_mm_by_horizon": [
+            11.864914894104004,
+            18.273632049560547,
+            21.736051559448242,
+            23.814085006713867,
+            25.540111541748047,
+            27.34587287902832,
+            29.330345153808594,
+            31.465240478515625
+          ],
+          "object_error_mm_by_horizon": [
+            7.0352864265441895,
+            11.408146858215332,
+            15.29619312286377,
+            19.0344295501709,
+            22.965656280517578,
+            27.028459548950195,
+            31.169891357421875,
+            35.39729309082031
+          ],
+          "predicted_progress_mae": 0.10057347267866135,
+          "true_state_progress_mae": 0.05172720551490784,
+          "predicted_max_risk": 0.0003433465026319027,
+          "true_state_max_risk": 8.521207928424701e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 113,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5869961925287768,
+              "final_object_position": [
+                0.15649133920669556,
+                0.36349281668663025,
+                0.8907182216644287
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 99,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5693967858800093,
+              "final_object_position": [
+                0.16576892137527466,
+                0.33763745427131653,
+                0.872662365436554
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5262080142822654,
+              "final_object_position": [
+                -0.020462818443775177,
+                0.33496418595314026,
+                0.8508982062339783
+              ],
+              "final_stages": [
+                1.2828655231023058e-05,
+                0.0,
+                0.0,
+                0.004126271074832499
+              ]
+            }
+          }
+        },
+        {
+          "k": 3,
+          "predicted_score": 0.8030293583869934,
+          "true_state_readout_score": 0.7559712529182434,
+          "true_short_score": 0.7082472443580627,
+          "eef_error_mm_by_horizon": [
+            11.864914894104004,
+            18.273632049560547,
+            21.5311279296875,
+            23.17514991760254,
+            24.465076446533203,
+            25.771604537963867,
+            27.159061431884766,
+            28.59873390197754
+          ],
+          "object_error_mm_by_horizon": [
+            7.0352864265441895,
+            11.408146858215332,
+            15.067285537719727,
+            18.117019653320312,
+            21.216585159301758,
+            24.371463775634766,
+            27.550966262817383,
+            30.77216339111328
+          ],
+          "predicted_progress_mae": 0.0961405485868454,
+          "true_state_progress_mae": 0.05766405537724495,
+          "predicted_max_risk": 0.00041124862036667764,
+          "true_state_max_risk": 8.521207928424701e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 106,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.591891872539732,
+              "final_object_position": [
+                0.1647414267063141,
+                0.3628424406051636,
+                0.8671420812606812
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5313676431507718,
+              "final_object_position": [
+                0.09265215694904327,
+                0.3394210934638977,
+                0.9400588274002075
+              ],
+              "final_stages": [
+                1.4455943886382272e-08,
+                0.0,
+                0.0,
+                0.03185461399872475
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5263015019640382,
+              "final_object_position": [
+                -0.0197957344353199,
+                0.33491232991218567,
+                0.8528915643692017
+              ],
+              "final_stages": [
+                8.216070883537708e-06,
+                0.0,
+                0.0,
+                0.0041773599765155146
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "demo": "demo_97",
+      "step": 90,
+      "reasons": [
+        "largest_predicted_advantage"
+      ],
+      "selected": 0,
+      "fallback": 2,
+      "initial_stages": [
+        0.08095298962087921,
+        0.35,
+        0.5,
+        0.523635990835683
+      ],
+      "predicted_scores": [
+        0.6873306035995483,
+        0.5462860465049744,
+        0.399936705827713,
+        0.26066508889198303
+      ],
+      "true_state_readout_scores": [
+        0.5674594044685364,
+        0.5051458477973938,
+        0.5420147180557251,
+        0.551676332950592
+      ],
+      "true_short_scores": [
+        -0.40497055649757385,
+        -0.40532198548316956,
+        -0.40641871094703674,
+        -0.4070078134536743
+      ],
+      "predicted_advantage_vs_k2": 0.2873938977718353,
+      "true_state_readout_advantage_vs_k2": 0.02544468641281128,
+      "true_advantage_vs_k2": 0.0014481544494628906,
+      "raw_winners": {
+        "predicted": 0,
+        "true_state_readout": 0,
+        "true_short": 0
+      },
+      "gated_winners": {
+        "predicted": 0,
+        "true_state_readout": 0,
+        "true_short": 2
+      },
+      "candidates": [
+        {
+          "k": 0,
+          "predicted_score": 0.6873306035995483,
+          "true_state_readout_score": 0.5674594044685364,
+          "true_short_score": -0.40497055649757385,
+          "eef_error_mm_by_horizon": [
+            9.425323486328125,
+            17.90650749206543,
+            23.3917179107666,
+            27.4027156829834,
+            35.09885025024414,
+            45.362369537353516,
+            54.198429107666016,
+            63.52531051635742
+          ],
+          "object_error_mm_by_horizon": [
+            6.531689167022705,
+            10.8419189453125,
+            19.97777557373047,
+            36.89017868041992,
+            57.21440124511719,
+            85.307861328125,
+            136.9313201904297,
+            178.6842498779297
+          ],
+          "predicted_progress_mae": 0.5573781728744507,
+          "true_state_progress_mae": 0.4405551254749298,
+          "predicted_max_risk": 0.6261984705924988,
+          "true_state_max_risk": 0.27957358956336975,
+          "true_max_risk": 1.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.0307783056050539,
+                0.33406051993370056,
+                0.844005286693573
+              ],
+              "final_stages": [
+                5.9637847610849454e-05,
+                0.0,
+                0.0,
+                0.0033728123884170227
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.03181542456150055,
+                0.3357718586921692,
+                0.8437696695327759
+              ],
+              "final_stages": [
+                6.890609188863195e-05,
+                0.0,
+                0.0,
+                0.0033451250267198854
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.021900011226534843,
+                0.33486661314964294,
+                0.8493994474411011
+              ],
+              "final_stages": [
+                1.2384646627028319e-05,
+                0.0,
+                0.0,
+                0.004013328541876703
+              ]
+            }
+          }
+        },
+        {
+          "k": 1,
+          "predicted_score": 0.5462860465049744,
+          "true_state_readout_score": 0.5051458477973938,
+          "true_short_score": -0.40532198548316956,
+          "eef_error_mm_by_horizon": [
+            9.425323486328125,
+            17.90650749206543,
+            23.309696197509766,
+            27.392797470092773,
+            35.56182861328125,
+            45.148590087890625,
+            52.06343460083008,
+            58.23190689086914
+          ],
+          "object_error_mm_by_horizon": [
+            6.531689167022705,
+            10.8419189453125,
+            20.01734161376953,
+            37.235504150390625,
+            57.10890197753906,
+            83.20410919189453,
+            134.2655792236328,
+            183.91322326660156
+          ],
+          "predicted_progress_mae": 0.531482458114624,
+          "true_state_progress_mae": 0.4278961718082428,
+          "predicted_max_risk": 0.6813119649887085,
+          "true_state_max_risk": 0.23451641201972961,
+          "true_max_risk": 1.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.013519100844860077,
+                0.33456727862358093,
+                0.8577521443367004
+              ],
+              "final_stages": [
+                8.580358594201255e-06,
+                0.0,
+                0.0,
+                0.00469256116624459
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.026170333847403526,
+                0.3344428241252899,
+                0.8490020632743835
+              ],
+              "final_stages": [
+                1.3464637065718767e-05,
+                0.0,
+                0.0,
+                0.0036924365700796483
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.0018048330675810575,
+                0.33545225858688354,
+                0.8570109605789185
+              ],
+              "final_stages": [
+                0.00015302298929186222,
+                0.0,
+                0.0,
+                0.005877058735942108
+              ]
+            }
+          }
+        },
+        {
+          "k": 2,
+          "predicted_score": 0.399936705827713,
+          "true_state_readout_score": 0.5420147180557251,
+          "true_short_score": -0.40641871094703674,
+          "eef_error_mm_by_horizon": [
+            9.425323486328125,
+            17.90650749206543,
+            23.041566848754883,
+            27.090362548828125,
+            35.55219268798828,
+            44.75841522216797,
+            50.0595588684082,
+            53.67588424682617
+          ],
+          "object_error_mm_by_horizon": [
+            6.531689167022705,
+            10.8419189453125,
+            20.09244728088379,
+            37.22218322753906,
+            57.31666946411133,
+            85.08380889892578,
+            136.61224365234375,
+            177.01222229003906
+          ],
+          "predicted_progress_mae": 0.5043618679046631,
+          "true_state_progress_mae": 0.4420563578605652,
+          "predicted_max_risk": 0.7365612387657166,
+          "true_state_max_risk": 0.3048546314239502,
+          "true_max_risk": 1.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.009394291788339615,
+                0.3340121805667877,
+                0.8599354028701782
+              ],
+              "final_stages": [
+                0.0005713809610329746,
+                0.0,
+                0.0,
+                0.005053308591614368
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.025896277278661728,
+                0.33345866203308105,
+                0.8532857298851013
+              ],
+              "final_stages": [
+                1.88759125643756e-05,
+                0.0,
+                0.0,
+                0.00369049549185838
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.026312140747904778,
+                0.33342623710632324,
+                0.8534302711486816
+              ],
+              "final_stages": [
+                7.143652246750509e-05,
+                0.0,
+                0.0,
+                0.0036608572906005935
+              ]
+            }
+          }
+        },
+        {
+          "k": 3,
+          "predicted_score": 0.26066508889198303,
+          "true_state_readout_score": 0.551676332950592,
+          "true_short_score": -0.4070078134536743,
+          "eef_error_mm_by_horizon": [
+            9.425323486328125,
+            17.90650749206543,
+            22.385318756103516,
+            25.98722267150879,
+            34.73265075683594,
+            43.068660736083984,
+            46.34072494506836,
+            47.379886627197266
+          ],
+          "object_error_mm_by_horizon": [
+            6.531689167022705,
+            10.8419189453125,
+            19.948196411132812,
+            37.04440689086914,
+            56.895668029785156,
+            83.41741180419922,
+            134.35693359375,
+            169.627197265625
+          ],
+          "predicted_progress_mae": 0.4750683903694153,
+          "true_state_progress_mae": 0.4415134787559509,
+          "predicted_max_risk": 0.7820555567741394,
+          "true_state_max_risk": 0.36402642726898193,
+          "true_max_risk": 1.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.0012186900712549686,
+                0.3316299617290497,
+                0.8644833564758301
+              ],
+              "final_stages": [
+                5.055189600255972e-12,
+                0.0,
+                0.0,
+                0.005796813236500341
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.0072279032319784164,
+                0.3310762345790863,
+                0.8636986613273621
+              ],
+              "final_stages": [
+                1.1950247114089763e-08,
+                0.0,
+                0.0,
+                0.005164900536054783
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5260753955227031,
+              "final_object_position": [
+                -0.013875763863325119,
+                0.331866592168808,
+                0.8611538410186768
+              ],
+              "final_stages": [
+                0.00030992075818100375,
+                0.0,
+                0.0,
+                0.004584304516021919
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "demo": "demo_179",
+      "step": 45,
+      "reasons": [
+        "first_override"
+      ],
+      "selected": 0,
+      "fallback": 2,
+      "initial_stages": [
+        0.012430117934215647,
+        0.0,
+        0.0,
+        4.910285771542177e-06
+      ],
+      "predicted_scores": [
+        1.0680290460586548,
+        1.045052170753479,
+        1.0346351861953735,
+        1.058459997177124
+      ],
+      "true_state_readout_scores": [
+        0.9332621693611145,
+        0.9722057580947876,
+        0.9891740083694458,
+        0.9510695338249207
+      ],
+      "true_short_scores": [
+        0.005933927372097969,
+        0.007188689429312944,
+        0.007807041052728891,
+        0.007014828268438578
+      ],
+      "predicted_advantage_vs_k2": 0.03339385986328125,
+      "true_state_readout_advantage_vs_k2": -0.0559118390083313,
+      "true_advantage_vs_k2": -0.0018731136806309223,
+      "raw_winners": {
+        "predicted": 0,
+        "true_state_readout": 2,
+        "true_short": 2
+      },
+      "gated_winners": {
+        "predicted": 0,
+        "true_state_readout": 2,
+        "true_short": 2
+      },
+      "candidates": [
+        {
+          "k": 0,
+          "predicted_score": 1.0680290460586548,
+          "true_state_readout_score": 0.9332621693611145,
+          "true_short_score": 0.005933927372097969,
+          "eef_error_mm_by_horizon": [
+            12.052543640136719,
+            21.67376708984375,
+            30.74144744873047,
+            38.41332244873047,
+            44.623291015625,
+            49.39152908325195,
+            53.081932067871094,
+            56.09828186035156
+          ],
+          "object_error_mm_by_horizon": [
+            12.684610366821289,
+            28.303970336914062,
+            42.16286087036133,
+            54.67786407470703,
+            66.04035949707031,
+            76.69617462158203,
+            86.65257263183594,
+            96.32551574707031
+          ],
+          "predicted_progress_mae": 0.7423540353775024,
+          "true_state_progress_mae": 0.649986743927002,
+          "predicted_max_risk": 0.00043000481673516333,
+          "true_state_max_risk": 0.00013649696484208107,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5295978252783872,
+              "final_object_position": [
+                0.18969234824180603,
+                0.20332534611225128,
+                0.8438127636909485
+              ],
+              "final_stages": [
+                0.00017094983512232488,
+                0.0,
+                0.0,
+                0.00729714190347943
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": false,
+              "peak_stage_after_anchor": 0.06339742451278961,
+              "final_object_position": [
+                0.004320732317864895,
+                -0.12307632714509964,
+                0.8600562214851379
+              ],
+              "final_stages": [
+                1.8325698306620453e-06,
+                0.0,
+                0.0,
+                5.4775159428643845e-06
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5142371806222426,
+              "final_object_position": [
+                0.2365807443857193,
+                0.176521897315979,
+                0.8594531416893005
+              ],
+              "final_stages": [
+                6.859981677378447e-05,
+                0.0,
+                0.0,
+                0.004037431753897479
+              ]
+            }
+          }
+        },
+        {
+          "k": 1,
+          "predicted_score": 1.045052170753479,
+          "true_state_readout_score": 0.9722057580947876,
+          "true_short_score": 0.007188689429312944,
+          "eef_error_mm_by_horizon": [
+            12.052543640136719,
+            21.67376708984375,
+            29.016286849975586,
+            34.714332580566406,
+            40.21582794189453,
+            45.0141487121582,
+            49.084190368652344,
+            52.654884338378906
+          ],
+          "object_error_mm_by_horizon": [
+            12.684610366821289,
+            28.303970336914062,
+            41.49346923828125,
+            52.9512939453125,
+            62.93867492675781,
+            72.06057739257812,
+            80.38743591308594,
+            88.310546875
+          ],
+          "predicted_progress_mae": 0.7346672415733337,
+          "true_state_progress_mae": 0.6610832214355469,
+          "predicted_max_risk": 0.00047318197903223336,
+          "true_state_max_risk": 5.0789232773240656e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 144,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5754342652805424,
+              "final_object_position": [
+                0.19406165182590485,
+                0.32799971103668213,
+                0.8663874268531799
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 145,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6194910741704635,
+              "final_object_position": [
+                0.18430879712104797,
+                0.36605408787727356,
+                0.886323094367981
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5056858678490092,
+              "final_object_position": [
+                0.20607705414295197,
+                0.14944735169410706,
+                0.8438429832458496
+              ],
+              "final_stages": [
+                0.00018923347305136451,
+                0.0,
+                0.0,
+                0.002511035310255693
+              ]
+            }
+          }
+        },
+        {
+          "k": 2,
+          "predicted_score": 1.0346351861953735,
+          "true_state_readout_score": 0.9891740083694458,
+          "true_short_score": 0.007807041052728891,
+          "eef_error_mm_by_horizon": [
+            12.052543640136719,
+            21.67376708984375,
+            28.07465934753418,
+            32.52090072631836,
+            37.277347564697266,
+            41.60892868041992,
+            45.308250427246094,
+            48.50676345825195
+          ],
+          "object_error_mm_by_horizon": [
+            12.684610366821289,
+            28.303970336914062,
+            41.29386520385742,
+            52.458518981933594,
+            62.0976676940918,
+            70.86778259277344,
+            78.82450103759766,
+            86.36385345458984
+          ],
+          "predicted_progress_mae": 0.7313566207885742,
+          "true_state_progress_mae": 0.6668016910552979,
+          "predicted_max_risk": 0.0005223905900493264,
+          "true_state_max_risk": 5.799042264698073e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 144,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5734404006927185,
+              "final_object_position": [
+                0.1931464523077011,
+                0.32803231477737427,
+                0.8640038371086121
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 148,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6000874918495771,
+              "final_object_position": [
+                0.1906254142522812,
+                0.3400188982486725,
+                0.8968032598495483
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5455303619197426,
+              "final_object_position": [
+                0.30115705728530884,
+                0.1773533672094345,
+                0.924189031124115
+              ],
+              "final_stages": [
+                8.880556740277213e-05,
+                0.0,
+                0.0,
+                0.0027922420997635636
+              ]
+            }
+          }
+        },
+        {
+          "k": 3,
+          "predicted_score": 1.058459997177124,
+          "true_state_readout_score": 0.9510695338249207,
+          "true_short_score": 0.007014828268438578,
+          "eef_error_mm_by_horizon": [
+            12.052543640136719,
+            21.67376708984375,
+            28.162023544311523,
+            32.1396369934082,
+            35.727718353271484,
+            38.66237258911133,
+            40.80945587158203,
+            42.327239990234375
+          ],
+          "object_error_mm_by_horizon": [
+            12.684610366821289,
+            28.303970336914062,
+            41.770511627197266,
+            53.70951461791992,
+            64.30965423583984,
+            74.16546630859375,
+            83.34432220458984,
+            92.21806335449219
+          ],
+          "predicted_progress_mae": 0.7384235858917236,
+          "true_state_progress_mae": 0.6548255085945129,
+          "predicted_max_risk": 0.0004078477213624865,
+          "true_state_max_risk": 4.891102435067296e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 143,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5793895933827802,
+              "final_object_position": [
+                0.20040476322174072,
+                0.33264443278312683,
+                0.8875666260719299
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 153,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5939578684067544,
+              "final_object_position": [
+                0.1987845003604889,
+                0.3454928398132324,
+                0.86106938123703
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": true,
+              "end_step": 147,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6157927679810903,
+              "final_object_position": [
+                0.1588919758796692,
+                0.42105352878570557,
+                0.8825516700744629
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "demo": "demo_179",
+      "step": 109,
+      "reasons": [
+        "first_override_while_grasping"
+      ],
+      "selected": 0,
+      "fallback": 2,
+      "initial_stages": [
+        0.08655099785770914,
+        0.35,
+        0.3769089486464118,
+        0.3769221417688796
+      ],
+      "predicted_scores": [
+        0.8141422271728516,
+        0.8029710054397583,
+        0.7770721912384033,
+        0.72780442237854
+      ],
+      "true_state_readout_scores": [
+        0.5033182501792908,
+        0.5173680186271667,
+        0.5329087376594543,
+        0.5183734893798828
+      ],
+      "true_short_scores": [
+        0.7188090682029724,
+        0.7137972712516785,
+        0.687900722026825,
+        0.6443259716033936
+      ],
+      "predicted_advantage_vs_k2": 0.03707003593444824,
+      "true_state_readout_advantage_vs_k2": -0.029590487480163574,
+      "true_advantage_vs_k2": 0.03090834617614746,
+      "raw_winners": {
+        "predicted": 0,
+        "true_state_readout": 2,
+        "true_short": 0
+      },
+      "gated_winners": {
+        "predicted": 0,
+        "true_state_readout": 2,
+        "true_short": 0
+      },
+      "candidates": [
+        {
+          "k": 0,
+          "predicted_score": 0.8141422271728516,
+          "true_state_readout_score": 0.5033182501792908,
+          "true_short_score": 0.7188090682029724,
+          "eef_error_mm_by_horizon": [
+            13.741084098815918,
+            25.722370147705078,
+            36.76829528808594,
+            47.494163513183594,
+            57.97883605957031,
+            68.17686462402344,
+            78.11109924316406,
+            87.80935668945312
+          ],
+          "object_error_mm_by_horizon": [
+            12.963493347167969,
+            25.59261131286621,
+            38.16230392456055,
+            50.495941162109375,
+            62.46569061279297,
+            74.09842681884766,
+            85.46209716796875,
+            96.63116455078125
+          ],
+          "predicted_progress_mae": 0.0514308325946331,
+          "true_state_progress_mae": 0.10151977837085724,
+          "predicted_max_risk": 9.201722423313186e-05,
+          "true_state_max_risk": 6.949711678316817e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4309713248426014,
+              "final_object_position": [
+                0.21838845312595367,
+                0.1018175333738327,
+                0.8437997102737427
+              ],
+              "final_stages": [
+                0.034512546871289865,
+                0.0,
+                0.0,
+                0.0009617942944862177
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5005332506113944,
+              "final_object_position": [
+                0.3593606650829315,
+                0.25563958287239075,
+                0.02480781450867653
+              ],
+              "final_stages": [
+                1.5223282523457727e-09,
+                0.0,
+                0.0,
+                0.004992132799999326
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5142371806222426,
+              "final_object_position": [
+                0.2365807443857193,
+                0.176521897315979,
+                0.8594531416893005
+              ],
+              "final_stages": [
+                6.859981677378447e-05,
+                0.0,
+                0.0,
+                0.004037431753897479
+              ]
+            }
+          }
+        },
+        {
+          "k": 1,
+          "predicted_score": 0.8029710054397583,
+          "true_state_readout_score": 0.5173680186271667,
+          "true_short_score": 0.7137972712516785,
+          "eef_error_mm_by_horizon": [
+            13.741084098815918,
+            25.722370147705078,
+            36.708274841308594,
+            47.250511169433594,
+            57.610504150390625,
+            67.78607177734375,
+            77.76289367675781,
+            87.60591125488281
+          ],
+          "object_error_mm_by_horizon": [
+            12.963493347167969,
+            25.59261131286621,
+            37.86988830566406,
+            49.78923034667969,
+            61.52254104614258,
+            73.08148956298828,
+            84.47651672363281,
+            95.76333618164062
+          ],
+          "predicted_progress_mae": 0.05010131374001503,
+          "true_state_progress_mae": 0.09357012063264847,
+          "predicted_max_risk": 9.201722423313186e-05,
+          "true_state_max_risk": 6.949711678316817e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4290519968589588,
+              "final_object_position": [
+                0.45211783051490784,
+                -0.04307321086525917,
+                0.024838775396347046
+              ],
+              "final_stages": [
+                1.0691121210548716e-09,
+                0.0,
+                0.0,
+                1.3948252647355549e-05
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5002993697342702,
+              "final_object_position": [
+                0.5776068568229675,
+                0.5048195123672485,
+                0.02483978495001793
+              ],
+              "final_stages": [
+                3.7483752768352477e-10,
+                0.0,
+                0.0,
+                0.00015233221686801186
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5139318284790491,
+              "final_object_position": [
+                0.24644602835178375,
+                0.19268110394477844,
+                0.8614804148674011
+              ],
+              "final_stages": [
+                1.3472025162108991e-09,
+                0.0,
+                0.0,
+                0.00530718878407319
+              ]
+            }
+          }
+        },
+        {
+          "k": 2,
+          "predicted_score": 0.7770721912384033,
+          "true_state_readout_score": 0.5329087376594543,
+          "true_short_score": 0.687900722026825,
+          "eef_error_mm_by_horizon": [
+            13.741084098815918,
+            25.722370147705078,
+            36.763973236083984,
+            47.14725112915039,
+            57.29439926147461,
+            67.23655700683594,
+            76.9890365600586,
+            86.62044525146484
+          ],
+          "object_error_mm_by_horizon": [
+            12.963493347167969,
+            25.59261131286621,
+            37.57630157470703,
+            48.96759033203125,
+            60.28487014770508,
+            71.51495361328125,
+            82.6274185180664,
+            93.59941864013672
+          ],
+          "predicted_progress_mae": 0.04898275434970856,
+          "true_state_progress_mae": 0.07999470829963684,
+          "predicted_max_risk": 9.201722423313186e-05,
+          "true_state_max_risk": 6.949711678316817e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4256864884993687,
+              "final_object_position": [
+                0.22212083637714386,
+                0.07631272077560425,
+                0.8619645237922668
+              ],
+              "final_stages": [
+                1.8957738755487342e-07,
+                0.0,
+                0.0,
+                0.0005756366914107191
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5001300557296025,
+              "final_object_position": [
+                0.3589736223220825,
+                0.033589862287044525,
+                0.02469559945166111
+              ],
+              "final_stages": [
+                5.074524578319029e-10,
+                0.0,
+                0.0,
+                0.00012710571117988676
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5138066550525991,
+              "final_object_position": [
+                0.245174378156662,
+                0.2259472906589508,
+                0.8516213297843933
+              ],
+              "final_stages": [
+                0.00019492296568462963,
+                0.0,
+                0.0,
+                0.010058997256503985
+              ]
+            }
+          }
+        },
+        {
+          "k": 3,
+          "predicted_score": 0.72780442237854,
+          "true_state_readout_score": 0.5183734893798828,
+          "true_short_score": 0.6443259716033936,
+          "eef_error_mm_by_horizon": [
+            13.741084098815918,
+            25.722370147705078,
+            37.25059509277344,
+            48.43938064575195,
+            59.526615142822266,
+            70.46473693847656,
+            81.20130920410156,
+            91.72635650634766
+          ],
+          "object_error_mm_by_horizon": [
+            12.963493347167969,
+            25.59261131286621,
+            37.85911560058594,
+            49.82896041870117,
+            61.936161041259766,
+            73.98290252685547,
+            85.90980529785156,
+            97.66522216796875
+          ],
+          "predicted_progress_mae": 0.04513747617602348,
+          "true_state_progress_mae": 0.07161916047334671,
+          "predicted_max_risk": 0.0001010744963423349,
+          "true_state_max_risk": 6.949711678316817e-05,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4208685670231071,
+              "final_object_position": [
+                0.23484694957733154,
+                0.08113675564527512,
+                0.8634141087532043
+              ],
+              "final_stages": [
+                0.0016754442745546495,
+                0.0,
+                0.0,
+                0.0006184096198736276
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.45967203262902473,
+              "final_object_position": [
+                0.4760391414165497,
+                0.07822710275650024,
+                0.024688946083188057
+              ],
+              "final_stages": [
+                2.1036339337143772e-11,
+                0.0,
+                0.0,
+                7.743869866205787e-05
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5142106147909892,
+              "final_object_position": [
+                0.24667273461818695,
+                0.19253140687942505,
+                0.8615720868110657
+              ],
+              "final_stages": [
+                1.6870420221914983e-07,
+                0.0,
+                0.0,
+                0.00528655774496709
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "demo": "demo_179",
+      "step": 160,
+      "reasons": [
+        "largest_predicted_advantage"
+      ],
+      "selected": 0,
+      "fallback": 2,
+      "initial_stages": [
+        0.08691330568906892,
+        0.35,
+        0.49364680098411984,
+        0.5007394468530421
+      ],
+      "predicted_scores": [
+        0.8826518058776855,
+        0.42212653160095215,
+        0.23154714703559875,
+        0.029315590858459473
+      ],
+      "true_state_readout_scores": [
+        0.25892898440361023,
+        0.26964643597602844,
+        0.26795849204063416,
+        0.2964121401309967
+      ],
+      "true_short_scores": [
+        -0.34639856219291687,
+        -0.3575857877731323,
+        -0.3543231189250946,
+        -0.36703506112098694
+      ],
+      "predicted_advantage_vs_k2": 0.6511046886444092,
+      "true_state_readout_advantage_vs_k2": -0.009029507637023926,
+      "true_advantage_vs_k2": 0.007924556732177734,
+      "raw_winners": {
+        "predicted": 0,
+        "true_state_readout": 3,
+        "true_short": 0
+      },
+      "gated_winners": {
+        "predicted": 0,
+        "true_state_readout": 3,
+        "true_short": 2
+      },
+      "candidates": [
+        {
+          "k": 0,
+          "predicted_score": 0.8826518058776855,
+          "true_state_readout_score": 0.25892898440361023,
+          "true_short_score": -0.34639856219291687,
+          "eef_error_mm_by_horizon": [
+            13.579352378845215,
+            24.057071685791016,
+            31.856782913208008,
+            38.36969757080078,
+            49.81603240966797,
+            65.06349182128906,
+            79.27176666259766,
+            98.4384994506836
+          ],
+          "object_error_mm_by_horizon": [
+            22.269620895385742,
+            41.55328369140625,
+            57.989681243896484,
+            68.98371887207031,
+            78.84977722167969,
+            102.47846984863281,
+            122.46380615234375,
+            152.10232543945312
+          ],
+          "predicted_progress_mae": 0.5067272186279297,
+          "true_state_progress_mae": 0.3445722162723541,
+          "predicted_max_risk": 0.7370533347129822,
+          "true_state_max_risk": 0.9997723698616028,
+          "true_max_risk": 1.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.2512461245059967,
+                0.18968208134174347,
+                0.8651611804962158
+              ],
+              "final_stages": [
+                6.479437293704926e-07,
+                0.0,
+                0.0,
+                0.004899565421741791
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.23674504458904266,
+                0.1791948676109314,
+                0.85945063829422
+              ],
+              "final_stages": [
+                3.6333085096873497e-06,
+                0.0,
+                0.0,
+                0.004245426595852252
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.2365807443857193,
+                0.176521897315979,
+                0.8594531416893005
+              ],
+              "final_stages": [
+                6.859981677378447e-05,
+                0.0,
+                0.0,
+                0.004037431753897479
+              ]
+            }
+          }
+        },
+        {
+          "k": 1,
+          "predicted_score": 0.42212653160095215,
+          "true_state_readout_score": 0.26964643597602844,
+          "true_short_score": -0.3575857877731323,
+          "eef_error_mm_by_horizon": [
+            13.579352378845215,
+            24.057071685791016,
+            31.889013290405273,
+            38.32792663574219,
+            49.00337219238281,
+            57.401607513427734,
+            57.81149673461914,
+            55.82307815551758
+          ],
+          "object_error_mm_by_horizon": [
+            22.269620895385742,
+            41.55328369140625,
+            58.051979064941406,
+            67.60186004638672,
+            72.52391815185547,
+            84.59221649169922,
+            89.0013198852539,
+            86.01152801513672
+          ],
+          "predicted_progress_mae": 0.4330308437347412,
+          "true_state_progress_mae": 0.3556998372077942,
+          "predicted_max_risk": 0.9920387268066406,
+          "true_state_max_risk": 0.9997907280921936,
+          "true_max_risk": 1.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.2514949142932892,
+                0.18673554062843323,
+                0.8651871681213379
+              ],
+              "final_stages": [
+                3.5163700076168425e-06,
+                0.0,
+                0.0,
+                0.004624995128838271
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.23725275695323944,
+                0.16514621675014496,
+                0.8594470620155334
+              ],
+              "final_stages": [
+                9.487906170292383e-05,
+                0.0,
+                0.0,
+                0.003224982577733603
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.23524963855743408,
+                0.1701296865940094,
+                0.8594468832015991
+              ],
+              "final_stages": [
+                3.566904273848426e-05,
+                0.0,
+                0.0,
+                0.003576785449122965
+              ]
+            }
+          }
+        },
+        {
+          "k": 2,
+          "predicted_score": 0.23154714703559875,
+          "true_state_readout_score": 0.26795849204063416,
+          "true_short_score": -0.3543231189250946,
+          "eef_error_mm_by_horizon": [
+            13.579352378845215,
+            24.057071685791016,
+            31.307552337646484,
+            37.087921142578125,
+            46.86576843261719,
+            52.9906005859375,
+            51.063480377197266,
+            48.99203872680664
+          ],
+          "object_error_mm_by_horizon": [
+            22.269620895385742,
+            41.55328369140625,
+            58.213951110839844,
+            66.89275360107422,
+            68.9059066772461,
+            77.37281799316406,
+            71.3827896118164,
+            61.71699142456055
+          ],
+          "predicted_progress_mae": 0.3877447843551636,
+          "true_state_progress_mae": 0.3541196584701538,
+          "predicted_max_risk": 0.9986507296562195,
+          "true_state_max_risk": 0.9998157620429993,
+          "true_max_risk": 1.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.2505734860897064,
+                0.18984508514404297,
+                0.8638275265693665
+              ],
+              "final_stages": [
+                1.5167677386407342e-06,
+                0.0,
+                0.0,
+                0.004930817498140704
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.25152766704559326,
+                0.18609462678432465,
+                0.8651773929595947
+              ],
+              "final_stages": [
+                1.5954651377825258e-09,
+                0.0,
+                0.0,
+                0.004567771912812101
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.23529212176799774,
+                0.16865520179271698,
+                0.8594424724578857
+              ],
+              "final_stages": [
+                3.501868045836521e-05,
+                0.0,
+                0.0,
+                0.003474867922904389
+              ]
+            }
+          }
+        },
+        {
+          "k": 3,
+          "predicted_score": 0.029315590858459473,
+          "true_state_readout_score": 0.2964121401309967,
+          "true_short_score": -0.36703506112098694,
+          "eef_error_mm_by_horizon": [
+            13.579352378845215,
+            24.057071685791016,
+            30.349281311035156,
+            33.915523529052734,
+            39.81181335449219,
+            39.7297477722168,
+            29.78288459777832,
+            26.184499740600586
+          ],
+          "object_error_mm_by_horizon": [
+            22.269620895385742,
+            41.55328369140625,
+            57.43770217895508,
+            61.96247482299805,
+            55.96236038208008,
+            55.1310920715332,
+            48.448123931884766,
+            41.30625534057617
+          ],
+          "predicted_progress_mae": 0.3337406814098358,
+          "true_state_progress_mae": 0.3661996126174927,
+          "predicted_max_risk": 0.999657154083252,
+          "true_state_max_risk": 0.9997901320457458,
+          "true_max_risk": 1.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.25014498829841614,
+                0.18692514300346375,
+                0.8635562658309937
+              ],
+              "final_stages": [
+                1.1666127269771565e-07,
+                0.0,
+                0.0,
+                0.004671677659035355
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.243712916970253,
+                0.1919853836297989,
+                0.8466418385505676
+              ],
+              "final_stages": [
+                0.0006021912589327272,
+                0.0,
+                0.0,
+                0.005299332457213145
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.4816352099143952,
+              "final_object_position": [
+                0.23469772934913635,
+                0.1649320125579834,
+                0.8594438433647156
+              ],
+              "final_stages": [
+                2.1682742124695677e-05,
+                0.0,
+                0.0,
+                0.0032351126505695263
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "demo": "demo_105",
+      "step": 70,
+      "reasons": [
+        "first_override"
+      ],
+      "selected": 0,
+      "fallback": 2,
+      "initial_stages": [
+        0.07278925508402397,
+        0.0,
+        0.0,
+        2.98184380298494e-08
+      ],
+      "predicted_scores": [
+        0.5003714561462402,
+        0.48233506083488464,
+        0.46060022711753845,
+        0.4502405524253845
+      ],
+      "true_state_readout_scores": [
+        0.4574926495552063,
+        0.88420569896698,
+        0.8712904453277588,
+        0.8670946359634399
+      ],
+      "true_short_scores": [
+        0.47544074058532715,
+        0.06711478531360626,
+        0.05946865677833557,
+        0.05615643411874771
+      ],
+      "predicted_advantage_vs_k2": 0.03977122902870178,
+      "true_state_readout_advantage_vs_k2": -0.4137977957725525,
+      "true_advantage_vs_k2": 0.4159720838069916,
+      "raw_winners": {
+        "predicted": 0,
+        "true_state_readout": 1,
+        "true_short": 0
+      },
+      "gated_winners": {
+        "predicted": 0,
+        "true_state_readout": 2,
+        "true_short": 0
+      },
+      "candidates": [
+        {
+          "k": 0,
+          "predicted_score": 0.5003714561462402,
+          "true_state_readout_score": 0.4574926495552063,
+          "true_short_score": 0.47544074058532715,
+          "eef_error_mm_by_horizon": [
+            3.6739728450775146,
+            5.396107196807861,
+            6.860571384429932,
+            8.771550178527832,
+            9.863543510437012,
+            10.068950653076172,
+            11.195728302001953,
+            14.829018592834473
+          ],
+          "object_error_mm_by_horizon": [
+            4.282636642456055,
+            4.010120868682861,
+            1.8142039775848389,
+            4.080343723297119,
+            7.098354339599609,
+            8.238993644714355,
+            7.424065589904785,
+            6.1245036125183105
+          ],
+          "predicted_progress_mae": 0.08154330402612686,
+          "true_state_progress_mae": 0.0714053362607956,
+          "predicted_max_risk": 0.00025474518770352006,
+          "true_state_max_risk": 0.00024077988928183913,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 131,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6885317806860445,
+              "final_object_position": [
+                0.18978257477283478,
+                0.42713144421577454,
+                0.8589350581169128
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 135,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6739386592141166,
+              "final_object_position": [
+                0.1937515288591385,
+                0.4067526161670685,
+                0.8593461513519287
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": true,
+              "end_step": 131,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6518277901299396,
+              "final_object_position": [
+                0.21013034880161285,
+                0.4273572564125061,
+                0.8627265691757202
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        {
+          "k": 1,
+          "predicted_score": 0.48233506083488464,
+          "true_state_readout_score": 0.88420569896698,
+          "true_short_score": 0.06711478531360626,
+          "eef_error_mm_by_horizon": [
+            3.6739728450775146,
+            5.396107196807861,
+            6.439040184020996,
+            9.199775695800781,
+            10.697914123535156,
+            10.349309921264648,
+            9.485272407531738,
+            10.64222526550293
+          ],
+          "object_error_mm_by_horizon": [
+            4.282636642456055,
+            4.010120868682861,
+            1.5209993124008179,
+            3.0453879833221436,
+            6.272707462310791,
+            14.787261009216309,
+            27.565988540649414,
+            37.654842376708984
+          ],
+          "predicted_progress_mae": 0.173204243183136,
+          "true_state_progress_mae": 0.3381894826889038,
+          "predicted_max_risk": 0.00034228299045935273,
+          "true_state_max_risk": 0.00024077988928183913,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 272,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.6154289336285842,
+              "final_object_position": [
+                0.2090993970632553,
+                0.39339300990104675,
+                0.8858373761177063
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": true,
+              "end_step": 257,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5588961256386138,
+              "final_object_position": [
+                0.2260081171989441,
+                0.32568103075027466,
+                0.889638364315033
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": false,
+              "peak_stage_after_anchor": 0.0733042842606428,
+              "final_object_position": [
+                0.25257137417793274,
+                -0.33440840244293213,
+                0.8629599213600159
+              ],
+              "final_stages": [
+                0.03491619894688785,
+                0.0,
+                0.0,
+                1.525828074777635e-07
+              ]
+            }
+          }
+        },
+        {
+          "k": 2,
+          "predicted_score": 0.46060022711753845,
+          "true_state_readout_score": 0.8712904453277588,
+          "true_short_score": 0.05946865677833557,
+          "eef_error_mm_by_horizon": [
+            3.6739728450775146,
+            5.396107196807861,
+            6.076334476470947,
+            9.031227111816406,
+            10.821817398071289,
+            10.505897521972656,
+            9.542062759399414,
+            9.727768898010254
+          ],
+          "object_error_mm_by_horizon": [
+            4.282636642456055,
+            4.010120868682861,
+            1.358272671699524,
+            3.825636386871338,
+            6.651269912719727,
+            18.106830596923828,
+            32.631595611572266,
+            44.19462585449219
+          ],
+          "predicted_progress_mae": 0.17002713680267334,
+          "true_state_progress_mae": 0.33865460753440857,
+          "predicted_max_risk": 0.00042648505768738687,
+          "true_state_max_risk": 0.00024077988928183913,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": true,
+              "end_step": 278,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.5843387183089729,
+              "final_object_position": [
+                0.2110607773065567,
+                0.4646454453468323,
+                0.861312210559845
+              ],
+              "final_stages": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": false,
+              "peak_stage_after_anchor": 0.0733042842606428,
+              "final_object_position": [
+                0.24347661435604095,
+                -0.3580687344074249,
+                0.843725323677063
+              ],
+              "final_stages": [
+                0.024187710174649102,
+                0.0,
+                0.0,
+                9.631211028704453e-08
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": false,
+              "peak_stage_after_anchor": 0.0733042842606428,
+              "final_object_position": [
+                0.25502073764801025,
+                -0.3446013629436493,
+                0.8437253832817078
+              ],
+              "final_stages": [
+                0.012946972184949746,
+                0.0,
+                0.0,
+                1.2412965275654383e-07
+              ]
+            }
+          }
+        },
+        {
+          "k": 3,
+          "predicted_score": 0.4502405524253845,
+          "true_state_readout_score": 0.8670946359634399,
+          "true_short_score": 0.05615643411874771,
+          "eef_error_mm_by_horizon": [
+            3.6739728450775146,
+            5.396107196807861,
+            5.937004566192627,
+            9.055021286010742,
+            11.10166072845459,
+            11.19632625579834,
+            10.840200424194336,
+            11.31387996673584
+          ],
+          "object_error_mm_by_horizon": [
+            4.282636642456055,
+            4.010120868682861,
+            1.3567520380020142,
+            4.152519702911377,
+            7.233532428741455,
+            18.328304290771484,
+            35.05126190185547,
+            47.2945556640625
+          ],
+          "predicted_progress_mae": 0.168514221906662,
+          "true_state_progress_mae": 0.32702717185020447,
+          "predicted_max_risk": 0.0004913823795504868,
+          "true_state_max_risk": 0.00024077988928183913,
+          "true_max_risk": 0.0,
+          "continuations": {
+            "once_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.35114331340577654,
+              "final_object_position": [
+                0.20751571655273438,
+                -0.19159221649169922,
+                0.8559212684631348
+              ],
+              "final_stages": [
+                0.0650299577270521,
+                0.35,
+                0.3508855824639824,
+                0.3508883443347914
+              ]
+            },
+            "hold8_bc": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": true,
+              "peak_stage_after_anchor": 0.35115824092530434,
+              "final_object_position": [
+                0.24651950597763062,
+                -0.2782008945941925,
+                0.8437745571136475
+              ],
+              "final_stages": [
+                0.030099071442091497,
+                0.0,
+                0.0,
+                4.725783966375018e-07
+              ]
+            },
+            "once_wm": {
+              "success": false,
+              "end_step": 400,
+              "ever_grasped_after_anchor": false,
+              "peak_stage_after_anchor": 0.0733042842606428,
+              "final_object_position": [
+                0.24437010288238525,
+                -0.41696786880493164,
+                0.862517774105072
+              ],
+              "final_stages": [
+                3.109042984172916e-08,
+                0.0,
+                0.0,
+                2.9690635594548093e-08
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "elapsed_s": 274.44401660000005,
+  "sha256": {
+    "reproduction\\candidate_truth_20261012_01\\traces_real\\delay_wm_dev_d2_shift_fbshift_fbi2_gm0.02_score.json": "09c28c0320d5a7d78198c9ab465a0860d03c7bb13de9b1391aef2a25ef014d37",
+    "models\\queuepair_20261012_01_real_s17\\model.pt": "37dc0fe3e5e9de933c97b547d065a2b6d349dd3140a5fb8444328d8ddd34348d",
+    "policy\\bc_chunk_dev_v4\\policy_15000.pt": "ef375a81d5c2a5dce26662c68c2965e1954c736cd824e40085a084073777af14",
+    "data\\can_ph_lowdim_v15.hdf5": "3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962",
+    "data\\splits.json": "f2224a32befddd542c9f35790fcbddeb541a5149c4bf00bfc0b0dff160837cc2",
+    "diagnose_candidate_truth.py": "764eef448ff32427ccedf68729114493307507224adb37029002be615c3fdfb1",
+    "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+    "world_model.py": "ac82be1227b91e43da2df0cbb4cdfe35494068147ee9ec99bc526383bdf1946a",
+    "collect_rollout_branches.py": "134567dce9fd58a395789a4da07b0b0178fa9d1aface607b14f31d6955bb1099",
+    "collect_branches.py": "204f38acd87df3b88d91f8ff31b0e3df94d07aa3b8742383917e974454db8f4b",
+    "evaluate_delay.py": "acecd45a6b0b2ac7c61375c413309f3561e1940886e9585035051057b45ac841",
+    "reproduction\\candidate_truth_20261012_01\\traces_real\\traces\\wm_dev_d2_shift_fbshift_fbi2_gm0.02_score__demo_97.jsonl": "aebff924b83f1c44c55e36c98b0eeb5008a6c3071f341d22c65e404dc93afb0b",
+    "reproduction\\candidate_truth_20261012_01\\traces_real\\traces\\wm_dev_d2_shift_fbshift_fbi2_gm0.02_score__demo_179.jsonl": "f70aba7e2a3fde29f2dda0bb14596433121d22d997da50f469af2d2f7134f40a",
+    "reproduction\\candidate_truth_20261012_01\\traces_real\\traces\\wm_dev_d2_shift_fbshift_fbi2_gm0.02_score__demo_105.jsonl": "c2cefac52f42af4032450da9820a859358ea695a0140919ed5eb6e60a069ca20"
+  }
+}

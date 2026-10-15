@@ -1,0 +1,59 @@
+"""Combine confirmation evidence and existing development ablations for readiness."""
+import json,csv
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];RUN=Path(__file__).resolve().parent
+
+def main():
+    data=json.loads((RUN/'analysis/analysis.json').read_text());rows=data['summary'];paired=data['paired']
+    def summary(m,c):return next(r for r in rows if r['method']==m and r['condition']==c)
+    def difference(a,b,c):return next(r for r in paired if r['left']==a and r['right']==b and r['condition']==c)
+    lines=['独立确认完成后的整体评估','',
+        '本轮完成了什么',
+        '冻结原BC k=2、Full与Plain（训练种子17/23/41）；新起点60个，干净及执行噪声0.05两条件，14组840回合全部完成。',
+        '没有使用确认结果重训、换权重、调门限、筛选种子或替换起点。Full与Plain均使用前轮选定的全部三个权重。',
+        '独立性针对冻结方法之后的新初始状态；训练数据仍是固定数据，三种子不是三个独立任务集；840条回合对应60个独立起点。',
+        '', '新确认结果（括号内是三个种子的成功数，每种子60回合）']
+    for c in ('clean','noise005'):
+        bc=summary('bc_k2',c);full=summary('full',c);plain=summary('plain',c)
+        lines.append(f"{c}: BC k=2 {bc['success_s17_or_fixed_bc']}/60={bc['mean_success_percent']:.2f}%；Full {full['mean_success_percent']:.2f}% ({full['success_s17_or_fixed_bc']}/{full['success_s23']}/{full['success_s41']})；Plain {plain['mean_success_percent']:.2f}% ({plain['success_s17_or_fixed_bc']}/{plain['success_s23']}/{plain['success_s41']})。")
+    lines+=['','如何解释']
+    for a,b in [('full','bc_k2'),('plain','bc_k2'),('full','plain')]:
+        for c in ('clean','noise005'):
+            r=difference(a,b,c);lo=r['paired_crossed_bootstrap_low_pp'];hi=r['paired_crossed_bootstrap_high_pp']
+            interpretation='区间跨越或接触零，当前证据不能明确区分增益与样本/训练随机性。' if lo<=0<=hi else ('区间为正，在本轮设置下提供正向证据。' if lo>0 else '区间为负，在本轮设置下提供负向证据。')
+            lines.append(f"{c} {a}−{b}: {r['mean_difference_pp']:+.2f}个百分点，描述性95%配对区间[{lo:+.2f},{hi:+.2f}]。{interpretation}")
+    joint=difference('full','bc_k2','joint_equal_weight')
+    lines += [f"预登记的两条件等权综合指标：Full−BC为{joint['mean_difference_pp']:+.2f}个百分点，描述性95%区间[{joint['paired_crossed_bootstrap_low_pp']:+.2f},{joint['paired_crossed_bootstrap_high_pp']:+.2f}]。这一综合结果提供正向证据，但不能替代分条件结果或排序模块贡献的验证。",
+        'Full在干净条件每个种子都比BC多成功3个、独败0个；噪声下分别多成功3/3/2个、独败均为0。改善集中在少数起点，离散、小样本的percentile bootstrap区间要谨慎解读；不将综合区间为正升级成严格显著性或普遍优势证明。']
+    passed=all(difference('full',b,c)['paired_crossed_bootstrap_low_pp']>0 for b in ('bc_k2','plain') for c in ('clean','noise005'))
+    lines+=['',('Full满足预登记的跨两条件、对BC与Plain均正区间的较强结果标准；解释范围仍限于本任务和已测试条件。' if passed else 'Full尚未满足预登记的较强优势标准：需要在两种条件下相对BC和Plain的配对区间均为正。不能写成已证明完整方法稳定优于强基线和简化模型。'),
+        '区间包含零也不能写成证明方法无用或与基线等效；60个起点和3个训练种子的估计精度有限。六个条件比较全部报告，区间不是多重比较校正后的同时区间。',
+        '开发集与确认集数值变化来自起点集合不同，本轮没有训练新模型；不得写成再次修复算法产生的提升。',
+        '', '结合上一轮公平消融',
+        '上一轮已完成三个匹配训练种子的Full/Plain/参数匹配Direct/只预测，以及同预算评分头续训与校准；同权重去风险项、去门限和H=4也已评估。',
+        '评分头校准的离线误差降低，但相对同预算对照没有稳定闭环改善；门限在加噪开发条件下有有利趋势，但不支持通用安全保证。',
+        '本轮只确认BC、Full、Plain，没有在60个新起点重测Direct、校准等其它消融；它们仍是开发集证据，不能冒充独立确认结果。',
+        'Plain移除排序损失；只有Full−Plain的对比能直接支撑这部分贡献，不能用Full−BC的结果单独证明排序项有效。',
+        '', '项目完整度与本科论文可用性',
+        '1. 工程实现与可复核实验：具备。本项目完成延迟队列、动作块策略、动作条件世界模型、评分/门限规划与仿真闭环；已有状态恢复修复、相同状态候选后果诊断和完整结果记录。',
+        '2. 训练与对照设计：具备本阶段所需证据。已有三个训练种子、公平训练预算/容量对照、开发集消融，以及此次冻结后的新起点确认。',
+        '3. 性能创新：按上面的配对区间限定；不能因工程链路完成就宣布算法优势成立。新颖性亦需单独文献对比，不由成功率表自动证明。',
+        '4. 项目原始协议没有全部完成：弱持续性等探索基线、视觉阶段及更全面的真值排序没有因此自动补齐。可以按正式确定的低维仿真论文范围交代未做项。',
+        '5. 论文与展示：尚未完成交付。当前有提纲和实验材料，未发现项目内的论文正文DOCX/TEX或机器人演示视频。根目录PROGRAM_GUIDE、DELAY_PROTOCOL、RESULTS、STATUS、THESIS_OUTLINE仍含旧k=1/旧成功率表述；旧make_figures并非本轮统计入口。',
+        '6. 范围：23维输入包含物体真值，属于仿真低维状态控制。不能宣称纯视觉、真机安全或跨任务泛化。风险标签主要对应初始已抓持时的失去抓持，并非通用安全概率；门限优势也不是校准过的置信度。',
+        '综合判断：从工程和实验材料看，已有支撑“实现、复现与实验分析”型本科毕业论文的基础；还不能把项目标为最终论文已交付。用户没有提供正式任务书或学校/导师评分标准，因此这里是项目证据评估，不能代替毕业审核。',
+        '', '推荐下一步（保持本轮确认结果封存，不继续追分）',
+        'A. 收束论文题目和主张。建议使用“考虑动作延迟的机器人世界模型控制方法实现与实验分析”这一准确范围，介绍正向趋势、失败案例以及评分/排序的局限。',
+        'B. 新建当前版本的论文材料或带历史归档地统一根目录文档：基线改为BC k=2，三种子开发消融与本轮独立确认分表，所有图表读取原始JSON，标明统计单位和区间。',
+        'C. 完成论文正文、参考文献核验、实验复现说明和机器人演示。演示展示BC与Full/Plain的相同起点，预先声明案例选择规则，保留成功与失败，不能用精选视频替代总体成功率。',
+        'D. 若导师要求论文必须证明显著性能提升，应另开研究版本：先根据配对差异的变异估计所需新样本量并预登记；若改方法，优先验证候选覆盖、训练分支标签区分度和短时评分与长时任务结果的对应关系。不能在这60个确认起点继续调参后仍称独立确认。',
+        '', '本轮产物索引',
+        'report.txt：全部设置、结果与统计说明。summary.csv、per_seed.csv、paired_comparisons.csv、paired_per_seed.csv、episodes.csv：完整数值证据。',
+        'confirmation_success.png/.pdf与paired_effects.png/.pdf：新的可导出图表。',
+        '../design.json、../lock.json：预登记与执行前哈希。../starts.hdf5：全部60个新初始状态及配对噪声。',
+        '../change_manifest.json：最终保存性验证（原文件逐个哈希），../RUN_GUIDE.txt：运行与核验说明。']
+    p=RUN/'analysis/overall_assessment.txt'
+    with p.open('x',encoding='utf-8') as f:f.write('\n'.join(lines)+'\n')
+    print(json.dumps({'assessment_saved':str(p),'full_strong_superiority_rule_met':passed}),flush=True)
+
+if __name__=='__main__':main()

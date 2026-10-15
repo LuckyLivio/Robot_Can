@@ -1,0 +1,219 @@
+{
+  "summaries": {
+    "bc_k2": {
+      "success": 25,
+      "episodes": 30,
+      "mean_steps_failures_capped_400": 168.8,
+      "total_steps": 5064
+    },
+    "repeat": {
+      "success": 24,
+      "episodes": 30,
+      "mean_steps_failures_capped_400": 172.76666666666668,
+      "total_steps": 5183,
+      "pooled_override_fraction": 0.22187922052865136,
+      "step_weighted_mean_decision_ms": 1.0756863399576024
+    },
+    "bc_tail": {
+      "success": 24,
+      "episodes": 30,
+      "mean_steps_failures_capped_400": 178.6,
+      "total_steps": 5358,
+      "pooled_override_fraction": 0.08827920865994775,
+      "step_weighted_mean_decision_ms": 2.461927902204011
+    }
+  },
+  "paired": {
+    "repeat": {
+      "bc_tail_only_success": [
+        "demo_97",
+        "demo_179"
+      ],
+      "reference_only_success": [
+        "demo_124",
+        "demo_26"
+      ],
+      "success_difference": 0,
+      "paired_n": 30
+    },
+    "bc_k2": {
+      "bc_tail_only_success": [],
+      "reference_only_success": [
+        "demo_26"
+      ],
+      "success_difference": -1,
+      "paired_n": 30
+    }
+  },
+  "integration": {
+    "full_dev_previous_results_exact": true,
+    "traces": {
+      "demo_105": {
+        "steps": 130,
+        "compared_fields": 19,
+        "max_absolute_error": 0.0
+      },
+      "demo_124": {
+        "steps": 146,
+        "compared_fields": 19,
+        "max_absolute_error": 0.0
+      },
+      "demo_97": {
+        "steps": 400,
+        "compared_fields": 19,
+        "max_absolute_error": 0.0
+      },
+      "demo_179": {
+        "steps": 400,
+        "compared_fields": 19,
+        "max_absolute_error": 0.0
+      }
+    },
+    "planning_checks": 441
+  },
+  "old_anchor_diagnostic": {
+    "changed_selections": 5,
+    "anchor_count": 7,
+    "bc_tail_score_mae_vs_real_once_bc_h8": 0.5557832614784795,
+    "anchors": [
+      {
+        "anchor": "demo_105_step070",
+        "repeat_selected": 0,
+        "bc_tail_selected": 2,
+        "real_once_bc_success_by_k": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "real_once_bc_h8_scores": [
+          0.45874935388565063,
+          0.06015625223517418,
+          0.05962182953953743,
+          0.05941323563456535
+        ]
+      },
+      {
+        "anchor": "demo_179_step045",
+        "repeat_selected": 0,
+        "bc_tail_selected": 2,
+        "real_once_bc_success_by_k": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "real_once_bc_h8_scores": [
+          0.011007227934896946,
+          0.01154453307390213,
+          0.011716176755726337,
+          0.011528406292200089
+        ]
+      },
+      {
+        "anchor": "demo_179_step109",
+        "repeat_selected": 0,
+        "bc_tail_selected": 2,
+        "real_once_bc_success_by_k": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "real_once_bc_h8_scores": [
+          0.6375741362571716,
+          0.6349291801452637,
+          0.6305772066116333,
+          0.6247385740280151
+        ]
+      },
+      {
+        "anchor": "demo_179_step160",
+        "repeat_selected": 0,
+        "bc_tail_selected": 0,
+        "real_once_bc_success_by_k": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "real_once_bc_h8_scores": [
+          -0.3574048578739166,
+          -0.3584493100643158,
+          -0.3586317300796509,
+          -0.3605930209159851
+        ]
+      },
+      {
+        "anchor": "demo_97_step035",
+        "repeat_selected": 3,
+        "bc_tail_selected": 2,
+        "real_once_bc_success_by_k": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "real_once_bc_h8_scores": [
+          0.12254823744297028,
+          0.12260645627975464,
+          0.1220884770154953,
+          0.12156112492084503
+        ]
+      },
+      {
+        "anchor": "demo_97_step058",
+        "repeat_selected": 0,
+        "bc_tail_selected": 2,
+        "real_once_bc_success_by_k": [
+          false,
+          false,
+          true,
+          true
+        ],
+        "real_once_bc_h8_scores": [
+          0.6750400066375732,
+          0.6740244626998901,
+          0.6724902391433716,
+          0.6702473163604736
+        ]
+      },
+      {
+        "anchor": "demo_97_step090",
+        "repeat_selected": 0,
+        "bc_tail_selected": 0,
+        "real_once_bc_success_by_k": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "real_once_bc_h8_scores": [
+          -0.4062768816947937,
+          -0.4068741202354431,
+          -0.4083932638168335,
+          -0.4078747034072876
+        ]
+      }
+    ],
+    "note": "Old fixed development anchors. BC-tail error includes mismatched imagined actions; actual-action model error conditions on recorded real executed actions. Neither is an independent additive decomposition.",
+    "bc_tail_submission_mae": 0.231217329390347,
+    "bc_tail_eef_error_mm": 31.071408701661444,
+    "bc_tail_object_error_mm": 45.56648562928395,
+    "actual_action_model_eef_error_mm": 26.632426672482065,
+    "actual_action_model_object_error_mm": 38.16365926260395
+  },
+  "source_sha256": {
+    "reproduction\\tailprobe_20261012_01\\repeat\\results.json": "449d3ecb31dea4e9834f79fdf997aaddfc8ea5dff4b566779111b71a8f76345c",
+    "reproduction\\tailprobe_20261012_01\\bc_tail\\results.json": "d2f863facaaa75d4f6e91afb4893607597eaab202a9f88333a3801ef5e384bf0",
+    "models\\fixed_20261011_234708_859_full\\delay_bc_shift_dev_d2_k2.json": "ac7a6bd1042c4e0c55a51157a64334bfc05812585611cd98651595cc261fcfd0",
+    "reproduction\\headcal_20261012_01\\calibrated\\delay_wm_dev_d2_shift_fbshift_fbi2_gm0.02_score.json": "d8555bce7c5d2b435d8ba2c3a86ab49d3ed07fd7e109b2badc8af592866cc9f9"
+  },
+  "decision": "stop_frozen_BC_tail_branch_no_dev_success_gain",
+  "limitations": [
+    "Single trained seed and repeatedly inspected development parents.",
+    "Frozen WM trained using repeated candidate commands; BC-tail changes action sequence distribution.",
+    "BC continuation in imagination is an approximation to future WM replanning.",
+    "No sealed or new confirmation evaluation in this probe."
+  ]
+}

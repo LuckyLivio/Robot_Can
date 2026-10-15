@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "fallback_episodes": 30,
+  "fallback_control_steps_exact": 4807,
+  "geometry_cases": [
+    {
+      "case": "free",
+      "valid": true
+    },
+    {
+      "case": "side_cell",
+      "valid": true
+    },
+    {
+      "case": "divider",
+      "valid": false
+    },
+    {
+      "case": "wall_top",
+      "valid": false
+    },
+    {
+      "case": "outside",
+      "valid": false
+    },
+    {
+      "case": "overlap_endcap",
+      "valid": false
+    }
+  ],
+  "known_side_plans": [
+    {
+      "demo": "demo_6200000",
+      "plan": {
+        "eligible": true,
+        "feasible": true,
+        "baseline_margin_m": -0.013636041095248463,
+        "margin_m": 0.007616360052672744,
+        "height_m": 0.008,
+        "axis_offset_m": 0.0,
+        "tilt_deg": 20.0
+      },
+      "object": [
+        0.01999621093273163,
+        0.3767896890640259,
+        0.8437784910202026
+      ],
+      "axis": [
+        0.9999998297736682,
+        -1.0159024357372926e-05,
+        0.0005833947452059673
+      ]
+    },
+    {
+      "demo": "demo_6200001",
+      "plan": {
+        "eligible": true,
+        "feasible": true,
+        "baseline_margin_m": -0.028631151592321304,
+        "margin_m": 0.007578830519530677,
+        "height_m": 0.008,
+        "axis_offset_m": 0.0,
+        "tilt_deg": 20.0
+      },
+      "object": [
+        0.18497391045093536,
+        0.11179468035697937,
+        0.8437497615814209
+      ],
+      "axis": [
+        0.9999989310729941,
+        -3.136625281702221e-06,
+        0.0014621364611094867
+      ]
+    },
+    {
+      "demo": "demo_6200002",
+      "plan": {
+        "eligible": true,
+        "feasible": false,
+        "baseline_margin_m": -0.06299896278433648
+      },
+      "object": [
+        0.14819695055484772,
+        0.14001475274562836,
+        0.8437837362289429
+      ],
+      "axis": [
+        1.006631607847197e-05,
+        0.9999999151365857,
+        -0.00041185615286182253
+      ]
+    }
+  ],
+  "source_sha256": {
+    "recovery_controller.py": "88ee635f5cefbe30927d549910a5237b82f8275c0ea88da273874c4e7b637ecf",
+    "clearance.py": "9b6e90f85f2e59b464337c8e898f292cec213951eefe1a6e904919a72431a79e",
+    "gripper_geometry.json": "62b3cc5c39077551e89251313831b227e0db84444d7c179a7b00b86c1f724c32"
+  }
+}

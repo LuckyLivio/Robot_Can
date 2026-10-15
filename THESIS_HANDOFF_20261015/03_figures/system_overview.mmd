@@ -1,0 +1,26 @@
+%% Architecture sketch only: not measured predictions or an additional experiment.
+flowchart TD
+    E[PickPlaceCan低维仿真环境] --> O[23维含物体状态观测及观测历史]
+    O --> BC[固定BC动作块候选k为0到3]
+    Q[当前真实D为2动作队列] --> I[真实队列前缀与候选组成H为8想象序列]
+    BC --> I
+    O --> WM[GRU未来状态预测]
+    I --> WM
+    WM --> S[进展和失抓评分及0.02门控]
+    BC --> F[固定k为2回退]
+    F --> S
+    F -->|BC对照直接使用| P
+    S --> P[基础策略提议动作]
+    O --> R[共享规则恢复控制器v5]
+    P --> R
+    R --> D[抓持确认与失抓及无进展检测]
+    D --> N[正常时沿用基础提议]
+    D --> T[有限恢复尝试与剩余步数安排]
+    T --> G[合法区域和侧倒静态间隙筛选]
+    G --> A[接近下降闭合试抬搬运放置释放]
+    N --> U[提交一个动作]
+    A --> U
+    U --> Q
+    Q --> EX[执行队首并加入配对位置噪声]
+    EX --> E
+    B[400控制步上限及最多两次恢复尝试] -.约束.-> R

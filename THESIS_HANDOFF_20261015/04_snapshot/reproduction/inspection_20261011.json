@@ -1,0 +1,632 @@
+{
+  "date": "2026-10-11",
+  "scope": "Read-only source/data/weight audit; no dependency installation, simulation rollout, or training performed.",
+  "source_sha256": {
+    "adaptive_model.py": "9ad2c5331e072949ddbf6752e4bfd7929ba729aa97e610bf47b9c3b497bc7a53",
+    "bootstrap.py": "201f9e364c3b517c99570bec73b61b0ff690e91c2d3c36d46f1ef64f7ed4035a",
+    "collect_branches.py": "204f38acd87df3b88d91f8ff31b0e3df94d07aa3b8742383917e974454db8f4b",
+    "collect_delay_branches.py": "ed6afd36c05562299fbc8030b7a288d5256148e671f362c56eae228b7f9cde97",
+    "collect_response.py": "afff7f6ef984b93d4db54600cb230cfd18256a3a1c79793b933c14d31d6ceca0",
+    "common.py": "8f8c4747bd2fcf9f1d471bdc328322dcae25109f9fe0318b84cb6ef0a7bee734",
+    "download_wheel.py": "bc49ccb5b445c9c812595b7e6b8933aed1ade82828f3b7a4f0d40532c07b9cbc",
+    "evaluate_adaptive.py": "f984f39001e48da0a0da02cfa0a0cbddd631aa8b50a97c33cbfe87d558a669aa",
+    "evaluate_delay.py": "7b7f5d9d79fa5dd83e437a1d16cdf616e06926210fedf7f116f87e37d61c2e42",
+    "evaluate_gated_mpc.py": "7d810807a4f6259de02226564cf4ffe085ef67b2da270abb172f5e01e0ed8beb",
+    "evaluate_policy.py": "29ef27618d922136e8282c2dc71be26c7a5656d40c98bc9fac0fc797aae220d2",
+    "evaluate_state_mpc.py": "ea0aaf1773d206499fc006831f808664296ff3bc83f9f134949428d60cd33a48",
+    "evaluate_task_mpc.py": "fb752acbae0a610a4569c81d6e15cda7dc707d2bdefc2bcce814af1c8842dc2a",
+    "evaluate_world_control.py": "2e3bf4af3bef4e838341afbc3ffe09bfb1504bb0ab274744248b12abf2c4b8da",
+    "fit_linear_response.py": "30badc574f28e5a10dc2fec99d044b5882c5328c7b52ebb8c66aada7a0a8e6c3",
+    "inspect_data.py": "23776feb18d733e21413f653ae1ee315e0923617bed13b25ad7760c7fb276585",
+    "make_figures.py": "898647df114a1e7f210b9442d7622d766eaa9f52578cadd4e3b6f9c570b93024",
+    "queue_v2.py": "d3fb374479e47418342dfc90c9dab7080ae65adb540ff7d54ce1eef81aefa924",
+    "setup_windows.py": "25a3128cb980a0727957132f7b07600d2db75ccc14da59b8c1d954b5001a9d2b",
+    "smoke_env.py": "46be56ac7f36fbf3ed87de7c86a4c724ce095f4d29e879a0521c5d6037d49649",
+    "train_policy.py": "e1537c5eaec2c49c2bdd5b99f166d3823cecf7f31dba3e0a2095139b59b92212",
+    "train_response.py": "a9f39922e91c9bb07fd7e3529993c78ef597507545ae3c1564bf357bb77cbd35",
+    "train_wm_aug_policy.py": "98c8130bd40b1b0b4777f276f37d1d30d70c55d271444a5500e6aaff6ddcdf4c",
+    "train_world.py": "4931798d73f566195545b02134240c4322bad5bd59a8e4ab42f02489a321e101",
+    "world_model.py": "ac82be1227b91e43da2df0cbb4cdfe35494068147ee9ec99bc526383bdf1946a"
+  },
+  "syntax_files_passed": 25,
+  "external_checkpoints": [
+    {
+      "path": "C:\\Users\\Livio\\Desktop\\model.pt",
+      "bytes": 354814,
+      "sha256": "339b9f3e4b4efd3504f6dd945fe4a3a1357cea9691369d850c7b0f85bd05f46d",
+      "identical_project_files": [
+        "models\\full_future_delay2_shift_v0\\model.pt"
+      ],
+      "config": {
+        "method": "full",
+        "dataset": "delay2_shift_v0",
+        "run": "full_future_delay2_shift_v0",
+        "seed": 17,
+        "width": 128,
+        "updates": 3000,
+        "batch": 16,
+        "lr": 0.0003,
+        "rank_weight": 0.2,
+        "risk_weight": 0.5,
+        "future_only": true,
+        "dim": 23,
+        "horizon": 8,
+        "device": "cuda",
+        "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+        "n_groups": 160,
+        "n_candidates": 4,
+        "parameters": 87321
+      },
+      "selected_step": 1000,
+      "dev_metrics": {
+        "mean_regret": 0.006445951144996798,
+        "wrong_pair_rate": 0.34782608695652173,
+        "optimal_within_025": 0.890625,
+        "groups": 64,
+        "nontrivial_pairs": 69,
+        "normalized_state_mse": 0.24881912022829056
+      }
+    },
+    {
+      "path": "C:\\Users\\Livio\\Desktop\\policy_15000.pt",
+      "bytes": 3314174,
+      "sha256": "ef375a81d5c2a5dce26662c68c2965e1954c736cd824e40085a084073777af14",
+      "identical_project_files": [
+        "policy\\bc_chunk_dev_v4\\policy_15000.pt"
+      ],
+      "config": {
+        "seed": 17,
+        "horizon": 8,
+        "width": 512,
+        "updates": 15000,
+        "batch": 256,
+        "lr": 0.0003,
+        "name": "bc_chunk_dev_v4",
+        "architecture": "mlp",
+        "history": 10,
+        "dim": 23,
+        "mixtures": 5,
+        "device": "cuda",
+        "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+        "n_train_windows": 15373
+      },
+      "selected_step": 15000,
+      "dev_metrics": null
+    }
+  ],
+  "splits": {
+    "sizes": {
+      "train": 140,
+      "dev": 30,
+      "sealed_test": 30
+    },
+    "unique_trajectories": 200
+  },
+  "branches": {
+    "train": {
+      "sha256": "7bc42538dce7cf6ab93ff2e6ff0c6d1b8f03bea8ba001b346b3a017fe52b925a",
+      "shapes": {
+        "x": [
+          160,
+          23
+        ],
+        "a": [
+          160,
+          4,
+          8,
+          7
+        ],
+        "y": [
+          160,
+          4,
+          8,
+          23
+        ],
+        "labels": [
+          160,
+          4,
+          8,
+          2
+        ],
+        "parent": [
+          160
+        ],
+        "point": [
+          160
+        ]
+      },
+      "parent_count": 20,
+      "parents_in_split": true,
+      "constant_candidate_commands": true,
+      "first_two_steps_eef_coordinate_max_difference_m": 0.014451693743467331,
+      "median_group_difference_m": 0.005311509128659964,
+      "groups_over_1e_minus_4_m": 160,
+      "interpretation": "Common zero-executed-action prefix is not invariant across candidates in the stored data. Root cause requires simulator replay."
+    },
+    "dev": {
+      "sha256": "00b11c038d0b03db27deebc5e5aafb342d9b48cb9d8671d9b19d5bf34e700b54",
+      "shapes": {
+        "x": [
+          64,
+          23
+        ],
+        "a": [
+          64,
+          4,
+          8,
+          7
+        ],
+        "y": [
+          64,
+          4,
+          8,
+          23
+        ],
+        "labels": [
+          64,
+          4,
+          8,
+          2
+        ],
+        "parent": [
+          64
+        ],
+        "point": [
+          64
+        ]
+      },
+      "parent_count": 8,
+      "parents_in_split": true,
+      "constant_candidate_commands": true,
+      "first_two_steps_eef_coordinate_max_difference_m": 0.012004382908344269,
+      "median_group_difference_m": 0.005054287612438202,
+      "groups_over_1e_minus_4_m": 64,
+      "interpretation": "Common zero-executed-action prefix is not invariant across candidates in the stored data. Root cause requires simulator replay."
+    }
+  },
+  "historical_results": [
+    {
+      "path": "models\\full_future_delay2_shift_v0\\delay_bc_sealed_test_d2.json",
+      "sha256": "714da2f888d32b7cb26a8103baca743cdb7f45f96ba5ba2cc28266f8b6460900",
+      "args": {
+        "method": "bc",
+        "model": "full_future_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "candidates": 6,
+        "horizon": 8,
+        "noise": 0.0,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.0,
+        "fallback": "base",
+        "score_only": false,
+        "candidate_mode": "random"
+      },
+      "episodes": 30,
+      "successes": 17,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 62.19696130009834
+    },
+    {
+      "path": "models\\full_future_delay2_shift_v0\\delay_bc_shift_sealed_test_d2_k1.json",
+      "sha256": "6b1d211054ac1e5d8966efadb64bebe952dfb1da20c4e0f574bb301e8dbb786d",
+      "args": {
+        "method": "bc_shift",
+        "model": "full_future_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "shift_index": 1,
+        "fallback_index": null,
+        "candidates": 6,
+        "horizon": 8,
+        "noise": 0.0,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.0,
+        "fallback": "base",
+        "score_only": false,
+        "candidate_mode": "random"
+      },
+      "episodes": 30,
+      "successes": 21,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 56.367283100029454
+    },
+    {
+      "path": "models\\full_future_delay2_shift_v0\\delay_bc_shift_sealed_test_d2.json",
+      "sha256": "7f7b488c65d84e4cb6849f6839a1f81a97685b011b316fca1f4fd9497ff51ebb",
+      "args": {
+        "method": "bc_shift",
+        "model": "full_future_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "candidates": 6,
+        "horizon": 8,
+        "noise": 0.0,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.0,
+        "fallback": "base",
+        "score_only": false,
+        "candidate_mode": "random"
+      },
+      "episodes": 30,
+      "successes": 22,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 47.05591569992248
+    },
+    {
+      "path": "models\\full_future_delay2_shift_v0\\delay_wm_sealed_test_d2_shift_fbshift_fbi1_gm0.02_score.json",
+      "sha256": "99331f694bb480af44b290bd88af3001cb6c1bfd1afba5262dd9766d76368c65",
+      "args": {
+        "method": "wm",
+        "model": "full_future_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "shift_index": null,
+        "fallback_index": 1,
+        "candidates": 4,
+        "horizon": 8,
+        "noise": 0.0,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.02,
+        "fallback": "shift",
+        "score_only": true,
+        "candidate_mode": "shift"
+      },
+      "episodes": 30,
+      "successes": 23,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 59.06428229995072
+    },
+    {
+      "path": "models\\full_future_delay2_shift_v0\\delay_bc_sealed_test_d2_noise0.05.json",
+      "sha256": "36426a57d95c4f04f09f2913c2e9d858cfea9bda073a25cb3cae5c1728504939",
+      "args": {
+        "method": "bc",
+        "model": "full_future_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "candidates": 6,
+        "horizon": 8,
+        "noise": 0.05,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.0,
+        "fallback": "base",
+        "score_only": false,
+        "candidate_mode": "random"
+      },
+      "episodes": 30,
+      "successes": 19,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 58.884255000040866
+    },
+    {
+      "path": "models\\full_future_delay2_shift_v0\\delay_bc_shift_sealed_test_d2_k1_noise0.05.json",
+      "sha256": "c3dfe2782f321e529179a2fd75410f47569848958f86fb00c3d4e524f357f03a",
+      "args": {
+        "method": "bc_shift",
+        "model": "full_future_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "shift_index": 1,
+        "fallback_index": null,
+        "candidates": 6,
+        "horizon": 8,
+        "noise": 0.05,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.0,
+        "fallback": "base",
+        "score_only": false,
+        "candidate_mode": "random"
+      },
+      "episodes": 30,
+      "successes": 19,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 62.505685300100595
+    },
+    {
+      "path": "models\\full_future_delay2_shift_v0\\delay_bc_shift_sealed_test_d2_noise0.05.json",
+      "sha256": "93b58bc5debb3fe23cca07c37320022cb937a7a027c9c0378117b2d44dfed714",
+      "args": {
+        "method": "bc_shift",
+        "model": "full_future_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "candidates": 6,
+        "horizon": 8,
+        "noise": 0.05,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.0,
+        "fallback": "base",
+        "score_only": false,
+        "candidate_mode": "random"
+      },
+      "episodes": 30,
+      "successes": 24,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 42.269529600511305
+    },
+    {
+      "path": "models\\full_future_delay2_shift_v0\\delay_wm_sealed_test_d2_shift_fbshift_fbi1_gm0.02_noise0.05_score.json",
+      "sha256": "dd3751eea73ef99fb207ad632caf6c3a8b35c2fc4ffc6d68034e9d10cbe07cd9",
+      "args": {
+        "method": "wm",
+        "model": "full_future_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "shift_index": null,
+        "fallback_index": 1,
+        "candidates": 4,
+        "horizon": 8,
+        "noise": 0.05,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.02,
+        "fallback": "shift",
+        "score_only": true,
+        "candidate_mode": "shift"
+      },
+      "episodes": 30,
+      "successes": 23,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 57.521566600189544
+    },
+    {
+      "path": "models\\plain_future_delay2_shift_v0\\delay_wm_sealed_test_d2_shift_fbshift_fbi1_gm0.02_noise0.05_score.json",
+      "sha256": "8699cb0834e1f1cd3110d84538073f7842b68e41136ac19b5a3173d9e2c57390",
+      "args": {
+        "method": "wm",
+        "model": "plain_future_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "shift_index": null,
+        "fallback_index": 1,
+        "candidates": 4,
+        "horizon": 8,
+        "noise": 0.05,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.02,
+        "fallback": "shift",
+        "score_only": true,
+        "candidate_mode": "shift"
+      },
+      "episodes": 30,
+      "successes": 23,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 54.72356999956537
+    },
+    {
+      "path": "models\\direct_delay2_shift_v0\\delay_wm_sealed_test_d2_shift_fbshift_fbi1_gm0.02_noise0.05_score.json",
+      "sha256": "b7aef23ed83620e6decd9de68460a622ca855664bb72a6bea5da3c147add5494",
+      "args": {
+        "method": "wm",
+        "model": "direct_delay2_shift_v0",
+        "policy": "bc_chunk_dev_v4",
+        "policy_checkpoint": "policy_15000.pt",
+        "split": "sealed_test",
+        "episodes": 30,
+        "steps": 400,
+        "delay": 2,
+        "shift_index": null,
+        "fallback_index": 1,
+        "candidates": 4,
+        "horizon": 8,
+        "noise": 0.05,
+        "risk_weight": 0.5,
+        "readout_weight": 0.02,
+        "gate_margin": 0.02,
+        "fallback": "shift",
+        "score_only": true,
+        "candidate_mode": "shift"
+      },
+      "episodes": 30,
+      "successes": 22,
+      "rate_matches_records": true,
+      "demo_set_matches_sealed": true,
+      "unique_demos": 30,
+      "elapsed_s_sum": 50.36298129998613
+    }
+  ],
+  "paired_statistics": {
+    "clean": {
+      "both_win_wm_only_shift_only_both_lose": [
+        20,
+        3,
+        1,
+        6
+      ],
+      "mcnemar_exact_two_sided_p": 0.625
+    },
+    "_noise0.05": {
+      "both_win_wm_only_shift_only_both_lose": [
+        19,
+        4,
+        0,
+        7
+      ],
+      "mcnemar_exact_two_sided_p": 0.125
+    }
+  },
+  "dataset": {
+    "sha256": "3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962",
+    "bytes": 46889752,
+    "trajectories": 200,
+    "transitions": 23207,
+    "split_covers_dataset": true,
+    "env_args": {
+      "env_name": "PickPlaceCan",
+      "env_version": "1.5.1",
+      "type": 1,
+      "env_kwargs": {
+        "has_renderer": false,
+        "has_offscreen_renderer": false,
+        "ignore_done": true,
+        "use_object_obs": true,
+        "use_camera_obs": false,
+        "control_freq": 20,
+        "controller_configs": {
+          "type": "BASIC",
+          "body_parts": {
+            "right": {
+              "type": "OSC_POSE",
+              "input_max": 1,
+              "input_min": -1,
+              "output_max": [
+                0.05,
+                0.05,
+                0.05,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "output_min": [
+                -0.05,
+                -0.05,
+                -0.05,
+                -0.5,
+                -0.5,
+                -0.5
+              ],
+              "kp": 150,
+              "damping": 1,
+              "impedance_mode": "fixed",
+              "kp_limits": [
+                0,
+                300
+              ],
+              "damping_limits": [
+                0,
+                10
+              ],
+              "position_limits": null,
+              "orientation_limits": null,
+              "uncouple_pos_ori": true,
+              "control_delta": true,
+              "interpolation": null,
+              "ramp_ratio": 0.2,
+              "input_ref_frame": "world",
+              "gripper": {
+                "type": "GRIP"
+              }
+            }
+          }
+        },
+        "robots": [
+          "Panda"
+        ],
+        "camera_depths": false,
+        "camera_heights": 84,
+        "camera_widths": 84,
+        "lite_physics": false,
+        "reward_shaping": false
+      }
+    }
+  },
+  "cpu_forward": {
+    "python": "3.11.16 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:36:16) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.14.0+cu130",
+    "numpy": "1.24.4",
+    "h5py": "3.11.0",
+    "policy_shape": [
+      1,
+      8,
+      7
+    ],
+    "future_shape": [
+      1,
+      8,
+      23
+    ],
+    "readout_shape": [
+      1,
+      8,
+      2
+    ],
+    "finite": true
+  },
+  "gpu_probe": {
+    "interpreter": "C:/Users/Livio/miniconda3/python.exe",
+    "torch": "2.9.1+cu130",
+    "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "capability": [
+      12,
+      0
+    ],
+    "matmul_finite": true,
+    "note": "Observed in a separate read-only probe; not the user-created PyCharm environment."
+  },
+  "environment_migration": {
+    "interpreter": "C:\\Users\\Livio\\Desktop\\robot_can\\.venv\\Scripts\\python.exe",
+    "python": "3.10.9",
+    "installed_dependencies_at_inspection": [],
+    "changed_existing_python_files": [
+      "setup_windows.py"
+    ],
+    "setup_windows_current_sha256": "1b561bf126b51dbf24607474d53d6e7054bbf8e9a857fe908cf24631a15e2f37",
+    "other_changes": [
+      "PROGRAM_GUIDE.md environment references only"
+    ],
+    "installation_performed": false
+  }
+}

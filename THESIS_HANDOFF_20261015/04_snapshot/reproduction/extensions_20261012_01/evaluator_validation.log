@@ -1,0 +1,13 @@
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly, otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+{"demo": "demo_105", "success": true, "steps": 250, "peak_stage_reward": 0.5568855286046512, "ever_grasped": true, "delay": 2, "fraction_base_selected": 0.184, "mean_decision_ms": 1.0135991999995895, "elapsed_s": 2.138976199999888, "selection_counts": {"0": 46, "1": 10, "2": 179, "3": 15}, "fraction_fallback_selected": 0.716, "fraction_override": 0.28400000000000003}
+{"demo": "demo_97", "success": false, "steps": 400, "peak_stage_reward": 0.5279569908054668, "ever_grasped": true, "delay": 2, "fraction_base_selected": 0.3275, "mean_decision_ms": 1.0075352500007284, "elapsed_s": 3.4567729999998846, "selection_counts": {"0": 131, "1": 5, "2": 261, "3": 3}, "fraction_fallback_selected": 0.6525, "fraction_override": 0.34750000000000003}
+success_rate 0.5
+{"demo": "demo_105", "success": true, "steps": 250, "peak_stage_reward": 0.5568855286046512, "ever_grasped": true, "delay": 2, "fraction_override": 0.284, "selection_counts": {"0": 46, "1": 10, "2": 179, "3": 15}, "max_score_spread": 0.47122007608413696, "mean_decision_ms": 0.9213031999461236, "elapsed_s": 2.0258368000013434}
+{"demo": "demo_97", "success": false, "steps": 400, "peak_stage_reward": 0.5279569908054668, "ever_grasped": true, "delay": 2, "fraction_override": 0.3475, "selection_counts": {"0": 131, "1": 5, "2": 261, "3": 3}, "max_score_spread": 0.6776676177978516, "mean_decision_ms": 0.9041339999930642, "elapsed_s": 3.2737164000009216}
+Traceback (most recent call last):
+  File "C:\Users\Livio\Desktop\robot_can\reproduction\extensions_20261012_01\validate_evaluator.py", line 65, in <module>
+    if __name__ == '__main__': main()
+  File "C:\Users\Livio\Desktop\robot_can\reproduction\extensions_20261012_01\validate_evaluator.py", line 30, in main
+    assert a[key] == b[key], (key, a[key], b[key])
+AssertionError: ('fraction_override', 0.28400000000000003, 0.284)

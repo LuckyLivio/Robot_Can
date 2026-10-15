@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light"><meta name="description" content="在相同起点与扰动下，对比三种机械臂控制方法。冻结实验，真实仿真回放。">
+  <title>CAN LAB · 机器人预测与控制</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231d1d1f'/%3E%3Cpath d='M42 19a17 17 0 1 0 0 26' fill='none' stroke='white' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css"><script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#demo">跳到机器人演示</a>
+<header class="site-header"><div class="nav-wrap">
+  <a href="#top" class="wordmark" aria-label="CAN LAB 首页"><span class="brand-icon" aria-hidden="true">C</span> CAN LAB<span class="brand-sub">ROBOTICS</span></a>
+  <nav aria-label="主导航"><a href="#demo">对比演示</a><a href="#results">实验结果</a><a href="#evidence">研究记录</a></nav>
+  <span class="release-status"><span></span> 冻结实验 · 01</span>
+</div></header>
+<main id="top">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <p class="eyebrow">PREDICTION IN MOTION</p>
+    <h1 id="hero-title">让预测，先于动作。</h1>
+    <p class="hero-copy">同一台机械臂，同一个起点。<br class="mobile-break">看三种控制方法，如何走向不同的结果。</p>
+    <div class="hero-facts"><span><b>60</b> 个新起点</span><span><b>3</b> 个训练种子</span><span><b>100<span class="unit"> ms</span></b> 指令延迟</span></div>
+  </section>
+
+  <section id="demo" class="demo-section wrap" aria-labelledby="demo-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / OBSERVE</p><h2 id="demo-title">同一起点，三种选择。</h2></div>
+      <div class="segmented" role="group" aria-label="执行条件"><button type="button" data-condition="clean" aria-pressed="true">干净执行</button><button type="button" data-condition="noise005" aria-pressed="false">加入扰动</button></div>
+    </div>
+    <div class="case-tabs" role="group" aria-label="案例类型">
+      <button type="button" data-case="shared_success" aria-pressed="true"><span class="case-num">01</span><span><strong>共同成功</strong><small>强基线也能完成任务</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
+      <button type="button" data-case="full_only_success" aria-pressed="false"><span class="case-num">02</span><span><strong>Full 独胜</strong><small>观察不同动作的后果</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
+      <button type="button" data-case="shared_failure" aria-pressed="false"><span class="case-num">03</span><span><strong>共同未完成</strong><small>保留方法的失败边界</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
+    </div>
+    <div class="theater">
+      <div class="theater-top"><span><i aria-hidden="true"></i> 仿真回放</span><span id="scene-label">同一起点 / 同一时间轴</span><span class="scene-number" id="scene-number">01 / 06</span></div>
+      <video id="player" controls playsinline preload="metadata" aria-label="BC、Full、Plain 同一起点机器人对比视频" aria-describedby="scene-description"></video>
+      <p id="media-error" role="alert" hidden>视频未能加载。请检查本地文件，或使用下方“下载视频”链接打开。</p>
+    </div>
+    <div class="playback-tools"><p id="case-info" aria-live="polite"></p><div class="playback-actions"><button type="button" class="text-button" id="play-button">播放演示 <span aria-hidden="true">▶</span></button><label class="sr-only" for="speed">播放速度</label><select id="speed" aria-label="播放速度"><option value="0.5">0.5× 速度</option><option value="1" selected>1× 速度</option><option value="2">2× 速度</option></select><a id="download" download>下载视频 <span aria-hidden="true">↓</span></a></div></div>
+    <div class="outcomes" id="outcomes" aria-label="当前案例结果"></div>
+    <div class="scene-note"><span class="note-mark" aria-hidden="true">↳</span><p id="scene-description"></p></div>
+    <p class="selection-note">说明性案例：结果已知后按类别选取最小编号，世界模型固定种子 17。包含成功与失败，不计入新的确认样本。</p>
+  </section>
+
+  <section id="results" class="results-section" aria-labelledby="results-title"><div class="wrap">
+    <div class="section-heading"><div><p class="eyebrow">02 / MEASURE</p><h2 id="results-title">看案例，也看全部结果。</h2></div><p class="section-aside">60 个新起点 · 干净与加噪配对<br>Full / Plain 为三个训练种子均值</p></div>
+    <div class="result-grid"><article class="result-card"><div class="result-title"><h3>干净执行</h3><span>σ = 0</span></div><div class="result-bars" id="clean-bars"></div><div class="effect"><strong>+5.00 <small>个百分点</small></strong><p>Full 相对 BC k=2<br>描述性 95% 配对区间 [0.00, 11.67]</p></div></article>
+    <article class="result-card"><div class="result-title"><h3>加入扰动</h3><span>σ = 0.05</span></div><div class="result-bars" id="noise-bars"></div><div class="effect"><strong>+4.44 <small>个百分点</small></strong><p>Full 相对 BC k=2<br>描述性 95% 配对区间 [0.00, 10.00]</p></div></article></div>
+    <p class="result-footnote">成功率：400 步内完成任务。BC 为一个固定权重。每个条件下，Full 与 Plain 各有 3 × 60 条记录，BC 有 60 条；合计 840 回合共享 60 个起点。</p>
+    <div class="conclusion"><p class="eyebrow">WHAT THE EVIDENCE SAYS</p><h3>有正向改善。<br><span>也有明确的证据边界。</span></h3><p>Full 在新起点上的平均成功率高于 BC k=2 和 Plain，但分条件区间仍接触零；排序模块的独立增益尚未确立。精选画面不替代总体统计，也不证明所有场景下都更好。</p><a href="../../confirmation_20261012_01/analysis/report.txt">阅读完整确认结果 <span aria-hidden="true">↗</span></a></div>
+  </div></section>
+
+  <section id="evidence" class="evidence-section wrap" aria-labelledby="evidence-title"><div class="section-heading"><div><p class="eyebrow">03 / UNDERSTAND</p><h2 id="evidence-title">每一个画面，都有来处。</h2></div><a class="quiet-link" href="../../../PROJECT_AUDIT.md">项目完整度报告 ↗</a></div>
+    <div class="principles"><article><span>01</span><h3>一致的比较条件</h3><p>相同初始状态、逐步噪声、相机与时间轴。较早成功的方法停在成功帧，其余继续运行。</p></article><article><span>02</span><h3>真实的动作回放</h3><p>沿用冻结权重。18 次案例回放、4912 个控制步逐步核对；图像仅用于展示。</p></article><article><span>03</span><h3>清晰的实验范围</h3><p>PickPlaceCan 单任务，23 维含物体真值的仿真状态。尚无纯视觉、真机或跨任务结论。</p></article></div>
+    <details><summary>三种方法分别做了什么？<span aria-hidden="true">+</span></summary><div class="detail-body"><p><b>BC k=2：</b>直接执行行为克隆动作块中的第 3 个预测动作，是经过开发比较的强基线；并非读取真实未来。</p><p><b>Full：</b>世界模型预测四个候选的后果，结合进度与抓持丢失评分筛选；相对 k=2 的评分增益不足 0.02 时回退。</p><p><b>Plain：</b>与 Full 使用配对数据和训练预算，移除排序损失，用于检验排序监督是否有独立贡献。</p></div></details>
+    <details><summary>如何解读时间、噪声和失败？<span aria-hidden="true">+</span></summary><div class="detail-body"><p>20 Hz 控制、2 步 FIFO，名义延迟 100 ms；每 2 步取一帧，10 fps 播放，片尾额外停帧 1 秒。画面中的 k 是本步新提交的候选，而非立刻执行的队首命令。</p><p>噪声 σ=0.05 加在实际出队动作的前三个归一化分量，不是 0.05 米的物体位置误差。400 步未成功称为未完成；评分门限并非通用安全保证。</p></div></details>
+    <details><summary>全部案例与原始证据<span aria-hidden="true">+</span></summary><div class="detail-body"><div class="table-scroll" tabindex="0" role="region" aria-label="全部六个案例"><table><thead><tr><th>条件 / 类别</th><th>起点</th><th>BC k=2</th><th>Full</th><th>Plain</th></tr></thead><tbody id="case-table"></tbody></table></div><div class="evidence-links"><a href="../../release_20261012_01/demo_design.json">选例规则 ↗</a><a href="../../release_20261012_01/demo/trace_validation.json">复跑核验 ↗</a><a href="../../release_20261012_01/demo/replay_validation.json">逐步回放核验 ↗</a><a href="../statistics_recomputed.json">本次统计复核 ↗</a><a href="../../../DEMO_GUIDE.md">运行与讲解指南 ↗</a></div></div></details>
+  </section>
+</main>
+<footer class="wrap"><span>CAN LAB / PickPlaceCan</span><p>冻结模型 · 可复核实验 · 2026.10</p><a href="#top" aria-label="返回顶部">回到顶部 ↑</a></footer>
+<noscript><p class="noscript">请启用 JavaScript 以切换视频。也可直接查看<a href="../../release_20261012_01/demo/index.html">上一版演示</a>或<a href="../../../DEMO_GUIDE.md">视频文件清单</a>。</p></noscript>
+</body></html>

@@ -1,0 +1,123 @@
+{
+  "status": "complete",
+  "job": {
+    "id": "v1_geometry",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v1",
+    "dataset": "reproduction/recovery_v2_20261012_01/pilot_starts_fixed.hdf5",
+    "demos": [
+      "demo_4000000",
+      "demo_4000001",
+      "demo_4000002",
+      "demo_4000003"
+    ],
+    "fault_policy": "stationary_open"
+  },
+  "records": [
+    {
+      "demo": "demo_4000000",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.0017571193331922697,
+      "ever_grasped": false,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": false,
+      "stable_hold_steps": 0,
+      "intervention_steps": 0,
+      "intervention_fraction": 0.0,
+      "attempts": 0,
+      "verified_regrasps": 0,
+      "failed_attempts": 0,
+      "phases": {
+        "NORMAL": 400
+      },
+      "events": [],
+      "fault_step": null,
+      "mean_decision_ms": 0.053074499896865746,
+      "original_selection_counts": {
+        "2": 400
+      },
+      "elapsed_s": 2.7523681999991823
+    },
+    {
+      "demo": "demo_4000001",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.0017703024828312208,
+      "ever_grasped": false,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": false,
+      "stable_hold_steps": 0,
+      "intervention_steps": 0,
+      "intervention_fraction": 0.0,
+      "attempts": 0,
+      "verified_regrasps": 0,
+      "failed_attempts": 0,
+      "phases": {
+        "NORMAL": 400
+      },
+      "events": [],
+      "fault_step": null,
+      "mean_decision_ms": 0.05000075004318205,
+      "original_selection_counts": {
+        "2": 400
+      },
+      "elapsed_s": 2.6577195999998366
+    },
+    {
+      "demo": "demo_4000002",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.0006914936435982842,
+      "ever_grasped": false,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": false,
+      "stable_hold_steps": 0,
+      "intervention_steps": 0,
+      "intervention_fraction": 0.0,
+      "attempts": 0,
+      "verified_regrasps": 0,
+      "failed_attempts": 0,
+      "phases": {
+        "NORMAL": 400
+      },
+      "events": [],
+      "fault_step": null,
+      "mean_decision_ms": 0.046463000039693725,
+      "original_selection_counts": {
+        "2": 400
+      },
+      "elapsed_s": 2.5890605000004143
+    },
+    {
+      "demo": "demo_4000003",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.021885247307363714,
+      "ever_grasped": false,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": false,
+      "stable_hold_steps": 0,
+      "intervention_steps": 0,
+      "intervention_fraction": 0.0,
+      "attempts": 0,
+      "verified_regrasps": 0,
+      "failed_attempts": 0,
+      "phases": {
+        "NORMAL": 400
+      },
+      "events": [],
+      "fault_step": null,
+      "mean_decision_ms": 0.04585600002883439,
+      "original_selection_counts": {
+        "2": 400
+      },
+      "elapsed_s": 2.619234300000244
+    }
+  ],
+  "input": "PRIVILEGED_CURRENT_STATE_AND_FIXED_TASK_GOAL",
+  "supervisor_note": "Observation history only. Reward/contact/success are not used in choose(). No learned weight changes."
+}

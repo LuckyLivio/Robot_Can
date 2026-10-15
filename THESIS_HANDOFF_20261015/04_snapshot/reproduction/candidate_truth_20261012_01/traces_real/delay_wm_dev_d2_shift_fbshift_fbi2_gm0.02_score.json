@@ -1,0 +1,124 @@
+{
+  "args": {
+    "method": "wm",
+    "model": "queuepair_20261012_01_real_s17",
+    "policy": "bc_chunk_dev_v4",
+    "policy_checkpoint": "policy_15000.pt",
+    "split": "dev",
+    "episodes": 8,
+    "steps": 400,
+    "delay": 2,
+    "shift_index": null,
+    "fallback_index": 2,
+    "candidates": 4,
+    "horizon": 8,
+    "noise": 0.0,
+    "risk_weight": 0.5,
+    "readout_weight": 0.02,
+    "gate_margin": 0.02,
+    "fallback": "shift",
+    "score_only": true,
+    "candidate_mode": "shift",
+    "demos": [
+      "demo_97",
+      "demo_179",
+      "demo_105"
+    ],
+    "output_dir": "reproduction/candidate_truth_20261012_01/traces_real",
+    "trace": true
+  },
+  "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+  "status": "complete",
+  "resolved_demos": [
+    "demo_97",
+    "demo_179",
+    "demo_105"
+  ],
+  "records": [
+    {
+      "demo": "demo_97",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.5260753955227031,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.0575,
+      "mean_decision_ms": 0.9871249999972064,
+      "elapsed_s": 3.268858199999954,
+      "selection_counts": {
+        "0": 23,
+        "1": 6,
+        "2": 366,
+        "3": 5
+      },
+      "fraction_fallback_selected": 0.915,
+      "fraction_override": 0.08499999999999996
+    },
+    {
+      "demo": "demo_179",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.5142371806222426,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.1625,
+      "mean_decision_ms": 0.9748392500000591,
+      "elapsed_s": 3.271887300000003,
+      "selection_counts": {
+        "0": 65,
+        "2": 330,
+        "3": 5
+      },
+      "fraction_fallback_selected": 0.825,
+      "fraction_override": 0.17500000000000004
+    },
+    {
+      "demo": "demo_105",
+      "success": true,
+      "steps": 131,
+      "peak_stage_reward": 0.6518277901299396,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_base_selected": 0.1984732824427481,
+      "mean_decision_ms": 0.9804305343506976,
+      "elapsed_s": 1.079338000000007,
+      "selection_counts": {
+        "0": 26,
+        "1": 3,
+        "2": 84,
+        "3": 18
+      },
+      "fraction_fallback_selected": 0.6412213740458015,
+      "fraction_override": 0.3587786259541985
+    }
+  ],
+  "success_rate": 0.3333333333333333,
+  "trace_schema_version": 1,
+  "trace_files": {
+    "demo_97": "traces/wm_dev_d2_shift_fbshift_fbi2_gm0.02_score__demo_97.jsonl",
+    "demo_179": "traces/wm_dev_d2_shift_fbshift_fbi2_gm0.02_score__demo_179.jsonl",
+    "demo_105": "traces/wm_dev_d2_shift_fbshift_fbi2_gm0.02_score__demo_105.jsonl"
+  },
+  "provenance": {
+    "sha256": {
+      "data\\can_ph_lowdim_v15.hdf5": "3f2eb92e0a5025d0095e866ac16cc8092d6a762abe27dec90dbaff9027282962",
+      "data\\splits.json": "f2224a32befddd542c9f35790fcbddeb541a5149c4bf00bfc0b0dff160837cc2",
+      "policy\\bc_chunk_dev_v4\\policy_15000.pt": "ef375a81d5c2a5dce26662c68c2965e1954c736cd824e40085a084073777af14",
+      "models\\queuepair_20261012_01_real_s17\\model.pt": "37dc0fe3e5e9de933c97b547d065a2b6d349dd3140a5fb8444328d8ddd34348d",
+      "evaluate_delay.py": "acecd45a6b0b2ac7c61375c413309f3561e1940886e9585035051057b45ac841",
+      "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+      "world_model.py": "ac82be1227b91e43da2df0cbb4cdfe35494068147ee9ec99bc526383bdf1946a",
+      "collect_branches.py": "204f38acd87df3b88d91f8ff31b0e3df94d07aa3b8742383917e974454db8f4b",
+      "data\\branches_train_queuepair_20261012_01_real.npz": "28f9c7bc145d911adbfc290ed6a62ab1d2f82b5c0766f3103fe63a339c6b9a8c",
+      "data\\branches_dev_queuepair_20261012_01_real.npz": "a4e700269544f3c853d014b9a1bcfbb6004c269ba91da6ea53dd953e3fd11a05"
+    },
+    "packages": {
+      "torch": "2.14.1+cu130",
+      "numpy": "1.26.4",
+      "robosuite": "1.5.1",
+      "mujoco": "3.3.0",
+      "h5py": "3.11.0"
+    },
+    "trace_note": "Diagnostic logging adds runtime overhead. Predictions assume constant future candidate commands; actual control replans each step."
+  }
+}

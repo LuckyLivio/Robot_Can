@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "selected_revision": "pilot_v3",
+  "physical_and_equivalence": {
+    "physical": {
+      "open_gap_m": 0.07798957824707031,
+      "closed_gap_m": 0.0020133769139647484,
+      "initial_height_m": 1.0236073732376099,
+      "negative_positive_z_heights_m": [
+        1.0106639862060547,
+        1.0364545583724976
+      ],
+      "rotation_error_before_after_rad": [
+        1.5256871835466257,
+        0.00518392197610561
+      ]
+    },
+    "equivalence": [
+      {
+        "job": "bc_original",
+        "exact_steps": 510,
+        "episodes": 2
+      },
+      {
+        "job": "bc_k2_disabled_noise",
+        "exact_steps": 511,
+        "episodes": 2
+      },
+      {
+        "job": "full_disabled_noise",
+        "exact_steps": 511,
+        "episodes": 2
+      }
+    ],
+    "passed": true,
+    "source_sha256": {
+      "recovery_controller.py": "5d575323e8f53781dbb33a167511421ec4ef90bd228b4fb33a7bca73e8802286",
+      "evaluate_recovery.py": "f9b5eef6f3be41005beb75721d931c88c3063dcc192adcdf6a5738b2379f28ae"
+    }
+  },
+  "training_normal_successes_preserved_without_intervention": 6,
+  "training_natural_failures_rescued": 2,
+  "forced_loss_successes": 2,
+  "held_stall_successes": 1,
+  "full_noisy_train_successes": 2,
+  "trace_audits": [
+    {
+      "job": "bc_forced_loss",
+      "episodes": 2,
+      "controls": 629,
+      "checks": "observation-only replay, FIFO, noise, finite actions, bounded retries, complete traces",
+      "counts": {
+        "demo_54": {
+          "steps": 286,
+          "fault_commands": 12
+        },
+        "demo_133": {
+          "steps": 343,
+          "fault_commands": 12
+        }
+      }
+    },
+    {
+      "job": "bc_k2_disabled_noise",
+      "episodes": 2,
+      "controls": 511,
+      "checks": "observation-only replay, FIFO, noise, finite actions, bounded retries, complete traces",
+      "counts": {
+        "demo_54": {
+          "steps": 111,
+          "fault_commands": 0
+        },
+        "demo_133": {
+          "steps": 400,
+          "fault_commands": 0
+        }
+      }
+    },
+    {
+      "job": "bc_original",
+      "episodes": 8,
+      "controls": 1480,
+      "checks": "observation-only replay, FIFO, noise, finite actions, bounded retries, complete traces",
+      "counts": {
+        "demo_54": {
+          "steps": 110,
+          "fault_commands": 0
+        },
+        "demo_133": {
+          "steps": 400,
+          "fault_commands": 0
+        },
+        "demo_47": {
+          "steps": 110,
+          "fault_commands": 0
+        },
+        "demo_159": {
+          "steps": 400,
+          "fault_commands": 0
+        },
+        "demo_129": {
+          "steps": 103,
+          "fault_commands": 0
+        },
+        "demo_33": {
+          "steps": 110,
+          "fault_commands": 0
+        },
+        "demo_94": {
+          "steps": 125,
+          "fault_commands": 0
+        },
+        "demo_136": {
+          "steps": 122,
+          "fault_commands": 0
+        }
+      }
+    },
+    {
+      "job": "bc_recovery",
+      "episodes": 8,
+      "controls": 1238,
+      "checks": "observation-only replay, FIFO, noise, finite actions, bounded retries, complete traces",
+      "counts": {
+        "demo_54": {
+          "steps": 110,
+          "fault_commands": 0
+        },
+        "demo_133": {
+          "steps": 268,
+          "fault_commands": 0
+        },
+        "demo_47": {
+          "steps": 110,
+          "fault_commands": 0
+        },
+        "demo_159": {
+          "steps": 290,
+          "fault_commands": 0
+        },
+        "demo_129": {
+          "steps": 103,
+          "fault_commands": 0
+        },
+        "demo_33": {
+          "steps": 110,
+          "fault_commands": 0
+        },
+        "demo_94": {
+          "steps": 125,
+          "fault_commands": 0
+        },
+        "demo_136": {
+          "steps": 122,
+          "fault_commands": 0
+        }
+      }
+    },
+    {
+      "job": "full_disabled_noise",
+      "episodes": 2,
+      "controls": 511,
+      "checks": "observation-only replay, FIFO, noise, finite actions, bounded retries, complete traces",
+      "counts": {
+        "demo_54": {
+          "steps": 111,
+          "fault_commands": 0
+        },
+        "demo_133": {
+          "steps": 400,
+          "fault_commands": 0
+        }
+      }
+    },
+    {
+      "job": "full_noisy_recovery",
+      "episodes": 2,
+      "controls": 401,
+      "checks": "observation-only replay, FIFO, noise, finite actions, bounded retries, complete traces",
+      "counts": {
+        "demo_54": {
+          "steps": 111,
+          "fault_commands": 0
+        },
+        "demo_133": {
+          "steps": 290,
+          "fault_commands": 0
+        }
+      }
+    },
+    {
+      "job": "held_stall",
+      "episodes": 1,
+      "controls": 237,
+      "checks": "observation-only replay, FIFO, noise, finite actions, bounded retries, complete traces",
+      "counts": {
+        "demo_54": {
+          "steps": 237,
+          "fault_commands": 0
+        }
+      }
+    }
+  ],
+  "earlier_pilots": "v1 failed; v2 exposed avoidable timeouts. Both complete attempts and source snapshots retained."
+}

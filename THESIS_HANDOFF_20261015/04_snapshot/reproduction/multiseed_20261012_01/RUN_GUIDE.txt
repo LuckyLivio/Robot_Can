@@ -1,0 +1,45 @@
+三个训练种子与公平消融实验：文件与运行说明
+
+本目录只保存新增实验，原项目代码、默认模型、用户权重和历史结果保持原样。
+
+入口
+protocol.json：运行前锁定的实验协议，含数据/脚本/BC哈希、方法差异、预算与统计边界。
+jobs.json：全部15个训练任务（其中3个任务各含两组评分头实验）和60个闭环评估任务的完整命令。
+completed/：每项任务完成时保存的输出校验值。
+logs/：各子进程的完整日志。
+validation.json：新旧评估器1476步干净/噪声轨迹一致性检查。
+training_verification.json：18个选定模型的批次、初始化、选点和冻结检查，以及400步未训练评分头扰动检查。
+evaluations/：60组原始逐回合JSON。每个模型种子/条件都有独立目录。
+offline/：固定64组开发分支的状态预测毫米误差、评分误差和逐时域图，不参与检查点选择。
+analysis/：全部结果完成后生成的汇总CSV、配对统计、PNG/PDF和中文报告。
+sources/：收尾时保存的脚本和共享运行时快照。
+change_manifest.json：收尾时对原文件进行的哈希保护检查。
+
+新权重位于项目models目录
+multiseed_20261012_01_{full,plain,direct,prediction_only}_s{17,23,41}
+multiseed_20261012_01_head_s{seed}_{control,calibrated}_s{seed}
+每个目录包含选定model.pt、全部12个检查点、配置和训练日志。评估只使用按预定开发分支规则选定的model.pt。
+no_risk_score、no_gate、horizon4使用相应种子的同一个Full权重，不另行训练。
+BC k=0/1/2固定使用原policy/bc_chunk_dev_v4/policy_15000.pt，每个噪声条件只评估一次，不制造三个独立BC种子。
+
+重要公平性说明
+Full与Plain初始模型、数据、批次和训练预算相同，仅排序项不同。
+Direct使用87364参数，Full为87321，控制模型容量；结构和计算量仍不同。
+校准组主要与相同额外3000步预算的head_control比较。
+只预测模型以状态MSE选点、物理代价控制，不使用随机头；该对照的评分单位与学习评分不同。
+去风险评分仅去掉部署评分项，并未去除风险训练监督。
+所有回合是开发集结果；本轮没有重新打开sealed_test，也没有执行新的独立确认集。
+
+在PyCharm PowerShell终端完整重跑到新目录
+Set-Location 'C:\Users\Livio\Desktop\robot_can'
+& '.\reproduction\multiseed_20261012_01\rerun.ps1'
+
+脚本自动生成新时间标签，并复制运行脚本、登记协议、验证、训练、评估和汇总，不覆盖本轮结果。
+也可指定一个尚不存在的标签：
+& '.\reproduction\multiseed_20261012_01\rerun.ps1' -Tag 'multiseed_my_repeat_01'
+
+复核与恢复
+run_suite.py会校验注册脚本和已完成结果的SHA256，已完成任务可以安全跳过。
+如果某任务只有日志而没有完成记录，它会停止，要求检查中断原因；不会悄悄覆盖半途输出。
+analyze_suite.py与finalize_suite.py拒绝覆盖已有汇总/源快照。已完成实验需要重做时，使用上面的新目录完整重跑入口。
+报告中的三个成功数依次为种子17、23、41；不能挑最好的一列代表方法。

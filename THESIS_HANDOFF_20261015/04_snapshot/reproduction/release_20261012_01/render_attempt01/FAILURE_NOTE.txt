@@ -1,0 +1,11 @@
+This first render attempt failed visual quality review: only the first OpenGL
+context produced valid camera pixels; later panels were black. Numerical replay
+checks passed, but they do not certify media quality. These files are archived
+for transparency and MUST NOT be used as the final demonstration.
+
+Cause: an old robosuite rendering context was destroyed after creating the next
+context, releasing GL resources while the wrong context was current.
+Fix in the new presentation script only: explicitly make the active context
+current and dispose it before loading the next XML; validate every camera frame
+against an all-black failure. Frozen controller code, models and results are
+unchanged. Final media lives in ../demo/ after successful re-render and review.

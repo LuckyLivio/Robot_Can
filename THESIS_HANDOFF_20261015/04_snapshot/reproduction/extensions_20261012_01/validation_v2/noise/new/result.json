@@ -1,0 +1,64 @@
+{
+  "status": "complete",
+  "job": {
+    "id": "validation",
+    "method": "full",
+    "seed": 17,
+    "noise": 0.05,
+    "candidate_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "horizon": 8,
+    "demos": [
+      "demo_105",
+      "demo_97"
+    ],
+    "full_trace": true
+  },
+  "input": "PRIVILEGED_STATE_DIAGNOSTIC",
+  "records": [
+    {
+      "demo": "demo_105",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.35105564075100326,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_override": 0.07999999999999996,
+      "selection_counts": {
+        "0": 23,
+        "2": 368,
+        "3": 9
+      },
+      "max_score_spread": 0.443981409072876,
+      "mean_decision_ms": 0.9169204999943759,
+      "elapsed_s": 3.422247699998479
+    },
+    {
+      "demo": "demo_97",
+      "success": true,
+      "steps": 98,
+      "peak_stage_reward": 0.564943829714304,
+      "ever_grasped": true,
+      "delay": 2,
+      "fraction_override": 0.26530612244897955,
+      "selection_counts": {
+        "0": 18,
+        "1": 2,
+        "2": 72,
+        "3": 6
+      },
+      "max_score_spread": 0.5960116386413574,
+      "mean_decision_ms": 0.929820408118201,
+      "elapsed_s": 0.7912587999999232
+    }
+  ],
+  "split": "dev",
+  "resolved_demos": [
+    "demo_105",
+    "demo_97"
+  ]
+}

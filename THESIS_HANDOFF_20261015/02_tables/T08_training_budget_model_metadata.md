@@ -1,0 +1,26 @@
+# 模型参数、训练预算和选择 checkpoint
+
+参数/预算表不是策略成功率。base 与额外 head 阶段分别列出；有效可训练参数不一定等于总参数。Full/Plain/Direct/Prediction-only 及校准/控制臂请勿混称一个模型。
+
+完整数值：`T08_training_budget_model_metadata.csv`。Markdown 仅显示约 6 位有效数字。
+
+| method | seed | parameters | effective_trainable_parameters_this_phase | base_update_budget | extra_head_update_budget | base_selected_step | head_selected_step | selected_dev_regret | selected_dev_normalized_state_mse | minibatch_sha256 | condition | independent_N | seed_count |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| full | 17 | 87321 | 87321 | 3000 | 0 | 2750 |  | 0.005316304872394539 | 0.1228566428889399 | 0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| plain | 17 | 87321 | 87321 | 3000 | 0 | 2750 |  | 0.0012242491502547637 | 0.12669791864312213 | 0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| direct | 17 | 87364 | 87364 | 3000 | 0 | 2500 |  | 0.00044879217603011057 |  | 0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| prediction_only | 17 | 87321 | 83991 | 3000 | 0 | 250 |  |  | 0.09554391840229863 | 0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| control | 17 | 87321 | 3330 | 3000 | 3000 | 2750 | 250 | 0.005337189882993698 | 0.1228566428889399 | 0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| calibrated | 17 | 87321 | 3330 | 3000 | 3000 | 2750 | 250 | 0.005364797078073025 | 0.1228566428889399 | 0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| full | 23 | 87321 | 87321 | 3000 | 0 | 1250 |  | 0.0005032380649936385 | 0.12201016363890274 | 3385441fb9494b64b1425bf97e8a4393758cc809d65679eb12281fd16ede9f15 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| plain | 23 | 87321 | 87321 | 3000 | 0 | 2250 |  | 0.0006378896578098647 | 0.15152241872704547 | 3385441fb9494b64b1425bf97e8a4393758cc809d65679eb12281fd16ede9f15 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| direct | 23 | 87364 | 87364 | 3000 | 0 | 2750 |  | 0.000374567047401797 |  | 3385441fb9494b64b1425bf97e8a4393758cc809d65679eb12281fd16ede9f15 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| prediction_only | 23 | 87321 | 83991 | 3000 | 0 | 250 |  |  | 0.09871470928192139 | 3385441fb9494b64b1425bf97e8a4393758cc809d65679eb12281fd16ede9f15 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| control | 23 | 87321 | 3330 | 3000 | 3000 | 1250 | 1500 | 0.00045818998478353024 | 0.12201016363890274 | 3385441fb9494b64b1425bf97e8a4393758cc809d65679eb12281fd16ede9f15 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| calibrated | 23 | 87321 | 3330 | 3000 | 3000 | 1250 | 250 | 0.0005194887053221464 | 0.12201016363890274 | 3385441fb9494b64b1425bf97e8a4393758cc809d65679eb12281fd16ede9f15 | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| full | 41 | 87321 | 87321 | 3000 | 0 | 2750 |  | 0.0001663325383560732 | 0.1266118858171546 | f5f735eec263d92ecd2d5261138cf5fce87e02097561dc4a82af04e9d4b98e8c | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| plain | 41 | 87321 | 87321 | 3000 | 0 | 2500 |  | 0.00103689241950633 | 0.13198496984398883 | f5f735eec263d92ecd2d5261138cf5fce87e02097561dc4a82af04e9d4b98e8c | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| direct | 41 | 87364 | 87364 | 3000 | 0 | 2000 |  | 0.005504220389411785 |  | f5f735eec263d92ecd2d5261138cf5fce87e02097561dc4a82af04e9d4b98e8c | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| prediction_only | 41 | 87321 | 83991 | 3000 | 0 | 250 |  |  | 0.0985987082771633 | f5f735eec263d92ecd2d5261138cf5fce87e02097561dc4a82af04e9d4b98e8c | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| control | 41 | 87321 | 3330 | 3000 | 3000 | 2750 | 250 | 0.00016924436204135418 | 0.1266118858171546 | f5f735eec263d92ecd2d5261138cf5fce87e02097561dc4a82af04e9d4b98e8c | see_row_or_catalog | train_parent20_dev_parent8 | 1 |
+| calibrated | 41 | 87321 | 3330 | 3000 | 3000 | 2750 | 2750 | 0.00016917574976105243 | 0.1266118858171546 | f5f735eec263d92ecd2d5261138cf5fce87e02097561dc4a82af04e9d4b98e8c | see_row_or_catalog | train_parent20_dev_parent8 | 1 |

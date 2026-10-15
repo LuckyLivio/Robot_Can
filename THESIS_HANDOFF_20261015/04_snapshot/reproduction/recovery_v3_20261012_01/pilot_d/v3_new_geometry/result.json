@@ -1,0 +1,606 @@
+{
+  "status": "complete",
+  "job": {
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v3",
+    "id": "v3_new_geometry",
+    "dataset": "reproduction/recovery_v3_20261012_01/pilot_starts.hdf5",
+    "demos": [
+      "demo_6100000",
+      "demo_6100001",
+      "demo_6100002",
+      "demo_6100003"
+    ],
+    "fault_policy": "stationary_open",
+    "force_recovery_at": 80
+  },
+  "records": [
+    {
+      "demo": "demo_6100000",
+      "success": true,
+      "steps": 330,
+      "peak_stage_reward": 0.6403999331652034,
+      "ever_grasped": true,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": true,
+      "stable_hold_steps": 128,
+      "intervention_steps": 251,
+      "intervention_fraction": 0.7606060606060606,
+      "attempts": 1,
+      "verified_regrasps": 1,
+      "failed_attempts": 0,
+      "phases": {
+        "NORMAL": 79,
+        "RETRACT": 8,
+        "ALIGN": 37,
+        "DESCEND": 34,
+        "CLOSE": 18,
+        "TEST_LIFT": 7,
+        "LIFT": 22,
+        "CARRY": 88,
+        "PLACE": 17,
+        "RELEASE": 16,
+        "RETREAT": 4
+      },
+      "events": [
+        {
+          "step": 79,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "diagnostic_forced_start",
+          "attempt": 1,
+          "object_position": [
+            0.22001679241657257,
+            -0.38001352548599243,
+            0.8600550293922424
+          ]
+        },
+        {
+          "step": 87,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.2200307697057724,
+            -0.3799792528152466,
+            0.8600564002990723
+          ]
+        },
+        {
+          "step": 124,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.22003233432769775,
+            -0.379972368478775,
+            0.8600602149963379
+          ]
+        },
+        {
+          "step": 158,
+          "from": "DESCEND",
+          "to": "CLOSE",
+          "reason": "at_grasp_pose",
+          "attempt": 1,
+          "object_position": [
+            0.22002941370010376,
+            -0.3799987733364105,
+            0.8600562810897827
+          ]
+        },
+        {
+          "step": 176,
+          "from": "CLOSE",
+          "to": "TEST_LIFT",
+          "reason": "close_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.21748565137386322,
+            -0.37932848930358887,
+            0.860281229019165
+          ]
+        },
+        {
+          "step": 183,
+          "from": "TEST_LIFT",
+          "to": "LIFT",
+          "reason": "lift_follow_confirmed",
+          "attempt": 1,
+          "object_position": [
+            0.2167445421218872,
+            -0.3793535828590393,
+            0.8868902921676636
+          ]
+        },
+        {
+          "step": 205,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.21512015163898468,
+            -0.3785945773124695,
+            1.0670664310455322
+          ]
+        },
+        {
+          "step": 293,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.1791212409734726,
+            0.36252057552337646,
+            1.0585706233978271
+          ]
+        },
+        {
+          "step": 310,
+          "from": "PLACE",
+          "to": "RELEASE",
+          "reason": "at_release_height",
+          "attempt": 1,
+          "object_position": [
+            0.16398851573467255,
+            0.38050156831741333,
+            0.8898217678070068
+          ]
+        },
+        {
+          "step": 326,
+          "from": "RELEASE",
+          "to": "RETREAT",
+          "reason": "release_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.15743154287338257,
+            0.3769511878490448,
+            0.8600500822067261
+          ]
+        }
+      ],
+      "fault_step": null,
+      "mean_decision_ms": 0.20116151521726736,
+      "original_selection_counts": {
+        "2": 330
+      },
+      "elapsed_s": 2.656462700000702
+    },
+    {
+      "demo": "demo_6100001",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.3510163426449649,
+      "ever_grasped": true,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": false,
+      "stable_hold_steps": 0,
+      "intervention_steps": 213,
+      "intervention_fraction": 0.5325,
+      "attempts": 2,
+      "verified_regrasps": 0,
+      "failed_attempts": 2,
+      "phases": {
+        "NORMAL": 79,
+        "RETRACT": 24,
+        "ALIGN": 49,
+        "DESCEND": 140,
+        "EXHAUSTED": 108
+      },
+      "events": [
+        {
+          "step": 79,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "diagnostic_forced_start",
+          "attempt": 1,
+          "object_position": [
+            0.24000419676303864,
+            -0.4299600422382355,
+            0.8600567579269409
+          ]
+        },
+        {
+          "step": 87,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.23997290432453156,
+            -0.4300330579280853,
+            0.8600582480430603
+          ]
+        },
+        {
+          "step": 128,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.23996755480766296,
+            -0.4299393594264984,
+            0.86006760597229
+          ]
+        },
+        {
+          "step": 199,
+          "from": "DESCEND",
+          "to": "RETRACT",
+          "reason": "phase_timeout",
+          "attempt": 2,
+          "object_position": [
+            0.24089142680168152,
+            -0.4296724796295166,
+            0.8600711822509766
+          ]
+        },
+        {
+          "step": 214,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 2,
+          "object_position": [
+            0.24088625609874725,
+            -0.42967453598976135,
+            0.860068678855896
+          ]
+        },
+        {
+          "step": 222,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 2,
+          "object_position": [
+            0.2408534437417984,
+            -0.42978721857070923,
+            0.8600624799728394
+          ]
+        },
+        {
+          "step": 293,
+          "from": "DESCEND",
+          "to": "EXHAUSTED",
+          "reason": "attempt_limit",
+          "attempt": 2,
+          "object_position": [
+            0.24394448101520538,
+            -0.42909690737724304,
+            0.8600625991821289
+          ]
+        }
+      ],
+      "fault_step": null,
+      "mean_decision_ms": 0.16088700005639112,
+      "original_selection_counts": {
+        "2": 400
+      },
+      "elapsed_s": 3.096127000000706
+    },
+    {
+      "demo": "demo_6100002",
+      "success": true,
+      "steps": 289,
+      "peak_stage_reward": 0.6271816874596426,
+      "ever_grasped": true,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": true,
+      "stable_hold_steps": 81,
+      "intervention_steps": 210,
+      "intervention_fraction": 0.726643598615917,
+      "attempts": 1,
+      "verified_regrasps": 1,
+      "failed_attempts": 0,
+      "phases": {
+        "NORMAL": 79,
+        "RETRACT": 8,
+        "ALIGN": 25,
+        "DESCEND": 45,
+        "CLOSE": 18,
+        "TEST_LIFT": 7,
+        "LIFT": 23,
+        "CARRY": 42,
+        "PLACE": 19,
+        "RELEASE": 17,
+        "RETREAT": 6
+      },
+      "events": [
+        {
+          "step": 79,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "diagnostic_forced_start",
+          "attempt": 1,
+          "object_position": [
+            0.1510208696126938,
+            0.07696617394685745,
+            0.8600575923919678
+          ]
+        },
+        {
+          "step": 87,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.15103939175605774,
+            0.07702320069074631,
+            0.8600624799728394
+          ]
+        },
+        {
+          "step": 112,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.15102361142635345,
+            0.07703275233507156,
+            0.8600602746009827
+          ]
+        },
+        {
+          "step": 157,
+          "from": "DESCEND",
+          "to": "CLOSE",
+          "reason": "at_grasp_pose",
+          "attempt": 1,
+          "object_position": [
+            0.15199299156665802,
+            0.07496259361505508,
+            0.8600559830665588
+          ]
+        },
+        {
+          "step": 175,
+          "from": "CLOSE",
+          "to": "TEST_LIFT",
+          "reason": "close_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.1506456732749939,
+            0.07410275191068649,
+            0.859843373298645
+          ]
+        },
+        {
+          "step": 182,
+          "from": "TEST_LIFT",
+          "to": "LIFT",
+          "reason": "lift_follow_confirmed",
+          "attempt": 1,
+          "object_position": [
+            0.1486455500125885,
+            0.07153972238302231,
+            0.88704913854599
+          ]
+        },
+        {
+          "step": 205,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.14385199546813965,
+            0.07013428956270218,
+            1.067352294921875
+          ]
+        },
+        {
+          "step": 247,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.16710250079631805,
+            0.3727365732192993,
+            1.048736333847046
+          ]
+        },
+        {
+          "step": 267,
+          "from": "PLACE",
+          "to": "RELEASE",
+          "reason": "object_at_goal",
+          "attempt": 1,
+          "object_position": [
+            0.1541525274515152,
+            0.37502768635749817,
+            0.8590902090072632
+          ]
+        },
+        {
+          "step": 283,
+          "from": "RELEASE",
+          "to": "RETREAT",
+          "reason": "release_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.14599885046482086,
+            0.36453741788864136,
+            0.8626613616943359
+          ]
+        }
+      ],
+      "fault_step": null,
+      "mean_decision_ms": 0.18546678207731712,
+      "original_selection_counts": {
+        "2": 289
+      },
+      "elapsed_s": 2.195132900000317
+    },
+    {
+      "demo": "demo_6100003",
+      "success": true,
+      "steps": 273,
+      "peak_stage_reward": 0.6250095413527481,
+      "ever_grasped": true,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": true,
+      "stable_hold_steps": 80,
+      "intervention_steps": 194,
+      "intervention_fraction": 0.7106227106227107,
+      "attempts": 1,
+      "verified_regrasps": 1,
+      "failed_attempts": 0,
+      "phases": {
+        "NORMAL": 79,
+        "RETRACT": 8,
+        "ALIGN": 25,
+        "DESCEND": 30,
+        "CLOSE": 18,
+        "TEST_LIFT": 7,
+        "LIFT": 23,
+        "CARRY": 41,
+        "PLACE": 19,
+        "RELEASE": 17,
+        "RETREAT": 6
+      },
+      "events": [
+        {
+          "step": 79,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "diagnostic_forced_start",
+          "attempt": 1,
+          "object_position": [
+            0.15299884974956512,
+            0.08503790199756622,
+            0.8600592613220215
+          ]
+        },
+        {
+          "step": 87,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.1529683917760849,
+            0.08501692861318588,
+            0.8600571751594543
+          ]
+        },
+        {
+          "step": 112,
+          "from": "ALIGN",
+          "to": "DESCEND",
+          "reason": "aligned_above_object",
+          "attempt": 1,
+          "object_position": [
+            0.15304115414619446,
+            0.08501089364290237,
+            0.860060453414917
+          ]
+        },
+        {
+          "step": 142,
+          "from": "DESCEND",
+          "to": "CLOSE",
+          "reason": "at_grasp_pose",
+          "attempt": 1,
+          "object_position": [
+            0.15349352359771729,
+            0.08431923389434814,
+            0.8600923418998718
+          ]
+        },
+        {
+          "step": 160,
+          "from": "CLOSE",
+          "to": "TEST_LIFT",
+          "reason": "close_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.1525159478187561,
+            0.08323949575424194,
+            0.8599482178688049
+          ]
+        },
+        {
+          "step": 167,
+          "from": "TEST_LIFT",
+          "to": "LIFT",
+          "reason": "lift_follow_confirmed",
+          "attempt": 1,
+          "object_position": [
+            0.1504942625761032,
+            0.0807303935289383,
+            0.887362003326416
+          ]
+        },
+        {
+          "step": 190,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.14477914571762085,
+            0.07840064913034439,
+            1.0672231912612915
+          ]
+        },
+        {
+          "step": 231,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.16614629328250885,
+            0.37185168266296387,
+            1.0480341911315918
+          ]
+        },
+        {
+          "step": 251,
+          "from": "PLACE",
+          "to": "RELEASE",
+          "reason": "object_at_goal",
+          "attempt": 1,
+          "object_position": [
+            0.15287898480892181,
+            0.37379756569862366,
+            0.8601164221763611
+          ]
+        },
+        {
+          "step": 267,
+          "from": "RELEASE",
+          "to": "RETREAT",
+          "reason": "release_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            0.1450497806072235,
+            0.3630595803260803,
+            0.8624634742736816
+          ]
+        }
+      ],
+      "fault_step": null,
+      "mean_decision_ms": 0.16773406600022275,
+      "original_selection_counts": {
+        "2": 273
+      },
+      "elapsed_s": 2.0320560000000114
+    }
+  ],
+  "input": "PRIVILEGED_CURRENT_STATE_AND_FIXED_TASK_GOAL",
+  "supervisor_note": "Observation history only. Reward/contact/success are not used in choose(). No learned weight changes."
+}

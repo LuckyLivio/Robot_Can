@@ -1,0 +1,44 @@
+本次独立确认：confirmation_20261012_01
+
+目的
+冻结既有BC k=2、Full/Plain各三个训练种子，不重训、不换参数，不按新结果挑种子。
+使用预登记的60个全新任务起点与逐步执行噪声。所有结果写入此目录。
+保留原来模型、结果、根目录代码与文档。
+
+已执行顺序
+1. 保存before_manifest.json和design.json（初始状态生成前）。
+2. prepare_states.py：根据登记种子保存starts.hdf5；另存两组QA起点。
+   原生随机生成可精确重现；所有60个起点均保留。
+3. validate_and_lock.py：核对旧开发轨迹、六个模型及噪声，写jobs.json、lock.json。
+   不运行确认策略；lock.json早于全部正式评估。
+4. run_confirmation.py：14组、840回合正式评估。
+5. analyze_confirmation.py：核对完整性、配对统计、生成图表。
+6. finalize_confirmation.py：归档源码与环境，逐文件检查原项目保持不变。
+
+查看结果
+analysis/overall_assessment.txt：当前结论、项目完整度和后续建议。
+analysis/report.txt：完整方法、样本、统计及结果。
+analysis/confirmation_success.png或.pdf：主结果图。
+analysis/paired_effects.png或.pdf：配对差异区间图。
+analysis/per_seed.csv：每个训练种子的结果。
+analysis/episodes.csv：全部840条回合汇总。
+analysis/paired_per_seed.csv：各方法在同一起点上独胜/独败的清单。
+analysis/dev_vs_confirmation.csv：开发集与新确认的描述性对照，未合并数据。
+evaluations/*/results.json：原始结果；traces/内为提前选定的前两个起点的逐步记录。
+
+在PyCharm PowerShell终端验证已完成任务
+Set-Location 'C:\Users\Livio\Desktop\robot_can'
+& '.\.venv\Scripts\python.exe' -X utf8 -B -u '.\reproduction\confirmation_20261012_01\run_confirmation.py'
+
+该命令检查锁定输入以及完成任务输出的哈希，然后跳过已经完成的任务。
+它不会覆盖结果或再次训练。如果存在未完成任务的日志，会报错要求先检查，避免悄悄覆盖失败记录。
+prepare_states、validate_and_lock、analyze及finalize均有防覆盖检查，不要直接重复执行整套。
+
+要另做一次真正的重复运行，应新建实验目录和新输出位置，使用本目录保存的同一starts.hdf5、全部冻结权重及核心评估器。
+不能修改此目录中的lock.json来掩盖变更；若改方法，须建立新版本并重新预登记独立确认起点。
+
+口径
+840条回合共用60个初始状态；BC不是三个独立训练种子。
+三种子模型使用固定的既有训练数据，因此这里只确认新起点下的表现，不能代替更多数据集/任务/训练数据采样的验证。
+低维输入包括物体真值，是仿真状态控制实验，不是纯视觉或真机实验。
+根目录PROGRAM_GUIDE、RESULTS、STATUS、THESIS_OUTLINE等是历史版本；最终论文需按本轮和multiseed_20261012_01证据重新统一。

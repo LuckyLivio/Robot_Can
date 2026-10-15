@@ -1,0 +1,91 @@
+[
+  {
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v3",
+    "id": "v3_train",
+    "demos": [
+      "demo_54",
+      "demo_133",
+      "demo_47",
+      "demo_159",
+      "demo_129",
+      "demo_33",
+      "demo_94",
+      "demo_136"
+    ]
+  },
+  {
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v3",
+    "id": "v3_loss",
+    "demos": [
+      "demo_54",
+      "demo_133"
+    ],
+    "fault": "open_after_verified_lift"
+  },
+  {
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v3",
+    "id": "v3_held_stall",
+    "demos": [
+      "demo_54"
+    ],
+    "fault_policy": "stationary_after_lift"
+  },
+  {
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v3",
+    "id": "v3_old_geometry",
+    "dataset": "reproduction/recovery_v2_20261012_01/pilot_starts_fixed.hdf5",
+    "demos": [
+      "demo_4000000",
+      "demo_4000001",
+      "demo_4000002",
+      "demo_4000003"
+    ],
+    "fault_policy": "stationary_open",
+    "force_recovery_at": 80
+  },
+  {
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.0,
+    "enabled": true,
+    "version": "v3",
+    "id": "v3_new_geometry",
+    "dataset": "reproduction/recovery_v3_20261012_01/pilot_starts.hdf5",
+    "demos": [
+      "demo_6100000",
+      "demo_6100001",
+      "demo_6100002",
+      "demo_6100003"
+    ],
+    "fault_policy": "stationary_open",
+    "force_recovery_at": 80
+  },
+  {
+    "method": "full",
+    "seed": 17,
+    "noise": 0.05,
+    "enabled": true,
+    "version": "v3",
+    "id": "v3_full_noise",
+    "demos": [
+      "demo_54",
+      "demo_133"
+    ]
+  }
+]

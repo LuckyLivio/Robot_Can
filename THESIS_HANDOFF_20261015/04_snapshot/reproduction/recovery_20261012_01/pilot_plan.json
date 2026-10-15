@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-12T04:11:04.701823+00:00",
+  "stage": "engineering_pilot_before_formal_registration",
+  "training_demos": [
+    "demo_54",
+    "demo_133",
+    "demo_47",
+    "demo_159",
+    "demo_129",
+    "demo_33",
+    "demo_94",
+    "demo_136"
+  ],
+  "constraints": [
+    "Preserve all old files",
+    "No training",
+    "D=2 real FIFO never cleared",
+    "400-step total limit",
+    "Current 23D observation and fixed task goal only",
+    "No reward/contact/future in supervisor"
+  ],
+  "pilot_pass": [
+    "Gripper sign and world-axis tests pass",
+    "Disabled supervisor exactly reproduces original BC/Full",
+    "At least one natural training stall or reproducible injected stall rescued to task success",
+    "At least one physically injected loss recovered to task success",
+    "Normal training successes preserved",
+    "No FIFO bypass, event chatter, unbounded retries or output overwrite"
+  ],
+  "formal_if_pass": "30 dev starts x clean/noise0.05 x (fixed BC+recovery, Full seeds17/23/41+same recovery) = 240 episodes. Freeze implementation and thresholds first.",
+  "confirmation": "No use of the previous 60 confirmation starts for tuning or new claims",
+  "attribution": "A shared engineering recovery controller, not a learned world-model improvement"
+}

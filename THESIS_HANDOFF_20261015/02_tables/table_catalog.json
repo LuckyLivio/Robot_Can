@@ -1,0 +1,1553 @@
+{
+  "tables": [
+    {
+      "table": "T01_wm_confirmation_summary.csv",
+      "title": "世界模型独立确认主表",
+      "rows": 9,
+      "cohort": "wm_confirmation_60_new_starts",
+      "independent_N": 60,
+      "seed_count": "row-specific",
+      "scope": "independent_confirmation",
+      "note": "独立确认：60 个全新起点，clean/noise 重用同一批起点；BC 固定权重，Full/Plain 各 3 个训练种子。联合结果等权平均两条件，仍只有 60 个独立起点。区间沿用原有配对交叉 bootstrap。",
+      "sources": [
+        "reproduction/confirmation_20261012_01/analysis/summary.csv"
+      ]
+    },
+    {
+      "table": "T02_wm_confirmation_paired.csv",
+      "title": "世界模型独立确认配对差值",
+      "rows": 9,
+      "cohort": "wm_confirmation_60_new_starts",
+      "independent_N": 60,
+      "seed_count": 3,
+      "scope": "independent_confirmation",
+      "note": "独立确认：60 个全新起点，clean/noise 重用同一批起点；BC 固定权重，Full/Plain 各 3 个训练种子。联合结果等权平均两条件，仍只有 60 个独立起点。区间沿用原有配对交叉 bootstrap。",
+      "sources": [
+        "reproduction/confirmation_20261012_01/analysis/paired_comparisons.csv"
+      ]
+    },
+    {
+      "table": "T03_wm_confirmation_per_seed.csv",
+      "title": "世界模型独立确认逐种子结果与截断步数",
+      "rows": 14,
+      "cohort": "wm_confirmation_60_new_starts",
+      "independent_N": 60,
+      "seed_count": "row-specific",
+      "scope": "independent_confirmation",
+      "note": "独立确认：60 个全新起点，clean/noise 重用同一批起点；BC 固定权重，Full/Plain 各 3 个训练种子。联合结果等权平均两条件，仍只有 60 个独立起点。区间沿用原有配对交叉 bootstrap。",
+      "sources": [
+        "reproduction/confirmation_20261012_01/analysis/per_seed.csv"
+      ]
+    },
+    {
+      "table": "T04_wm_confirmation_paired_per_seed.csv",
+      "title": "世界模型独立确认逐种子不一致起点",
+      "rows": 18,
+      "cohort": "wm_confirmation_60_new_starts",
+      "independent_N": 60,
+      "seed_count": 1,
+      "scope": "independent_confirmation",
+      "note": "独立确认：60 个全新起点，clean/noise 重用同一批起点；BC 固定权重，Full/Plain 各 3 个训练种子。联合结果等权平均两条件，仍只有 60 个独立起点。区间沿用原有配对交叉 bootstrap。",
+      "sources": [
+        "reproduction/confirmation_20261012_01/analysis/paired_per_seed.csv"
+      ]
+    },
+    {
+      "table": "T05_development_all_ablation.csv",
+      "title": "全部开发集方法与公平消融",
+      "rows": 24,
+      "cohort": "development_30_reused_starts",
+      "independent_N": 30,
+      "seed_count": "row-specific",
+      "scope": "development_selection",
+      "note": "反复查看的 30 个开发起点；用于模型/参数选择和消融，不能作为独立泛化确认。各方法的训练种子数见行字段；BC 的 0 表示固定策略且无世界模型训练种子。",
+      "sources": [
+        "reproduction/multiseed_20261012_01/analysis/summary.csv"
+      ]
+    },
+    {
+      "table": "T06_development_paired.csv",
+      "title": "开发集全部配对比较",
+      "rows": 30,
+      "cohort": "development_30_reused_starts",
+      "independent_N": 30,
+      "seed_count": 3,
+      "scope": "development_selection",
+      "note": "反复查看的 30 个开发起点；用于模型/参数选择和消融，不能作为独立泛化确认。各方法的训练种子数见行字段；BC 的 0 表示固定策略且无世界模型训练种子。",
+      "sources": [
+        "reproduction/multiseed_20261012_01/analysis/paired_comparisons.csv"
+      ]
+    },
+    {
+      "table": "T07_development_per_seed.csv",
+      "title": "开发集逐种子结果与控制代价",
+      "rows": 60,
+      "cohort": "development_30_reused_starts",
+      "independent_N": 30,
+      "seed_count": "row-specific",
+      "scope": "development_selection",
+      "note": "反复查看的 30 个开发起点；用于模型/参数选择和消融，不能作为独立泛化确认。各方法的训练种子数见行字段；BC 的 0 表示固定策略且无世界模型训练种子。",
+      "sources": [
+        "reproduction/multiseed_20261012_01/analysis/per_seed.csv"
+      ]
+    },
+    {
+      "table": "T08_training_budget_model_metadata.csv",
+      "title": "模型参数、训练预算和选择 checkpoint",
+      "rows": 18,
+      "cohort": "branch_training_and_selection",
+      "independent_N": "train_parent20_dev_parent8",
+      "seed_count": 1,
+      "scope": "training_metadata",
+      "note": "参数/预算表不是策略成功率。base 与额外 head 阶段分别列出；有效可训练参数不一定等于总参数。Full/Plain/Direct/Prediction-only 及校准/控制臂请勿混称一个模型。",
+      "sources": [
+        "reproduction/multiseed_20261012_01/analysis/model_metadata.csv"
+      ]
+    },
+    {
+      "table": "T09_branch_dataset_statistics.csv",
+      "title": "分支训练开发数据与有效排序对",
+      "rows": 2,
+      "cohort": "fixed_branch_dataset",
+      "independent_N": "row-specific",
+      "seed_count": 0,
+      "scope": "dataset_description",
+      "note": "160/64 是候选分支组数，同一父回合可贡献多个相关组；独立父回合仅 train=20、dev=8。非平凡排序对按真值分差阈值筛选。",
+      "sources": [
+        "reproduction/multiseed_20261012_01/analysis/analysis.json"
+      ]
+    },
+    {
+      "table": "T10_head_calibration_offline.csv",
+      "title": "评分头校准离线指标",
+      "rows": 9,
+      "cohort": "branch_dev_8_parents_64_groups",
+      "independent_N": 8,
+      "seed_count": 1,
+      "scope": "development_mechanism_diagnosis",
+      "note": "评分头校准/继续训练控制臂在已用于选择的开发标签上评估，不构成新测试集效果。MAE/Brier/regret 的单位和输入对象不同。",
+      "sources": [
+        "reproduction/multiseed_20261012_01/analysis/head_calibration_offline.csv"
+      ]
+    },
+    {
+      "table": "T11_development_controller_usage.csv",
+      "title": "开发集候选覆盖与回退比例",
+      "rows": 18,
+      "cohort": "development_30_reused_starts",
+      "independent_N": 30,
+      "seed_count": "row-specific",
+      "scope": "development_selection",
+      "note": "反复查看的 30 个开发起点；用于模型/参数选择和消融，不能作为独立泛化确认。各方法的训练种子数见行字段；BC 的 0 表示固定策略且无世界模型训练种子。",
+      "sources": [
+        "reproduction/multiseed_20261012_01/analysis/controller_usage.csv"
+      ]
+    },
+    {
+      "table": "T12_supplementary_H_K_persistence_oracle.csv",
+      "title": "H、K、持续性和真值候选排序补充诊断",
+      "rows": 22,
+      "cohort": "development_30_reused_starts",
+      "independent_N": 30,
+      "seed_count": "row-specific",
+      "scope": "development_supplementary_diagnosis",
+      "note": "补充开发诊断：复用 30 个已知起点。H/K 的结果依赖既有 D=2、门控和 k=2 回退；H=1、K=1、持续性基线始终回退。K=8 超出训练时 K=0..3 候选支持。oracle 只对既定候选用真值排序，不是全局最优控制器。",
+      "sources": [
+        "reproduction/extensions_20261012_01/analysis/summary.json"
+      ]
+    },
+    {
+      "table": "T13_supplementary_paired.csv",
+      "title": "补充诊断配对差值",
+      "rows": 22,
+      "cohort": "development_30_reused_starts",
+      "independent_N": 30,
+      "seed_count": "row-specific",
+      "scope": "development_supplementary_diagnosis",
+      "note": "补充开发诊断：复用 30 个已知起点。H/K 的结果依赖既有 D=2、门控和 k=2 回退；H=1、K=1、持续性基线始终回退。K=8 超出训练时 K=0..3 候选支持。oracle 只对既定候选用真值排序，不是全局最优控制器。",
+      "sources": [
+        "reproduction/extensions_20261012_01/analysis/paired_comparisons.csv"
+      ]
+    },
+    {
+      "table": "T14_offline_prediction_metrics.csv",
+      "title": "离线预测：Full、Plain 与持续性",
+      "rows": 9,
+      "cohort": "branch_dev_8_parents_64_groups",
+      "independent_N": 8,
+      "seed_count": 1,
+      "scope": "development_offline_diagnosis",
+      "note": "现有分支开发集已用于 checkpoint 选择；64 个相关分支组来自 8 个父回合。归一化状态 MSE、位置 RMSE、评分 regret 分别反映不同性质；不可把它们混画成同单位损失。",
+      "sources": [
+        "reproduction/extensions_20261012_01/offline_metrics.json"
+      ]
+    },
+    {
+      "table": "T15_prediction_error_by_horizon.csv",
+      "title": "逐预测时域状态误差",
+      "rows": 72,
+      "cohort": "branch_dev_8_parents_64_groups",
+      "independent_N": 8,
+      "seed_count": 1,
+      "scope": "development_offline_diagnosis",
+      "note": "现有分支开发集已用于 checkpoint 选择；64 个相关分支组来自 8 个父回合。归一化状态 MSE、位置 RMSE、评分 regret 分别反映不同性质；不可把它们混画成同单位损失。",
+      "sources": [
+        "reproduction/extensions_20261012_01/offline_metrics.json"
+      ]
+    },
+    {
+      "table": "T16_offline_scoring_and_ranking.csv",
+      "title": "预测状态评分与真值状态评分",
+      "rows": 18,
+      "cohort": "branch_dev_8_parents_64_groups",
+      "independent_N": 8,
+      "seed_count": 1,
+      "scope": "development_offline_diagnosis",
+      "note": "现有分支开发集已用于 checkpoint 选择；64 个相关分支组来自 8 个父回合。归一化状态 MSE、位置 RMSE、评分 regret 分别反映不同性质；不可把它们混画成同单位损失。",
+      "sources": [
+        "reproduction/extensions_20261012_01/offline_metrics.json"
+      ]
+    },
+    {
+      "table": "T17_oracle_offline_reference.csv",
+      "title": "真值候选评分离线参考",
+      "rows": 1,
+      "cohort": "branch_dev_8_parents_64_groups",
+      "independent_N": 8,
+      "seed_count": 0,
+      "scope": "development_offline_diagnosis",
+      "note": "现有分支开发集已用于 checkpoint 选择；64 个相关分支组来自 8 个父回合。归一化状态 MSE、位置 RMSE、评分 regret 分别反映不同性质；不可把它们混画成同单位损失。 oracle 的 raw regret 为候选内参考零；门控仍可能回退而带来非零 gated regret。",
+      "sources": [
+        "reproduction/extensions_20261012_01/offline_metrics.json"
+      ]
+    },
+    {
+      "table": "T18_recovery_main.csv",
+      "title": "v5 confirmation 分条件主表",
+      "rows": 20,
+      "cohort": "recovery_v5_confirmation_60_starts",
+      "independent_N": 60,
+      "seed_count": "row-specific",
+      "scope": "independent_confirmation",
+      "note": "v5 独立确认的 60 个新起点，与 WM 主确认的 60 个起点不是同一批。每版本 480 次执行是 BC 2 条件 + Full 3 种子×2条件；仍只有 60 个独立起点。overall_execution_mix 为预定 8 次执行等权（BC 占1/4、Full占3/4），不能解释成模型等权平均。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_confirmation/summary.json"
+      ]
+    },
+    {
+      "table": "T20_recovery_execution_mix_totals.csv",
+      "title": "v5 confirmation 执行混合总表及净救回",
+      "rows": 5,
+      "cohort": "recovery_v5_confirmation_60_starts",
+      "independent_N": 60,
+      "seed_count": 3,
+      "scope": "independent_confirmation",
+      "note": "v5 独立确认的 60 个新起点，与 WM 主确认的 60 个起点不是同一批。每版本 480 次执行是 BC 2 条件 + Full 3 种子×2条件；仍只有 60 个独立起点。overall_execution_mix 为预定 8 次执行等权（BC 占1/4、Full占3/4），不能解释成模型等权平均。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_confirmation/summary.json"
+      ]
+    },
+    {
+      "table": "T21_recovery_statistical_comparisons.csv",
+      "title": "v5 confirmation 全部估计量及既有区间",
+      "rows": 84,
+      "cohort": "recovery_v5_confirmation_60_starts",
+      "independent_N": 60,
+      "seed_count": "row-specific",
+      "scope": "independent_confirmation",
+      "note": "v5 独立确认的 60 个新起点，与 WM 主确认的 60 个起点不是同一批。每版本 480 次执行是 BC 2 条件 + Full 3 种子×2条件；仍只有 60 个独立起点。overall_execution_mix 为预定 8 次执行等权（BC 占1/4、Full占3/4），不能解释成模型等权平均。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_confirmation/summary.json"
+      ]
+    },
+    {
+      "table": "T19_recovery_confirmation_jobs.csv",
+      "title": "v5 确认逐种子、条件与介入情况",
+      "rows": 40,
+      "cohort": "recovery_v5_confirmation_60_starts",
+      "independent_N": 60,
+      "seed_count": "row-specific",
+      "scope": "independent_confirmation",
+      "note": "v5 独立确认的 60 个新起点，与 WM 主确认的 60 个起点不是同一批。每版本 480 次执行是 BC 2 条件 + Full 3 种子×2条件；仍只有 60 个独立起点。overall_execution_mix 为预定 8 次执行等权（BC 占1/4、Full占3/4），不能解释成模型等权平均。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_confirmation/summary.json"
+      ]
+    },
+    {
+      "table": "T22_recovery_confirmation_paired.csv",
+      "title": "v5 确认逐种子配对救回与退步",
+      "rows": 72,
+      "cohort": "recovery_v5_confirmation_60_starts",
+      "independent_N": 60,
+      "seed_count": "row-specific",
+      "scope": "independent_confirmation",
+      "note": "v5 独立确认的 60 个新起点，与 WM 主确认的 60 个起点不是同一批。每版本 480 次执行是 BC 2 条件 + Full 3 种子×2条件；仍只有 60 个独立起点。overall_execution_mix 为预定 8 次执行等权（BC 占1/4、Full占3/4），不能解释成模型等权平均。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_confirmation/comparisons.csv"
+      ]
+    },
+    {
+      "table": "T23_recovery_main.csv",
+      "title": "v5 dev_a 分条件主表",
+      "rows": 20,
+      "cohort": "recovery_v5_dev_a_30_starts",
+      "independent_N": 30,
+      "seed_count": "row-specific",
+      "scope": "development_selection",
+      "note": "v5 开发比较：30 个复用起点。表含 5 版本共 1,200 条已存在记录，其中 v2/v4 共 480 条为沿用；本阶段只新执行 T/S/v5 720 回合。不是 1,200 个独立样本。区间按起点重采样，3 个固定 Full 种子在起点内平均。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_dev_a/summary.json"
+      ]
+    },
+    {
+      "table": "T24_recovery_execution_mix_totals.csv",
+      "title": "v5 dev_a 执行混合总表及净救回",
+      "rows": 5,
+      "cohort": "recovery_v5_dev_a_30_starts",
+      "independent_N": 30,
+      "seed_count": 3,
+      "scope": "development_selection",
+      "note": "v5 开发比较：30 个复用起点。表含 5 版本共 1,200 条已存在记录，其中 v2/v4 共 480 条为沿用；本阶段只新执行 T/S/v5 720 回合。不是 1,200 个独立样本。区间按起点重采样，3 个固定 Full 种子在起点内平均。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_dev_a/summary.json"
+      ]
+    },
+    {
+      "table": "T25_recovery_statistical_comparisons.csv",
+      "title": "v5 dev_a 全部估计量及既有区间",
+      "rows": 84,
+      "cohort": "recovery_v5_dev_a_30_starts",
+      "independent_N": 30,
+      "seed_count": "row-specific",
+      "scope": "development_selection",
+      "note": "v5 开发比较：30 个复用起点。表含 5 版本共 1,200 条已存在记录，其中 v2/v4 共 480 条为沿用；本阶段只新执行 T/S/v5 720 回合。不是 1,200 个独立样本。区间按起点重采样，3 个固定 Full 种子在起点内平均。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_dev_a/summary.json"
+      ]
+    },
+    {
+      "table": "T26_geometry_stress_strata.csv",
+      "title": "几何压力分层与总表",
+      "rows": 25,
+      "cohort": "geometry_stress_16_manual_starts",
+      "independent_N": "row-specific",
+      "seed_count": 0,
+      "scope": "descriptive_geometry_stress",
+      "note": "手工指定几何压力测试：16 个起点，4 类各 4 个，5 版本共 80 次执行；第 80 步强制恢复，stationary-open 提案。分层描述性数据，无独立泛化显著性结论，不能并入自然策略确认集。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_geometry_confirmation/summary.json"
+      ]
+    },
+    {
+      "table": "T27_geometry_stress_paired.csv",
+      "title": "几何压力配对变化",
+      "rows": 7,
+      "cohort": "geometry_stress_16_manual_starts",
+      "independent_N": 16,
+      "seed_count": 0,
+      "scope": "descriptive_geometry_stress",
+      "note": "手工指定几何压力测试：16 个起点，4 类各 4 个，5 版本共 80 次执行；第 80 步强制恢复，stationary-open 提案。分层描述性数据，无独立泛化显著性结论，不能并入自然策略确认集。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_geometry_confirmation/summary.json"
+      ]
+    },
+    {
+      "table": "T28_recovery_WM_factorial_cells.csv",
+      "title": "世界模型×共享恢复的既有同批 2×2 单元",
+      "rows": 24,
+      "cohort": "separate_historical_factorial_cohorts",
+      "independent_N": "row-specific",
+      "seed_count": "row-specific",
+      "scope": "posthoc_existing_results",
+      "note": "对以前已观察的 v2/v3 确认结果进行事后 2×2 整理：相同起点内比较 WM 开关与恢复开关。三个小表中两个共享 v3 的同一批起点；不能相加当作 180 个独立起点，也不能与最新 v5 批次直接相减。既有 20,000 次配对起点 bootstrap，固定三种子平均、逐点区间。",
+      "sources": [
+        "reproduction/consolidation_20261012_01/factorial_analysis.json"
+      ]
+    },
+    {
+      "table": "T29_recovery_WM_factorial_effects.csv",
+      "title": "世界模型×恢复的主效应与交互",
+      "rows": 30,
+      "cohort": "separate_historical_factorial_cohorts",
+      "independent_N": "row-specific",
+      "seed_count": 3,
+      "scope": "posthoc_existing_results",
+      "note": "对以前已观察的 v2/v3 确认结果进行事后 2×2 整理：相同起点内比较 WM 开关与恢复开关。三个小表中两个共享 v3 的同一批起点；不能相加当作 180 个独立起点，也不能与最新 v5 批次直接相减。既有 20,000 次配对起点 bootstrap，固定三种子平均、逐点区间。",
+      "sources": [
+        "reproduction/consolidation_20261012_01/factorial_analysis.json"
+      ]
+    },
+    {
+      "table": "T30_training_full_checkpoint_metrics.csv",
+      "title": "全量训练开发 checkpoint 曲线数据",
+      "rows": 72,
+      "cohort": "fixed_branch_train_dev_checkpoint_diagnostic",
+      "independent_N": "row-specific",
+      "seed_count": 1,
+      "scope": "existing_checkpoint_offline_diagnosis",
+      "note": "现有 36 个 checkpoint 的离线全量复算：3 种子×12 保存 step×train/dev=72 行；原深核查在 10 月14日已完成，此次只整理其 CSV/JSON，没有重新推理。横轴是 optimizer update step，非 epoch。train=160组/20父回合，dev=64组/8父回合；同一父回合、相邻 checkpoint 高度相关。",
+      "sources": [
+        "reproduction/figures_deepcheck_20261014_01/checkpoint_metrics.csv"
+      ]
+    },
+    {
+      "table": "T31_training_generalization_gap.csv",
+      "title": "逐种子逐 step 泛化差距",
+      "rows": 36,
+      "cohort": "fixed_branch_train_dev_checkpoint_diagnostic",
+      "independent_N": 8,
+      "seed_count": 1,
+      "scope": "existing_checkpoint_offline_diagnosis",
+      "note": "现有 36 个 checkpoint 的离线全量复算：3 种子×12 保存 step×train/dev=72 行；原深核查在 10 月14日已完成，此次只整理其 CSV/JSON，没有重新推理。横轴是 optimizer update step，非 epoch。train=160组/20父回合，dev=64组/8父回合；同一父回合、相邻 checkpoint 高度相关。",
+      "sources": [
+        "reproduction/figures_deepcheck_20261014_01/checkpoint_metrics.csv"
+      ]
+    },
+    {
+      "table": "T32_training_endpoints.csv",
+      "title": "训练曲线首末保存点摘要",
+      "rows": 6,
+      "cohort": "fixed_branch_train_dev_checkpoint_diagnostic",
+      "independent_N": "row-specific",
+      "seed_count": 1,
+      "scope": "existing_checkpoint_offline_diagnosis",
+      "note": "现有 36 个 checkpoint 的离线全量复算：3 种子×12 保存 step×train/dev=72 行；原深核查在 10 月14日已完成，此次只整理其 CSV/JSON，没有重新推理。横轴是 optimizer update step，非 epoch。train=160组/20父回合，dev=64组/8父回合；同一父回合、相邻 checkpoint 高度相关。",
+      "sources": [
+        "reproduction/figures_deepcheck_20261014_01/checkpoint_metrics.csv"
+      ]
+    },
+    {
+      "table": "T33_common_success_paired_steps.csv",
+      "title": "共同成功起点的步数差",
+      "rows": 6,
+      "cohort": "wm_confirmation_60_new_starts_common_success_subset",
+      "independent_N": "row-specific",
+      "seed_count": 1,
+      "scope": "conditional_paired_efficiency",
+      "note": "仅纳入 BC 与对应 Full 种子都成功的起点。差值为 Full步骤−BC步骤：负数更快、正数更慢。每种子/条件实际配对 N 见 paired_n；这是条件效率，不能取代全体成功率或失败按400封顶的平均步数。",
+      "sources": [
+        "reproduction/figures_deepcheck_20261014_01/diagnostics.json"
+      ]
+    },
+    {
+      "table": "T34_seed_duplicate_success_diagnostic.csv",
+      "title": "同成功数、同起点和不同步数检查",
+      "rows": 4,
+      "cohort": "wm_confirmation_60_new_starts",
+      "independent_N": 60,
+      "seed_count": 3,
+      "scope": "result_integrity_diagnosis",
+      "note": "成功数相同并不证明输出复制；identical_success_sets 指二值成功起点集合相同，identical_step_vectors 是全步数向量是否相同。噪声下成功集合可不同。",
+      "sources": [
+        "reproduction/figures_deepcheck_20261014_01/diagnostics.json"
+      ]
+    },
+    {
+      "table": "T35_wm_confirmation_episode_records.csv",
+      "title": "WM 独立确认全部逐回合记录",
+      "rows": 840,
+      "cohort": "wm_confirmation_60_new_starts",
+      "independent_N": 60,
+      "seed_count": "row-specific",
+      "scope": "independent_confirmation",
+      "note": "独立确认：60 个全新起点，clean/noise 重用同一批起点；BC 固定权重，Full/Plain 各 3 个训练种子。联合结果等权平均两条件，仍只有 60 个独立起点。区间沿用原有配对交叉 bootstrap。",
+      "sources": [
+        "reproduction/confirmation_20261012_01/analysis/episodes.csv"
+      ]
+    },
+    {
+      "table": "T36_v5_failure_categories.csv",
+      "title": "v5 剩余失败类别",
+      "rows": 3,
+      "cohort": "recovery_v5_confirmation_failed_subset",
+      "independent_N": 7,
+      "seed_count": 3,
+      "scope": "posthoc_observation_based_failure_review",
+      "note": "现有观测日志的事后失败分类，不是碰撞因果或物理真值标签。v5 尚有失败执行和共同失败起点；不能写成恢复问题完全解决。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/posthoc_failure_review.json"
+      ]
+    },
+    {
+      "table": "T37_v5_failed_executions.csv",
+      "title": "v5 剩余失败逐回合索引",
+      "rows": 16,
+      "cohort": "recovery_v5_confirmation_failed_subset",
+      "independent_N": 7,
+      "seed_count": "row-specific",
+      "scope": "posthoc_observation_based_failure_review",
+      "note": "现有观测日志的事后失败分类，不是碰撞因果或物理真值标签。v5 尚有失败执行和共同失败起点；不能写成恢复问题完全解决。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/posthoc_failure_review.json"
+      ]
+    },
+    {
+      "table": "T38_v5_confirmation_mechanisms.csv",
+      "title": "v5 确认恢复机制事件覆盖",
+      "rows": 5,
+      "cohort": "recovery_v5_confirmation_60_starts",
+      "independent_N": 60,
+      "seed_count": 3,
+      "scope": "posthoc_event_coverage",
+      "note": "事件覆盖数按执行回合计，不是独立起点数。侧倒可行方案自然触发很稀少；不能把压力测试改善直接解释成自然分布上稳定的侧倒收益。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/mechanisms_confirmation.json"
+      ]
+    },
+    {
+      "table": "T39_development_vs_confirmation_descriptive.csv",
+      "title": "开发与独立确认的描述性分布变化",
+      "rows": 6,
+      "cohort": "two_distinct_cohorts_not_paired",
+      "independent_N": "dev30;confirmation60",
+      "seed_count": "row-specific",
+      "scope": "descriptive_cross_cohort_only",
+      "note": "原表 descriptive_change_pp 是不同起点分布间的描述性差值，不是同批配对提升，也不是训练改进效果。论文中应分别列开发结果和确认结果。",
+      "sources": [
+        "reproduction/confirmation_20261012_01/analysis/dev_vs_confirmation.csv"
+      ]
+    },
+    {
+      "table": "T40_development_regret_concentration.csv",
+      "title": "开发 regret 跳变集中度",
+      "rows": 36,
+      "cohort": "branch_dev_8_parents_64_groups",
+      "independent_N": 8,
+      "seed_count": 1,
+      "scope": "posthoc_curve_diagnosis",
+      "note": "每 step 在 64 组中找 regret 最大组，给出其对总 regret 的占比。组索引是该诊断中的零基数组位置，不是新回合；多个相关组会使评分均值不稳定。",
+      "sources": [
+        "reproduction/figures_deepcheck_20261014_01/diagnostics.json"
+      ]
+    }
+  ],
+  "source_count": 25,
+  "checks": [
+    {
+      "check": "WM confirmation episode/parent count",
+      "passed": true,
+      "detail": "CSV and analysis.json agree"
+    },
+    {
+      "check": "Development episode/parent count",
+      "passed": true,
+      "detail": "CSV and analysis.json agree"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:bc_k2::clean",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:bc_k2::noise005",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:full:17:clean",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:full:17:noise005",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:full:23:clean",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:full:23:noise005",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:full:41:clean",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:full:41:noise005",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:plain:17:clean",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:plain:17:noise005",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:plain:23:clean",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:plain:23:noise005",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:plain:41:clean",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/confirmation_20261012_01/analysis/per_seed.csv:plain:41:noise005",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:full:17:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:full:17:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:plain:17:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:plain:17:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:direct:17:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:direct:17:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:prediction_only:17:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:prediction_only:17:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:head_control:17:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:head_control:17:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:calibrated:17:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:calibrated:17:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_risk_score:17:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_risk_score:17:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_gate:17:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_gate:17:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:horizon4:17:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:horizon4:17:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:full:23:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:full:23:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:plain:23:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:plain:23:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:direct:23:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:direct:23:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:prediction_only:23:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:prediction_only:23:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:head_control:23:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:head_control:23:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:calibrated:23:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:calibrated:23:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_risk_score:23:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_risk_score:23:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_gate:23:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_gate:23:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:horizon4:23:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:horizon4:23:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:full:41:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:full:41:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:plain:41:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:plain:41:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:direct:41:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:direct:41:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:prediction_only:41:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:prediction_only:41:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:head_control:41:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:head_control:41:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:calibrated:41:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:calibrated:41:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_risk_score:41:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_risk_score:41:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_gate:41:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:no_gate:41:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:horizon4:41:0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:horizon4:41:0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:bc_k0::0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:bc_k0::0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:bc_k1::0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:bc_k1::0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:bc_k2::0.0",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "per-seed counts reproduction/multiseed_20261012_01/analysis/per_seed.csv:bc_k2::0.05",
+      "passed": true,
+      "detail": "Derived counts match episode records"
+    },
+    {
+      "check": "WM summary bc_k2 clean",
+      "passed": true,
+      "detail": "Summary rate matches episode records"
+    },
+    {
+      "check": "WM summary full clean",
+      "passed": true,
+      "detail": "Summary rate matches episode records"
+    },
+    {
+      "check": "WM summary plain clean",
+      "passed": true,
+      "detail": "Summary rate matches episode records"
+    },
+    {
+      "check": "WM summary bc_k2 noise005",
+      "passed": true,
+      "detail": "Summary rate matches episode records"
+    },
+    {
+      "check": "WM summary full noise005",
+      "passed": true,
+      "detail": "Summary rate matches episode records"
+    },
+    {
+      "check": "WM summary plain noise005",
+      "passed": true,
+      "detail": "Summary rate matches episode records"
+    },
+    {
+      "check": "WM summary bc_k2 joint_equal_weight",
+      "passed": true,
+      "detail": "Summary rate matches episode records"
+    },
+    {
+      "check": "WM summary full joint_equal_weight",
+      "passed": true,
+      "detail": "Summary rate matches episode records"
+    },
+    {
+      "check": "WM summary plain joint_equal_weight",
+      "passed": true,
+      "detail": "Summary rate matches episode records"
+    },
+    {
+      "check": "WM summary CSV/JSON bc_k2 clean",
+      "passed": true,
+      "detail": "Flat table agrees with JSON analysis"
+    },
+    {
+      "check": "WM summary CSV/JSON full clean",
+      "passed": true,
+      "detail": "Flat table agrees with JSON analysis"
+    },
+    {
+      "check": "WM summary CSV/JSON plain clean",
+      "passed": true,
+      "detail": "Flat table agrees with JSON analysis"
+    },
+    {
+      "check": "WM summary CSV/JSON bc_k2 noise005",
+      "passed": true,
+      "detail": "Flat table agrees with JSON analysis"
+    },
+    {
+      "check": "WM summary CSV/JSON full noise005",
+      "passed": true,
+      "detail": "Flat table agrees with JSON analysis"
+    },
+    {
+      "check": "WM summary CSV/JSON plain noise005",
+      "passed": true,
+      "detail": "Flat table agrees with JSON analysis"
+    },
+    {
+      "check": "WM summary CSV/JSON bc_k2 joint_equal_weight",
+      "passed": true,
+      "detail": "Flat table agrees with JSON analysis"
+    },
+    {
+      "check": "WM summary CSV/JSON full joint_equal_weight",
+      "passed": true,
+      "detail": "Flat table agrees with JSON analysis"
+    },
+    {
+      "check": "WM summary CSV/JSON plain joint_equal_weight",
+      "passed": true,
+      "detail": "Flat table agrees with JSON analysis"
+    },
+    {
+      "check": "Development summary bc_k0 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary bc_k1 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary bc_k2 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary full 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary plain 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary direct 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary prediction_only 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary head_control 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary calibrated 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary no_risk_score 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary no_gate 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary horizon4 0.0",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary bc_k0 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary bc_k1 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary bc_k2 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary full 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary plain 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary direct 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary prediction_only 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary head_control 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary calibrated 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary no_risk_score 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary no_gate 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Development summary horizon4 0.05",
+      "passed": true,
+      "detail": "Summary rate matches all existing episode records"
+    },
+    {
+      "check": "Extensions counts bc_k2 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts bc_k2 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts full 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts full 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts h1 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts h1 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts h3 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts h3 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts horizon4 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts horizon4 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts k1 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts k1 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts k2 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts k2 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts k8 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts k8 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts oracle 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts oracle 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts persistence 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts persistence 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts plain 0.0",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "Extensions counts plain 0.05",
+      "passed": true,
+      "detail": "All success counts agree with reported rate"
+    },
+    {
+      "check": "v5 confirmation unique starts",
+      "passed": true,
+      "detail": "Episode CSV unique parents match declared N"
+    },
+    {
+      "check": "v5 confirmation v2 totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 confirmation v4 totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 confirmation timing_only totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 confirmation side_only totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 confirmation v5 totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 confirmation arm rate v2/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v2/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v2/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v2/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v4/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v4/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v4/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v4/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate timing_only/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate timing_only/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate timing_only/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate timing_only/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate side_only/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate side_only/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate side_only/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate side_only/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v5/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v5/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v5/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 confirmation arm rate v5/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a unique starts",
+      "passed": true,
+      "detail": "Episode CSV unique parents match declared N"
+    },
+    {
+      "check": "v5 dev_a v2 totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 dev_a v4 totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 dev_a timing_only totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 dev_a side_only totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 dev_a v5 totals",
+      "passed": true,
+      "detail": "Counts checked against existing episode CSV"
+    },
+    {
+      "check": "v5 dev_a arm rate v2/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v2/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v2/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v2/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v4/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v4/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v4/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v4/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate timing_only/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate timing_only/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate timing_only/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate timing_only/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate side_only/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate side_only/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate side_only/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate side_only/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v5/bc_k2/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v5/bc_k2/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v5/full/clean",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "v5 dev_a arm rate v5/full/noise005",
+      "passed": true,
+      "detail": "Raw job counts agree with statistical estimate"
+    },
+    {
+      "check": "Geometry total v2",
+      "passed": true,
+      "detail": "Summary matches preserved per-episode records"
+    },
+    {
+      "check": "Geometry total v4",
+      "passed": true,
+      "detail": "Summary matches preserved per-episode records"
+    },
+    {
+      "check": "Geometry total timing_only",
+      "passed": true,
+      "detail": "Summary matches preserved per-episode records"
+    },
+    {
+      "check": "Geometry total side_only",
+      "passed": true,
+      "detail": "Summary matches preserved per-episode records"
+    },
+    {
+      "check": "Geometry total v5",
+      "passed": true,
+      "detail": "Summary matches preserved per-episode records"
+    },
+    {
+      "check": "Common-success paired steps 17 clean",
+      "passed": true,
+      "detail": "All signs, denominator and mean/median independently recomputed from preserved episodes"
+    },
+    {
+      "check": "Common-success paired steps 23 clean",
+      "passed": true,
+      "detail": "All signs, denominator and mean/median independently recomputed from preserved episodes"
+    },
+    {
+      "check": "Common-success paired steps 41 clean",
+      "passed": true,
+      "detail": "All signs, denominator and mean/median independently recomputed from preserved episodes"
+    },
+    {
+      "check": "Common-success paired steps 17 noise005",
+      "passed": true,
+      "detail": "All signs, denominator and mean/median independently recomputed from preserved episodes"
+    },
+    {
+      "check": "Common-success paired steps 23 noise005",
+      "passed": true,
+      "detail": "All signs, denominator and mean/median independently recomputed from preserved episodes"
+    },
+    {
+      "check": "Common-success paired steps 41 noise005",
+      "passed": true,
+      "detail": "All signs, denominator and mean/median independently recomputed from preserved episodes"
+    },
+    {
+      "check": "v5 failures execution and start counts",
+      "passed": true,
+      "detail": "Failure category/record denominators agree"
+    }
+  ],
+  "scope": "Existing JSON/CSV only; no simulation, training, checkpoint inference, new bootstrap, or old script execution.",
+  "source_priority": [
+    "../04_snapshot",
+    "original_checkout_fallback"
+  ],
+  "new_experiments": 0
+}

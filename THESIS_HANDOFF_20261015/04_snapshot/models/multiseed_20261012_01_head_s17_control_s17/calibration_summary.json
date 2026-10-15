@@ -1,0 +1,65 @@
+{
+  "model": "multiseed_20261012_01_head_s17_control_s17",
+  "selected_step": 250,
+  "selected_model_sha256": "74455fc60dfb4a535bd74988caaab7b4df0cf4058c7cf543445758c54fac3252",
+  "offline_metrics": {
+    "train": {
+      "predicted": {
+        "label_loss": 0.4126407504081726,
+        "score_mae": 0.04264682158827782,
+        "progress_mae": 0.01677691750228405,
+        "risk_brier": 0.0019489340484142303,
+        "rank": {
+          "mean_regret": 0.0004679592384491116,
+          "wrong_pair_rate": 0.0,
+          "optimal_within_025": 1.0,
+          "groups": 160,
+          "nontrivial_pairs": 96
+        }
+      },
+      "real": {
+        "label_loss": 0.45464032888412476,
+        "score_mae": 0.04297150298953056,
+        "progress_mae": 0.023515716195106506,
+        "risk_brier": 0.022050267085433006,
+        "rank": {
+          "mean_regret": 0.012613345868885517,
+          "wrong_pair_rate": 0.19791666666666666,
+          "optimal_within_025": 0.9625,
+          "groups": 160,
+          "nontrivial_pairs": 96
+        }
+      }
+    },
+    "dev": {
+      "predicted": {
+        "label_loss": 0.5073204040527344,
+        "score_mae": 0.1194043979048729,
+        "progress_mae": 0.04608243703842163,
+        "risk_brier": 0.040504343807697296,
+        "rank": {
+          "mean_regret": 0.005337189882993698,
+          "wrong_pair_rate": 0.02564102564102564,
+          "optimal_within_025": 0.984375,
+          "groups": 64,
+          "nontrivial_pairs": 39
+        }
+      },
+      "real": {
+        "label_loss": 0.5005780458450317,
+        "score_mae": 0.0779496431350708,
+        "progress_mae": 0.037826985120773315,
+        "risk_brier": 0.0445617213845253,
+        "rank": {
+          "mean_regret": 0.0033146487548947334,
+          "wrong_pair_rate": 0.20512820512820512,
+          "optimal_within_025": 0.953125,
+          "groups": 64,
+          "nontrivial_pairs": 39
+        }
+      }
+    }
+  },
+  "frozen_tensors_unchanged": true,
+  "minibatch_sha256": "0389e5ffcb91e8f5ebce8e11f779023c037d0d05a6961b651b90c72569c5c938"
+}

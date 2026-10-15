@@ -1,0 +1,43 @@
+Source: installed robosuite 1.5.1, environments/manipulation/pick_place.py
+Source file SHA256: 1abafb93f272c6ccda7f207b6c5c12c0c9b2f97087d60754dba402786c70c4ee
+Read-only excerpt, lines 638-676; external framework, not project contribution.
+
+638:     def _create_obj_sensors(self, obj_name, modality="object"):
+639:         """
+640:         Helper function to create sensors for a given object. This is abstracted in a separate function call so that we
+641:         don't have local function naming collisions during the _setup_observables() call.
+642: 
+643:         Args:
+644:             obj_name (str): Name of object to create sensors for
+645:             modality (str): Modality to assign to all sensors
+646: 
+647:         Returns:
+648:             2-tuple:
+649:                 sensors (list): Array of sensors for the given obj
+650:                 names (list): array of corresponding observable names
+651:         """
+652: 
+653:         @sensor(modality=modality)
+654:         def obj_pos(obs_cache):
+655:             return np.array(self.sim.data.body_xpos[self.obj_body_id[obj_name]])
+656: 
+657:         @sensor(modality=modality)
+658:         def obj_quat(obs_cache):
+659:             return T.convert_quat(self.sim.data.body_xquat[self.obj_body_id[obj_name]], to="xyzw")
+660: 
+661:         arm_prefixes = self._get_arm_prefixes(self.robots[0], include_robot_name=False)
+662:         full_prefixes = self._get_arm_prefixes(self.robots[0])
+663: 
+664:         sensors = [
+665:             self._get_rel_obj_eef_sensor(arm_pf, obj_name, f"{obj_name}_to_{full_pf}eef_pos", full_pf, modality)
+666:             for arm_pf, full_pf in zip(arm_prefixes, full_prefixes)
+667:         ]
+668:         sensors += [
+669:             self._get_obj_eef_rel_quat_sensor(full_pf, obj_name, f"{obj_name}_to_{full_pf}eef_quat", modality)
+670:             for full_pf in full_prefixes
+671:         ]
+672:         names = [fn.__name__ for fn in sensors]
+673:         sensors += [obj_pos, obj_quat]
+674:         names += [f"{obj_name}_pos", f"{obj_name}_quat"]
+675: 
+676:         return sensors, names

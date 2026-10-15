@@ -1,0 +1,45 @@
+固定模型候选展开对照：开发集报告
+
+只改变预测中的后续动作生成：repeat重复当前候选；bc_tail只提交一次候选，之后根据预测状态计算BC k=2动作。
+两种方式在真实环境中都只提交一次动作，然后每次观测重新规划。模型、评分头、门限、BC、初始状态和预算完全相同。
+本轮没有训练，没有打开封存测试，也没有替换默认模型。
+
+时序检查通过 441 项；旧30回合的成功、步数、阶段奖励、抓取和选择计数全部精确复现。
+原评估器与新repeat评估器在4条完整轨迹共1076步、每步19项字段完全一致。
+
+bc_k2: 25/30；失败记400步的平均步数 168.80。
+repeat: 24/30；失败记400步的平均步数 172.77。
+  全步骤加权覆盖基线比例 22.19%；规划耗时 1.076 ms。
+bc_tail: 24/30；失败记400步的平均步数 178.60。
+  全步骤加权覆盖基线比例 8.83%；规划耗时 2.462 ms。
+
+配对比较：
+bc_tail vs repeat：bc_tail独胜=['demo_97', 'demo_179']；参照独胜=['demo_124', 'demo_26']；净变化=0回合。
+bc_tail vs bc_k2：bc_tail独胜=[]；参照独胜=['demo_26']；净变化=-1回合。
+
+重点回合：
+demo_105：bc_k2=成功@278；repeat=成功@130；bc_tail=成功@278
+demo_124：bc_k2=失败@400；repeat=成功@146；bc_tail=失败@400
+demo_97：bc_k2=成功@98；repeat=失败@400；bc_tail=成功@99
+demo_179：bc_k2=成功@144；repeat=失败@400；bc_tail=成功@140
+
+旧7个固定开发诊断起点（不用于训练或选参）：
+候选选择变化 5/7；BC-tail分数对真实once-BC短期分数MAE=0.555783。
+BC-tail未来动作MAE=0.231217；预测轨迹末端执行器/物体平均误差=31.07/45.57 mm。
+将实际执行动作交给WM时，末端执行器/物体平均误差=26.63/38.16 mm。
+BC-tail误差包含策略在错误预测状态上产生不同后续动作的影响；不能把它全称为动力学误差。上述两个误差不构成独立可加的因果分解。
+  demo_105_step070：repeat k=0 -> bc_tail k=2；真实一次动作后接BC的成功=[True, True, True, False]。
+  demo_179_step045：repeat k=0 -> bc_tail k=2；真实一次动作后接BC的成功=[False, True, True, True]。
+  demo_179_step109：repeat k=0 -> bc_tail k=2；真实一次动作后接BC的成功=[False, False, False, False]。
+  demo_179_step160：repeat k=0 -> bc_tail k=0；真实一次动作后接BC的成功=[False, False, False, False]。
+  demo_97_step035：repeat k=3 -> bc_tail k=2；真实一次动作后接BC的成功=[True, True, True, True]。
+  demo_97_step058：repeat k=0 -> bc_tail k=2；真实一次动作后接BC的成功=[False, False, True, True]。
+  demo_97_step090：repeat k=0 -> bc_tail k=0；真实一次动作后接BC的成功=[False, False, False, False]。
+
+结论与边界：
+stop_frozen_BC_tail_branch_no_dev_success_gain
+模型在重复动作数据上训练；本实验只回答冻结该模型时换展开方式是否有效，不能证明用匹配数据重新训练也无效。
+即使BC-tail近似更接近一次提交的语义，未来BC控制仍不等于实际未来WM重规划。
+这是一个模型种子和已经多次查看的开发集，不能据此宣称稳定泛化提升；成功回合或平均步数也不能替代完整成功率。
+固定BC k=2必须继续保留为强基线。旧封存测试已参与历史分析，后续需要另外预先锁定确认实验。
+耗时仅覆盖规划阶段，含候选推演额外BC调用，不含两组共有的初始BC推理、环境步进和JSON日志；不是端到端实时性能承诺。
