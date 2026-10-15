@@ -1,3 +1,5 @@
+> 当前 v10 箱沿接近实验正在核验，旧成果完整保留。前端入口：<http://127.0.0.1:8766/>。新结果与状态见 [v10 报告](reproduction/improvement_v10_20261015_01/REPORT.md)。
+
 # 动作延迟下的机器人抓取搬运与失败恢复
 
 Panda 机械臂在 PickPlaceCan 仿真中抓取罐子并放入目标箱。本项目实现动作块行为克隆（BC）、世界模型候选动作评分、真实 FIFO 动作延迟，以及抓持确认和失败恢复控制。
@@ -17,9 +19,9 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 **[打开前端：http://127.0.0.1:8766/](http://127.0.0.1:8766/)**
 
-项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/progress_v9_20261015_01/demo/index.html)。
+项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/progress_v10_20261015_01/demo/index.html)。
 
-当前整合版包含 v9 的实验状态、20 fps 历史机器人视频、世界模型与 v5 冻结主结果，以及 v6/v8 同起点历史恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
+当前整合版包含 v10 的实验状态、20 fps 历史机器人视频、世界模型与 v5 冻结主结果，以及 v6/v8 同起点历史恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
 
 这是静态 HTML/CSS/JavaScript 前端，不需要 npm、Node.js 或额外前端依赖。启动命令只提供本地文件服务；训练和机器人仿真有独立入口。请通过 HTTP 地址访问，使数据与视频按项目路径加载。
 
@@ -32,7 +34,7 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 | 页面 | 地址 |
 |---|---|
-| 当前整合版，推荐 | http://127.0.0.1:8766/reproduction/progress_v9_20261015_01/demo/index.html |
+| 当前整合版，推荐 | http://127.0.0.1:8766/reproduction/progress_v10_20261015_01/demo/index.html |
 | review 历史版 | http://127.0.0.1:8766/reproduction/review_20261012_01/demo/index.html |
 | release 历史版 | http://127.0.0.1:8766/reproduction/release_20261012_01/demo/index.html |
 
@@ -64,7 +66,7 @@ C:\Users\Livio\Desktop\robot_can\.venv\Scripts\python.exe
 | `evaluate_delay.py` | 动作延迟下的 BC 与世界模型闭环评估 |
 | `reproduction/extensions_20261012_01/` | 持续性、真值短期排序、预测长度及候选数量实验 |
 | `reproduction/recovery_v5_20261012_01/` | v5 恢复控制、消融、独立确认和失败分析 |
-| `reproduction/progress_v9_20261015_01/demo/` | 当前进度与成果展示前端 |
+| `reproduction/progress_v10_20261015_01/demo/` | 当前进度与成果展示前端 |
 | `reproduction/improvement_v9_20261015_01/` | 关节姿态检查与规划耗时消融，旧结果保留 |
 | `data/` | 数据、划分与来源校验 |
 | `policy/`、`models/` | 策略和世界模型权重、实验结果 |
@@ -153,4 +155,4 @@ v8 历史详情：[v8 报告](reproduction/improvement_v8_20261015_01/REPORT.md)
 
 新增关节姿态检查和缓存/分步规划，保持400步预算。最终五路对照：v6为31/37，其余四版均为30/37；没有新增救回，未进入240回合开发集。最大策略与控制计算实测由v8的1783 ms降至v9的49 ms，不能据此保证完整实时链路。
 
-本轮包含一次明确登记的末端坐标系验证修复，修复前记录保留，最终结论使用pilot_b。详见 [v9完整报告](reproduction/improvement_v9_20261015_01/REPORT.md) 和 [新版前端说明](reproduction/progress_v9_20261015_01/README.md)。本轮根文件改前备份在 `reproduction/improvement_v9_20261015_01/before/`。
+本轮包含一次明确登记的末端坐标系验证修复，修复前记录保留，最终结论使用pilot_b。详见 [v9完整报告](reproduction/improvement_v9_20261015_01/REPORT.md) 和 [新版前端说明](reproduction/progress_v10_20261015_01/README.md)。本轮根文件改前备份在 `reproduction/improvement_v9_20261015_01/before/`。
