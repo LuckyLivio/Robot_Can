@@ -19,9 +19,13 @@ def object_margin(start,end,rotation,gap,x,details=False):
     can_rot=Rotation.from_quat(x[19:23]).as_matrix();can=CAN@can_rot.T+x[16:19]
     results=[]
     for name,original,normals in HAND:
-        vertices=original.copy()
-        if 'finger1' in name:vertices[:,1]+=(gap-.06)/2
-        if 'finger2' in name:vertices[:,1]-=(gap-.06)/2
+        copies=[]
+        for aperture in np.atleast_1d(gap):
+            vertices=original.copy()
+            if 'finger1' in name:vertices[:,1]+=(aperture-.06)/2
+            if 'finger2' in name:vertices[:,1]-=(aperture-.06)/2
+            copies.append(vertices)
+        vertices=np.concatenate(copies)
         axes=np.r_[rotation.T,normals@rotation.T,CAN_NORMALS@can_rot.T]
         lengths=np.linalg.norm(axes,axis=1);axes=axes[lengths>1e-9]/lengths[lengths>1e-9,None]
         a=(vertices@rotation.T)@axes.T;lo=a.min(0)+np.minimum(start@axes.T,end@axes.T);hi=a.max(0)+np.maximum(start@axes.T,end@axes.T)

@@ -1,4 +1,4 @@
-> v10 箱沿实验已完成：四组均30/37，未采用、未进入240回合开发。旧成果完整保留，主版本仍为v5。前端入口：<http://127.0.0.1:8766/>。原因与证据见 [v10 报告](reproduction/improvement_v10_20261015_01/REPORT.md)。
+> v11罐体接近空间实验进行中，旧资产保留，主版本仍为v5。[本轮报告](reproduction/improvement_v11_20261015_01/REPORT.md) · [当前前端](http://127.0.0.1:8766/)。
 
 # 动作延迟下的机器人抓取搬运与失败恢复
 
@@ -19,9 +19,9 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 **[打开前端：http://127.0.0.1:8766/](http://127.0.0.1:8766/)**
 
-项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/progress_v10_20261015_01/demo/index.html)。
+项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/progress_v11_20261015_01/demo/index.html)。
 
-当前整合版包含 v10 的实验状态、20 fps 历史机器人视频、世界模型与 v5 冻结主结果，以及 v6/v8 同起点历史恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
+当前整合版包含 v11 的实验状态、20 fps 历史机器人视频、世界模型与 v5 冻结主结果，以及 v6/v8 同起点历史恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
 
 这是静态 HTML/CSS/JavaScript 前端，不需要 npm、Node.js 或额外前端依赖。启动命令只提供本地文件服务；训练和机器人仿真有独立入口。请通过 HTTP 地址访问，使数据与视频按项目路径加载。
 
@@ -34,7 +34,7 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 | 页面 | 地址 |
 |---|---|
-| 当前整合版，推荐 | http://127.0.0.1:8766/reproduction/progress_v10_20261015_01/demo/index.html |
+| 当前整合版，推荐 | http://127.0.0.1:8766/reproduction/progress_v11_20261015_01/demo/index.html |
 | review 历史版 | http://127.0.0.1:8766/reproduction/review_20261012_01/demo/index.html |
 | release 历史版 | http://127.0.0.1:8766/reproduction/release_20261012_01/demo/index.html |
 
@@ -66,7 +66,7 @@ C:\Users\Livio\Desktop\robot_can\.venv\Scripts\python.exe
 | `evaluate_delay.py` | 动作延迟下的 BC 与世界模型闭环评估 |
 | `reproduction/extensions_20261012_01/` | 持续性、真值短期排序、预测长度及候选数量实验 |
 | `reproduction/recovery_v5_20261012_01/` | v5 恢复控制、消融、独立确认和失败分析 |
-| `reproduction/progress_v10_20261015_01/demo/` | 当前进度与成果展示前端 |
+| `reproduction/progress_v11_20261015_01/demo/` | 当前进度与成果展示前端 |
 | `reproduction/improvement_v9_20261015_01/` | 关节姿态检查与规划耗时消融，旧结果保留 |
 | `reproduction/improvement_v10_20261015_01/` | 箱沿高度/路径消融、接触诊断与完整核验 |
 | `data/` | 数据、划分与来源校验 |
