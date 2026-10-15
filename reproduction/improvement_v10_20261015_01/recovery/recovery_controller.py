@@ -26,9 +26,10 @@ class RecoveryController(V9):
         self.edge_search=None;self.edge_plan=None
         return super().begin_wait(reason,x)
     def eligible(self,x):
+        if not (self.mode=='ALIGN' and self.expanded_plan and self.mesh_search is None and not self.edge_checked
+                and self.attempts in self.relocated_attempts):return False
         d,_=support(x,self.floor)
-        return (self.mode=='ALIGN' and self.expanded_plan and self.mesh_search is None and not self.edge_checked
-                and self.attempts in self.relocated_attempts and d is not None and d['kind']=='wall_top')
+        return d is not None and d['kind']=='wall_top'
     def edge_action(self,x):
         phase=self.mode;self.edge_age+=1
         action,info=self.hold(x,'edge_execution',0)

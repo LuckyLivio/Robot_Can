@@ -1,0 +1,1431 @@
+{
+  "stage": "pilot_a",
+  "complete": true,
+  "incomplete_jobs": [],
+  "variants": {
+    "v9": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "failures": [
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100000"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 21,
+            "ALIGN": 63,
+            "DESCEND": 101,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "CARRY": 64,
+            "PLACE": 17,
+            "RELEASE": 14
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              136,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              207,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              233,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              264,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              282,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              289,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              305,
+              "CARRY",
+              "clearance_reached"
+            ],
+            [
+              369,
+              "PLACE",
+              "above_target"
+            ],
+            [
+              386,
+              "RELEASE",
+              "at_release_height"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "regression_6000005",
+            "demo_6000005"
+          ],
+          "phases": {
+            "NORMAL": 120,
+            "RETRACT": 15,
+            "PLAN_WAIT": 8,
+            "POSE_WAIT": 31,
+            "POSE_BLOCKED": 226
+          },
+          "events": [
+            [
+              121,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              121,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              129,
+              "POSE_WAIT",
+              "mesh_plan_relocate_before_alignment"
+            ],
+            [
+              160,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              168,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              173,
+              "POSE_BLOCKED",
+              "no_validated_equivalent_joint_pose"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "side_wall",
+            "demo_6200002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s23",
+            "demo_188"
+          ],
+          "phases": {
+            "NORMAL": 69,
+            "RETRACT": 1,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 322
+          },
+          "events": [
+            [
+              70,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              70,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              78,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 70,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s41",
+            "demo_97"
+          ],
+          "phases": {
+            "NORMAL": 96,
+            "RETRACT": 1,
+            "POSE_WAIT": 22,
+            "PLAN_WAIT": 39,
+            "POSE_BLOCKED": 242
+          },
+          "events": [
+            [
+              97,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              97,
+              "POSE_WAIT",
+              "pose_changed_during_approach"
+            ],
+            [
+              157,
+              "POSE_BLOCKED",
+              "bounded_mesh_no_feasible_candidate"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000012"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000014"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        }
+      ]
+    },
+    "height": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "failures": [
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100000"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 21,
+            "ALIGN": 63,
+            "DESCEND": 101,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "CARRY": 64,
+            "PLACE": 17,
+            "RELEASE": 14
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              136,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              207,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              233,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              264,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              282,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              289,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              305,
+              "CARRY",
+              "clearance_reached"
+            ],
+            [
+              369,
+              "PLACE",
+              "above_target"
+            ],
+            [
+              386,
+              "RELEASE",
+              "at_release_height"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "regression_6000005",
+            "demo_6000005"
+          ],
+          "phases": {
+            "NORMAL": 120,
+            "RETRACT": 15,
+            "PLAN_WAIT": 14,
+            "POSE_WAIT": 31,
+            "POSE_BLOCKED": 220
+          },
+          "events": [
+            [
+              121,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              121,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              129,
+              "POSE_WAIT",
+              "mesh_plan_relocate_before_alignment"
+            ],
+            [
+              160,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              168,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              179,
+              "POSE_BLOCKED",
+              "edge_no_validated_local_path"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "side_wall",
+            "demo_6200002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s23",
+            "demo_188"
+          ],
+          "phases": {
+            "NORMAL": 69,
+            "RETRACT": 1,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 322
+          },
+          "events": [
+            [
+              70,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              70,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              78,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 70,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s41",
+            "demo_97"
+          ],
+          "phases": {
+            "NORMAL": 96,
+            "RETRACT": 1,
+            "POSE_WAIT": 22,
+            "PLAN_WAIT": 39,
+            "POSE_BLOCKED": 242
+          },
+          "events": [
+            [
+              97,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              97,
+              "POSE_WAIT",
+              "pose_changed_during_approach"
+            ],
+            [
+              157,
+              "POSE_BLOCKED",
+              "bounded_mesh_no_feasible_candidate"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000012"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000014"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        }
+      ]
+    },
+    "path": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "failures": [
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100000"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 21,
+            "ALIGN": 63,
+            "DESCEND": 101,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "CARRY": 64,
+            "PLACE": 17,
+            "RELEASE": 14
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              136,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              207,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              233,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              264,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              282,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              289,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              305,
+              "CARRY",
+              "clearance_reached"
+            ],
+            [
+              369,
+              "PLACE",
+              "above_target"
+            ],
+            [
+              386,
+              "RELEASE",
+              "at_release_height"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "regression_6000005",
+            "demo_6000005"
+          ],
+          "phases": {
+            "NORMAL": 120,
+            "RETRACT": 32,
+            "PLAN_WAIT": 22,
+            "POSE_WAIT": 72,
+            "EDGE_ROTATE": 75,
+            "EDGE_APPROACH": 51,
+            "DESCEND": 28
+          },
+          "events": [
+            [
+              121,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              121,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              129,
+              "POSE_WAIT",
+              "mesh_plan_relocate_before_alignment"
+            ],
+            [
+              160,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              168,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              182,
+              "EDGE_ROTATE",
+              "edge_path_validated"
+            ],
+            [
+              253,
+              "EDGE_APPROACH",
+              "edge_rotation_settled"
+            ],
+            [
+              279,
+              "DESCEND",
+              "edge_approach_and_aperture_validated"
+            ],
+            [
+              293,
+              "POSE_WAIT",
+              "unknown_during_approach"
+            ],
+            [
+              329,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              347,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              350,
+              "EDGE_ROTATE",
+              "edge_path_validated"
+            ],
+            [
+              356,
+              "EDGE_APPROACH",
+              "edge_rotation_settled"
+            ],
+            [
+              381,
+              "DESCEND",
+              "edge_approach_and_aperture_validated"
+            ],
+            [
+              395,
+              "POSE_WAIT",
+              "unknown_during_approach"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "side_wall",
+            "demo_6200002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s23",
+            "demo_188"
+          ],
+          "phases": {
+            "NORMAL": 69,
+            "RETRACT": 1,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 322
+          },
+          "events": [
+            [
+              70,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              70,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              78,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 70,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s41",
+            "demo_97"
+          ],
+          "phases": {
+            "NORMAL": 96,
+            "RETRACT": 1,
+            "POSE_WAIT": 22,
+            "PLAN_WAIT": 39,
+            "POSE_BLOCKED": 242
+          },
+          "events": [
+            [
+              97,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              97,
+              "POSE_WAIT",
+              "pose_changed_during_approach"
+            ],
+            [
+              157,
+              "POSE_BLOCKED",
+              "bounded_mesh_no_feasible_candidate"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000012"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000014"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        }
+      ]
+    },
+    "v10": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "failures": [
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100000"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 21,
+            "ALIGN": 63,
+            "DESCEND": 101,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "CARRY": 64,
+            "PLACE": 17,
+            "RELEASE": 14
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              136,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              207,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              233,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              264,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              282,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              289,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              305,
+              "CARRY",
+              "clearance_reached"
+            ],
+            [
+              369,
+              "PLACE",
+              "above_target"
+            ],
+            [
+              386,
+              "RELEASE",
+              "at_release_height"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "regression_6000005",
+            "demo_6000005"
+          ],
+          "phases": {
+            "NORMAL": 120,
+            "RETRACT": 27,
+            "PLAN_WAIT": 36,
+            "POSE_WAIT": 63,
+            "EDGE_ROTATE": 70,
+            "EDGE_APPROACH": 26,
+            "DESCEND": 9,
+            "POSE_BLOCKED": 49
+          },
+          "events": [
+            [
+              121,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              121,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              129,
+              "POSE_WAIT",
+              "mesh_plan_relocate_before_alignment"
+            ],
+            [
+              160,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              168,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              182,
+              "EDGE_ROTATE",
+              "edge_path_validated"
+            ],
+            [
+              253,
+              "EDGE_APPROACH",
+              "edge_rotation_settled"
+            ],
+            [
+              279,
+              "DESCEND",
+              "edge_approach_and_aperture_validated"
+            ],
+            [
+              288,
+              "POSE_WAIT",
+              "unknown_during_approach"
+            ],
+            [
+              320,
+              "RETRACT",
+              "bounded_mesh_ready"
+            ],
+            [
+              333,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              350,
+              "POSE_BLOCKED",
+              "edge_no_validated_local_path"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "side_wall",
+            "demo_6200002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s23",
+            "demo_188"
+          ],
+          "phases": {
+            "NORMAL": 69,
+            "RETRACT": 1,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 322
+          },
+          "events": [
+            [
+              70,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              70,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              78,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 70,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s41",
+            "demo_97"
+          ],
+          "phases": {
+            "NORMAL": 96,
+            "RETRACT": 1,
+            "POSE_WAIT": 22,
+            "PLAN_WAIT": 39,
+            "POSE_BLOCKED": 242
+          },
+          "events": [
+            [
+              97,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              97,
+              "POSE_WAIT",
+              "pose_changed_during_approach"
+            ],
+            [
+              157,
+              "POSE_BLOCKED",
+              "bounded_mesh_no_feasible_candidate"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000012"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000014"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null,
+              "geometry_model": "side_hand_finger_mesh"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

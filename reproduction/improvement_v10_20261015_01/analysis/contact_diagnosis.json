@@ -1,0 +1,144 @@
+{
+  "source": "pilot_a physical trace + separate physical contact replay; contact never used by controller",
+  "static_candidate": {
+    "closure_axis_world": [
+      0.8567904251384868,
+      -0.07341782154172052,
+      0.5104115896715896
+    ],
+    "can_hull_projected_span_m": 0.08120930706763033,
+    "requested_gap_m": 0.06,
+    "closure_center_offset_m": 0.0017512793096137649
+  },
+  "selected_states": [
+    {
+      "step_before": 280,
+      "mode": "DESCEND",
+      "can_position": [
+        0.29585132002830505,
+        0.3080085813999176,
+        0.9402393698692322
+      ],
+      "eef_position": [
+        0.2530686855316162,
+        0.27773603796958923,
+        1.0134212970733643
+      ],
+      "support_reason": "mesh_supported_wall_top",
+      "observed_gap_m": 0.0639418214559555
+    },
+    {
+      "step_before": 287,
+      "mode": "DESCEND",
+      "can_position": [
+        0.29586535692214966,
+        0.3080042600631714,
+        0.9402429461479187
+      ],
+      "eef_position": [
+        0.27053114771842957,
+        0.28745633363723755,
+        0.9780822992324829
+      ],
+      "support_reason": "mesh_supported_wall_top",
+      "observed_gap_m": 0.06395720317959785
+    },
+    {
+      "step_before": 288,
+      "mode": "DESCEND",
+      "can_position": [
+        0.29609963297843933,
+        0.30815503001213074,
+        0.9399605393409729
+      ],
+      "eef_position": [
+        0.27332544326782227,
+        0.29035159945487976,
+        0.9702559113502502
+      ],
+      "support_reason": "mesh_supported_wall_top",
+      "observed_gap_m": 0.0639619342982769
+    },
+    {
+      "step_before": 289,
+      "mode": "POSE_WAIT",
+      "can_position": [
+        0.29852765798568726,
+        0.3094039261341095,
+        0.9385786056518555
+      ],
+      "eef_position": [
+        0.2767365872859955,
+        0.292881041765213,
+        0.9657257199287415
+      ],
+      "support_reason": "object_intersects_fixed_geometry",
+      "observed_gap_m": 0.06424480676651001
+    },
+    {
+      "step_before": 295,
+      "mode": "POSE_WAIT",
+      "can_position": [
+        0.3034304082393646,
+        0.31209632754325867,
+        0.9408552050590515
+      ],
+      "eef_position": [
+        0.29291993379592896,
+        0.30154693126678467,
+        1.0033655166625977
+      ],
+      "support_reason": "mesh_supported_wall_top",
+      "observed_gap_m": 0.06539010629057884
+    },
+    {
+      "step_before": 320,
+      "mode": "POSE_WAIT",
+      "can_position": [
+        0.2998899519443512,
+        0.31200090050697327,
+        0.9402576088905334
+      ],
+      "eef_position": [
+        0.20373062789440155,
+        0.3998733162879944,
+        1.0498045682907104
+      ],
+      "support_reason": "mesh_supported_wall_top",
+      "observed_gap_m": 0.06439255177974701
+    },
+    {
+      "step_before": 350,
+      "mode": "PLAN_WAIT",
+      "can_position": [
+        0.29986390471458435,
+        0.31200143694877625,
+        0.9402588605880737
+      ],
+      "eef_position": [
+        0.19703826308250427,
+        0.4044915437698364,
+        1.038729190826416
+      ],
+      "support_reason": "mesh_supported_wall_top",
+      "observed_gap_m": 0.06410541385412216
+    },
+    {
+      "step_before": 400,
+      "mode": "POSE_BLOCKED",
+      "can_position": [
+        0.29985880851745605,
+        0.3120003640651703,
+        0.940259575843811
+      ],
+      "eef_position": [
+        0.17768457531929016,
+        0.3836354911327362,
+        1.0131253004074097
+      ],
+      "support_reason": "mesh_supported_wall_top",
+      "observed_gap_m": 0.0640120692551136
+    }
+  ],
+  "conclusion": "The fixed-bin hand sweep omits can contact. Finger1 contacts the can before closing, after which the can changes support and replanning aborts the approach. Projected envelope is a diagnostic, not a full grasp feasibility test."
+}

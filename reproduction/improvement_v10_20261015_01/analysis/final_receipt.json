@@ -1,0 +1,129 @@
+{
+  "status": "接近路径可执行，任务成功率未改善 · 未采用",
+  "adopted": false,
+  "stage": "pilot_a",
+  "variants": {
+    "v9": {
+      "success": 30,
+      "episodes": 37,
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "rescues": []
+    },
+    "height": {
+      "success": 30,
+      "episodes": 37,
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "rescues": []
+    },
+    "path": {
+      "success": 30,
+      "episodes": 37,
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "rescues": []
+    },
+    "v10": {
+      "success": 30,
+      "episodes": 37,
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "rescues": []
+    }
+  },
+  "completed_episodes": 148,
+  "actual_executions_total": 166,
+  "dev_240_launched": false,
+  "gate_passed": false,
+  "timing": {
+    "v9": {
+      "decision_ms": {
+        "max_ms": 58.68209999971441,
+        "p99_ms": 2.9117000012774916,
+        "over_50ms": 1,
+        "steps": 10436
+      },
+      "total_policy_and_supervisor_ms": {
+        "max_ms": 59.19419999918318,
+        "p99_ms": 4.222740000113842,
+        "over_50ms": 2,
+        "steps": 10436
+      },
+      "planning_wait_steps": 49,
+      "edge_searches": 0
+    },
+    "height": {
+      "decision_ms": {
+        "max_ms": 4229.851600000984,
+        "p99_ms": 14.70741999946765,
+        "over_50ms": 1,
+        "steps": 10436
+      },
+      "total_policy_and_supervisor_ms": {
+        "max_ms": 4230.327000001125,
+        "p99_ms": 16.139045000636496,
+        "over_50ms": 2,
+        "steps": 10436
+      },
+      "planning_wait_steps": 55,
+      "edge_searches": 1
+    },
+    "path": {
+      "decision_ms": {
+        "max_ms": 4221.046899998328,
+        "p99_ms": 18.14147500117542,
+        "over_50ms": 3,
+        "steps": 10436
+      },
+      "total_policy_and_supervisor_ms": {
+        "max_ms": 4221.502899999905,
+        "p99_ms": 19.889139999941033,
+        "over_50ms": 3,
+        "steps": 10436
+      },
+      "planning_wait_steps": 63,
+      "edge_searches": 2
+    },
+    "v10": {
+      "decision_ms": {
+        "max_ms": 4230.488499997591,
+        "p99_ms": 17.08339500091823,
+        "over_50ms": 1,
+        "steps": 10436
+      },
+      "total_policy_and_supervisor_ms": {
+        "max_ms": 4231.023899999855,
+        "p99_ms": 17.845145000137503,
+        "over_50ms": 2,
+        "steps": 10436
+      },
+      "planning_wait_steps": 77,
+      "edge_searches": 2
+    }
+  },
+  "unchanged_non_target_variant_episodes": 108,
+  "changed_jobs": [
+    "height_regression_6000005",
+    "path_regression_6000005",
+    "v10_regression_6000005"
+  ],
+  "summary": "四组均为30/37；相对 v9 无新增成功，相对 v6 仍有箱沿1例退步。原地转向与接近已有实际执行证据，但接触后支撑变化仍导致恢复失败。未进入240回合开发，主版本仍为v5。",
+  "scope": "37 reused diagnostic conditions, not independent confirmation. No training, no new weights, no paper."
+}

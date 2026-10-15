@@ -35,7 +35,7 @@ def run(job,out):
     cls,cfg_cls=controller_class(job['version'])
     cfg=cfg_cls(**job.get('config',{}));env=make_env(False);rows=[]
     payload={'status':'running','job':job,'records':rows,'input':'PRIVILEGED_CURRENT_STATE_AND_FIXED_TASK_GOAL',
-             'supervisor_note':'Original 23D observation history plus current 7 arm joint positions for v9 joint-aware variants only; fixed FK asset. No contact/reward/success/future rollout in choose(). Frozen BC/WM inputs unchanged.'}
+             'supervisor_note':'Original 23D observation history plus current 7 arm joint positions for v9 and v10-family joint-aware variants; fixed FK and scene assets. No contact/reward/success/future rollout in choose(). Frozen BC/WM inputs unchanged.'}
     dataset=ROOT/job['dataset'] if job.get('dataset') else DATA
     with (out/'result.json').open('x',encoding='utf-8') as result,(out/'trace.jsonl').open('x',encoding='utf-8') as trace,h5py.File(dataset) as data:
         def save(status):

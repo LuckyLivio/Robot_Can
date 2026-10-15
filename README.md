@@ -1,4 +1,4 @@
-> 当前 v10 箱沿接近实验正在核验，旧成果完整保留。前端入口：<http://127.0.0.1:8766/>。新结果与状态见 [v10 报告](reproduction/improvement_v10_20261015_01/REPORT.md)。
+> v10 箱沿实验已完成：四组均30/37，未采用、未进入240回合开发。旧成果完整保留，主版本仍为v5。前端入口：<http://127.0.0.1:8766/>。原因与证据见 [v10 报告](reproduction/improvement_v10_20261015_01/REPORT.md)。
 
 # 动作延迟下的机器人抓取搬运与失败恢复
 
@@ -68,6 +68,7 @@ C:\Users\Livio\Desktop\robot_can\.venv\Scripts\python.exe
 | `reproduction/recovery_v5_20261012_01/` | v5 恢复控制、消融、独立确认和失败分析 |
 | `reproduction/progress_v10_20261015_01/demo/` | 当前进度与成果展示前端 |
 | `reproduction/improvement_v9_20261015_01/` | 关节姿态检查与规划耗时消融，旧结果保留 |
+| `reproduction/improvement_v10_20261015_01/` | 箱沿高度/路径消融、接触诊断与完整核验 |
 | `data/` | 数据、划分与来源校验 |
 | `policy/`、`models/` | 策略和世界模型权重、实验结果 |
 
@@ -75,7 +76,7 @@ BC 提供候选动作，世界模型预测并评分，执行器通过 FIFO 队�
 
 ## 当前实验结果
 
-本轮 v9 的关节可达性与规划耗时结果见 [v9 完整报告](reproduction/improvement_v9_20261015_01/REPORT.md)。新监督器额外读取七个关节角度，BC 和 Full 公平共享；原策略/世界模型输入仍为 23 维。未达到门槛的候选不会替换下列冻结主结果。
+本轮箱沿接近结果见 [v10 完整报告](reproduction/improvement_v10_20261015_01/REPORT.md)，历史关节与耗时结果见 [v9 报告](reproduction/improvement_v9_20261015_01/REPORT.md)。监督器额外读取七个关节角度，BC 和 Full 公平共享；原策略/世界模型输入仍为 23 维。未达到门槛的候选不会替换下列冻结主结果。
 
 完整世界模型主实验、补充诊断及恢复实验见 [RESULTS.md](RESULTS.md) 和 [EVIDENCE_INDEX.md](EVIDENCE_INDEX.md)。不同阶段的起点与条件不能直接拼接成同一批对照。
 
@@ -100,10 +101,10 @@ v5 相对 v4 救回 7 次执行且没有新增失败，但收益集中于两个�
 检查已有成果和本次 README 更新：
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\improvement_v9_20261015_01\verify_integrity.py
+& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\improvement_v10_20261015_01\verify_integrity.py
 ```
 
-该入口只读核对本轮开始前的 8,802 个路径，以及本轮代码、结果与前端交付清单。授权修改的根 README 和入口页面按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
+该入口只读核对本轮开始前的 9,435 个路径，以及本轮代码、结果与前端交付清单。授权修改的根 README 和入口页面按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
 
 完整 v5 重跑、控制步骤复核和物理回放命令见 [v5 README](reproduction/recovery_v5_20261012_01/README.md)，整体运行指南见 [PROGRAM_GUIDE.md](PROGRAM_GUIDE.md)。这些实验入口会执行仿真，并检查历史根文档；如提示文档更新，先使用当前完整性检查核对归档。不要删除结果或改写旧保护清单来跳过核验。
 
@@ -155,4 +156,10 @@ v8 历史详情：[v8 报告](reproduction/improvement_v8_20261015_01/REPORT.md)
 
 新增关节姿态检查和缓存/分步规划，保持400步预算。最终五路对照：v6为31/37，其余四版均为30/37；没有新增救回，未进入240回合开发集。最大策略与控制计算实测由v8的1783 ms降至v9的49 ms，不能据此保证完整实时链路。
 
-本轮包含一次明确登记的末端坐标系验证修复，修复前记录保留，最终结论使用pilot_b。详见 [v9完整报告](reproduction/improvement_v9_20261015_01/REPORT.md) 和 [新版前端说明](reproduction/progress_v10_20261015_01/README.md)。本轮根文件改前备份在 `reproduction/improvement_v9_20261015_01/before/`。
+v9包含一次明确登记的末端坐标系验证修复，修复前记录保留，最终结论使用pilot_b。详见 [v9完整报告](reproduction/improvement_v9_20261015_01/REPORT.md) 和 [v9前端说明](reproduction/progress_v9_20261015_01/README.md)。v9根文件改前备份在 `reproduction/improvement_v9_20261015_01/before/`。
+
+## v10 进展（2026-10-15）
+
+新增箱沿接近高度和有限倾斜分段路径，9+9回合小测试、148回合完整消融均已结束。v9、height、path、v10均30/37；尚未修复箱沿任务，相对v6仍有1例退步。当前原因定位到倾斜接近时单侧手指提前顶到罐体。未达到开发门槛，未运行240回合、未训练、未写论文。
+
+动作/FIFO回放、物理回放和旧资产核对通过；额外检查范围优化只减少重复计算，不能宣称成功率提升。详见 [v10报告](reproduction/improvement_v10_20261015_01/REPORT.md) 和 [当前前端说明](reproduction/progress_v10_20261015_01/README.md)。本轮根文件改前备份在 `reproduction/improvement_v10_20261015_01/before/`。

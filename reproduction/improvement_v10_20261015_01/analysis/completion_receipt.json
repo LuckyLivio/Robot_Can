@@ -1,0 +1,32 @@
+{
+  "complete": true,
+  "experiment_runs": {
+    "smoke_a": 9,
+    "smoke_b": 9,
+    "pilot_a": 148
+  },
+  "total_executions": 166,
+  "dev_240_launched": false,
+  "adopted": false,
+  "outcome": "No success-rate gain; preserve main v5 and all old assets. Wall-edge approach reached, premature can-finger contact remains.",
+  "old_paths": 9435,
+  "old_pt_weights": 684,
+  "validation_sha256": {
+    "mechanisms_a.json": "4d7c4089b7d35c945de2349e07c0a5f45af538b05a26cca4c93d2cd215c59ca2",
+    "mechanisms_b.json": "4d7c4089b7d35c945de2349e07c0a5f45af538b05a26cca4c93d2cd215c59ca2",
+    "guards_b.json": "eae7f60d25abe85ae303555a9f3426240dcf396d144f34e021a8f40fdd540d0c",
+    "smoke_a_verification.json": "7abbb686aad6c60db063ff82820d6c94745831daddb8eb58820654d7825480f3",
+    "smoke_b_verification.json": "3c9cab7a3e1234583ecf7e4477f859db038b5da0bba85da49b2c96937365f559",
+    "pilot_a_verification.json": "205c5595bb580b818f4ff701e97696efb5a54f7a0779227a09ca00b672bd65b2",
+    "pilot_a_current_verification.json": "1d9875fba70e1ef184bec6dcf6e1fde986c9639edaf1dbf1eda7ea261a71e038",
+    "pilot_a_physics.json": "006d5c7a999c1efc36c74267ce723ab20492bc011cc5730ed8628e08e7bcc605",
+    "guard_timing_microbenchmark.json": "77c2910f98b2b450e86e39de99e5ce76fca57424159f232f49c0c6ed3cc17711"
+  },
+  "current_controller_sha256": {
+    "recovery/path_search.py": "3444d41ff101373a2dfb04ee2d214d896c508e932efc27cc988a7e90841dafed",
+    "recovery/recovery_controller.py": "549b52d632abb79e1a7591ecd74126246e6ebae96debaaf85b0afd91728edacc",
+    "recovery/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  "physical_outcomes_source": "pilot_a/source (before timing-only guard short circuit)",
+  "metadata_note": "Archived evaluator payload used inherited wording about v9-only joint inputs. All three v10-family variants also read the same current seven joint angles, as their code/traces show; current wording corrected without rewriting archived evidence."
+}
