@@ -47,9 +47,9 @@ if (RUN/'analysis/dev_a.json').exists():
         suffix=j['id'].split('_',1)[1];labels.append(suffix.replace('_noise005',' · 噪声').replace('_clean',' · 干净'))
         for v,delta,col,marker in [('v6',-.16,'#606a74','s'),('v11',0,'#D55E00','x'),('v12',.16,'#0072B2','o')]:
             p=(RUN/'dev_a'/j['id']/'result.json') if v=='v12' else ROOT/f'reproduction/improvement_{v}_20261015_01/dev_a/{v}_{suffix}/result.json'
-            sources.append(p);rr=read(p)['records'];n=sum(r['success'] for r in rr);ax.scatter(n/30*100,i+delta,c=col,marker=marker,s=22,label=v if i==0 else None)
+            sources.append(p);rr=read(p)['records'];n=sum(r['success'] for r in rr);ax.scatter(n/30*100,i+delta,c=col,marker=marker,s=22,clip_on=False,label=v if i==0 else None)
             export.append({'condition':suffix,'version':v,'success':n,'episodes':30,'success_percent':n/30*100})
-    ax.set(yticks=range(8),yticklabels=labels,xlim=(0,102),xticks=[0,25,50,75,100],xlabel='成功率（%）',title='冻结开发对照：30个共同起点 × 8条件');ax.invert_yaxis();ax.grid(axis='x',alpha=.2);ax.legend(frameon=False,loc='lower left')
+    ax.set(yticks=range(8),yticklabels=labels,xlim=(0,100),xticks=[0,25,50,75,100],xlabel='成功率（%）',title='冻结开发对照：30个共同起点 × 8条件');ax.invert_yaxis();ax.grid(axis='x',alpha=.2);ax.legend(frameon=False,loc='lower left')
     save(fig,'V12_F03_development','v6和v11为历史同起点同噪声参考；v12新跑240次。点为各条件实际比例，无推断区间。开发集用于门槛筛选，不作为独立确认。',export,sources)
 if (RUN/'analysis/confirmation.json').exists():
     d=read(RUN/'analysis/confirmation.json');fig,ax=plt.subplots(figsize=(7.1,2.7),layout='constrained');export=[]
@@ -57,7 +57,8 @@ if (RUN/'analysis/confirmation.json').exists():
         s=d['statistics'][k];mean=s['estimate_percent'];lo,hi=s['ci95_percent'];ax.errorbar(mean,i,xerr=[[mean-lo],[hi-mean]],fmt='o',color='#0072B2' if k=='v12' else '#606a74',capsize=3)
         export.append({'quantity':k,'estimate_percent':mean,'ci_low_percent':lo,'ci_high_percent':hi,'independent_starts':60})
     effect=d['statistics']['v12_minus_v6'];ax.set(yticks=[0,1],yticklabels=['v6','v12'],xlim=(0,100),xlabel='八条件固定执行组合成功率（%）',title='独立确认：60个新起点，各版本480次执行');ax.invert_yaxis();ax.grid(axis='x',alpha=.2)
-    fig.text(.18,.015,f"配对差值：{effect['estimate_percent']:+.2f} pp；95% CI [{effect['ci95_percent'][0]:.2f}, {effect['ci95_percent'][1]:.2f}] pp",fontsize=8)
+    ax.set_ylim(1.35,-.35)
+    ax.text(.03,.50,f"配对差值：{effect['estimate_percent']:+.2f} pp\n95% CI [{effect['ci95_percent'][0]:.2f}, {effect['ci95_percent'][1]:.2f}] pp",transform=ax.transAxes,fontsize=8,va='center')
     export.append({'quantity':'v12_minus_v6_pp','estimate_percent':effect['estimate_percent'],'ci_low_percent':effect['ci95_percent'][0],'ci_high_percent':effect['ci95_percent'][1],'independent_starts':60})
     save(fig,'V12_F04_confirmation','以60个起点成组重采样20000次，保留各起点的8个关联条件；Full三个固定训练种子。区间为点态95%百分位bootstrap。若无不一致结果造成零宽区间，不代表总体等价。',export,[RUN/'analysis/confirmation.json'])
 (OUT/'CATALOG.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2),encoding='utf8')

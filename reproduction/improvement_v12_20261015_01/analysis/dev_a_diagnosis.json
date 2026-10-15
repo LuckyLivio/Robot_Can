@@ -1,0 +1,234 @@
+{
+  "stage": "dev_a",
+  "posthoc_only": true,
+  "failure_records": [
+    {
+      "job": "v12_bc_k2_clean",
+      "demo": "demo_124",
+      "steps": 400,
+      "last_mode": "POSE_BLOCKED",
+      "goal_xy_m": 0.30106666192760756,
+      "object_z_m": 0.024668170139193535,
+      "ever_stable_hold": true,
+      "attempts": 1,
+      "last_events": [
+        {
+          "step": 126,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "observed_grasp_loss",
+          "attempt": 1,
+          "object_position": [
+            0.3157869875431061,
+            0.18207861483097076,
+            0.939686119556427
+          ]
+        },
+        {
+          "step": 127,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "pose_changed_during_approach",
+          "attempt": 1,
+          "object_position": [
+            0.33272767066955566,
+            0.16816292703151703,
+            0.9183849096298218
+          ]
+        },
+        {
+          "step": 187,
+          "from": "POSE_WAIT",
+          "to": "POSE_BLOCKED",
+          "reason": "unknown_or_unsettled_timeout",
+          "attempt": 1,
+          "object_position": [
+            0.3919001519680023,
+            0.1726142019033432,
+            0.02466779574751854
+          ]
+        }
+      ],
+      "wait_hold_events": []
+    },
+    {
+      "job": "v12_full_s23_clean",
+      "demo": "demo_188",
+      "steps": 400,
+      "last_mode": "BLOCKED",
+      "goal_xy_m": 0.26804473545753543,
+      "object_z_m": 0.843773365020752,
+      "ever_stable_hold": true,
+      "attempts": 1,
+      "last_events": [
+        {
+          "step": 70,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "observed_grasp_loss",
+          "attempt": 1,
+          "object_position": [
+            0.14440210163593292,
+            0.13959656655788422,
+            0.8429635763168335
+          ]
+        },
+        {
+          "step": 70,
+          "from": "RETRACT",
+          "to": "ABORT_RETRACT",
+          "reason": "no_untried_feasible_candidate",
+          "attempt": 1,
+          "object_position": [
+            0.14440210163593292,
+            0.13959656655788422,
+            0.8429635763168335
+          ]
+        },
+        {
+          "step": 78,
+          "from": "ABORT_RETRACT",
+          "to": "BLOCKED",
+          "reason": "no_feasible_plan_no_repeated_descent",
+          "attempt": 1,
+          "object_position": [
+            0.14437448978424072,
+            0.13968822360038757,
+            0.8437698483467102
+          ]
+        }
+      ],
+      "wait_hold_events": []
+    },
+    {
+      "job": "v12_full_s23_clean",
+      "demo": "demo_97",
+      "steps": 400,
+      "last_mode": "POSE_BLOCKED",
+      "goal_xy_m": 0.23636942581605522,
+      "object_z_m": 0.8438073396682739,
+      "ever_stable_hold": true,
+      "attempts": 1,
+      "last_events": [
+        {
+          "step": 99,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "near_object_stall",
+          "attempt": 1,
+          "object_position": [
+            0.06854958832263947,
+            0.36379194259643555,
+            0.9335388541221619
+          ]
+        },
+        {
+          "step": 99,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "pose_changed_during_approach",
+          "attempt": 1,
+          "object_position": [
+            0.03695673868060112,
+            0.35814419388771057,
+            0.8973247408866882
+          ]
+        },
+        {
+          "step": 158,
+          "from": "POSE_WAIT",
+          "to": "POSE_BLOCKED",
+          "reason": "bounded_mesh_no_feasible_candidate",
+          "attempt": 1,
+          "object_position": [
+            -0.0294191911816597,
+            0.3362237513065338,
+            0.8438113331794739
+          ]
+        }
+      ],
+      "wait_hold_events": []
+    },
+    {
+      "job": "v12_full_s41_clean",
+      "demo": "demo_97",
+      "steps": 400,
+      "last_mode": "POSE_BLOCKED",
+      "goal_xy_m": 0.22818605654799798,
+      "object_z_m": 0.8508982062339783,
+      "ever_stable_hold": true,
+      "attempts": 1,
+      "last_events": [
+        {
+          "step": 97,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "near_object_stall",
+          "attempt": 1,
+          "object_position": [
+            0.06875226646661758,
+            0.35916125774383545,
+            0.9331504106521606
+          ]
+        },
+        {
+          "step": 97,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "pose_changed_during_approach",
+          "attempt": 1,
+          "object_position": [
+            0.03601790592074394,
+            0.3542499244213104,
+            0.8775892853736877
+          ]
+        },
+        {
+          "step": 157,
+          "from": "POSE_WAIT",
+          "to": "POSE_BLOCKED",
+          "reason": "bounded_mesh_no_feasible_candidate",
+          "attempt": 1,
+          "object_position": [
+            -0.020452801138162613,
+            0.33491605520248413,
+            0.8512299656867981
+          ]
+        }
+      ],
+      "wait_hold_events": []
+    }
+  ],
+  "wait_hold_events": [
+    {
+      "job": "v12_full_s41_noise005",
+      "demo": "demo_87",
+      "success": true,
+      "step": 149,
+      "from": "POSE_WAIT",
+      "evidence": "passive_follow",
+      "observations": 8
+    }
+  ],
+  "exact_v11_trajectory_comparison": {
+    "episodes": 240,
+    "identical": 239,
+    "changed": [
+      {
+        "condition": "full_s41_noise005",
+        "demo": "demo_87",
+        "first_changed_step": 149
+      }
+    ]
+  },
+  "timing": {
+    "v12": {
+      "steps": 37982,
+      "p50_ms": 1.4770999987376854,
+      "p99_ms": 2.6900570002180766,
+      "max_ms": 44.69539999990957,
+      "over_50ms": 0
+    }
+  },
+  "timing_scope": "BC/WM plus supervisor, excludes physics/render/logging; four concurrent workers; development overlaps demonstration replay rendering. Not a hard real-time guarantee."
+}

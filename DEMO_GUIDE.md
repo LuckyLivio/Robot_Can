@@ -1,10 +1,14 @@
-> 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+> **v12更新（2026-10-15）**：v12已完成：开发236/240；全新60起点确认v12 465/480、v6 473/480；救回1、退步9。对照门槛未通过；配对区间没有高于零，不能宣称总体成功率提升。 [报告](reproduction/improvement_v12_20261015_01/REPORT.md) · [新前端](reproduction/improvement_v12_20261015_01/index.html)。旧v5冻结证据及全部旧资产保留。
 
-# 当前成果展示与讲解顺序
+先打开页首v12前端：核对四阶段结果 → 播放demo87同起点20fps对比 → 查看60起点配对确认与失败边界 → 再进入下方历史完整展示。
 
-更新：2026-10-15。[当前页面](reproduction/progress_v11_20261015_01/demo/index.html)，启动命令见[PROGRAM_GUIDE](PROGRAM_GUIDE.md)。根网址 http://127.0.0.1:8766/ 自动跳转；历史页面保留。
+> 历史阶段：2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
 
-1. 先看最新进展：主版本v5，v11仅为候选；明确31/37诊断与235/240开发是不同批次。
+# 此前v11完整展示与讲解顺序
+
+历史阶段：2026-10-15。[v11完整页面](reproduction/progress_v11_20261015_01/demo/index.html)，启动命令见[PROGRAM_GUIDE](PROGRAM_GUIDE.md)。根网址 http://127.0.0.1:8766/ 现在自动跳到v12；历史页面保留。
+
+1. 回顾此前进展：主版本v5，v11仅为候选；明确31/37诊断与235/240开发是不同批次。
 2. 看v10/v11箱沿对比：同状态BC k=2、噪声0.05，v11在380步完成；20fps逐控制步回放，成功后保持终点。单个已知案例不能证明泛化。
 3. 展开240开发表和持物等待失败图，解释为何v11没有采用。
 4. 介绍原世界模型：D2/100ms、四候选、H8含队列前缀、k2回退。原始BC/Full/Plain六段视频固定seed17，统计包含三种子；当前重新渲染的视频为20fps。

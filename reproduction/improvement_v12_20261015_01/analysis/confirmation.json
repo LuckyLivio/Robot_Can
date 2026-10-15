@@ -1,0 +1,235 @@
+{
+  "stage": "confirmation",
+  "variants": {
+    "v6": {
+      "success": 473,
+      "episodes": 480,
+      "wait_transfers": 0
+    },
+    "v12": {
+      "success": 465,
+      "episodes": 480,
+      "wait_transfers": 0
+    }
+  },
+  "unique_starts": 60,
+  "new_executions": 960,
+  "statistics": {
+    "v6": {
+      "estimate_percent": 98.54166666666667,
+      "ci95_percent": [
+        96.66666666666667,
+        100.0
+      ]
+    },
+    "v12": {
+      "estimate_percent": 96.875,
+      "ci95_percent": [
+        93.125,
+        99.58333333333333
+      ]
+    },
+    "v12_minus_v6": {
+      "estimate_percent": -1.6666666666666667,
+      "ci95_percent": [
+        -5.0,
+        0.20833333333333334
+      ]
+    }
+  },
+  "conditions": [
+    {
+      "condition": "bc_k2_clean",
+      "v6_success": 59,
+      "v12_success": 59,
+      "episodes": 60,
+      "rescues": [
+        "demo_12000015"
+      ],
+      "regressions": [
+        "demo_12000011"
+      ],
+      "paired_difference": {
+        "estimate_percent": 0.0,
+        "ci95_percent": [
+          -5.0,
+          5.0
+        ]
+      }
+    },
+    {
+      "condition": "full_s17_clean",
+      "v6_success": 59,
+      "v12_success": 58,
+      "episodes": 60,
+      "rescues": [],
+      "regressions": [
+        "demo_12000011"
+      ],
+      "paired_difference": {
+        "estimate_percent": -1.6666666666666667,
+        "ci95_percent": [
+          -5.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "condition": "full_s23_clean",
+      "v6_success": 59,
+      "v12_success": 57,
+      "episodes": 60,
+      "rescues": [],
+      "regressions": [
+        "demo_12000011",
+        "demo_12000036"
+      ],
+      "paired_difference": {
+        "estimate_percent": -3.3333333333333335,
+        "ci95_percent": [
+          -8.333333333333332,
+          0.0
+        ]
+      }
+    },
+    {
+      "condition": "full_s41_clean",
+      "v6_success": 60,
+      "v12_success": 59,
+      "episodes": 60,
+      "rescues": [],
+      "regressions": [
+        "demo_12000011"
+      ],
+      "paired_difference": {
+        "estimate_percent": -1.6666666666666667,
+        "ci95_percent": [
+          -5.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "condition": "bc_k2_noise005",
+      "v6_success": 60,
+      "v12_success": 59,
+      "episodes": 60,
+      "rescues": [],
+      "regressions": [
+        "demo_12000011"
+      ],
+      "paired_difference": {
+        "estimate_percent": -1.6666666666666667,
+        "ci95_percent": [
+          -5.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "condition": "full_s17_noise005",
+      "v6_success": 59,
+      "v12_success": 59,
+      "episodes": 60,
+      "rescues": [],
+      "regressions": [],
+      "paired_difference": {
+        "estimate_percent": 0.0,
+        "ci95_percent": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "condition": "full_s23_noise005",
+      "v6_success": 58,
+      "v12_success": 56,
+      "episodes": 60,
+      "rescues": [],
+      "regressions": [
+        "demo_12000011",
+        "demo_12000021"
+      ],
+      "paired_difference": {
+        "estimate_percent": -3.3333333333333335,
+        "ci95_percent": [
+          -8.333333333333332,
+          0.0
+        ]
+      }
+    },
+    {
+      "condition": "full_s41_noise005",
+      "v6_success": 59,
+      "v12_success": 58,
+      "episodes": 60,
+      "rescues": [],
+      "regressions": [
+        "demo_12000011"
+      ],
+      "paired_difference": {
+        "estimate_percent": -1.6666666666666667,
+        "ci95_percent": [
+          -5.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "rescues": [
+    [
+      "bc_k2_clean",
+      "demo_12000015"
+    ]
+  ],
+  "regressions": [
+    [
+      "bc_k2_clean",
+      "demo_12000011"
+    ],
+    [
+      "full_s17_clean",
+      "demo_12000011"
+    ],
+    [
+      "full_s23_clean",
+      "demo_12000011"
+    ],
+    [
+      "full_s23_clean",
+      "demo_12000036"
+    ],
+    [
+      "full_s41_clean",
+      "demo_12000011"
+    ],
+    [
+      "bc_k2_noise005",
+      "demo_12000011"
+    ],
+    [
+      "full_s23_noise005",
+      "demo_12000011"
+    ],
+    [
+      "full_s23_noise005",
+      "demo_12000021"
+    ],
+    [
+      "full_s41_noise005",
+      "demo_12000011"
+    ]
+  ],
+  "distinct_rescued_starts": [
+    "demo_12000015"
+  ],
+  "adoption_gate_passed": false,
+  "positive_primary_ci": false,
+  "joint_success_step_difference": {
+    "n": 464,
+    "median": 0.0,
+    "mean": 1.043103448275862
+  },
+  "inference": "Paired-start percentile bootstrap, 20000 draws, seed2026101512. Eight fixed conditions per start; Full three fixed training seeds. Pointwise intervals, not arbitrary retraining uncertainty. Zero interval with no discordance does not prove equivalence. No comparison to v5 from another batch."
+}

@@ -1,12 +1,12 @@
-> **v12 进行中（2026-10-15）**：[最新前端](reproduction/improvement_v12_20261015_01/index.html) · [执行前协议](reproduction/improvement_v12_20261015_01/protocols/PLAN.md)。9次小测试与114次消融通过，已冻结进入240回合开发；尚无独立确认结论。旧版成果与权重保留。
+> **v12更新（2026-10-15）**：v12已完成：开发236/240；全新60起点确认v12 465/480、v6 473/480；救回1、退步9。对照门槛未通过；配对区间没有高于零，不能宣称总体成功率提升。 [报告](reproduction/improvement_v12_20261015_01/REPORT.md) · [新前端](reproduction/improvement_v12_20261015_01/index.html)。旧v5冻结证据及全部旧资产保留。
 
-> 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+> 历史阶段：2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
 
 > 跨设备交付已整理：[使用说明](reproduction/portable_delivery_20261015_01/README.md) · [下载与验收页面](reproduction/portable_delivery_20261015_01/index.html)。含独立展示包、v6—v11增补与三个ZIP的迁移文件夹；第二台电脑实际验收仍待完成。
 
-> 全项目审查已完成：[详细报告](reproduction/project_audit_20261015_01/REPORT.md) · [检查清单](reproduction/project_audit_20261015_01/CHECKLIST.csv) · [调整计划](reproduction/project_audit_20261015_01/IMPROVEMENT_PLAN.md)。未新增训练或仿真。
+> 此前全项目审查已完成：[详细报告](reproduction/project_audit_20261015_01/REPORT.md) · [检查清单](reproduction/project_audit_20261015_01/CHECKLIST.csv) · [调整计划](reproduction/project_audit_20261015_01/IMPROVEMENT_PLAN.md)。该审查阶段未新增训练或仿真；本轮v12实验见页首。
 
-> v11实验已完成：箱沿案例修复，开发235/240低于v6的236/240，未采用。旧资产保留，主版本仍为v5。[本轮报告](reproduction/improvement_v11_20261015_01/REPORT.md) · [当前前端](http://127.0.0.1:8766/)。
+> 此前v11实验已完成：箱沿案例修复，开发235/240低于v6的236/240，未采用。旧资产保留，主版本仍为v5。[v11阶段报告](reproduction/improvement_v11_20261015_01/REPORT.md) · [当前前端](http://127.0.0.1:8766/)。
 
 # 动作延迟下的机器人抓取搬运与失败恢复
 
@@ -27,9 +27,9 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 **[打开前端：http://127.0.0.1:8766/](http://127.0.0.1:8766/)**
 
-项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/progress_v11_20261015_01/demo/index.html)。
+项目根入口会自动跳转到最新整合版。也可以[直接打开v12成果页面](http://127.0.0.1:8766/reproduction/improvement_v12_20261015_01/index.html)。
 
-当前整合版包含 v11 最终结果、v10/v11同起点箱沿20 fps新视频、原始轨迹与开发退步诊断，以及世界模型与v5冻结主结果、v6/v8历史恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
+历史整合版包含 v11 最终结果、v10/v11同起点箱沿20 fps新视频、原始轨迹与开发退步诊断，以及世界模型与v5冻结主结果、v6/v8历史恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
 
 这是静态 HTML/CSS/JavaScript 前端，不需要 npm、Node.js 或额外前端依赖。启动命令只提供本地文件服务；训练和机器人仿真有独立入口。请通过 HTTP 地址访问，使数据与视频按项目路径加载。
 
@@ -38,11 +38,12 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 - 页面打不开：检查工作目录、启动报错以及终端是否仍在运行。
 - 数据或视频无法加载：必须在 `robot_can` 根目录启动服务，不能只在 `demo` 子目录启动。
 
-历史页面仍保留：
+当前与历史页面：
 
 | 页面 | 地址 |
 |---|---|
-| 当前整合版，推荐 | http://127.0.0.1:8766/reproduction/progress_v11_20261015_01/demo/index.html |
+| 当前v12评估与同起点对比 | http://127.0.0.1:8766/reproduction/improvement_v12_20261015_01/index.html |
+| 历史完整整合版 | http://127.0.0.1:8766/reproduction/progress_v11_20261015_01/demo/index.html |
 | review 历史版 | http://127.0.0.1:8766/reproduction/review_20261012_01/demo/index.html |
 | release 历史版 | http://127.0.0.1:8766/reproduction/release_20261012_01/demo/index.html |
 
@@ -74,7 +75,8 @@ C:\Users\Livio\Desktop\robot_can\.venv\Scripts\python.exe
 | `evaluate_delay.py` | 动作延迟下的 BC 与世界模型闭环评估 |
 | `reproduction/extensions_20261012_01/` | 持续性、真值短期排序、预测长度及候选数量实验 |
 | `reproduction/recovery_v5_20261012_01/` | v5 恢复控制、消融、独立确认和失败分析 |
-| `reproduction/progress_v11_20261015_01/demo/` | 当前进度与成果展示前端 |
+| `reproduction/progress_v11_20261015_01/demo/` | 历史完整成果展示前端 |
+| `reproduction/improvement_v12_20261015_01/` | 当前前端、持物等待修复、三组消融、240开发及60新起点配对确认 |
 | `reproduction/improvement_v9_20261015_01/` | 关节姿态检查与规划耗时消融，旧结果保留 |
 | `reproduction/improvement_v10_20261015_01/` | 箱沿高度/路径消融、接触诊断与完整核验 |
 | `reproduction/improvement_v11_20261015_01/` | 罐体包络、四组消融、240回合开发和持物等待诊断 |
@@ -85,7 +87,7 @@ BC 提供候选动作，世界模型预测并评分，执行器通过 FIFO 队�
 
 ## 当前实验结果
 
-本轮箱沿与开发结果见 [v11 完整报告](reproduction/improvement_v11_20261015_01/REPORT.md)，历史箱沿接近见 [v10 报告](reproduction/improvement_v10_20261015_01/REPORT.md)，历史关节与耗时结果见 [v9 报告](reproduction/improvement_v9_20261015_01/REPORT.md)。监督器额外读取七个关节角度，BC 和 Full 公平共享；原策略/世界模型输入仍为 23 维。未达到门槛的候选不会替换下列冻结主结果。
+历史箱沿与开发结果见 [v11 完整报告](reproduction/improvement_v11_20261015_01/REPORT.md)，历史箱沿接近见 [v10 报告](reproduction/improvement_v10_20261015_01/REPORT.md)，历史关节与耗时结果见 [v9 报告](reproduction/improvement_v9_20261015_01/REPORT.md)。监督器额外读取七个关节角度，BC 和 Full 公平共享；原策略/世界模型输入仍为 23 维。未达到门槛的候选不会替换下列冻结主结果。
 
 完整世界模型主实验、补充诊断及恢复实验见 [RESULTS.md](RESULTS.md) 和 [EVIDENCE_INDEX.md](EVIDENCE_INDEX.md)。不同阶段的起点与条件不能直接拼接成同一批对照。
 
@@ -110,10 +112,10 @@ v5 相对 v4 救回 7 次执行且没有新增失败，但收益集中于两个�
 检查已有成果和本次 README 更新：
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\paper_quality_20261015_01\verify.py
+& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\improvement_v12_20261015_01\verify_integrity.py
 ```
 
-该入口只读核对图表整改前的 10,270 个路径，以及本轮图表、来源、文档与验证清单。授权更新的活动文档和分类入口按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
+该入口只读核对本轮v12修改前的 10,594 个路径，以及本轮交付清单和开发、确认冻结锁。授权更新的9份活动文档按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
 
 完整 v5 重跑、控制步骤复核和物理回放命令见 [v5 README](reproduction/recovery_v5_20261012_01/README.md)，整体运行指南见 [PROGRAM_GUIDE.md](PROGRAM_GUIDE.md)。这些实验入口会执行仿真，并检查历史根文档；如提示文档更新，先使用当前完整性检查核对归档。不要删除结果或改写旧保护清单来跳过核验。
 
@@ -135,11 +137,13 @@ v5 相对 v4 救回 7 次执行且没有新增失败，但收益集中于两个�
 
 项目具备本科毕设的工程与实验基础，建议定位为“考虑动作延迟的机器人抓取搬运与失败恢复系统设计及实验分析”。当前仍有窄格侧倒、失抓和物体掉出工作区等失败；输入不是纯视觉，未进行真机验证。论文正文与正式学校格式尚未完成。
 
-当前README复核日期：2026-10-15。2026-10-14重写前版本保存在 [README_before.md](reproduction/readme_update_20261014_01/README_before.md)，本轮修改前版本另存于 `reproduction/paper_quality_20261015_01/before/README.md`。原算法、权重、结果与历史页面保留。
+当前README复核日期：2026-10-15。2026-10-14重写前版本保存在 [README_before.md](reproduction/readme_update_20261014_01/README_before.md)，本轮修改前版本原样存于 `reproduction/improvement_v12_20261015_01/before/README.md`。原算法、权重、结果与历史页面保留。
 
 ## 论文图表核对与重新绘制（2026-10-15）
 
-当前36张论文图、逐图CSV、图注和来源位于 `reproduction/paper_quality_20261015_01/`，PNG为600 dpi，另附矢量PDF/SVG；见 [新图目录](reproduction/paper_quality_20261015_01/FIGURE_CATALOG.md) 与 [曲线解释](reproduction/paper_quality_20261015_01/CURVE_EXPLANATIONS.md)。根 `figures/` 的7组旧图继续保留用于历史核查。世界模型独立确认、开发集消融与后续v5恢复属于不同批次，不能合并解释。
+此前36张论文图、逐图CSV、图注和来源位于 `reproduction/paper_quality_20261015_01/`，PNG为600 dpi，另附矢量PDF/SVG；见 [新图目录](reproduction/paper_quality_20261015_01/FIGURE_CATALOG.md) 与 [曲线解释](reproduction/paper_quality_20261015_01/CURVE_EXPLANATIONS.md)。根 `figures/` 的7组旧图继续保留用于历史核查。世界模型独立确认、开发集消融与后续v5恢复属于不同批次，不能合并解释。
+
+本轮新增4张v12图、CSV及来源清单见 [v12图目录](reproduction/improvement_v12_20261015_01/figures/CATALOG.json)：已知案例轨迹、三组消融、开发分项和独立确认。成功率图与起点配对区间如实保留未通过的结果。
 
 以下命令只重绘，不训练、不仿真；建议输出到新目录，避免使已冻结的图表文件哈希发生变化：
 
@@ -151,7 +155,7 @@ v5 相对 v4 救回 7 次执行且没有新增失败，但收益集中于两个�
 
 仓库：[LuckyLivio/Robot_can](https://github.com/LuckyLivio/Robot_can)。克隆、前端与上传完整性说明见 [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md)。历史图表深查及固定训练/开发集复算见 [报告](reproduction/figures_deepcheck_20261014_01/REPORT.md) 与 [图表总览](reproduction/figures_deepcheck_20261014_01/index.html)。
 
-## 最新优化进展（2026-10-15）
+## 历史优化进展（2026-10-15，v12之前）
 
 当前前端增加版本状态与候选消融，根网址仍为 http://127.0.0.1:8766/ 。历史页面保持原样。
 
