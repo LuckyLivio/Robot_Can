@@ -1,0 +1,699 @@
+{
+  "status": "complete",
+  "job": {
+    "id": "v12_known_full_s41_noise005_demo_12000008",
+    "method": "full",
+    "seed": 41,
+    "noise": 0.05,
+    "enabled": true,
+    "demos": [
+      "demo_12000008"
+    ],
+    "steps": 400,
+    "config": {
+      "delay": 2,
+      "stable_frames": 5,
+      "stall_steps": 40,
+      "stall_progress_m": 0.005,
+      "max_attempts": 2,
+      "position_gain": 0.5,
+      "max_delta_m": 0.035,
+      "orientation_gain": 0.5,
+      "max_rotation_rad": 0.15,
+      "relative_tolerance_m": 0.012,
+      "near_object_m": 0.09,
+      "grip_gap_min_m": 0.025,
+      "grip_gap_max_m": 0.067,
+      "verified_lift_m": 0.02,
+      "approach_clearance_m": 0.2,
+      "carry_clearance_m": 0.28,
+      "grasp_offset_z_m": 0.012,
+      "close_steps": 16,
+      "lift_probe_m": 0.06,
+      "stage_timeout": 70,
+      "minimum_normal_steps": 80,
+      "long_stall_steps": 65,
+      "progress_epsilon_m": 0.008,
+      "recovery_budget_step": 160,
+      "sideways_axis_z": 0.6,
+      "sideways_grasp_z_m": 0.008,
+      "alignment_switch": true,
+      "region_guard": true,
+      "alignment_stall_steps": 18,
+      "alignment_progress_m": 0.003,
+      "alignment_angle_weight_m": 0.08,
+      "alternate_alignment_timeout": 110,
+      "alternate_rotation_step_rad": 0.25,
+      "corner_distance_m": 0.065,
+      "corner_gap_m": 0.06,
+      "corner_offset_m": 0.006,
+      "corner_clearance_m": 0.001,
+      "time_budget": true,
+      "side_clearance": true,
+      "horizon_steps": 400,
+      "early_stall_steps": 25,
+      "descent_stall_steps": 18,
+      "safe_transit_delta_m": 0.05,
+      "side_gap_m": 0.056,
+      "side_margin_m": 0.001,
+      "aperture_guard": true,
+      "prevent_repeat": true,
+      "aperture_tolerance_m": 0.0045,
+      "gap_uncertainty_m": 0.001,
+      "gap_settle_m": 0.0008,
+      "gap_pulse_interval": 5,
+      "aperture_timeout": 24,
+      "path_margin_m": 0.001,
+      "path_step_m": 0.005,
+      "replan_on_change": true,
+      "unknown_guard": true,
+      "pose_position_m": 0.015,
+      "pose_axis_deg": 20.0,
+      "pose_stable_frames": 4,
+      "pose_stable_position_m": 0.003,
+      "pose_stable_axis_deg": 4.0,
+      "pose_wait_steps": 60,
+      "max_pose_replans": 2,
+      "unknown_recheck_interval": 5,
+      "geometry_support": true,
+      "retreat_replan": true,
+      "joint_selection": true,
+      "bounded_planning": true,
+      "mesh_candidates_per_step": 8,
+      "ik_iterations_per_step": 16,
+      "ik_iterations_per_target": 48,
+      "joint_warning_rad": 0.2,
+      "joint_solution_margin_rad": 0.04,
+      "adaptive_height": true,
+      "edge_path": true,
+      "axis_alignment": true,
+      "can_guard": true,
+      "wait_hold_history": true,
+      "passive_wait_hold": true,
+      "wait_relative_tolerance_m": 0.004,
+      "wait_center_tolerance_m": 0.03
+    },
+    "baseline_result": "reproduction/recovery_20261012_01/formal/full_s41_noise005/result.json",
+    "version": "v12",
+    "original_baseline_result": "reproduction/multiseed_20261012_01/evaluations/full_s41_noise005/delay_wm_dev_d2_shift_fbshift_fbi2_gm0.02_noise0.05_score.json",
+    "baseline_result_v2": "reproduction/recovery_v2_20261012_01/dev_a/full_s41_noise005/result.json",
+    "baseline_result_v4": "reproduction/recovery_v4_20261012_01/dev_a/v4_full_s41_noise005/result.json",
+    "baseline_result_v6": "reproduction/improvement_v6_20261015_01/dev_a/v6_full_s41_noise005/result.json",
+    "dataset": "reproduction/improvement_v12_20261015_01/confirmation_starts.hdf5"
+  },
+  "records": [
+    {
+      "demo": "demo_12000008",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.515741469224185,
+      "ever_grasped": true,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": true,
+      "stable_hold_steps": 52,
+      "intervention_steps": 272,
+      "intervention_fraction": 0.68,
+      "attempts": 1,
+      "verified_regrasps": 0,
+      "failed_attempts": 1,
+      "phases": {
+        "NORMAL": 128,
+        "RETRACT": 8,
+        "POSE_WAIT": 32,
+        "PLAN_WAIT": 41,
+        "POSE_BLOCKED": 191
+      },
+      "events": [
+        {
+          "step": 129,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "near_object_stall",
+          "attempt": 1,
+          "object_position": [
+            0.3025115132331848,
+            0.3195516765117645,
+            1.0111727714538574
+          ]
+        },
+        {
+          "step": 129,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "pose_changed_during_approach",
+          "attempt": 1,
+          "object_position": [
+            0.3022070527076721,
+            0.3285152316093445,
+            0.940162181854248
+          ]
+        },
+        {
+          "step": 161,
+          "from": "POSE_WAIT",
+          "to": "RETRACT",
+          "reason": "bounded_mesh_ready",
+          "attempt": 1,
+          "object_position": [
+            0.30378279089927673,
+            0.3459398150444031,
+            0.940108060836792
+          ]
+        },
+        {
+          "step": 169,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.30374839901924133,
+            0.3459651470184326,
+            0.9400665163993835
+          ]
+        },
+        {
+          "step": 208,
+          "from": "ALIGN",
+          "to": "POSE_BLOCKED",
+          "reason": "edge_no_validated_local_path",
+          "attempt": 1,
+          "object_position": [
+            0.30377671122550964,
+            0.3459464907646179,
+            0.940068781375885
+          ]
+        }
+      ],
+      "guard_events": [],
+      "geometry_events": [
+        {
+          "step": 129,
+          "reason": "no_horizontal_support",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 161,
+          "reason": "mesh_supported_wall_top",
+          "candidates": 24,
+          "chosen": true
+        }
+      ],
+      "joint_events": [],
+      "edge_events": [
+        {
+          "step": 208,
+          "event": "search_complete",
+          "chosen": false,
+          "options": [
+            {
+              "index": 0,
+              "distance_m": 0.08,
+              "flip": false,
+              "reason": "terminal_can_clearance_not_validated",
+              "ik": [],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": -0.0015382614084973323,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 1,
+              "distance_m": 0.08,
+              "flip": true,
+              "reason": "terminal_can_clearance_not_validated",
+              "ik": [],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": -0.0015434697686786958,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 2,
+              "distance_m": 0.04,
+              "flip": false,
+              "reason": "terminal_can_clearance_not_validated",
+              "ik": [],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": -0.0015382614084973323,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 3,
+              "distance_m": 0.04,
+              "flip": true,
+              "reason": "terminal_can_clearance_not_validated",
+              "ik": [],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": -0.0015434697686786958,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 4,
+              "distance_m": 0.08,
+              "flip": false,
+              "reason": "local_ik_not_validated",
+              "ik": [
+                {
+                  "success": true,
+                  "iterations": 9,
+                  "q": [
+                    0.44297015704611004,
+                    0.9594760717198038,
+                    0.26715079833358857,
+                    -1.18113508430521,
+                    -0.5527464887424528,
+                    2.6899590405063094,
+                    1.2411147463751984
+                  ],
+                  "position_error_m": 0.00019009838080960586,
+                  "angle_error_rad": 0.0006711783930436613,
+                  "limit_margin_rad": 0.8033239282801962
+                },
+                {
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.3051420160697281,
+                    1.1592674752612697,
+                    0.29943962019991305,
+                    -1.0640604366956712,
+                    -0.5297471118895054,
+                    2.781208586749783,
+                    1.0664055985105627
+                  ],
+                  "position_error_m": 0.0015875540658721007,
+                  "angle_error_rad": 0.0018276190979896855,
+                  "limit_margin_rad": 0.6035325247387302
+                },
+                {
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    0.49387808591387566,
+                    1.5034571774698344,
+                    0.03298778405257224,
+                    -0.5519312013812822,
+                    -0.046871757141910324,
+                    2.684942269979938,
+                    0.8006342933768691
+                  ],
+                  "position_error_m": 0.023804592924877927,
+                  "angle_error_rad": 0.019049834814280263,
+                  "limit_margin_rad": 0.2593428225301655
+                }
+              ],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": 0.0037365475162583484,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 5,
+              "distance_m": 0.08,
+              "flip": true,
+              "reason": "local_ik_not_validated",
+              "ik": [
+                {
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    1.2355168015554425,
+                    1.2627284530893137,
+                    -1.062344560844033,
+                    -1.1288467777235633,
+                    1.279495517068549,
+                    2.4537272459633805,
+                    2.8773
+                  ],
+                  "position_error_m": 0.0010311032728340648,
+                  "angle_error_rad": 0.6770248272976415,
+                  "limit_margin_rad": 0.020000000000000018
+                }
+              ],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": 0.0037365450143417855,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 6,
+              "distance_m": 0.04,
+              "flip": false,
+              "reason": "local_ik_not_validated",
+              "ik": [
+                {
+                  "success": true,
+                  "iterations": 9,
+                  "q": [
+                    0.44297015704611004,
+                    0.9594760717198038,
+                    0.26715079833358857,
+                    -1.18113508430521,
+                    -0.5527464887424528,
+                    2.6899590405063094,
+                    1.2411147463751984
+                  ],
+                  "position_error_m": 0.00019009838080960586,
+                  "angle_error_rad": 0.0006711783930436613,
+                  "limit_margin_rad": 0.8033239282801962
+                },
+                {
+                  "success": true,
+                  "iterations": 4,
+                  "q": [
+                    0.35892152822707907,
+                    1.3958967984319635,
+                    0.3301492464255791,
+                    -0.705744371434297,
+                    -0.4888461120903409,
+                    2.6690404926718156,
+                    0.9682635561289515
+                  ],
+                  "position_error_m": 0.001404258118558064,
+                  "angle_error_rad": 0.0011815467340089607,
+                  "limit_margin_rad": 0.36690320156803646
+                },
+                {
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    0.49718605124336185,
+                    1.5832367938556358,
+                    0.03351662250961771,
+                    -0.405744371434297,
+                    -0.04281877451022619,
+                    2.618643458645038,
+                    0.7956881692189823
+                  ],
+                  "position_error_m": 0.02348702727555279,
+                  "angle_error_rad": 0.01905776701466694,
+                  "limit_margin_rad": 0.17956320614436416
+                }
+              ],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": 0.0037365475162583484,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 7,
+              "distance_m": 0.04,
+              "flip": true,
+              "reason": "local_ik_not_validated",
+              "ik": [
+                {
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    1.2355168015554425,
+                    1.2627284530893137,
+                    -1.062344560844033,
+                    -1.1288467777235633,
+                    1.279495517068549,
+                    2.4537272459633805,
+                    2.8773
+                  ],
+                  "position_error_m": 0.0010311032728340648,
+                  "angle_error_rad": 0.6770248272976415,
+                  "limit_margin_rad": 0.020000000000000018
+                }
+              ],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": 0.0037365450143417855,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 8,
+              "distance_m": 0.08,
+              "flip": false,
+              "reason": "local_ik_not_validated",
+              "ik": [
+                {
+                  "success": true,
+                  "iterations": 9,
+                  "q": [
+                    0.44297015704611004,
+                    0.9594760717198038,
+                    0.26715079833358857,
+                    -1.18113508430521,
+                    -0.5527464887424528,
+                    2.6899590405063094,
+                    1.2411147463751984
+                  ],
+                  "position_error_m": 0.00019009838080960586,
+                  "angle_error_rad": 0.0006711783930436613,
+                  "limit_margin_rad": 0.8033239282801962
+                },
+                {
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.303265424933926,
+                    1.147061068991299,
+                    0.3019752146241715,
+                    -1.071216682040042,
+                    -0.5278655096508447,
+                    2.7756305033725397,
+                    1.065153748222048
+                  ],
+                  "position_error_m": 0.0014243154559236925,
+                  "angle_error_rad": 0.001660906731219292,
+                  "limit_margin_rad": 0.6157389310087009
+                },
+                {
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    0.4956152109367949,
+                    1.512940627333843,
+                    0.031182118970707044,
+                    -0.5195368545991227,
+                    -0.042708756837574795,
+                    2.6611763961202786,
+                    0.7982109136555674
+                  ],
+                  "position_error_m": 0.02209140361927889,
+                  "angle_error_rad": 0.018125709663768395,
+                  "limit_margin_rad": 0.24985937266615688
+                }
+              ],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": 0.0037365475145410276,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 9,
+              "distance_m": 0.08,
+              "flip": true,
+              "reason": "local_ik_not_validated",
+              "ik": [
+                {
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    1.2355168015554425,
+                    1.2627284530893137,
+                    -1.062344560844033,
+                    -1.1288467777235633,
+                    1.279495517068549,
+                    2.4537272459633805,
+                    2.8773
+                  ],
+                  "position_error_m": 0.0010311032728340648,
+                  "angle_error_rad": 0.6770248272976415,
+                  "limit_margin_rad": 0.020000000000000018
+                }
+              ],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": 0.0037365450163409364,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 10,
+              "distance_m": 0.04,
+              "flip": false,
+              "reason": "local_ik_not_validated",
+              "ik": [
+                {
+                  "success": true,
+                  "iterations": 9,
+                  "q": [
+                    0.44297015704611004,
+                    0.9594760717198038,
+                    0.26715079833358857,
+                    -1.18113508430521,
+                    -0.5527464887424528,
+                    2.6899590405063094,
+                    1.2411147463751984
+                  ],
+                  "position_error_m": 0.00019009838080960586,
+                  "angle_error_rad": 0.0006711783930436613,
+                  "limit_margin_rad": 0.8033239282801962
+                },
+                {
+                  "success": true,
+                  "iterations": 4,
+                  "q": [
+                    0.3563181706270928,
+                    1.3796295109512522,
+                    0.3306557603904321,
+                    -0.7207164761211098,
+                    -0.48923291061068075,
+                    2.666784628347883,
+                    0.9706455105613072
+                  ],
+                  "position_error_m": 0.0009589259359359966,
+                  "angle_error_rad": 0.0009140189654433312,
+                  "limit_margin_rad": 0.38317048904874773
+                },
+                {
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    0.49976221819745165,
+                    1.5670005874974189,
+                    0.023475732108164747,
+                    -0.42071647612110974,
+                    -0.030243891522065403,
+                    2.617105282869042,
+                    0.7931282669397745
+                  ],
+                  "position_error_m": 0.021997493306201144,
+                  "angle_error_rad": 0.018657149047700126,
+                  "limit_margin_rad": 0.19579941250258104
+                }
+              ],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": 0.0037365475145410276,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            },
+            {
+              "index": 11,
+              "distance_m": 0.04,
+              "flip": true,
+              "reason": "local_ik_not_validated",
+              "ik": [
+                {
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    1.2355168015554425,
+                    1.2627284530893137,
+                    -1.062344560844033,
+                    -1.1288467777235633,
+                    1.279495517068549,
+                    2.4537272459633805,
+                    2.8773
+                  ],
+                  "position_error_m": 0.0010311032728340648,
+                  "angle_error_rad": 0.6770248272976415,
+                  "limit_margin_rad": 0.020000000000000018
+                }
+              ],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": 0.0037365450163409364,
+                  "target_gap_m": 0.064
+                }
+              ],
+              "accepted": false
+            }
+          ],
+          "work": 452
+        }
+      ],
+      "wait_hold_events": [],
+      "support13_events": [],
+      "escape_events": [],
+      "planning_events": [
+        {
+          "step": 161,
+          "type": "mesh_complete",
+          "checked": 1,
+          "reason": "mesh_supported_wall_top"
+        }
+      ],
+      "pose_events": [
+        {
+          "step": 129,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "upright"
+        },
+        {
+          "step": 161,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "upright"
+        }
+      ],
+      "pose_replans": 0,
+      "fault_step": null,
+      "mean_decision_ms": 2.101408250073291,
+      "original_selection_counts": {
+        "2": 191,
+        "1": 4,
+        "0": 28,
+        "3": 177
+      },
+      "elapsed_s": 3.8977887999935774
+    }
+  ],
+  "input": "PRIVILEGED_CURRENT_STATE_AND_FIXED_TASK_GOAL",
+  "supervisor_note": "Original 23D observation history plus current 7 arm joint positions for v9 and v10-family joint-aware variants; fixed FK and scene assets. No contact/reward/success/future rollout in choose(). Frozen BC/WM inputs unchanged."
+}

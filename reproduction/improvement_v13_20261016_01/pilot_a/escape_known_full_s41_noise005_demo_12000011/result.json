@@ -1,0 +1,459 @@
+{
+  "status": "complete",
+  "job": {
+    "id": "escape_known_full_s41_noise005_demo_12000011",
+    "method": "full",
+    "seed": 41,
+    "noise": 0.05,
+    "enabled": true,
+    "demos": [
+      "demo_12000011"
+    ],
+    "steps": 400,
+    "config": {
+      "delay": 2,
+      "stable_frames": 5,
+      "stall_steps": 40,
+      "stall_progress_m": 0.005,
+      "max_attempts": 2,
+      "position_gain": 0.5,
+      "max_delta_m": 0.035,
+      "orientation_gain": 0.5,
+      "max_rotation_rad": 0.15,
+      "relative_tolerance_m": 0.012,
+      "near_object_m": 0.09,
+      "grip_gap_min_m": 0.025,
+      "grip_gap_max_m": 0.067,
+      "verified_lift_m": 0.02,
+      "approach_clearance_m": 0.2,
+      "carry_clearance_m": 0.28,
+      "grasp_offset_z_m": 0.012,
+      "close_steps": 16,
+      "lift_probe_m": 0.06,
+      "stage_timeout": 70,
+      "minimum_normal_steps": 80,
+      "long_stall_steps": 65,
+      "progress_epsilon_m": 0.008,
+      "recovery_budget_step": 160,
+      "sideways_axis_z": 0.6,
+      "sideways_grasp_z_m": 0.008,
+      "alignment_switch": true,
+      "region_guard": true,
+      "alignment_stall_steps": 18,
+      "alignment_progress_m": 0.003,
+      "alignment_angle_weight_m": 0.08,
+      "alternate_alignment_timeout": 110,
+      "alternate_rotation_step_rad": 0.25,
+      "corner_distance_m": 0.065,
+      "corner_gap_m": 0.06,
+      "corner_offset_m": 0.006,
+      "corner_clearance_m": 0.001,
+      "time_budget": true,
+      "side_clearance": true,
+      "horizon_steps": 400,
+      "early_stall_steps": 25,
+      "descent_stall_steps": 18,
+      "safe_transit_delta_m": 0.05,
+      "side_gap_m": 0.056,
+      "side_margin_m": 0.001,
+      "aperture_guard": true,
+      "prevent_repeat": true,
+      "aperture_tolerance_m": 0.0045,
+      "gap_uncertainty_m": 0.001,
+      "gap_settle_m": 0.0008,
+      "gap_pulse_interval": 5,
+      "aperture_timeout": 24,
+      "path_margin_m": 0.001,
+      "path_step_m": 0.005,
+      "replan_on_change": true,
+      "unknown_guard": true,
+      "pose_position_m": 0.015,
+      "pose_axis_deg": 20.0,
+      "pose_stable_frames": 4,
+      "pose_stable_position_m": 0.003,
+      "pose_stable_axis_deg": 4.0,
+      "pose_wait_steps": 60,
+      "max_pose_replans": 2,
+      "unknown_recheck_interval": 5,
+      "geometry_support": true,
+      "retreat_replan": true,
+      "joint_selection": true,
+      "bounded_planning": true,
+      "mesh_candidates_per_step": 8,
+      "ik_iterations_per_step": 16,
+      "ik_iterations_per_target": 48,
+      "joint_warning_rad": 0.2,
+      "joint_solution_margin_rad": 0.04,
+      "adaptive_height": true,
+      "edge_path": true,
+      "axis_alignment": true,
+      "can_guard": true,
+      "wait_hold_history": true,
+      "passive_wait_hold": true,
+      "wait_relative_tolerance_m": 0.004,
+      "wait_center_tolerance_m": 0.03,
+      "stable_support": false,
+      "wait_escape": true
+    },
+    "baseline_result": "reproduction/recovery_20261012_01/formal/full_s41_noise005/result.json",
+    "version": "escape",
+    "original_baseline_result": "reproduction/multiseed_20261012_01/evaluations/full_s41_noise005/delay_wm_dev_d2_shift_fbshift_fbi2_gm0.02_noise0.05_score.json",
+    "baseline_result_v2": "reproduction/recovery_v2_20261012_01/dev_a/full_s41_noise005/result.json",
+    "baseline_result_v4": "reproduction/recovery_v4_20261012_01/dev_a/v4_full_s41_noise005/result.json",
+    "baseline_result_v6": "reproduction/improvement_v6_20261015_01/dev_a/v6_full_s41_noise005/result.json",
+    "dataset": "reproduction/improvement_v12_20261015_01/confirmation_starts.hdf5"
+  },
+  "records": [
+    {
+      "demo": "demo_12000011",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.35536691184259417,
+      "ever_grasped": true,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": true,
+      "stable_hold_steps": 6,
+      "intervention_steps": 343,
+      "intervention_fraction": 0.8575,
+      "attempts": 1,
+      "verified_regrasps": 0,
+      "failed_attempts": 1,
+      "phases": {
+        "NORMAL": 57,
+        "RETRACT": 17,
+        "POSE_WAIT": 100,
+        "PLAN_WAIT": 1,
+        "WAIT_ESCAPE": 13,
+        "POSE_BLOCKED": 212
+      },
+      "events": [
+        {
+          "step": 58,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "observed_grasp_loss",
+          "attempt": 1,
+          "object_position": [
+            0.0350763313472271,
+            -0.0047228168696165085,
+            0.9283465147018433
+          ]
+        },
+        {
+          "step": 66,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "unknown_before_align",
+          "attempt": 1,
+          "object_position": [
+            0.03326944634318352,
+            0.00430632708594203,
+            0.924996018409729
+          ]
+        },
+        {
+          "step": 120,
+          "from": "POSE_WAIT",
+          "to": "RETRACT",
+          "reason": "wait_escape_replan",
+          "attempt": 1,
+          "object_position": [
+            0.03176148608326912,
+            0.004283681977540255,
+            0.924838125705719
+          ]
+        },
+        {
+          "step": 128,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "unknown_before_align",
+          "attempt": 1,
+          "object_position": [
+            0.031748879700899124,
+            0.004284730181097984,
+            0.9248359203338623
+          ]
+        },
+        {
+          "step": 188,
+          "from": "POSE_WAIT",
+          "to": "POSE_BLOCKED",
+          "reason": "unknown_or_unsettled_timeout",
+          "attempt": 1,
+          "object_position": [
+            0.03176899626851082,
+            0.004284188617020845,
+            0.9248373508453369
+          ]
+        }
+      ],
+      "guard_events": [],
+      "geometry_events": [
+        {
+          "step": 58,
+          "reason": "no_horizontal_support",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 92,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 97,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 102,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 120,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 137,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 142,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 147,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 152,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 157,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 162,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 167,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 172,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 177,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 182,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 187,
+          "reason": "sideways_perch_unsupported",
+          "candidates": 0,
+          "chosen": false
+        }
+      ],
+      "joint_events": [],
+      "edge_events": [],
+      "wait_hold_events": [],
+      "support13_events": [],
+      "escape_events": [
+        {
+          "step": 106,
+          "event": "retreat_check",
+          "hand_margin_m": 0.12307441358994424,
+          "can_margin_m": 0.09991020744101542,
+          "remaining": 294
+        },
+        {
+          "step": 107,
+          "event": "retreat_ik",
+          "accepted": true,
+          "ik": {
+            "success": true,
+            "iterations": 1,
+            "q": [
+              0.09571861238588791,
+              0.2999435256751951,
+              0.35686017829808325,
+              -2.251885874769824,
+              0.18292392760251874,
+              2.6266346385652484,
+              1.1860968142494224
+            ],
+            "position_error_m": 0.0009063728874391942,
+            "angle_error_rad": 0.000721149868820549,
+            "limit_margin_rad": 0.8199141252301763
+          }
+        },
+        {
+          "step": 120,
+          "event": "retreated_replanned",
+          "reused_mesh_candidate": false,
+          "feasibility": "unknown"
+        }
+      ],
+      "planning_events": [],
+      "pose_events": [
+        {
+          "step": 58,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 92,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 97,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 102,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 120,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 137,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 142,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 147,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 152,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 157,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 162,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 167,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 172,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 177,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 182,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        },
+        {
+          "step": 187,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "sideways"
+        }
+      ],
+      "pose_replans": 1,
+      "fault_step": null,
+      "mean_decision_ms": 1.9978647500101945,
+      "original_selection_counts": {
+        "2": 388,
+        "3": 3,
+        "1": 2,
+        "0": 7
+      },
+      "elapsed_s": 4.106839300002321
+    }
+  ],
+  "input": "PRIVILEGED_CURRENT_STATE_AND_FIXED_TASK_GOAL",
+  "supervisor_note": "Original 23D observation history plus current 7 arm joint positions for v9 and v10-family joint-aware variants; fixed FK and scene assets. No contact/reward/success/future rollout in choose(). Frozen BC/WM inputs unchanged."
+}

@@ -1,0 +1,439 @@
+{
+  "stage": "dev_a",
+  "posthoc_only": true,
+  "failure_records": [
+    {
+      "job": "v13_bc_k2_clean",
+      "demo": "demo_124",
+      "steps": 400,
+      "last_mode": "POSE_BLOCKED",
+      "goal_xy_m": 0.30106666192760756,
+      "object_z_m": 0.024668170139193535,
+      "ever_stable_hold": true,
+      "attempts": 1,
+      "last_events": [
+        {
+          "step": 126,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "observed_grasp_loss",
+          "attempt": 1,
+          "object_position": [
+            0.3157869875431061,
+            0.18207861483097076,
+            0.939686119556427
+          ]
+        },
+        {
+          "step": 127,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "pose_changed_during_approach",
+          "attempt": 1,
+          "object_position": [
+            0.33272767066955566,
+            0.16816292703151703,
+            0.9183849096298218
+          ]
+        },
+        {
+          "step": 187,
+          "from": "POSE_WAIT",
+          "to": "POSE_BLOCKED",
+          "reason": "unknown_or_unsettled_timeout",
+          "attempt": 1,
+          "object_position": [
+            0.3919001519680023,
+            0.1726142019033432,
+            0.02466779574751854
+          ]
+        }
+      ],
+      "wait_hold_events": [],
+      "support13_events": [],
+      "escape_events": [
+        {
+          "step": 167,
+          "event": "retreat_check",
+          "hand_margin_m": 0.23367328564442566,
+          "can_margin_m": 1.0822277783195824,
+          "remaining": 233
+        },
+        {
+          "step": 168,
+          "event": "retreat_ik",
+          "accepted": false,
+          "ik": {
+            "success": true,
+            "iterations": 0,
+            "q": [
+              0.1849336993750371,
+              1.4226332067858267,
+              0.1750629395346343,
+              -0.06968010960158451,
+              0.34318615025758625,
+              1.435890725892403,
+              1.7194715787948793
+            ],
+            "position_error_m": 1.800651281698049e-05,
+            "angle_error_rad": 4.134236562359478e-05,
+            "limit_margin_rad": -0.00011989039841549254
+          }
+        }
+      ]
+    },
+    {
+      "job": "v13_full_s23_clean",
+      "demo": "demo_188",
+      "steps": 400,
+      "last_mode": "BLOCKED",
+      "goal_xy_m": 0.2680444240067158,
+      "object_z_m": 0.8437745571136475,
+      "ever_stable_hold": true,
+      "attempts": 2,
+      "last_events": [
+        {
+          "step": 133,
+          "from": "BLOCKED",
+          "to": "RETRACT",
+          "reason": "wait_escape_replan",
+          "attempt": 1,
+          "object_position": [
+            0.14438791573047638,
+            0.13968931138515472,
+            0.8437728881835938
+          ]
+        },
+        {
+          "step": 141,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            0.1443812996149063,
+            0.13975505530834198,
+            0.8437722325325012
+          ]
+        },
+        {
+          "step": 189,
+          "from": "ALIGN",
+          "to": "RETRACT",
+          "reason": "execution_guard",
+          "attempt": 2,
+          "object_position": [
+            0.14439788460731506,
+            0.13975948095321655,
+            0.8437682390213013
+          ]
+        },
+        {
+          "step": 189,
+          "from": "RETRACT",
+          "to": "ABORT_RETRACT",
+          "reason": "no_untried_feasible_candidate",
+          "attempt": 2,
+          "object_position": [
+            0.14439788460731506,
+            0.13975948095321655,
+            0.8437682390213013
+          ]
+        },
+        {
+          "step": 197,
+          "from": "ABORT_RETRACT",
+          "to": "BLOCKED",
+          "reason": "no_feasible_plan_no_repeated_descent",
+          "attempt": 2,
+          "object_position": [
+            0.14440207183361053,
+            0.1397436410188675,
+            0.843773365020752
+          ]
+        }
+      ],
+      "wait_hold_events": [],
+      "support13_events": [],
+      "escape_events": [
+        {
+          "step": 118,
+          "event": "retreat_check",
+          "hand_margin_m": 0.08342907562329999,
+          "can_margin_m": 0.11861879869553882,
+          "remaining": 282
+        },
+        {
+          "step": 119,
+          "event": "retreat_ik",
+          "accepted": true,
+          "ik": {
+            "success": true,
+            "iterations": 1,
+            "q": [
+              0.12394087029756759,
+              0.6907198741773833,
+              0.1790738366150522,
+              -1.6430877596810805,
+              0.016066395262899023,
+              2.396813940077294,
+              1.129516984444161
+            ],
+            "position_error_m": 0.0013569736326772225,
+            "angle_error_rad": 0.000628897948787933,
+            "limit_margin_rad": 1.0720801258226165
+          }
+        },
+        {
+          "step": 133,
+          "event": "retreated_replanned",
+          "reused_mesh_candidate": false,
+          "feasibility": "infeasible"
+        }
+      ]
+    },
+    {
+      "job": "v13_full_s23_clean",
+      "demo": "demo_97",
+      "steps": 400,
+      "last_mode": "POSE_BLOCKED",
+      "goal_xy_m": 0.23636081237631332,
+      "object_z_m": 0.8438101410865784,
+      "ever_stable_hold": true,
+      "attempts": 1,
+      "last_events": [
+        {
+          "step": 99,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "near_object_stall",
+          "attempt": 1,
+          "object_position": [
+            0.06854958832263947,
+            0.36379194259643555,
+            0.9335388541221619
+          ]
+        },
+        {
+          "step": 99,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "pose_changed_during_approach",
+          "attempt": 1,
+          "object_position": [
+            0.03695673868060112,
+            0.35814419388771057,
+            0.8973247408866882
+          ]
+        },
+        {
+          "step": 145,
+          "from": "POSE_WAIT",
+          "to": "RETRACT",
+          "reason": "wait_escape_replan",
+          "attempt": 1,
+          "object_position": [
+            -0.029374919831752777,
+            0.3362480700016022,
+            0.8438134789466858
+          ]
+        },
+        {
+          "step": 183,
+          "from": "RETRACT",
+          "to": "POSE_BLOCKED",
+          "reason": "bounded_mesh_no_feasible_candidate",
+          "attempt": 1,
+          "object_position": [
+            -0.02940887026488781,
+            0.33624446392059326,
+            0.8438125848770142
+          ]
+        }
+      ],
+      "wait_hold_events": [],
+      "support13_events": [],
+      "escape_events": [
+        {
+          "step": 139,
+          "event": "retreat_check",
+          "hand_margin_m": 0.20022340596726226,
+          "can_margin_m": 0.22220919040979592,
+          "remaining": 261
+        },
+        {
+          "step": 140,
+          "event": "retreat_ik",
+          "accepted": true,
+          "ik": {
+            "success": true,
+            "iterations": 0,
+            "q": [
+              0.28455931594799516,
+              0.5210830401039329,
+              0.5477079379218001,
+              -1.9746320941352447,
+              0.26646311417838564,
+              3.0004616926287087,
+              1.9380452469072695
+            ],
+            "position_error_m": 1.2451619370129326e-08,
+            "angle_error_rad": 3.192260761486364e-08,
+            "limit_margin_rad": 0.7520383073712913
+          }
+        },
+        {
+          "step": 145,
+          "event": "retreated_replanned",
+          "reused_mesh_candidate": false,
+          "feasibility": "unknown"
+        }
+      ]
+    },
+    {
+      "job": "v13_full_s41_clean",
+      "demo": "demo_97",
+      "steps": 400,
+      "last_mode": "POSE_BLOCKED",
+      "goal_xy_m": 0.22818605654799798,
+      "object_z_m": 0.8508982062339783,
+      "ever_stable_hold": true,
+      "attempts": 1,
+      "last_events": [
+        {
+          "step": 97,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "near_object_stall",
+          "attempt": 1,
+          "object_position": [
+            0.06875226646661758,
+            0.35916125774383545,
+            0.9331504106521606
+          ]
+        },
+        {
+          "step": 97,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "pose_changed_during_approach",
+          "attempt": 1,
+          "object_position": [
+            0.03601790592074394,
+            0.3542499244213104,
+            0.8775892853736877
+          ]
+        },
+        {
+          "step": 143,
+          "from": "POSE_WAIT",
+          "to": "RETRACT",
+          "reason": "wait_escape_replan",
+          "attempt": 1,
+          "object_position": [
+            -0.020452195778489113,
+            0.3349129557609558,
+            0.8512498140335083
+          ]
+        },
+        {
+          "step": 181,
+          "from": "RETRACT",
+          "to": "POSE_BLOCKED",
+          "reason": "bounded_mesh_no_feasible_candidate",
+          "attempt": 1,
+          "object_position": [
+            -0.02045377343893051,
+            0.3349210023880005,
+            0.8511980175971985
+          ]
+        }
+      ],
+      "wait_hold_events": [],
+      "support13_events": [],
+      "escape_events": [
+        {
+          "step": 137,
+          "event": "retreat_check",
+          "hand_margin_m": 0.20522098084976942,
+          "can_margin_m": 0.2211287565349065,
+          "remaining": 263
+        },
+        {
+          "step": 138,
+          "event": "retreat_ik",
+          "accepted": true,
+          "ik": {
+            "success": true,
+            "iterations": 0,
+            "q": [
+              0.2670034379248563,
+              0.5166271820752384,
+              0.5742028023101375,
+              -1.9775218438923012,
+              0.31190378260117424,
+              3.008144797548123,
+              1.8971824813963536
+            ],
+            "position_error_m": 2.3877652111252132e-08,
+            "angle_error_rad": 3.234368608738457e-08,
+            "limit_margin_rad": 0.7443552024518771
+          }
+        },
+        {
+          "step": 143,
+          "event": "retreated_replanned",
+          "reused_mesh_candidate": false,
+          "feasibility": "unknown"
+        }
+      ]
+    }
+  ],
+  "wait_hold_events": [
+    {
+      "job": "v13_full_s41_noise005",
+      "demo": "demo_87",
+      "success": true,
+      "step": 149,
+      "from": "POSE_WAIT",
+      "evidence": "passive_follow",
+      "observations": 8
+    }
+  ],
+  "exact_v12_trajectory_comparison": {
+    "episodes": 240,
+    "identical": 236,
+    "changed": [
+      {
+        "condition": "bc_k2_clean",
+        "demo": "demo_124",
+        "first_changed_step": 168
+      },
+      {
+        "condition": "full_s23_clean",
+        "demo": "demo_188",
+        "first_changed_step": 119
+      },
+      {
+        "condition": "full_s23_clean",
+        "demo": "demo_97",
+        "first_changed_step": 160
+      },
+      {
+        "condition": "full_s41_clean",
+        "demo": "demo_97",
+        "first_changed_step": 159
+      }
+    ]
+  },
+  "timing": {
+    "v13": {
+      "steps": 37982,
+      "p50_ms": 1.463500000681961,
+      "p99_ms": 2.5691379976342437,
+      "max_ms": 47.972299995308276,
+      "over_50ms": 0
+    }
+  },
+  "timing_scope": "BC/WM plus supervisor, excludes physics/render/logging; four concurrent workers; small/pilot phases overlap demonstration replay rendering. Not a hard real-time guarantee."
+}

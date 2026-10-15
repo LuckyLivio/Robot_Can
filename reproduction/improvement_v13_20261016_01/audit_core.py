@@ -51,5 +51,3 @@ def audit(directory):
     finish(current,steps,last,controller,interventions,stable,modes)
     assert seen==job['demos'] and len(seen)==len(rows)
     return {'job':job['id'],'episodes':len(rows),'controls':count}
-
-

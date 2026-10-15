@@ -1,0 +1,71 @@
+[
+  {
+    "id": "V13_F01_known_trace",
+    "caption": "侧倒箱沿：BC k=2，已知demo12000011。smoke_e实际20Hz执行后状态，无平滑或插值；成功即停止曲线，不延长到400步。已知诊断，不是独立泛化证据。",
+    "width_mm": 180.34,
+    "dpi": 600,
+    "no_smoothing": true,
+    "rows": 691,
+    "sources": {
+      "reproduction/improvement_v13_20261016_01/smoke_e/v12_known_bc_k2_clean_demo_12000011/trace.jsonl": "677856a5ac25205ce8896d63367990207f9d79ef542075c84cf4c862379f481b",
+      "reproduction/improvement_v13_20261016_01/smoke_e/v13_known_bc_k2_clean_demo_12000011/trace.jsonl": "9d3d6e366712e7125ed33508151601405aa4e7ca2ed6a7e56765605a2922c03b"
+    }
+  },
+  {
+    "id": "V13_F02_known_trace",
+    "caption": "斜靠物体：Full s23，噪声0.05，已知demo12000021。smoke_e实际20Hz执行后状态，无平滑或插值；成功即停止曲线，不延长到400步。已知诊断，不是独立泛化证据。",
+    "width_mm": 180.34,
+    "dpi": 600,
+    "no_smoothing": true,
+    "rows": 791,
+    "sources": {
+      "reproduction/improvement_v13_20261016_01/smoke_e/v12_known_full_s23_noise005_demo_12000021/trace.jsonl": "d22396a2dc67f868d7e9a4e6c1157243fab150a58f71a91ed0288f6aa86eacf1",
+      "reproduction/improvement_v13_20261016_01/smoke_e/v13_known_full_s23_noise005_demo_12000021/trace.jsonl": "e83d5f475749fcbab03896bf223756e5ef9cbc2d402b95df88728c80c5bfc389"
+    }
+  },
+  {
+    "id": "V13_F03_ablation",
+    "caption": "50条件中包含重复起点的不同策略/噪声，不能当作50个独立确认起点。S含新支撑家族与受检路径入口，R含一次有界撤退/重规划。图为描述统计，不给独立推断区间。",
+    "width_mm": 180.34,
+    "dpi": 600,
+    "no_smoothing": true,
+    "rows": 4,
+    "sources": {
+      "reproduction/improvement_v13_20261016_01/analysis/pilot_a.json": "3c833c12566d7260e121555ed1d0a746177b35afba578b1e74ffea302a4aef7e"
+    }
+  },
+  {
+    "id": "V13_F04_development",
+    "caption": "v6/v12历史同起点同噪声参考，v13新跑240次。开发用于筛选，不作为独立泛化证据。不将八条件相连成伪连续曲线。",
+    "width_mm": 180.34,
+    "dpi": 600,
+    "no_smoothing": true,
+    "rows": 24,
+    "sources": {
+      "reproduction/improvement_v6_20261015_01/dev_a/v6_bc_k2_clean/result.json": "368e3f6a89a18c49064b76de64ef1a6611c26863b28f62e03acea309f661c551",
+      "reproduction/improvement_v12_20261015_01/dev_a/v12_bc_k2_clean/result.json": "288baecf8006c6a5bf9331f1a5dbc935ca5418985ab27bed842dbb3a36714d55",
+      "reproduction/improvement_v13_20261016_01/dev_a/v13_bc_k2_clean/result.json": "96f9004f308907f89c669b0a203c0a6c8a4b0b9dfb197af5b53ace43501a3f43",
+      "reproduction/improvement_v6_20261015_01/dev_a/v6_full_s17_clean/result.json": "8d76ffe59b686a20cbfeb6d917e37c2810c1e06134ac9476b9b9a2037ca73ceb",
+      "reproduction/improvement_v12_20261015_01/dev_a/v12_full_s17_clean/result.json": "fe08a091e5ea4c174b854f998dbb1f115fd565de2a7f4b8f2efce812a856b0dc",
+      "reproduction/improvement_v13_20261016_01/dev_a/v13_full_s17_clean/result.json": "5ac717caa7a54e6f586a33ab58df9e938e20ce1f31b4ba8abd0d8f671625cbd5",
+      "reproduction/improvement_v6_20261015_01/dev_a/v6_full_s23_clean/result.json": "051e1a758a3742b798111614f95c8ac83e5eb2cd49a53d8382d0b6a28bd46ec8",
+      "reproduction/improvement_v12_20261015_01/dev_a/v12_full_s23_clean/result.json": "0b778ddda8f46e9a2ce369253ea32a279f20a87ca320681e030ccc1c03daff37",
+      "reproduction/improvement_v13_20261016_01/dev_a/v13_full_s23_clean/result.json": "1f0e1fb18d0a2b1cb963bd8e0a13e4789c84902c3c60faa014d7162d97051c65",
+      "reproduction/improvement_v6_20261015_01/dev_a/v6_full_s41_clean/result.json": "df2ac1b957702b807048c59677cbb2ac7c3915f1bed564a444670c04d1ca330e",
+      "reproduction/improvement_v12_20261015_01/dev_a/v12_full_s41_clean/result.json": "4682d144f4234b3cd0f874335f6a3933dbd1bff067a717802a674ea0402bd6f2",
+      "reproduction/improvement_v13_20261016_01/dev_a/v13_full_s41_clean/result.json": "0eea149486210ee1bdeafb5838ce50d5dd57b97f4b505bfdee84d916f0112b0f",
+      "reproduction/improvement_v6_20261015_01/dev_a/v6_bc_k2_noise005/result.json": "4fe36aa8b06053ccb716dda94f4cd0aefa5b52ae7bfd3d92571bb2a9deb71d1c",
+      "reproduction/improvement_v12_20261015_01/dev_a/v12_bc_k2_noise005/result.json": "cc85b038271d02c77f2d00814b7177638f6b20d29e0fc3df35fde6ee97810ff3",
+      "reproduction/improvement_v13_20261016_01/dev_a/v13_bc_k2_noise005/result.json": "596b4bcd38706020da0c16469b74c18dd2125c9929b667597450b03ea87a0f77",
+      "reproduction/improvement_v6_20261015_01/dev_a/v6_full_s17_noise005/result.json": "d0f3eb66c1865daa427a9296a697a30a286f2cd2a097d0955a7d2b665a2414db",
+      "reproduction/improvement_v12_20261015_01/dev_a/v12_full_s17_noise005/result.json": "75b4bbfa6c99dc71b47c3ffc2c2e44dc40086694d6ca6f66d594bf11d65300f0",
+      "reproduction/improvement_v13_20261016_01/dev_a/v13_full_s17_noise005/result.json": "c6f844769433c1bedd42c6564826a2df028c7ecc35383553a2dfbe781b175a1f",
+      "reproduction/improvement_v6_20261015_01/dev_a/v6_full_s23_noise005/result.json": "c911c138215a0fab0b734ad23dabe530f04ec0a5ed1a7a880fc1651e2a8763b1",
+      "reproduction/improvement_v12_20261015_01/dev_a/v12_full_s23_noise005/result.json": "2011d6577b6d9d8b8df0e64553e38876357f1607ce95c4e1cfe5f4b14f030001",
+      "reproduction/improvement_v13_20261016_01/dev_a/v13_full_s23_noise005/result.json": "c9d41dade36e7519059929b2b7d395b2831d86be8b7a931e42d7da48980adec5",
+      "reproduction/improvement_v6_20261015_01/dev_a/v6_full_s41_noise005/result.json": "279cec4241e9b44324c6911922ce74e787fc7a73eaf041387ef823adfe4ce4d3",
+      "reproduction/improvement_v12_20261015_01/dev_a/v12_full_s41_noise005/result.json": "e70921342eb846a5a4cd7f715018ec1ecc9a5653ebf87017aa9360738917b0b0",
+      "reproduction/improvement_v13_20261016_01/dev_a/v13_full_s41_noise005/result.json": "81f97447ca6d1cc1b73bc7cd91415dac23dc865eceec56f956f67d9808fa8500"
+    }
+  }
+]
