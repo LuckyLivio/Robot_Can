@@ -3,11 +3,11 @@ from pathlib import Path
 import json
 import numpy as np
 from scipy.spatial.transform import Rotation
-DATA=json.loads(Path(__file__).with_name('arm_chain.json').read_text())
+DATA=json.loads(Path(__file__).with_name('arm_chain_observation.json').read_text())
 LIMITS=np.array(DATA['limits'])
 CHAIN=[(np.array(b['position']),Rotation.from_quat(np.roll(b['quaternion_wxyz'],-1)).as_matrix(),
         b.get('joint_index'),np.array(b.get('axis',[0,0,1])),np.array(b.get('anchor',[0,0,0]))) for b in DATA['chain']]
-SITE_P=np.array(DATA['site_position']);SITE_R=Rotation.from_quat(np.roll(DATA['site_quaternion_wxyz'],-1)).as_matrix()
+SITE_P=np.array(DATA['site_position']);SITE_R=Rotation.from_quat(np.roll(DATA['site_quaternion_wxyz'],-1)).as_matrix()@np.array(DATA['site_to_observation_rotation'])
 
 def fk(q,jacobian=False):
     p=np.zeros(3);R=np.eye(3);origins=[];axes=[]

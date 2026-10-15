@@ -1,0 +1,147 @@
+{
+  "case": "BC noise demo_6000049",
+  "baseline_success": true,
+  "v9_success": false,
+  "samples": [
+    {
+      "initial_q_from_baseline_step": 117,
+      "measured_limit_margin_rad": 0.03630719969301488,
+      "fk_position": [
+        0.18096510716932326,
+        0.2677261500216143,
+        1.5206651874204948
+      ],
+      "orientation_error_to_planned_rad": 1.6586109267728728,
+      "solves": [
+        {
+          "target": "above",
+          "success": true,
+          "iterations": 13,
+          "q": [
+            -0.29812477855726355,
+            0.7395516050435149,
+            0.31180258776819825,
+            -1.6837466028866488,
+            -0.3031017270303606,
+            2.3761587901053676,
+            2.514113006956562
+          ],
+          "position_error_m": 0.00047292454570335734,
+          "angle_error_rad": 0.000679640566352203,
+          "limit_margin_rad": 0.38318699304343795
+        },
+        {
+          "target": "grasp",
+          "success": true,
+          "iterations": 13,
+          "q": [
+            -0.2836612399477451,
+            1.01839627749395,
+            0.2869107566425933,
+            -1.5622528739144572,
+            -0.4256077845890463,
+            2.5189362799366606,
+            2.5793776680685405
+          ],
+          "position_error_m": 0.0005657143775198264,
+          "angle_error_rad": 0.0006561292179624679,
+          "limit_margin_rad": 0.31792233193145947
+        }
+      ]
+    },
+    {
+      "initial_q_from_baseline_step": 172,
+      "measured_limit_margin_rad": 0.5656926193378533,
+      "fk_position": [
+        0.17852764526538542,
+        -0.10259655207127574,
+        1.004512355339766
+      ],
+      "orientation_error_to_planned_rad": 0.023414270924385285,
+      "solves": [
+        {
+          "target": "above",
+          "success": true,
+          "iterations": 1,
+          "q": [
+            0.039295241008229495,
+            0.7111023011541331,
+            -0.06944423625508994,
+            -1.6899619685869713,
+            0.067371710055232,
+            2.3993095850771917,
+            2.2938756768642827
+          ],
+          "position_error_m": 0.0002201572605774663,
+          "angle_error_rad": 0.0006417626675362876,
+          "limit_margin_rad": 0.6034243231357173
+        },
+        {
+          "target": "grasp",
+          "success": true,
+          "iterations": 2,
+          "q": [
+            0.02546208344596717,
+            0.9802012855493534,
+            -0.05168918232542302,
+            -1.5888385266096274,
+            0.08054126858596065,
+            2.5672398529010354,
+            2.2866697830219613
+          ],
+          "position_error_m": 0.0031669298701926833,
+          "angle_error_rad": 0.0012897129106828932,
+          "limit_margin_rad": 0.6106302169780387
+        }
+      ]
+    },
+    {
+      "initial_q_from_baseline_step": 193,
+      "measured_limit_margin_rad": 0.62597911032708,
+      "fk_position": [
+        0.17880100800527676,
+        -0.11524889407025209,
+        0.8779497688077157
+      ],
+      "orientation_error_to_planned_rad": 0.006876193219391033,
+      "solves": [
+        {
+          "target": "above",
+          "success": true,
+          "iterations": 2,
+          "q": [
+            0.06266947870054725,
+            0.7061559944478584,
+            -0.0957197040220311,
+            -1.7031638139237553,
+            0.09365229142109958,
+            2.405117607909007,
+            2.2777401360445992
+          ],
+          "position_error_m": 0.003167773890350636,
+          "angle_error_rad": 0.0011299538825996114,
+          "limit_margin_rad": 0.6195598639554007
+        },
+        {
+          "target": "grasp",
+          "success": true,
+          "iterations": 1,
+          "q": [
+            0.04487249112269039,
+            0.9873454630449968,
+            -0.07307051488036362,
+            -1.5730556585152635,
+            0.11040108490542143,
+            2.556099480686857,
+            2.269136406795455
+          ],
+          "position_error_m": 4.381524747269101e-05,
+          "angle_error_rad": 0.0002674637162684881,
+          "limit_margin_rad": 0.6281635932045448
+        }
+      ]
+    }
+  ],
+  "scope": "Post-hoc diagnostic using saved successful baseline states. Future baseline states were NOT available to the evaluated controller. Finite local IK failure is not a proof of infeasibility.",
+  "orientation_frame": "robot0_eef_quat body orientation; corrected site-to-body transform"
+}

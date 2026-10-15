@@ -4,12 +4,12 @@ import json,sys
 import h5py,numpy as np
 ROOT=Path(__file__).resolve().parents[2];RUN=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT));sys.path.insert(0,str(RUN))
-from common import DATA,make_env,restore_demo
+from common import DATA,make_env,restore_demo,pack_obs
 
 def main():
     env=make_env(False)
     try:
-        with h5py.File(DATA) as f:restore_demo(env,f['data']['demo_97'])
+        with h5py.File(DATA) as f:obs=restore_demo(env,f['data']['demo_97'])
         m=env.sim.model;d=env.sim.data
         names=['robot0_joint'+str(i) for i in range(1,8)]
         joints=[m.joint_name2id(n) for n in names]
@@ -27,7 +27,12 @@ def main():
               'reference_q':d.qpos[[m.jnt_qposadr[j] for j in joints]].tolist(),
               'reference_position':d.site_xpos[site].tolist(),'reference_rotation':d.site_xmat[site].reshape(3,3).tolist(),
               'scope':'Fixed FK chain, no contact or future rollout. No full-arm collision certificate.'}
-        with (RUN/'recovery/arm_chain.json').open('x') as f:json.dump(data,f,indent=2)
+        from scipy.spatial.transform import Rotation
+        observed=Rotation.from_quat(pack_obs(obs)[3:7]).as_matrix()
+        data['site_to_observation_rotation']=(d.site_xmat[site].reshape(3,3).T@observed).tolist()
+        data['reference_observation_rotation']=observed.tolist()
+        data['orientation_note']='Original robot0_eef_quat is eef body orientation; position is grip_site. Fixed local rotation bridges them.'
+        with (RUN/'recovery/arm_chain_observation.json').open('x') as f:json.dump(data,f,indent=2)
         print(json.dumps({'bodies':len(chain),'site':m.site_id2name(site),'joints':names}))
     finally:env.close()
 if __name__=='__main__':main()

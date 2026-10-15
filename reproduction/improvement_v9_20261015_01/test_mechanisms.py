@@ -12,10 +12,10 @@ from recovery.recovery_controller import RecoveryController,Config,PoseSearch
 from reproduction.improvement_v8_20261015_01.recovery.recovery_controller import RecoveryController as V8,Config as C8
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--receipt',default='mechanisms_b.json');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--receipt',default='mechanisms_c.json');args=parser.parse_args()
     checks=[];rng=np.random.default_rng(91015);jac_errors=[]
     q=np.array(DATA['reference_q']);p,R=fk(q)
-    np.testing.assert_allclose(p,DATA['reference_position'],atol=1e-12);np.testing.assert_allclose(R,DATA['reference_rotation'],atol=1e-12)
+    np.testing.assert_allclose(p,DATA['reference_position'],atol=1e-12);np.testing.assert_allclose(R,DATA['reference_observation_rotation'],atol=1e-12)
     for _ in range(12):
         q=LIMITS[:,0]+.2+rng.random(7)*(LIMITS[:,1]-LIMITS[:,0]-.4);p,R,J=fk(q,True);numeric=[]
         for i in range(7):
