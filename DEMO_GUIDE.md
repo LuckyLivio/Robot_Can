@@ -1,3 +1,5 @@
+> 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+
 # 当前成果展示与讲解顺序
 
 更新：2026-10-15。[当前页面](reproduction/progress_v11_20261015_01/demo/index.html)，启动命令见[PROGRAM_GUIDE](PROGRAM_GUIDE.md)。根网址 http://127.0.0.1:8766/ 自动跳转；历史页面保留。
@@ -13,3 +15,5 @@
 BC k=2选预测动作块第3项，不读取真实未来。噪声0.05施加于出队的前三个归一化动作分量，不是5cm物体噪声。世界模型风险头不等于碰撞概率，门限不是校准不确定性。共享恢复是规则控制，不是新世界模型训练。
 
 视频/轨迹都来自保存记录；不以播放插值改变成功率，未测量当前浏览器全部负载下的丢帧率，不保证真实运动无振荡。v11[回放核验](reproduction/progress_v11_20261015_01/edge_replay_validation.json)、历史[20fps核验](reproduction/progress_20261015_01/original_20fps_validation.json)。
+
+图表讲解新增顺序：先F02固定集训练/开发差距，再F03候选切换，再F05/F10配对确认；A04展示真实开度振荡，A09展示持物等待。新版曲线没有平滑机器人动作，视频仍是已有回放。

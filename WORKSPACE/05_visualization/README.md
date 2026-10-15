@@ -1,3 +1,5 @@
+> 当前首选：[新图总览](../../reproduction/paper_quality_20261015_01/index.html) · [当前提纲](../../reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md) · [交付说明](../../THESIS_HANDOFF_LATEST.md)。下列旧包保留其版本范围。
+
 # 前端与图表
 
 分类入口；原文件保留在既有路径，没有搬移、复制执行源码或改写历史结果。

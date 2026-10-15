@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "environment": {
+    "python": "3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Livio\\Desktop\\robot_can\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "packages": {
+      "torch": "2.14.1+cu130",
+      "numpy": "1.26.4",
+      "robosuite": "1.5.1",
+      "mujoco": "3.3.0",
+      "h5py": "3.11.0",
+      "scipy": "1.15.3",
+      "matplotlib": "3.9.4",
+      "mink": "0.0.5"
+    },
+    "cuda_available": true,
+    "cuda_build": "13.0",
+    "cuda_device": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "cuda_tensor_check": true,
+    "pip_check_passed": true,
+    "pip_check_output": "No broken requirements found."
+  },
+  "data_split": {
+    "train": 140,
+    "dev": 30,
+    "sealed_test": 30
+  },
+  "bc_shape": [
+    1,
+    8,
+    7
+  ],
+  "world_model_forwards": [
+    {
+      "path": "models/multiseed_20261012_01_full_s17/model.pt",
+      "states_shape": [
+        1,
+        8,
+        23
+      ],
+      "scores_shape": [
+        1,
+        8,
+        2
+      ]
+    },
+    {
+      "path": "models/multiseed_20261012_01_full_s23/model.pt",
+      "states_shape": [
+        1,
+        8,
+        23
+      ],
+      "scores_shape": [
+        1,
+        8,
+        2
+      ]
+    },
+    {
+      "path": "models/multiseed_20261012_01_full_s41/model.pt",
+      "states_shape": [
+        1,
+        8,
+        23
+      ],
+      "scores_shape": [
+        1,
+        8,
+        2
+      ]
+    },
+    {
+      "path": "models/multiseed_20261012_01_plain_s17/model.pt",
+      "states_shape": [
+        1,
+        8,
+        23
+      ],
+      "scores_shape": [
+        1,
+        8,
+        2
+      ]
+    },
+    {
+      "path": "models/multiseed_20261012_01_plain_s23/model.pt",
+      "states_shape": [
+        1,
+        8,
+        23
+      ],
+      "scores_shape": [
+        1,
+        8,
+        2
+      ]
+    },
+    {
+      "path": "models/multiseed_20261012_01_plain_s41/model.pt",
+      "states_shape": [
+        1,
+        8,
+        23
+      ],
+      "scores_shape": [
+        1,
+        8,
+        2
+      ]
+    }
+  ],
+  "scope": "One saved observation, no environment creation, training, policy episode or physical replay."
+}

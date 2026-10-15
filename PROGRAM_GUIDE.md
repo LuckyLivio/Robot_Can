@@ -1,3 +1,5 @@
+> 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+
 # 当前项目运行与模块指南
 
 更新：2026-10-15。项目根为 `C:\Users\Livio\Desktop\robot_can`，PyCharm解释器为 `.venv\Scripts\python.exe`。
@@ -16,10 +18,10 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 ## 只读完整性检查
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\portable_delivery_20261015_01\launcher.py verify
+& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\paper_quality_20261015_01\verify.py
 ```
 
-验证交付整理前10,230个登记文件：授权改动的活动文档按before原样备份核对，其他文件在原位置核对；另验当前交付清单。不训练、不创建环境、不物理回放。历史verify绑定当时根文档，可能因后续授权文档更新失败；不要改旧manifest或删除结果绕过检查。
+验证图表整改前10,270个登记文件：授权改动的活动文档按before原样备份核对，其他文件在原位置核对；另验当前交付清单。不训练、不创建环境、不物理回放。历史verify绑定当时根文档，可能因后续授权文档更新失败；不要改旧manifest或删除结果绕过检查。
 
 ## 环境与模型
 

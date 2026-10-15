@@ -1,3 +1,5 @@
+> 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+
 > 跨设备交付已整理：[使用说明](reproduction/portable_delivery_20261015_01/README.md) · [下载与验收页面](reproduction/portable_delivery_20261015_01/index.html)。含独立展示包、v6—v11增补与三个ZIP的迁移文件夹；第二台电脑实际验收仍待完成。
 
 > 全项目审查已完成：[详细报告](reproduction/project_audit_20261015_01/REPORT.md) · [检查清单](reproduction/project_audit_20261015_01/CHECKLIST.csv) · [调整计划](reproduction/project_audit_20261015_01/IMPROVEMENT_PLAN.md)。未新增训练或仿真。
@@ -106,10 +108,10 @@ v5 相对 v4 救回 7 次执行且没有新增失败，但收益集中于两个�
 检查已有成果和本次 README 更新：
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\portable_delivery_20261015_01\launcher.py verify
+& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\paper_quality_20261015_01\verify.py
 ```
 
-该入口只读核对本轮开始前的 10,230 个路径，以及本轮交付工具、文档与打包凭据清单。本轮授权更新的活动文档和分类入口按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
+该入口只读核对图表整改前的 10,270 个路径，以及本轮图表、来源、文档与验证清单。授权更新的活动文档和分类入口按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
 
 完整 v5 重跑、控制步骤复核和物理回放命令见 [v5 README](reproduction/recovery_v5_20261012_01/README.md)，整体运行指南见 [PROGRAM_GUIDE.md](PROGRAM_GUIDE.md)。这些实验入口会执行仿真，并检查历史根文档；如提示文档更新，先使用当前完整性检查核对归档。不要删除结果或改写旧保护清单来跳过核验。
 
@@ -131,21 +133,21 @@ v5 相对 v4 救回 7 次执行且没有新增失败，但收益集中于两个�
 
 项目具备本科毕设的工程与实验基础，建议定位为“考虑动作延迟的机器人抓取搬运与失败恢复系统设计及实验分析”。当前仍有窄格侧倒、失抓和物体掉出工作区等失败；输入不是纯视觉，未进行真机验证。论文正文与正式学校格式尚未完成。
 
-README 更新日期：2026-10-14。更新前版本保存在 [README_before.md](reproduction/readme_update_20261014_01/README_before.md)。原算法、权重、结果与历史页面保留。
+当前README复核日期：2026-10-15。2026-10-14重写前版本保存在 [README_before.md](reproduction/readme_update_20261014_01/README_before.md)，本轮修改前版本另存于 `reproduction/paper_quality_20261015_01/before/README.md`。原算法、权重、结果与历史页面保留。
 
-## 图表核对与重新绘制（2026-10-14）
+## 论文图表核对与重新绘制（2026-10-15）
 
-根目录 `figures/` 的 7 组图已按原始记录更新，见 [图表说明](figures/README.md) 与 [核对报告](reproduction/figures_audit_20261014_01/REPORT.md)。原图与旧脚本完整保存在该报告目录的 `before/` 下。世界模型独立确认、开发集消融与后续 v5 恢复是不同实验，不能合并解释。
+当前36张论文图、逐图CSV、图注和来源位于 `reproduction/paper_quality_20261015_01/`，PNG为600 dpi，另附矢量PDF/SVG；见 [新图目录](reproduction/paper_quality_20261015_01/FIGURE_CATALOG.md) 与 [曲线解释](reproduction/paper_quality_20261015_01/CURVE_EXPLANATIONS.md)。根 `figures/` 的7组旧图继续保留用于历史核查。世界模型独立确认、开发集消融与后续v5恢复属于不同批次，不能合并解释。
 
 以下命令只重绘，不训练、不仿真；建议输出到新目录，避免使已冻结的图表文件哈希发生变化：
 
 ```powershell
-& .\.venv\Scripts\python.exe -X utf8 -B .\make_figures.py --output-dir .\reproduction\figures_preview
+& .\.venv\Scripts\python.exe -X utf8 -B .\reproduction\paper_quality_20261015_01\build_figures.py --output .\reproduction\paper_figures_preview
 ```
 
 ## GitHub 项目快照
 
-仓库：[LuckyLivio/Robot_can](https://github.com/LuckyLivio/Robot_can)。克隆、前端与上传完整性说明见 [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md)。最新图表深查及固定训练/开发集复算见 [报告](reproduction/figures_deepcheck_20261014_01/REPORT.md) 与 [图表总览](reproduction/figures_deepcheck_20261014_01/index.html)。
+仓库：[LuckyLivio/Robot_can](https://github.com/LuckyLivio/Robot_can)。克隆、前端与上传完整性说明见 [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md)。历史图表深查及固定训练/开发集复算见 [报告](reproduction/figures_deepcheck_20261014_01/REPORT.md) 与 [图表总览](reproduction/figures_deepcheck_20261014_01/index.html)。
 
 ## 最新优化进展（2026-10-15）
 

@@ -1,6 +1,8 @@
+> 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+
 # 当前成果与版本索引（2026-10-15）
 
-[当前展示](reproduction/progress_v11_20261015_01/demo/index.html) · [当前校验](reproduction/project_audit_20261015_01/verify.py) · [全仓审查](reproduction/project_audit_20261015_01/REPORT.md) · [结果](RESULTS.md) · [贡献](CONTRIBUTIONS.md) · [统计](STATISTICS.md)
+[当前展示](reproduction/progress_v11_20261015_01/demo/index.html) · [当前校验](reproduction/paper_quality_20261015_01/verify.py) · [全仓审查](reproduction/project_audit_20261015_01/REPORT.md) · [结果](RESULTS.md) · [贡献](CONTRIBUTIONS.md) · [统计](STATISTICS.md)
 
 | 阶段 | 完成情况与使用边界 | 权威入口 |
 |---|---|---|
@@ -17,8 +19,8 @@
 | v10候选 | 箱沿高度/路径，最终30/37 | [报告](reproduction/improvement_v10_20261015_01/REPORT.md) |
 | v11候选 | 31/37；开发235/240；箱沿救回，整体未采用 | [报告](reproduction/improvement_v11_20261015_01/REPORT.md) |
 | 图表深查 | 固定集泛化、评分敏感性与原始图替代表达 | [报告](reproduction/figures_deepcheck_20261014_01/REPORT.md) |
-| 写作迁移 | c8bbe86历史包，非v11最新整包 | [当前交接说明](THESIS_HANDOFF_LATEST.md) |
+| 写作迁移 | c8bbe86旧主线 + fad3100候选增补 + 新图表提纲包 | [当前交接说明](THESIS_HANDOFF_LATEST.md) |
 
 所有实验目录的protocol/design/study_plan/lock保留执行前字节；负结果及未启动阶段不删除。历史报告按当时范围阅读，不拿旧“尚未完成”覆盖后来的记录。RESULTS_TABLE.csv是早期历史表，当前结果以本索引链接的配对记录为准。ADAPTIVE_PROTOCOL是另一条历史探索线。
 
-全文件和逐结果台账：[FILE_INVENTORY](reproduction/project_audit_20261015_01/FILE_INVENTORY.csv)、[RESULT_LEDGER](reproduction/project_audit_20261015_01/RESULT_LEDGER.csv)。
+全文件和逐结果台账：[FILE_INVENTORY](reproduction/paper_quality_20261015_01/FILE_INVENTORY.csv)、[RESULT_LEDGER](reproduction/paper_quality_20261015_01/RESULT_LEDGER.csv)。

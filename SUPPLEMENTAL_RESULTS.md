@@ -6,4 +6,4 @@
 
 冻结共享恢复主线为v5，后续v6—v11为未采用候选，详情见[统一结果](RESULTS.md)与[v5评估](reproduction/recovery_v5_20261012_01/ASSESSMENT.md)。本阶段只是整合原补充结果，没有重复运行900回合。
 
-版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/
+文档复核：2026-10-15；本页2026-10-12实验口径保持原协议。旧版归档：reproduction/consolidation_20261012_01/previous_documents/

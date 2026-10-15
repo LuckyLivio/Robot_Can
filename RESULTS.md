@@ -40,7 +40,7 @@ v2/v3已经在同批起点比较BC、Full、BC+恢复、Full+恢复。新[四组
 
 所有种子均报告。开发、不同确认批次、事后诊断和演示不合并；原始数据与输出未改。当前界限见[贡献](CONTRIBUTIONS.md)与[统计](STATISTICS.md)。
 
-版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/
+文档复核：2026-10-15；本页2026-10-12实验口径保持原协议。旧版归档：reproduction/consolidation_20261012_01/previous_documents/
 
 ## 后续候选v6—v11（2026-10-15）
 

@@ -18,7 +18,7 @@
 
 若改算法，另建目录并在运行前固定开发推进标准、配置、种子与统计方案，通过后冻结再生成新起点。后续候选草案不算已执行登记，见[FOLLOWUP_PLAN](reproduction/consolidation_20261012_01/FOLLOWUP_PLAN.md)。
 
-版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/
+文档复核：2026-10-15；本页2026-10-12实验口径保持原协议。旧版归档：reproduction/consolidation_20261012_01/previous_documents/
 
 ## 后续候选与当前审查
 

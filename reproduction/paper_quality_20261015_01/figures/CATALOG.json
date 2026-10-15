@@ -1,0 +1,854 @@
+{
+  "font": "Microsoft YaHei",
+  "figures": [
+    {
+      "id": "F01",
+      "title": "延迟一致的世界模型候选选择",
+      "role": "正文",
+      "old_group": "F01",
+      "caption": "结构示意：世界模型确认配置，23维状态含物体真值，D=2，H=8，K=4。r监督失抓，不是通用失败概率。每次仅提交一个动作。",
+      "limitations": "此图不含后续规则恢复，也不证明性能。",
+      "sources": [
+        "common.py",
+        "evaluate_delay.py",
+        "reproduction/confirmation_20261012_01/design.json",
+        "world_model.py"
+      ],
+      "plotted_rows": 0,
+      "width_mm": 180.3,
+      "height_mm": 82.6,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F02a",
+      "title": "固定集总损失：训练与开发集",
+      "role": "正文",
+      "old_group": "F02",
+      "caption": "36个既存权重的固定数据集评估；每种子12个采样点（250至3000，每250更新一次），未平滑。训练160组/20父轨迹，开发64组/8父轨迹。竖点线为原选择权重，未重新选点。固定集总损失；不是批次损失或闭环成功率。",
+      "limitations": "总损失、全状态MSE与平均欧氏位置误差不同；真实泛化差距保留。",
+      "sources": [
+        "figures/figure_data.json",
+        "reproduction/figures_deepcheck_20261014_01/checkpoint_metrics.csv",
+        "reproduction/figures_deepcheck_20261014_01/diagnostics.json"
+      ],
+      "plotted_rows": 72,
+      "width_mm": 180.3,
+      "height_mm": 67.3,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F02b",
+      "title": "归一化状态 MSE：训练与开发集",
+      "role": "正文",
+      "old_group": "F02",
+      "caption": "36个既存权重的固定数据集评估；每种子12个采样点（250至3000，每250更新一次），未平滑。训练160组/20父轨迹，开发64组/8父轨迹。竖点线为原选择权重，未重新选点。归一化状态 MSE；不是批次损失或闭环成功率。",
+      "limitations": "总损失、全状态MSE与平均欧氏位置误差不同；真实泛化差距保留。",
+      "sources": [
+        "figures/figure_data.json",
+        "reproduction/figures_deepcheck_20261014_01/checkpoint_metrics.csv",
+        "reproduction/figures_deepcheck_20261014_01/diagnostics.json"
+      ],
+      "plotted_rows": 72,
+      "width_mm": 180.3,
+      "height_mm": 67.3,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F02c",
+      "title": "物体位置平均欧氏误差（mm）：训练与开发集",
+      "role": "正文",
+      "old_group": "F02",
+      "caption": "36个既存权重的固定数据集评估；每种子12个采样点（250至3000，每250更新一次），未平滑。训练160组/20父轨迹，开发64组/8父轨迹。竖点线为原选择权重，未重新选点。物体位置平均欧氏误差（mm）；不是批次损失或闭环成功率。",
+      "limitations": "总损失、全状态MSE与平均欧氏位置误差不同；真实泛化差距保留。",
+      "sources": [
+        "figures/figure_data.json",
+        "reproduction/figures_deepcheck_20261014_01/checkpoint_metrics.csv",
+        "reproduction/figures_deepcheck_20261014_01/diagnostics.json"
+      ],
+      "plotted_rows": 72,
+      "width_mm": 180.3,
+      "height_mm": 67.3,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A01",
+      "title": "原始批次训练日志",
+      "role": "附录",
+      "old_group": "root_training",
+      "caption": "每250次更新采样当前随机批次，每种子12个点。虚线仅连接已记录点；不是每步连续轨迹或全训练集平均。",
+      "limitations": "稀疏、不同批次与多损失项会造成折线抖动；不插值、不平滑。",
+      "sources": [
+        "figures/figure_data.json"
+      ],
+      "plotted_rows": 108,
+      "width_mm": 180.3,
+      "height_mm": 68.6,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F03",
+      "title": "离散候选选择造成的 regret 跳变",
+      "role": "附录",
+      "old_group": "F03",
+      "caption": "64组来自8父轨迹。regret为同组最优真实短期分数减所选候选的真实分数。s23在1500步，组5贡献约0.005103/整体0.005604≈91%。点线仅连接12个权重评估点。",
+      "limitations": "不是每步连续测量或闭环成功率；39个有效候选对不足以支持稳定泛化。",
+      "sources": [
+        "reproduction/figures_deepcheck_20261014_01/diagnostics.json"
+      ],
+      "plotted_rows": 60,
+      "width_mm": 180.3,
+      "height_mm": 73.7,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F04",
+      "title": "开发集公平消融",
+      "role": "正文",
+      "old_group": "F04",
+      "caption": "每条件30个共同起点；BC固定权重，其余方法三个训练种子。点为均值，线为原分析20000次起点/种子交叉bootstrap的95%区间。成功率轴严格0–100%。",
+      "limitations": "开发集不可称独立确认；方法差异看配对差值区间，不能用种子SD替代抽样CI。",
+      "sources": [
+        "reproduction/multiseed_20261012_01/analysis/summary.csv"
+      ],
+      "plotted_rows": 14,
+      "width_mm": 180.3,
+      "height_mm": 92.7,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F05",
+      "title": "原世界模型独立确认",
+      "role": "正文",
+      "old_group": "F05",
+      "caption": "每条件60个共同起点；BC固定权重，其余方法三个训练种子。点为均值，线为原分析20000次起点/种子交叉bootstrap的95%区间。成功率轴严格0–100%。",
+      "limitations": "原确认不含共享恢复；三个种子共享同批起点；方法差异看配对差值区间，不能用种子SD替代抽样CI。",
+      "sources": [
+        "reproduction/confirmation_20261012_01/analysis/summary.csv"
+      ],
+      "plotted_rows": 6,
+      "width_mm": 180.3,
+      "height_mm": 68.6,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F06",
+      "title": "相同起点的配对结果 · clean",
+      "role": "附录",
+      "old_group": "F06",
+      "caption": "每行60个相同起点，三行共享起点与固定BC k=2。计数相同不表示权重或动作相同；三行不是180个独立起点。",
+      "limitations": "",
+      "sources": [
+        "figures/figure_data.json"
+      ],
+      "plotted_rows": 12,
+      "width_mm": 180.3,
+      "height_mm": 54.6,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F07",
+      "title": "相同起点的配对结果 · noise005",
+      "role": "附录",
+      "old_group": "F07",
+      "caption": "每行60个相同起点，三行共享起点与固定BC k=2。计数相同不表示权重或动作相同；三行不是180个独立起点。",
+      "limitations": "",
+      "sources": [
+        "figures/figure_data.json"
+      ],
+      "plotted_rows": 12,
+      "width_mm": 180.3,
+      "height_mm": 54.6,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F08",
+      "title": "双方成功交集的完成步数差",
+      "role": "附录",
+      "old_group": "F08",
+      "caption": "负值表示Full更快；阶梯是整数步数的经验分布，不是画图错误。包含全部长尾：clean每种子51个共同成功，noise每种子49个。",
+      "limitations": "成功交集条件分析，不能代表全体起点效率，不能把失败400步当真实完成时间。",
+      "sources": [
+        "figures/figure_data.json"
+      ],
+      "plotted_rows": 386,
+      "width_mm": 180.3,
+      "height_mm": 73.7,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F09",
+      "title": "位置 RMSE 与持续性弱基线",
+      "role": "正文",
+      "old_group": "F09",
+      "caption": "64开发分支组/8父轨迹，K=4，H=8。点为各训练种子，横杠为均值；持续性为单个无参数预测器。数值与旧F19相同，合并为一张。",
+      "limitations": "RMSE不等于平均欧氏误差。已用于选点的开发数据，不是独立测试。",
+      "sources": [
+        "reproduction/extensions_20261012_01/offline_metrics.json"
+      ],
+      "plotted_rows": 14,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F10",
+      "title": "原世界模型确认的配对差值",
+      "role": "正文",
+      "old_group": "F10",
+      "caption": "60个共同起点，BC固定，Full/Plain各3种子。95%起点/种子交叉bootstrap区间。联合Full−BC为+4.72[0.56,10.28]百分点；Full−Plain为+1.94[−0.56,6.11]。",
+      "limitations": "排序相对Plain的区间跨零；联合条件仍共享60起点。",
+      "sources": [
+        "reproduction/confirmation_20261012_01/analysis/paired_comparisons.csv"
+      ],
+      "plotted_rows": 9,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F11",
+      "title": "持续性与真值短期评分候选对照",
+      "role": "正文",
+      "old_group": "F11",
+      "caption": "30个共同开发起点。Full/Plain为3个冻结权重均值，其他策略每条件一次；95%配对bootstrap区间。真值候选使用特权无噪声短期反事实、H=8与相同门控。",
+      "limitations": "oracle是局部短期评分诊断，不是任务成功上界；并不保证长期最佳。",
+      "sources": [
+        "reproduction/extensions_20261012_01/analysis/summary.json"
+      ],
+      "plotted_rows": 10,
+      "width_mm": 180.3,
+      "height_mm": 76.2,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F12a",
+      "title": "预测时域配置敏感性",
+      "role": "正文",
+      "old_group": "F12",
+      "caption": "空心点为各冻结种子，短横线为均值；每条件30开发起点，成功率轴0–100%。离散配置不连折线。H包含D=2 FIFO前缀；H=1尚不能看到新提交动作。K=8同时扩展到训练外索引。",
+      "limitations": "K改变了候选内容，不能解释为纯数量因果效应；没有在确认集选配置。",
+      "sources": [
+        "reproduction/extensions_20261012_01/analysis/summary.json"
+      ],
+      "plotted_rows": 32,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F12b",
+      "title": "候选集合配置敏感性",
+      "role": "正文",
+      "old_group": "F12",
+      "caption": "空心点为各冻结种子，短横线为均值；每条件30开发起点，成功率轴0–100%。离散配置不连折线。H包含D=2 FIFO前缀；H=1尚不能看到新提交动作。K=8同时扩展到训练外索引。",
+      "limitations": "K改变了候选内容，不能解释为纯数量因果效应；没有在确认集选配置。",
+      "sources": [
+        "reproduction/extensions_20261012_01/analysis/summary.json"
+      ],
+      "plotted_rows": 28,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F13",
+      "title": "不同预测步的位置误差",
+      "role": "附录",
+      "old_group": "F13",
+      "caption": "64个已知开发组/8父轨迹。线为三个训练种子的均值，阴影为种子样本SD（ddof=1），不是95%CI。横轴是真实预测步。评分头续训control/calibrated的动力学与Full逐值完全一致，合并显示Full线，未删除不同结果。",
+      "limitations": "此指标是平均欧氏距离，不是F09的RMSE。重叠的相同预测不构成三份独立证据。",
+      "sources": [
+        "reproduction/multiseed_20261012_01/offline/prediction_horizons.csv"
+      ],
+      "plotted_rows": 128,
+      "width_mm": 180.3,
+      "height_mm": 72.4,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F14",
+      "title": "共享恢复的独立确认",
+      "role": "正文",
+      "old_group": "F14",
+      "caption": "60个共同起点；每版本每起点8个执行条件，Full固定3种子。点/线为成功率和按起点重采样95%区间。v5原生确认464/480，不能当480个独立样本。",
+      "limitations": "与原无恢复世界模型确认是不同批次；不能直接相减估计恢复效应。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_confirmation/summary.json"
+      ],
+      "plotted_rows": 20,
+      "width_mm": 180.3,
+      "height_mm": 81.3,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A02",
+      "title": "共享恢复的开发对照",
+      "role": "附录",
+      "old_group": "A02",
+      "caption": "30个已知开发起点，每版本240次执行；v5与后续v6均236/240。起点bootstrap，不能写成独立确认。",
+      "limitations": "与原无恢复世界模型确认是不同批次；不能直接相减估计恢复效应。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_dev_a/summary.json"
+      ],
+      "plotted_rows": 20,
+      "width_mm": 180.3,
+      "height_mm": 81.3,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F15a",
+      "title": "v5 起点配对效应与模块对照",
+      "role": "正文",
+      "old_group": "F15",
+      "caption": "同60起点，20000次起点bootstrap、逐项95%区间。原预设执行混合v5−v4=+1.46[0,4.17]百分点：7次执行改善仅来自2个起点；三个训练种子固定。",
+      "limitations": "区间未多重比较校正，包含零不能称显著普遍优势；无v5同批关闭恢复组。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_confirmation/summary.json"
+      ],
+      "plotted_rows": 5,
+      "width_mm": 180.3,
+      "height_mm": 68.6,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F15b",
+      "title": "v5 起点配对效应与模块对照",
+      "role": "正文",
+      "old_group": "F15",
+      "caption": "同60起点，20000次起点bootstrap、逐项95%区间。原预设执行混合v5−v4=+1.46[0,4.17]百分点：7次执行改善仅来自2个起点；三个训练种子固定。",
+      "limitations": "区间未多重比较校正，包含零不能称显著普遍优势；无v5同批关闭恢复组。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_confirmation/summary.json"
+      ],
+      "plotted_rows": 3,
+      "width_mm": 180.3,
+      "height_mm": 68.6,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F16",
+      "title": "独立几何分层压力测试",
+      "role": "正文",
+      "old_group": "F16",
+      "caption": "四个人工几何层，每层4起点，共16；5版本共80次执行。固定静止开爪提议、第80步强制恢复，400步上限；v5合计12/16。",
+      "limitations": "小样本描述计数；不能合并原生确认，也不能称一般分布成功率。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/analysis_geometry_confirmation/summary.json"
+      ],
+      "plotted_rows": 20,
+      "width_mm": 180.3,
+      "height_mm": 67.3,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F17",
+      "title": "已知开发案例的控制阶段时间线",
+      "role": "附录",
+      "old_group": "F17",
+      "caption": "从既有机制回放记录提取；案例73与124已知，不是独立确认。阶段是离散类别，因此用时间条而非数字折线。成功轨迹在真实结束步停止。",
+      "limitations": "只说明机制，不把单例效果推广至所有起点。",
+      "sources": [
+        "reproduction/recovery_v5_20261012_01/mechanism_physics.json"
+      ],
+      "plotted_rows": 1527,
+      "width_mm": 180.3,
+      "height_mm": 68.6,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F18a",
+      "title": "既有四组效应：v2批次 / v2恢复",
+      "role": "附录",
+      "old_group": "F18",
+      "caption": "既有两批各60起点的事后分析；后两图共用v3批次。Full平均三个固定权重，按起点配对95%逐项区间。浮点负零规范显示为0，未改变数据。",
+      "limitations": "不能拼成v5因果对照；不进行跨批次择优或宣称三次独立确认。",
+      "sources": [
+        "reproduction/consolidation_20261012_01/factorial_analysis.json"
+      ],
+      "plotted_rows": 10,
+      "width_mm": 180.3,
+      "height_mm": 78.7,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F18b",
+      "title": "既有四组效应：v3批次 / v2恢复",
+      "role": "附录",
+      "old_group": "F18",
+      "caption": "既有两批各60起点的事后分析；后两图共用v3批次。Full平均三个固定权重，按起点配对95%逐项区间。浮点负零规范显示为0，未改变数据。",
+      "limitations": "不能拼成v5因果对照；不进行跨批次择优或宣称三次独立确认。",
+      "sources": [
+        "reproduction/consolidation_20261012_01/factorial_analysis.json"
+      ],
+      "plotted_rows": 10,
+      "width_mm": 180.3,
+      "height_mm": 78.7,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "F18c",
+      "title": "既有四组效应：v3批次 / v3恢复",
+      "role": "附录",
+      "old_group": "F18",
+      "caption": "既有两批各60起点的事后分析；后两图共用v3批次。Full平均三个固定权重，按起点配对95%逐项区间。浮点负零规范显示为0，未改变数据。",
+      "limitations": "不能拼成v5因果对照；不进行跨批次择优或宣称三次独立确认。",
+      "sources": [
+        "reproduction/consolidation_20261012_01/factorial_analysis.json"
+      ],
+      "plotted_rows": 10,
+      "width_mm": 180.3,
+      "height_mm": 78.7,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A03",
+      "title": "v6 开度与不可行处理消融",
+      "role": "附录",
+      "old_group": "v6_outcomes",
+      "caption": "37个已知诊断条件的R1/R2消融；开发240次执行共享30起点，v5与v6均236/240，没有开发成功率改善。",
+      "limitations": "",
+      "sources": [
+        "reproduction/improvement_v6_20261015_01/analysis/dev_comparison.json",
+        "reproduction/improvement_v6_20261015_01/analysis/pilot_b.json"
+      ],
+      "plotted_rows": 6,
+      "width_mm": 180.3,
+      "height_mm": 66.0,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A04",
+      "title": "恢复开度：观测与计划不一致",
+      "role": "附录",
+      "old_group": "v6_aperture",
+      "caption": "已知侧倒失抓案例11000013；采用原图state_before语义，每控制步一个原始观测，无平滑。",
+      "limitations": "控制命令不等于实际开度，不能仅凭目标值判断抓取空间。",
+      "sources": [
+        "traces/v6_aperture_v5.json",
+        "traces/v6_aperture_v6.json"
+      ],
+      "plotted_rows": 134,
+      "width_mm": 180.3,
+      "height_mm": 68.6,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A05",
+      "title": "无可行候选时的离散控制阶段",
+      "role": "附录",
+      "old_group": "v6_infeasible",
+      "caption": "Full s23、无噪声、demo188：双方都未完成。新保护减少重复下降，但没有创造可行抓取。空白为其他控制阶段，CSV保留全部阶段。",
+      "limitations": "",
+      "sources": [
+        "traces/v6_infeasible_v5.json",
+        "traces/v6_infeasible_v6.json"
+      ],
+      "plotted_rows": 800,
+      "width_mm": 180.3,
+      "height_mm": 61.0,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A06a",
+      "title": "v10 箱沿已知案例：末端高度（m）/物体高度（m）",
+      "role": "附录",
+      "old_group": "v10_wall",
+      "caption": "demo6000005，BC k=2、噪声0.05；同起点同噪声。逐步观测，不平滑；v6成功后在实际结束步停止。",
+      "limitations": "轨迹复杂不是绘图插值；v6的完成来自BC接管，不应声称新恢复抓持。",
+      "sources": [
+        "reproduction/improvement_v10_20261015_01/analysis/wall_edge_trajectories.csv"
+      ],
+      "plotted_rows": 3022,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A06b",
+      "title": "v10 箱沿已知案例：物体到目标XY距离（m）/物体轴倾角（°）",
+      "role": "附录",
+      "old_group": "v10_wall",
+      "caption": "demo6000005，BC k=2、噪声0.05；同起点同噪声。逐步观测，不平滑；v6成功后在实际结束步停止。",
+      "limitations": "轨迹复杂不是绘图插值；v6的完成来自BC接管，不应声称新恢复抓持。",
+      "sources": [
+        "reproduction/improvement_v10_20261015_01/analysis/wall_edge_trajectories.csv"
+      ],
+      "plotted_rows": 3022,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A07",
+      "title": "v11 开发集逐条件退步核对",
+      "role": "附录",
+      "old_group": "v11_development",
+      "caption": "30个相同起点、8执行条件；Full s41噪声组少1次成功，v11未达到采用门槛，未独立确认。",
+      "limitations": "不能用颜色差或240执行次数夸大独立样本量。",
+      "sources": [
+        "reproduction/improvement_v11_20261015_01/analysis/development.json"
+      ],
+      "plotted_rows": 16,
+      "width_mm": 180.3,
+      "height_mm": 85.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A08a",
+      "title": "已知箱沿四组消融：末端世界高度（m）/物体世界高度（m）",
+      "role": "附录",
+      "old_group": "A08",
+      "caption": "state_after原始每控制步数据，同起点验证通过，无平滑/补零/终点外推。BC k=2、噪声0.05、demo6000005；仅v11在380步完成。",
+      "limitations": "真实控制阶段/观测波动保留。逐点CSV补全了旧v11退步图未导出的目标XY距离。",
+      "sources": [
+        "traces/v11_edge_axis.json",
+        "traces/v11_edge_guard.json",
+        "traces/v11_edge_v10.json",
+        "traces/v11_edge_v11.json"
+      ],
+      "plotted_rows": 3160,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A08b",
+      "title": "已知箱沿四组消融：物体到目标XY距离（m）/观测指间距（mm）",
+      "role": "附录",
+      "old_group": "A08",
+      "caption": "state_after原始每控制步数据，同起点验证通过，无平滑/补零/终点外推。BC k=2、噪声0.05、demo6000005；仅v11在380步完成。",
+      "limitations": "真实控制阶段/观测波动保留。逐点CSV补全了旧v11退步图未导出的目标XY距离。",
+      "sources": [
+        "traces/v11_edge_axis.json",
+        "traces/v11_edge_guard.json",
+        "traces/v11_edge_v10.json",
+        "traces/v11_edge_v11.json"
+      ],
+      "plotted_rows": 3160,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A09a",
+      "title": "持物等待开发退步：末端世界高度（m）/物体世界高度（m）",
+      "role": "附录",
+      "old_group": "A09",
+      "caption": "state_after原始每控制步数据，同起点验证通过，无平滑/补零/终点外推。Full s41、噪声0.05、demo87；v6在358步成功，v11在400步失败；新箱沿模块未触发。",
+      "limitations": "真实控制阶段/观测波动保留。逐点CSV补全了旧v11退步图未导出的目标XY距离。",
+      "sources": [
+        "traces/v11_regression_v11.json",
+        "traces/v11_regression_v6.json"
+      ],
+      "plotted_rows": 1516,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    },
+    {
+      "id": "A09b",
+      "title": "持物等待开发退步：物体到目标XY距离（m）/末端与物体距离（mm）",
+      "role": "附录",
+      "old_group": "A09",
+      "caption": "state_after原始每控制步数据，同起点验证通过，无平滑/补零/终点外推。Full s41、噪声0.05、demo87；v6在358步成功，v11在400步失败；新箱沿模块未触发。",
+      "limitations": "真实控制阶段/观测波动保留。逐点CSV补全了旧v11退步图未导出的目标XY距离。",
+      "sources": [
+        "traces/v11_regression_v11.json",
+        "traces/v11_regression_v6.json"
+      ],
+      "plotted_rows": 1516,
+      "width_mm": 180.3,
+      "height_mm": 71.1,
+      "png_dpi": 600,
+      "formats": [
+        "png",
+        "pdf",
+        "svg",
+        "csv"
+      ],
+      "font_pt": 9,
+      "no_smoothing": true
+    }
+  ],
+  "new_experiments": 0
+}

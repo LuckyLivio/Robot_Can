@@ -24,7 +24,7 @@ BC/Full提议先经过同一个观测历史恢复状态机，再提交到同一F
 
 各阶段分别统计，原始840回合主线与v5新2400回合不是同批起点。已有v2/v3四组对照和v5组件消融见[结果](RESULTS.md)、[统计](STATISTICS.md)、[贡献](CONTRIBUTIONS.md)。局部成功率改善不等于世界模型本身预测能力增强。
 
-版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/
+文档复核：2026-10-15；本页2026-10-12实验口径保持原协议。旧版归档：reproduction/consolidation_20261012_01/previous_documents/
 
 ## 后续版本输入边界（2026-10-15）
 

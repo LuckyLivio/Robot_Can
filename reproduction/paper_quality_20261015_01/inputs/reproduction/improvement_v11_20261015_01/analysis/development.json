@@ -1,0 +1,79 @@
+{
+  "complete": true,
+  "stage": "dev_a",
+  "v6_success": 236,
+  "v11_success": 235,
+  "episodes": 240,
+  "regressions": [
+    {
+      "condition": "full_s41_noise005",
+      "demo": "demo_87",
+      "v6_success": true,
+      "v11_success": false,
+      "v6_steps": 358,
+      "v11_steps": 400,
+      "v11_verified_regrasps": 0
+    }
+  ],
+  "rescues": [],
+  "groups": [
+    {
+      "condition": "bc_k2_clean",
+      "v6_success": 29,
+      "v11_success": 29,
+      "episodes": 30
+    },
+    {
+      "condition": "full_s17_clean",
+      "v6_success": 30,
+      "v11_success": 30,
+      "episodes": 30
+    },
+    {
+      "condition": "full_s23_clean",
+      "v6_success": 28,
+      "v11_success": 28,
+      "episodes": 30
+    },
+    {
+      "condition": "full_s41_clean",
+      "v6_success": 29,
+      "v11_success": 29,
+      "episodes": 30
+    },
+    {
+      "condition": "bc_k2_noise005",
+      "v6_success": 30,
+      "v11_success": 30,
+      "episodes": 30
+    },
+    {
+      "condition": "full_s17_noise005",
+      "v6_success": 30,
+      "v11_success": 30,
+      "episodes": 30
+    },
+    {
+      "condition": "full_s23_noise005",
+      "v6_success": 30,
+      "v11_success": 30,
+      "episodes": 30
+    },
+    {
+      "condition": "full_s41_noise005",
+      "v6_success": 30,
+      "v11_success": 29,
+      "episodes": 30
+    }
+  ],
+  "edge_activated_episodes": 0,
+  "edge_activations": [],
+  "source_freeze_verified": true,
+  "timing_ms": {
+    "scope": "BC+WM selection+supervisor, excludes physics/render/logging; four workers, replay rendering overlapped part of the run",
+    "max": 44.90000000077998,
+    "p99": 3.082710999879058,
+    "over50": 0,
+    "steps": 38118
+  }
+}

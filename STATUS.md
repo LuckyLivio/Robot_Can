@@ -1,4 +1,6 @@
-# 项目当前状态（2026-10-15审查版）
+> 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+
+# 项目当前状态（2026-10-15图表与文档复查版）
 
 冻结展示主线为v5；最新开发候选为v11，未采用。当前完整结论见[全项目检查报告](reproduction/project_audit_20261015_01/REPORT.md)，逐项见[清单](reproduction/project_audit_20261015_01/CHECKLIST.csv)。
 
@@ -13,6 +15,6 @@
 
 待办：持物等待分支的状态切换；当前设备以外的干净安装验收；更直接的相关工作阅读、正式论文和学校格式。详见[分优先级计划](reproduction/project_audit_20261015_01/IMPROVEMENT_PLAN.md)。单任务、低维真值、固定BC与有限延迟范围继续如实限定。
 
-当前[前端](reproduction/progress_v11_20261015_01/demo/index.html)；最新[只读检查入口](reproduction/portable_delivery_20261015_01/verify_delivery.py)。历史根文档的原样备份在本轮before目录。
+当前[前端](reproduction/progress_v11_20261015_01/demo/index.html)；最新[只读检查入口](reproduction/paper_quality_20261015_01/verify.py)。历史根文档的原样备份在本轮before目录。
 
 跨设备交付P1-A：本机侧已完成独立展示包（11段视频）、v6—v11写作增补、三ZIP集中迁移文件夹和可移植复核/重跑入口；干净标准库环境、中文路径移位、HTTP及浏览器播放检查通过。第二台电脑安装与物理运行尚未执行；v12控制修复未开始。[交付报告](reproduction/portable_delivery_20261015_01/REPORT.md)。

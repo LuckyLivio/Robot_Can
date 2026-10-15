@@ -1,3 +1,5 @@
+> 当前论文用图已在新目录统一重绘：[图表与数据总览](../reproduction/paper_quality_20261015_01/index.html) · [曲线解释](../reproduction/paper_quality_20261015_01/CURVE_EXPLANATIONS.md)。本目录7组旧图及数值保留用于历史核查，写论文优先使用新版。
+
 # 当前图表的实验口径
 
 更新：2026-10-14。7 组 PNG（300 dpi）与矢量 PDF 从原始回合 / 训练日志生成；没有新增训练或策略回合。绘图入口为根目录 `make_figures.py`。

@@ -1,8 +1,10 @@
+> 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+
 # 当前环境、冻结版本与新设备说明
 
 更新：2026-10-15。PyCharm使用项目 `.venv\Scripts\python.exe`。本轮实测Python3.10.9、torch2.14.1+cu130、NumPy1.26.4、robosuite1.5.1、MuJoCo3.3.0、h5py3.11.0、SciPy1.15.3。pip check通过；RTX5080 Laptop CUDA可用且小张量计算通过；BC及Full/Plain各三种子在一个保存观测上前向通过。
 
-[本轮环境与推理凭据](reproduction/project_audit_20261015_01/environment_and_inference.json) · [完整pip快照](reproduction/project_audit_20261015_01/environment-freeze-current.txt)。这是实际环境快照，不是已验证可在任意机器安装的锁文件。本轮没有新建环境或运行闭环机器人。
+[本轮环境与推理凭据](reproduction/paper_quality_20261015_01/environment_and_inference.json) · [完整pip快照](reproduction/project_audit_20261015_01/environment-freeze-current.txt)。这是实际环境快照，不是已验证可在任意机器安装的锁文件。本轮图表检查未新建仿真环境或运行闭环机器人；上一轮便携展示已在本机新标准库环境和中文移位目录验证。
 
 `requirements-repro.txt`保留历史安装建议，其torch2.9.1注释不是实际冻结版本。不要按旧注释降级当前环境；新设备需核对该设备系统、GPU和可用包，再在新环境验证。[新设备方案](reproduction/project_audit_20261015_01/IMPROVEMENT_PLAN.md)
 

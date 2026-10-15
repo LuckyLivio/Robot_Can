@@ -24,7 +24,7 @@
 
 原统计：[原确认](reproduction/confirmation_20261012_01/analysis/paired_comparisons.csv)、[v5](reproduction/recovery_v5_20261012_01/analysis_confirmation/summary.json)、[新四组分析](reproduction/consolidation_20261012_01/factorial_analysis.json)。
 
-版本：2026-10-12 成果整合版；旧根文档见 reproduction/consolidation_20261012_01/previous_documents/
+文档复核：2026-10-15；本页2026-10-12实验口径保持原协议。旧版归档：reproduction/consolidation_20261012_01/previous_documents/
 
 ## 2026-10-15补充口径
 

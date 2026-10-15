@@ -1,3 +1,5 @@
+> 2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+
 > [全项目审查与清理/调整计划](reproduction/project_audit_20261015_01/REPORT.md) · [审查网页](reproduction/project_audit_20261015_01/index.html)
 
 # 项目分类总导航
@@ -11,9 +13,9 @@
 - [数据与权重](WORKSPACE/04_data_weights/README.md)
 - [前端与图表](WORKSPACE/05_visualization/README.md)
 - [当前论文交接说明](THESIS_HANDOFF_LATEST.md)；[旧迁移包](THESIS_HANDOFF_20261015/00_READ_FIRST.md)
-- [当前审查前10,146文件索引](reproduction/project_audit_20261015_01/FILE_INVENTORY.csv)；[旧3,946文件快照分类](WORKSPACE/FILE_INDEX.csv)
+- [本轮修改前10,270文件索引](reproduction/paper_quality_20261015_01/FILE_INVENTORY.csv)；[旧3,946文件快照分类](WORKSPACE/FILE_INDEX.csv)
 
-建议在PyCharm中收藏WORKSPACE和THESIS_HANDOFF_20261015。图表可参考旧迁移包的详细图注，但它不含v6—v11；当前根THESIS_OUTLINE与最新交接说明补充候选版本边界。
+建议收藏WORKSPACE及本轮目录`reproduction/paper_quality_20261015_01`。新图和当前提纲优先使用本轮版本；旧写作包用于既有40表与冻结资料，v6—v11另有增补。
 
 演示服务仍从原项目根运行：
 
