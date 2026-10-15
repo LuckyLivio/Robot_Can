@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-15T10:37:05.866669+00:00",
+  "scope": "joint-limit-aware equivalent wrist poses and bounded planning only",
+  "base": "frozen v8 revision B",
+  "observations": "Original 23D state plus measured 7 arm joint angles for shared supervisor only. Fixed kinematic asset. No future simulation/contact/reward/success input.",
+  "budget": {
+    "steps": 400,
+    "delay": 2,
+    "control_hz": 20,
+    "max_attempts": 2,
+    "max_revisions": 2
+  },
+  "variants": [
+    "v6",
+    "v8",
+    "joint",
+    "bounded",
+    "v9"
+  ],
+  "pilot": "Same 37 known diagnostic conditions per variant, 185 executions per revision. Not independent confirmation.",
+  "gate": {
+    "preserve_all_v6_successes": true,
+    "rescue_at_least_one_v6_failure": true,
+    "mechanism_tests_pass": true,
+    "no_unknown_or_stale_descent": true,
+    "timing": "Bounded work units per step; report measured planning and total decision distributions. Target planning p99<50 ms, no hard real-time claim."
+  },
+  "development": "Only after gate. Lock source first. Existing 30 dev starts x BC plus Full seeds 17/23/41 x clean/noise =240 executions per variant, compare frozen v6 and candidate fairly. Retain original records.",
+  "no_training": true,
+  "no_paper": true,
+  "git_frontend": "New frontend directory. Push at preregistration and verified final evidence."
+}
