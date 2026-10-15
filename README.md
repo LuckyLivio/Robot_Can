@@ -17,7 +17,7 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 **[打开前端：http://127.0.0.1:8766/](http://127.0.0.1:8766/)**
 
-项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/consolidation_20261012_01/demo/index.html)。
+项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/progress_20261015_01/demo/index.html)。
 
 当前整合版包含机器人对比视频、世界模型主结果、v5 恢复结果和日志轨迹播放。推荐依次查看项目概览、世界模型对照、恢复实验，再播放成功与失败案例。
 
@@ -32,7 +32,7 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 | 页面 | 地址 |
 |---|---|
-| 当前整合版，推荐 | http://127.0.0.1:8766/reproduction/consolidation_20261012_01/demo/index.html |
+| 当前整合版，推荐 | http://127.0.0.1:8766/reproduction/progress_20261015_01/demo/index.html |
 | review 历史版 | http://127.0.0.1:8766/reproduction/review_20261012_01/demo/index.html |
 | release 历史版 | http://127.0.0.1:8766/reproduction/release_20261012_01/demo/index.html |
 
@@ -135,3 +135,11 @@ README 更新日期：2026-10-14。更新前版本保存在 [README_before.md](r
 ## GitHub 项目快照
 
 仓库：[LuckyLivio/Robot_can](https://github.com/LuckyLivio/Robot_can)。克隆、前端与上传完整性说明见 [GITHUB_UPLOAD.md](GITHUB_UPLOAD.md)。最新图表深查及固定训练/开发集复算见 [报告](reproduction/figures_deepcheck_20261014_01/REPORT.md) 与 [图表总览](reproduction/figures_deepcheck_20261014_01/index.html)。
+
+## 最新优化进展（2026-10-15）
+
+当前前端增加版本状态与候选消融，根网址仍为 http://127.0.0.1:8766/ 。历史页面保持原样。
+
+v6 开发集仍为 236/240；v7 合用诊断为 30/37，未通过保留 v6 全部成功案例的门槛。二者均未替换主版本。本轮 v8 在新目录核对实际碰撞几何和撤离后重规划，通过小测试才进入开发对照，不做泛化训练或论文写作。
+
+详见 [v6 报告](reproduction/improvement_v6_20261015_01/REPORT.md)、[v7 报告](reproduction/improvement_v7_20261015_01/REPORT.md) 和 [本轮预登记](reproduction/improvement_v8_20261015_01/protocols/study_plan.json)。本次根 README 与入口改前文件保存在 `reproduction/improvement_v8_20261015_01/before/`，旧保护清单保留。

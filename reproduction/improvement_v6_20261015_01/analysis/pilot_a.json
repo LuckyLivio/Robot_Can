@@ -1,0 +1,1959 @@
+{
+  "stage": "pilot_a",
+  "complete": true,
+  "incomplete_jobs": [],
+  "variants": {
+    "v5": {
+      "success": 29,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [],
+      "failures": [
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100000"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 21,
+            "ALIGN": 63,
+            "DESCEND": 101,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "CARRY": 64,
+            "PLACE": 17,
+            "RELEASE": 14
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              136,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              207,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              233,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              264,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              282,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              289,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              305,
+              "CARRY",
+              "clearance_reached"
+            ],
+            [
+              369,
+              "PLACE",
+              "above_target"
+            ],
+            [
+              386,
+              "RELEASE",
+              "at_release_height"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "side_wall",
+            "demo_6200002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 21,
+            "ALIGN": 55,
+            "DESCEND": 123,
+            "EXHAUSTED": 122
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              134,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              188,
+              "RETRACT",
+              "descent_stalled_preserve_budget"
+            ],
+            [
+              200,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              208,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              279,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_side_s23",
+            "demo_188"
+          ],
+          "phases": {
+            "NORMAL": 69,
+            "RETRACT": 23,
+            "ALIGN": 56,
+            "DESCEND": 128,
+            "EXHAUSTED": 124
+          },
+          "events": [
+            [
+              70,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              78,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              126,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              185,
+              "RETRACT",
+              "descent_stalled_preserve_budget"
+            ],
+            [
+              198,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              206,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              277,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_side_s41",
+            "demo_97"
+          ],
+          "phases": {
+            "NORMAL": 96,
+            "RETRACT": 25,
+            "ALIGN": 55,
+            "DESCEND": 140,
+            "EXHAUSTED": 84
+          },
+          "events": [
+            [
+              97,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              107,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              135,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              206,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              246,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              317,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000006"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 26,
+            "ALIGN": 56,
+            "DESCEND": 140,
+            "EXHAUSTED": 99
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              123,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              194,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              211,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              231,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              302,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000012"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 24,
+            "ALIGN": 43,
+            "DESCEND": 127,
+            "EXHAUSTED": 127
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              122,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              180,
+              "RETRACT",
+              "descent_stalled_preserve_budget"
+            ],
+            [
+              195,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              203,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              274,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000013"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 17,
+            "ALIGN": 46,
+            "DESCEND": 91,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "EXHAUSTED": 126
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              125,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              146,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              164,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              171,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              188,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              196,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              204,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              275,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000014"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 25,
+            "ALIGN": 46,
+            "DESCEND": 123,
+            "EXHAUSTED": 127
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              125,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              179,
+              "RETRACT",
+              "descent_stalled_preserve_budget"
+            ],
+            [
+              195,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              203,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              274,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        }
+      ]
+    },
+    "r1": {
+      "success": 28,
+      "episodes": 37,
+      "rescues": [
+        [
+          "known_pressure",
+          "demo_11000013"
+        ]
+      ],
+      "regressions": [
+        [
+          "new_geometry",
+          "demo_6100002"
+        ],
+        [
+          "new_geometry",
+          "demo_6100003"
+        ]
+      ],
+      "failures": [
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100000"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 21,
+            "ALIGN": 63,
+            "DESCEND": 101,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "CARRY": 64,
+            "PLACE": 17,
+            "RELEASE": 14
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              136,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              207,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              233,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              264,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              282,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              289,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              305,
+              "CARRY",
+              "clearance_reached"
+            ],
+            [
+              369,
+              "PLACE",
+              "above_target"
+            ],
+            [
+              386,
+              "RELEASE",
+              "at_release_height"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 16,
+            "ALIGN": 40,
+            "EXHAUSTED": 265
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              119,
+              "RETRACT",
+              "execution_guard"
+            ],
+            [
+              127,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              135,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            },
+            {
+              "step": 119,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100003"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 16,
+            "ALIGN": 41,
+            "EXHAUSTED": 264
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              120,
+              "RETRACT",
+              "execution_guard"
+            ],
+            [
+              128,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              136,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            },
+            {
+              "step": 120,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "side_wall",
+            "demo_6200002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 16,
+            "ALIGN": 55,
+            "EXHAUSTED": 250
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              134,
+              "RETRACT",
+              "execution_guard"
+            ],
+            [
+              142,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              150,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            },
+            {
+              "step": 134,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s23",
+            "demo_188"
+          ],
+          "phases": {
+            "NORMAL": 69,
+            "RETRACT": 17,
+            "ALIGN": 56,
+            "EXHAUSTED": 258
+          },
+          "events": [
+            [
+              70,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              78,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              126,
+              "RETRACT",
+              "execution_guard"
+            ],
+            [
+              134,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              142,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 70,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            },
+            {
+              "step": 126,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s41",
+            "demo_97"
+          ],
+          "phases": {
+            "NORMAL": 96,
+            "RETRACT": 25,
+            "ALIGN": 55,
+            "DESCEND": 140,
+            "EXHAUSTED": 84
+          },
+          "events": [
+            [
+              97,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              107,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              135,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              206,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              246,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              317,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000006"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 16,
+            "ALIGN": 44,
+            "EXHAUSTED": 261
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              123,
+              "RETRACT",
+              "execution_guard"
+            ],
+            [
+              131,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              139,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            },
+            {
+              "step": 123,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000012"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 16,
+            "ALIGN": 43,
+            "EXHAUSTED": 262
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              122,
+              "RETRACT",
+              "execution_guard"
+            ],
+            [
+              130,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              138,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            },
+            {
+              "step": 122,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000014"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 16,
+            "ALIGN": 46,
+            "EXHAUSTED": 259
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              125,
+              "RETRACT",
+              "execution_guard"
+            ],
+            [
+              133,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              141,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            },
+            {
+              "step": 125,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        }
+      ]
+    },
+    "r2": {
+      "success": 28,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "new_geometry",
+          "demo_6100002"
+        ]
+      ],
+      "failures": [
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100000"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 21,
+            "ALIGN": 63,
+            "DESCEND": 101,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "CARRY": 64,
+            "PLACE": 17,
+            "RELEASE": 14
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              136,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              207,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              233,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              264,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              282,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              289,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              305,
+              "CARRY",
+              "clearance_reached"
+            ],
+            [
+              369,
+              "PLACE",
+              "above_target"
+            ],
+            [
+              386,
+              "RELEASE",
+              "at_release_height"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "side_wall",
+            "demo_6200002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s23",
+            "demo_188"
+          ],
+          "phases": {
+            "NORMAL": 69,
+            "RETRACT": 1,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 322
+          },
+          "events": [
+            [
+              70,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              70,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              78,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 70,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s41",
+            "demo_97"
+          ],
+          "phases": {
+            "NORMAL": 96,
+            "RETRACT": 25,
+            "ALIGN": 55,
+            "DESCEND": 140,
+            "EXHAUSTED": 84
+          },
+          "events": [
+            [
+              97,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              107,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              135,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              206,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              246,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              317,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000006"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000012"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000013"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 9,
+            "ALIGN": 38,
+            "DESCEND": 21,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "ABORT_RETRACT": 11,
+            "BLOCKED": 201
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              125,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              146,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              164,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              171,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              188,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              188,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              199,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "feasible",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 0
+              },
+              "margin_m": 0.0036544941465935926
+            },
+            {
+              "step": 188,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000014"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        }
+      ]
+    },
+    "v6": {
+      "success": 28,
+      "episodes": 37,
+      "rescues": [
+        [
+          "known_pressure",
+          "demo_11000013"
+        ]
+      ],
+      "regressions": [
+        [
+          "new_geometry",
+          "demo_6100002"
+        ],
+        [
+          "new_geometry",
+          "demo_6100003"
+        ]
+      ],
+      "failures": [
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100000"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "RETRACT": 21,
+            "ALIGN": 63,
+            "DESCEND": 101,
+            "CLOSE": 18,
+            "TEST_LIFT": 7,
+            "LIFT": 16,
+            "CARRY": 64,
+            "PLACE": 17,
+            "RELEASE": 14
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              87,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              136,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              207,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              233,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              264,
+              "CLOSE",
+              "at_grasp_pose"
+            ],
+            [
+              282,
+              "TEST_LIFT",
+              "close_commands_executed"
+            ],
+            [
+              289,
+              "LIFT",
+              "lift_follow_confirmed"
+            ],
+            [
+              305,
+              "CARRY",
+              "clearance_reached"
+            ],
+            [
+              369,
+              "PLACE",
+              "above_target"
+            ],
+            [
+              386,
+              "RELEASE",
+              "at_release_height"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "new_geometry",
+            "demo_6100003"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "side_wall",
+            "demo_6200002"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s23",
+            "demo_188"
+          ],
+          "phases": {
+            "NORMAL": 69,
+            "RETRACT": 1,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 322
+          },
+          "events": [
+            [
+              70,
+              "RETRACT",
+              "observed_grasp_loss"
+            ],
+            [
+              70,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              78,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 70,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_side_s41",
+            "demo_97"
+          ],
+          "phases": {
+            "NORMAL": 96,
+            "RETRACT": 25,
+            "ALIGN": 55,
+            "DESCEND": 140,
+            "EXHAUSTED": 84
+          },
+          "events": [
+            [
+              97,
+              "RETRACT",
+              "near_object_stall"
+            ],
+            [
+              107,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              135,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              206,
+              "RETRACT",
+              "phase_timeout"
+            ],
+            [
+              219,
+              "ALIGN",
+              "retracted"
+            ],
+            [
+              246,
+              "DESCEND",
+              "aligned_above_object"
+            ],
+            [
+              317,
+              "EXHAUSTED",
+              "attempt_limit"
+            ]
+          ],
+          "guard_events": []
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000006"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 3,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 3
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000012"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        },
+        {
+          "case": [
+            "known_pressure",
+            "demo_11000014"
+          ],
+          "phases": {
+            "NORMAL": 79,
+            "ABORT_RETRACT": 8,
+            "BLOCKED": 313
+          },
+          "events": [
+            [
+              79,
+              "RETRACT",
+              "diagnostic_forced_start"
+            ],
+            [
+              79,
+              "ABORT_RETRACT",
+              "no_untried_feasible_candidate"
+            ],
+            [
+              87,
+              "BLOCKED",
+              "no_feasible_plan_no_repeated_descent"
+            ]
+          ],
+          "guard_events": [
+            {
+              "step": 79,
+              "reason": "no_untried_feasible_candidate",
+              "candidates": 153,
+              "rejected": {
+                "repeat": 0,
+                "geometry": 153
+              },
+              "margin_m": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

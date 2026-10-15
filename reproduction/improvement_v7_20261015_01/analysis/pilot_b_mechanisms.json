@@ -1,0 +1,216 @@
+{
+  "v6": {
+    "phases": {
+      "NORMAL": 3326,
+      "RETRACT": 337,
+      "ALIGN": 1225,
+      "DESCEND": 921,
+      "CLOSE": 432,
+      "TEST_LIFT": 168,
+      "LIFT": 551,
+      "CARRY": 1324,
+      "PLACE": 384,
+      "RELEASE": 342,
+      "RETREAT": 70,
+      "EXHAUSTED": 117,
+      "ABORT_RETRACT": 32,
+      "BLOCKED": 1261
+    },
+    "new_events": {},
+    "replans_per_episode": {
+      "0": 37
+    },
+    "affected": []
+  },
+  "pose": {
+    "phases": {
+      "NORMAL": 3326,
+      "RETRACT": 247,
+      "ALIGN": 1271,
+      "DESCEND": 606,
+      "CLOSE": 432,
+      "TEST_LIFT": 168,
+      "LIFT": 556,
+      "CARRY": 1410,
+      "PLACE": 365,
+      "RELEASE": 326,
+      "RETREAT": 65,
+      "POSE_WAIT": 55,
+      "EXHAUSTED": 178,
+      "ABORT_RETRACT": 32,
+      "BLOCKED": 1261,
+      "APERTURE": 4
+    },
+    "new_events": {
+      "POSE_WAIT:pose_changed_during_approach": 7
+    },
+    "replans_per_episode": {
+      "0": 31,
+      "1": 6
+    },
+    "affected": [
+      {
+        "job": "pose_train",
+        "demo": "demo_159",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "pose_loss",
+        "demo": "demo_54",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "pose_known_budget",
+        "demo": "demo_124",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "pose_known_side_s17",
+        "demo": "demo_97",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "pose_known_side_s23",
+        "demo": "demo_128",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "pose_known_side_s41",
+        "demo": "demo_97",
+        "success": false,
+        "replans": 1
+      }
+    ]
+  },
+  "unknown": {
+    "phases": {
+      "NORMAL": 3326,
+      "RETRACT": 283,
+      "ALIGN": 1000,
+      "DESCEND": 674,
+      "CLOSE": 432,
+      "TEST_LIFT": 168,
+      "LIFT": 554,
+      "CARRY": 1325,
+      "PLACE": 385,
+      "RELEASE": 343,
+      "RETREAT": 70,
+      "POSE_WAIT": 96,
+      "POSE_BLOCKED": 484,
+      "ABORT_RETRACT": 32,
+      "BLOCKED": 1261
+    },
+    "new_events": {
+      "POSE_WAIT:unknown_before_align": 4,
+      "POSE_BLOCKED:unknown_or_unsettled_timeout": 2
+    },
+    "replans_per_episode": {
+      "0": 35,
+      "1": 2
+    },
+    "affected": [
+      {
+        "job": "unknown_regression_6000005",
+        "demo": "demo_6000005",
+        "success": false,
+        "replans": 0
+      },
+      {
+        "job": "unknown_known_budget",
+        "demo": "demo_124",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "unknown_known_side_s17",
+        "demo": "demo_97",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "unknown_known_side_s41",
+        "demo": "demo_97",
+        "success": false,
+        "replans": 0
+      }
+    ]
+  },
+  "v7": {
+    "phases": {
+      "NORMAL": 3326,
+      "RETRACT": 229,
+      "ALIGN": 991,
+      "DESCEND": 606,
+      "CLOSE": 432,
+      "TEST_LIFT": 168,
+      "LIFT": 556,
+      "CARRY": 1410,
+      "PLACE": 365,
+      "RELEASE": 326,
+      "RETREAT": 65,
+      "POSE_WAIT": 126,
+      "POSE_BLOCKED": 494,
+      "ABORT_RETRACT": 32,
+      "BLOCKED": 1261,
+      "APERTURE": 4
+    },
+    "new_events": {
+      "POSE_WAIT:pose_changed_during_approach": 6,
+      "POSE_WAIT:unknown_before_align": 2,
+      "POSE_BLOCKED:unknown_or_unsettled_timeout": 2
+    },
+    "replans_per_episode": {
+      "0": 32,
+      "1": 5
+    },
+    "affected": [
+      {
+        "job": "v7_train",
+        "demo": "demo_159",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "v7_loss",
+        "demo": "demo_54",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "v7_regression_6000005",
+        "demo": "demo_6000005",
+        "success": false,
+        "replans": 0
+      },
+      {
+        "job": "v7_known_budget",
+        "demo": "demo_124",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "v7_known_side_s17",
+        "demo": "demo_97",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "v7_known_side_s23",
+        "demo": "demo_128",
+        "success": true,
+        "replans": 1
+      },
+      {
+        "job": "v7_known_side_s41",
+        "demo": "demo_97",
+        "success": false,
+        "replans": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "registered_utc": "2026-10-15T08:55:13.633025+00:00",
+  "variants": [
+    "v6",
+    "v7",
+    "geometry",
+    "retreat",
+    "v8"
+  ],
+  "changes": {
+    "geometry": "Exact static can collision hull and fixed bin boxes, limited to previously unknown support states; mesh-based support and hand-path validation.",
+    "retreat": "Bounded high waypoint retreat toward the containing bin cell before settling and replanning; unknown remains blocked without validated plan."
+  },
+  "constraints": {
+    "steps": 400,
+    "delay": 2,
+    "control_hz": 20,
+    "attempts": 2,
+    "training": false,
+    "weights_changed": false
+  },
+  "pilot": {
+    "conditions_per_variant": 37,
+    "total_episodes": 185,
+    "gate": "No regressions versus v6; unknown cannot default to descent; changed pose invalidates old plan; flags-off exact; physical replay checks."
+  },
+  "dev": {
+    "episodes": 240,
+    "gate": "Net at least 1 additional success versus frozen v6, at least one distinct rescued start, zero regressions. Freeze before execution, no post-dev tuning."
+  },
+  "revision_limit": 2,
+  "protected_files": 8217,
+  "authorized_entrypoint_changes": [
+    "README.md",
+    "index.html"
+  ],
+  "frontend": "New progress_20261015_01/demo, retain old pages; display candidate results and version labels. Render saved actions at 20fps with physical equality checks, not new statistical samples.",
+  "github": "Commit and push validated milestones; preserve old experiments and negative results."
+}

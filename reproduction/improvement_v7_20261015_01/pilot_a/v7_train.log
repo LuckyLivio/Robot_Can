@@ -1,0 +1,17 @@
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly, otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+{"demo": "demo_54", "success": true, "steps": 110, "peak_stage_reward": 0.5844407877089538, "ever_grasped": true, "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding", "stable_hold_observed": true, "stable_hold_steps": 46, "intervention_steps": 0, "intervention_fraction": 0.0, "attempts": 0, "verified_regrasps": 0, "failed_attempts": 0, "phases": {"NORMAL": 110}, "events": [], "guard_events": [], "pose_events": [], "pose_replans": 0, "fault_step": null, "mean_decision_ms": 0.14216454546013582, "original_selection_counts": {"2": 110}, "elapsed_s": 0.9736718999993172}
+Traceback (most recent call last):
+  File "C:\Users\Livio\Desktop\robot_can\reproduction\improvement_v7_20261015_01\evaluate_recovery.py", line 106, in <module>
+    run(job,args.output_dir or RUN/'evaluations'/job['id'])
+  File "C:\Users\Livio\Desktop\robot_can\reproduction\improvement_v7_20261015_01\evaluate_recovery.py", line 83, in run
+    trace.write(json.dumps(row,allow_nan=False)+'\n')
+  File "C:\Program Files\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Program Files\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Program Files\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Program Files\Python310\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool_ is not JSON serializable

@@ -1,0 +1,350 @@
+{
+  "video_provenance": "Old BC/Full/Plain seed17 comparison, no recovery v6/v7 controller.",
+  "video_sampling": "20 Hz physics control, every two steps sampled, encoded at 10 fps; success panel freezes at its terminal state; final 1 s hold.",
+  "trajectory_animation": "Canvas advances whole control steps at 20 Hz with requestAnimationFrame; no interpolation between samples.",
+  "frontend_versions": [
+    {
+      "kind": "timing",
+      "demo": "demo_10000029",
+      "series": [
+        {
+          "label": "v4",
+          "source": "reproduction/recovery_v5_20261012_01/confirmation/v4_bc_k2_clean/trace.jsonl"
+        },
+        {
+          "label": "v5",
+          "source": "reproduction/recovery_v5_20261012_01/confirmation/v5_bc_k2_clean/trace.jsonl"
+        }
+      ]
+    },
+    {
+      "kind": "side",
+      "demo": "demo_10000012",
+      "series": [
+        {
+          "label": "v4",
+          "source": "reproduction/recovery_v5_20261012_01/confirmation/v4_full_s41_clean/trace.jsonl"
+        },
+        {
+          "label": "v5",
+          "source": "reproduction/recovery_v5_20261012_01/confirmation/v5_full_s41_clean/trace.jsonl"
+        }
+      ]
+    },
+    {
+      "kind": "loss",
+      "demo": "demo_11000013",
+      "series": [
+        {
+          "label": "v4",
+          "source": "reproduction/recovery_v5_20261012_01/geometry_confirmation/v4_geometry/trace.jsonl"
+        },
+        {
+          "label": "v5",
+          "source": "reproduction/recovery_v5_20261012_01/geometry_confirmation/v5_geometry/trace.jsonl"
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "case": "clean_shared_success",
+      "sha256_matches_frozen_manifest": true,
+      "declared_fps": 10,
+      "probe": {
+        "width": 1440,
+        "height": 660,
+        "r_frame_rate": "10/1",
+        "avg_frame_rate": "10/1",
+        "duration": "5.900000",
+        "nb_frames": "59"
+      }
+    },
+    {
+      "case": "clean_full_only_success",
+      "sha256_matches_frozen_manifest": true,
+      "declared_fps": 10,
+      "probe": {
+        "width": 1440,
+        "height": 660,
+        "r_frame_rate": "10/1",
+        "avg_frame_rate": "10/1",
+        "duration": "21.100000",
+        "nb_frames": "211"
+      }
+    },
+    {
+      "case": "clean_shared_failure",
+      "sha256_matches_frozen_manifest": true,
+      "declared_fps": 10,
+      "probe": {
+        "width": 1440,
+        "height": 660,
+        "r_frame_rate": "10/1",
+        "avg_frame_rate": "10/1",
+        "duration": "21.100000",
+        "nb_frames": "211"
+      }
+    },
+    {
+      "case": "noise005_shared_success",
+      "sha256_matches_frozen_manifest": true,
+      "declared_fps": 10,
+      "probe": {
+        "width": 1440,
+        "height": 660,
+        "r_frame_rate": "10/1",
+        "avg_frame_rate": "10/1",
+        "duration": "6.600000",
+        "nb_frames": "66"
+      }
+    },
+    {
+      "case": "noise005_full_only_success",
+      "sha256_matches_frozen_manifest": true,
+      "declared_fps": 10,
+      "probe": {
+        "width": 1440,
+        "height": 660,
+        "r_frame_rate": "10/1",
+        "avg_frame_rate": "10/1",
+        "duration": "21.100000",
+        "nb_frames": "211"
+      }
+    },
+    {
+      "case": "noise005_shared_failure",
+      "sha256_matches_frozen_manifest": true,
+      "declared_fps": 10,
+      "probe": {
+        "width": 1440,
+        "height": 660,
+        "r_frame_rate": "10/1",
+        "avg_frame_rate": "10/1",
+        "duration": "21.100000",
+        "nb_frames": "211"
+      }
+    }
+  ],
+  "motion": [
+    {
+      "case": "clean_shared_success",
+      "method": "bc_k2",
+      "steps": 95,
+      "success": true,
+      "eef_path_length_m": 1.0507995243161674,
+      "eef_step_mm_p95": 17.51386844008498,
+      "large_direction_reversals": 0,
+      "gap_min_mm": 41.5443480014801,
+      "gap_max_mm": 79.8640288412571,
+      "source": "reproduction/release_20261012_01/demo/traces/bc_k2_clean/traces/demo_1000001.jsonl"
+    },
+    {
+      "case": "clean_shared_success",
+      "method": "full",
+      "steps": 95,
+      "success": true,
+      "eef_path_length_m": 1.0944921680937059,
+      "eef_step_mm_p95": 18.171090985080617,
+      "large_direction_reversals": 0,
+      "gap_min_mm": 41.09395109117031,
+      "gap_max_mm": 79.8640288412571,
+      "source": "reproduction/release_20261012_01/demo/traces/full_clean/traces/demo_1000001.jsonl"
+    },
+    {
+      "case": "clean_shared_success",
+      "method": "plain",
+      "steps": 95,
+      "success": true,
+      "eef_path_length_m": 1.0510160218194777,
+      "eef_step_mm_p95": 16.800939537554687,
+      "large_direction_reversals": 0,
+      "gap_min_mm": 41.202764958143234,
+      "gap_max_mm": 79.8640288412571,
+      "source": "reproduction/release_20261012_01/demo/traces/plain_clean/traces/demo_1000001.jsonl"
+    },
+    {
+      "case": "clean_full_only_success",
+      "method": "bc_k2",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 3.120428740049688,
+      "eef_step_mm_p95": 23.85548640578066,
+      "large_direction_reversals": 15,
+      "gap_min_mm": 0.9962469139281893,
+      "gap_max_mm": 79.78616654872894,
+      "source": "reproduction/release_20261012_01/demo/traces/bc_k2_clean/traces/demo_1000026.jsonl"
+    },
+    {
+      "case": "clean_full_only_success",
+      "method": "full",
+      "steps": 133,
+      "success": true,
+      "eef_path_length_m": 1.2162599979190647,
+      "eef_step_mm_p95": 19.93332685030066,
+      "large_direction_reversals": 0,
+      "gap_min_mm": 41.5443480014801,
+      "gap_max_mm": 79.78616654872894,
+      "source": "reproduction/release_20261012_01/demo/traces/full_clean/traces/demo_1000026.jsonl"
+    },
+    {
+      "case": "clean_full_only_success",
+      "method": "plain",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 5.3727734635449185,
+      "eef_step_mm_p95": 26.935545650091164,
+      "large_direction_reversals": 5,
+      "gap_min_mm": 0.9916427529788052,
+      "gap_max_mm": 79.78616654872894,
+      "source": "reproduction/release_20261012_01/demo/traces/plain_clean/traces/demo_1000026.jsonl"
+    },
+    {
+      "case": "clean_shared_failure",
+      "method": "bc_k2",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 0.4869625259468106,
+      "eef_step_mm_p95": 7.452068937649824,
+      "large_direction_reversals": 1,
+      "gap_min_mm": 41.54434613883495,
+      "gap_max_mm": 83.41987058520317,
+      "source": "reproduction/release_20261012_01/demo/traces/bc_k2_clean/traces/demo_1000000.jsonl"
+    },
+    {
+      "case": "clean_shared_failure",
+      "method": "full",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 0.4869625259468106,
+      "eef_step_mm_p95": 7.452068937649824,
+      "large_direction_reversals": 1,
+      "gap_min_mm": 41.54434613883495,
+      "gap_max_mm": 83.41987058520317,
+      "source": "reproduction/release_20261012_01/demo/traces/full_clean/traces/demo_1000000.jsonl"
+    },
+    {
+      "case": "clean_shared_failure",
+      "method": "plain",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 0.4869625259468106,
+      "eef_step_mm_p95": 7.452068937649824,
+      "large_direction_reversals": 1,
+      "gap_min_mm": 41.54434613883495,
+      "gap_max_mm": 83.41987058520317,
+      "source": "reproduction/release_20261012_01/demo/traces/plain_clean/traces/demo_1000000.jsonl"
+    },
+    {
+      "case": "noise005_shared_success",
+      "method": "bc_k2",
+      "steps": 110,
+      "success": true,
+      "eef_path_length_m": 1.1377836040610791,
+      "eef_step_mm_p95": 17.953114816983334,
+      "large_direction_reversals": 0,
+      "gap_min_mm": 41.54434986412525,
+      "gap_max_mm": 79.46370542049408,
+      "source": "reproduction/release_20261012_01/demo/traces/bc_k2_noise005/traces/demo_1000002.jsonl"
+    },
+    {
+      "case": "noise005_shared_success",
+      "method": "full",
+      "steps": 109,
+      "success": true,
+      "eef_path_length_m": 1.1475024543830017,
+      "eef_step_mm_p95": 18.215619407721384,
+      "large_direction_reversals": 0,
+      "gap_min_mm": 41.54434986412525,
+      "gap_max_mm": 79.41456511616707,
+      "source": "reproduction/release_20261012_01/demo/traces/full_noise005/traces/demo_1000002.jsonl"
+    },
+    {
+      "case": "noise005_shared_success",
+      "method": "plain",
+      "steps": 110,
+      "success": true,
+      "eef_path_length_m": 1.151629150571907,
+      "eef_step_mm_p95": 17.948651435522727,
+      "large_direction_reversals": 0,
+      "gap_min_mm": 41.54434986412525,
+      "gap_max_mm": 79.41456511616707,
+      "source": "reproduction/release_20261012_01/demo/traces/plain_noise005/traces/demo_1000002.jsonl"
+    },
+    {
+      "case": "noise005_full_only_success",
+      "method": "bc_k2",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 4.332158286685351,
+      "eef_step_mm_p95": 35.05168675218719,
+      "large_direction_reversals": 6,
+      "gap_min_mm": 34.85565411392599,
+      "gap_max_mm": 80.57790249586105,
+      "source": "reproduction/release_20261012_01/demo/traces/bc_k2_noise005/traces/demo_1000011.jsonl"
+    },
+    {
+      "case": "noise005_full_only_success",
+      "method": "full",
+      "steps": 165,
+      "success": true,
+      "eef_path_length_m": 1.4082948080009299,
+      "eef_step_mm_p95": 21.787582999700216,
+      "large_direction_reversals": 1,
+      "gap_min_mm": 41.54434986412525,
+      "gap_max_mm": 79.92447540163994,
+      "source": "reproduction/release_20261012_01/demo/traces/full_noise005/traces/demo_1000011.jsonl"
+    },
+    {
+      "case": "noise005_full_only_success",
+      "method": "plain",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 4.332158286685351,
+      "eef_step_mm_p95": 35.05168675218719,
+      "large_direction_reversals": 6,
+      "gap_min_mm": 34.85565411392599,
+      "gap_max_mm": 80.57790249586105,
+      "source": "reproduction/release_20261012_01/demo/traces/plain_noise005/traces/demo_1000011.jsonl"
+    },
+    {
+      "case": "noise005_shared_failure",
+      "method": "bc_k2",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 3.910001000128716,
+      "eef_step_mm_p95": 54.08586038090787,
+      "large_direction_reversals": 3,
+      "gap_min_mm": 41.54434986412525,
+      "gap_max_mm": 81.30943402647972,
+      "source": "reproduction/release_20261012_01/demo/traces/bc_k2_noise005/traces/demo_1000000.jsonl"
+    },
+    {
+      "case": "noise005_shared_failure",
+      "method": "full",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 4.2191346447814215,
+      "eef_step_mm_p95": 54.34224958556094,
+      "large_direction_reversals": 3,
+      "gap_min_mm": 41.54434986412525,
+      "gap_max_mm": 81.30943402647972,
+      "source": "reproduction/release_20261012_01/demo/traces/full_noise005/traces/demo_1000000.jsonl"
+    },
+    {
+      "case": "noise005_shared_failure",
+      "method": "plain",
+      "steps": 400,
+      "success": false,
+      "eef_path_length_m": 3.910001000128716,
+      "eef_step_mm_p95": 54.08586038090787,
+      "large_direction_reversals": 3,
+      "gap_min_mm": 41.54434986412525,
+      "gap_max_mm": 81.30943402647972,
+      "source": "reproduction/release_20261012_01/demo/traces/plain_noise005/traces/demo_1000000.jsonl"
+    }
+  ],
+  "metric_definition": "Large direction reversal: adjacent EEF increments both >0.5 mm and angle >120 degrees. Descriptive proxy only, not a standardized stability/safety threshold.",
+  "browser_dropped_frames": "Not measured. Asset inspection does not exclude machine/browser playback stutter.",
+  "result_integrity": "Frozen video hashes match; visual timing does not alter stored simulation success. Real trajectory reversals and grip oscillations must not be hidden by presentation smoothing."
+}

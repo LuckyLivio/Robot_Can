@@ -1,0 +1,45 @@
+{
+  "registered_utc": "2026-10-15T08:06:55.162780+00:00",
+  "scope": "Pose-change replanning and unknown-feasibility handling only; no training, no paper, no new confirmation experiments.",
+  "variants": [
+    "v6",
+    "pose",
+    "unknown",
+    "v7"
+  ],
+  "constraints": {
+    "steps": 400,
+    "delay": 2,
+    "max_attempts": 2,
+    "frozen_full_seeds": [
+      17,
+      23,
+      41
+    ]
+  },
+  "pilot_gate": [
+    "Both flags off exactly reproduce frozen v6",
+    "Pose invalidation/replan and unknown-state unit tests pass",
+    "All v6 successes in the same 37 diagnostic conditions retained",
+    "No new descent on unknown feasibility with the unknown guard enabled",
+    "No stale-pose descent with pose replanning enabled"
+  ],
+  "dev_gate": {
+    "episodes": 240,
+    "net_success_vs_v6_min": 1,
+    "distinct_rescued_starts_min": 1,
+    "regressions_max": 0
+  },
+  "selection": "Use combined if pilot gates pass. Preserve every unsuccessful revision and source snapshot. Freeze before dev, no post-dev tuning. Same known diagnostics are not independent confirmation.",
+  "implementation_plan": {
+    "translation_change_m": 0.015,
+    "can_axis_change_deg": 20,
+    "pose_stable_frames": 4,
+    "pose_stable_position_m": 0.003,
+    "pose_stable_axis_deg": 4,
+    "wait_budget_steps": 40,
+    "max_replans": 2,
+    "unknown_recheck_interval": 5
+  },
+  "protected_files": 7946
+}

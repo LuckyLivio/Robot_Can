@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "disabled_exact_episodes": 240,
+  "disabled_exact_steps": 38292,
+  "checks": [
+    "changed_pose_invalidates_plan_and_replans_after_observed_settling_without_extra_attempt",
+    "unknown_wait_is_bounded_and_never_defaults_to_descent",
+    "cylinder_axial_spin_does_not_trigger_spurious_replan",
+    "replan_limit_preserves_fixed_horizon"
+  ],
+  "scope": "Recorded-input control equivalence and synthetic state transitions; physical tests separate."
+}

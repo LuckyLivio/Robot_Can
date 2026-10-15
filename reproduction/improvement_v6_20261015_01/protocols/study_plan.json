@@ -1,0 +1,37 @@
+{
+  "registered_utc": "2026-10-15T07:12:58.335902+00:00",
+  "scope": "Recovery execution only; no model training or data expansion. Pilot ablations first, conditional 240 development episodes.",
+  "variants": [
+    "v5",
+    "r1",
+    "r2",
+    "v6"
+  ],
+  "constraints": {
+    "steps": 400,
+    "delay": 2,
+    "max_attempts": 2,
+    "same_frozen_bc_and_full": [
+      17,
+      23,
+      41
+    ]
+  },
+  "pilot_gate": [
+    "Disabled flags reproduce v5 actions/events exactly",
+    "Geometry/actual aperture/queue unit checks pass",
+    "Known protected v5 successes not lost",
+    "No feasible/repeated failed path blocks new descent with R2",
+    "Aperture stable before guarded descent with R1"
+  ],
+  "dev_gate": {
+    "episodes": 240,
+    "net_success_vs_v5_min": 1,
+    "distinct_rescued_starts_min": 1,
+    "protected_pilot_regressions_max": 0,
+    "new_regressions_max": 1
+  },
+  "selection": "Pilot choice only; prefer combined if protected cases pass. Preserve failed revisions. Do not loosen gates after viewing development. No generalization training in this run.",
+  "clarification": "v5 pose_action already applies proportional aperture commands. Real gap: no achieved-aperture guard; PandaGripper uses sign(action) at speed .2. New R1 adds delayed pulse/deadband and measured execution/path checks.",
+  "protected_files": 7464
+}

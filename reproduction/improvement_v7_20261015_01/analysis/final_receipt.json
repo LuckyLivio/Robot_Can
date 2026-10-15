@@ -1,0 +1,177 @@
+{
+  "completed_diagnostic_episodes": 148,
+  "pilot_a_technical_attempt": {
+    "completed_jobs": 5,
+    "completed_episodes": 16,
+    "incomplete_jobs": 6,
+    "fully_completed_batch": false
+  },
+  "v6_baseline_matches_prior_exactly": {
+    "episodes": 37,
+    "control_steps": 10490
+  },
+  "pilot_gate_passed": false,
+  "reason": "unknown and combined each regress on one protected v6 success; no rescues",
+  "dev_240_launched": false,
+  "promoted": false,
+  "training_performed": false,
+  "paper_written": false,
+  "recorded_input_verification": {
+    "passed": true,
+    "stage": "pilot_b",
+    "episodes": 148,
+    "control_steps": 41616,
+    "mechanism_checks": {
+      "unknown_guard_descent_steps": 1331,
+      "pose_guard_descent_steps": 1262,
+      "pose_wait_steps": 277,
+      "pose_blocked_steps": 978
+    },
+    "old_files_unchanged": 7946,
+    "source_archive_verified": true,
+    "note": "Recorded-input controller/FIFO/noise equality and invariant audit, not a success gate or continuous collision certificate."
+  },
+  "physical_replay_verification": {
+    "passed": true,
+    "stage": "pilot_b",
+    "episodes": 16,
+    "control_steps": 5146,
+    "samples": [
+      {
+        "job": "v6_regression_6000005",
+        "demo": "demo_6000005",
+        "steps": 311,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "v6_known_pressure",
+        "demo": "demo_11000012",
+        "steps": 400,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "v6_known_pressure",
+        "demo": "demo_11000013",
+        "steps": 225,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "v6_full_noise",
+        "demo": "demo_133",
+        "steps": 306,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "pose_regression_6000005",
+        "demo": "demo_6000005",
+        "steps": 311,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "pose_known_pressure",
+        "demo": "demo_11000012",
+        "steps": 400,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "pose_known_pressure",
+        "demo": "demo_11000013",
+        "steps": 225,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "pose_full_noise",
+        "demo": "demo_133",
+        "steps": 306,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "unknown_regression_6000005",
+        "demo": "demo_6000005",
+        "steps": 400,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "unknown_known_pressure",
+        "demo": "demo_11000012",
+        "steps": 400,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "unknown_known_pressure",
+        "demo": "demo_11000013",
+        "steps": 225,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "unknown_full_noise",
+        "demo": "demo_133",
+        "steps": 306,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "v7_regression_6000005",
+        "demo": "demo_6000005",
+        "steps": 400,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "v7_known_pressure",
+        "demo": "demo_11000012",
+        "steps": 400,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "v7_known_pressure",
+        "demo": "demo_11000013",
+        "steps": 225,
+        "max_state_error": 0.0
+      },
+      {
+        "job": "v7_full_noise",
+        "demo": "demo_133",
+        "steps": 306,
+        "max_state_error": 0.0
+      }
+    ],
+    "note": "Diagnostic sample selection includes the regression; this is physical replay validation, not new independent evaluation."
+  },
+  "outcomes": {
+    "v6": {
+      "success": 31,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": []
+    },
+    "pose": {
+      "success": 31,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": []
+    },
+    "unknown": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ]
+    },
+    "v7": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ]
+    }
+  },
+  "frontend_modified": false,
+  "old_weights_and_results_modified": false
+}

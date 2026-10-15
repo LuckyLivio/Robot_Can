@@ -1,0 +1,37 @@
+"""Replay saved actions, without reevaluating policies or changing outcomes."""
+from pathlib import Path
+import argparse,json,sys
+RUN=Path(__file__).resolve().parent;ROOT=RUN.parents[1]
+sys.path.insert(0,str(ROOT/'reproduction/extensions_20261012_01'));sys.path.insert(0,str(ROOT))
+import h5py,numpy as np
+from common import DATA,make_env,restore_demo,pack_obs
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--stage',required=True);a=p.parse_args();stage=RUN/a.stage
+    jobs=json.loads((stage/'jobs.json').read_text());selected=[]
+    for v in ['v6','pose','unknown','v7']:
+        for suffix,demo in [('regression_6000005','demo_6000005'),('known_pressure','demo_11000012'),
+                            ('known_pressure','demo_11000013'),('full_noise','demo_133')]:
+            selected.append((next(j for j in jobs if j['id']==v+'_'+suffix),demo))
+    env=make_env(False);results=[]
+    try:
+        for j,name in selected:
+            with h5py.File(ROOT/j['dataset'] if j.get('dataset') else DATA) as f:obs=restore_demo(env,f['data'][name])
+            n=0
+            for line in (stage/j['id']/'trace.jsonl').open():
+                r=json.loads(line)
+                if r['demo']!=name:continue
+                np.testing.assert_array_equal(pack_obs(obs),r['state_before'])
+                obs,*_=env.step(np.array(r['executed_action'],np.float32))
+                np.testing.assert_array_equal(pack_obs(obs),r['state_after'])
+                np.testing.assert_array_equal(np.asarray(env.staged_rewards()),r['stages_after'])
+                assert bool(env._check_success())==r['success_after'];n+=1
+            assert n>0
+            results.append({'job':j['id'],'demo':name,'steps':n,'max_state_error':0.})
+            print(json.dumps(results[-1]),flush=True)
+    finally:env.close()
+    result={'passed':True,'stage':a.stage,'episodes':len(results),'control_steps':sum(r['steps'] for r in results),'samples':results,
+            'note':'Diagnostic sample selection includes the regression; this is physical replay validation, not new independent evaluation.'}
+    with (RUN/'analysis'/f'{a.stage}_physics.json').open('x',encoding='utf8') as f:json.dump(result,f,indent=2)
+    print(json.dumps(result),flush=True)
+if __name__=='__main__':main()
