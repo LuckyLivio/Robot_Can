@@ -1,0 +1,84 @@
+{
+  "completed_stages": {
+    "confirmation": {
+      "requested_episodes": 1440,
+      "completed_job_episodes": 1440,
+      "completed_jobs": 24,
+      "incomplete_jobs": [],
+      "not_started_jobs": []
+    },
+    "dev_a": {
+      "requested_episodes": 240,
+      "completed_job_episodes": 240,
+      "completed_jobs": 8,
+      "incomplete_jobs": [],
+      "not_started_jobs": []
+    },
+    "pilot_a": {
+      "requested_episodes": 200,
+      "completed_job_episodes": 200,
+      "completed_jobs": 116,
+      "incomplete_jobs": [],
+      "not_started_jobs": []
+    },
+    "smoke_a": {
+      "requested_episodes": 24,
+      "completed_job_episodes": 24,
+      "completed_jobs": 24,
+      "incomplete_jobs": [],
+      "not_started_jobs": []
+    },
+    "smoke_c": {
+      "requested_episodes": 24,
+      "completed_job_episodes": 24,
+      "completed_jobs": 24,
+      "incomplete_jobs": [],
+      "not_started_jobs": []
+    },
+    "smoke_d": {
+      "requested_episodes": 24,
+      "completed_job_episodes": 24,
+      "completed_jobs": 24,
+      "incomplete_jobs": [],
+      "not_started_jobs": []
+    },
+    "smoke_e": {
+      "requested_episodes": 24,
+      "completed_job_episodes": 24,
+      "completed_jobs": 24,
+      "incomplete_jobs": [],
+      "not_started_jobs": []
+    }
+  },
+  "incomplete_stages": {
+    "smoke_b": {
+      "requested_episodes": 24,
+      "completed_job_episodes": 17,
+      "completed_jobs": 17,
+      "incomplete_jobs": [
+        {
+          "job": "escape_known_bc_k2_clean_demo_12000011",
+          "status": "running",
+          "recorded_episodes": 0,
+          "valid_trace_steps": 107
+        },
+        {
+          "job": "escape_known_full_s23_clean_demo_12000036",
+          "status": "running",
+          "recorded_episodes": 0,
+          "valid_trace_steps": 111
+        }
+      ],
+      "not_started_jobs": [
+        "v13_known_full_s23_clean_demo_12000036",
+        "v12_known_full_s23_noise005_demo_12000021",
+        "support_known_full_s23_noise005_demo_12000021",
+        "escape_known_full_s23_noise005_demo_12000021",
+        "v13_known_full_s23_noise005_demo_12000021"
+      ]
+    }
+  },
+  "completed_stage_executions": 1976,
+  "complete_episodes_in_incomplete_stages": 17,
+  "note": "Repeated known conditions, action replays and physical replays are not independent samples. Incomplete stages are never treated as passed experiments."
+}

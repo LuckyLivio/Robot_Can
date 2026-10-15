@@ -1,0 +1,2072 @@
+{
+  "posthoc_only": true,
+  "cases": [
+    {
+      "reference": "v6",
+      "kind": "rescues",
+      "condition": "full_s17_noise005",
+      "demo": "demo_13000001",
+      "final": {
+        "v6": {
+          "steps": 400,
+          "success": false,
+          "mode": "EXHAUSTED",
+          "can_position": [
+            0.21755023300647736,
+            -0.15895721316337585,
+            0.8600513935089111
+          ]
+        },
+        "v13": {
+          "steps": 383,
+          "success": true,
+          "mode": "RETREAT",
+          "can_position": [
+            0.1560192108154297,
+            0.37434011697769165,
+            0.8600601553916931
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 116,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "ALIGN",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.07809081673622131,
+          "eef_object_distance_m": 0.854844868183136,
+          "goal_distance_xy_m": 0.561786104132326,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "ALIGN",
+          "next_mode": "ALIGN",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0
+        },
+        "v13_recovery": {
+          "mode_before": "ALIGN",
+          "mode": "PLAN_WAIT",
+          "next_mode": "ALIGN",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "joint",
+          "planning_work_units": 16,
+          "feasibility": "unknown",
+          "gap_m": 0.07809081673622131,
+          "planning_ms": 2.6816000026883557,
+          "joint_checked": true,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": false,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          0.21238835155963898,
+          -0.970984160900116,
+          -0.10991353541612625,
+          -0.18879792094230652,
+          -0.06734222173690796,
+          0.22320477664470673,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.041655633598566055,
+          0.6450995206832886,
+          1.0910627841949463,
+          0.6021541357040405,
+          -0.5940073132514954,
+          -0.17921558022499084,
+          -0.5024415254592896,
+          0.03965375944972038,
+          -0.03843705728650093,
+          0.6585966348648071,
+          -0.23620815575122833,
+          -0.4911409616470337,
+          -0.7518259882926941,
+          -0.3874046206474304,
+          0.5333643555641174,
+          0.01407031249254942,
+          0.2175249457359314,
+          -0.15892909467220306,
+          0.8600482940673828,
+          -4.995783820049837e-05,
+          0.00018151543918065727,
+          0.9503732919692993,
+          -0.3111119270324707
+        ]
+      }
+    },
+    {
+      "reference": "v6",
+      "kind": "rescues",
+      "condition": "full_s17_noise005",
+      "demo": "demo_13000010",
+      "final": {
+        "v6": {
+          "steps": 400,
+          "success": false,
+          "mode": "EXHAUSTED",
+          "can_position": [
+            0.1201077252626419,
+            0.16037513315677643,
+            0.9387604594230652
+          ]
+        },
+        "v13": {
+          "steps": 271,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.1527416706085205,
+            0.3469056785106659,
+            0.8719573616981506
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 99,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.0031607458367943764,
+          "eef_object_distance_m": 0.17719468474388123,
+          "goal_distance_xy_m": 0.31297100451013754,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0
+        },
+        "v13_recovery": {
+          "mode_before": "POSE_WAIT",
+          "mode": "POSE_WAIT",
+          "next_mode": "POSE_WAIT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "gap_m": 0.0031607458367943764,
+          "feasibility": "feasible",
+          "feasibility_reason": "supported_legacy_plan",
+          "pose_replans": 0,
+          "pose_changed": true,
+          "mesh_plan": false,
+          "retreat_stage": "vertical",
+          "planning_ms": 0.3815000018221326,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": false,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          0.03665551543235779,
+          -0.23243576288223267,
+          0.1159590482711792,
+          -0.017116481438279152,
+          -0.013661790639162064,
+          0.08667562156915665,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.4587477445602417,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.08038312196731567,
+          0.1882188469171524,
+          0.9941251873970032,
+          0.9421555399894714,
+          -0.20235441625118256,
+          0.030864955857396126,
+          -0.26541098952293396,
+          0.0022194511257112026,
+          -0.0009412947692908347,
+          -0.06694628298282623,
+          0.1105874627828598,
+          0.09980563819408417,
+          -0.8174859285354614,
+          0.44832658767700195,
+          0.2231021374464035,
+          0.2845088243484497,
+          -0.011754498817026615,
+          0.16976967453956604,
+          0.8438978791236877,
+          0.49375057220458984,
+          -0.5175937414169312,
+          0.19860108196735382,
+          0.6699736714363098
+        ]
+      }
+    },
+    {
+      "reference": "v6",
+      "kind": "rescues",
+      "condition": "full_s23_noise005",
+      "demo": "demo_13000001",
+      "final": {
+        "v6": {
+          "steps": 400,
+          "success": false,
+          "mode": "EXHAUSTED",
+          "can_position": [
+            0.21754060685634613,
+            -0.15895086526870728,
+            0.8600544929504395
+          ]
+        },
+        "v13": {
+          "steps": 386,
+          "success": true,
+          "mode": "RETREAT",
+          "can_position": [
+            0.15544971823692322,
+            0.37699300050735474,
+            0.860051155090332
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 122,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "ALIGN",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.07776795327663422,
+          "eef_object_distance_m": 0.7821421027183533,
+          "goal_distance_xy_m": 0.5617916847116946,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "ALIGN",
+          "next_mode": "ALIGN",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0
+        },
+        "v13_recovery": {
+          "mode_before": "ALIGN",
+          "mode": "PLAN_WAIT",
+          "next_mode": "ALIGN",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "joint",
+          "planning_work_units": 16,
+          "feasibility": "unknown",
+          "gap_m": 0.07776795327663422,
+          "planning_ms": 3.4692999979597516,
+          "joint_checked": true,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": false,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          0.11039593070745468,
+          -0.9803997874259949,
+          -0.1631840020418167,
+          -0.20073920488357544,
+          -0.09838860481977463,
+          0.20005862414836884,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.1350858062505722,
+          0.5734285712242126,
+          1.1219522953033447,
+          0.6226089000701904,
+          -0.5218417048454285,
+          -0.256641149520874,
+          -0.5236169695854187,
+          0.03940027579665184,
+          -0.038367677479982376,
+          0.5325573682785034,
+          -0.04322946444153786,
+          -0.5711534023284912,
+          -0.6894490718841553,
+          -0.4293556213378906,
+          0.5777190923690796,
+          0.08095891773700714,
+          0.21755197644233704,
+          -0.15893371403217316,
+          0.8600532412528992,
+          0.00025007626391015947,
+          -0.00015522015746682882,
+          0.9503843188285828,
+          -0.3110780119895935
+        ]
+      }
+    },
+    {
+      "reference": "v6",
+      "kind": "rescues",
+      "condition": "full_s41_noise005",
+      "demo": "demo_13000001",
+      "final": {
+        "v6": {
+          "steps": 400,
+          "success": false,
+          "mode": "EXHAUSTED",
+          "can_position": [
+            0.2176668345928192,
+            -0.15905563533306122,
+            0.8600590229034424
+          ]
+        },
+        "v13": {
+          "steps": 385,
+          "success": true,
+          "mode": "RETREAT",
+          "can_position": [
+            0.15519826114177704,
+            0.3772844672203064,
+            0.8600746393203735
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 116,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "ALIGN",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.07791364192962646,
+          "eef_object_distance_m": 0.8402523398399353,
+          "goal_distance_xy_m": 0.5618834943467956,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "ALIGN",
+          "next_mode": "ALIGN",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0
+        },
+        "v13_recovery": {
+          "mode_before": "ALIGN",
+          "mode": "PLAN_WAIT",
+          "next_mode": "ALIGN",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "joint",
+          "planning_work_units": 16,
+          "feasibility": "unknown",
+          "gap_m": 0.07791364192962646,
+          "planning_ms": 2.6519999955780804,
+          "joint_checked": true,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": false,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          0.2079571783542633,
+          -0.974657416343689,
+          -0.0824422538280487,
+          -0.19222623109817505,
+          -0.06543245166540146,
+          0.22083403170108795,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.0477377213537693,
+          0.6373173594474792,
+          1.0674186944961548,
+          0.6177769303321838,
+          -0.5788453221321106,
+          -0.17151010036468506,
+          -0.5038591623306274,
+          0.0396055169403553,
+          -0.038308121263980865,
+          0.6428465843200684,
+          -0.20465728640556335,
+          -0.5008437633514404,
+          -0.7441205382347107,
+          -0.4031587243080139,
+          0.5326687097549438,
+          0.003416029503569007,
+          0.2176482081413269,
+          -0.15902213752269745,
+          0.8600596189498901,
+          -0.0003132888814434409,
+          3.295340502518229e-05,
+          0.948767900466919,
+          -0.3159736394882202
+        ]
+      }
+    },
+    {
+      "reference": "v6",
+      "kind": "rescues",
+      "condition": "full_s41_noise005",
+      "demo": "demo_13000058",
+      "final": {
+        "v6": {
+          "steps": 400,
+          "success": false,
+          "mode": "EXHAUSTED",
+          "can_position": [
+            0.011221136897802353,
+            -0.05366532504558563,
+            0.8438324332237244
+          ]
+        },
+        "v13": {
+          "steps": 318,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.1671789437532425,
+            0.401664674282074,
+            0.8390210866928101
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 98,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.0036770631559193134,
+          "eef_object_distance_m": 0.17102877795696259,
+          "goal_distance_xy_m": 0.5005691145015716,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0
+        },
+        "v13_recovery": {
+          "mode_before": "POSE_WAIT",
+          "mode": "POSE_WAIT",
+          "next_mode": "POSE_WAIT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "gap_m": 0.0036770631559193134,
+          "feasibility": "unknown",
+          "feasibility_reason": "grasp_family_stale",
+          "pose_replans": 0,
+          "pose_changed": true,
+          "mesh_plan": false,
+          "retreat_stage": "vertical",
+          "planning_ms": 0.31060000037541613,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": false,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.2151138335466385,
+          -0.34452390670776367,
+          0.2162480354309082,
+          -0.05850923806428909,
+          -0.08365239948034286,
+          0.1284775286912918,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.6162476539611816,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.09677667915821075,
+          0.01853257603943348,
+          0.9783751964569092,
+          0.9957717061042786,
+          0.004298670217394829,
+          0.05152254179120064,
+          -0.07593216747045517,
+          0.0020388851407915354,
+          -0.0016381781315430999,
+          -0.08846791088581085,
+          0.10310343652963638,
+          0.09524821490049362,
+          -0.5355045795440674,
+          -0.6644765734672546,
+          0.5157440304756165,
+          0.0755908191204071,
+          0.01299956627190113,
+          -0.06282679736614227,
+          0.8534236550331116,
+          -0.1759990006685257,
+          0.5904778242111206,
+          0.6350906491279602,
+          -0.4658542573451996
+        ]
+      }
+    },
+    {
+      "reference": "v6",
+      "kind": "regressions",
+      "condition": "bc_k2_noise005",
+      "demo": "demo_13000021",
+      "final": {
+        "v6": {
+          "steps": 322,
+          "success": true,
+          "mode": "RETREAT",
+          "can_position": [
+            0.15490016341209412,
+            0.3761442303657532,
+            0.8636975884437561
+          ]
+        },
+        "v13": {
+          "steps": 400,
+          "success": false,
+          "mode": "EDGE_APPROACH",
+          "can_position": [
+            -0.04609868302941322,
+            -0.18177805840969086,
+            0.8648400902748108
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 108,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.04600425064563751,
+          "eef_object_distance_m": 0.17230720818042755,
+          "goal_distance_xy_m": 0.6330375515454367,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0
+        },
+        "v13_recovery": {
+          "mode_before": "RETRACT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "RETRACT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "mesh",
+          "planning_work_units": 3,
+          "feasibility": "unknown",
+          "gap_m": 0.04600425064563751,
+          "planning_ms": 25.480500000412576,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": true,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.0068133193999528885,
+          0.012164059095084667,
+          0.6998611688613892,
+          -0.01461742166429758,
+          -0.012648964300751686,
+          -0.022190874442458153,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.10061415284872055,
+          -0.09856109321117401,
+          0.8999359011650085,
+          0.8953902721405029,
+          0.33920738101005554,
+          -0.2129010707139969,
+          0.194647878408432,
+          0.022727273404598236,
+          -0.023276975378394127,
+          -0.12531937658786774,
+          -0.050702862441539764,
+          0.10683669149875641,
+          0.826461672782898,
+          0.16866272687911987,
+          -0.5338152647018433,
+          0.059626076370477676,
+          -0.04613155871629715,
+          -0.18177750706672668,
+          0.8648574352264404,
+          -0.06909295171499252,
+          -0.35507750511169434,
+          0.24592314660549164,
+          0.899259626865387
+        ]
+      }
+    },
+    {
+      "reference": "v6",
+      "kind": "regressions",
+      "condition": "full_s41_noise005",
+      "demo": "demo_13000022",
+      "final": {
+        "v6": {
+          "steps": 275,
+          "success": true,
+          "mode": "RETREAT",
+          "can_position": [
+            0.16048073768615723,
+            0.36053258180618286,
+            0.860076367855072
+          ]
+        },
+        "v13": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_WAIT",
+          "can_position": [
+            0.09465460479259491,
+            -0.008546360768377781,
+            0.9401322603225708
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 86,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.003110060468316078,
+          "eef_object_distance_m": 0.13350684940814972,
+          "goal_distance_xy_m": 0.41965819899013496,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0
+        },
+        "v13_recovery": {
+          "mode_before": "RETRACT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "RETRACT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "mesh",
+          "planning_work_units": 1,
+          "feasibility": "unknown",
+          "gap_m": 0.003110060468316078,
+          "planning_ms": 10.92169999901671,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": false,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.08342191576957703,
+          -0.10560981929302216,
+          -0.075531005859375,
+          -0.022987285628914833,
+          0.0047498359344899654,
+          0.0473792627453804,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.15587274730205536,
+          0.06352350860834122,
+          1.0467108488082886,
+          0.6996181011199951,
+          -0.6373072862625122,
+          0.058743588626384735,
+          -0.31768399477005005,
+          0.0027956864796578884,
+          -0.00031437393045052886,
+          0.08960745483636856,
+          0.09110020101070404,
+          0.03158745542168617,
+          0.739772379398346,
+          0.4818469285964966,
+          -0.373134583234787,
+          0.28518611192703247,
+          0.10628698766231537,
+          -0.007125671021640301,
+          0.9448578953742981,
+          0.13816562294960022,
+          -0.02378115989267826,
+          0.949504554271698,
+          -0.28068819642066956
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "bc_k2_clean",
+      "demo": "demo_13000015",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.041968706995248795,
+            0.022488456219434738,
+            0.9248294234275818
+          ]
+        },
+        "v13": {
+          "steps": 311,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.15922345221042633,
+            0.37735092639923096,
+            0.8422203660011292
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 52,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.019375111907720566,
+          "eef_object_distance_m": 0.07830392569303513,
+          "goal_distance_xy_m": 0.42944149825674127,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0,
+          "feasibility": "unknown",
+          "feasibility_reason": "pose_outside_supported_region",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.34610000147949904,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "RETRACT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "RETRACT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "mesh",
+          "planning_work_units": 3,
+          "feasibility": "unknown",
+          "gap_m": 0.019375111907720566,
+          "planning_ms": 24.873900001693983,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": true,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.056528449058532715,
+          -0.10683249682188034,
+          -0.09384989738464355,
+          -0.008776749484241009,
+          -0.022970272228121758,
+          0.024961508810520172,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.05317689850926399,
+          0.033757634460926056,
+          1.0093849897384644,
+          0.9939212799072266,
+          -0.05785347521305084,
+          0.04054710268974304,
+          -0.08443570137023926,
+          0.0151519188657403,
+          -0.004223193973302841,
+          -0.014031593687832355,
+          0.04947567731142044,
+          0.06081579998135567,
+          0.26993370056152344,
+          -0.8329121470451355,
+          0.4613635540008545,
+          0.14330600202083588,
+          0.040277205407619476,
+          0.0028739331755787134,
+          0.9385944604873657,
+          -0.14485174417495728,
+          0.44998031854629517,
+          0.819911777973175,
+          0.32292476296424866
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "full_s17_clean",
+      "demo": "demo_13000015",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.03819986805319786,
+            0.027130069211125374,
+            0.9248294830322266
+          ]
+        },
+        "v13": {
+          "steps": 306,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.15885566174983978,
+            0.3775794506072998,
+            0.8423817157745361
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 49,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.01858607493340969,
+          "eef_object_distance_m": 0.08400987833738327,
+          "goal_distance_xy_m": 0.4205390621408605,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0,
+          "feasibility": "unknown",
+          "feasibility_reason": "pose_outside_supported_region",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.2826999989338219,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "RETRACT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "RETRACT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "mesh",
+          "planning_work_units": 3,
+          "feasibility": "unknown",
+          "gap_m": 0.01858607493340969,
+          "planning_ms": 23.656500001379754,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": true,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.049580223858356476,
+          -0.09066183120012283,
+          -0.08807539939880371,
+          -0.0027559620793908834,
+          -0.0185458455234766,
+          0.018590914085507393,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.05081668496131897,
+          0.03841054439544678,
+          1.0165461301803589,
+          0.9952712059020996,
+          -0.045835502445697784,
+          0.0312524139881134,
+          -0.07973439246416092,
+          0.01295264158397913,
+          -0.005633432883769274,
+          -0.015492158941924572,
+          0.04601895436644554,
+          0.06766420602798462,
+          0.2644999921321869,
+          -0.8067773580551147,
+          0.5016865134239197,
+          0.1657126545906067,
+          0.03700011596083641,
+          0.013793311081826687,
+          0.9374212026596069,
+          -0.17177154123783112,
+          0.5227428078651428,
+          0.7798668742179871,
+          0.2983992099761963
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "full_s23_clean",
+      "demo": "demo_13000015",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.041968706995248795,
+            0.022488456219434738,
+            0.9248294234275818
+          ]
+        },
+        "v13": {
+          "steps": 311,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.15922345221042633,
+            0.37735092639923096,
+            0.8422203660011292
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 52,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.019375111907720566,
+          "eef_object_distance_m": 0.07830392569303513,
+          "goal_distance_xy_m": 0.42944149825674127,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0,
+          "feasibility": "unknown",
+          "feasibility_reason": "pose_outside_supported_region",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.27630000113276765,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "RETRACT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "RETRACT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "mesh",
+          "planning_work_units": 3,
+          "feasibility": "unknown",
+          "gap_m": 0.019375111907720566,
+          "planning_ms": 27.051199998822995,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": true,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.056528449058532715,
+          -0.10683249682188034,
+          -0.09384989738464355,
+          -0.008776749484241009,
+          -0.022970272228121758,
+          0.024961508810520172,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.05317689850926399,
+          0.033757634460926056,
+          1.0093849897384644,
+          0.9939212799072266,
+          -0.05785347521305084,
+          0.04054710268974304,
+          -0.08443570137023926,
+          0.0151519188657403,
+          -0.004223193973302841,
+          -0.014031593687832355,
+          0.04947567731142044,
+          0.06081579998135567,
+          0.26993370056152344,
+          -0.8329121470451355,
+          0.4613635540008545,
+          0.14330600202083588,
+          0.040277205407619476,
+          0.0028739331755787134,
+          0.9385944604873657,
+          -0.14485174417495728,
+          0.44998031854629517,
+          0.819911777973175,
+          0.32292476296424866
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "full_s41_clean",
+      "demo": "demo_13000015",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.03638993203639984,
+            0.02427232265472412,
+            0.9248290061950684
+          ]
+        },
+        "v13": {
+          "steps": 313,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.15915998816490173,
+            0.37739530205726624,
+            0.8420252203941345
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 50,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.017597224563360214,
+          "eef_object_distance_m": 0.08702623099088669,
+          "goal_distance_xy_m": 0.4200891201515007,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0,
+          "feasibility": "unknown",
+          "feasibility_reason": "pose_outside_supported_region",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.29490000451914966,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "RETRACT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "RETRACT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "mesh",
+          "planning_work_units": 3,
+          "feasibility": "unknown",
+          "gap_m": 0.017597224563360214,
+          "planning_ms": 26.74799999658717,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": true,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.04988405853509903,
+          -0.07418263703584671,
+          -0.0844120979309082,
+          -0.0019293178338557482,
+          -0.018317177891731262,
+          0.017135607078671455,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.051737088710069656,
+          0.035914141684770584,
+          1.0166385173797607,
+          0.9949667453765869,
+          -0.04631844535470009,
+          0.03316335752606392,
+          -0.08243779838085175,
+          0.01208314299583435,
+          -0.005514081101864576,
+          -0.019205795601010323,
+          0.043355751782655716,
+          0.07072015106678009,
+          0.2580545246601105,
+          -0.7810067534446716,
+          0.5376793146133423,
+          0.1853032261133194,
+          0.03485790640115738,
+          0.015172724612057209,
+          0.933822751045227,
+          -0.19253404438495636,
+          0.5633383393287659,
+          0.747969388961792,
+          0.29346615076065063
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "bc_k2_noise005",
+      "demo": "demo_13000015",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.023426339030265808,
+            0.010331666097044945,
+            0.9248288869857788
+          ]
+        },
+        "v13": {
+          "steps": 325,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.1617175042629242,
+            0.36798131465911865,
+            0.845657229423523
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 57,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.013882149942219257,
+          "eef_object_distance_m": 0.09124341607093811,
+          "goal_distance_xy_m": 0.4483495239095038,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0,
+          "feasibility": "unknown",
+          "feasibility_reason": "pose_outside_supported_region",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.2567999981692992,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "RETRACT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "RETRACT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "mesh",
+          "planning_work_units": 4,
+          "feasibility": "unknown",
+          "gap_m": 0.013882149942219257,
+          "planning_ms": 28.328699998382945,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": true,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.056424885988235474,
+          -0.10161621868610382,
+          -0.06203770637512207,
+          -0.009618798270821571,
+          -0.025168560445308685,
+          0.026981288567185402,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.04669556766748428,
+          0.03709939494729042,
+          1.0062037706375122,
+          0.9921993613243103,
+          -0.06689168512821198,
+          0.0407283678650856,
+          -0.09699047356843948,
+          0.01131456345319748,
+          -0.0025675867218524218,
+          -0.022238146513700485,
+          0.06459090113639832,
+          0.06118052825331688,
+          0.21624024212360382,
+          -0.8393990993499756,
+          0.4688713848590851,
+          0.16973155736923218,
+          0.022970372810959816,
+          -0.01048511452972889,
+          0.9320539832115173,
+          -0.1486734002828598,
+          0.3960520029067993,
+          0.8566859364509583,
+          0.29517486691474915
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "full_s17_noise005",
+      "demo": "demo_13000001",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.21755023300647736,
+            -0.15895721316337585,
+            0.8600513935089111
+          ]
+        },
+        "v13": {
+          "steps": 383,
+          "success": true,
+          "mode": "RETREAT",
+          "can_position": [
+            0.1560192108154297,
+            0.37434011697769165,
+            0.8600601553916931
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 161,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "POSE_BLOCKED",
+          "mode": "POSE_BLOCKED",
+          "next_mode": "POSE_BLOCKED",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "gap_m": 0.0792924165725708,
+          "feasibility": "infeasible",
+          "feasibility_reason": "no_validated_equivalent_joint_pose",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.30049999622860923,
+          "joint_checked": true,
+          "kinematic_blocked": true,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "POSE_BLOCKED",
+          "mode": "PLAN_WAIT",
+          "next_mode": "POSE_BLOCKED",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "wait_escape",
+          "planning_work_units": 16,
+          "feasibility": "unknown",
+          "gap_m": 0.0792924165725708,
+          "escape_replans": 1,
+          "support13_plan": false,
+          "planning_ms": 4.354500000772532
+        },
+        "reference_command": [
+          0.3359529376029968,
+          -0.010707974433898926,
+          0.5185389518737793,
+          -0.2397991269826889,
+          0.009952636435627937,
+          0.17999257147312164,
+          0.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.06793628633022308,
+          0.6061767339706421,
+          1.0380483865737915,
+          0.8874924182891846,
+          -0.276481956243515,
+          0.015287988819181919,
+          -0.3683492839336395,
+          0.040027961134910583,
+          -0.039264459162950516,
+          0.5421480536460876,
+          0.486680269241333,
+          -0.3296460509300232,
+          0.5390876531600952,
+          0.7573259472846985,
+          -0.34533411264419556,
+          0.1287875920534134,
+          0.21757866442203522,
+          -0.15893135964870453,
+          0.8600592017173767,
+          0.0005354642635211349,
+          -2.0452442186069675e-05,
+          0.9503404498100281,
+          -0.3112116754055023
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "full_s17_noise005",
+      "demo": "demo_13000015",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.01812678948044777,
+            0.011593669652938843,
+            0.9248308539390564
+          ]
+        },
+        "v13": {
+          "steps": 321,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.16276346147060394,
+            0.36655503511428833,
+            0.8470339775085449
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 55,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.014123326167464256,
+          "eef_object_distance_m": 0.09442921727895737,
+          "goal_distance_xy_m": 0.4503993547117051,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0,
+          "feasibility": "unknown",
+          "feasibility_reason": "pose_outside_supported_region",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.2825999981723726,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "RETRACT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "RETRACT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "mesh",
+          "planning_work_units": 2,
+          "feasibility": "unknown",
+          "gap_m": 0.014123326167464256,
+          "planning_ms": 17.999499999859836,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": true,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.050543807446956635,
+          -0.07926089316606522,
+          -0.0842905044555664,
+          -0.001647486467845738,
+          -0.017133306711912155,
+          0.01830003596842289,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.038860056549310684,
+          0.03745954856276512,
+          1.0114625692367554,
+          0.9930460453033447,
+          -0.05988893657922745,
+          0.03347190469503403,
+          -0.09566856920719147,
+          0.009662017226219177,
+          -0.004461309406906366,
+          -0.021850090473890305,
+          0.06415382027626038,
+          0.0662202537059784,
+          0.26155900955200195,
+          -0.8243227005004883,
+          0.4668850302696228,
+          0.1846543252468109,
+          0.015249872580170631,
+          -0.009379193186759949,
+          0.9329414367675781,
+          -0.16049407422542572,
+          0.3953550159931183,
+          0.838326632976532,
+          0.3393295109272003
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "full_s17_noise005",
+      "demo": "demo_13000058",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "EXHAUSTED",
+          "can_position": [
+            0.005108347162604332,
+            -0.07251831889152527,
+            0.8438014388084412
+          ]
+        },
+        "v13": {
+          "steps": 324,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.17294993996620178,
+            0.40121686458587646,
+            0.8408278226852417
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 123,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "POSE_WAIT",
+          "mode": "POSE_WAIT",
+          "next_mode": "ALIGN",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "gap_m": 0.023465268313884735,
+          "feasibility": "feasible",
+          "feasibility_reason": "validated_narrow_plan",
+          "pose_replans": 1,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": "arrived",
+          "planning_ms": 30.601199992815964,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "POSE_WAIT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "POSE_WAIT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "wait_escape",
+          "planning_work_units": 16,
+          "feasibility": "unknown",
+          "gap_m": 0.023465268313884735,
+          "escape_replans": 1,
+          "support13_plan": false,
+          "planning_ms": 3.6811999962083064
+        },
+        "reference_command": [
+          0.04667466878890991,
+          -0.12281745672225952,
+          0.010436773300170898,
+          -0.0011497964151203632,
+          0.006866397336125374,
+          -0.002335961442440748,
+          0.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.09533253312110901,
+          -0.23771825432777405,
+          1.0389562845230103,
+          0.9962093830108643,
+          0.0016765488544479012,
+          0.0630262941122055,
+          -0.05993129312992096,
+          0.01176492590457201,
+          -0.01170034147799015,
+          -0.11621689051389694,
+          -0.14745277166366577,
+          0.20111770927906036,
+          -0.43754222989082336,
+          -0.5740379095077515,
+          0.6499534845352173,
+          0.2379022240638733,
+          0.0036570634692907333,
+          -0.06681951135396957,
+          0.843837320804596,
+          -0.3006630837917328,
+          0.6397544741630554,
+          0.5956153869628906,
+          -0.38152092695236206
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "full_s23_noise005",
+      "demo": "demo_13000001",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.21754060685634613,
+            -0.15895086526870728,
+            0.8600544929504395
+          ]
+        },
+        "v13": {
+          "steps": 386,
+          "success": true,
+          "mode": "RETREAT",
+          "can_position": [
+            0.15544971823692322,
+            0.37699300050735474,
+            0.860051155090332
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 167,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "POSE_BLOCKED",
+          "mode": "POSE_BLOCKED",
+          "next_mode": "POSE_BLOCKED",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "gap_m": 0.07928004115819931,
+          "feasibility": "infeasible",
+          "feasibility_reason": "no_validated_equivalent_joint_pose",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.3329999963170849,
+          "joint_checked": true,
+          "kinematic_blocked": true,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "POSE_BLOCKED",
+          "mode": "PLAN_WAIT",
+          "next_mode": "POSE_BLOCKED",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "wait_escape",
+          "planning_work_units": 16,
+          "feasibility": "unknown",
+          "gap_m": 0.07928004115819931,
+          "escape_replans": 1,
+          "support13_plan": false,
+          "planning_ms": 4.70369999675313
+        },
+        "reference_command": [
+          0.2902837097644806,
+          0.0009489059448242188,
+          0.4169178009033203,
+          -0.24208538234233856,
+          0.007306905463337898,
+          0.1770346760749817,
+          0.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.10707226395606995,
+          0.5798428058624268,
+          1.0871405601501465,
+          0.8931983113288879,
+          -0.26535311341285706,
+          0.010952148586511612,
+          -0.36285609006881714,
+          0.04002755880355835,
+          -0.03925248235464096,
+          0.4902445375919342,
+          0.5371932983398438,
+          -0.2838943898677826,
+          0.5299533605575562,
+          0.7661973237991333,
+          -0.3417435884475708,
+          0.12370359897613525,
+          0.2174983024597168,
+          -0.1589517891407013,
+          0.860060453414917,
+          -0.0004002452187705785,
+          -0.0001936738408403471,
+          0.9503483176231384,
+          -0.3111878037452698
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "full_s41_noise005",
+      "demo": "demo_13000001",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.2176668345928192,
+            -0.15905563533306122,
+            0.8600590229034424
+          ]
+        },
+        "v13": {
+          "steps": 385,
+          "success": true,
+          "mode": "RETREAT",
+          "can_position": [
+            0.15519826114177704,
+            0.3772844672203064,
+            0.8600746393203735
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 161,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "POSE_BLOCKED",
+          "mode": "POSE_BLOCKED",
+          "next_mode": "POSE_BLOCKED",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "gap_m": 0.07927469909191132,
+          "feasibility": "infeasible",
+          "feasibility_reason": "no_validated_equivalent_joint_pose",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.323499996738974,
+          "joint_checked": true,
+          "kinematic_blocked": true,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "POSE_BLOCKED",
+          "mode": "PLAN_WAIT",
+          "next_mode": "POSE_BLOCKED",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "wait_escape",
+          "planning_work_units": 16,
+          "feasibility": "unknown",
+          "gap_m": 0.07927469909191132,
+          "escape_replans": 1,
+          "support13_plan": false,
+          "planning_ms": 4.953199997544289
+        },
+        "reference_command": [
+          0.3363495171070099,
+          0.004938840866088867,
+          0.5214297771453857,
+          -0.24152401089668274,
+          0.015803353860974312,
+          0.17724674940109253,
+          0.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.06402277946472168,
+          0.6036796569824219,
+          1.020358681678772,
+          0.8968323469161987,
+          -0.2613624632358551,
+          0.02330312691628933,
+          -0.35614368319511414,
+          0.04002757370471954,
+          -0.03924712538719177,
+          0.5258250832557678,
+          0.4998687207698822,
+          -0.32341039180755615,
+          0.5314037799835205,
+          0.7680925726890564,
+          -0.3309294283390045,
+          0.1346472054719925,
+          0.21764697134494781,
+          -0.1590387374162674,
+          0.8600580096244812,
+          -0.00037465550121851265,
+          -0.00014544960868079215,
+          0.9487342834472656,
+          -0.3160744607448578
+        ]
+      }
+    },
+    {
+      "reference": "v12",
+      "kind": "rescues",
+      "condition": "full_s41_noise005",
+      "demo": "demo_13000015",
+      "final": {
+        "v12": {
+          "steps": 400,
+          "success": false,
+          "mode": "POSE_BLOCKED",
+          "can_position": [
+            0.019253715872764587,
+            0.011487437412142754,
+            0.9248259663581848
+          ]
+        },
+        "v13": {
+          "steps": 322,
+          "success": true,
+          "mode": "RELEASE",
+          "can_position": [
+            0.16253714263439178,
+            0.3661489486694336,
+            0.845547080039978
+          ]
+        }
+      },
+      "first_command_difference": {
+        "step": 54,
+        "same_observation": true,
+        "reference_recovery": {
+          "mode_before": "RETRACT",
+          "stable_hold": false,
+          "latched_hold": false,
+          "gap_m": 0.014462337829172611,
+          "eef_object_distance_m": 0.09209723025560379,
+          "goal_distance_xy_m": 0.450070730607976,
+          "loss_detected": false,
+          "attempts": 1,
+          "mode": "RETRACT",
+          "next_mode": "RETRACT",
+          "intervened": true,
+          "plan_status": "not_applicable",
+          "guard_margin_m": null,
+          "gap_target_m": null,
+          "aperture_ready": false,
+          "failed_candidate_count": 0,
+          "feasibility": "unknown",
+          "feasibility_reason": "pose_outside_supported_region",
+          "pose_replans": 0,
+          "pose_changed": false,
+          "mesh_plan": false,
+          "retreat_stage": null,
+          "planning_ms": 0.2697000018088147,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false
+        },
+        "v13_recovery": {
+          "mode_before": "RETRACT",
+          "mode": "PLAN_WAIT",
+          "next_mode": "RETRACT",
+          "stable_hold": false,
+          "intervened": true,
+          "attempts": 1,
+          "planning_kind": "mesh",
+          "planning_work_units": 4,
+          "feasibility": "unknown",
+          "gap_m": 0.014462337829172611,
+          "planning_ms": 21.65909999894211,
+          "joint_checked": false,
+          "kinematic_blocked": false,
+          "edge_plan": false,
+          "support13_plan": true,
+          "escape_replans": 0
+        },
+        "reference_command": [
+          -0.04766937345266342,
+          -0.06506688892841339,
+          -0.07928609848022461,
+          -0.0025307557079941034,
+          -0.01872815191745758,
+          0.01687004789710045,
+          -1.0
+        ],
+        "v13_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "state_before": [
+          0.03963756188750267,
+          0.033965397626161575,
+          1.0106796026229858,
+          0.9933999180793762,
+          -0.05551198497414589,
+          0.03443845734000206,
+          -0.0942813828587532,
+          0.009897603653371334,
+          -0.004564734175801277,
+          -0.02205429971218109,
+          0.06043535843491554,
+          0.06630618125200272,
+          0.2578621804714203,
+          -0.8278110027313232,
+          0.4656645357608795,
+          0.17717909812927246,
+          0.016942229121923447,
+          -0.009765150025486946,
+          0.9328691959381104,
+          -0.1553092747926712,
+          0.3927484452724457,
+          0.8442062735557556,
+          0.33006584644317627
+        ]
+      }
+    }
+  ],
+  "note": "Saved trace comparison explains first divergence, not a new causal experiment or independent sample. No post-confirmation controller tuning."
+}

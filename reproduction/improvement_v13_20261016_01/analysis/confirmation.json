@@ -1,0 +1,206 @@
+{
+  "stage": "confirmation",
+  "variants": {
+    "v6": {
+      "success": 445,
+      "episodes": 480,
+      "support_event_episodes": 0,
+      "escape_event_episodes": 0
+    },
+    "v12": {
+      "success": 437,
+      "episodes": 480,
+      "support_event_episodes": 0,
+      "escape_event_episodes": 0
+    },
+    "v13": {
+      "success": 448,
+      "episodes": 480,
+      "support_event_episodes": 13,
+      "escape_event_episodes": 30
+    }
+  },
+  "unique_starts": 60,
+  "new_executions": 1440,
+  "statistics": {
+    "v6": {
+      "estimate_percent": 92.70833333333334,
+      "ci95_percent": [
+        87.70833333333333,
+        97.08333333333333
+      ]
+    },
+    "v12": {
+      "estimate_percent": 91.04166666666667,
+      "ci95_percent": [
+        85.20833333333333,
+        96.04166666666667
+      ]
+    },
+    "v13": {
+      "estimate_percent": 93.33333333333333,
+      "ci95_percent": [
+        88.33333333333333,
+        97.5
+      ]
+    },
+    "v13_minus_v6": {
+      "estimate_percent": 0.625,
+      "ci95_percent": [
+        -0.625,
+        2.2916666666666665
+      ]
+    },
+    "v13_minus_v12": {
+      "estimate_percent": 2.2916666666666665,
+      "ci95_percent": [
+        0.0,
+        5.833333333333333
+      ]
+    }
+  },
+  "conditions": [
+    {
+      "condition": "bc_k2_clean",
+      "v6_success": 59,
+      "v12_success": 58,
+      "v13_success": 59,
+      "episodes": 60
+    },
+    {
+      "condition": "full_s17_clean",
+      "v6_success": 54,
+      "v12_success": 53,
+      "v13_success": 54,
+      "episodes": 60
+    },
+    {
+      "condition": "full_s23_clean",
+      "v6_success": 55,
+      "v12_success": 54,
+      "v13_success": 55,
+      "episodes": 60
+    },
+    {
+      "condition": "full_s41_clean",
+      "v6_success": 56,
+      "v12_success": 55,
+      "v13_success": 56,
+      "episodes": 60
+    },
+    {
+      "condition": "bc_k2_noise005",
+      "v6_success": 57,
+      "v12_success": 55,
+      "v13_success": 56,
+      "episodes": 60
+    },
+    {
+      "condition": "full_s17_noise005",
+      "v6_success": 54,
+      "v12_success": 53,
+      "v13_success": 56,
+      "episodes": 60
+    },
+    {
+      "condition": "full_s23_noise005",
+      "v6_success": 55,
+      "v12_success": 55,
+      "v13_success": 56,
+      "episodes": 60
+    },
+    {
+      "condition": "full_s41_noise005",
+      "v6_success": 55,
+      "v12_success": 54,
+      "v13_success": 56,
+      "episodes": 60
+    }
+  ],
+  "rescues": {
+    "v6": [
+      [
+        "full_s17_noise005",
+        "demo_13000001"
+      ],
+      [
+        "full_s17_noise005",
+        "demo_13000010"
+      ],
+      [
+        "full_s23_noise005",
+        "demo_13000001"
+      ],
+      [
+        "full_s41_noise005",
+        "demo_13000001"
+      ],
+      [
+        "full_s41_noise005",
+        "demo_13000058"
+      ]
+    ],
+    "v12": [
+      [
+        "bc_k2_clean",
+        "demo_13000015"
+      ],
+      [
+        "full_s17_clean",
+        "demo_13000015"
+      ],
+      [
+        "full_s23_clean",
+        "demo_13000015"
+      ],
+      [
+        "full_s41_clean",
+        "demo_13000015"
+      ],
+      [
+        "bc_k2_noise005",
+        "demo_13000015"
+      ],
+      [
+        "full_s17_noise005",
+        "demo_13000001"
+      ],
+      [
+        "full_s17_noise005",
+        "demo_13000015"
+      ],
+      [
+        "full_s17_noise005",
+        "demo_13000058"
+      ],
+      [
+        "full_s23_noise005",
+        "demo_13000001"
+      ],
+      [
+        "full_s41_noise005",
+        "demo_13000001"
+      ],
+      [
+        "full_s41_noise005",
+        "demo_13000015"
+      ]
+    ]
+  },
+  "regressions": {
+    "v6": [
+      [
+        "bc_k2_noise005",
+        "demo_13000021"
+      ],
+      [
+        "full_s41_noise005",
+        "demo_13000022"
+      ]
+    ],
+    "v12": []
+  },
+  "adoption_gate_passed": false,
+  "positive_primary_ci": false,
+  "inference": "Primary v13-v6, secondary v13-v12. Paired-start percentile bootstrap, 20000 draws, seed2026101613. Eight fixed conditions per start and three fixed Full training seeds. Pointwise intervals, no multiplicity correction, not arbitrary retraining uncertainty. Zero interval with no discordance does not prove equivalence. Do not compare v5 from another batch."
+}

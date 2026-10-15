@@ -1,25 +1,21 @@
-> **v13更新（2026-10-16）**：v13进行中：小测试v13为6/6，v12为3/6；正在按门槛推进消融、开发与独立确认。 [本轮前端](reproduction/improvement_v13_20261016_01/index.html) · [本轮说明](reproduction/improvement_v13_20261016_01/README.md)。旧v12及其他代码、权重和结果保留。
+> **v13更新（2026-10-16）**：v13完成：开发236/240；全新60起点确认v6 445/480、v12 437/480、v13 448/480。未通过本轮对照采用门槛，保留为候选；主要配对区间未完全高于零，不能宣称总体成功率改善。 [报告](reproduction/improvement_v13_20261016_01/REPORT.md) · [前端](reproduction/improvement_v13_20261016_01/index.html)。旧代码、权重、结果保留。
 
-> **v12更新（2026-10-15）**：v12已完成：开发236/240；全新60起点确认v12 465/480、v6 473/480；救回1、退步9。对照门槛未通过；配对区间没有高于零，不能宣称总体成功率提升。 [报告](reproduction/improvement_v12_20261015_01/REPORT.md) · [新前端](reproduction/improvement_v12_20261015_01/index.html)。旧v5冻结证据及全部旧资产保留。
+# 跨设备资料交接（2026-10-16）
 
-**本轮v12尚未打入旧ZIP。换设备时还须带上 `reproduction/improvement_v12_20261015_01/` 或使用同步后的完整Git项目；不能拿旧包声称包含本轮实验。**
+最新资料为[v13完整报告](reproduction/improvement_v13_20261016_01/REPORT.md)及其源数据、五张新图和两段视频。本轮没有论文正文，也没有改写旧论文提纲；后续写作需将本轮结论和负结果补入相应实验章节，不能沿用旧提纲中停在v11/v12的状态描述。
 
-> 历史阶段：2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
+**旧ZIP不包含v12和v13。换设备请使用同步后的完整Git项目，或完整复制robot_can项目（虚拟环境需在新设备重新配置）。只复制v13目录无法运行继承的v5—v12模块，也缺少数据与冻结权重。** GitHub入口：https://github.com/LuckyLivio/Robot_can 。
 
-# 当前论文资料交接说明（2026-10-15交付更新）
+| 内容 | 路径 |
+|---|---|
+| 本轮整体评估 | [reproduction/improvement_v13_20261016_01/REPORT.md](reproduction/improvement_v13_20261016_01/REPORT.md) |
+| 最新实现与原始轨迹 | `reproduction/improvement_v13_20261016_01/recovery/`、各阶段`result.json`与`trace.jsonl` |
+| 配对数据与统计 | `reproduction/improvement_v13_20261016_01/analysis/confirmation_pairs.csv`、`confirmation.json` |
+| 新图、图注、CSV | [图表说明](reproduction/improvement_v13_20261016_01/FIGURE_GUIDE.md)、`reproduction/improvement_v13_20261016_01/figures/` |
+| 视频与回放验证 | `reproduction/improvement_v13_20261016_01/demo/`、`analysis/demo_replay_*.json` |
+| 旧详细提纲与36张图 | [提纲](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)、[图目录](reproduction/paper_quality_20261015_01/FIGURE_CATALOG.md) |
+| 原始迁移包 | [说明](reproduction/portable_delivery_20261015_01/README.md) |
 
-跨设备资料已集中到 `reproduction/portable_delivery_20261015_01/builds/TRANSFER_TO_NEW_DEVICE/`，可直接复制整个文件夹。[交付说明](reproduction/portable_delivery_20261015_01/README.md) · [验收页面](reproduction/portable_delivery_20261015_01/index.html) · [目标设备清单](reproduction/portable_delivery_20261015_01/TARGET_DEVICE_CHECKLIST.md)。
+旧迁移包的本机移位、标准库环境和前端检查属于历史验收，不能声称新设备已经验证。新设备先按[环境指南](ENVIRONMENT_GUIDE.md)配置，再按[运行指南](PROGRAM_GUIDE.md)检查；使用`verify_integrity.py`做字节核验。当前完整成果以v13报告为准，旧包只作历史资料。
 
-三个ZIP合计约273.9 MiB：旧WRITING主线包252.6 MiB、新写作增补4.8 MiB、新展示包16.5 MiB。旧ZIP原位置保留，新文件夹中是经哈希核对的副本。
-
-- 旧THESIS_HANDOFF_20261015及WRITING/FULL ZIP对应c8bbe86：原世界模型与v5主线、40张表、19组图和提纲，不含v6—v11。
-- 新CAN_LAB_WRITING_ADDENDUM对应fad3100：v6—v11各报告、逐回合结果、表、图、协议/校验资料、v11视频及全项目审查。含29份文档阅读视图和706份候选结果JSON索引；中断记录保留并标记，不把它们计为完整批次。
-- 新CAN_LAB_DEMO为独立静态展示：11段已有视频、两张v11原始轨迹图、八种开发条件。无需PyTorch/GPU，使用包内portable.py在8767启动。
-
-主线仍是v5；v11开发235/240，未采用。写作先读[最新贡献](CONTRIBUTIONS.md)、[当前结果](RESULTS.md)、[当前提纲](THESIS_OUTLINE.md)。详细结构优先使用本轮提纲；[旧详细提纲](THESIS_HANDOFF_20261015/01_outline/THESIS_OUTLINE_REVISED.md)及其对应批次数据仅作冻结记录参考。
-
-生成ZIP和解压副本不随Git克隆提供，避免反复提交大副本。克隆后可用新build_packages.py重建两个新包；旧WRITING ZIP需单独复制，旧包652份gzip也不随克隆提供。完整原始轨迹仍在仓库原路径。
-
-本机干净标准库环境、移位中文路径、文件/ZIP与前端检查已通过；第二台电脑实际验收未执行。没有论文正文、新训练或新仿真实验，尚未实施v12控制修复。
-
-本轮新增独立图表与提纲ZIP，见 [下载与命令](reproduction/paper_quality_20261015_01/README.md)。旧三ZIP不覆盖；换设备时额外带本轮ZIP，写作优先使用新图注和提纲。
+写作边界：60独立起点不等于480独立样本；共享恢复收益不归因于世界模型；真值状态不等于视觉感知；不同确认批次不直接拼接。旧v5冻结证据和所有失败结果保留。本科毕设工程材料已较完整，论文论证、学校格式和答辩准备尚需完成。

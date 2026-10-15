@@ -1,6 +1,15 @@
-> **v13更新（2026-10-16）**：v13进行中：小测试v13为6/6，v12为3/6；正在按门槛推进消融、开发与独立确认。 [本轮前端](reproduction/improvement_v13_20261016_01/index.html) · [本轮说明](reproduction/improvement_v13_20261016_01/README.md)。旧v12及其他代码、权重和结果保留。
+> **v13更新（2026-10-16）**：v13完成：开发236/240；全新60起点确认v6 445/480、v12 437/480、v13 448/480。未通过本轮对照采用门槛，保留为候选；主要配对区间未完全高于零，不能宣称总体成功率改善。 [报告](reproduction/improvement_v13_20261016_01/REPORT.md) · [前端](reproduction/improvement_v13_20261016_01/index.html)。旧代码、权重、结果保留。
 
-> **v12更新（2026-10-15）**：v12已完成：开发236/240；全新60起点确认v12 465/480、v6 473/480；救回1、退步9。对照门槛未通过；配对区间没有高于零，不能宣称总体成功率提升。 [报告](reproduction/improvement_v12_20261015_01/REPORT.md) · [新前端](reproduction/improvement_v12_20261015_01/index.html)。旧v5冻结证据及全部旧资产保留。
+# 项目总导航
+
+- 最新实现、结果和视频：[reproduction/improvement_v13_20261016_01/](reproduction/improvement_v13_20261016_01/README.md)。
+- 直接查看：[v13前端](reproduction/improvement_v13_20261016_01/index.html)；总报告：[v13完整报告](reproduction/improvement_v13_20261016_01/REPORT.md)。
+- 启动与复核：[README](README.md)、[PROGRAM_GUIDE](PROGRAM_GUIDE.md)、[DEMO_GUIDE](DEMO_GUIDE.md)。
+- 全阶段证据：[EVIDENCE_INDEX](EVIDENCE_INDEX.md)、[RESULTS](RESULTS.md)。
+- 跨设备：[THESIS_HANDOFF_LATEST](THESIS_HANDOFF_LATEST.md)。旧包不含v12/v13，使用完整同步项目。
+- 旧路径未移动；分类入口仍在[WORKSPACE](WORKSPACE/index.html)。
+
+## 历史记录（截至2026-10-15；按原批次解释）
 
 > 历史阶段：2026-10-15论文图表复查：[新图与数据总览](reproduction/paper_quality_20261015_01/index.html) · [全项目报告](reproduction/paper_quality_20261015_01/REPORT.md) · [当前提纲与证据映射](reproduction/paper_quality_20261015_01/THESIS_OUTLINE_REVIEWED.md)。36张图重新生成；没有新增训练、仿真或论文正文。
 
@@ -17,9 +26,9 @@
 - [数据与权重](WORKSPACE/04_data_weights/README.md)
 - [前端与图表](WORKSPACE/05_visualization/README.md)
 - [当前论文交接说明](THESIS_HANDOFF_LATEST.md)；[旧迁移包](THESIS_HANDOFF_20261015/00_READ_FIRST.md)
-- [本轮修改前10,270文件索引](reproduction/paper_quality_20261015_01/FILE_INVENTORY.csv)；[旧3,946文件快照分类](WORKSPACE/FILE_INDEX.csv)
+- [该历史阶段修改前10,270文件索引](reproduction/paper_quality_20261015_01/FILE_INVENTORY.csv)；[旧3,946文件快照分类](WORKSPACE/FILE_INDEX.csv)
 
-建议收藏WORKSPACE及本轮目录`reproduction/paper_quality_20261015_01`。新图和当前提纲优先使用本轮版本；旧写作包用于既有40表与冻结资料，v6—v11另有增补。
+建议收藏WORKSPACE及该历史阶段目录`reproduction/paper_quality_20261015_01`。新图和当前提纲优先使用该历史阶段版本；旧写作包用于既有40表与冻结资料，v6—v11另有增补。
 
 演示服务仍从原项目根运行：
 
