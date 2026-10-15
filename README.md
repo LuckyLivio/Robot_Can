@@ -1,4 +1,4 @@
-> v11罐体接近空间实验进行中，旧资产保留，主版本仍为v5。[本轮报告](reproduction/improvement_v11_20261015_01/REPORT.md) · [当前前端](http://127.0.0.1:8766/)。
+> v11实验已完成：箱沿案例修复，开发235/240低于v6的236/240，未采用。旧资产保留，主版本仍为v5。[本轮报告](reproduction/improvement_v11_20261015_01/REPORT.md) · [当前前端](http://127.0.0.1:8766/)。
 
 # 动作延迟下的机器人抓取搬运与失败恢复
 
@@ -21,7 +21,7 @@ Set-Location 'C:\Users\Livio\Desktop\robot_can'
 
 项目根入口会自动跳转到最新整合版。也可以[直接打开成果页面](http://127.0.0.1:8766/reproduction/progress_v11_20261015_01/demo/index.html)。
 
-当前整合版包含 v11 的实验状态、20 fps 历史机器人视频、世界模型与 v5 冻结主结果，以及 v6/v8 同起点历史恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
+当前整合版包含 v11 最终结果、v10/v11同起点箱沿20 fps新视频、原始轨迹与开发退步诊断，以及世界模型与v5冻结主结果、v6/v8历史恢复对比。恢复演示提供 Full 的 17、23、41 三个种子和 BC 退步案例；候选未达标也如实展示。
 
 这是静态 HTML/CSS/JavaScript 前端，不需要 npm、Node.js 或额外前端依赖。启动命令只提供本地文件服务；训练和机器人仿真有独立入口。请通过 HTTP 地址访问，使数据与视频按项目路径加载。
 
@@ -69,6 +69,7 @@ C:\Users\Livio\Desktop\robot_can\.venv\Scripts\python.exe
 | `reproduction/progress_v11_20261015_01/demo/` | 当前进度与成果展示前端 |
 | `reproduction/improvement_v9_20261015_01/` | 关节姿态检查与规划耗时消融，旧结果保留 |
 | `reproduction/improvement_v10_20261015_01/` | 箱沿高度/路径消融、接触诊断与完整核验 |
+| `reproduction/improvement_v11_20261015_01/` | 罐体包络、四组消融、240回合开发和持物等待诊断 |
 | `data/` | 数据、划分与来源校验 |
 | `policy/`、`models/` | 策略和世界模型权重、实验结果 |
 
@@ -76,7 +77,7 @@ BC 提供候选动作，世界模型预测并评分，执行器通过 FIFO 队�
 
 ## 当前实验结果
 
-本轮箱沿接近结果见 [v10 完整报告](reproduction/improvement_v10_20261015_01/REPORT.md)，历史关节与耗时结果见 [v9 报告](reproduction/improvement_v9_20261015_01/REPORT.md)。监督器额外读取七个关节角度，BC 和 Full 公平共享；原策略/世界模型输入仍为 23 维。未达到门槛的候选不会替换下列冻结主结果。
+本轮箱沿与开发结果见 [v11 完整报告](reproduction/improvement_v11_20261015_01/REPORT.md)，历史箱沿接近见 [v10 报告](reproduction/improvement_v10_20261015_01/REPORT.md)，历史关节与耗时结果见 [v9 报告](reproduction/improvement_v9_20261015_01/REPORT.md)。监督器额外读取七个关节角度，BC 和 Full 公平共享；原策略/世界模型输入仍为 23 维。未达到门槛的候选不会替换下列冻结主结果。
 
 完整世界模型主实验、补充诊断及恢复实验见 [RESULTS.md](RESULTS.md) 和 [EVIDENCE_INDEX.md](EVIDENCE_INDEX.md)。不同阶段的起点与条件不能直接拼接成同一批对照。
 
@@ -101,10 +102,10 @@ v5 相对 v4 救回 7 次执行且没有新增失败，但收益集中于两个�
 检查已有成果和本次 README 更新：
 
 ```powershell
-& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\improvement_v10_20261015_01\verify_integrity.py
+& '.\.venv\Scripts\python.exe' -X utf8 -B reproduction\improvement_v11_20261015_01\verify_integrity.py
 ```
 
-该入口只读核对本轮开始前的 9,435 个路径，以及本轮代码、结果与前端交付清单。授权修改的根 README 和入口页面按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
+该入口只读核对本轮开始前的 9,787 个路径，以及本轮代码、结果与前端交付清单。授权修改的根 README 和入口页面按逐字节备份验证；其他旧资产在原路径验证，不训练、不仿真。历史校验入口绑定当时的根文档，直接运行可能提示后续授权更新；不要修改旧清单来消除差异。
 
 完整 v5 重跑、控制步骤复核和物理回放命令见 [v5 README](reproduction/recovery_v5_20261012_01/README.md)，整体运行指南见 [PROGRAM_GUIDE.md](PROGRAM_GUIDE.md)。这些实验入口会执行仿真，并检查历史根文档；如提示文档更新，先使用当前完整性检查核对归档。不要删除结果或改写旧保护清单来跳过核验。
 
@@ -163,3 +164,11 @@ v9包含一次明确登记的末端坐标系验证修复，修复前记录保留
 新增箱沿接近高度和有限倾斜分段路径，9+9回合小测试、148回合完整消融均已结束。v9、height、path、v10均30/37；尚未修复箱沿任务，相对v6仍有1例退步。当前原因定位到倾斜接近时单侧手指提前顶到罐体。未达到开发门槛，未运行240回合、未训练、未写论文。
 
 动作/FIFO回放、物理回放和旧资产核对通过；额外检查范围优化只减少重复计算，不能宣称成功率提升。详见 [v10报告](reproduction/improvement_v10_20261015_01/REPORT.md) 和 [当前前端说明](reproduction/progress_v10_20261015_01/README.md)。本轮根文件改前备份在 `reproduction/improvement_v10_20261015_01/before/`。
+
+## v11 进展（2026-10-15）
+
+联合倾斜/闭合方向、抓取高度和罐体包络开度检查。9回合小测试、148回合四组消融与240回合开发均完成，共397次执行。已知诊断v11为31/37，v10/axis/guard均30/37；箱沿已知失败在380步完成，但未超过历史v6的31/37。
+
+冻结后的开发v11为235/240，v6为236/240；一例Full seed41噪声条件退步。全部240回合新箱沿模块未触发，冻结v10回放产生完全相同的命令。已定位为继承的“已经持物，却仍等待水平支撑”状态转换问题。v11未采用，未进入独立确认；主版本仍为v5。
+
+[完整报告与原始证据](reproduction/improvement_v11_20261015_01/REPORT.md) · [新视频与前端说明](reproduction/progress_v11_20261015_01/README.md)。本轮根文件改前原样备份在 `reproduction/improvement_v11_20261015_01/before/`，旧代码、权重和结果保留。

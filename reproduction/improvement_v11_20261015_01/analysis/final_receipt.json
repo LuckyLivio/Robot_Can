@@ -1,0 +1,168 @@
+{
+  "status": "箱沿修复成立，开发有1例继承退步 · 未采用",
+  "adopted": false,
+  "stage": "pilot_a",
+  "variants": {
+    "v10": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ]
+    },
+    "axis": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ]
+    },
+    "guard": {
+      "success": 30,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ]
+      ]
+    },
+    "v11": {
+      "success": 31,
+      "episodes": 37,
+      "rescues": [],
+      "regressions": []
+    }
+  },
+  "completed_episodes": 148,
+  "actual_executions_total": 397,
+  "dev_240_launched": true,
+  "development": {
+    "complete": true,
+    "stage": "dev_a",
+    "v6_success": 236,
+    "v11_success": 235,
+    "episodes": 240,
+    "regressions": [
+      {
+        "condition": "full_s41_noise005",
+        "demo": "demo_87",
+        "v6_success": true,
+        "v11_success": false,
+        "v6_steps": 358,
+        "v11_steps": 400,
+        "v11_verified_regrasps": 0
+      }
+    ],
+    "rescues": [],
+    "groups": [
+      {
+        "condition": "bc_k2_clean",
+        "v6_success": 29,
+        "v11_success": 29,
+        "episodes": 30
+      },
+      {
+        "condition": "full_s17_clean",
+        "v6_success": 30,
+        "v11_success": 30,
+        "episodes": 30
+      },
+      {
+        "condition": "full_s23_clean",
+        "v6_success": 28,
+        "v11_success": 28,
+        "episodes": 30
+      },
+      {
+        "condition": "full_s41_clean",
+        "v6_success": 29,
+        "v11_success": 29,
+        "episodes": 30
+      },
+      {
+        "condition": "bc_k2_noise005",
+        "v6_success": 30,
+        "v11_success": 30,
+        "episodes": 30
+      },
+      {
+        "condition": "full_s17_noise005",
+        "v6_success": 30,
+        "v11_success": 30,
+        "episodes": 30
+      },
+      {
+        "condition": "full_s23_noise005",
+        "v6_success": 30,
+        "v11_success": 30,
+        "episodes": 30
+      },
+      {
+        "condition": "full_s41_noise005",
+        "v6_success": 30,
+        "v11_success": 29,
+        "episodes": 30
+      }
+    ],
+    "edge_activated_episodes": 0,
+    "edge_activations": [],
+    "source_freeze_verified": true,
+    "timing_ms": {
+      "scope": "BC+WM selection+supervisor, excludes physics/render/logging; four workers, replay rendering overlapped part of the run",
+      "max": 44.90000000077998,
+      "p99": 3.082710999879058,
+      "over50": 0,
+      "steps": 38118
+    }
+  },
+  "timing": {
+    "v10": {
+      "steps": 10436,
+      "p99_ms": 9.315909999895633,
+      "max_ms": 56.85710000034305,
+      "over50": 1,
+      "planning_wait_steps": 77
+    },
+    "axis": {
+      "steps": 10436,
+      "p99_ms": 8.513165001022571,
+      "max_ms": 46.525499998097075,
+      "over50": 0,
+      "planning_wait_steps": 54
+    },
+    "guard": {
+      "steps": 10436,
+      "p99_ms": 3.3661450002909894,
+      "max_ms": 47.873200001049554,
+      "over50": 0,
+      "planning_wait_steps": 47
+    },
+    "v11": {
+      "steps": 10416,
+      "p99_ms": 8.827620002557534,
+      "max_ms": 46.95319999882486,
+      "over50": 0,
+      "planning_wait_steps": 68
+    }
+  },
+  "pilot_gate_passed": true,
+  "adoption_gate_passed": false,
+  "new_independent_confirmation": false,
+  "unchanged_non_target_variant_episodes": 108,
+  "changed_pilot_jobs": [
+    "axis_regression_6000005",
+    "guard_regression_6000005",
+    "v11_regression_6000005"
+  ],
+  "summary": "已知诊断：v11为31/37，其余三组30/37；箱沿380步完成。开发：v11为235/240，v6为236/240；新箱沿模块未触发，1例继承的等待逻辑退步已定位。保留修复候选，主版本仍为v5。"
+}
