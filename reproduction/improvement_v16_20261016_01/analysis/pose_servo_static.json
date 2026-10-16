@@ -1,0 +1,1723 @@
+{
+  "passed": true,
+  "new_physical_episodes": 0,
+  "new_evaluation_samples": 0,
+  "scope": "Static geometry, analytical arc bound, numerical product-grid checks and saved-observation proposals. Not controller replay, dynamic stability proof or performance evaluation.",
+  "source_sha256": {
+    "reproduction/improvement_v16_20261016_01/inspect_pose_servo.py": "cf86ceda7707f5c83364c4e2f006759c9b8ba10d7b709cd1b866337549ef033f",
+    "reproduction/improvement_v16_20261016_01/recovery/pose_servo.py": "9a914a6d2de37e0fe739233f0f9107235ff4b642dd1663cf2828f1f5c71d6fab",
+    "reproduction/improvement_v15_20261016_01/analysis/smoke_a_carry_rotation_diagnosis.json": "8ae8ec37f1e93f7efbad8751d6efa1fae5cb5f1f210538ffa77794611b8313a3",
+    "reproduction/improvement_v15_20261016_01/analysis/segmented_edge_static.json": "4d420f539533c644ce1cb4a587033f680da8fe9f2883b7c1b4e58712078b9a2c",
+    "reproduction/improvement_v15_20261016_01/smoke_a/carry_known13_bc_k2_noise005_demo_13000021/trace.jsonl": "a328d825bc564da478633ca8ace20e6fa046ab39331208e63e962424d7296b81",
+    "reproduction/improvement_v15_20261016_01/smoke_a/edge_known13_full_s41_noise005_demo_13000022/trace.jsonl": "8c814e2b9d29dc885301944d365d8c9191137e85a8843dc8c1c77948854e99a7"
+  },
+  "positive_saved_observations": [
+    {
+      "family": "held_carry",
+      "source_step": 327,
+      "goal_source": "Saved v15 carry-stage reconstruction",
+      "action": [
+        0.02194982022047043,
+        -0.03924757242202759,
+        0.013708638958632946,
+        0.08590564131736755,
+        -0.2861311733722687,
+        -0.027367722243070602,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 6,
+        "work": 6,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 6,
+            "work": 6,
+            "box_margin_m": 0.16140613324141123,
+            "can_margin_m": 0.13083936558351242,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.16140613324141123,
+                "carried_can_margin_m": 0.13083936558351242
+              },
+              {
+                "hand_margin_m": 0.16541444089496493,
+                "carried_can_margin_m": 0.13138341806805257
+              },
+              {
+                "hand_margin_m": 0.1647146921819514,
+                "carried_can_margin_m": 0.13217057441557892
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.16140613324141123,
+            "carried_can_margin_m": 0.13083936558351242,
+            "rotation_samples": 3,
+            "translation_m": [
+              0.0010974910110235214,
+              -0.0019623786211013794,
+              0.0006854319479316474
+            ],
+            "rotation_vector_rad": [
+              0.04295282065868378,
+              -0.14306558668613434,
+              -0.013683861121535301
+            ],
+            "hand_arc_bound_m": 0.006961919122621507,
+            "second_arc_bound_m": 0.0018388673861845853,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.16140613324141123,
+        "can_margin_m": 0.13083936558351242,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.0010974910110235214,
+          -0.0019623786211013794,
+          0.0006854319479316474
+        ],
+        "rotation_vector_rad": [
+          0.04295282065868378,
+          -0.14306558668613434,
+          -0.013683861121535301
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.0056965108089727535,
+        "orientation_error_rad": 1.2713941335610612,
+        "observed_translation_per_step_m": [
+          0.0005477443337440491,
+          0.0005224943161010742,
+          0.00023126602172851562
+        ],
+        "observed_rotation_per_step_rad": [
+          0.00024389463376560473,
+          -0.0014597266548486735,
+          0.00037795523741760605
+        ],
+        "predicted_position": [
+          -0.03916807100176811,
+          -0.17677992582321167,
+          1.0772227048873901
+        ],
+        "predicted_orientation_error_rad": 1.26853824234629,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.16140613324141123,
+        "carried_can_margin_m": 0.13083936558351242
+      },
+      "dense_product_check": {
+        "evaluated_poses": 81,
+        "hand_box_minimum_m": 0.16836805236403274,
+        "second_shape_minimum_m": 0.132678232969697,
+        "scope": "Finite sanity check only; the radius/arc deduction supplies coverage between samples."
+      }
+    },
+    {
+      "family": "held_carry",
+      "source_step": 332,
+      "goal_source": "Saved v15 carry-stage reconstruction",
+      "action": [
+        -0.23437392711639404,
+        -0.05503833293914795,
+        -0.05085153505206108,
+        0.08077531307935715,
+        -0.28767889738082886,
+        -0.026758495718240738,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 6,
+        "work": 6,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 6,
+            "work": 6,
+            "box_margin_m": 0.16433246353203965,
+            "can_margin_m": 0.1331956441077814,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.16751233995593878,
+                "carried_can_margin_m": 0.1331956441077814
+              },
+              {
+                "hand_margin_m": 0.16579119250050364,
+                "carried_can_margin_m": 0.13393131933271152
+              },
+              {
+                "hand_margin_m": 0.16433246353203965,
+                "carried_can_margin_m": 0.1348264618111482
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.16433246353203965,
+            "carried_can_margin_m": 0.1331956441077814,
+            "rotation_samples": 3,
+            "translation_m": [
+              -0.011718696355819702,
+              -0.0027519166469573975,
+              -0.002542576752603054
+            ],
+            "rotation_vector_rad": [
+              0.040387656539678574,
+              -0.14383944869041443,
+              -0.013379247859120369
+            ],
+            "hand_arc_bound_m": 0.006962240448553465,
+            "second_arc_bound_m": 0.0018388455041997284,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.16433246353203965,
+        "can_margin_m": 0.1331956441077814,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.011718696355819702,
+          -0.0027519166469573975,
+          -0.002542576752603054
+        ],
+        "rotation_vector_rad": [
+          0.040387656539678574,
+          -0.14383944869041443,
+          -0.013379247859120369
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.007640483741468355,
+        "orientation_error_rad": 1.2084920095169673,
+        "observed_translation_per_step_m": [
+          0.003438098356127739,
+          0.0003109574317932129,
+          0.0006293058395385742
+        ],
+        "observed_rotation_per_step_rad": [
+          0.010596349701527449,
+          -0.024131587729199263,
+          -0.00476479186357429
+        ],
+        "predicted_position": [
+          -0.022206759080290794,
+          -0.17456623911857605,
+          1.0824846029281616
+        ],
+        "predicted_orientation_error_rad": 1.155607205841545,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.16433246353203965,
+        "carried_can_margin_m": 0.1331956441077814
+      }
+    },
+    {
+      "family": "held_carry",
+      "source_step": 345,
+      "goal_source": "Saved v15 carry-stage reconstruction",
+      "action": [
+        0.007770918309688568,
+        0.04882335662841797,
+        0.015347766689956188,
+        0.07688666135072708,
+        -0.28867998719215393,
+        -0.02742808684706688,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 6,
+        "work": 6,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 6,
+            "work": 6,
+            "box_margin_m": 0.17099959119428415,
+            "can_margin_m": 0.13812550148703115,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.17099959119428415,
+                "carried_can_margin_m": 0.13812550148703115
+              },
+              {
+                "hand_margin_m": 0.171888406507331,
+                "carried_can_margin_m": 0.13952575789905705
+              },
+              {
+                "hand_margin_m": 0.1717911654551938,
+                "carried_can_margin_m": 0.14114339016860797
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.17099959119428415,
+            "carried_can_margin_m": 0.13812550148703115,
+            "rotation_samples": 3,
+            "translation_m": [
+              0.0003885459154844284,
+              0.0024411678314208984,
+              0.0007673883344978095
+            ],
+            "rotation_vector_rad": [
+              0.03844333067536354,
+              -0.14433999359607697,
+              -0.01371404342353344
+            ],
+            "hand_arc_bound_m": 0.006963283389774816,
+            "second_arc_bound_m": 0.001838686927765768,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.17099959119428415,
+        "can_margin_m": 0.13812550148703115,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.0003885459154844284,
+          0.0024411678314208984,
+          0.0007673883344978095
+        ],
+        "rotation_vector_rad": [
+          0.03844333067536354,
+          -0.14433999359607697,
+          -0.01371404342353344
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.009091556815060322,
+        "orientation_error_rad": 0.9683556019685841,
+        "observed_translation_per_step_m": [
+          -0.0019362792372703552,
+          -0.0011936575174331665,
+          -0.0006029605865478516
+        ],
+        "observed_rotation_per_step_rad": [
+          0.006187811910693631,
+          -0.016964882597275483,
+          -0.0021867650329298162
+        ],
+        "predicted_position": [
+          -0.030298110097646713,
+          -0.1804385632276535,
+          1.079561471939087
+        ],
+        "predicted_orientation_error_rad": 0.932125437540155,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.17099959119428415,
+        "carried_can_margin_m": 0.13812550148703115
+      }
+    },
+    {
+      "family": "held_carry",
+      "source_step": 380,
+      "goal_source": "Saved v15 carry-stage reconstruction",
+      "action": [
+        -0.16159427165985107,
+        -0.05304902791976929,
+        -0.1905481368303299,
+        0.04081914946436882,
+        -0.20035918056964874,
+        -0.017868300899863243,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 6,
+        "work": 6,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 6,
+            "work": 6,
+            "box_margin_m": 0.15508616186512475,
+            "can_margin_m": 0.13692416802146495,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.15610342350565892,
+                "carried_can_margin_m": 0.14024271509420155
+              },
+              {
+                "hand_margin_m": 0.155580423408549,
+                "carried_can_margin_m": 0.13853792227167466
+              },
+              {
+                "hand_margin_m": 0.15508616186512475,
+                "carried_can_margin_m": 0.13692416802146495
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.15508616186512475,
+            "carried_can_margin_m": 0.13692416802146495,
+            "rotation_samples": 3,
+            "translation_m": [
+              -0.008079713582992554,
+              -0.0026524513959884644,
+              -0.009527406841516496
+            ],
+            "rotation_vector_rad": [
+              0.02040957473218441,
+              -0.10017959028482437,
+              -0.008934150449931622
+            ],
+            "hand_arc_bound_m": 0.004766335141945566,
+            "second_arc_bound_m": 0.0012573636349556669,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.15508616186512475,
+        "can_margin_m": 0.13692416802146495,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.008079713582992554,
+          -0.0026524513959884644,
+          -0.009527406841516496
+        ],
+        "rotation_vector_rad": [
+          0.02040957473218441,
+          -0.10017959028482437,
+          -0.008934150449931622
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.006037482217249839,
+        "orientation_error_rad": 0.28299592325742434,
+        "observed_translation_per_step_m": [
+          0.0025680772960186005,
+          0.0005035251379013062,
+          0.0029703378677368164
+        ],
+        "observed_rotation_per_step_rad": [
+          0.009499744043322903,
+          -0.028278090728928763,
+          -0.0038883404017146053
+        ],
+        "predicted_position": [
+          -0.026874661445617676,
+          -0.1753428727388382,
+          1.0894311666488647
+        ],
+        "predicted_orientation_error_rad": 0.22316521437827583,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.15508616186512475,
+        "carried_can_margin_m": 0.13692416802146495
+      }
+    },
+    {
+      "family": "held_carry",
+      "source_step": 396,
+      "goal_source": "Saved v15 carry-stage reconstruction",
+      "action": [
+        0.10566264390945435,
+        -0.0057259202003479,
+        0.10243849456310272,
+        0.03067493997514248,
+        -0.06383319199085236,
+        -0.00336220464669168,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.15319083887727006,
+            "can_margin_m": 0.13138095947998332,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.15372507377007819,
+                "carried_can_margin_m": 0.13230086276586842
+              },
+              {
+                "hand_margin_m": 0.15319083887727006,
+                "carried_can_margin_m": 0.13138095947998332
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.15319083887727006,
+            "carried_can_margin_m": 0.13138095947998332,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.005283132195472717,
+              -0.000286296010017395,
+              0.005121924728155137
+            ],
+            "rotation_vector_rad": [
+              0.01533746998757124,
+              -0.03191659599542618,
+              -0.00168110232334584
+            ],
+            "hand_arc_bound_m": 0.0032929168066011924,
+            "second_arc_bound_m": 0.0008680020858167532,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.15319083887727006,
+        "can_margin_m": 0.13138095947998332,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.005283132195472717,
+          -0.000286296010017395,
+          0.005121924728155137
+        ],
+        "rotation_vector_rad": [
+          0.01533746998757124,
+          -0.03191659599542618,
+          -0.00168110232334584
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.009681900404019995,
+        "orientation_error_rad": 0.08144800923471542,
+        "observed_translation_per_step_m": [
+          -0.0010500885546207428,
+          -0.0005469918251037598,
+          -0.0005717277526855469
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.0007011651657134338,
+          -0.0046753444468765415,
+          -0.0007059694912448687
+        ],
+        "predicted_position": [
+          -0.04274585470557213,
+          -0.17692363262176514,
+          1.0707587003707886
+        ],
+        "predicted_orientation_error_rad": 0.07328251786369719,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.15319083887727006,
+        "carried_can_margin_m": 0.13138095947998332
+      }
+    },
+    {
+      "family": "empty_edge",
+      "source_step": 181,
+      "goal_source": "Previously saved v13 static pretranslation waypoint; static goal fixture, not an exact v15 replay claim",
+      "action": [
+        -0.014264526776969433,
+        0.02394493855535984,
+        0.009357929229736328,
+        -0.1894824057817459,
+        -0.06178521737456322,
+        0.22422979772090912,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 6,
+        "work": 6,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 6,
+            "work": 6,
+            "box_margin_m": 0.11333929397924267,
+            "can_margin_m": 0.10922998104293533,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.11390327593233507,
+                "can_margin_m": 0.10922998104293533
+              },
+              {
+                "hand_margin_m": 0.11343709123587728,
+                "can_margin_m": 0.1109146425021735
+              },
+              {
+                "hand_margin_m": 0.11333929397924267,
+                "can_margin_m": 0.11281878405677412
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.11333929397924267,
+            "rotation_samples": 3,
+            "translation_m": [
+              -0.0007132263388484717,
+              0.001197246927767992,
+              0.0004678964614868164
+            ],
+            "rotation_vector_rad": [
+              -0.09474120289087296,
+              -0.03089260868728161,
+              0.11211489886045456
+            ],
+            "hand_arc_bound_m": 0.006883449405147317,
+            "second_arc_bound_m": 0.006883449405147317,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.11333929397924267,
+        "can_margin_m": 0.10922998104293533,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.0007132263388484717,
+          0.001197246927767992,
+          0.0004678964614868164
+        ],
+        "rotation_vector_rad": [
+          -0.09474120289087296,
+          -0.03089260868728161,
+          0.11211489886045456
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.0012181506374476627,
+        "orientation_error_rad": 1.8086126440059176,
+        "observed_translation_per_step_m": [
+          0.00028464291244745255,
+          -0.0004287809133529663,
+          5.125999450683594e-05
+        ],
+        "observed_rotation_per_step_rad": [
+          0.0006238097100772638,
+          -0.0003821533667713927,
+          0.0014180326123359485
+        ],
+        "predicted_position": [
+          0.014968636445701122,
+          0.09591341763734818,
+          1.050002098083496
+        ],
+        "predicted_orientation_error_rad": 1.8071205840335172,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.11333929397924267
+      },
+      "dense_product_check": {
+        "evaluated_poses": 81,
+        "hand_box_minimum_m": 0.12021937966552942,
+        "second_shape_minimum_m": 0.11611343044808264,
+        "scope": "Finite sanity check only; the radius/arc deduction supplies coverage between samples."
+      },
+      "planning_threshold_check": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 6,
+        "work": 6,
+        "box_margin_m": 0.11333929397924267,
+        "can_margin_m": 0.10922998104293533,
+        "required_can_margin_m": 0.003,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.003,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [
+          {
+            "hand_margin_m": 0.11390327593233507,
+            "can_margin_m": 0.10922998104293533
+          },
+          {
+            "hand_margin_m": 0.11343709123587728,
+            "can_margin_m": 0.1109146425021735
+          },
+          {
+            "hand_margin_m": 0.11333929397924267,
+            "can_margin_m": 0.11281878405677412
+          }
+        ],
+        "arc_bounds_applied": true,
+        "hand_margin_m": 0.11333929397924267,
+        "rotation_samples": 3,
+        "translation_m": [
+          -0.0007132263388484717,
+          0.001197246927767992,
+          0.0004678964614868164
+        ],
+        "rotation_vector_rad": [
+          -0.09474120289087296,
+          -0.03089260868728161,
+          0.11211489886045456
+        ],
+        "hand_arc_bound_m": 0.006883449405147317,
+        "second_arc_bound_m": 0.006883449405147317,
+        "whole_translation_sweep_at_each_orientation": true,
+        "reason": "mixed_envelope_validated"
+      }
+    },
+    {
+      "family": "empty_edge",
+      "source_step": 220,
+      "goal_source": "Previously saved v13 static pretranslation waypoint; static goal fixture, not an exact v15 replay claim",
+      "action": [
+        0.017515700310468674,
+        0.17001350224018097,
+        0.017881393432617188,
+        -0.1880451887845993,
+        -0.081300750374794,
+        0.21915563941001892,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 6,
+        "work": 6,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 6,
+            "work": 6,
+            "box_margin_m": 0.11790590120705935,
+            "can_margin_m": 0.07515131381127389,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.11790590120705935,
+                "can_margin_m": 0.07725089796429126
+              },
+              {
+                "hand_margin_m": 0.11951387738141951,
+                "can_margin_m": 0.07595193326192347
+              },
+              {
+                "hand_margin_m": 0.12125829186342708,
+                "can_margin_m": 0.07515131381127389
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.11790590120705935,
+            "rotation_samples": 3,
+            "translation_m": [
+              0.0008757850155234337,
+              0.008500675112009049,
+              0.0008940696716308594
+            ],
+            "rotation_vector_rad": [
+              -0.09402259439229965,
+              -0.040650375187397,
+              0.10957781970500946
+            ],
+            "hand_arc_bound_m": 0.006909159461044242,
+            "second_arc_bound_m": 0.006909159461044242,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.11790590120705935,
+        "can_margin_m": 0.07515131381127389,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.0008757850155234337,
+          0.008500675112009049,
+          0.0008940696716308594
+        ],
+        "rotation_vector_rad": [
+          -0.09402259439229965,
+          -0.040650375187397,
+          0.10957781970500946
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.019226510874874436,
+        "orientation_error_rad": 0.580062531357319,
+        "observed_translation_per_step_m": [
+          -0.001060226932168007,
+          0.00037829577922821045,
+          -0.00028824806213378906
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.02023813848287113,
+          -0.01023879491178634,
+          0.025296045252822322
+        ],
+        "predicted_position": [
+          0.015825223177671432,
+          0.07888533174991608,
+          1.0501682758331299
+        ],
+        "predicted_orientation_error_rad": 0.512170326022155,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.11790590120705935
+      },
+      "planning_threshold_check": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 6,
+        "work": 6,
+        "box_margin_m": 0.11790590120705935,
+        "can_margin_m": 0.07515131381127389,
+        "required_can_margin_m": 0.003,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.003,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [
+          {
+            "hand_margin_m": 0.11790590120705935,
+            "can_margin_m": 0.07725089796429126
+          },
+          {
+            "hand_margin_m": 0.11951387738141951,
+            "can_margin_m": 0.07595193326192347
+          },
+          {
+            "hand_margin_m": 0.12125829186342708,
+            "can_margin_m": 0.07515131381127389
+          }
+        ],
+        "arc_bounds_applied": true,
+        "hand_margin_m": 0.11790590120705935,
+        "rotation_samples": 3,
+        "translation_m": [
+          0.0008757850155234337,
+          0.008500675112009049,
+          0.0008940696716308594
+        ],
+        "rotation_vector_rad": [
+          -0.09402259439229965,
+          -0.040650375187397,
+          0.10957781970500946
+        ],
+        "hand_arc_bound_m": 0.006909159461044242,
+        "second_arc_bound_m": 0.006909159461044242,
+        "whole_translation_sweep_at_each_orientation": true,
+        "reason": "mixed_envelope_validated"
+      }
+    },
+    {
+      "family": "empty_edge",
+      "source_step": 238,
+      "goal_source": "Previously saved v13 static pretranslation waypoint; static goal fixture, not an exact v15 replay claim",
+      "action": [
+        -0.04340362548828125,
+        -0.07287021726369858,
+        -0.0885772705078125,
+        -0.003010325599461794,
+        -0.013612421229481697,
+        0.03935518488287926,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.13695313540334458,
+            "can_margin_m": 0.08984867498412798,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.13695313540334458,
+                "can_margin_m": 0.09024474736886613
+              },
+              {
+                "hand_margin_m": 0.13704153299273786,
+                "can_margin_m": 0.08984867498412798
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.13695313540334458,
+            "rotation_samples": 2,
+            "translation_m": [
+              -0.0021701812744140624,
+              -0.003643510863184929,
+              -0.004428863525390625
+            ],
+            "rotation_vector_rad": [
+              -0.001505162799730897,
+              -0.0068062106147408485,
+              0.01967759244143963
+            ],
+            "hand_arc_bound_m": 0.0019240913861996328,
+            "second_arc_bound_m": 0.0019240913861996328,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.13695313540334458,
+        "can_margin_m": 0.08984867498412798,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.0021701812744140624,
+          -0.003643510863184929,
+          -0.004428863525390625
+        ],
+        "rotation_vector_rad": [
+          -0.001505162799730897,
+          -0.0068062106147408485,
+          0.01967759244143963
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.004796079693464282,
+        "orientation_error_rad": 0.07041327650480171,
+        "observed_translation_per_step_m": [
+          0.0006785653531551361,
+          0.0011073127388954163,
+          0.0008988380432128906
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.009187365523587015,
+          -0.0010193004259926467,
+          0.009097601467274912
+        ],
+        "predicted_position": [
+          0.01670077908784151,
+          0.10098665207624435,
+          1.0572528839111328
+        ],
+        "predicted_orientation_error_rad": 0.04778316849684768,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.13695313540334458
+      },
+      "planning_threshold_check": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "box_margin_m": 0.13695313540334458,
+        "can_margin_m": 0.08984867498412798,
+        "required_can_margin_m": 0.003,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.003,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [
+          {
+            "hand_margin_m": 0.13695313540334458,
+            "can_margin_m": 0.09024474736886613
+          },
+          {
+            "hand_margin_m": 0.13704153299273786,
+            "can_margin_m": 0.08984867498412798
+          }
+        ],
+        "arc_bounds_applied": true,
+        "hand_margin_m": 0.13695313540334458,
+        "rotation_samples": 2,
+        "translation_m": [
+          -0.0021701812744140624,
+          -0.003643510863184929,
+          -0.004428863525390625
+        ],
+        "rotation_vector_rad": [
+          -0.001505162799730897,
+          -0.0068062106147408485,
+          0.01967759244143963
+        ],
+        "hand_arc_bound_m": 0.0019240913861996328,
+        "second_arc_bound_m": 0.0019240913861996328,
+        "whole_translation_sweep_at_each_orientation": true,
+        "reason": "mixed_envelope_validated"
+      }
+    },
+    {
+      "family": "empty_edge",
+      "source_step": 242,
+      "goal_source": "Previously saved v13 static pretranslation waypoint; static goal fixture, not an exact v15 replay claim",
+      "action": [
+        0.006703549064695835,
+        -0.13210001587867737,
+        -0.09224295616149902,
+        0.007761298678815365,
+        -0.0240006223320961,
+        0.02191329561173916,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.1402556404441089,
+            "can_margin_m": 0.09126075357207035,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.14041873645745,
+                "can_margin_m": 0.09161722949491251
+              },
+              {
+                "hand_margin_m": 0.1402556404441089,
+                "can_margin_m": 0.09126075357207035
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.1402556404441089,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.0003351774532347918,
+              -0.006605000793933869,
+              -0.004612147808074951
+            ],
+            "rotation_vector_rad": [
+              0.0038806493394076824,
+              -0.01200031116604805,
+              0.01095664780586958
+            ],
+            "hand_arc_bound_m": 0.0015399327675584356,
+            "second_arc_bound_m": 0.0015399327675584356,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.1402556404441089,
+        "can_margin_m": 0.09126075357207035,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.0003351774532347918,
+          -0.006605000793933869,
+          -0.004612147808074951
+        ],
+        "rotation_vector_rad": [
+          0.0038806493394076824,
+          -0.01200031116604805,
+          0.01095664780586958
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.009389633078937273,
+        "orientation_error_rad": 0.041453845917138854,
+        "observed_translation_per_step_m": [
+          -0.00037106964737176895,
+          0.0013048425316810608,
+          0.0005477666854858398
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.004226951895076799,
+          0.0013191423139654371,
+          0.005358290995616103
+        ],
+        "predicted_position": [
+          0.01483896654099226,
+          0.10631704330444336,
+          1.0586726665496826
+        ],
+        "predicted_orientation_error_rad": 0.034603409531208024,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.1402556404441089
+      },
+      "planning_threshold_check": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "box_margin_m": 0.1402556404441089,
+        "can_margin_m": 0.09126075357207035,
+        "required_can_margin_m": 0.003,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.003,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [
+          {
+            "hand_margin_m": 0.14041873645745,
+            "can_margin_m": 0.09161722949491251
+          },
+          {
+            "hand_margin_m": 0.1402556404441089,
+            "can_margin_m": 0.09126075357207035
+          }
+        ],
+        "arc_bounds_applied": true,
+        "hand_margin_m": 0.1402556404441089,
+        "rotation_samples": 2,
+        "translation_m": [
+          0.0003351774532347918,
+          -0.006605000793933869,
+          -0.004612147808074951
+        ],
+        "rotation_vector_rad": [
+          0.0038806493394076824,
+          -0.01200031116604805,
+          0.01095664780586958
+        ],
+        "hand_arc_bound_m": 0.0015399327675584356,
+        "second_arc_bound_m": 0.0015399327675584356,
+        "whole_translation_sweep_at_each_orientation": true,
+        "reason": "mixed_envelope_validated"
+      }
+    },
+    {
+      "family": "empty_edge",
+      "source_step": 250,
+      "goal_source": "Previously saved v13 static pretranslation waypoint; static goal fixture, not an exact v15 replay claim",
+      "action": [
+        -0.08377013355493546,
+        -0.12242909520864487,
+        -0.1598036289215088,
+        0.012111841700971127,
+        -0.026576777920126915,
+        0.010790442116558552,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.1430578674116024,
+            "can_margin_m": 0.09433971673801303,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.14333177383839205,
+                "can_margin_m": 0.0946318290522338
+              },
+              {
+                "hand_margin_m": 0.1430578674116024,
+                "can_margin_m": 0.09433971673801303
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.1430578674116024,
+            "rotation_samples": 2,
+            "translation_m": [
+              -0.004188506677746773,
+              -0.006121454760432243,
+              -0.00799018144607544
+            ],
+            "rotation_vector_rad": [
+              0.006055920850485563,
+              -0.013288388960063457,
+              0.005395221058279276
+            ],
+            "hand_arc_bound_m": 0.001435105777104907,
+            "second_arc_bound_m": 0.001435105777104907,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated"
+          }
+        ],
+        "box_margin_m": 0.1430578674116024,
+        "can_margin_m": 0.09433971673801303,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.004188506677746773,
+          -0.006121454760432243,
+          -0.00799018144607544
+        ],
+        "rotation_vector_rad": [
+          0.006055920850485563,
+          -0.013288388960063457,
+          0.005395221058279276
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.016464972233832267,
+        "orientation_error_rad": 0.032294003822106364,
+        "observed_translation_per_step_m": [
+          0.0004986114799976349,
+          0.00048179179430007935,
+          0.00083160400390625
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.00023898121509975383,
+          0.00026202621980481416,
+          0.0018119266156408217
+        ],
+        "predicted_position": [
+          0.02127729170024395,
+          0.107819102704525,
+          1.0645772218704224
+        ],
+        "predicted_orientation_error_rad": 0.03134189580881721,
+        "reason": "d2_damped_mixed_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.1430578674116024
+      },
+      "planning_threshold_check": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "box_margin_m": 0.1430578674116024,
+        "can_margin_m": 0.09433971673801303,
+        "required_can_margin_m": 0.003,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.003,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [
+          {
+            "hand_margin_m": 0.14333177383839205,
+            "can_margin_m": 0.0946318290522338
+          },
+          {
+            "hand_margin_m": 0.1430578674116024,
+            "can_margin_m": 0.09433971673801303
+          }
+        ],
+        "arc_bounds_applied": true,
+        "hand_margin_m": 0.1430578674116024,
+        "rotation_samples": 2,
+        "translation_m": [
+          -0.004188506677746773,
+          -0.006121454760432243,
+          -0.00799018144607544
+        ],
+        "rotation_vector_rad": [
+          0.006055920850485563,
+          -0.013288388960063457,
+          0.005395221058279276
+        ],
+        "hand_arc_bound_m": 0.001435105777104907,
+        "second_arc_bound_m": 0.001435105777104907,
+        "whole_translation_sweep_at_each_orientation": true,
+        "reason": "mixed_envelope_validated"
+      }
+    }
+  ],
+  "negative_checks": [
+    {
+      "check": "hand_box_overlap_rejected",
+      "passed": true,
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": false,
+        "held": false,
+        "work_units": 6,
+        "work": 6,
+        "box_margin_m": -0.10772777813825707,
+        "can_margin_m": 0.10759262076445968,
+        "required_can_margin_m": 0.001,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.001,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [
+          {
+            "hand_margin_m": -0.10772777813825707,
+            "can_margin_m": 0.10973033728824615
+          },
+          {
+            "hand_margin_m": -0.10303447964796131,
+            "can_margin_m": 0.10881029331024865
+          },
+          {
+            "hand_margin_m": -0.09827883932281822,
+            "can_margin_m": 0.10759262076445968
+          }
+        ],
+        "arc_bounds_applied": true,
+        "hand_margin_m": -0.10772777813825707,
+        "rotation_samples": 3,
+        "translation_m": [
+          0.005,
+          0.0,
+          0.0
+        ],
+        "rotation_vector_rad": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "hand_arc_bound_m": 0.004589119055559267,
+        "second_arc_bound_m": 0.004589119055559267,
+        "whole_translation_sweep_at_each_orientation": true,
+        "reason": "mixed_envelope_clearance_unconfirmed"
+      }
+    },
+    {
+      "check": "empty_hand_can_overlap_rejected",
+      "passed": true,
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": false,
+        "held": false,
+        "work_units": 6,
+        "work": 6,
+        "box_margin_m": 0.11619760628192312,
+        "can_margin_m": -0.06181140028074271,
+        "required_can_margin_m": 0.001,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.001,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [
+          {
+            "hand_margin_m": 0.11619760628192312,
+            "can_margin_m": -0.06121549754029253
+          },
+          {
+            "hand_margin_m": 0.12075769500364152,
+            "can_margin_m": -0.06153297868138467
+          },
+          {
+            "hand_margin_m": 0.12541632832745364,
+            "can_margin_m": -0.06181140028074271
+          }
+        ],
+        "arc_bounds_applied": true,
+        "hand_margin_m": 0.11619760628192312,
+        "rotation_samples": 3,
+        "translation_m": [
+          0.005,
+          0.0,
+          0.0
+        ],
+        "rotation_vector_rad": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "hand_arc_bound_m": 0.004589119055559267,
+        "second_arc_bound_m": 0.004589119055559267,
+        "whole_translation_sweep_at_each_orientation": true,
+        "reason": "mixed_envelope_clearance_unconfirmed"
+      }
+    },
+    {
+      "check": "all_scaled_steps_rejected_zero_pose_fallback",
+      "passed": true,
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": false,
+        "held": false,
+        "work_units": 14,
+        "work": 14,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": false,
+            "held": false,
+            "work_units": 6,
+            "work": 6,
+            "box_margin_m": 0.11195773650386716,
+            "can_margin_m": -0.06369506448907171,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.11390328239567014,
+                "can_margin_m": -0.06369506448907171
+              },
+              {
+                "hand_margin_m": 0.11288844292795659,
+                "can_margin_m": -0.06198864544131664
+              },
+              {
+                "hand_margin_m": 0.11195773650386716,
+                "can_margin_m": -0.06003120090463702
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.11195773650386716,
+            "rotation_samples": 3,
+            "translation_m": [
+              0.010000000149011612,
+              0.0,
+              0.0
+            ],
+            "rotation_vector_rad": [
+              0.14999985694885254,
+              0.0,
+              -4.165133144070925e-18
+            ],
+            "hand_arc_bound_m": 0.006883442941812238,
+            "second_arc_bound_m": 0.006883442941812238,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_clearance_unconfirmed"
+          },
+          {
+            "scale": 0.5,
+            "kind": "mixed_pose",
+            "accepted": false,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.11288843508525087,
+            "can_margin_m": -0.06350982826658724,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.11390327555838872,
+                "can_margin_m": -0.06350982826658724
+              },
+              {
+                "hand_margin_m": 0.11288843508525087,
+                "can_margin_m": -0.06180340739726236
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.11288843508525087,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.005000000074505806,
+              0.0,
+              0.0
+            ],
+            "rotation_vector_rad": [
+              0.07500000298023224,
+              0.0,
+              -2.0825686399869937e-18
+            ],
+            "hand_arc_bound_m": 0.0068834497790936575,
+            "second_arc_bound_m": 0.0068834497790936575,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_clearance_unconfirmed"
+          },
+          {
+            "scale": 0.25,
+            "kind": "mixed_pose",
+            "accepted": false,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.11683579122747664,
+            "can_margin_m": -0.0599756381001646,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.11734484419492841,
+                "can_margin_m": -0.0599756381001646
+              },
+              {
+                "hand_margin_m": 0.11683579122747664,
+                "can_margin_m": -0.059154439295530215
+              }
+            ],
+            "arc_bounds_applied": true,
+            "hand_margin_m": 0.11683579122747664,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.002500000037252903,
+              0.0,
+              0.0
+            ],
+            "rotation_vector_rad": [
+              0.03750000149011612,
+              0.0,
+              -1.0412843199934969e-18
+            ],
+            "hand_arc_bound_m": 0.003441881142553979,
+            "second_arc_bound_m": 0.003441881142553979,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_clearance_unconfirmed"
+          }
+        ],
+        "box_margin_m": null,
+        "can_margin_m": null,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_vector_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.020000000000000004,
+        "orientation_error_rad": 3.1,
+        "observed_translation_per_step_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "observed_rotation_per_step_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "predicted_position": [
+          0.014399350620806217,
+          0.09677097946405411,
+          1.0498995780944824
+        ],
+        "predicted_orientation_error_rad": 3.1,
+        "reason": "no_certified_mixed_step"
+      }
+    },
+    {
+      "check": "held_can_box_overlap_rejected_even_when_hand_clear",
+      "passed": true,
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": false,
+        "held": true,
+        "work_units": 6,
+        "work": 6,
+        "box_margin_m": 0.11619760628192312,
+        "can_margin_m": -0.07168602570890556,
+        "required_can_margin_m": 0.001,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.001,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [
+          {
+            "hand_margin_m": 0.11619760628192312,
+            "carried_can_margin_m": -0.07168602570890556
+          },
+          {
+            "hand_margin_m": 0.12075769500364152,
+            "carried_can_margin_m": -0.06878793281096171
+          },
+          {
+            "hand_margin_m": 0.12541632832745364,
+            "carried_can_margin_m": -0.06643783274423218
+          }
+        ],
+        "arc_bounds_applied": true,
+        "hand_margin_m": 0.11619760628192312,
+        "carried_can_margin_m": -0.07168602570890556,
+        "rotation_samples": 3,
+        "translation_m": [
+          0.005,
+          0.0,
+          0.0
+        ],
+        "rotation_vector_rad": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "hand_arc_bound_m": 0.004589119055559267,
+        "second_arc_bound_m": 0.011975207601871752,
+        "whole_translation_sweep_at_each_orientation": true,
+        "reason": "mixed_envelope_clearance_unconfirmed"
+      }
+    },
+    {
+      "check": "translation_cap_rejected_before_geometry",
+      "passed": true,
+      "reason": "command_exceeds_unchanged_motion_caps"
+    },
+    {
+      "check": "rotation_cap_rejected_before_geometry",
+      "passed": true,
+      "reason": "command_exceeds_unchanged_motion_caps"
+    },
+    {
+      "check": "insufficient_geometry_budget_rejected",
+      "passed": true,
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": false,
+        "held": false,
+        "work_units": 0,
+        "work": 0,
+        "box_margin_m": null,
+        "can_margin_m": null,
+        "required_can_margin_m": 0.001,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.001,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [],
+        "arc_bounds_applied": true,
+        "reason": "geometry_budget_insufficient",
+        "required_work_units": 6
+      }
+    },
+    {
+      "check": "nonfinite_observation_rejected_preserves_hold",
+      "passed": true
+    },
+    {
+      "check": "loosened_margin_rejected",
+      "passed": true
+    }
+  ],
+  "mathematical_checks": [
+    {
+      "check": "nearest_rotation_sample_radius_bound",
+      "passed": true,
+      "vertices": 64,
+      "fractions": 1001,
+      "analytic_bound_m": 0.008624494637789654,
+      "largest_observed_distance_m": 0.007959328220093608
+    },
+    {
+      "check": "d2_observed_velocity_brakes_at_goal",
+      "passed": true,
+      "action": [
+        -0.05000000074505806,
+        0.10000000149011612,
+        -0.05000000074505806,
+        -0.013000000268220901,
+        0.005200000014156103,
+        -0.0026000000070780516,
+        0.0
+      ],
+      "work": 4
+    },
+    {
+      "check": "unchanged_caps_after_float32_quantization",
+      "passed": true,
+      "action": [
+        0.40414518117904663,
+        0.40414518117904663,
+        0.40414518117904663,
+        0.2999997138977051,
+        0.0,
+        -8.33026628814185e-18,
+        0.0
+      ],
+      "work": 6
+    }
+  ],
+  "fixed_thresholds": {
+    "hand_box_m": 0.001,
+    "held_can_box_m": 0.001,
+    "empty_execution_can_m": 0.001,
+    "empty_planning_can_m": 0.003,
+    "max_translation_m": 0.035,
+    "max_rotation_rad": 0.15,
+    "delay": 2,
+    "max_work_units": 16
+  },
+  "caller_guards_required": [
+    "joint margin",
+    "stable held transform",
+    "object pose",
+    "aperture",
+    "9mm / .08rad for five consecutive frames",
+    "70-step phase timeout",
+    "400-step total",
+    "D2 FIFO retained"
+  ],
+  "measured_static_proposal_ms": {
+    "count": 10,
+    "median": 11.666900001728209,
+    "maximum": 15.733999993244652,
+    "scope": "Local offline helper timings only, not simulator controller latency."
+  },
+  "maximum_observed_work": 14,
+  "limitations": [
+    "No physics run and no claim of recovered task success.",
+    "Static SAT rejection means unconfirmed, not proof of collision.",
+    "Observed velocity prediction is not a guarantee of D2 queue dynamics.",
+    "Rigid held-object hull does not certify grasp force or full-arm collision safety."
+  ]
+}

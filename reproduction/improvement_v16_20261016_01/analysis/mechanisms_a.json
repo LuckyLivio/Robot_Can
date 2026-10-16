@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "validation_scope": "Three new components disabled: exact saved-input decisions, diagnostics, FIFO, noise, clock and inherited configuration. No physical simulation or new evaluation samples.",
+  "inherited_config_fields": 100,
+  "inherited_defaults_unchanged": true,
+  "profiles_checked": 9,
+  "disabled_episodes": 9,
+  "disabled_controls": 3454,
+  "new_component_effectiveness_not_established": true,
+  "source_sha256": {
+    "reproduction/improvement_v16_20261016_01/recovery/carry_search.py": "484a8e1c9326f829b5ce359a46a41b1d67417f51e21a3bfca914ef6a245c35af",
+    "reproduction/improvement_v16_20261016_01/recovery/pose_servo.py": "9a914a6d2de37e0fe739233f0f9107235ff4b642dd1663cf2828f1f5c71d6fab",
+    "reproduction/improvement_v16_20261016_01/recovery/recovery_controller.py": "4631ae69d893eaf61540468919157426ed117132e70b18f8721bd31516143c11",
+    "reproduction/improvement_v16_20261016_01/verify_mechanisms.py": "72453c2c5f92d1129b3d251e6e6f640b4959fb413d89cfc8545007dbc442268d",
+    "reproduction/improvement_v16_20261016_01/audit_core.py": "c463428453e5347d4b1ddcb32b7a5fbc754d80df0dd20cffe37d88f9c76d788b",
+    "reproduction/improvement_v16_20261016_01/protocols/smoke_jobs.json": "5c3141fb3a32562412248afd95bce565efca1068ea3d8bdbd07df0ea75a9c7a4",
+    "reproduction/improvement_v15_20261016_01/recovery/recovery_controller.py": "57aab4ac4024e3f9915b760981603b5d9f5f8b305832a32de207b1bdd09f462e",
+    "reproduction/improvement_v15_20261016_01/recovery/carry_path.py": "cb926f1bddd73734c5f13a824dd9467bb20aa22637d04ab6a7d28664eb4b25e7",
+    "reproduction/improvement_v15_20261016_01/recovery/edge_path.py": "e04a4c8c2ad03645ef1e1a76ec880082c30664ee55c08c0d72b9855923e82ec6"
+  },
+  "cases": [
+    {
+      "registered_job": "v15_regression_6000005",
+      "comparison_profile": "standard",
+      "source_result": "reproduction/improvement_v15_20261016_01/smoke_a/v15_regression_6000005/result.json",
+      "source_result_sha256": "edd305977c1fc7a854b78144862b49f3be381567829e3af9e47cc255202954be",
+      "source_trace_sha256": "14031e2e77ce0e5743bb7da32346bc5ac05370940ca7fb44bca00889d1b949a4",
+      "job": "v15_regression_6000005",
+      "episodes": 1,
+      "controls": 397
+    },
+    {
+      "registered_job": "v15_known_side_s17",
+      "comparison_profile": "standard",
+      "source_result": "reproduction/improvement_v15_20261016_01/smoke_a/v15_known_side_s17/result.json",
+      "source_result_sha256": "e323c35f8c6a15bce397af883216cce9c9c33945fdfeda310307fb0a8f5b5c40",
+      "source_trace_sha256": "d766b02b84ad18c5a375f9e6a034ec6209d1a4a7a9bb4b570fc8191f34322aaa",
+      "job": "v15_known_side_s17",
+      "episodes": 1,
+      "controls": 344
+    },
+    {
+      "registered_job": "v15_held_wait_demo87",
+      "comparison_profile": "standard",
+      "source_result": "reproduction/improvement_v15_20261016_01/smoke_a/v15_held_wait_demo87/result.json",
+      "source_result_sha256": "de634bd3a04ee4f2ce643a93a739957c5d59a06d58e692a6f522264c13d1d48b",
+      "source_trace_sha256": "b8dccd8c8b7dd85e4d9314c006372551b4ee7ccd8238524d99cf2bb76a1ab63c",
+      "job": "v15_held_wait_demo87",
+      "episodes": 1,
+      "controls": 316
+    },
+    {
+      "registered_job": "v15_known_bc_k2_clean_demo_12000011",
+      "comparison_profile": "standard",
+      "source_result": "reproduction/improvement_v15_20261016_01/smoke_a/v15_known_bc_k2_clean_demo_12000011/result.json",
+      "source_result_sha256": "e7b71592774fac07d2aedff80966cd4432363fed7be8b71ada513082c6a79bcc",
+      "source_trace_sha256": "c1efc5fed979ad5a2ea0bf9431de355ea865a003933cd88a5d0d0188d7587027",
+      "job": "v15_known_bc_k2_clean_demo_12000011",
+      "episodes": 1,
+      "controls": 400
+    },
+    {
+      "registered_job": "v15_known_full_s23_clean_demo_12000036",
+      "comparison_profile": "standard",
+      "source_result": "reproduction/improvement_v15_20261016_01/smoke_a/v15_known_full_s23_clean_demo_12000036/result.json",
+      "source_result_sha256": "6dc1bbd2ccdcb573b3953617faa1afb0f1a668e5bd85007965e779637c471417",
+      "source_trace_sha256": "700483641c88549901359f37d1a542b1f7667a2b6e6f6c93bc8941f3cd377483",
+      "job": "v15_known_full_s23_clean_demo_12000036",
+      "episodes": 1,
+      "controls": 400
+    },
+    {
+      "registered_job": "v15_known_full_s23_noise005_demo_12000021",
+      "comparison_profile": "standard",
+      "source_result": "reproduction/improvement_v15_20261016_01/smoke_a/v15_known_full_s23_noise005_demo_12000021/result.json",
+      "source_result_sha256": "37b02516d8abd59958dd7f77b0440ada35b128ca761ad0cc5ff8d70e63ad96b3",
+      "source_trace_sha256": "3599237176f35297e6fc51725daa471c1020682e7658ed73308b7aaac1f0267b",
+      "job": "v15_known_full_s23_noise005_demo_12000021",
+      "episodes": 1,
+      "controls": 400
+    },
+    {
+      "registered_job": "v15_known13_bc_k2_noise005_demo_13000021",
+      "comparison_profile": "standard",
+      "source_result": "reproduction/improvement_v15_20261016_01/smoke_a/v15_known13_bc_k2_noise005_demo_13000021/result.json",
+      "source_result_sha256": "7c7084a5168bedbde593d70158a19cae6e18a659abfa0e8fdaca4260659e4404",
+      "source_trace_sha256": "9a353605bdab846f315e7b1134df2d6eb4452173088763317f6e341d8a3e469b",
+      "job": "v15_known13_bc_k2_noise005_demo_13000021",
+      "episodes": 1,
+      "controls": 400
+    },
+    {
+      "registered_job": "v15_known13_full_s41_noise005_demo_13000022",
+      "comparison_profile": "standard",
+      "source_result": "reproduction/improvement_v15_20261016_01/smoke_a/v15_known13_full_s41_noise005_demo_13000022/result.json",
+      "source_result_sha256": "ac06dbed89d6f34a054203e51f4ff5998a892171ebc1918aeeb6ea483a716c91",
+      "source_trace_sha256": "70e90636a14c9466957ba84faea2f99d7e6b582cc2135098cc1c3cbb99e3c0e3",
+      "job": "v15_known13_full_s41_noise005_demo_13000022",
+      "episodes": 1,
+      "controls": 400
+    },
+    {
+      "registered_job": "v15_clearance_profile_6000005",
+      "comparison_profile": "clearance_only_parent",
+      "source_result": "reproduction/improvement_v15_20261016_01/smoke_a/v15_clearance_profile_6000005/result.json",
+      "source_result_sha256": "e93b50b24dba8fcc77dc12adaf35622c451eb589e46f2e03aa8d594cb486c037",
+      "source_trace_sha256": "664ad95f33e594d295c946c682b7f83be45073323a9650c49963d350b9129c1f",
+      "job": "v15_clearance_profile_6000005",
+      "episodes": 1,
+      "controls": 397
+    }
+  ]
+}

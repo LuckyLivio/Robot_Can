@@ -1,0 +1,4888 @@
+{
+  "status": "complete",
+  "job": {
+    "id": "ik_known13_bc_k2_noise005_demo_13000021",
+    "method": "bc_k2",
+    "seed": null,
+    "noise": 0.05,
+    "enabled": true,
+    "demos": [
+      "demo_13000021"
+    ],
+    "steps": 400,
+    "config": {
+      "delay": 2,
+      "stable_frames": 5,
+      "stall_steps": 40,
+      "stall_progress_m": 0.005,
+      "max_attempts": 2,
+      "position_gain": 0.5,
+      "max_delta_m": 0.035,
+      "orientation_gain": 0.5,
+      "max_rotation_rad": 0.15,
+      "relative_tolerance_m": 0.012,
+      "near_object_m": 0.09,
+      "grip_gap_min_m": 0.025,
+      "grip_gap_max_m": 0.067,
+      "verified_lift_m": 0.02,
+      "approach_clearance_m": 0.2,
+      "carry_clearance_m": 0.28,
+      "grasp_offset_z_m": 0.012,
+      "close_steps": 16,
+      "lift_probe_m": 0.06,
+      "stage_timeout": 70,
+      "minimum_normal_steps": 80,
+      "long_stall_steps": 65,
+      "progress_epsilon_m": 0.008,
+      "recovery_budget_step": 160,
+      "sideways_axis_z": 0.6,
+      "sideways_grasp_z_m": 0.008,
+      "alignment_switch": true,
+      "region_guard": true,
+      "alignment_stall_steps": 18,
+      "alignment_progress_m": 0.003,
+      "alignment_angle_weight_m": 0.08,
+      "alternate_alignment_timeout": 110,
+      "alternate_rotation_step_rad": 0.25,
+      "corner_distance_m": 0.065,
+      "corner_gap_m": 0.06,
+      "corner_offset_m": 0.006,
+      "corner_clearance_m": 0.001,
+      "time_budget": true,
+      "side_clearance": true,
+      "horizon_steps": 400,
+      "early_stall_steps": 25,
+      "descent_stall_steps": 18,
+      "safe_transit_delta_m": 0.05,
+      "side_gap_m": 0.056,
+      "side_margin_m": 0.001,
+      "aperture_guard": true,
+      "prevent_repeat": true,
+      "aperture_tolerance_m": 0.0045,
+      "gap_uncertainty_m": 0.001,
+      "gap_settle_m": 0.0008,
+      "gap_pulse_interval": 5,
+      "aperture_timeout": 24,
+      "path_margin_m": 0.001,
+      "path_step_m": 0.005,
+      "replan_on_change": true,
+      "unknown_guard": true,
+      "pose_position_m": 0.015,
+      "pose_axis_deg": 20.0,
+      "pose_stable_frames": 4,
+      "pose_stable_position_m": 0.003,
+      "pose_stable_axis_deg": 4.0,
+      "pose_wait_steps": 60,
+      "max_pose_replans": 2,
+      "unknown_recheck_interval": 5,
+      "geometry_support": true,
+      "retreat_replan": true,
+      "joint_selection": true,
+      "bounded_planning": true,
+      "mesh_candidates_per_step": 8,
+      "ik_iterations_per_step": 16,
+      "ik_iterations_per_target": 48,
+      "joint_warning_rad": 0.2,
+      "joint_solution_margin_rad": 0.04,
+      "adaptive_height": true,
+      "edge_path": true,
+      "axis_alignment": true,
+      "can_guard": true,
+      "wait_hold_history": true,
+      "passive_wait_hold": true,
+      "wait_relative_tolerance_m": 0.004,
+      "wait_center_tolerance_m": 0.03,
+      "stable_support": true,
+      "wait_escape": true,
+      "escape_wait_steps": 40,
+      "escape_min_remaining": 180,
+      "escape_max_replans": 1,
+      "escape_raise_m": 0.08,
+      "escape_timeout": 36,
+      "trajectory_tracking": true,
+      "descent_clearance": true,
+      "tracking_velocity_damping": 1.5,
+      "tracking_angular_damping": 0.3,
+      "tracking_max_replans": 1,
+      "recenter_trigger_m": 0.004,
+      "recenter_settle_m": 0.009,
+      "recenter_max_per_attempt": 2,
+      "recenter_timeout": 24,
+      "carry_path": true,
+      "segmented_edge": true,
+      "budget_recenter": true,
+      "ik_continuation": true,
+      "held_pose": false,
+      "edge_stability": false
+    },
+    "baseline_result": "reproduction/recovery_20261012_01/formal/bc_k2_noise005/result.json",
+    "version": "ik",
+    "original_baseline_result": "reproduction/multiseed_20261012_01/evaluations/bc_k2_noise005/delay_bc_shift_dev_d2_k2_noise0.05.json",
+    "baseline_result_v2": "reproduction/recovery_v2_20261012_01/dev_a/bc_k2_noise005/result.json",
+    "baseline_result_v4": "reproduction/recovery_v4_20261012_01/dev_a/v4_bc_k2_noise005/result.json",
+    "baseline_result_v6": "reproduction/improvement_v13_20261016_01/confirmation/v6_bc_k2_noise005/result.json",
+    "dataset": "reproduction/improvement_v13_20261016_01/confirmation_starts.hdf5",
+    "baseline_result_v13": "reproduction/improvement_v13_20261016_01/confirmation/v13_bc_k2_noise005/result.json",
+    "comparison_profile": "standard",
+    "baseline_result_v14": "reproduction/improvement_v15_20261016_01/smoke_a/v14_known13_bc_k2_noise005_demo_13000021/result.json",
+    "baseline_result_v15": "reproduction/improvement_v15_20261016_01/smoke_a/v15_known13_bc_k2_noise005_demo_13000021/result.json",
+    "baseline_result_budget": "reproduction/improvement_v15_20261016_01/smoke_a/budget_known13_bc_k2_noise005_demo_13000021/result.json"
+  },
+  "records": [
+    {
+      "demo": "demo_13000021",
+      "success": false,
+      "steps": 400,
+      "peak_stage_reward": 0.5000089207255092,
+      "ever_grasped": true,
+      "contact_note": "ever_grasped is the legacy bilateral-contact criterion, not stable holding",
+      "stable_hold_observed": true,
+      "stable_hold_steps": 108,
+      "intervention_steps": 294,
+      "intervention_fraction": 0.735,
+      "attempts": 1,
+      "verified_regrasps": 1,
+      "failed_attempts": 0,
+      "phases": {
+        "NORMAL": 106,
+        "RETRACT": 23,
+        "PLAN_WAIT": 15,
+        "POSE_WAIT": 30,
+        "EDGE_ROTATE": 32,
+        "EDGE_APPROACH": 52,
+        "DESCEND": 11,
+        "CLOSE": 18,
+        "TEST_LIFT": 7,
+        "LIFT": 16,
+        "CARRY_PLAN": 12,
+        "CARRY_PATH": 78
+      },
+      "events": [
+        {
+          "step": 107,
+          "from": "NORMAL",
+          "to": "RETRACT",
+          "reason": "long_no_progress",
+          "attempt": 1,
+          "object_position": [
+            -0.046131681650877,
+            -0.18177750706672668,
+            0.8648574948310852
+          ]
+        },
+        {
+          "step": 107,
+          "from": "RETRACT",
+          "to": "RETRACT",
+          "reason": "bounded_mesh_ready",
+          "attempt": 1,
+          "object_position": [
+            -0.04613155871629715,
+            -0.18177750706672668,
+            0.8648574352264404
+          ]
+        },
+        {
+          "step": 123,
+          "from": "RETRACT",
+          "to": "POSE_WAIT",
+          "reason": "mesh_plan_relocate_before_alignment",
+          "attempt": 1,
+          "object_position": [
+            -0.04612981155514717,
+            -0.18177753686904907,
+            0.8648566603660583
+          ]
+        },
+        {
+          "step": 153,
+          "from": "POSE_WAIT",
+          "to": "RETRACT",
+          "reason": "bounded_mesh_ready",
+          "attempt": 1,
+          "object_position": [
+            -0.046126335859298706,
+            -0.18177759647369385,
+            0.8648548722267151
+          ]
+        },
+        {
+          "step": 161,
+          "from": "RETRACT",
+          "to": "ALIGN",
+          "reason": "retracted",
+          "attempt": 1,
+          "object_position": [
+            -0.04612555354833603,
+            -0.18177761137485504,
+            0.8648544549942017
+          ]
+        },
+        {
+          "step": 173,
+          "from": "ALIGN",
+          "to": "EDGE_ROTATE",
+          "reason": "support13_path_validated",
+          "attempt": 1,
+          "object_position": [
+            -0.04612410441040993,
+            -0.18177762627601624,
+            0.8648536801338196
+          ]
+        },
+        {
+          "step": 206,
+          "from": "EDGE_ROTATE",
+          "to": "EDGE_APPROACH",
+          "reason": "edge_rotation_settled",
+          "attempt": 1,
+          "object_position": [
+            -0.046120528131723404,
+            -0.1817777007818222,
+            0.8648517727851868
+          ]
+        },
+        {
+          "step": 258,
+          "from": "EDGE_APPROACH",
+          "to": "DESCEND",
+          "reason": "edge_approach_and_aperture_validated",
+          "attempt": 1,
+          "object_position": [
+            -0.046114712953567505,
+            -0.18177779018878937,
+            0.8648486733436584
+          ]
+        },
+        {
+          "step": 269,
+          "from": "DESCEND",
+          "to": "CLOSE",
+          "reason": "at_grasp_pose",
+          "attempt": 1,
+          "object_position": [
+            -0.046113479882478714,
+            -0.18177780508995056,
+            0.8648480176925659
+          ]
+        },
+        {
+          "step": 287,
+          "from": "CLOSE",
+          "to": "TEST_LIFT",
+          "reason": "close_commands_executed",
+          "attempt": 1,
+          "object_position": [
+            -0.04061206430196762,
+            -0.1807195395231247,
+            0.8644925951957703
+          ]
+        },
+        {
+          "step": 294,
+          "from": "TEST_LIFT",
+          "to": "LIFT",
+          "reason": "lift_follow_confirmed",
+          "attempt": 1,
+          "object_position": [
+            -0.03677834942936897,
+            -0.17979909479618073,
+            0.8929345607757568
+          ]
+        },
+        {
+          "step": 311,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            -0.03829910233616829,
+            -0.17940928041934967,
+            1.0653144121170044
+          ]
+        }
+      ],
+      "guard_events": [],
+      "geometry_events": [
+        {
+          "step": 107,
+          "reason": "tilted_unsettled_family",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 107,
+          "reason": "support13_mesh_candidate",
+          "candidates": 54,
+          "chosen": true
+        },
+        {
+          "step": 153,
+          "reason": "tilted_unsettled_family",
+          "candidates": 0,
+          "chosen": false
+        },
+        {
+          "step": 153,
+          "reason": "support13_mesh_candidate",
+          "candidates": 54,
+          "chosen": true
+        }
+      ],
+      "joint_events": [],
+      "edge_events": [],
+      "wait_hold_events": [],
+      "support13_events": [
+        {
+          "step": 107,
+          "event": "support_candidate",
+          "kind": "leaning",
+          "patches": [
+            {
+              "box": 0,
+              "body": "bin1",
+              "axis": 2,
+              "sign": 1,
+              "point": [
+                -0.036549761944276796,
+                -0.18031004004877857,
+                0.8200000000000001
+              ],
+              "area_m2": 0.0001068043029513778
+            },
+            {
+              "box": 4,
+              "body": "bin1",
+              "axis": 0,
+              "sign": 1,
+              "point": [
+                -0.09000000000000001,
+                -0.18332523656599461,
+                0.8775172795805625
+              ],
+              "area_m2": 7.974934135167311e-05
+            }
+          ],
+          "candidates": 54
+        },
+        {
+          "step": 153,
+          "event": "support_candidate",
+          "kind": "leaning",
+          "patches": [
+            {
+              "box": 0,
+              "body": "bin1",
+              "axis": 2,
+              "sign": 1,
+              "point": [
+                -0.03652877083897652,
+                -0.1803082838622294,
+                0.8200000000000001
+              ],
+              "area_m2": 0.00010672903392767346
+            },
+            {
+              "box": 4,
+              "body": "bin1",
+              "axis": 0,
+              "sign": 1,
+              "point": [
+                -0.09000000000000001,
+                -0.1833254923750905,
+                0.8774994479758791
+              ],
+              "area_m2": 7.97293751470668e-05
+            }
+          ],
+          "candidates": 54
+        },
+        {
+          "step": 173,
+          "event": "path_complete",
+          "chosen": true,
+          "options": [
+            {
+              "index": 0,
+              "distance_m": 0.06,
+              "flip": false,
+              "reason": "validated_waypoints_boxes_and_can",
+              "ik": [
+                {
+                  "success": true,
+                  "iterations": 6,
+                  "q": [
+                    -0.08765484877968047,
+                    1.0590473135685463,
+                    -0.1563156635394425,
+                    -0.9545695336569826,
+                    -0.09010508668726011,
+                    1.2094514804508585,
+                    0.4864711469225791
+                  ],
+                  "position_error_m": 0.0022088512495179735,
+                  "angle_error_rad": 0.005889714475949328,
+                  "limit_margin_rad": 0.7037526864314536
+                },
+                {
+                  "success": true,
+                  "iterations": 5,
+                  "q": [
+                    -0.0071242453147564635,
+                    0.9363390646538399,
+                    -0.11326109624539404,
+                    -1.5721921189446506,
+                    -0.04800071961906738,
+                    1.6855713599895974,
+                    0.6234605591385204
+                  ],
+                  "position_error_m": 0.00024882584043809053,
+                  "angle_error_rad": 0.00046987499164015986,
+                  "limit_margin_rad": 0.82646093534616
+                },
+                {
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    -0.010468090055771855,
+                    0.9326277972864847,
+                    -0.11565943157078486,
+                    -1.729248895549507,
+                    -0.05229254570503711,
+                    1.8395132905239129,
+                    0.6270315654047639
+                  ],
+                  "position_error_m": 6.179804931441982e-05,
+                  "angle_error_rad": 0.00018416286746086467,
+                  "limit_margin_rad": 0.8301722027135152
+                }
+              ],
+              "margins": [
+                {
+                  "kind": "terminal_open_hand_can",
+                  "margin_m": 0.0038759619014494817,
+                  "target_gap_m": 0.064
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.18534346509022578
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.191646488151805
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.19391163802598646
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.1962920607655651
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.1960310966090263
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.1960879587742585
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.19627543734893207
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.19696815175104967
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.19816685393540576
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.19927151230727383
+                },
+                {
+                  "kind": "turn_with_arc_bound",
+                  "margin_m": 0.1990471814248124
+                },
+                {
+                  "kind": "straight_sweep",
+                  "margin_m": 0.06942282718406578
+                },
+                {
+                  "kind": "straight_sweep",
+                  "margin_m": 0.03449310864480705
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.15900413580239783
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.16076836793918928
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.16271688222363226
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.1648373168343034
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.1671161586560648
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.16953885747462263
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.17208998627191066
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.17475330022635074
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.17751184015499502
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.18034804050450706
+                },
+                {
+                  "kind": "turn_can_arc_bound",
+                  "margin_m": 0.18319467058706032
+                },
+                {
+                  "kind": "open_hand_can_sweep",
+                  "margin_m": 0.038191499349687796
+                },
+                {
+                  "kind": "open_hand_can_sweep",
+                  "margin_m": 0.0038759618982274757
+                }
+              ],
+              "accepted": true
+            }
+          ],
+          "work": 43
+        }
+      ],
+      "escape_events": [],
+      "tracking14_events": [
+        {
+          "step": 175,
+          "event": "observed_motion_damping",
+          "phase": "EDGE_ROTATE",
+          "attempt": 1
+        },
+        {
+          "step": 235,
+          "event": "observed_motion_damping",
+          "phase": "EDGE_APPROACH",
+          "attempt": 1
+        }
+      ],
+      "clearance14_events": [],
+      "carry15_events": [
+        {
+          "step": 322,
+          "event": "held_transport_search_complete",
+          "chosen": true,
+          "work": 167,
+          "options": [
+            {
+              "candidate": "current_exact",
+              "accepted": false,
+              "status": "unknown",
+              "carry_goal": [
+                0.20060584902763368,
+                0.40277890503406527,
+                1.079221980571747
+              ],
+              "place_goal": [
+                0.20060584902763368,
+                0.40277890503406527,
+                0.8842219805717468
+              ],
+              "path_ik": [
+                {
+                  "stage": "clearance",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.00013178660777437618,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 0,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.00013178660777437618,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 0,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.010365849238328239,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.02058387441560626,
+                    -0.1427674435451627,
+                    1.079283280223608
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.007176607684629355,
+                    0.5213723961230269,
+                    -0.06227223014178323,
+                    -1.7868870599558508,
+                    -0.06873628563783168,
+                    1.4826803959679982,
+                    0.673128752780256
+                  ],
+                  "position_error_m": 0.001808894044295853,
+                  "angle_error_rad": 0.001641503420641923,
+                  "limit_margin_rad": 1.2414276038769732
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.005837892852723597,
+                    -0.10639768697321414,
+                    1.0792791935801507
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.040747870116345127,
+                    0.5600584446064916,
+                    -0.036423207475892234,
+                    -1.7201982767724426,
+                    -0.034309047479985574,
+                    1.451297804030623,
+                    0.72206485424072
+                  ],
+                  "position_error_m": 0.0018380889891654933,
+                  "angle_error_rad": 0.0018306516983539254,
+                  "limit_margin_rad": 1.2027415553935084
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.008908088710159065,
+                    -0.0700279304012656,
+                    1.0792751069366933
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.07390846183132774,
+                    0.6059683303549255,
+                    -0.012337832768408726,
+                    -1.6415528230247358,
+                    -0.002544048251998207,
+                    1.4173873631918756,
+                    0.771228715981199
+                  ],
+                  "position_error_m": 0.001930157230277815,
+                  "angle_error_rad": 0.0018824720070722424,
+                  "limit_margin_rad": 1.1568316696450744
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.023654070273041727,
+                    -0.03365817382931707,
+                    1.0792710202932358
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.10675988280321158,
+                    0.6600315479698662,
+                    0.009968512410720519,
+                    -1.5489749085245783,
+                    0.02675100151290645,
+                    1.379655088778771,
+                    0.8207419718714554
+                  ],
+                  "position_error_m": 0.0020729050113880393,
+                  "angle_error_rad": 0.0019433065662721966,
+                  "limit_margin_rad": 1.1027684520301337
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.03840005183592439,
+                    0.0027115827426314465,
+                    1.0792669336497784
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.1395651260202074,
+                    0.7235341980652463,
+                    0.030500541691351447,
+                    -1.4398359951308504,
+                    0.05351863171099838,
+                    1.336650901650021,
+                    0.8708604737502764
+                  ],
+                  "position_error_m": 0.0023057970710712744,
+                  "angle_error_rad": 0.0020180661851714136,
+                  "limit_margin_rad": 1.0392658019347536
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.05314603339880705,
+                    0.039081339314579994,
+                    1.079262847006321
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.17267791205408323,
+                    0.7988164677965913,
+                    0.049359155741030135,
+                    -1.3095660133930043,
+                    0.07781511429052297,
+                    1.2860712639584997,
+                    0.9219906479267728
+                  ],
+                  "position_error_m": 0.002724154375615738,
+                  "angle_error_rad": 0.0021670598369876127,
+                  "limit_margin_rad": 0.9639835322034086
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.06789201496168971,
+                    0.07545109588652854,
+                    1.0792587603628636
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.20739689129376848,
+                    0.90676154624349,
+                    0.06631602927040728,
+                    -1.1201858378935639,
+                    0.0986194437588779,
+                    1.2098391294055422,
+                    0.9770515039254903
+                  ],
+                  "position_error_m": 0.00032996775406879603,
+                  "angle_error_rad": 0.0007505562626342839,
+                  "limit_margin_rad": 0.8560384537565099
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.08263799652457238,
+                    0.11182085245847706,
+                    1.0792546737194062
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.2444041415560134,
+                    1.0398374363031926,
+                    0.0834851780851393,
+                    -0.8837625861996607,
+                    0.11895405790438121,
+                    1.1150422298942195,
+                    1.0356929536875292
+                  ],
+                  "position_error_m": 0.0012650859104560647,
+                  "angle_error_rad": 0.002114186981445309,
+                  "limit_margin_rad": 0.7229625636968073
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.09738397808745503,
+                    0.14819060903042558,
+                    1.0792505870759488
+                  ],
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    0.25468127751436925,
+                    1.2742415330808765,
+                    0.23175262579918166,
+                    -0.467951054961652,
+                    0.03632138900475164,
+                    0.9584513019454224,
+                    1.13771208524171
+                  ],
+                  "position_error_m": 0.0065119553439805765,
+                  "angle_error_rad": 0.021122136756137912,
+                  "limit_margin_rad": 0.39815105496165204
+                }
+              ],
+              "geometry": [
+                {
+                  "stage": "placement_validation",
+                  "kind": "placement_precheck",
+                  "hand_margin_m": 0.01461793824281532,
+                  "carried_can_margin_m": 0.019982370880419226,
+                  "accepted": true
+                },
+                {
+                  "stage": "clearance",
+                  "kind": "translation_geometry",
+                  "hand_margin_m": 0.1574916257649607,
+                  "carried_can_margin_m": 0.12039996421773407,
+                  "accepted": true
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.17121773765271026,
+                  "carried_can_margin_m": 0.13483437994778988,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0009506000259297064,
+                  "carried_can_arc_bound_m": 0.0002511721529398874
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.17173014621183957,
+                  "carried_can_margin_m": 0.13479658502279798,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0009506000259297064,
+                  "carried_can_arc_bound_m": 0.0002511721529398874
+                },
+                {
+                  "stage": "transport",
+                  "kind": "translation_geometry",
+                  "hand_margin_m": 0.1682411375806539,
+                  "carried_can_margin_m": 0.13498237088041926,
+                  "accepted": true
+                }
+              ],
+              "validated_prefix": [
+                {
+                  "stage": "clearance",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.02058387441560626,
+                    -0.1427674435451627,
+                    1.079283280223608
+                  ],
+                  "q": [
+                    0.007176607684629355,
+                    0.5213723961230269,
+                    -0.06227223014178323,
+                    -1.7868870599558508,
+                    -0.06873628563783168,
+                    1.4826803959679982,
+                    0.673128752780256
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.005837892852723597,
+                    -0.10639768697321414,
+                    1.0792791935801507
+                  ],
+                  "q": [
+                    0.040747870116345127,
+                    0.5600584446064916,
+                    -0.036423207475892234,
+                    -1.7201982767724426,
+                    -0.034309047479985574,
+                    1.451297804030623,
+                    0.72206485424072
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.008908088710159065,
+                    -0.0700279304012656,
+                    1.0792751069366933
+                  ],
+                  "q": [
+                    0.07390846183132774,
+                    0.6059683303549255,
+                    -0.012337832768408726,
+                    -1.6415528230247358,
+                    -0.002544048251998207,
+                    1.4173873631918756,
+                    0.771228715981199
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.023654070273041727,
+                    -0.03365817382931707,
+                    1.0792710202932358
+                  ],
+                  "q": [
+                    0.10675988280321158,
+                    0.6600315479698662,
+                    0.009968512410720519,
+                    -1.5489749085245783,
+                    0.02675100151290645,
+                    1.379655088778771,
+                    0.8207419718714554
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.03840005183592439,
+                    0.0027115827426314465,
+                    1.0792669336497784
+                  ],
+                  "q": [
+                    0.1395651260202074,
+                    0.7235341980652463,
+                    0.030500541691351447,
+                    -1.4398359951308504,
+                    0.05351863171099838,
+                    1.336650901650021,
+                    0.8708604737502764
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.05314603339880705,
+                    0.039081339314579994,
+                    1.079262847006321
+                  ],
+                  "q": [
+                    0.17267791205408323,
+                    0.7988164677965913,
+                    0.049359155741030135,
+                    -1.3095660133930043,
+                    0.07781511429052297,
+                    1.2860712639584997,
+                    0.9219906479267728
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.06789201496168971,
+                    0.07545109588652854,
+                    1.0792587603628636
+                  ],
+                  "q": [
+                    0.20739689129376848,
+                    0.90676154624349,
+                    0.06631602927040728,
+                    -1.1201858378935639,
+                    0.0986194437588779,
+                    1.2098391294055422,
+                    0.9770515039254903
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.08263799652457238,
+                    0.11182085245847706,
+                    1.0792546737194062
+                  ],
+                  "q": [
+                    0.2444041415560134,
+                    1.0398374363031926,
+                    0.0834851780851393,
+                    -0.8837625861996607,
+                    0.11895405790438121,
+                    1.1150422298942195,
+                    1.0356929536875292
+                  ]
+                }
+              ],
+              "required_joint_margin_rad": 0.04,
+              "required_box_margin_m": 0.001,
+              "max_ik_iterations_per_target": 48,
+              "reason": "local_ik_unconverged"
+            },
+            {
+              "candidate": "outward_15_inset",
+              "accepted": true,
+              "status": "validated",
+              "carry_goal": [
+                0.17122974834135934,
+                0.3819780030786915,
+                1.0822062108180186
+              ],
+              "place_goal": [
+                0.17122974834135934,
+                0.3819780030786915,
+                0.8972062108180187
+              ],
+              "path_ik": [
+                {
+                  "stage": "clearance",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.00013178660777437618,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 0,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.00013178660777437618,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.03488992878330909,
+                    0.43928552648039715,
+                    -0.08938458975658818,
+                    -1.9032959170838708,
+                    -0.0927028663743116,
+                    1.6047900631917578,
+                    0.6213559427972264
+                  ],
+                  "position_error_m": 0.00038183507100659174,
+                  "angle_error_rad": 0.0014028289171872876,
+                  "limit_margin_rad": 1.1685040829161293
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.04260804136795746,
+                    0.39179565659889937,
+                    -0.08844745296955156,
+                    -1.9643311799937146,
+                    -0.07976226256444169,
+                    1.690760867428819,
+                    0.6138693795423883
+                  ],
+                  "position_error_m": 0.00039804752152861224,
+                  "angle_error_rad": 0.0015182825234629914,
+                  "limit_margin_rad": 1.1074688200062854
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.050513430669735404,
+                    0.34594100448264564,
+                    -0.08771025748872505,
+                    -2.024807089787905,
+                    -0.06573063088503765,
+                    1.7775929430701238,
+                    0.6041232301246722
+                  ],
+                  "position_error_m": 0.000415776476360327,
+                  "angle_error_rad": 0.0016125543394996224,
+                  "limit_margin_rad": 1.046992910212095
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.05857143646912421,
+                    0.301926960593039,
+                    -0.08710234923930298,
+                    -2.0845909020097317,
+                    -0.05019387838199772,
+                    1.8652552710003267,
+                    0.5919384525272907
+                  ],
+                  "position_error_m": 0.0004420111654653692,
+                  "angle_error_rad": 0.0017465879595391382,
+                  "limit_margin_rad": 0.9872090979902683
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.0667619571961463,
+                    0.25997962077604314,
+                    -0.08653502914720526,
+                    -2.143547891450789,
+                    -0.03263411386219735,
+                    1.9537586272739658,
+                    0.5769837989921612
+                  ],
+                  "position_error_m": 0.00047949069856599363,
+                  "angle_error_rad": 0.0019354205980961982,
+                  "limit_margin_rad": 0.928252108549211
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.0750522996526621,
+                    0.2203489948261092,
+                    -0.08589219686911252,
+                    -2.201525795484239,
+                    -0.012383921374327714,
+                    2.043101892157295,
+                    0.5587924370719691
+                  ],
+                  "position_error_m": 0.0005313058568146287,
+                  "angle_error_rad": 0.0021975621905957724,
+                  "limit_margin_rad": 0.870274204515761
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.08338738224034686,
+                    0.1833100467105241,
+                    -0.08502207771672074,
+                    -2.2583463397145342,
+                    0.011439490452153034,
+                    2.1332581994916335,
+                    0.5367142523544588
+                  ],
+                  "position_error_m": 0.0006019068118416455,
+                  "angle_error_rad": 0.002558322093403726,
+                  "limit_margin_rad": 0.8134536602854658
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.09167625270810378,
+                    0.1491635110138393,
+                    -0.08372542674031644,
+                    -2.313793076615704,
+                    0.04003485766677589,
+                    2.224153928124758,
+                    0.5098401963060338
+                  ],
+                  "position_error_m": 0.0006976560317488816,
+                  "angle_error_rad": 0.0030532401853303535,
+                  "limit_margin_rad": 0.7580069233842961
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.09977133262289718,
+                    0.1182352604144328,
+                    -0.08173892747109653,
+                    -2.367591238377253,
+                    0.07506963827224694,
+                    2.3156336235482065,
+                    0.47688529008237657
+                  ],
+                  "position_error_m": 0.000827463107919707,
+                  "angle_error_rad": 0.003733361447326347,
+                  "limit_margin_rad": 0.704208761622747
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.10743666257022524,
+                    0.09087350311415769,
+                    -0.07871198011431811,
+                    -2.419371980070372,
+                    0.11891487211364543,
+                    2.407400021845377,
+                    0.43600637850576335
+                  ],
+                  "position_error_m": 0.001003326401857894,
+                  "angle_error_rad": 0.00467307140563936,
+                  "limit_margin_rad": 0.6524280199296282
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.11430099337722566,
+                    0.0674431182443855,
+                    -0.07417522389748614,
+                    -2.4686053754704615,
+                    0.17500506404396188,
+                    2.4989090265932417,
+                    0.38451866551032865
+                  ],
+                  "position_error_m": 0.0012400180704422,
+                  "angle_error_rad": 0.005980158941055799,
+                  "limit_margin_rad": 0.6031946245295385
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.11979596207057011,
+                    0.048316748562771974,
+                    -0.06750236462740161,
+                    -2.514470473260725,
+                    0.2483675170518037,
+                    2.58918219985509,
+                    0.318468136824075
+                  ],
+                  "position_error_m": 0.0015513476959423224,
+                  "angle_error_rad": 0.007802985856154181,
+                  "limit_margin_rad": 0.557329526739275
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.12310486137164614,
+                    0.03386244024819443,
+                    -0.0578822355293046,
+                    -2.5556037939094893,
+                    0.3462921353728294,
+                    2.6764719669794155,
+                    0.23205567342725386
+                  ],
+                  "position_error_m": 0.0019353799849856545,
+                  "angle_error_rad": 0.01031149796316361,
+                  "limit_margin_rad": 0.5161962060905108
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.12324322250389026,
+                    0.024422472373817727,
+                    -0.04437568896862672,
+                    -2.5896535123059454,
+                    0.47873693430699266,
+                    2.7576993702954047,
+                    0.1171456411568868
+                  ],
+                  "position_error_m": 0.0023304904031710228,
+                  "angle_error_rad": 0.013574036041094898,
+                  "limit_margin_rad": 0.48214648769405466
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.02155921569049904,
+                    -0.1417295199040577,
+                    1.0794819564637956
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.07649232496936147,
+                    0.04147612406561201,
+                    0.000653494891163231,
+                    -2.5738308049410192,
+                    0.49357696991645256,
+                    2.776865424123844,
+                    0.1884548883852773
+                  ],
+                  "position_error_m": 0.0020375169827784884,
+                  "angle_error_rad": 0.002298174736176,
+                  "limit_margin_rad": 0.49796919505898085
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.0077885754025091535,
+                    -0.10432183969100418,
+                    1.079676546060526
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.031102642144014557,
+                    0.06800698183857225,
+                    0.03683951718976042,
+                    -2.5460402220388407,
+                    0.4648997662079531,
+                    2.7970028810698597,
+                    0.2933220826116999
+                  ],
+                  "position_error_m": 0.0019501559561642264,
+                  "angle_error_rad": 0.004471921381497751,
+                  "limit_margin_rad": 0.5257597779611594
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.005982064885480733,
+                    -0.06691415947795068,
+                    1.0798711356572561
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.015759037657182243,
+                    0.10067772626769089,
+                    0.06382342666707241,
+                    -2.5083456339785055,
+                    0.4172009153740308,
+                    2.810175059115257,
+                    0.40919887847728087
+                  ],
+                  "position_error_m": 0.0019318508295025395,
+                  "angle_error_rad": 0.00488202979955536,
+                  "limit_margin_rad": 0.5634543660214946
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.019752705173470615,
+                    -0.029506479264897162,
+                    1.0800657252539863
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.06636084768436733,
+                    0.13916853129007575,
+                    0.08021174012815378,
+                    -2.4604544806868023,
+                    0.35782330467950657,
+                    2.8161267144543416,
+                    0.5297416795361671
+                  ],
+                  "position_error_m": 0.001890703537343636,
+                  "angle_error_rad": 0.004705729038467875,
+                  "limit_margin_rad": 0.6113455193131978
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.033523345461460505,
+                    0.007901200948156356,
+                    1.0802603148507166
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.12214356921443802,
+                    0.18288988512434623,
+                    0.08548679034738788,
+                    -2.402111193045664,
+                    0.2928847482342438,
+                    2.8139089111147206,
+                    0.6500461433515488
+                  ],
+                  "position_error_m": 0.0018220994089437424,
+                  "angle_error_rad": 0.004028713078465773,
+                  "limit_margin_rad": 0.6696888069543361
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.04729398574945039,
+                    0.045308881161209846,
+                    1.0804549044474467
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.18250930397912432,
+                    0.23133692207575396,
+                    0.08151133115949526,
+                    -2.333108485303519,
+                    0.22961082087496504,
+                    2.8029493466498505,
+                    0.7645367613536367
+                  ],
+                  "position_error_m": 0.0017607072160291286,
+                  "angle_error_rad": 0.0030690906686043446,
+                  "limit_margin_rad": 0.7386915146964812
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.06106462603744027,
+                    0.08271656137426336,
+                    1.0806494940441769
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.24482170337676012,
+                    0.2842223666518646,
+                    0.07191022369590919,
+                    -2.2535200629440886,
+                    0.17367340859364613,
+                    2.7835019039584923,
+                    0.8687639513669987
+                  ],
+                  "position_error_m": 0.001729394747924427,
+                  "angle_error_rad": 0.0022097318195916306,
+                  "limit_margin_rad": 0.8182799370559115
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.07483526632543015,
+                    0.12012424158731688,
+                    1.0808440836409072
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.30600135599542366,
+                    0.3415056539432625,
+                    0.06018070811206411,
+                    -2.1635330606523078,
+                    0.1274090025935697,
+                    2.756245448498762,
+                    0.9608207457518119
+                  ],
+                  "position_error_m": 0.001740223296490386,
+                  "angle_error_rad": 0.0016967023399758494,
+                  "limit_margin_rad": 0.9082669393476923
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.08860590661342004,
+                    0.1575319218003704,
+                    1.0810386732376374
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.36385854724219996,
+                    0.40339578799975795,
+                    0.04857853058670199,
+                    -2.063059533439128,
+                    0.09053573383680057,
+                    2.721725920228737,
+                    1.0409278129512298
+                  ],
+                  "position_error_m": 0.0018007258537231729,
+                  "angle_error_rad": 0.0015089616223312402,
+                  "limit_margin_rad": 1.0087404665608721
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.10237654690140993,
+                    0.19493960201342392,
+                    1.0812332628343675
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.41729852991304217,
+                    0.4703873653191459,
+                    0.038200815572417876,
+                    -1.951460160020246,
+                    0.061663613405458735,
+                    2.680111317392065,
+                    1.1103035302397277
+                  ],
+                  "position_error_m": 0.001917887078444699,
+                  "angle_error_rad": 0.001500856655969944,
+                  "limit_margin_rad": 1.0723886826079347
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.11614718718939981,
+                    0.23234728222647744,
+                    1.0814278524310978
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.46600206721538195,
+                    0.543356394447889,
+                    0.029426602900817486,
+                    -1.82733316762089,
+                    0.039227569160030396,
+                    2.631120677978379,
+                    1.1703970362737168
+                  ],
+                  "position_error_m": 0.0021080594867089225,
+                  "angle_error_rad": 0.0015785389622061411,
+                  "limit_margin_rad": 1.121379322021621
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.1299178274773897,
+                    0.2697549624395309,
+                    1.081622442027828
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.510093926188238,
+                    0.6237610081581424,
+                    0.02226364090083434,
+                    -1.6881587794004065,
+                    0.021846441423432963,
+                    2.573899683311759,
+                    1.2225571401071207
+                  ],
+                  "position_error_m": 0.0024105161855220566,
+                  "angle_error_rad": 0.0017265314783868732,
+                  "limit_margin_rad": 1.1390389918418575
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.14368846776537958,
+                    0.3071626426525844,
+                    1.0818170316245581
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.5482215682849835,
+                    0.7222047752711666,
+                    0.016993221026947242,
+                    -1.5135141733194786,
+                    0.009209213104222192,
+                    2.4972110536750223,
+                    1.265987534811791
+                  ],
+                  "position_error_m": 0.00012998834045178383,
+                  "angle_error_rad": 0.00031779285136514565,
+                  "limit_margin_rad": 1.0405952247288335
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.15745910805336946,
+                    0.34457032286563793,
+                    1.0820116212212885
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.5843833881442223,
+                    0.8314665035589054,
+                    0.012478291331318784,
+                    -1.3188929950877633,
+                    -0.0011023713269135687,
+                    2.41261611862098,
+                    1.3054100457395308
+                  ],
+                  "position_error_m": 0.00033983237274286444,
+                  "angle_error_rad": 0.0006297596405006446,
+                  "limit_margin_rad": 0.9313334964410945
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0822062108180186
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.6173680901586156,
+                    0.9695858901376795,
+                    0.00888887216280785,
+                    -1.0703379415051069,
+                    -0.008861517700979898,
+                    2.303338815259313,
+                    1.3395743187736167
+                  ],
+                  "position_error_m": 0.0013292314306398573,
+                  "angle_error_rad": 0.001648507874577249,
+                  "limit_margin_rad": 0.7932141098623204
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0452062108180187
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.617451276448908,
+                    1.0280910178277667,
+                    0.008578752290319784,
+                    -1.0608974050032276,
+                    -0.009101543095796482,
+                    2.3505371803182817,
+                    1.3395773822463632
+                  ],
+                  "position_error_m": 0.0010629084120183374,
+                  "angle_error_rad": 0.00021893202349802609,
+                  "limit_margin_rad": 0.7347089821722332
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0082062108180185
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.6176931335357153,
+                    1.0937525749878834,
+                    0.008246222934598514,
+                    -1.0390320819855627,
+                    -0.009347911094991074,
+                    2.394519340687905,
+                    1.3396476432000726
+                  ],
+                  "position_error_m": 0.0011808094702733497,
+                  "angle_error_rad": 3.87182294186449e-05,
+                  "limit_margin_rad": 0.6690474250121166
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.9712062108180186
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.6180007548430173,
+                    1.1700497100099843,
+                    0.007922372171335491,
+                    -0.9970367552941155,
+                    -0.009532413504269671,
+                    2.429174908179941,
+                    1.3396324555612307
+                  ],
+                  "position_error_m": 0.001413287290400833,
+                  "angle_error_rad": 0.0003200710045729165,
+                  "limit_margin_rad": 0.5927502899900157
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.9342062108180187
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.6183760083506433,
+                    1.2589890110839366,
+                    0.007640095443495955,
+                    -0.9305635207123064,
+                    -0.0096248245505746,
+                    2.4521053202900345,
+                    1.3394887134362399
+                  ],
+                  "position_error_m": 0.0018103173555769766,
+                  "angle_error_rad": 0.0007821139205733364,
+                  "limit_margin_rad": 0.5038109889160634
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.8972062108180187
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.6188453786663586,
+                    1.3650681644167157,
+                    0.00743403496955123,
+                    -0.8309064168753296,
+                    -0.009589565260587612,
+                    2.459259780559844,
+                    1.3391567961877242
+                  ],
+                  "position_error_m": 0.00257794119744875,
+                  "angle_error_rad": 0.0015116573014484031,
+                  "limit_margin_rad": 0.3977318355832842
+                }
+              ],
+              "geometry": [
+                {
+                  "stage": "placement_validation",
+                  "kind": "placement_precheck",
+                  "hand_margin_m": 0.011891389192431753,
+                  "carried_can_margin_m": 0.015301364782217977,
+                  "accepted": true
+                },
+                {
+                  "stage": "clearance",
+                  "kind": "translation_geometry",
+                  "hand_margin_m": 0.1574916257649607,
+                  "carried_can_margin_m": 0.12039996421773407,
+                  "accepted": true
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1651951381855612,
+                  "carried_can_margin_m": 0.1332430594836662,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1689769319228651,
+                  "carried_can_margin_m": 0.13370070198493875,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16951502221950862,
+                  "carried_can_margin_m": 0.1344047546443989,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16967755558716346,
+                  "carried_can_margin_m": 0.13535124519237682,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1693149738420892,
+                  "carried_can_margin_m": 0.1365348335230627,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16935257829035658,
+                  "carried_can_margin_m": 0.13794884182342024,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16947366449913376,
+                  "carried_can_margin_m": 0.13953050389444074,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16933858962910303,
+                  "carried_can_margin_m": 0.1413217434533207,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16859935419869734,
+                  "carried_can_margin_m": 0.1433143848161462,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1677274661133828,
+                  "carried_can_margin_m": 0.14549718548742716,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1662751646152487,
+                  "carried_can_margin_m": 0.14785783009162176,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16422750189952506,
+                  "carried_can_margin_m": 0.15038299985656597,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16344033155615537,
+                  "carried_can_margin_m": 0.1484408230579439,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1625921747513818,
+                  "carried_can_margin_m": 0.1456871608925909,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16178902492317096,
+                  "carried_can_margin_m": 0.14311322544515612,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "transport",
+                  "kind": "translation_geometry",
+                  "hand_margin_m": 0.16375718104351927,
+                  "carried_can_margin_m": 0.14495571806221969,
+                  "accepted": true
+                }
+              ],
+              "validated_prefix": [
+                {
+                  "stage": "clearance",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.03488992878330909,
+                    0.43928552648039715,
+                    -0.08938458975658818,
+                    -1.9032959170838708,
+                    -0.0927028663743116,
+                    1.6047900631917578,
+                    0.6213559427972264
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.04260804136795746,
+                    0.39179565659889937,
+                    -0.08844745296955156,
+                    -1.9643311799937146,
+                    -0.07976226256444169,
+                    1.690760867428819,
+                    0.6138693795423883
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.050513430669735404,
+                    0.34594100448264564,
+                    -0.08771025748872505,
+                    -2.024807089787905,
+                    -0.06573063088503765,
+                    1.7775929430701238,
+                    0.6041232301246722
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.05857143646912421,
+                    0.301926960593039,
+                    -0.08710234923930298,
+                    -2.0845909020097317,
+                    -0.05019387838199772,
+                    1.8652552710003267,
+                    0.5919384525272907
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.0667619571961463,
+                    0.25997962077604314,
+                    -0.08653502914720526,
+                    -2.143547891450789,
+                    -0.03263411386219735,
+                    1.9537586272739658,
+                    0.5769837989921612
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.0750522996526621,
+                    0.2203489948261092,
+                    -0.08589219686911252,
+                    -2.201525795484239,
+                    -0.012383921374327714,
+                    2.043101892157295,
+                    0.5587924370719691
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.08338738224034686,
+                    0.1833100467105241,
+                    -0.08502207771672074,
+                    -2.2583463397145342,
+                    0.011439490452153034,
+                    2.1332581994916335,
+                    0.5367142523544588
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.09167625270810378,
+                    0.1491635110138393,
+                    -0.08372542674031644,
+                    -2.313793076615704,
+                    0.04003485766677589,
+                    2.224153928124758,
+                    0.5098401963060338
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.09977133262289718,
+                    0.1182352604144328,
+                    -0.08173892747109653,
+                    -2.367591238377253,
+                    0.07506963827224694,
+                    2.3156336235482065,
+                    0.47688529008237657
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.10743666257022524,
+                    0.09087350311415769,
+                    -0.07871198011431811,
+                    -2.419371980070372,
+                    0.11891487211364543,
+                    2.407400021845377,
+                    0.43600637850576335
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.11430099337722566,
+                    0.0674431182443855,
+                    -0.07417522389748614,
+                    -2.4686053754704615,
+                    0.17500506404396188,
+                    2.4989090265932417,
+                    0.38451866551032865
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.11979596207057011,
+                    0.048316748562771974,
+                    -0.06750236462740161,
+                    -2.514470473260725,
+                    0.2483675170518037,
+                    2.58918219985509,
+                    0.318468136824075
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.12310486137164614,
+                    0.03386244024819443,
+                    -0.0578822355293046,
+                    -2.5556037939094893,
+                    0.3462921353728294,
+                    2.6764719669794155,
+                    0.23205567342725386
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.12324322250389026,
+                    0.024422472373817727,
+                    -0.04437568896862672,
+                    -2.5896535123059454,
+                    0.47873693430699266,
+                    2.7576993702954047,
+                    0.1171456411568868
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.02155921569049904,
+                    -0.1417295199040577,
+                    1.0794819564637956
+                  ],
+                  "q": [
+                    -0.07649232496936147,
+                    0.04147612406561201,
+                    0.000653494891163231,
+                    -2.5738308049410192,
+                    0.49357696991645256,
+                    2.776865424123844,
+                    0.1884548883852773
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.0077885754025091535,
+                    -0.10432183969100418,
+                    1.079676546060526
+                  ],
+                  "q": [
+                    -0.031102642144014557,
+                    0.06800698183857225,
+                    0.03683951718976042,
+                    -2.5460402220388407,
+                    0.4648997662079531,
+                    2.7970028810698597,
+                    0.2933220826116999
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.005982064885480733,
+                    -0.06691415947795068,
+                    1.0798711356572561
+                  ],
+                  "q": [
+                    0.015759037657182243,
+                    0.10067772626769089,
+                    0.06382342666707241,
+                    -2.5083456339785055,
+                    0.4172009153740308,
+                    2.810175059115257,
+                    0.40919887847728087
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.019752705173470615,
+                    -0.029506479264897162,
+                    1.0800657252539863
+                  ],
+                  "q": [
+                    0.06636084768436733,
+                    0.13916853129007575,
+                    0.08021174012815378,
+                    -2.4604544806868023,
+                    0.35782330467950657,
+                    2.8161267144543416,
+                    0.5297416795361671
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.033523345461460505,
+                    0.007901200948156356,
+                    1.0802603148507166
+                  ],
+                  "q": [
+                    0.12214356921443802,
+                    0.18288988512434623,
+                    0.08548679034738788,
+                    -2.402111193045664,
+                    0.2928847482342438,
+                    2.8139089111147206,
+                    0.6500461433515488
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.04729398574945039,
+                    0.045308881161209846,
+                    1.0804549044474467
+                  ],
+                  "q": [
+                    0.18250930397912432,
+                    0.23133692207575396,
+                    0.08151133115949526,
+                    -2.333108485303519,
+                    0.22961082087496504,
+                    2.8029493466498505,
+                    0.7645367613536367
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.06106462603744027,
+                    0.08271656137426336,
+                    1.0806494940441769
+                  ],
+                  "q": [
+                    0.24482170337676012,
+                    0.2842223666518646,
+                    0.07191022369590919,
+                    -2.2535200629440886,
+                    0.17367340859364613,
+                    2.7835019039584923,
+                    0.8687639513669987
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.07483526632543015,
+                    0.12012424158731688,
+                    1.0808440836409072
+                  ],
+                  "q": [
+                    0.30600135599542366,
+                    0.3415056539432625,
+                    0.06018070811206411,
+                    -2.1635330606523078,
+                    0.1274090025935697,
+                    2.756245448498762,
+                    0.9608207457518119
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.08860590661342004,
+                    0.1575319218003704,
+                    1.0810386732376374
+                  ],
+                  "q": [
+                    0.36385854724219996,
+                    0.40339578799975795,
+                    0.04857853058670199,
+                    -2.063059533439128,
+                    0.09053573383680057,
+                    2.721725920228737,
+                    1.0409278129512298
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.10237654690140993,
+                    0.19493960201342392,
+                    1.0812332628343675
+                  ],
+                  "q": [
+                    0.41729852991304217,
+                    0.4703873653191459,
+                    0.038200815572417876,
+                    -1.951460160020246,
+                    0.061663613405458735,
+                    2.680111317392065,
+                    1.1103035302397277
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.11614718718939981,
+                    0.23234728222647744,
+                    1.0814278524310978
+                  ],
+                  "q": [
+                    0.46600206721538195,
+                    0.543356394447889,
+                    0.029426602900817486,
+                    -1.82733316762089,
+                    0.039227569160030396,
+                    2.631120677978379,
+                    1.1703970362737168
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.1299178274773897,
+                    0.2697549624395309,
+                    1.081622442027828
+                  ],
+                  "q": [
+                    0.510093926188238,
+                    0.6237610081581424,
+                    0.02226364090083434,
+                    -1.6881587794004065,
+                    0.021846441423432963,
+                    2.573899683311759,
+                    1.2225571401071207
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.14368846776537958,
+                    0.3071626426525844,
+                    1.0818170316245581
+                  ],
+                  "q": [
+                    0.5482215682849835,
+                    0.7222047752711666,
+                    0.016993221026947242,
+                    -1.5135141733194786,
+                    0.009209213104222192,
+                    2.4972110536750223,
+                    1.265987534811791
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.15745910805336946,
+                    0.34457032286563793,
+                    1.0820116212212885
+                  ],
+                  "q": [
+                    0.5843833881442223,
+                    0.8314665035589054,
+                    0.012478291331318784,
+                    -1.3188929950877633,
+                    -0.0011023713269135687,
+                    2.41261611862098,
+                    1.3054100457395308
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0822062108180186
+                  ],
+                  "q": [
+                    0.6173680901586156,
+                    0.9695858901376795,
+                    0.00888887216280785,
+                    -1.0703379415051069,
+                    -0.008861517700979898,
+                    2.303338815259313,
+                    1.3395743187736167
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0452062108180187
+                  ],
+                  "q": [
+                    0.617451276448908,
+                    1.0280910178277667,
+                    0.008578752290319784,
+                    -1.0608974050032276,
+                    -0.009101543095796482,
+                    2.3505371803182817,
+                    1.3395773822463632
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0082062108180185
+                  ],
+                  "q": [
+                    0.6176931335357153,
+                    1.0937525749878834,
+                    0.008246222934598514,
+                    -1.0390320819855627,
+                    -0.009347911094991074,
+                    2.394519340687905,
+                    1.3396476432000726
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.9712062108180186
+                  ],
+                  "q": [
+                    0.6180007548430173,
+                    1.1700497100099843,
+                    0.007922372171335491,
+                    -0.9970367552941155,
+                    -0.009532413504269671,
+                    2.429174908179941,
+                    1.3396324555612307
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.9342062108180187
+                  ],
+                  "q": [
+                    0.6183760083506433,
+                    1.2589890110839366,
+                    0.007640095443495955,
+                    -0.9305635207123064,
+                    -0.0096248245505746,
+                    2.4521053202900345,
+                    1.3394887134362399
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.8972062108180187
+                  ],
+                  "q": [
+                    0.6188453786663586,
+                    1.3650681644167157,
+                    0.00743403496955123,
+                    -0.8309064168753296,
+                    -0.009589565260587612,
+                    2.459259780559844,
+                    1.3391567961877242
+                  ]
+                }
+              ],
+              "required_joint_margin_rad": 0.04,
+              "required_box_margin_m": 0.001,
+              "max_ik_iterations_per_target": 48,
+              "reason": "sequential_ik_and_all_stages_geometry_validated"
+            }
+          ],
+          "observed_position_drift_m": 0.01064650950054636,
+          "observed_joint_drift_rad": 0.06063191886537719
+        },
+        {
+          "step": 327,
+          "event": "held_segment_settled",
+          "segment": "clearance",
+          "position_error_m": 0.006494414373787788,
+          "angle_rad": 0.023683738150485918,
+          "hand_margin_m": 0.16769184005662055,
+          "carried_can_margin_m": 0.13196262527654318,
+          "accepted": true
+        },
+        {
+          "step": 390,
+          "event": "held_segment_settled",
+          "segment": "reorient",
+          "position_error_m": 0.003952675868324982,
+          "angle_rad": 0.020661886059328494,
+          "accepted": true,
+          "hand_margin_m": 0.16790369345409845,
+          "carried_can_margin_m": 0.14478625775468418,
+          "samples": 2,
+          "arc_bounds_applied": true
+        }
+      ],
+      "edge15_events": [],
+      "budget15_events": [],
+      "ik16_events": [
+        {
+          "step": 311,
+          "event": "bounded_continuation_started",
+          "remaining_steps": 89
+        },
+        {
+          "step": 322,
+          "event": "bounded_continuation_complete",
+          "chosen": true,
+          "work": 167,
+          "options": [
+            {
+              "candidate": "current_exact",
+              "accepted": false,
+              "status": "unknown",
+              "carry_goal": [
+                0.20060584902763368,
+                0.40277890503406527,
+                1.079221980571747
+              ],
+              "place_goal": [
+                0.20060584902763368,
+                0.40277890503406527,
+                0.8842219805717468
+              ],
+              "path_ik": [
+                {
+                  "stage": "clearance",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.00013178660777437618,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 0,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.00013178660777437618,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 0,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.010365849238328239,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.02058387441560626,
+                    -0.1427674435451627,
+                    1.079283280223608
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.007176607684629355,
+                    0.5213723961230269,
+                    -0.06227223014178323,
+                    -1.7868870599558508,
+                    -0.06873628563783168,
+                    1.4826803959679982,
+                    0.673128752780256
+                  ],
+                  "position_error_m": 0.001808894044295853,
+                  "angle_error_rad": 0.001641503420641923,
+                  "limit_margin_rad": 1.2414276038769732
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.005837892852723597,
+                    -0.10639768697321414,
+                    1.0792791935801507
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.040747870116345127,
+                    0.5600584446064916,
+                    -0.036423207475892234,
+                    -1.7201982767724426,
+                    -0.034309047479985574,
+                    1.451297804030623,
+                    0.72206485424072
+                  ],
+                  "position_error_m": 0.0018380889891654933,
+                  "angle_error_rad": 0.0018306516983539254,
+                  "limit_margin_rad": 1.2027415553935084
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.008908088710159065,
+                    -0.0700279304012656,
+                    1.0792751069366933
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.07390846183132774,
+                    0.6059683303549255,
+                    -0.012337832768408726,
+                    -1.6415528230247358,
+                    -0.002544048251998207,
+                    1.4173873631918756,
+                    0.771228715981199
+                  ],
+                  "position_error_m": 0.001930157230277815,
+                  "angle_error_rad": 0.0018824720070722424,
+                  "limit_margin_rad": 1.1568316696450744
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.023654070273041727,
+                    -0.03365817382931707,
+                    1.0792710202932358
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.10675988280321158,
+                    0.6600315479698662,
+                    0.009968512410720519,
+                    -1.5489749085245783,
+                    0.02675100151290645,
+                    1.379655088778771,
+                    0.8207419718714554
+                  ],
+                  "position_error_m": 0.0020729050113880393,
+                  "angle_error_rad": 0.0019433065662721966,
+                  "limit_margin_rad": 1.1027684520301337
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.03840005183592439,
+                    0.0027115827426314465,
+                    1.0792669336497784
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.1395651260202074,
+                    0.7235341980652463,
+                    0.030500541691351447,
+                    -1.4398359951308504,
+                    0.05351863171099838,
+                    1.336650901650021,
+                    0.8708604737502764
+                  ],
+                  "position_error_m": 0.0023057970710712744,
+                  "angle_error_rad": 0.0020180661851714136,
+                  "limit_margin_rad": 1.0392658019347536
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.05314603339880705,
+                    0.039081339314579994,
+                    1.079262847006321
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.17267791205408323,
+                    0.7988164677965913,
+                    0.049359155741030135,
+                    -1.3095660133930043,
+                    0.07781511429052297,
+                    1.2860712639584997,
+                    0.9219906479267728
+                  ],
+                  "position_error_m": 0.002724154375615738,
+                  "angle_error_rad": 0.0021670598369876127,
+                  "limit_margin_rad": 0.9639835322034086
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.06789201496168971,
+                    0.07545109588652854,
+                    1.0792587603628636
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.20739689129376848,
+                    0.90676154624349,
+                    0.06631602927040728,
+                    -1.1201858378935639,
+                    0.0986194437588779,
+                    1.2098391294055422,
+                    0.9770515039254903
+                  ],
+                  "position_error_m": 0.00032996775406879603,
+                  "angle_error_rad": 0.0007505562626342839,
+                  "limit_margin_rad": 0.8560384537565099
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.08263799652457238,
+                    0.11182085245847706,
+                    1.0792546737194062
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.2444041415560134,
+                    1.0398374363031926,
+                    0.0834851780851393,
+                    -0.8837625861996607,
+                    0.11895405790438121,
+                    1.1150422298942195,
+                    1.0356929536875292
+                  ],
+                  "position_error_m": 0.0012650859104560647,
+                  "angle_error_rad": 0.002114186981445309,
+                  "limit_margin_rad": 0.7229625636968073
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.09738397808745503,
+                    0.14819060903042558,
+                    1.0792505870759488
+                  ],
+                  "success": false,
+                  "iterations": 48,
+                  "q": [
+                    0.25468127751436925,
+                    1.2742415330808765,
+                    0.23175262579918166,
+                    -0.467951054961652,
+                    0.03632138900475164,
+                    0.9584513019454224,
+                    1.13771208524171
+                  ],
+                  "position_error_m": 0.0065119553439805765,
+                  "angle_error_rad": 0.021122136756137912,
+                  "limit_margin_rad": 0.39815105496165204
+                }
+              ],
+              "geometry": [
+                {
+                  "stage": "placement_validation",
+                  "kind": "placement_precheck",
+                  "hand_margin_m": 0.01461793824281532,
+                  "carried_can_margin_m": 0.019982370880419226,
+                  "accepted": true
+                },
+                {
+                  "stage": "clearance",
+                  "kind": "translation_geometry",
+                  "hand_margin_m": 0.1574916257649607,
+                  "carried_can_margin_m": 0.12039996421773407,
+                  "accepted": true
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.17121773765271026,
+                  "carried_can_margin_m": 0.13483437994778988,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0009506000259297064,
+                  "carried_can_arc_bound_m": 0.0002511721529398874
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.17173014621183957,
+                  "carried_can_margin_m": 0.13479658502279798,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0009506000259297064,
+                  "carried_can_arc_bound_m": 0.0002511721529398874
+                },
+                {
+                  "stage": "transport",
+                  "kind": "translation_geometry",
+                  "hand_margin_m": 0.1682411375806539,
+                  "carried_can_margin_m": 0.13498237088041926,
+                  "accepted": true
+                }
+              ],
+              "validated_prefix": [
+                {
+                  "stage": "clearance",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.02058387441560626,
+                    -0.1427674435451627,
+                    1.079283280223608
+                  ],
+                  "q": [
+                    0.007176607684629355,
+                    0.5213723961230269,
+                    -0.06227223014178323,
+                    -1.7868870599558508,
+                    -0.06873628563783168,
+                    1.4826803959679982,
+                    0.673128752780256
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.005837892852723597,
+                    -0.10639768697321414,
+                    1.0792791935801507
+                  ],
+                  "q": [
+                    0.040747870116345127,
+                    0.5600584446064916,
+                    -0.036423207475892234,
+                    -1.7201982767724426,
+                    -0.034309047479985574,
+                    1.451297804030623,
+                    0.72206485424072
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.008908088710159065,
+                    -0.0700279304012656,
+                    1.0792751069366933
+                  ],
+                  "q": [
+                    0.07390846183132774,
+                    0.6059683303549255,
+                    -0.012337832768408726,
+                    -1.6415528230247358,
+                    -0.002544048251998207,
+                    1.4173873631918756,
+                    0.771228715981199
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.023654070273041727,
+                    -0.03365817382931707,
+                    1.0792710202932358
+                  ],
+                  "q": [
+                    0.10675988280321158,
+                    0.6600315479698662,
+                    0.009968512410720519,
+                    -1.5489749085245783,
+                    0.02675100151290645,
+                    1.379655088778771,
+                    0.8207419718714554
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.03840005183592439,
+                    0.0027115827426314465,
+                    1.0792669336497784
+                  ],
+                  "q": [
+                    0.1395651260202074,
+                    0.7235341980652463,
+                    0.030500541691351447,
+                    -1.4398359951308504,
+                    0.05351863171099838,
+                    1.336650901650021,
+                    0.8708604737502764
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.05314603339880705,
+                    0.039081339314579994,
+                    1.079262847006321
+                  ],
+                  "q": [
+                    0.17267791205408323,
+                    0.7988164677965913,
+                    0.049359155741030135,
+                    -1.3095660133930043,
+                    0.07781511429052297,
+                    1.2860712639584997,
+                    0.9219906479267728
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.06789201496168971,
+                    0.07545109588652854,
+                    1.0792587603628636
+                  ],
+                  "q": [
+                    0.20739689129376848,
+                    0.90676154624349,
+                    0.06631602927040728,
+                    -1.1201858378935639,
+                    0.0986194437588779,
+                    1.2098391294055422,
+                    0.9770515039254903
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.08263799652457238,
+                    0.11182085245847706,
+                    1.0792546737194062
+                  ],
+                  "q": [
+                    0.2444041415560134,
+                    1.0398374363031926,
+                    0.0834851780851393,
+                    -0.8837625861996607,
+                    0.11895405790438121,
+                    1.1150422298942195,
+                    1.0356929536875292
+                  ]
+                }
+              ],
+              "required_joint_margin_rad": 0.04,
+              "required_box_margin_m": 0.001,
+              "max_ik_iterations_per_target": 48,
+              "reason": "local_ik_unconverged"
+            },
+            {
+              "candidate": "outward_15_inset",
+              "accepted": true,
+              "status": "validated",
+              "carry_goal": [
+                0.17122974834135934,
+                0.3819780030786915,
+                1.0822062108180186
+              ],
+              "place_goal": [
+                0.17122974834135934,
+                0.3819780030786915,
+                0.8972062108180187
+              ],
+              "path_ik": [
+                {
+                  "stage": "clearance",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.00013178660777437618,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 0,
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ],
+                  "position_error_m": 0.00018016667322060022,
+                  "angle_error_rad": 0.00013178660777437618,
+                  "limit_margin_rad": 1.2271857467780871
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.03488992878330909,
+                    0.43928552648039715,
+                    -0.08938458975658818,
+                    -1.9032959170838708,
+                    -0.0927028663743116,
+                    1.6047900631917578,
+                    0.6213559427972264
+                  ],
+                  "position_error_m": 0.00038183507100659174,
+                  "angle_error_rad": 0.0014028289171872876,
+                  "limit_margin_rad": 1.1685040829161293
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.04260804136795746,
+                    0.39179565659889937,
+                    -0.08844745296955156,
+                    -1.9643311799937146,
+                    -0.07976226256444169,
+                    1.690760867428819,
+                    0.6138693795423883
+                  ],
+                  "position_error_m": 0.00039804752152861224,
+                  "angle_error_rad": 0.0015182825234629914,
+                  "limit_margin_rad": 1.1074688200062854
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.050513430669735404,
+                    0.34594100448264564,
+                    -0.08771025748872505,
+                    -2.024807089787905,
+                    -0.06573063088503765,
+                    1.7775929430701238,
+                    0.6041232301246722
+                  ],
+                  "position_error_m": 0.000415776476360327,
+                  "angle_error_rad": 0.0016125543394996224,
+                  "limit_margin_rad": 1.046992910212095
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.05857143646912421,
+                    0.301926960593039,
+                    -0.08710234923930298,
+                    -2.0845909020097317,
+                    -0.05019387838199772,
+                    1.8652552710003267,
+                    0.5919384525272907
+                  ],
+                  "position_error_m": 0.0004420111654653692,
+                  "angle_error_rad": 0.0017465879595391382,
+                  "limit_margin_rad": 0.9872090979902683
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.0667619571961463,
+                    0.25997962077604314,
+                    -0.08653502914720526,
+                    -2.143547891450789,
+                    -0.03263411386219735,
+                    1.9537586272739658,
+                    0.5769837989921612
+                  ],
+                  "position_error_m": 0.00047949069856599363,
+                  "angle_error_rad": 0.0019354205980961982,
+                  "limit_margin_rad": 0.928252108549211
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.0750522996526621,
+                    0.2203489948261092,
+                    -0.08589219686911252,
+                    -2.201525795484239,
+                    -0.012383921374327714,
+                    2.043101892157295,
+                    0.5587924370719691
+                  ],
+                  "position_error_m": 0.0005313058568146287,
+                  "angle_error_rad": 0.0021975621905957724,
+                  "limit_margin_rad": 0.870274204515761
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.08338738224034686,
+                    0.1833100467105241,
+                    -0.08502207771672074,
+                    -2.2583463397145342,
+                    0.011439490452153034,
+                    2.1332581994916335,
+                    0.5367142523544588
+                  ],
+                  "position_error_m": 0.0006019068118416455,
+                  "angle_error_rad": 0.002558322093403726,
+                  "limit_margin_rad": 0.8134536602854658
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.09167625270810378,
+                    0.1491635110138393,
+                    -0.08372542674031644,
+                    -2.313793076615704,
+                    0.04003485766677589,
+                    2.224153928124758,
+                    0.5098401963060338
+                  ],
+                  "position_error_m": 0.0006976560317488816,
+                  "angle_error_rad": 0.0030532401853303535,
+                  "limit_margin_rad": 0.7580069233842961
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.09977133262289718,
+                    0.1182352604144328,
+                    -0.08173892747109653,
+                    -2.367591238377253,
+                    0.07506963827224694,
+                    2.3156336235482065,
+                    0.47688529008237657
+                  ],
+                  "position_error_m": 0.000827463107919707,
+                  "angle_error_rad": 0.003733361447326347,
+                  "limit_margin_rad": 0.704208761622747
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.10743666257022524,
+                    0.09087350311415769,
+                    -0.07871198011431811,
+                    -2.419371980070372,
+                    0.11891487211364543,
+                    2.407400021845377,
+                    0.43600637850576335
+                  ],
+                  "position_error_m": 0.001003326401857894,
+                  "angle_error_rad": 0.00467307140563936,
+                  "limit_margin_rad": 0.6524280199296282
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.11430099337722566,
+                    0.0674431182443855,
+                    -0.07417522389748614,
+                    -2.4686053754704615,
+                    0.17500506404396188,
+                    2.4989090265932417,
+                    0.38451866551032865
+                  ],
+                  "position_error_m": 0.0012400180704422,
+                  "angle_error_rad": 0.005980158941055799,
+                  "limit_margin_rad": 0.6031946245295385
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.11979596207057011,
+                    0.048316748562771974,
+                    -0.06750236462740161,
+                    -2.514470473260725,
+                    0.2483675170518037,
+                    2.58918219985509,
+                    0.318468136824075
+                  ],
+                  "position_error_m": 0.0015513476959423224,
+                  "angle_error_rad": 0.007802985856154181,
+                  "limit_margin_rad": 0.557329526739275
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.12310486137164614,
+                    0.03386244024819443,
+                    -0.0578822355293046,
+                    -2.5556037939094893,
+                    0.3462921353728294,
+                    2.6764719669794155,
+                    0.23205567342725386
+                  ],
+                  "position_error_m": 0.0019353799849856545,
+                  "angle_error_rad": 0.01031149796316361,
+                  "limit_margin_rad": 0.5161962060905108
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.12324322250389026,
+                    0.024422472373817727,
+                    -0.04437568896862672,
+                    -2.5896535123059454,
+                    0.47873693430699266,
+                    2.7576993702954047,
+                    0.1171456411568868
+                  ],
+                  "position_error_m": 0.0023304904031710228,
+                  "angle_error_rad": 0.013574036041094898,
+                  "limit_margin_rad": 0.48214648769405466
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.02155921569049904,
+                    -0.1417295199040577,
+                    1.0794819564637956
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.07649232496936147,
+                    0.04147612406561201,
+                    0.000653494891163231,
+                    -2.5738308049410192,
+                    0.49357696991645256,
+                    2.776865424123844,
+                    0.1884548883852773
+                  ],
+                  "position_error_m": 0.0020375169827784884,
+                  "angle_error_rad": 0.002298174736176,
+                  "limit_margin_rad": 0.49796919505898085
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.0077885754025091535,
+                    -0.10432183969100418,
+                    1.079676546060526
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    -0.031102642144014557,
+                    0.06800698183857225,
+                    0.03683951718976042,
+                    -2.5460402220388407,
+                    0.4648997662079531,
+                    2.7970028810698597,
+                    0.2933220826116999
+                  ],
+                  "position_error_m": 0.0019501559561642264,
+                  "angle_error_rad": 0.004471921381497751,
+                  "limit_margin_rad": 0.5257597779611594
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.005982064885480733,
+                    -0.06691415947795068,
+                    1.0798711356572561
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.015759037657182243,
+                    0.10067772626769089,
+                    0.06382342666707241,
+                    -2.5083456339785055,
+                    0.4172009153740308,
+                    2.810175059115257,
+                    0.40919887847728087
+                  ],
+                  "position_error_m": 0.0019318508295025395,
+                  "angle_error_rad": 0.00488202979955536,
+                  "limit_margin_rad": 0.5634543660214946
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.019752705173470615,
+                    -0.029506479264897162,
+                    1.0800657252539863
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.06636084768436733,
+                    0.13916853129007575,
+                    0.08021174012815378,
+                    -2.4604544806868023,
+                    0.35782330467950657,
+                    2.8161267144543416,
+                    0.5297416795361671
+                  ],
+                  "position_error_m": 0.001890703537343636,
+                  "angle_error_rad": 0.004705729038467875,
+                  "limit_margin_rad": 0.6113455193131978
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.033523345461460505,
+                    0.007901200948156356,
+                    1.0802603148507166
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.12214356921443802,
+                    0.18288988512434623,
+                    0.08548679034738788,
+                    -2.402111193045664,
+                    0.2928847482342438,
+                    2.8139089111147206,
+                    0.6500461433515488
+                  ],
+                  "position_error_m": 0.0018220994089437424,
+                  "angle_error_rad": 0.004028713078465773,
+                  "limit_margin_rad": 0.6696888069543361
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.04729398574945039,
+                    0.045308881161209846,
+                    1.0804549044474467
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.18250930397912432,
+                    0.23133692207575396,
+                    0.08151133115949526,
+                    -2.333108485303519,
+                    0.22961082087496504,
+                    2.8029493466498505,
+                    0.7645367613536367
+                  ],
+                  "position_error_m": 0.0017607072160291286,
+                  "angle_error_rad": 0.0030690906686043446,
+                  "limit_margin_rad": 0.7386915146964812
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.06106462603744027,
+                    0.08271656137426336,
+                    1.0806494940441769
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.24482170337676012,
+                    0.2842223666518646,
+                    0.07191022369590919,
+                    -2.2535200629440886,
+                    0.17367340859364613,
+                    2.7835019039584923,
+                    0.8687639513669987
+                  ],
+                  "position_error_m": 0.001729394747924427,
+                  "angle_error_rad": 0.0022097318195916306,
+                  "limit_margin_rad": 0.8182799370559115
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.07483526632543015,
+                    0.12012424158731688,
+                    1.0808440836409072
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.30600135599542366,
+                    0.3415056539432625,
+                    0.06018070811206411,
+                    -2.1635330606523078,
+                    0.1274090025935697,
+                    2.756245448498762,
+                    0.9608207457518119
+                  ],
+                  "position_error_m": 0.001740223296490386,
+                  "angle_error_rad": 0.0016967023399758494,
+                  "limit_margin_rad": 0.9082669393476923
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.08860590661342004,
+                    0.1575319218003704,
+                    1.0810386732376374
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.36385854724219996,
+                    0.40339578799975795,
+                    0.04857853058670199,
+                    -2.063059533439128,
+                    0.09053573383680057,
+                    2.721725920228737,
+                    1.0409278129512298
+                  ],
+                  "position_error_m": 0.0018007258537231729,
+                  "angle_error_rad": 0.0015089616223312402,
+                  "limit_margin_rad": 1.0087404665608721
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.10237654690140993,
+                    0.19493960201342392,
+                    1.0812332628343675
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.41729852991304217,
+                    0.4703873653191459,
+                    0.038200815572417876,
+                    -1.951460160020246,
+                    0.061663613405458735,
+                    2.680111317392065,
+                    1.1103035302397277
+                  ],
+                  "position_error_m": 0.001917887078444699,
+                  "angle_error_rad": 0.001500856655969944,
+                  "limit_margin_rad": 1.0723886826079347
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.11614718718939981,
+                    0.23234728222647744,
+                    1.0814278524310978
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.46600206721538195,
+                    0.543356394447889,
+                    0.029426602900817486,
+                    -1.82733316762089,
+                    0.039227569160030396,
+                    2.631120677978379,
+                    1.1703970362737168
+                  ],
+                  "position_error_m": 0.0021080594867089225,
+                  "angle_error_rad": 0.0015785389622061411,
+                  "limit_margin_rad": 1.121379322021621
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.1299178274773897,
+                    0.2697549624395309,
+                    1.081622442027828
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.510093926188238,
+                    0.6237610081581424,
+                    0.02226364090083434,
+                    -1.6881587794004065,
+                    0.021846441423432963,
+                    2.573899683311759,
+                    1.2225571401071207
+                  ],
+                  "position_error_m": 0.0024105161855220566,
+                  "angle_error_rad": 0.0017265314783868732,
+                  "limit_margin_rad": 1.1390389918418575
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.14368846776537958,
+                    0.3071626426525844,
+                    1.0818170316245581
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.5482215682849835,
+                    0.7222047752711666,
+                    0.016993221026947242,
+                    -1.5135141733194786,
+                    0.009209213104222192,
+                    2.4972110536750223,
+                    1.265987534811791
+                  ],
+                  "position_error_m": 0.00012998834045178383,
+                  "angle_error_rad": 0.00031779285136514565,
+                  "limit_margin_rad": 1.0405952247288335
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.15745910805336946,
+                    0.34457032286563793,
+                    1.0820116212212885
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.5843833881442223,
+                    0.8314665035589054,
+                    0.012478291331318784,
+                    -1.3188929950877633,
+                    -0.0011023713269135687,
+                    2.41261611862098,
+                    1.3054100457395308
+                  ],
+                  "position_error_m": 0.00033983237274286444,
+                  "angle_error_rad": 0.0006297596405006446,
+                  "limit_margin_rad": 0.9313334964410945
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0822062108180186
+                  ],
+                  "success": true,
+                  "iterations": 2,
+                  "q": [
+                    0.6173680901586156,
+                    0.9695858901376795,
+                    0.00888887216280785,
+                    -1.0703379415051069,
+                    -0.008861517700979898,
+                    2.303338815259313,
+                    1.3395743187736167
+                  ],
+                  "position_error_m": 0.0013292314306398573,
+                  "angle_error_rad": 0.001648507874577249,
+                  "limit_margin_rad": 0.7932141098623204
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0452062108180187
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.617451276448908,
+                    1.0280910178277667,
+                    0.008578752290319784,
+                    -1.0608974050032276,
+                    -0.009101543095796482,
+                    2.3505371803182817,
+                    1.3395773822463632
+                  ],
+                  "position_error_m": 0.0010629084120183374,
+                  "angle_error_rad": 0.00021893202349802609,
+                  "limit_margin_rad": 0.7347089821722332
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0082062108180185
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.6176931335357153,
+                    1.0937525749878834,
+                    0.008246222934598514,
+                    -1.0390320819855627,
+                    -0.009347911094991074,
+                    2.394519340687905,
+                    1.3396476432000726
+                  ],
+                  "position_error_m": 0.0011808094702733497,
+                  "angle_error_rad": 3.87182294186449e-05,
+                  "limit_margin_rad": 0.6690474250121166
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.9712062108180186
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.6180007548430173,
+                    1.1700497100099843,
+                    0.007922372171335491,
+                    -0.9970367552941155,
+                    -0.009532413504269671,
+                    2.429174908179941,
+                    1.3396324555612307
+                  ],
+                  "position_error_m": 0.001413287290400833,
+                  "angle_error_rad": 0.0003200710045729165,
+                  "limit_margin_rad": 0.5927502899900157
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.9342062108180187
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.6183760083506433,
+                    1.2589890110839366,
+                    0.007640095443495955,
+                    -0.9305635207123064,
+                    -0.0096248245505746,
+                    2.4521053202900345,
+                    1.3394887134362399
+                  ],
+                  "position_error_m": 0.0018103173555769766,
+                  "angle_error_rad": 0.0007821139205733364,
+                  "limit_margin_rad": 0.5038109889160634
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.8972062108180187
+                  ],
+                  "success": true,
+                  "iterations": 1,
+                  "q": [
+                    0.6188453786663586,
+                    1.3650681644167157,
+                    0.00743403496955123,
+                    -0.8309064168753296,
+                    -0.009589565260587612,
+                    2.459259780559844,
+                    1.3391567961877242
+                  ],
+                  "position_error_m": 0.00257794119744875,
+                  "angle_error_rad": 0.0015116573014484031,
+                  "limit_margin_rad": 0.3977318355832842
+                }
+              ],
+              "geometry": [
+                {
+                  "stage": "placement_validation",
+                  "kind": "placement_precheck",
+                  "hand_margin_m": 0.011891389192431753,
+                  "carried_can_margin_m": 0.015301364782217977,
+                  "accepted": true
+                },
+                {
+                  "stage": "clearance",
+                  "kind": "translation_geometry",
+                  "hand_margin_m": 0.1574916257649607,
+                  "carried_can_margin_m": 0.12039996421773407,
+                  "accepted": true
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1651951381855612,
+                  "carried_can_margin_m": 0.1332430594836662,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1689769319228651,
+                  "carried_can_margin_m": 0.13370070198493875,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16951502221950862,
+                  "carried_can_margin_m": 0.1344047546443989,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16967755558716346,
+                  "carried_can_margin_m": 0.13535124519237682,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1693149738420892,
+                  "carried_can_margin_m": 0.1365348335230627,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16935257829035658,
+                  "carried_can_margin_m": 0.13794884182342024,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16947366449913376,
+                  "carried_can_margin_m": 0.13953050389444074,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16933858962910303,
+                  "carried_can_margin_m": 0.1413217434533207,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16859935419869734,
+                  "carried_can_margin_m": 0.1433143848161462,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1677274661133828,
+                  "carried_can_margin_m": 0.14549718548742716,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1662751646152487,
+                  "carried_can_margin_m": 0.14785783009162176,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16422750189952506,
+                  "carried_can_margin_m": 0.15038299985656597,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16344033155615537,
+                  "carried_can_margin_m": 0.1484408230579439,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.1625921747513818,
+                  "carried_can_margin_m": 0.1456871608925909,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "reorient",
+                  "kind": "rotation_geometry",
+                  "hand_margin_m": 0.16178902492317096,
+                  "carried_can_margin_m": 0.14311322544515612,
+                  "accepted": true,
+                  "hand_arc_bound_m": 0.0069731994930787465,
+                  "carried_can_arc_bound_m": 0.0018424926170635676
+                },
+                {
+                  "stage": "transport",
+                  "kind": "translation_geometry",
+                  "hand_margin_m": 0.16375718104351927,
+                  "carried_can_margin_m": 0.14495571806221969,
+                  "accepted": true
+                }
+              ],
+              "validated_prefix": [
+                {
+                  "stage": "clearance",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.027587362559517853,
+                    0.4869066135067949,
+                    -0.09050222971295846,
+                    -1.844614253221913,
+                    -0.10494928097569163,
+                    1.5222998270623516,
+                    0.6261348403659578
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.03488992878330909,
+                    0.43928552648039715,
+                    -0.08938458975658818,
+                    -1.9032959170838708,
+                    -0.0927028663743116,
+                    1.6047900631917578,
+                    0.6213559427972264
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.04260804136795746,
+                    0.39179565659889937,
+                    -0.08844745296955156,
+                    -1.9643311799937146,
+                    -0.07976226256444169,
+                    1.690760867428819,
+                    0.6138693795423883
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.050513430669735404,
+                    0.34594100448264564,
+                    -0.08771025748872505,
+                    -2.024807089787905,
+                    -0.06573063088503765,
+                    1.7775929430701238,
+                    0.6041232301246722
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.05857143646912421,
+                    0.301926960593039,
+                    -0.08710234923930298,
+                    -2.0845909020097317,
+                    -0.05019387838199772,
+                    1.8652552710003267,
+                    0.5919384525272907
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.0667619571961463,
+                    0.25997962077604314,
+                    -0.08653502914720526,
+                    -2.143547891450789,
+                    -0.03263411386219735,
+                    1.9537586272739658,
+                    0.5769837989921612
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.0750522996526621,
+                    0.2203489948261092,
+                    -0.08589219686911252,
+                    -2.201525795484239,
+                    -0.012383921374327714,
+                    2.043101892157295,
+                    0.5587924370719691
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.08338738224034686,
+                    0.1833100467105241,
+                    -0.08502207771672074,
+                    -2.2583463397145342,
+                    0.011439490452153034,
+                    2.1332581994916335,
+                    0.5367142523544588
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.09167625270810378,
+                    0.1491635110138393,
+                    -0.08372542674031644,
+                    -2.313793076615704,
+                    0.04003485766677589,
+                    2.224153928124758,
+                    0.5098401963060338
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.09977133262289718,
+                    0.1182352604144328,
+                    -0.08173892747109653,
+                    -2.367591238377253,
+                    0.07506963827224694,
+                    2.3156336235482065,
+                    0.47688529008237657
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.10743666257022524,
+                    0.09087350311415769,
+                    -0.07871198011431811,
+                    -2.419371980070372,
+                    0.11891487211364543,
+                    2.407400021845377,
+                    0.43600637850576335
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.11430099337722566,
+                    0.0674431182443855,
+                    -0.07417522389748614,
+                    -2.4686053754704615,
+                    0.17500506404396188,
+                    2.4989090265932417,
+                    0.38451866551032865
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.11979596207057011,
+                    0.048316748562771974,
+                    -0.06750236462740161,
+                    -2.514470473260725,
+                    0.2483675170518037,
+                    2.58918219985509,
+                    0.318468136824075
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.12310486137164614,
+                    0.03386244024819443,
+                    -0.0578822355293046,
+                    -2.5556037939094893,
+                    0.3462921353728294,
+                    2.6764719669794155,
+                    0.23205567342725386
+                  ]
+                },
+                {
+                  "stage": "reorient",
+                  "point": [
+                    -0.03532985597848892,
+                    -0.1791372001171112,
+                    1.0792873668670655
+                  ],
+                  "q": [
+                    -0.12324322250389026,
+                    0.024422472373817727,
+                    -0.04437568896862672,
+                    -2.5896535123059454,
+                    0.47873693430699266,
+                    2.7576993702954047,
+                    0.1171456411568868
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.02155921569049904,
+                    -0.1417295199040577,
+                    1.0794819564637956
+                  ],
+                  "q": [
+                    -0.07649232496936147,
+                    0.04147612406561201,
+                    0.000653494891163231,
+                    -2.5738308049410192,
+                    0.49357696991645256,
+                    2.776865424123844,
+                    0.1884548883852773
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    -0.0077885754025091535,
+                    -0.10432183969100418,
+                    1.079676546060526
+                  ],
+                  "q": [
+                    -0.031102642144014557,
+                    0.06800698183857225,
+                    0.03683951718976042,
+                    -2.5460402220388407,
+                    0.4648997662079531,
+                    2.7970028810698597,
+                    0.2933220826116999
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.005982064885480733,
+                    -0.06691415947795068,
+                    1.0798711356572561
+                  ],
+                  "q": [
+                    0.015759037657182243,
+                    0.10067772626769089,
+                    0.06382342666707241,
+                    -2.5083456339785055,
+                    0.4172009153740308,
+                    2.810175059115257,
+                    0.40919887847728087
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.019752705173470615,
+                    -0.029506479264897162,
+                    1.0800657252539863
+                  ],
+                  "q": [
+                    0.06636084768436733,
+                    0.13916853129007575,
+                    0.08021174012815378,
+                    -2.4604544806868023,
+                    0.35782330467950657,
+                    2.8161267144543416,
+                    0.5297416795361671
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.033523345461460505,
+                    0.007901200948156356,
+                    1.0802603148507166
+                  ],
+                  "q": [
+                    0.12214356921443802,
+                    0.18288988512434623,
+                    0.08548679034738788,
+                    -2.402111193045664,
+                    0.2928847482342438,
+                    2.8139089111147206,
+                    0.6500461433515488
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.04729398574945039,
+                    0.045308881161209846,
+                    1.0804549044474467
+                  ],
+                  "q": [
+                    0.18250930397912432,
+                    0.23133692207575396,
+                    0.08151133115949526,
+                    -2.333108485303519,
+                    0.22961082087496504,
+                    2.8029493466498505,
+                    0.7645367613536367
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.06106462603744027,
+                    0.08271656137426336,
+                    1.0806494940441769
+                  ],
+                  "q": [
+                    0.24482170337676012,
+                    0.2842223666518646,
+                    0.07191022369590919,
+                    -2.2535200629440886,
+                    0.17367340859364613,
+                    2.7835019039584923,
+                    0.8687639513669987
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.07483526632543015,
+                    0.12012424158731688,
+                    1.0808440836409072
+                  ],
+                  "q": [
+                    0.30600135599542366,
+                    0.3415056539432625,
+                    0.06018070811206411,
+                    -2.1635330606523078,
+                    0.1274090025935697,
+                    2.756245448498762,
+                    0.9608207457518119
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.08860590661342004,
+                    0.1575319218003704,
+                    1.0810386732376374
+                  ],
+                  "q": [
+                    0.36385854724219996,
+                    0.40339578799975795,
+                    0.04857853058670199,
+                    -2.063059533439128,
+                    0.09053573383680057,
+                    2.721725920228737,
+                    1.0409278129512298
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.10237654690140993,
+                    0.19493960201342392,
+                    1.0812332628343675
+                  ],
+                  "q": [
+                    0.41729852991304217,
+                    0.4703873653191459,
+                    0.038200815572417876,
+                    -1.951460160020246,
+                    0.061663613405458735,
+                    2.680111317392065,
+                    1.1103035302397277
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.11614718718939981,
+                    0.23234728222647744,
+                    1.0814278524310978
+                  ],
+                  "q": [
+                    0.46600206721538195,
+                    0.543356394447889,
+                    0.029426602900817486,
+                    -1.82733316762089,
+                    0.039227569160030396,
+                    2.631120677978379,
+                    1.1703970362737168
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.1299178274773897,
+                    0.2697549624395309,
+                    1.081622442027828
+                  ],
+                  "q": [
+                    0.510093926188238,
+                    0.6237610081581424,
+                    0.02226364090083434,
+                    -1.6881587794004065,
+                    0.021846441423432963,
+                    2.573899683311759,
+                    1.2225571401071207
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.14368846776537958,
+                    0.3071626426525844,
+                    1.0818170316245581
+                  ],
+                  "q": [
+                    0.5482215682849835,
+                    0.7222047752711666,
+                    0.016993221026947242,
+                    -1.5135141733194786,
+                    0.009209213104222192,
+                    2.4972110536750223,
+                    1.265987534811791
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.15745910805336946,
+                    0.34457032286563793,
+                    1.0820116212212885
+                  ],
+                  "q": [
+                    0.5843833881442223,
+                    0.8314665035589054,
+                    0.012478291331318784,
+                    -1.3188929950877633,
+                    -0.0011023713269135687,
+                    2.41261611862098,
+                    1.3054100457395308
+                  ]
+                },
+                {
+                  "stage": "transport",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0822062108180186
+                  ],
+                  "q": [
+                    0.6173680901586156,
+                    0.9695858901376795,
+                    0.00888887216280785,
+                    -1.0703379415051069,
+                    -0.008861517700979898,
+                    2.303338815259313,
+                    1.3395743187736167
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0452062108180187
+                  ],
+                  "q": [
+                    0.617451276448908,
+                    1.0280910178277667,
+                    0.008578752290319784,
+                    -1.0608974050032276,
+                    -0.009101543095796482,
+                    2.3505371803182817,
+                    1.3395773822463632
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    1.0082062108180185
+                  ],
+                  "q": [
+                    0.6176931335357153,
+                    1.0937525749878834,
+                    0.008246222934598514,
+                    -1.0390320819855627,
+                    -0.009347911094991074,
+                    2.394519340687905,
+                    1.3396476432000726
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.9712062108180186
+                  ],
+                  "q": [
+                    0.6180007548430173,
+                    1.1700497100099843,
+                    0.007922372171335491,
+                    -0.9970367552941155,
+                    -0.009532413504269671,
+                    2.429174908179941,
+                    1.3396324555612307
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.9342062108180187
+                  ],
+                  "q": [
+                    0.6183760083506433,
+                    1.2589890110839366,
+                    0.007640095443495955,
+                    -0.9305635207123064,
+                    -0.0096248245505746,
+                    2.4521053202900345,
+                    1.3394887134362399
+                  ]
+                },
+                {
+                  "stage": "placement_validation",
+                  "point": [
+                    0.17122974834135934,
+                    0.3819780030786915,
+                    0.8972062108180187
+                  ],
+                  "q": [
+                    0.6188453786663586,
+                    1.3650681644167157,
+                    0.00743403496955123,
+                    -0.8309064168753296,
+                    -0.009589565260587612,
+                    2.459259780559844,
+                    1.3391567961877242
+                  ]
+                }
+              ],
+              "required_joint_margin_rad": 0.04,
+              "required_box_margin_m": 0.001,
+              "max_ik_iterations_per_target": 48,
+              "reason": "sequential_ik_and_all_stages_geometry_validated"
+            }
+          ]
+        }
+      ],
+      "held16_events": [],
+      "edge16_events": [],
+      "planning_events": [
+        {
+          "step": 107,
+          "type": "mesh_complete",
+          "checked": 3,
+          "reason": "support13_mesh_candidate"
+        },
+        {
+          "step": 153,
+          "type": "mesh_complete",
+          "checked": 3,
+          "reason": "support13_mesh_candidate"
+        }
+      ],
+      "pose_events": [
+        {
+          "step": 107,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "upright"
+        },
+        {
+          "step": 153,
+          "event": "plan",
+          "feasibility": "unknown",
+          "detail": "pose_outside_supported_region",
+          "grasp_kind": "upright"
+        }
+      ],
+      "pose_replans": 0,
+      "fault_step": null,
+      "mean_decision_ms": 9.715248750217143,
+      "original_selection_counts": {
+        "2": 400
+      },
+      "elapsed_s": 7.307390599991777
+    }
+  ],
+  "input": "PRIVILEGED_CURRENT_STATE_AND_FIXED_TASK_GOAL",
+  "supervisor_note": "Original 23D observation history plus current 7 arm joint positions for v9 and v10-family joint-aware variants; fixed FK and scene assets. No contact/reward/success/future rollout in choose(). Frozen BC/WM inputs unchanged."
+}

@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "all_100_inherited_config_fields_exact",
+      "passed": true,
+      "scope": "Real Config values for off, single-repair and full configurations"
+    },
+    {
+      "name": "observed_motion_units",
+      "passed": true,
+      "scope": "Translation/rotation increments recovered from two saved-shaped observations, not simulated future feedback"
+    },
+    {
+      "name": "mixed_quantized_command_matches_certificate",
+      "passed": true,
+      "scope": "Stub separators; real damped proposal, float32 decoded motion, original 35mm/.15rad limits and bounded certificate loop"
+    },
+    {
+      "name": "mixed_geometry_rejection_and_fixed_thresholds",
+      "passed": true,
+      "scope": "Stub separators; rejected zero motion, strict 1mm execution/3mm planning and insufficient-work rejection"
+    },
+    {
+      "name": "holding_pause_retains_route_and_parent_loss_guard",
+      "passed": true,
+      "scope": "Only observable_hold stubbed; actual parent choose increments clock/loss once and recovers on fifth failed hold observation"
+    },
+    {
+      "name": "held_negative_guards_keep_closed_zero_motion",
+      "passed": true,
+      "scope": "Stub relative transform/certificate; joint .04rad, relative .012m and stage70 guard before proposing; postprocessor never adds a clock tick"
+    },
+    {
+      "name": "empty_edge_negative_guards_single_clock",
+      "passed": true,
+      "scope": "Stub rejected certificate; real joint/time branch and hold advance exactly one clock tick and never descend"
+    },
+    {
+      "name": "edge_arrival_requires_all_five_protections",
+      "passed": true,
+      "scope": "Stub accepted geometry and enter recorder; 9mm/.08rad/gap/D2 forecast/3mm path all remain required for five consecutive frames; actual descent feasibility is audited in complete-stage replay"
+    },
+    {
+      "name": "accepted_candidate_cancelled_by_parent_joint_guard",
+      "passed": true,
+      "scope": "Stub positive geometry and support; real parent joint guard returns zero and labels candidate as unapplied"
+    },
+    {
+      "name": "aperture_tick_has_no_pose_certificate",
+      "passed": true,
+      "scope": "Stub gap-not-ready; inherited close pulse is separated from motion and increments only one tick"
+    },
+    {
+      "name": "route_and_release_transition_guards",
+      "passed": true,
+      "scope": "Real enter checks: pending IK/held route blocks PLACE; transient observed loss blocks height-only release"
+    },
+    {
+      "name": "place_hold_parent_five_frame_loss",
+      "passed": true,
+      "scope": "Only observable_hold stubbed; real parent PLACE hold-loss counter reaches recovery on fifth frame"
+    },
+    {
+      "name": "final_place_command_still_certified",
+      "passed": true,
+      "scope": "Stub parent transition and certificate; final PLACE action receives its mixed certificate even after state advances to RELEASE"
+    },
+    {
+      "name": "continuation_seed_chain_limits_and_unknown_failures",
+      "passed": true,
+      "scope": "Stub local IK and separators; real search reuses previous accepted joint solution, locks actual endpoints and rejects insufficient margin/unconverged/budget with unknown status"
+    }
+  ],
+  "source_sha256": {
+    "reproduction/improvement_v16_20261016_01/recovery/carry_search.py": "484a8e1c9326f829b5ce359a46a41b1d67417f51e21a3bfca914ef6a245c35af",
+    "reproduction/improvement_v16_20261016_01/recovery/pose_servo.py": "9a914a6d2de37e0fe739233f0f9107235ff4b642dd1663cf2828f1f5c71d6fab",
+    "reproduction/improvement_v16_20261016_01/recovery/recovery_controller.py": "4631ae69d893eaf61540468919157426ed117132e70b18f8721bd31516143c11",
+    "reproduction/improvement_v16_20261016_01/verify_components.py": "bb4487954108a7305bfbe1e94f920f6be5f3c42b4ab152d5a9e39120a7e394ec",
+    "reproduction/improvement_v15_20261016_01/smoke_a/v15_known13_bc_k2_noise005_demo_13000021/trace.jsonl": "9a353605bdab846f315e7b1134df2d6eb4452173088763317f6e341d8a3e469b",
+    "reproduction/improvement_v15_20261016_01/recovery/carry_path.py": "cb926f1bddd73734c5f13a824dd9467bb20aa22637d04ab6a7d28664eb4b25e7",
+    "reproduction/improvement_v15_20261016_01/recovery/edge_path.py": "e04a4c8c2ad03645ef1e1a76ec880082c30664ee55c08c0d72b9855923e82ec6",
+    "reproduction/improvement_v15_20261016_01/recovery/recovery_controller.py": "57aab4ac4024e3f9915b760981603b5d9f5f8b305832a32de207b1bdd09f462e"
+  },
+  "new_evaluation_samples": 0,
+  "physical_simulation_run": false,
+  "scope": "Focused enabled control-flow and nominal servo tests; all stubs stated. Does not establish physical recovery, independent generalization or full-arm collision safety."
+}
