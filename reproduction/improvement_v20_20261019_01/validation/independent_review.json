@@ -1,0 +1,176 @@
+{
+  "passed": true,
+  "utc": "2026-10-19T12:37:19.311554+00:00",
+  "reviewer": "experiment_harness",
+  "scope": "Read-only review of the five v20 report findings against existing source-bound evidence, outcome gates and completed verification receipts. No new experiment, controller replay, simulation, training, figure or page validation.",
+  "new_evaluation_samples": 0,
+  "new_controller_replay_controls": 0,
+  "new_physical_replay_controls": 0,
+  "findings_review": [
+    {
+      "index": 1,
+      "title": "局部收益来自B，完整v20尚未达标",
+      "supported": true,
+      "sources_exist": true,
+      "review": "Six groups and success counts match the complete paired outcome analysis; three targets remain unsuccessful and the failed adoption gate is correctly stated. Two 6000005 profiles share one physical start.",
+      "sources": [
+        "analysis/smoke_a.json",
+        "analysis/smoke_a_pairs.csv",
+        "validation/development_gate.json"
+      ]
+    },
+    {
+      "index": 2,
+      "title": "A的动态衔接未稳住原重定位过程",
+      "supported": true,
+      "sources_exist": true,
+      "review": "Same-state first difference and exact recenter replay support the position-confirmation interruption. The report correctly distinguishes lost grasping progress from a new success-to-failure regression; downstream causal attribution remains limited.",
+      "sources": [
+        "analysis/transition_diagnosis_a.json",
+        "analysis/transition_diagnosis_a.csv",
+        "analysis/recenter_predicates_a.json"
+      ]
+    },
+    {
+      "index": 3,
+      "title": "B救回12000036，但没有加快搬运段",
+      "supported": true,
+      "sources_exist": true,
+      "review": "Carry/PLACE timing, unchanged 5/17/55 carry durations, RELEASE/open-command/FIFO timings, and the final success of 12000036 match the original trace-derived evidence. This is not a changed five-frame rule or a general one-extra-step guarantee.",
+      "sources": [
+        "analysis/smoke_a_control_findings.json",
+        "analysis/smoke_a_control_diagnosis.json",
+        "analysis/transition_diagnosis_a.csv"
+      ]
+    },
+    {
+      "index": 4,
+      "title": "提前清积分仍不足以稳定保持，并有阶段耗时副作用",
+      "supported": true,
+      "sources_exist": true,
+      "review": "Earlier x/z integral clearing, three-frame maximum readiness, slower second-attempt stages of 12000011, and 269/229 applied B proposals with overlapping 74/64 old events match the evidence. Next-step stage restriction is a hypothesis, not an evaluated improvement.",
+      "sources": [
+        "analysis/smoke_a_control_findings.json",
+        "analysis/smoke_a_control_diagnosis.json"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "另外两个预定目标仍受上游限制",
+      "supported": true,
+      "sources_exist": true,
+      "review": "Both unresolved upstream targets match entry times and bounded-search nonconfirmation. The report does not convert local IK/schedule rejection into physical impossibility or claim downstream braking fixes upstream delay.",
+      "sources": [
+        "analysis/transition_diagnosis_a.json",
+        "analysis/transition_diagnosis_a.csv",
+        "analysis/smoke_a_control_findings.json"
+      ]
+    }
+  ],
+  "completed_stages": [
+    {
+      "stage": "smoke_a",
+      "executions": 54,
+      "profiles_per_version": 9,
+      "unique_physical_starts": 8,
+      "decision_verification_passed": true,
+      "decision_controls": 20274,
+      "physical_verification_passed": true,
+      "physical_steps": 20274,
+      "source_snapshot_verified": true
+    }
+  ],
+  "success_counts": {
+    "v17": 3,
+    "v19": 2,
+    "budget": 7,
+    "directional": 2,
+    "braking": 3,
+    "v20": 3
+  },
+  "gate": {
+    "outcome_passed": false,
+    "registered_targets_succeeded": 0,
+    "registered_targets_required": 3,
+    "failed_gate_blocking_receipt_passed": true,
+    "full_paired_regressions": {
+      "v6": 6,
+      "v13": 4,
+      "v14": 3,
+      "v15": 2,
+      "v16": 0,
+      "v18": 0,
+      "v17": 0,
+      "v19": 0,
+      "budget": 4
+    },
+    "historical_reference_coverage": {
+      "v6": 8,
+      "v13": 9,
+      "v14": 9,
+      "v15": 9,
+      "v16": 9,
+      "v18": 9
+    },
+    "pilot_jobs_are_pre_registered_only": true,
+    "pilot_executions": 0,
+    "development_executions": 0,
+    "confirmation_executions": 0,
+    "not_created": [
+      "protocols/development_freeze.json",
+      "protocols/dev_jobs.json",
+      "protocols/confirmation_lock.json",
+      "protocols/confirmation_jobs.json"
+    ],
+    "planned_not_executed": {
+      "pilot": 564,
+      "development": 720,
+      "confirmation": 1440
+    },
+    "adopted": false
+  },
+  "protection_and_counting": {
+    "step_budget": 400,
+    "real_fifo_delay": 2,
+    "inherited_fields": 111,
+    "new_fields": 2,
+    "thresholds_not_relaxed": "Original 9 mm / 0.08 rad / five-frame path confirmation and recenter timeout 24 retained; original PLACE predicate is distinct. Supported by frozen protocol, component coverage and full decision audit.",
+    "observed_direction_proposals": 176,
+    "observed_lateral_braking": 90,
+    "observed_axial_braking": 0,
+    "observed_B_proposals": 498,
+    "observed_B_submitted": 498,
+    "limitations": [
+      "Axial-braking, mixed rejection and parent-replacement branches had zero smoke occurrence; relevant negative cases are static/component evidence, not physical branch coverage.",
+      "Nominal mixed certificates and D2 extrapolation are not a proof of closed-loop stability, full-robot collision safety, or physical reachability.",
+      "Historical budget comparator retains different protections and cannot be adopted from success counts alone.",
+      "Repeated replay and diagnostic reading do not increase the 54 evaluation sample count.",
+      "This receipt does not validate final HTML/report rendering, root documents, Git state or the global preservation manifest."
+    ]
+  },
+  "source_sha256": {
+    "reproduction/improvement_v20_20261019_01/analysis/components_a.json": "4eac7b583a6ce17791e4f3966e4c816e06952218f3077a63b67fec4a60b02787",
+    "reproduction/improvement_v20_20261019_01/analysis/mechanisms_a.json": "56079f5766bf2c110f723a9a758cc5b870e3eee9c6c8e5481bc40126cd75bc89",
+    "reproduction/improvement_v20_20261019_01/analysis/recenter_predicates_a.json": "f00127ec8eded28922b38ede730c9627dc4ff18229f250bbbf56802901614814",
+    "reproduction/improvement_v20_20261019_01/analysis/report_findings.json": "ad55dc45c85ee4e4b5dfc8a04700263e3c8bc595e0604b3576eea4fb2fda597d",
+    "reproduction/improvement_v20_20261019_01/analysis/settling_static_a.json": "bec7e4628a66467523d022745311689d7fbb1cf9d3e94aa1909e5efb0936b55f",
+    "reproduction/improvement_v20_20261019_01/analysis/smoke_a.json": "f75282451e691a5afa962ab381e5ca0c6570f9146ba19756e575928aa930c3da",
+    "reproduction/improvement_v20_20261019_01/analysis/smoke_a_control_diagnosis.json": "0a57960b95dc9c34d199de255fd29fb67a5d98419595dc1a3f6808f521a7b8c7",
+    "reproduction/improvement_v20_20261019_01/analysis/smoke_a_control_findings.json": "a54f05fcd2553ab8da8ffaf11cc94ee6ff05ec3a5050eaee8a334abb46ad66fa",
+    "reproduction/improvement_v20_20261019_01/analysis/smoke_a_pairs.csv": "69324aa3ae91dccad632427ce0778a1ac2d395a9d74f0eb96ab117ec6516ceb7",
+    "reproduction/improvement_v20_20261019_01/analysis/smoke_a_physics.json": "061b800ef5f438a5fc00b95282b4ceecd6d88b90e1f7059c66bac0fbf422305b",
+    "reproduction/improvement_v20_20261019_01/analysis/smoke_a_verification.json": "c59adc4899cb7a32f6e935b3120c543f12e909d44758433ff9fcdd2d169faa80",
+    "reproduction/improvement_v20_20261019_01/analysis/transition_diagnosis_a.csv": "460d37b84fb31422572b9faff2681e5f46ca50659e028455d750641dcdc83cee",
+    "reproduction/improvement_v20_20261019_01/analysis/transition_diagnosis_a.json": "824778250de26645bc88258ae2126d1cf4ec6007f70da4321009b8de1cc686c8",
+    "reproduction/improvement_v20_20261019_01/analysis/transition_static_a.json": "937eb31c16bfce2ba57fab1d6d4c5152641784a8174769b8bf60bd4f12a47837",
+    "reproduction/improvement_v20_20261019_01/freeze_development.py": "2e835566f2cbd9a630cb57b974d19c179bbb9d7721db35d62b706f413cb8d160",
+    "reproduction/improvement_v20_20261019_01/protocols/PLAN.md": "4ef8b5a61fd518e6dad6ba334ef51810f4f1243a55e3640ca31b09608a6a8b6a",
+    "reproduction/improvement_v20_20261019_01/protocols/pilot_jobs.json": "47cea8726efbb1c979649c980a10a62c2013c579738db73ea028cb3745cb0b10",
+    "reproduction/improvement_v20_20261019_01/protocols/protocol_lock.json": "049720e89ccaed4428a2f582a022e9e21aa86b05b029846f814529a9d5dced84",
+    "reproduction/improvement_v20_20261019_01/protocols/smoke_jobs.json": "708b89849f69b3a64e9fd8e8aec1d5ca6437729e22aebb638b33e58afb318d9e",
+    "reproduction/improvement_v20_20261019_01/smoke_a/completed.json": "f3fef97c4dc65c04740b11187ad758cddcc93761a8ed49f8db2f958097b4d227",
+    "reproduction/improvement_v20_20261019_01/smoke_a/started.json": "7757381a42f55286b562b8102aa07b8d777cce2d75d95a4b245d7a126158f169",
+    "reproduction/improvement_v20_20261019_01/validation/development_gate.json": "b7f37c30b71a8c4b0a4e457fb520e26a26370ac3478640c16f8ebededa1beb89",
+    "reproduction/improvement_v20_20261019_01/variants.py": "80f481b5e7f0dbd8b78c4d0640cf39940cfbc617f6831cdbf335d9d3930c7a83"
+  }
+}

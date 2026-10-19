@@ -1,5 +1,23 @@
 # 实验结果索引 · 当前入口
 
+**v20 已完成六组共54回合小测试与消融，未通过预定门槛，未采用。**
+
+实际 v17 3/9；实际 v19 2/9；原预算候选 7/9；仅 A 方向衔接 2/9；仅 B 延迟制动 3/9；完整 v20 3/9。
+
+每组9个条件共用8个不同物理起点：8个标准条件与1个复用6000005起点的clearance专用配置。A、B及组合均基于完整v19；原预算候选保护不同，仅作成功数参考。54回合不是54个独立起点，这组困难案例成功率不能当作项目总体成功率。
+
+保持400步、真实D2 FIFO、原保护阈值与成功定义。564回合扩展诊断、三版各240回合开发对照（合计720）及1440回合独立确认均未运行，未生成新确认起点。保留v19、预算候选与全部旧代码、权重和结果。未做泛化训练，未写论文。
+
+[本轮完整报告](reproduction/improvement_v20_20261019_01/REPORT.md) · [v20 前端](reproduction/improvement_v20_20261019_01/index.html) · [正式协议](reproduction/improvement_v20_20261019_01/protocols/PLAN.md) · [v19 原报告](reproduction/improvement_v19_20261019_01/REPORT.md)
+
+
+
+[逐条件配对表](reproduction/improvement_v20_20261019_01/analysis/smoke_a_pairs.csv) · [图表与来源](reproduction/improvement_v20_20261019_01/figures/CATALOG.json) · [完整度核验](reproduction/improvement_v20_20261019_01/verify_integrity.py)
+
+## 历史内容（按各自版本和时间解释）
+
+# 实验结果索引 · 当前入口
+
 **v19 已完成八组共72回合小测试与消融，未通过预定门槛，未采用。**
 
 实际 v17 3/9；实际 v18 2/9；原预算候选 7/9；仅 A 衔接窗口 2/9；仅 B 候选限额 2/9；仅 C 积分制动 2/9；A+B 2/9；完整 v19 2/9。

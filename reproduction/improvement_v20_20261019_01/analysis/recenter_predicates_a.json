@@ -1,0 +1,1207 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "reproduction/improvement_v10_20261015_01/recovery/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "reproduction/improvement_v10_20261015_01/recovery/path_search.py": "3444d41ff101373a2dfb04ee2d214d896c508e932efc27cc988a7e90841dafed",
+    "reproduction/improvement_v10_20261015_01/recovery/recovery_controller.py": "549b52d632abb79e1a7591ecd74126246e6ebae96debaaf85b0afd91728edacc",
+    "reproduction/improvement_v11_20261015_01/recovery/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "reproduction/improvement_v11_20261015_01/recovery/object_clearance.py": "d98a0e77230b177b0ed074168b7f4ed670eed584108d22b67166c97b962f1332",
+    "reproduction/improvement_v11_20261015_01/recovery/path_search.py": "ed9be7d2de5384165c945c31502676017d7b6adf83d90a26fab1dfa6db987fdd",
+    "reproduction/improvement_v11_20261015_01/recovery/recovery_controller.py": "5eed2f2aadb840dd6bc8dc85377fc8802361e7b12613e997933d21ebe8802cbc",
+    "reproduction/improvement_v12_20261015_01/recovery/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "reproduction/improvement_v12_20261015_01/recovery/recovery_controller.py": "28d3c68427178cf3631504d51e3be3740c3a377941c4f9b7066d3aa737496d16",
+    "reproduction/improvement_v13_20261016_01/recovery/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "reproduction/improvement_v13_20261016_01/recovery/recovery_controller.py": "022ea9c468aa7e798996bda70ccb5715d03bfc08eb0b54b02097ad7605a499fc",
+    "reproduction/improvement_v13_20261016_01/recovery/search.py": "23b7f0b59bf12aa2727b4084c20fd5edaaa99c3841d1209a0905cf5831a70210",
+    "reproduction/improvement_v13_20261016_01/recovery/support.py": "2724369f3932cdc2f19d065a753356ccd23df1ee1680210375c1f0e053e21690",
+    "reproduction/improvement_v14_20261016_01/recovery/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "reproduction/improvement_v14_20261016_01/recovery/recovery_controller.py": "3344a7817212fb952ac44d3846ec688c76daef93ea32b6a2489a024fa1e3eb3e",
+    "reproduction/improvement_v15_20261016_01/recovery/carry_path.py": "cb926f1bddd73734c5f13a824dd9467bb20aa22637d04ab6a7d28664eb4b25e7",
+    "reproduction/improvement_v15_20261016_01/recovery/edge_path.py": "e04a4c8c2ad03645ef1e1a76ec880082c30664ee55c08c0d72b9855923e82ec6",
+    "reproduction/improvement_v15_20261016_01/recovery/recovery_controller.py": "57aab4ac4024e3f9915b760981603b5d9f5f8b305832a32de207b1bdd09f462e",
+    "reproduction/improvement_v16_20261016_01/recovery/carry_search.py": "484a8e1c9326f829b5ce359a46a41b1d67417f51e21a3bfca914ef6a245c35af",
+    "reproduction/improvement_v16_20261016_01/recovery/pose_servo.py": "9a914a6d2de37e0fe739233f0f9107235ff4b642dd1663cf2828f1f5c71d6fab",
+    "reproduction/improvement_v16_20261016_01/recovery/recovery_controller.py": "4631ae69d893eaf61540468919157426ed117132e70b18f8721bd31516143c11",
+    "reproduction/improvement_v17_20261019_01/recovery/carry_search.py": "679d3c5202c6449b38a4463ac42cee2c61e8bd3841e3421259007cac7ec536f0",
+    "reproduction/improvement_v17_20261019_01/recovery/pose_servo.py": "55455da8fabe2ca251cd9aaaa1a54c82c500f43a9ebcef223aeee517cce6106f",
+    "reproduction/improvement_v17_20261019_01/recovery/recovery_controller.py": "25cbacdf9d4af15ff10ec38c6aabbf88620248bbae7b710b3cb61e740ec47ec4",
+    "reproduction/improvement_v18_20261019_01/recovery/__init__.py": "f67597ce8acebdaa5103b00b6fb19273eba2bebb192a9c324a6901980ff0918b",
+    "reproduction/improvement_v18_20261019_01/recovery/carry_search.py": "a4463c859d29683e250e235e4245f449e65986dd97ac871f124ef88810d2fc48",
+    "reproduction/improvement_v18_20261019_01/recovery/handoff.py": "3ebe17b92c62b03547b81e576f83eb6f6291b089d6b48560707b670dc61d520d",
+    "reproduction/improvement_v18_20261019_01/recovery/recovery_controller.py": "4dc479eb0a8e63f25bbd1e67682e11674db3eff6910da3c6060190f00b60d2cb",
+    "reproduction/improvement_v19_20261019_01/recovery/carry_search.py": "0e832cc9066f70828cdf9bcd768c23592df3732c9de5a5cff8acd9fb9ef01f7f",
+    "reproduction/improvement_v19_20261019_01/recovery/recovery_controller.py": "dd1aae68830639055973b4d150f18c0e8e509039e9272b3a2ba249a57fbd6543",
+    "reproduction/improvement_v19_20261019_01/recovery/settling.py": "e3c416d7febdb8d656a9edefaa1394b37829c0eede7f6b24efaf923adaedbffe",
+    "reproduction/improvement_v19_20261019_01/recovery/transition.py": "c068feaafebfe532a9295c52f0a040955a98ab6fb0676427125f6a0ffbebb4e2",
+    "reproduction/improvement_v20_20261019_01/audit_core.py": "1370dcea4ba0b61cb12ee23f644789342656876f2f6769ad139cffd687d2568e",
+    "reproduction/improvement_v20_20261019_01/inspect_recenter_predicates.py": "d94f9f4f56e47324e4d5fc17027b40073153e7085809e3f18fcfd422a5f11d10",
+    "reproduction/improvement_v20_20261019_01/recovery/delay_settling.py": "82ec67fdc6c9b46c589b74fc55c7fc1f938f9719fb5b5ac28de21e801ebe4dc0",
+    "reproduction/improvement_v20_20261019_01/recovery/directional_transition.py": "26fbf011e89d541c48e18ec112bd87889d444d8858885b6a045c359a494f3394",
+    "reproduction/improvement_v20_20261019_01/recovery/recovery_controller.py": "f3e40b8357fb48ef19834576220cf3ca111342885fd149e7eb6f21d71c51bd5a",
+    "reproduction/improvement_v20_20261019_01/smoke_a/completed.json": "f3fef97c4dc65c04740b11187ad758cddcc93761a8ed49f8db2f958097b4d227",
+    "reproduction/improvement_v20_20261019_01/smoke_a/directional_regression_6000005/result.json": "92dcb96829dd1b82f7cae3a27c4cfaf99c239c750aa049ea98a812cbcdf0dd6d",
+    "reproduction/improvement_v20_20261019_01/smoke_a/directional_regression_6000005/trace.jsonl": "d8941108e1fc9b8a9b6221cbdba203809dea9f7f8bc551f3696312adc4478c9d",
+    "reproduction/improvement_v20_20261019_01/smoke_a/jobs.json": "708b89849f69b3a64e9fd8e8aec1d5ca6437729e22aebb638b33e58afb318d9e",
+    "reproduction/improvement_v20_20261019_01/smoke_a/started.json": "7757381a42f55286b562b8102aa07b8d777cce2d75d95a4b245d7a126158f169",
+    "reproduction/improvement_v20_20261019_01/smoke_a/v19_regression_6000005/result.json": "2bf5af10480e6f9d63177463b9f2fd90bc690676a55a771f08752d528466c8c6",
+    "reproduction/improvement_v20_20261019_01/smoke_a/v19_regression_6000005/trace.jsonl": "a391ad62fa14074aa41d1482db5b58d9579572ed3a5ade152b88194178d026c0",
+    "reproduction/improvement_v20_20261019_01/variants.py": "80f481b5e7f0dbd8b78c4d0640cf39940cfbc617f6831cdbf335d9d3930c7a83",
+    "reproduction/improvement_v6_20261015_01/recovery/clearance_guard.py": "1ec75d9cefcfa9fd4fb42be31dc41997cea5473bbe7f88f3e817cb527e017d36",
+    "reproduction/improvement_v6_20261015_01/recovery/recovery_controller.py": "8e27797cf4bda38849cd5c427fd64e3560cb7a59b35fd59baae55739aed1f30e",
+    "reproduction/improvement_v7_20261015_01/recovery/__init__.py": "5b32424ab6763ac634f927655ade1cd2e3f6a2d0284166a5e1a8bb0f094628db",
+    "reproduction/improvement_v7_20261015_01/recovery/pose_guard.py": "56185598ab9da3a642c9366a9aad4d06340163950f3c909ded7c91563ba19232",
+    "reproduction/improvement_v7_20261015_01/recovery/recovery_controller.py": "9cfa6a99c4ae517ecf25bf242c404906fa1600219a81d288caa89fd92608fc7a",
+    "reproduction/improvement_v8_20261015_01/recovery/__init__.py": "a6512208024d7b10c0aedc619d509502eec9ab3ea557f7b5bf05a373f4ce05c1",
+    "reproduction/improvement_v8_20261015_01/recovery/geometry.py": "9fcc0be8b80a383513874013b6248aaae30b29ed2291ee74daf7fcbb7dff4ebb",
+    "reproduction/improvement_v8_20261015_01/recovery/recovery_controller.py": "e3c5a578dab5f60bc71d86aacc231a68654a8195d52bbb60320d0489cd20371e",
+    "reproduction/improvement_v8_20261015_01/recovery/scene_geometry.json": "1da8c12b670d53fe3d7af0784df907cb492e435e45ef8b667e2c759e1fc10efe",
+    "reproduction/improvement_v9_20261015_01/recovery/arm_chain.json": "b2dab326e7ca96000a191197c85573e44169044a594fb304f79daade45c2dcdb",
+    "reproduction/improvement_v9_20261015_01/recovery/arm_chain_observation.json": "59a3c579df322ea0485b2966466366788c81afda4d6dba6e5e08fc178bda6ecb",
+    "reproduction/improvement_v9_20261015_01/recovery/geometry.py": "946149e56089d20e66401277103a53214d4166cf1ec70f27fcf98faa6bb757bd",
+    "reproduction/improvement_v9_20261015_01/recovery/kinematics.py": "1617e964567d8365cdd143d2ba297878ea5536b2f524fd13a782773f3a82beaa",
+    "reproduction/improvement_v9_20261015_01/recovery/recovery_controller.py": "f73e39e9e03982331af9637f772ed908051e9a7b73cfa8a3a86ad8013d691756",
+    "reproduction/improvement_v9_20261015_01/recovery/scene_geometry.json": "1da8c12b670d53fe3d7af0784df907cb492e435e45ef8b667e2c759e1fc10efe",
+    "reproduction/recovery_v5_20261012_01/analyze_geometry_confirmation.py": "71d5ecee6c9854c762989d7b87e9383335dd4c2bc167d6b502da5b5eef90c888",
+    "reproduction/recovery_v5_20261012_01/analyze_stage.py": "c810dbca18727f74fff45fe8830039fa825c6a2bebc8fd73c62bd3493600403b",
+    "reproduction/recovery_v5_20261012_01/analyze_trace_mechanisms.py": "5c0ed7e79f7b81d9d9412750813722cf00f9f39e4fc5aaa502f6642f71351e34",
+    "reproduction/recovery_v5_20261012_01/bootstrap.py": "919ecb615ca3f7437a92054e48767bc02ce79d07a6a04ef6640ae3f8ce3345b8",
+    "reproduction/recovery_v5_20261012_01/clearance.py": "9b6e90f85f2e59b464337c8e898f292cec213951eefe1a6e904919a72431a79e",
+    "reproduction/recovery_v5_20261012_01/complete_state_validation.py": "76f77c72795dce0df464e1d34a0fa1b56272d788e0d3ce109e3e8953f8c258da",
+    "reproduction/recovery_v5_20261012_01/delivery_audit.py": "fc7b12e4e65eedac3e56e26cd6188d20d1698ceb928d66202f8ee6701d8d6bc6",
+    "reproduction/recovery_v5_20261012_01/diagnose_stage.py": "ea5429daabf5a9ac5c97ca48aaf4e0e9d992be9a474381f1bb029392fcdb4100",
+    "reproduction/recovery_v5_20261012_01/evaluate_recovery.py": "3ad31d5a9ace8fbc532fba93d26ac34d320531432357b82cfac216a8a3128954",
+    "reproduction/recovery_v5_20261012_01/plot_confirmation_effects.py": "7a80887f866ac2c60b6c37f85a91e90c1eef59ddbb3c9c351884aae782a198f0",
+    "reproduction/recovery_v5_20261012_01/prepare_confirmation.py": "ac470f4d9048410b5fffe88a93c6233294f190859704f38e7497f7d2dccb0d87",
+    "reproduction/recovery_v5_20261012_01/prepare_dev.py": "ccad70630e893a558ded35be221d2cc1b8f0647648df8b8b4aba43cb0b9de47d",
+    "reproduction/recovery_v5_20261012_01/prepare_geometry.py": "79df6f67abd44b04d6f202269e8ef85398494022414ba01fb4c24777317bb848",
+    "reproduction/recovery_v5_20261012_01/prepare_pilot.py": "0a29fbc477e7db423e27ce04a615f63fc884faff61419ba6f5e870076f84164c",
+    "reproduction/recovery_v5_20261012_01/probe_mechanisms.py": "7c60f3385cb7cce67aaaeb8704231b04ce906b41104074a87f1690081b49ac19",
+    "reproduction/recovery_v5_20261012_01/probe_native_changes.py": "72c1346d9ef736df49ecad2083109e1030364415ab5ee5914b51150bdacaa7a7",
+    "reproduction/recovery_v5_20261012_01/probe_stress_failures.py": "e9346c5d97649e2138ba3a54b8f225e9b664527022fc659fd90ef9317edc82bd",
+    "reproduction/recovery_v5_20261012_01/promote.py": "651203aeaa9cc1c7268121ee5e57dcfb6b31c11443747cdebba2924c0616e16f",
+    "reproduction/recovery_v5_20261012_01/recovery_controller.py": "88ee635f5cefbe30927d549910a5237b82f8275c0ea88da273874c4e7b637ecf",
+    "reproduction/recovery_v5_20261012_01/rerun_frozen.py": "fa5903bff7e740d20f539b20ba98e8bbf9df0d77c93b4fb52d54fe93385c8952",
+    "reproduction/recovery_v5_20261012_01/review_failures.py": "da13d8bfc1fa4b8c17fd1d0a87972dbc75374c210ea1e3333a6d8c0136df024c",
+    "reproduction/recovery_v5_20261012_01/run_pilot.py": "5896c0cdc57f137fdba60d9710b3b55f18c6c26172161a073e0fc3fde1104257",
+    "reproduction/recovery_v5_20261012_01/run_stage.py": "0cd4cb1a143343de28ff8489b13dc9b01892570888e34fac3ef29f2ed52239a3",
+    "reproduction/recovery_v5_20261012_01/setup_study.py": "fd3b267407ff209278604e129b924e2f571cbddde67f51d1d74915e14fe84f52",
+    "reproduction/recovery_v5_20261012_01/test_mechanisms.py": "9b74a2b16770d5ef23c56734c584f22938cb296a045a90adec95011eca0d643e",
+    "reproduction/recovery_v5_20261012_01/variants.py": "f6016c1ca982392486e6223a68dff0a9ef06312f848b8aa5685f455f639004c9",
+    "reproduction/recovery_v5_20261012_01/verify_archived_pilot.py": "537c15380dd0fd413b99ab984355f93adcb0ce0511a5a990d565e12ac9d672a2",
+    "reproduction/recovery_v5_20261012_01/verify_stage.py": "c74f3d797e554c934596d3702e9e732a33416d789afa1edb2446db284e395d58"
+  },
+  "saved_episodes_replayed": 2,
+  "saved_controls_replayed": 800,
+  "new_evaluation_samples": 0,
+  "physical_simulation_run": false,
+  "first_difference": {
+    "step": 300,
+    "same_state_before": true,
+    "same_queue_before": true,
+    "direction20": {
+      "descent_controls": 1,
+      "angular_entry_window_active": true,
+      "angular_window_controls": 3,
+      "nominal_forecast_only": true,
+      "scope": "Existing phase age, including holds; only angular damping uses its entry window. No clock/queue/ready mutation.",
+      "axis": [
+        0.5104115896715897,
+        0.2616676087445413,
+        -0.8191520442889919
+      ],
+      "axial_error_m": 0.08082826096875402,
+      "axial_motion_m": -0.000849048380253836,
+      "lateral_error_m": [
+        -0.005059496767130474,
+        0.003322399667970287,
+        -0.00209126184007119
+      ],
+      "lateral_motion_m": [
+        -0.0003932330802716683,
+        0.0005878131527440811,
+        -5.7253180130304284e-05
+      ],
+      "axial_braking": false,
+      "lateral_braking": false,
+      "lateral_moving_away_or_tangential": false,
+      "lateral_nominal_crossing": false,
+      "axial_nominal_crossing": false,
+      "axial_nominal_error_after_delay_m": 0.08252635772926169,
+      "lateral_nominal_error_after_delay_m": [
+        -0.004273030606587137,
+        0.0021467733624821244,
+        -0.0019767554798105816
+      ],
+      "lateral_closing_dot_m2": 4.062243112697994e-06,
+      "lateral_nominal_crossing_dot_m2": 3.288573694867474e-05
+    },
+    "old_raw_translation_m": [
+      0.019337988022778363,
+      0.011687801677259996,
+      -0.03510831832885741
+    ],
+    "new_raw_translation_m": [
+      0.018098092202160687,
+      0.012236268717321946,
+      -0.03415094852447509
+    ],
+    "old_submitted_action": [
+      0.023131366819143295,
+      0.13734813034534454,
+      -0.22431999444961548,
+      -0.004763768520206213,
+      -0.005756535101681948,
+      -0.00825143326073885,
+      0.0
+    ],
+    "new_submitted_action": [
+      0.020187852904200554,
+      0.1426006257534027,
+      -0.22580000758171082,
+      -0.004763768520206213,
+      -0.005756535101681948,
+      -0.00825143326073885,
+      0.0
+    ],
+    "first_state_before_difference": 303
+  },
+  "samples": [
+    {
+      "version": "v19",
+      "job": "v19_regression_6000005",
+      "episodes": 1,
+      "controls": [
+        {
+          "step": 311,
+          "mode": "PLAN_WAIT",
+          "phase_age": 12,
+          "recenter_age": 1,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ]
+        },
+        {
+          "step": 312,
+          "mode": "PATH_RECENTER",
+          "phase_age": 13,
+          "recenter_age": 2,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ],
+          "side_error_m": 0.012998042787103151,
+          "fixed_center_distance_m": 0.014186106402623735,
+          "angle_error_rad": 0.03230020115115486,
+          "remaining_path_margin_m": 0.0034444743666313116,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.05142767797505225,
+          "can_margin_m": 0.0048756215402472325
+        },
+        {
+          "step": 313,
+          "mode": "PATH_RECENTER",
+          "phase_age": 14,
+          "recenter_age": 3,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ],
+          "side_error_m": 0.012797489223434967,
+          "fixed_center_distance_m": 0.01611319484286292,
+          "angle_error_rad": 0.030548509455236975,
+          "remaining_path_margin_m": 0.003460550723676431,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.04821060326971509,
+          "can_margin_m": 0.004070002439447801
+        },
+        {
+          "step": 314,
+          "mode": "PATH_RECENTER",
+          "phase_age": 15,
+          "recenter_age": 4,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ],
+          "side_error_m": 0.012135476837540871,
+          "fixed_center_distance_m": 0.016610971024748122,
+          "angle_error_rad": 0.020901516364323136,
+          "remaining_path_margin_m": 0.0034157496307925805,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.04738966051265785,
+          "can_margin_m": 0.0035707009242317567
+        },
+        {
+          "step": 315,
+          "mode": "PATH_RECENTER",
+          "phase_age": 16,
+          "recenter_age": 5,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ],
+          "side_error_m": 0.00906011292703327,
+          "fixed_center_distance_m": 0.013031316834920969,
+          "angle_error_rad": 0.01209291352661648,
+          "remaining_path_margin_m": 0.003414267347760902,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.05093407492226194,
+          "can_margin_m": 0.002993874130817198
+        },
+        {
+          "step": 316,
+          "mode": "PATH_RECENTER",
+          "phase_age": 17,
+          "recenter_age": 6,
+          "settled_count": 1,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ],
+          "side_error_m": 0.005298069032935272,
+          "fixed_center_distance_m": 0.00832206581988493,
+          "angle_error_rad": 0.007461084484173173,
+          "remaining_path_margin_m": 0.0033257354113511994,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.055774166596853525,
+          "can_margin_m": 0.0028528485106001644
+        },
+        {
+          "step": 317,
+          "mode": "PATH_RECENTER",
+          "phase_age": 18,
+          "recenter_age": 7,
+          "settled_count": 2,
+          "before_settled_count": 1,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ],
+          "side_error_m": 0.002990825253474753,
+          "fixed_center_distance_m": 0.004744757460205855,
+          "angle_error_rad": 0.007624203134805968,
+          "remaining_path_margin_m": 0.0034981688541316225,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06009753621868611,
+          "can_margin_m": 0.0029993560406562925
+        },
+        {
+          "step": 318,
+          "mode": "PATH_RECENTER",
+          "phase_age": 19,
+          "recenter_age": 8,
+          "settled_count": 3,
+          "before_settled_count": 2,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ],
+          "side_error_m": 0.0037355122934086215,
+          "fixed_center_distance_m": 0.0041634592966972046,
+          "angle_error_rad": 0.009235600718868262,
+          "remaining_path_margin_m": 0.003416462626900013,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06319021887398024,
+          "can_margin_m": 0.0029176606217512224
+        },
+        {
+          "step": 319,
+          "mode": "PATH_RECENTER",
+          "phase_age": 20,
+          "recenter_age": 9,
+          "settled_count": 4,
+          "before_settled_count": 3,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ],
+          "side_error_m": 0.0049336508259265385,
+          "fixed_center_distance_m": 0.004953345971640448,
+          "angle_error_rad": 0.01388858057062332,
+          "remaining_path_margin_m": 0.003387125853380024,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06339192069494563,
+          "can_margin_m": 0.002888328895366249
+        },
+        {
+          "step": 320,
+          "mode": "PATH_RECENTER",
+          "phase_age": 21,
+          "recenter_age": 10,
+          "settled_count": 5,
+          "before_settled_count": 4,
+          "plan_retained": false,
+          "fixed_center_goal": [
+            0.28185843169909863,
+            0.3008402495680391,
+            0.9741203100849672
+          ],
+          "side_error_m": 0.006013041604873845,
+          "fixed_center_distance_m": 0.006214940221326001,
+          "angle_error_rad": 0.021779917083515146,
+          "remaining_path_margin_m": 0.00400935742661046,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06342002921323402,
+          "can_margin_m": 0.003510548690418419
+        }
+      ],
+      "source_result": "reproduction/improvement_v20_20261019_01/smoke_a/v19_regression_6000005/result.json",
+      "max_ready_streak": 5,
+      "clearance_events": [
+        {
+          "step": 310,
+          "event": "recenter_check",
+          "side_error_m": 0.012366587139284829,
+          "predicted_side_error_m": 0.014875403594631208,
+          "live_can_margin_m": 0.003928711813264291,
+          "hand_margin_m": 0.056336132701767114,
+          "can_margin_m": 0.006087488483228626,
+          "remaining_path_margin_m": 0.004997808884345867,
+          "accepted": true
+        },
+        {
+          "step": 311,
+          "event": "recenter_ik",
+          "accepted": true,
+          "ik": {
+            "success": true,
+            "iterations": 1,
+            "q": [
+              0.3862044551947587,
+              1.3241978842187776,
+              0.1461491496064594,
+              -0.8797472163447879,
+              -0.27521792721697713,
+              2.8358751799748294,
+              0.9249931430697796
+            ],
+            "position_error_m": 0.0012168094016943322,
+            "angle_error_rad": 0.0011324905588178584,
+            "limit_margin_rad": 0.4386021157812223
+          }
+        },
+        {
+          "step": 320,
+          "event": "recenter_settled",
+          "side_error_m": 0.006013041604873845,
+          "remaining_path_margin_m": 0.00400935742661046
+        }
+      ]
+    },
+    {
+      "version": "directional",
+      "job": "directional_regression_6000005",
+      "episodes": 1,
+      "controls": [
+        {
+          "step": 311,
+          "mode": "PLAN_WAIT",
+          "phase_age": 12,
+          "recenter_age": 1,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ]
+        },
+        {
+          "step": 312,
+          "mode": "PATH_RECENTER",
+          "phase_age": 13,
+          "recenter_age": 2,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.011189105546419052,
+          "fixed_center_distance_m": 0.012589478169020106,
+          "angle_error_rad": 0.03698447031980656,
+          "remaining_path_margin_m": 0.003459011539735296,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.051954062972117396,
+          "can_margin_m": 0.004489819057042516
+        },
+        {
+          "step": 313,
+          "mode": "PATH_RECENTER",
+          "phase_age": 14,
+          "recenter_age": 3,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.010660037254729466,
+          "fixed_center_distance_m": 0.014538380478914708,
+          "angle_error_rad": 0.035396941282828547,
+          "remaining_path_margin_m": 0.003476498140902007,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.04887723214862198,
+          "can_margin_m": 0.0038091971637870536
+        },
+        {
+          "step": 314,
+          "mode": "PATH_RECENTER",
+          "phase_age": 15,
+          "recenter_age": 4,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.009826334187263364,
+          "fixed_center_distance_m": 0.015153011636323847,
+          "angle_error_rad": 0.024731982163401667,
+          "remaining_path_margin_m": 0.0035039619822938017,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.048055679386954694,
+          "can_margin_m": 0.0034229414614312392
+        },
+        {
+          "step": 315,
+          "mode": "PATH_RECENTER",
+          "phase_age": 16,
+          "recenter_age": 5,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.006604174489649498,
+          "fixed_center_distance_m": 0.011517962646098903,
+          "angle_error_rad": 0.013874375536918981,
+          "remaining_path_margin_m": 0.00343350907232845,
+          "predicates": {
+            "side": true,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.05180631892172442,
+          "can_margin_m": 0.0029605568979481633
+        },
+        {
+          "step": 316,
+          "mode": "PATH_RECENTER",
+          "phase_age": 17,
+          "recenter_age": 6,
+          "settled_count": 1,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.002964401595773286,
+          "fixed_center_distance_m": 0.006775707723831934,
+          "angle_error_rad": 0.007676318207289088,
+          "remaining_path_margin_m": 0.003744337687241278,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.05716310252955522,
+          "can_margin_m": 0.0032455122223564725
+        },
+        {
+          "step": 317,
+          "mode": "PATH_RECENTER",
+          "phase_age": 18,
+          "recenter_age": 7,
+          "settled_count": 2,
+          "before_settled_count": 1,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.0033635830923946595,
+          "fixed_center_distance_m": 0.00445302334177888,
+          "angle_error_rad": 0.0091127402904319,
+          "remaining_path_margin_m": 0.004097515165282589,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06202812541762682,
+          "can_margin_m": 0.0035986905807881275
+        },
+        {
+          "step": 318,
+          "mode": "PATH_RECENTER",
+          "phase_age": 19,
+          "recenter_age": 8,
+          "settled_count": 3,
+          "before_settled_count": 2,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.005911905655767503,
+          "fixed_center_distance_m": 0.005977018204948694,
+          "angle_error_rad": 0.011812495316095361,
+          "remaining_path_margin_m": 0.004022062973486479,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06293486646684392,
+          "can_margin_m": 0.0035232537897679217
+        },
+        {
+          "step": 319,
+          "mode": "PATH_RECENTER",
+          "phase_age": 20,
+          "recenter_age": 9,
+          "settled_count": 4,
+          "before_settled_count": 3,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.007572765173309421,
+          "fixed_center_distance_m": 0.007604546414701554,
+          "angle_error_rad": 0.017198698469915282,
+          "remaining_path_margin_m": 0.004027548580566365,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06294709981345152,
+          "can_margin_m": 0.003528746405575628
+        },
+        {
+          "step": 320,
+          "mode": "PATH_RECENTER",
+          "phase_age": 21,
+          "recenter_age": 10,
+          "settled_count": 0,
+          "before_settled_count": 4,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.009127759603803067,
+          "fixed_center_distance_m": 0.00960359587832996,
+          "angle_error_rad": 0.027263363921026962,
+          "remaining_path_margin_m": 0.004770918777665778,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06298136683431226,
+          "can_margin_m": 0.004272103005018374
+        },
+        {
+          "step": 321,
+          "mode": "PATH_RECENTER",
+          "phase_age": 22,
+          "recenter_age": 11,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.010646343523479785,
+          "fixed_center_distance_m": 0.011802782898781963,
+          "angle_error_rad": 0.03499347266922293,
+          "remaining_path_margin_m": 0.005229765538463105,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06300710556007343,
+          "can_margin_m": 0.005266017822685709
+        },
+        {
+          "step": 322,
+          "mode": "PATH_RECENTER",
+          "phase_age": 23,
+          "recenter_age": 12,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.011411009211779887,
+          "fixed_center_distance_m": 0.01286043994649259,
+          "angle_error_rad": 0.03815130287295142,
+          "remaining_path_margin_m": 0.005187275099859889,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06301414017946642,
+          "can_margin_m": 0.0048629760385618115
+        },
+        {
+          "step": 323,
+          "mode": "PATH_RECENTER",
+          "phase_age": 24,
+          "recenter_age": 13,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.011607852891312838,
+          "fixed_center_distance_m": 0.013103893762992655,
+          "angle_error_rad": 0.04014698534156031,
+          "remaining_path_margin_m": 0.004524789767210047,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06301916489778907,
+          "can_margin_m": 0.004034125088229534
+        },
+        {
+          "step": 324,
+          "mode": "PATH_RECENTER",
+          "phase_age": 25,
+          "recenter_age": 14,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.011190112287311125,
+          "fixed_center_distance_m": 0.012775826164532395,
+          "angle_error_rad": 0.045459031753087104,
+          "remaining_path_margin_m": 0.004066005702124939,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06303044548881531,
+          "can_margin_m": 0.003575331171830856
+        },
+        {
+          "step": 325,
+          "mode": "PATH_RECENTER",
+          "phase_age": 26,
+          "recenter_age": 15,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.010719382754304767,
+          "fixed_center_distance_m": 0.012370066479818136,
+          "angle_error_rad": 0.049867225222657664,
+          "remaining_path_margin_m": 0.003856587044071172,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06303692738181636,
+          "can_margin_m": 0.0033658951691218214
+        },
+        {
+          "step": 326,
+          "mode": "PATH_RECENTER",
+          "phase_age": 27,
+          "recenter_age": 16,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.00998841034687789,
+          "fixed_center_distance_m": 0.011411438495621082,
+          "angle_error_rad": 0.05066584738071625,
+          "remaining_path_margin_m": 0.003786263695978273,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06303481088107692,
+          "can_margin_m": 0.003295552443099925
+        },
+        {
+          "step": 327,
+          "mode": "PATH_RECENTER",
+          "phase_age": 28,
+          "recenter_age": 17,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.009237540886947773,
+          "fixed_center_distance_m": 0.010302916798030767,
+          "angle_error_rad": 0.0495811304158719,
+          "remaining_path_margin_m": 0.003700875601557893,
+          "predicates": {
+            "side": false,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06302995784375488,
+          "can_margin_m": 0.0032101588330361586
+        },
+        {
+          "step": 328,
+          "mode": "PATH_RECENTER",
+          "phase_age": 29,
+          "recenter_age": 18,
+          "settled_count": 1,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.008209354181285641,
+          "fixed_center_distance_m": 0.008838939692271303,
+          "angle_error_rad": 0.04853051900872117,
+          "remaining_path_margin_m": 0.0036821030405114474,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06302502432350902,
+          "can_margin_m": 0.003191382350132152
+        },
+        {
+          "step": 329,
+          "mode": "PATH_RECENTER",
+          "phase_age": 30,
+          "recenter_age": 19,
+          "settled_count": 2,
+          "before_settled_count": 1,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.007274875618306019,
+          "fixed_center_distance_m": 0.007655622235108992,
+          "angle_error_rad": 0.04970328901134532,
+          "remaining_path_margin_m": 0.0035162702340368474,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06302939695384735,
+          "can_margin_m": 0.0030255756993853716
+        },
+        {
+          "step": 330,
+          "mode": "PATH_RECENTER",
+          "phase_age": 31,
+          "recenter_age": 20,
+          "settled_count": 3,
+          "before_settled_count": 2,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.007220544506001937,
+          "fixed_center_distance_m": 0.007657512591674739,
+          "angle_error_rad": 0.05222120708730854,
+          "remaining_path_margin_m": 0.003259411480346905,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06303672761335079,
+          "can_margin_m": 0.002768744457733438
+        },
+        {
+          "step": 331,
+          "mode": "PATH_RECENTER",
+          "phase_age": 32,
+          "recenter_age": 21,
+          "settled_count": 4,
+          "before_settled_count": 3,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.007654061139293756,
+          "fixed_center_distance_m": 0.008403404436803317,
+          "angle_error_rad": 0.056060884298468366,
+          "remaining_path_margin_m": 0.0031027998930775597,
+          "predicates": {
+            "side": true,
+            "fixed_center": true,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": true,
+          "hand_margin_m": 0.06304666270126827,
+          "can_margin_m": 0.002658798845936894
+        },
+        {
+          "step": 332,
+          "mode": "PATH_RECENTER",
+          "phase_age": 33,
+          "recenter_age": 22,
+          "settled_count": 0,
+          "before_settled_count": 4,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.008086550181966874,
+          "fixed_center_distance_m": 0.009327648028327772,
+          "angle_error_rad": 0.06064311063654399,
+          "remaining_path_margin_m": 0.0030431162579397236,
+          "predicates": {
+            "side": true,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06305780063781793,
+          "can_margin_m": 0.0026774579999772063
+        },
+        {
+          "step": 333,
+          "mode": "PATH_RECENTER",
+          "phase_age": 34,
+          "recenter_age": 23,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.00810836201900296,
+          "fixed_center_distance_m": 0.009940171163311272,
+          "angle_error_rad": 0.06488916211495399,
+          "remaining_path_margin_m": 0.0038171509251442304,
+          "predicates": {
+            "side": true,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06306179200175119,
+          "can_margin_m": 0.0033264719474204174
+        },
+        {
+          "step": 334,
+          "mode": "PATH_RECENTER",
+          "phase_age": 35,
+          "recenter_age": 24,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": true,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ],
+          "side_error_m": 0.007829768031564748,
+          "fixed_center_distance_m": 0.010047144326442973,
+          "angle_error_rad": 0.06725772948474057,
+          "remaining_path_margin_m": 0.004695153373625541,
+          "predicates": {
+            "side": true,
+            "fixed_center": false,
+            "angle": true,
+            "remaining_path": true,
+            "aperture": true
+          },
+          "ready": false,
+          "hand_margin_m": 0.06306407779207834,
+          "can_margin_m": 0.004204433245373465
+        },
+        {
+          "step": 335,
+          "mode": "PLAN_WAIT",
+          "phase_age": 0,
+          "recenter_age": 25,
+          "settled_count": 0,
+          "before_settled_count": 0,
+          "plan_retained": false,
+          "fixed_center_goal": [
+            0.2821319674879912,
+            0.3009825816901235,
+            0.9736689256946286
+          ]
+        }
+      ],
+      "source_result": "reproduction/improvement_v20_20261019_01/smoke_a/directional_regression_6000005/result.json",
+      "max_ready_streak": 4,
+      "clearance_events": [
+        {
+          "step": 310,
+          "event": "recenter_check",
+          "side_error_m": 0.010950203115853778,
+          "predicted_side_error_m": 0.01258092251889009,
+          "live_can_margin_m": 0.0038677633715302195,
+          "hand_margin_m": 0.0567202529993565,
+          "can_margin_m": 0.00569383031649795,
+          "remaining_path_margin_m": 0.004987676382373851,
+          "accepted": true
+        },
+        {
+          "step": 311,
+          "event": "recenter_ik",
+          "accepted": true,
+          "ik": {
+            "success": true,
+            "iterations": 1,
+            "q": [
+              0.3872090030554389,
+              1.32828836348966,
+              0.144906028896724,
+              -0.8752790453276518,
+              -0.2752941600053809,
+              2.839744057697991,
+              0.9259561435002908
+            ],
+            "position_error_m": 0.0010195805256956612,
+            "angle_error_rad": 0.0009918818557763404,
+            "limit_margin_rad": 0.43451163651033986
+          }
+        },
+        {
+          "step": 335,
+          "event": "recenter_aborted",
+          "phase_age": 36
+        }
+      ]
+    }
+  ],
+  "scope": "Exact saved-input action/diagnostic/FIFO replay with read-only recenter predicate extraction. No environment step or counterfactual rollout.",
+  "interpretation": "The first action difference occurs at identical state/queue; after that the complete trajectories differ. This establishes the observed control chain, not an isolated causal effect of one direction coefficient."
+}
