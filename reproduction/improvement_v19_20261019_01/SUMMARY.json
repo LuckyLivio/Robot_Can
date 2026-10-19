@@ -1,0 +1,1356 @@
+{
+  "version": "v19",
+  "status": "smoke_gate_failed_not_adopted",
+  "headline": "小测试门槛未通过；保留候选和负结果，未进入大规模消融、开发或独立确认。",
+  "latest_stage": "smoke_a",
+  "latest_complete_stage": "smoke_a",
+  "adopted": false,
+  "completed_evaluation_executions": 72,
+  "partial_failed_stage_episodes": 0,
+  "completed_stages": {
+    "smoke_a": 72
+  },
+  "pending_or_aborted_stages": [],
+  "latest_complete_variants": {
+    "v17": {
+      "success": 3,
+      "episodes": 9,
+      "failures": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "target_successes": [],
+      "target_rescues": [],
+      "rescued_vs_v18": [
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ]
+      ],
+      "regressed_vs_v6": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v6": 8,
+      "regressed_vs_v13": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v13": 9,
+      "regressed_vs_v14": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ]
+      ],
+      "paired_reference_v14": 9,
+      "regressed_vs_v15": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v15": 9,
+      "regressed_vs_v16": [],
+      "paired_reference_v16": 9,
+      "regressed_vs_v17": [],
+      "paired_reference_v17": 9,
+      "regressed_vs_v18": [],
+      "paired_reference_v18": 9,
+      "regressed_vs_budget": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_budget": 9
+    },
+    "v18": {
+      "success": 2,
+      "episodes": 9,
+      "failures": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "target_successes": [],
+      "target_rescues": [],
+      "rescued_vs_v18": [],
+      "regressed_vs_v6": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v6": 8,
+      "regressed_vs_v13": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v13": 9,
+      "regressed_vs_v14": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ]
+      ],
+      "paired_reference_v14": 9,
+      "regressed_vs_v15": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v15": 9,
+      "regressed_vs_v16": [],
+      "paired_reference_v16": 9,
+      "regressed_vs_v17": [
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ]
+      ],
+      "paired_reference_v17": 9,
+      "regressed_vs_v18": [],
+      "paired_reference_v18": 9,
+      "regressed_vs_budget": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_budget": 9
+    },
+    "budget": {
+      "success": 7,
+      "episodes": 9,
+      "failures": [
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "target_successes": [
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "target_rescues": [
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "rescued_vs_v18": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "regressed_vs_v6": [
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ]
+      ],
+      "paired_reference_v6": 8,
+      "regressed_vs_v13": [],
+      "paired_reference_v13": 9,
+      "regressed_vs_v14": [],
+      "paired_reference_v14": 9,
+      "regressed_vs_v15": [],
+      "paired_reference_v15": 9,
+      "regressed_vs_v16": [],
+      "paired_reference_v16": 9,
+      "regressed_vs_v17": [],
+      "paired_reference_v17": 9,
+      "regressed_vs_v18": [],
+      "paired_reference_v18": 9,
+      "regressed_vs_budget": [],
+      "paired_reference_budget": 9
+    },
+    "transition": {
+      "success": 2,
+      "episodes": 9,
+      "failures": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "target_successes": [],
+      "target_rescues": [],
+      "rescued_vs_v18": [],
+      "regressed_vs_v6": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v6": 8,
+      "regressed_vs_v13": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v13": 9,
+      "regressed_vs_v14": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ]
+      ],
+      "paired_reference_v14": 9,
+      "regressed_vs_v15": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v15": 9,
+      "regressed_vs_v16": [],
+      "paired_reference_v16": 9,
+      "regressed_vs_v17": [
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ]
+      ],
+      "paired_reference_v17": 9,
+      "regressed_vs_v18": [],
+      "paired_reference_v18": 9,
+      "regressed_vs_budget": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_budget": 9
+    },
+    "candidate": {
+      "success": 2,
+      "episodes": 9,
+      "failures": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "target_successes": [],
+      "target_rescues": [],
+      "rescued_vs_v18": [],
+      "regressed_vs_v6": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v6": 8,
+      "regressed_vs_v13": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v13": 9,
+      "regressed_vs_v14": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ]
+      ],
+      "paired_reference_v14": 9,
+      "regressed_vs_v15": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v15": 9,
+      "regressed_vs_v16": [],
+      "paired_reference_v16": 9,
+      "regressed_vs_v17": [
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ]
+      ],
+      "paired_reference_v17": 9,
+      "regressed_vs_v18": [],
+      "paired_reference_v18": 9,
+      "regressed_vs_budget": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_budget": 9
+    },
+    "settling": {
+      "success": 2,
+      "episodes": 9,
+      "failures": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "target_successes": [],
+      "target_rescues": [],
+      "rescued_vs_v18": [],
+      "regressed_vs_v6": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v6": 8,
+      "regressed_vs_v13": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v13": 9,
+      "regressed_vs_v14": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ]
+      ],
+      "paired_reference_v14": 9,
+      "regressed_vs_v15": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v15": 9,
+      "regressed_vs_v16": [],
+      "paired_reference_v16": 9,
+      "regressed_vs_v17": [
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ]
+      ],
+      "paired_reference_v17": 9,
+      "regressed_vs_v18": [],
+      "paired_reference_v18": 9,
+      "regressed_vs_budget": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_budget": 9
+    },
+    "ab": {
+      "success": 2,
+      "episodes": 9,
+      "failures": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "target_successes": [],
+      "target_rescues": [],
+      "rescued_vs_v18": [],
+      "regressed_vs_v6": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v6": 8,
+      "regressed_vs_v13": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v13": 9,
+      "regressed_vs_v14": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ]
+      ],
+      "paired_reference_v14": 9,
+      "regressed_vs_v15": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v15": 9,
+      "regressed_vs_v16": [],
+      "paired_reference_v16": 9,
+      "regressed_vs_v17": [
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ]
+      ],
+      "paired_reference_v17": 9,
+      "regressed_vs_v18": [],
+      "paired_reference_v18": 9,
+      "regressed_vs_budget": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_budget": 9
+    },
+    "v19": {
+      "success": 2,
+      "episodes": 9,
+      "failures": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "target_successes": [],
+      "target_rescues": [],
+      "rescued_vs_v18": [],
+      "regressed_vs_v6": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "known13_bc_k2_noise005_demo_13000021",
+          "demo_13000021"
+        ],
+        [
+          "known13_full_s41_noise005_demo_13000022",
+          "demo_13000022"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v6": 8,
+      "regressed_vs_v13": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v13": 9,
+      "regressed_vs_v14": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ]
+      ],
+      "paired_reference_v14": 9,
+      "regressed_vs_v15": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_v15": 9,
+      "regressed_vs_v16": [],
+      "paired_reference_v16": 9,
+      "regressed_vs_v17": [
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ]
+      ],
+      "paired_reference_v17": 9,
+      "regressed_vs_v18": [],
+      "paired_reference_v18": 9,
+      "regressed_vs_budget": [
+        [
+          "regression_6000005",
+          "demo_6000005"
+        ],
+        [
+          "known_bc_k2_clean_demo_12000011",
+          "demo_12000011"
+        ],
+        [
+          "known_full_s23_clean_demo_12000036",
+          "demo_12000036"
+        ],
+        [
+          "known_full_s23_noise005_demo_12000021",
+          "demo_12000021"
+        ],
+        [
+          "clearance_profile_6000005",
+          "demo_6000005"
+        ]
+      ],
+      "paired_reference_budget": 9
+    }
+  },
+  "action_replay_controls": 27140,
+  "physical_replay_episodes": 72,
+  "physical_replay_steps": 27140,
+  "all_completed_stage_audits_passed": true,
+  "stage_gates": {
+    "smoke_a": "结果门槛未通过"
+  },
+  "later_stages": {
+    "pilot": {
+      "planned_executions": 752,
+      "completed_executions": 0,
+      "started": false,
+      "status": "未运行"
+    },
+    "dev": {
+      "planned_executions": 720,
+      "completed_executions": 0,
+      "started": false,
+      "status": "未运行"
+    },
+    "confirmation": {
+      "planned_executions": 1440,
+      "completed_executions": 0,
+      "started": false,
+      "status": "未运行"
+    }
+  },
+  "new_training_runs": 0,
+  "new_weights": 0,
+  "registered_executions_per_complete_stage": {
+    "smoke": 72,
+    "pilot": 752,
+    "dev": 720,
+    "confirmation": 1440
+  },
+  "variant_order": [
+    "v17",
+    "v18",
+    "budget",
+    "transition",
+    "candidate",
+    "settling",
+    "ab",
+    "v19"
+  ],
+  "component_design": {
+    "parent": "Full actual v18",
+    "A": "transition_window",
+    "B": "candidate_budget",
+    "C": "terminal_settling",
+    "evaluated_new_combinations": [
+      "A",
+      "B",
+      "C",
+      "AB",
+      "ABC"
+    ],
+    "not_evaluated": [
+      "AC",
+      "BC"
+    ]
+  },
+  "smoke_profiles_per_version": 9,
+  "smoke_unique_start_identities_per_version": 8,
+  "mechanism_and_static_receipts": [
+    {
+      "path": "analysis/candidate_static_a.json",
+      "passed": true,
+      "matches_current_source": true,
+      "checked_source_count": 116,
+      "scope": "静态/机制诊断，具体检查范围与限制见原记录；不增加闭环评估样本",
+      "new_evaluation_samples": 0,
+      "sha256": "c314f095d55d8a91f26bddd207cdac7941dcd32d1311e450c6ebe88b4dfaa589"
+    },
+    {
+      "path": "analysis/components_a.json",
+      "passed": true,
+      "matches_current_source": true,
+      "checked_source_count": 79,
+      "scope": "v19 integration with saved v18 final-descent state and explicit geometry/predicate/search stubs. Independent helper static and subsequent physical/decision gates are still required.",
+      "new_evaluation_samples": 0,
+      "sha256": "e4b9576c00122a7dc43ab239f02a223f1b3b7332033c40bab9e11df7614e45e2"
+    },
+    {
+      "path": "analysis/mechanisms_a.json",
+      "passed": true,
+      "matches_current_source": false,
+      "checked_source_count": 96,
+      "scope": "Three new components disabled: exact saved-input decisions, diagnostics, FIFO, noise, clock and inherited configuration. No physical simulation or new evaluation samples.",
+      "new_evaluation_samples": 0,
+      "sha256": "433f206ab368b202914321b211809d1bad6a8f1e29795a306e177fae773ac944"
+    },
+    {
+      "path": "analysis/mechanisms_b.json",
+      "passed": true,
+      "matches_current_source": true,
+      "checked_source_count": 96,
+      "scope": "Three new components disabled: exact saved-input decisions, diagnostics, FIFO, noise, clock and inherited configuration. No physical simulation or new evaluation samples.",
+      "new_evaluation_samples": 0,
+      "sha256": "a74ee5cb48983e89c317efa797e89692fd601ab662f804a9aab8b14b2f430e56"
+    },
+    {
+      "path": "analysis/settling_static_a.json",
+      "passed": true,
+      "matches_current_source": true,
+      "checked_source_count": 13,
+      "scope": "Static mathematical/geometry tests and original saved-observation proposals only. No simulator, future-state rollout, controller clock/counter mutation or new closed-loop outcome.",
+      "new_evaluation_samples": 0,
+      "sha256": "037e1a81bb083284b24c4924ce1e42967bfb48a30b915cf835c32a3a7725277e"
+    },
+    {
+      "path": "analysis/transition_static_a.json",
+      "passed": true,
+      "matches_current_source": true,
+      "checked_source_count": 66,
+      "scope": "Saved poses with synthetic existing-phase ages; no new physics, sample, timing or performance claim.",
+      "new_evaluation_samples": 0,
+      "sha256": "87b668ac9e41071237ff0b80a9333eac46aaf9e548d3fbac2b0c2c531dad30ce"
+    }
+  ],
+  "pre_experiment_static_risk": {
+    "description": "执行前对同一保存输入调用搜索器：12000036旧step276状态由v18搜索器的198 work / 13调用降为126 work / 9调用；demo87的局部inset机会保留。但12000011旧第二次step311状态的搬运证书不完整，新规则不准入inset，由v18搜索器的39 work / 3调用变成125 work / 9调用。这些不是各版本本轮回合的实际规划时间，也不是普遍省时保证；已准入可选候选仍可花满48 work后无结果，实际作用须以本轮完整闭环执行判断。",
+    "source": "analysis/candidate_static_a.json",
+    "new_evaluation_samples": 0
+  },
+  "diagnostic_findings": [
+    {
+      "title": "局部节省没有变成任务救回",
+      "finding": "72回合完整配对：实际v17为3/9，v18为2/9，旧预算候选7/9；A/B/C/AB和完整v19均2/9。完整v19相对v18无新增成功，相对v17仍丢失12000036，三个预定目标0/3。每组9个profile只有8个不同起点，不是整个项目总体成功率。预算组保护不同，不能整体采用。",
+      "next_step": "保留本轮负结果和原正式成果；停止752回合扩展、每版240回合开发、冻结及新起点确认，不把静态检查或局部提速写成任务成功。",
+      "sources": [
+        "analysis/smoke_a.json",
+        "protocols/PLAN.md"
+      ],
+      "source_sha256": {
+        "analysis/smoke_a.json": "7b1a010b4c480874361138a10a7833425b3cb57d7d7c1416cbff54c153da9501",
+        "protocols/PLAN.md": "e18f77860aba9872f0e4353001a609b6dc7e450e78f594954bf4fb624763953a"
+      }
+    },
+    {
+      "title": "12000036省了时间，仍晚一步释放",
+      "finding": "同输入的B搜索从198work/13调用降为126work/9调用，仍选择相同out15目标。A将下降19步减到13步。AB/完整v19因此在363进入PLACE、391进入RELEASE；实际v17分别为362和390，最终第400步成功，而完整v19第400步仍失败。C没有缩短这里的三段CARRY执行5/17/55步。",
+      "next_step": "先逐帧比较那1步上游差及释放后的实际物理轨迹，检验有依据的衔接触发条件；不加第401步、不缩短确认、不事后改成功定义。",
+      "sources": [
+        "analysis/smoke_a_route_diagnosis.json",
+        "analysis/smoke_a_control_diagnosis.json"
+      ],
+      "source_sha256": {
+        "analysis/smoke_a_route_diagnosis.json": "10d0bafef93a129418a24cf1401c3f0d13aa40b86a95a91adb2bf63f161968bc",
+        "analysis/smoke_a_control_diagnosis.json": "fea9997d447a076a5727414cdd81ad7057ee76f1f530e394dd8fd597a91cd986"
+      }
+    },
+    {
+      "title": "固定三步窗口会让箱沿回正重新出现",
+      "finding": "6000005中，A在窗口后恢复比例进展，310时钟再次触发回正，随后有1步IK检查和9步PATH_RECENTER；下降由v18的25步变为29步，进入CARRY从358延后至362。缩小作用范围有副作用，不能只用12000036的提速证明它合适。",
+      "next_step": "下一轮先考虑按抓取轴进展与横向偏移分别控制，以当前可观测误差界定作用范围；仍保留原动作变化限制、几何认证、姿态和回正保护。先做同状态诊断，再决定是否改控制器。",
+      "sources": [
+        "analysis/smoke_a_control_diagnosis.json"
+      ],
+      "source_sha256": {
+        "analysis/smoke_a_control_diagnosis.json": "fea9997d447a076a5727414cdd81ad7057ee76f1f530e394dd8fd597a91cd986"
+      }
+    },
+    {
+      "title": "积分制动有效执行，稳定保持仍不够",
+      "finding": "C单项84次、完整v19共85次积分制动提案全部实际提交。6000005中C单项把389–391的连续3帧延长到389–392的4帧，但393位置误差10.748mm又越过9mm阈值。完整v19相对AB最多仍只有3帧连续满足，末步误差6.084mm只是本段第2帧；单帧误差小不能替代连续5帧到达。",
+      "next_step": "优先诊断观测速度、D2在途动作与停车后的保持过程，设计提前制动与稳定保持的单项候选，再做消融；不削弱9mm/0.08rad和连续5帧要求。",
+      "sources": [
+        "analysis/smoke_a_control_diagnosis.json"
+      ],
+      "source_sha256": {
+        "analysis/smoke_a_control_diagnosis.json": "fea9997d447a076a5727414cdd81ad7057ee76f1f530e394dd8fd597a91cd986"
+      }
+    },
+    {
+      "title": "限制可选搜索的收益与代价都存在",
+      "finding": "B/AB/完整v19每组各1次inset准入并获选，耗43work；各7次按准入条件仅耗1work后标记未知，48work上限未在真实轨迹触顶。demo87保留短路成功，C使已成功回合283→282步。12000011第二次却改选out15，AB/完整v19直到396才进入PLACE；13000021仍无通过所有原检查的完整路线。13000022进入DESCEND的事件时钟仍为387，未进入搬运搜索，后端改动无法解决它的上游接近超时。",
+      "next_step": "保留候选限额作为未采用的局部候选；分别处理真实的可选路线准入漏失、接近阶段耗时和末端保持。暂不再叠更多模块，也不开展泛化训练。",
+      "sources": [
+        "analysis/smoke_a_route_diagnosis.json",
+        "analysis/smoke_a_control_diagnosis.json",
+        "analysis/candidate_static_a.json"
+      ],
+      "source_sha256": {
+        "analysis/smoke_a_route_diagnosis.json": "10d0bafef93a129418a24cf1401c3f0d13aa40b86a95a91adb2bf63f161968bc",
+        "analysis/smoke_a_control_diagnosis.json": "fea9997d447a076a5727414cdd81ad7057ee76f1f530e394dd8fd597a91cd986",
+        "analysis/candidate_static_a.json": "c314f095d55d8a91f26bddd207cdac7941dcd32d1311e450c6ebe88b4dfaa589"
+      }
+    }
+  ],
+  "sample_scope": "Nine registered smoke conditions comprise eight standard conditions plus a clearance-only parent configuration profile reusing demo6000005. Executions and profiles are not independent starts.",
+  "limitations": [
+    "Known diagnostic profiles cannot establish generalization.",
+    "Local hand/carried-object geometry and waypoint IK do not prove full-arm physical safety.",
+    "Planning receipts, mechanism events and stable grasps are not complete-task successes.",
+    "Shared recovery gains are not evidence of a world-model-specific advantage.",
+    "Action and physical replays do not add evaluation samples."
+  ],
+  "figures": [
+    "V19_smoke_a_profiles",
+    "V19_smoke_a_targets"
+  ]
+}
