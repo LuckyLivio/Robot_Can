@@ -1,0 +1,5014 @@
+{
+  "script_sha256": "f330fb4cc81bbf2fb8f179e1f366fc40ee8de13496197d5f5cf3f01597528055",
+  "kinematics_sha256": "1617e964567d8365cdd143d2ba297878ea5536b2f524fd13a782773f3a82beaa",
+  "jobs_sha256": "66c60a096915540d1584fce2d1f6634c966d2f4cd55a06d6395092f959a888c0",
+  "completed_sha256": "d8d184b9ec6cf98714b3d64ed04ec01b1f22292e05145496a0bf2409e3448810",
+  "joint_names": [
+    "robot0_joint1",
+    "robot0_joint2",
+    "robot0_joint3",
+    "robot0_joint4",
+    "robot0_joint5",
+    "robot0_joint6",
+    "robot0_joint7"
+  ],
+  "nominal_joint_ranges_rad": [
+    [
+      -2.8973,
+      2.8973
+    ],
+    [
+      -1.7628,
+      1.7628
+    ],
+    [
+      -2.8973,
+      2.8973
+    ],
+    [
+      -3.0718,
+      -0.0698
+    ],
+    [
+      -2.8973,
+      2.8973
+    ],
+    [
+      -0.0175,
+      3.7525
+    ],
+    [
+      -2.8973,
+      2.8973
+    ]
+  ],
+  "comparison_margin_rad": 0.04,
+  "new_physical_episodes": 0,
+  "new_controller_replays": 0,
+  "new_ik_searches": 0,
+  "analyzed_newly_executed_budget_profiles": 9,
+  "task_successes": 7,
+  "successful_profiles_with_carry_or_place_below_004": [
+    "known_bc_k2_clean_demo_12000011",
+    "known_full_s23_noise005_demo_12000021"
+  ],
+  "profiles": [
+    {
+      "job": "budget_regression_6000005",
+      "profile": "regression_6000005",
+      "success": true,
+      "steps": 383,
+      "dataset": "reproduction/recovery_v3_20261012_01/confirmation_starts.hdf5",
+      "demo": "demo_6000005",
+      "carry_path_enabled": false,
+      "segmented_edge_enabled": false,
+      "later_v16_v17_live_held_guard_executed": false,
+      "required_later_held_margin_rad": 0.04,
+      "source_result_sha256": "22e2f0f056d9e087bc1001434b9f4fbfe41b4bec758311e37f5ff5ea7fdde97c",
+      "source_trace_sha256": "11d8c25b685c58914f94980fc2fe4a69210aefdb0cb75441da3d81777d2143bd",
+      "phases": {
+        "LIFT": {
+          "first_step": 328,
+          "last_step": 337,
+          "observed_steps": 10,
+          "minimum_margin_rad": 0.4132463451665669,
+          "minimum_margin_evidence": {
+            "step": 328,
+            "phase": "LIFT",
+            "next_phase": "LIFT",
+            "observed_joint_positions_rad": [
+              0.41290058990346995,
+              1.349553654833433,
+              0.11452912801809975,
+              -0.7832549908656385,
+              -0.18491883250534805,
+              2.767823456175019,
+              0.8626037461419344
+            ],
+            "observed_joint_margins_rad": [
+              2.48439941009653,
+              0.4132463451665669,
+              2.7827708719819,
+              0.7134549908656386,
+              2.712381167494652,
+              0.9846765438249809,
+              2.0346962538580655
+            ],
+            "minimum_margin_rad": 0.4132463451665669,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              -0.008349924348294735,
+              -0.004432516638189554,
+              0.9999552965164185,
+              -0.014385503716766834,
+              0.026547862216830254,
+              -0.0008968966430984437,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "CARRY": {
+          "first_step": 338,
+          "last_step": 350,
+          "observed_steps": 13,
+          "minimum_margin_rad": 0.6413140066798517,
+          "minimum_margin_evidence": {
+            "step": 338,
+            "phase": "CARRY",
+            "next_phase": "CARRY",
+            "observed_joint_positions_rad": [
+              0.38839552354089635,
+              1.1214859933201482,
+              0.15161581372811364,
+              -0.9167490968313419,
+              -0.2073509939415702,
+              2.622086831586372,
+              0.8721154714715904
+            ],
+            "observed_joint_margins_rad": [
+              2.5089044764591035,
+              0.6413140066798517,
+              2.745684186271886,
+              0.8469490968313419,
+              2.6899490060584297,
+              1.1304131684136278,
+              2.02518452852841
+            ],
+            "minimum_margin_rad": 0.6413140066798517,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              -0.720693051815033,
+              0.6903331279754639,
+              0.06357473134994507,
+              0.00881999172270298,
+              -0.01456216350197792,
+              -0.0015707731945440173,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "PLACE": {
+          "first_step": 351,
+          "last_step": 373,
+          "observed_steps": 23,
+          "minimum_margin_rad": 0.44890388692145144,
+          "minimum_margin_evidence": {
+            "step": 373,
+            "phase": "PLACE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.5678686094330382,
+              1.3138961130785485,
+              0.056791387037165526,
+              -1.0253860012545521,
+              -0.5623648502229749,
+              2.935979016372064,
+              1.3955333648260562
+            ],
+            "observed_joint_margins_rad": [
+              2.329431390566962,
+              0.44890388692145144,
+              2.8405086129628345,
+              0.9555860012545522,
+              2.334935149777025,
+              0.8165209836279361,
+              1.5017666351739438
+            ],
+            "minimum_margin_rad": 0.44890388692145144,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.10256300121545792,
+              0.0037377714179456234,
+              -0.1133667454123497,
+              -0.007940921001136303,
+              0.015338917262852192,
+              0.0013619659002870321,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "RELEASE": {
+          "first_step": 374,
+          "last_step": 383,
+          "observed_steps": 10,
+          "minimum_margin_rad": 0.39601262930985914,
+          "minimum_margin_evidence": {
+            "step": 377,
+            "phase": "RELEASE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.5756398006544071,
+              1.3667873706901408,
+              0.04790123552961066,
+              -0.9624005718686451,
+              -0.5270471110408582,
+              2.928696226071643,
+              1.367609967621411
+            ],
+            "observed_joint_margins_rad": [
+              2.321660199345593,
+              0.39601262930985914,
+              2.8493987644703895,
+              0.8926005718686452,
+              2.3702528889591417,
+              0.8238037739283568,
+              1.529690032378589
+            ],
+            "minimum_margin_rad": 0.39601262930985914,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              -0.03031119704246521,
+              -0.00012308359146118164,
+              0.13906538486480713,
+              -0.0070874374359846115,
+              0.016758065670728683,
+              0.0031300107948482037,
+              -1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        }
+      },
+      "carry_or_place_below_004": false,
+      "carry_or_place_observed": true
+    },
+    {
+      "job": "budget_known_side_s17",
+      "profile": "known_side_s17",
+      "success": true,
+      "steps": 299,
+      "dataset": null,
+      "demo": "demo_97",
+      "carry_path_enabled": false,
+      "segmented_edge_enabled": false,
+      "later_v16_v17_live_held_guard_executed": false,
+      "required_later_held_margin_rad": 0.04,
+      "source_result_sha256": "f290df2f5059e0995e18244423e6f0dff5db051ee0b8da03fde1545ddf1c3c3c",
+      "source_trace_sha256": "63df41446cf0df2dc49ccf61302278398b75bbccec51ee39b57142896c832940",
+      "phases": {
+        "LIFT": {
+          "first_step": 205,
+          "last_step": 228,
+          "observed_steps": 24,
+          "minimum_margin_rad": 0.6117100747806439,
+          "minimum_margin_evidence": {
+            "step": 205,
+            "phase": "LIFT",
+            "next_phase": "LIFT",
+            "observed_joint_positions_rad": [
+              0.5922950142893736,
+              1.151089925219356,
+              0.27919549434975427,
+              -1.1833058411809856,
+              -0.46227954990965336,
+              2.116464598820394,
+              1.6742052852121994
+            ],
+            "observed_joint_margins_rad": [
+              2.3050049857106263,
+              0.6117100747806439,
+              2.618104505650246,
+              1.1135058411809855,
+              2.4350204500903465,
+              1.636035401179606,
+              1.2230947147878006
+            ],
+            "minimum_margin_rad": 0.6117100747806439,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.0023967560846358538,
+              -0.0016739364946261048,
+              0.699993908405304,
+              0.023617148399353027,
+              -0.016150711104273796,
+              0.0016232602065429091,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "CARRY": {
+          "first_step": 229,
+          "last_step": 259,
+          "observed_steps": 31,
+          "minimum_margin_rad": 0.1590736324436659,
+          "minimum_margin_evidence": {
+            "step": 259,
+            "phase": "CARRY",
+            "next_phase": "PLACE",
+            "observed_joint_positions_rad": [
+              0.6245201444706542,
+              1.4553601255777822,
+              0.19012277299484462,
+              -0.2288736324436659,
+              -0.3284335033723509,
+              1.7798579294451162,
+              1.3452231538509034
+            ],
+            "observed_joint_margins_rad": [
+              2.272779855529346,
+              0.30743987442221776,
+              2.7071772270051553,
+              0.1590736324436659,
+              2.568866496627649,
+              1.7973579294451163,
+              1.5520768461490966
+            ],
+            "minimum_margin_rad": 0.1590736324436659,
+            "limiting_joint_1based": 4,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.3941849172115326,
+              0.28456446528434753,
+              0.42806941270828247,
+              -0.1288847029209137,
+              0.1609615683555603,
+              -0.02228761464357376,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "PLACE": {
+          "first_step": 260,
+          "last_step": 277,
+          "observed_steps": 18,
+          "minimum_margin_rad": 0.07672779321535994,
+          "minimum_margin_evidence": {
+            "step": 263,
+            "phase": "PLACE",
+            "next_phase": "PLACE",
+            "observed_joint_positions_rad": [
+              0.6340317345830054,
+              1.5221188204788605,
+              0.16027168622210047,
+              -0.14652779321535994,
+              -0.30061240886069196,
+              1.7893285877550031,
+              1.3334016985679034
+            ],
+            "observed_joint_margins_rad": [
+              2.2632682654169947,
+              0.24068117952113943,
+              2.7370283137778997,
+              0.07672779321535994,
+              2.596687591139308,
+              1.8068285877550032,
+              1.5638983014320966
+            ],
+            "minimum_margin_rad": 0.07672779321535994,
+            "limiting_joint_1based": 4,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.18071249127388,
+              0.14285100996494293,
+              -0.661011815071106,
+              -0.14098362624645233,
+              0.18054644763469696,
+              -0.025508016347885132,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "RELEASE": {
+          "first_step": 278,
+          "last_step": 294,
+          "observed_steps": 17,
+          "minimum_margin_rad": 0.22226909915274384,
+          "minimum_margin_evidence": {
+            "step": 278,
+            "phase": "RELEASE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.5979643707554639,
+              1.540530900847256,
+              0.10503677181358254,
+              -0.5447057208836039,
+              -0.2931746886490763,
+              2.231161082104104,
+              1.4170628911336156
+            ],
+            "observed_joint_margins_rad": [
+              2.299335629244536,
+              0.22226909915274384,
+              2.7922632281864175,
+              0.47490572088360394,
+              2.6041253113509235,
+              1.5213389178958958,
+              1.4802371088663844
+            ],
+            "minimum_margin_rad": 0.22226909915274384,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": false,
+            "submitted_action": [
+              0.0,
+              0.0,
+              0.0,
+              -0.16064243018627167,
+              0.20492230355739594,
+              -0.021281346678733826,
+              -1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "RETREAT": {
+          "first_step": 295,
+          "last_step": 299,
+          "observed_steps": 5,
+          "minimum_margin_rad": 0.24355741391642227,
+          "minimum_margin_evidence": {
+            "step": 299,
+            "phase": "RETREAT",
+            "next_phase": "RETREAT",
+            "observed_joint_positions_rad": [
+              0.5890693211903894,
+              1.5192425860835777,
+              0.14364179696812265,
+              -0.5310848206527404,
+              -0.31471078472199104,
+              2.0538545415008964,
+              1.396318848015249
+            ],
+            "observed_joint_margins_rad": [
+              2.3082306788096107,
+              0.24355741391642227,
+              2.7536582030318772,
+              0.46128482065274046,
+              2.5825892152780088,
+              1.6986454584991035,
+              1.500981151984751
+            ],
+            "minimum_margin_rad": 0.24355741391642227,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": false,
+            "submitted_action": [
+              0.011004894971847534,
+              0.009037438780069351,
+              0.6998551487922668,
+              -0.07778684794902802,
+              0.09542174637317657,
+              -0.01739715225994587,
+              -1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        }
+      },
+      "carry_or_place_below_004": false,
+      "carry_or_place_observed": true
+    },
+    {
+      "job": "budget_held_wait_demo87",
+      "profile": "held_wait_demo87",
+      "success": true,
+      "steps": 264,
+      "dataset": null,
+      "demo": "demo_87",
+      "carry_path_enabled": false,
+      "segmented_edge_enabled": false,
+      "later_v16_v17_live_held_guard_executed": false,
+      "required_later_held_margin_rad": 0.04,
+      "source_result_sha256": "65182244ab56fb8ebbab87e1f1317bd9f97b6f005b16bb9bdf6b0e54761196c4",
+      "source_trace_sha256": "ea3dfefb9f3e8b4d5ba10e81224289afe85e907f9bbd450cb2cda39cc4289c3b",
+      "phases": {
+        "LIFT": {
+          "first_step": 149,
+          "last_step": 165,
+          "observed_steps": 17,
+          "minimum_margin_rad": 0.629511755557771,
+          "minimum_margin_evidence": {
+            "step": 149,
+            "phase": "LIFT",
+            "next_phase": "LIFT",
+            "observed_joint_positions_rad": [
+              -0.1818575920012342,
+              0.5889570193820673,
+              0.1355554478741181,
+              -2.2442017816653235,
+              -0.053898709819202174,
+              3.122988244442229,
+              0.37244034167724255
+            ],
+            "observed_joint_margins_rad": [
+              2.715442407998766,
+              1.1738429806179327,
+              2.761744552125882,
+              0.8275982183346766,
+              2.8434012901807977,
+              0.629511755557771,
+              2.5248596583227574
+            ],
+            "minimum_margin_rad": 0.629511755557771,
+            "limiting_joint_1based": 6,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.0,
+              0.0,
+              0.699999988079071,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "CARRY": {
+          "first_step": 166,
+          "last_step": 225,
+          "observed_steps": 60,
+          "minimum_margin_rad": 0.7636631777183256,
+          "minimum_margin_evidence": {
+            "step": 166,
+            "phase": "CARRY",
+            "next_phase": "CARRY",
+            "observed_joint_positions_rad": [
+              -0.1432341393584951,
+              0.24451199553461492,
+              0.11696171687902376,
+              -2.3081368222816745,
+              0.1261305075744221,
+              2.84595583956221,
+              0.24819510097768832
+            ],
+            "observed_joint_margins_rad": [
+              2.754065860641505,
+              1.518288004465385,
+              2.7803382831209764,
+              0.7636631777183256,
+              2.771169492425578,
+              0.90654416043779,
+              2.6491048990223116
+            ],
+            "minimum_margin_rad": 0.7636631777183256,
+            "limiting_joint_1based": 4,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.1568261831998825,
+              0.6821382641792297,
+              0.009638426825404167,
+              -0.00376791856251657,
+              0.0005291004199534655,
+              -0.001851509208790958,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "PLACE": {
+          "first_step": 226,
+          "last_step": 246,
+          "observed_steps": 21,
+          "minimum_margin_rad": 0.2997994498538519,
+          "minimum_margin_evidence": {
+            "step": 241,
+            "phase": "PLACE",
+            "next_phase": "PLACE",
+            "observed_joint_positions_rad": [
+              0.60206994994029,
+              1.463000550146148,
+              0.16150858571638557,
+              -0.48056126761560847,
+              -0.36448439999250887,
+              2.219657799643551,
+              1.1721722508103745
+            ],
+            "observed_joint_margins_rad": [
+              2.2952300500597103,
+              0.2997994498538519,
+              2.7357914142836144,
+              0.4107612676156085,
+              2.532815600007491,
+              1.5328422003564488,
+              1.7251277491896255
+            ],
+            "minimum_margin_rad": 0.2997994498538519,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.09064140170812607,
+              0.040163882076740265,
+              -0.6714015007019043,
+              -0.008652620017528534,
+              0.02332533523440361,
+              -0.003636210225522518,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "RELEASE": {
+          "first_step": 247,
+          "last_step": 262,
+          "observed_steps": 16,
+          "minimum_margin_rad": 0.3124169439263178,
+          "minimum_margin_evidence": {
+            "step": 247,
+            "phase": "RELEASE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.5829674618469457,
+              1.4503830560736821,
+              0.11769863931148304,
+              -0.6951038667345166,
+              -0.36303143212214367,
+              2.4832165351216373,
+              1.2194732547346627
+            ],
+            "observed_joint_margins_rad": [
+              2.3143325381530544,
+              0.3124169439263178,
+              2.779601360688517,
+              0.6253038667345167,
+              2.5342685678778563,
+              1.2692834648783626,
+              1.6778267452653373
+            ],
+            "minimum_margin_rad": 0.3124169439263178,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.013132542371749878,
+              0.019411742687225342,
+              0.09101569652557373,
+              -0.05590244010090828,
+              0.06419847160577774,
+              -0.012244433164596558,
+              -1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "RETREAT": {
+          "first_step": 263,
+          "last_step": 264,
+          "observed_steps": 2,
+          "minimum_margin_rad": 0.3375638128060974,
+          "minimum_margin_evidence": {
+            "step": 264,
+            "phase": "RETREAT",
+            "next_phase": "RETREAT",
+            "observed_joint_positions_rad": [
+              0.5763250325693708,
+              1.4252361871939025,
+              0.1296318727427179,
+              -0.7297728214857301,
+              -0.37704013847040263,
+              2.4496037917449507,
+              1.2280772109276408
+            ],
+            "observed_joint_margins_rad": [
+              2.320974967430629,
+              0.3375638128060974,
+              2.767668127257282,
+              0.6599728214857301,
+              2.5202598615295972,
+              1.3028962082550493,
+              1.6692227890723592
+            ],
+            "minimum_margin_rad": 0.3375638128060974,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": false,
+            "submitted_action": [
+              -0.0035142460837960243,
+              -0.002429067622870207,
+              0.6999869346618652,
+              -0.031366873532533646,
+              0.034957319498062134,
+              -0.004796973895281553,
+              -1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        }
+      },
+      "carry_or_place_below_004": false,
+      "carry_or_place_observed": true
+    },
+    {
+      "job": "budget_known_bc_k2_clean_demo_12000011",
+      "profile": "known_bc_k2_clean_demo_12000011",
+      "success": true,
+      "steps": 295,
+      "dataset": "reproduction/improvement_v12_20261015_01/confirmation_starts.hdf5",
+      "demo": "demo_12000011",
+      "carry_path_enabled": false,
+      "segmented_edge_enabled": false,
+      "later_v16_v17_live_held_guard_executed": false,
+      "required_later_held_margin_rad": 0.04,
+      "source_result_sha256": "73cdd2b01c72718e7fcde719d8f16762157fc6935cf0ab9a007be2415966638e",
+      "source_trace_sha256": "4a1fd61a0cc41637f0c3c8e64c54dbe55c022be1a4dac83a4fbf284a6e4fc1de",
+      "phases": {
+        "LIFT": {
+          "first_step": 201,
+          "last_step": 215,
+          "observed_steps": 15,
+          "minimum_margin_rad": 0.3422286258494762,
+          "minimum_margin_evidence": {
+            "step": 215,
+            "phase": "LIFT",
+            "next_phase": "CARRY",
+            "observed_joint_positions_rad": [
+              0.1538512858668587,
+              0.2467198831212548,
+              0.026880987219489633,
+              -2.251457526301536,
+              -0.011568820695697384,
+              2.5054326096910233,
+              2.5550713741505238
+            ],
+            "observed_joint_margins_rad": [
+              2.7434487141331414,
+              1.516080116878745,
+              2.8704190127805105,
+              0.8203424736984641,
+              2.885731179304303,
+              1.2470673903089766,
+              0.3422286258494762
+            ],
+            "minimum_margin_rad": 0.3422286258494762,
+            "limiting_joint_1based": 7,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.02891823649406433,
+              -7.57467932999134e-05,
+              0.14901892840862274,
+              -0.0010068492265418172,
+              0.007385104428976774,
+              -0.00021563384507317096,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "CARRY": {
+          "first_step": 216,
+          "last_step": 268,
+          "observed_steps": 53,
+          "minimum_margin_rad": -0.0016257413300722057,
+          "minimum_margin_evidence": {
+            "step": 241,
+            "phase": "CARRY",
+            "next_phase": "CARRY",
+            "observed_joint_positions_rad": [
+              0.22549805586661523,
+              0.5498741376962546,
+              0.23331972170665408,
+              -1.7691368809524277,
+              -0.16339766296728017,
+              2.3143470085336895,
+              2.898925741330072
+            ],
+            "observed_joint_margins_rad": [
+              2.6718019441333847,
+              1.2129258623037453,
+              2.6639802782933457,
+              1.3026631190475724,
+              2.73390233703272,
+              1.4381529914663105,
+              -0.0016257413300722057
+            ],
+            "minimum_margin_rad": -0.0016257413300722057,
+            "limiting_joint_1based": 7,
+            "joints_below_004_1based": [
+              7
+            ],
+            "joints_outside_nominal_range_1based": [
+              7
+            ],
+            "stable_hold": true,
+            "submitted_action": [
+              0.28510794043540955,
+              0.6386062502861023,
+              0.029924754053354263,
+              -0.0067644501104950905,
+              0.012473870068788528,
+              -0.0009063470060937107,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 31,
+          "outside_nominal_steps": 28,
+          "every_below_004_frame": [
+            {
+              "step": 238,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.20296295203863082,
+                0.49624831438702033,
+                0.220219436844307,
+                -1.855198674085366,
+                -0.14559063485121332,
+                2.350720994806814,
+                2.865347930546488
+              ],
+              "observed_joint_margins_rad": [
+                2.694337047961369,
+                1.2665516856129795,
+                2.677080563155693,
+                1.216601325914634,
+                2.7517093651487867,
+                1.4017790051931858,
+                0.03195206945351181
+              ],
+              "minimum_margin_rad": 0.03195206945351181,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.28235718607902527,
+                0.6399871110916138,
+                0.02628476545214653,
+                -0.006523703224956989,
+                0.013290868140757084,
+                0.00065827980870381,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 239,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.21020350563901483,
+                0.5138154275320206,
+                0.22499829576277855,
+                -1.8271855317323107,
+                -0.15183802600124488,
+                2.3388279440966993,
+                2.8781351820993204
+              ],
+              "observed_joint_margins_rad": [
+                2.687096494360985,
+                1.2489845724679793,
+                2.6723017042372215,
+                1.2446144682676894,
+                2.745461973998755,
+                1.4136720559033007,
+                0.019164817900679587
+              ],
+              "minimum_margin_rad": 0.019164817900679587,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.283296138048172,
+                0.6395238041877747,
+                0.027433348819613457,
+                -0.006525177974253893,
+                0.01294207014143467,
+                0.0007257056422531605,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 240,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.21773483996928725,
+                0.5316919243894822,
+                0.22942487634435926,
+                -1.7985148091485976,
+                -0.1578914509951748,
+                2.326706733866889,
+                2.890419096639928
+              ],
+              "observed_joint_margins_rad": [
+                2.679565160030713,
+                1.2311080756105177,
+                2.667875123655641,
+                1.2732851908514025,
+                2.739408549004825,
+                1.4257932661331107,
+                0.006880903360071855
+              ],
+              "minimum_margin_rad": 0.006880903360071855,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2842571437358856,
+                0.6390439867973328,
+                0.028646979480981827,
+                -0.0065845162607729435,
+                0.012681406922638416,
+                0.0007627881714142859,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 241,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.22549805586661523,
+                0.5498741376962546,
+                0.23331972170665408,
+                -1.7691368809524277,
+                -0.16339766296728017,
+                2.3143470085336895,
+                2.898925741330072
+              ],
+              "observed_joint_margins_rad": [
+                2.6718019441333847,
+                1.2129258623037453,
+                2.6639802782933457,
+                1.3026631190475724,
+                2.73390233703272,
+                1.4381529914663105,
+                -0.0016257413300722057
+              ],
+              "minimum_margin_rad": -0.0016257413300722057,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.28510794043540955,
+                0.6386062502861023,
+                0.029924754053354263,
+                -0.0067644501104950905,
+                0.012473870068788528,
+                -0.0009063470060937107,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 242,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.23320662926438443,
+                0.5682739017920381,
+                0.23553756670086068,
+                -1.7388159925192916,
+                -0.1665364248333085,
+                2.3016355704975986,
+                2.897804621851192
+              ],
+              "observed_joint_margins_rad": [
+                2.6640933707356154,
+                1.194526098207962,
+                2.661762433299139,
+                1.3329840074807084,
+                2.7307635751666917,
+                1.4508644295024014,
+                -0.0005046218511921552
+              ],
+              "minimum_margin_rad": -0.0005046218511921552,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2839871644973755,
+                0.6390527486801147,
+                0.031030498445034027,
+                -0.0076661789789795876,
+                0.01196221262216568,
+                -0.010177829302847385,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 243,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.2411041680824359,
+                0.5869500192083955,
+                0.23698087903932627,
+                -1.70768839328108,
+                -0.16848195332820606,
+                2.288624739493456,
+                2.8975021984763227
+              ],
+              "observed_joint_margins_rad": [
+                2.656195831917564,
+                1.1758499807916043,
+                2.660319120960674,
+                1.36411160671892,
+                2.728818046671794,
+                1.4638752605065442,
+                -0.0002021984763227458
+              ],
+              "minimum_margin_rad": -0.0002021984763227458,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2819114923477173,
+                0.6399201154708862,
+                0.03206506744027138,
+                -0.009077237918972969,
+                0.011248581111431122,
+                -0.017054498195648193,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 244,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.249268790645983,
+                0.6059548302238452,
+                0.23808774069040636,
+                -1.6758102250426832,
+                -0.17002678712387986,
+                2.2753556128799644,
+                2.8974579740424575
+              ],
+              "observed_joint_margins_rad": [
+                2.648031209354017,
+                1.1568451697761546,
+                2.6592122593095935,
+                1.395989774957317,
+                2.72727321287612,
+                1.4771443871200356,
+                -0.00015797404245754265
+              ],
+              "minimum_margin_rad": -0.00015797404245754265,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.27962034940719604,
+                0.640869140625,
+                0.03315463662147522,
+                -0.010671237483620644,
+                0.010520321317017078,
+                -0.0230412557721138,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 245,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.2576686696911746,
+                0.6252946509924735,
+                0.23884367980979693,
+                -1.6431632443561655,
+                -0.17132905590180147,
+                2.261809269882218,
+                2.8974577547119527
+              ],
+              "observed_joint_margins_rad": [
+                2.6396313303088252,
+                1.1375053490075264,
+                2.658456320190203,
+                1.4286367556438346,
+                2.7259709440981985,
+                1.490690730117782,
+                -0.00015775471195267343
+              ],
+              "minimum_margin_rad": -0.00015775471195267343,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2770310640335083,
+                0.6419315338134766,
+                0.034318022429943085,
+                -0.012302576564252377,
+                0.009848412126302719,
+                -0.02853997051715851,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 246,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.2662858287976302,
+                0.644971097226012,
+                0.23923512420636414,
+                -1.6097300468275046,
+                -0.1724103223355168,
+                2.2479672914786253,
+                2.8974641615238386
+              ],
+              "observed_joint_margins_rad": [
+                2.63101417120237,
+                1.1178289027739878,
+                2.658064875793636,
+                1.4620699531724954,
+                2.7248896776644833,
+                1.5045327085213747,
+                -0.00016416152383857963
+              ],
+              "minimum_margin_rad": -0.00016416152383857963,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2740360200405121,
+                0.6431485414505005,
+                0.03555597364902496,
+                -0.013930704444646835,
+                0.00924259889870882,
+                -0.03356802091002464,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 247,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.2751102731758971,
+                0.6649981022244021,
+                0.23931403880197405,
+                -1.5754935617664154,
+                -0.17333551298333866,
+                2.233825142487889,
+                2.89747278350981
+              ],
+              "observed_joint_margins_rad": [
+                2.622189726824103,
+                1.097801897775598,
+                2.657985961198026,
+                1.4963064382335847,
+                2.7239644870166613,
+                1.518674857512111,
+                -0.0001727835098099817
+              ],
+              "minimum_margin_rad": -0.0001727835098099817,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2706497013568878,
+                0.6445062756538391,
+                0.03688378632068634,
+                -0.015527946874499321,
+                0.008721756748855114,
+                -0.03820962831377983,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 248,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.28411221832440997,
+                0.6853988709402246,
+                0.23916645709280573,
+                -1.5404267106458893,
+                -0.1741715726672447,
+                2.2193743153647403,
+                2.897482134136413
+              ],
+              "observed_joint_margins_rad": [
+                2.61318778167559,
+                1.0774011290597754,
+                2.658133542907194,
+                1.4706267106458892,
+                2.7231284273327554,
+                1.5331256846352597,
+                -0.00018213413641321452
+              ],
+              "minimum_margin_rad": -0.00018213413641321452,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2669197916984558,
+                0.6459766030311584,
+                0.03831515833735466,
+                -0.01709109917283058,
+                0.008297241292893887,
+                -0.042554136365652084,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 249,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.29328519121822555,
+                0.7061974941360868,
+                0.23880429458507324,
+                -1.5044978062768102,
+                -0.17495118310877064,
+                2.2046117881610723,
+                2.8974908263531494
+              ],
+              "observed_joint_margins_rad": [
+                2.6040148087817743,
+                1.0566025058639132,
+                2.6584957054149267,
+                1.43469780627681,
+                2.7223488168912295,
+                1.5478882118389277,
+                -0.0001908263531493759
+              ],
+              "minimum_margin_rad": -0.0001908263531493759,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2628133296966553,
+                0.6475636959075928,
+                0.03987990692257881,
+                -0.018599191680550575,
+                0.007986748591065407,
+                -0.0466303825378418,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 250,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.3026355736010509,
+                0.7274182382585919,
+                0.23823646640554805,
+                -1.4676730883230529,
+                -0.1756788133129469,
+                2.189536968870024,
+                2.8974987187512182
+              ],
+              "observed_joint_margins_rad": [
+                2.594664426398949,
+                1.035381761741408,
+                2.659063533594452,
+                1.3978730883230528,
+                2.721621186687053,
+                1.5629630311299758,
+                -0.0001987187512182409
+              ],
+              "minimum_margin_rad": -0.0001987187512182409,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2583197057247162,
+                0.6492606401443481,
+                0.04161151871085167,
+                -0.020050426945090294,
+                0.007800748571753502,
+                -0.050453778356313705,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 251,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.31216979320673727,
+                0.7490875749473641,
+                0.23747708961896957,
+                -1.4299139818268045,
+                -0.17635556362533228,
+                2.174148058388734,
+                2.8975060143937017
+              ],
+              "observed_joint_margins_rad": [
+                2.585130206793263,
+                1.0137124250526357,
+                2.6598229103810302,
+                1.3601139818268044,
+                2.7209444363746678,
+                1.578351941611266,
+                -0.00020601439370171448
+              ],
+              "minimum_margin_rad": -0.00020601439370171448,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2534443736076355,
+                0.6510527729988098,
+                0.0435454323887825,
+                -0.02145104855298996,
+                0.007747880183160305,
+                -0.05404100939631462,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 252,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.3218939271626622,
+                0.7712349343932637,
+                0.2365404464305056,
+                -1.3911766541666766,
+                -0.1769805156911169,
+                2.1584424079547837,
+                2.897512801613773
+              ],
+              "observed_joint_margins_rad": [
+                2.575406072837338,
+                0.9915650656067362,
+                2.6607595535694943,
+                1.3213766541666765,
+                2.720319484308883,
+                1.5940575920452162,
+                -0.0002128016137730171
+              ],
+              "minimum_margin_rad": -0.0002128016137730171,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.24819698929786682,
+                0.6529223322868347,
+                0.045724041759967804,
+                -0.022810231894254684,
+                0.007837017998099327,
+                -0.057406555861234665,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 253,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.3318142634671854,
+                0.7938927448903459,
+                0.23544022209202645,
+                -1.351412126897857,
+                -0.1775509800631896,
+                2.142417173658664,
+                2.8975191199559704
+              ],
+              "observed_joint_margins_rad": [
+                2.5654857365328145,
+                0.968907255109654,
+                2.6618597779079733,
+                1.2816121268978569,
+                2.7197490199368106,
+                1.610082826341336,
+                -0.0002191199559704593
+              ],
+              "minimum_margin_rad": -0.0002191199559704593,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2425934225320816,
+                0.6548478007316589,
+                0.048195384442806244,
+                -0.024139976128935814,
+                0.008077562786638737,
+                -0.060562632977962494,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 254,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.34193788121108554,
+                0.8170966983754144,
+                0.2341886295885863,
+                -1.3105661734429677,
+                -0.1780634950628135,
+                2.1260703515980626,
+                2.897525012225254
+              ],
+              "observed_joint_margins_rad": [
+                2.5553621187889144,
+                0.9457033016245855,
+                2.6631113704114138,
+                1.2407661734429676,
+                2.7192365049371867,
+                1.6264296484019374,
+                -0.00022501222525406206
+              ],
+              "minimum_margin_rad": -0.00022501222525406206,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2366558462381363,
+                0.6568037867546082,
+                0.051017921417951584,
+                -0.025454187765717506,
+                0.008480806834995747,
+                -0.06351993978023529,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 255,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.35227313346124606,
+                0.8408859925694087,
+                0.23279579540868583,
+                -1.2685792841411179,
+                -0.17851409104811958,
+                2.10940179696683,
+                2.8975305203098505
+              ],
+              "observed_joint_margins_rad": [
+                2.545026866538754,
+                0.9219140074305913,
+                2.664504204591314,
+                1.1987792841411178,
+                2.7187859089518804,
+                1.64309820303317,
+                -0.00023052030985049043
+              ],
+              "minimum_margin_rad": -0.00023052030985049043,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.23041580617427826,
+                0.6587594747543335,
+                0.054263077676296234,
+                -0.02676834724843502,
+                0.009060945361852646,
+                -0.0662878155708313,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 256,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.36283001477536964,
+                0.8653035145629021,
+                0.23126923075846145,
+                -1.2253867609092566,
+                -0.1788982159664014,
+                2.092414383418429,
+                2.897535704976034
+              ],
+              "observed_joint_margins_rad": [
+                2.5344699852246304,
+                0.8974964854370978,
+                2.6660307692415386,
+                1.1555867609092565,
+                2.7184017840335986,
+                1.6600856165815712,
+                -0.0002357049760339791
+              ],
+              "minimum_margin_rad": -0.0002357049760339791,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2239166796207428,
+                0.6606776714324951,
+                0.058019861578941345,
+                -0.02809952199459076,
+                0.00983599852770567,
+                -0.06887451559305191,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 257,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.37362040588152867,
+                0.8903959538489592,
+                0.22961328311328721,
+                -1.1809190038176949,
+                -0.17921042327261377,
+                2.075115405070708,
+                2.8975405707921635
+              ],
+              "observed_joint_margins_rad": [
+                2.5236795941184713,
+                0.8724040461510407,
+                2.667686716886713,
+                1.1111190038176948,
+                2.7180895767273863,
+                1.677384594929292,
+                -0.00024057079216355248
+              ],
+              "minimum_margin_rad": -0.00024057079216355248,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2172183394432068,
+                0.6625123620033264,
+                0.06239865720272064,
+                -0.029466507956385612,
+                0.010828779079020023,
+                -0.07128770649433136,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 258,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.38465818473600444,
+                0.9162138047864959,
+                0.22782853221235205,
+                -1.1351021004255153,
+                -0.17944382528761418,
+                2.057518301506968,
+                2.897545099273334
+              ],
+              "observed_joint_margins_rad": [
+                2.5126418152639953,
+                0.846586195213504,
+                2.669471467787648,
+                1.0653021004255152,
+                2.7178561747123857,
+                1.6949816984930322,
+                -0.00024509927333404846
+              ],
+              "minimum_margin_rad": -0.00024509927333404846,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.21040362119674683,
+                0.6642054319381714,
+                0.06753867119550705,
+                -0.030890218913555145,
+                0.012067952193319798,
+                -0.0735340341925621,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 259,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.3959591846956475,
+                0.9428112018436459,
+                0.2259110762916922,
+                -1.0878588697712448,
+                -0.1795893221372807,
+                2.0396448121646307,
+                2.897549289662601
+              ],
+              "observed_joint_margins_rad": [
+                2.5013408153043524,
+                0.8199887981563541,
+                2.671388923708308,
+                1.0180588697712447,
+                2.717710677862719,
+                1.7128551878353693,
+                -0.000249289662601182
+              ],
+              "minimum_margin_rad": -0.000249289662601182,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.20358622074127197,
+                0.6656823754310608,
+                0.0736183226108551,
+                -0.0323941595852375,
+                0.01358917634934187,
+                -0.07561932504177094,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 260,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.40754096112328586,
+                0.9702454947988045,
+                0.2238516379650133,
+                -1.0391105737556074,
+                -0.17963461246724657,
+                2.021527689503769,
+                2.8975531512529304
+              ],
+              "observed_joint_margins_rad": [
+                2.489759038876714,
+                0.7925545052011954,
+                2.6734483620349865,
+                0.9693105737556075,
+                2.717665387532753,
+                1.730972310496231,
+                -0.00025315125293046137
+              ],
+              "minimum_margin_rad": -0.00025315125293046137,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.19692252576351166,
+                0.66684490442276,
+                0.0808667317032814,
+                -0.034005098044872284,
+                0.015436419285833836,
+                -0.07754871994256973,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 261,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.4194188628546677,
+                0.9985788728387637,
+                0.22165318027027708,
+                -0.9887791825710357,
+                -0.1796366588395428,
+                2.003213412730984,
+                2.8975569957025296
+              ],
+              "observed_joint_margins_rad": [
+                2.4778811371453324,
+                0.7642211271612362,
+                2.6756468197297227,
+                0.9189791825710357,
+                2.717663341160457,
+                1.7492865872690158,
+                -0.00025699570252957216
+              ],
+              "minimum_margin_rad": -0.00025699570252957216,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.19060848653316498,
+                0.6675654649734497,
+                0.08958093076944351,
+                -0.035717565566301346,
+                0.017687324434518814,
+                -0.07935638725757599,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 262,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.43160763032872435,
+                1.0278751293828539,
+                0.21932037369633867,
+                -0.9367908122583586,
+                -0.17962373644390373,
+                1.9847642953576423,
+                2.8975608598489297
+              ],
+              "observed_joint_margins_rad": [
+                2.4656923696712756,
+                0.7349248706171461,
+                2.6779796263036615,
+                0.8669908122583586,
+                2.717676263556096,
+                1.7677357046423576,
+                -0.000260859848929762
+              ],
+              "minimum_margin_rad": -0.000260859848929762,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.184946671128273,
+                0.6676561236381531,
+                0.10015001147985458,
+                -0.03754130378365517,
+                0.020422743633389473,
+                -0.08107458055019379,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 263,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.44412463171599453,
+                1.0581944750457615,
+                0.2168284387257049,
+                -0.8830811405606729,
+                -0.17954108109142508,
+                1.9662661837632125,
+                2.897564430658807
+              ],
+              "observed_joint_margins_rad": [
+                2.4531753682840054,
+                0.7046055249542384,
+                2.6804715612742953,
+                0.8132811405606729,
+                2.717758918908575,
+                1.7862338162367875,
+                -0.0002644306588068801
+              ],
+              "minimum_margin_rad": -0.0002644306588068801,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.18036118149757385,
+                0.6668462157249451,
+                0.11307521164417267,
+                -0.03953394293785095,
+                0.023708583787083626,
+                -0.0826973244547844,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 264,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.45698906019861224,
+                1.0895897483360348,
+                0.21411652015039356,
+                -0.8276052349424171,
+                -0.1792953519221239,
+                1.9478372422246917,
+                2.8975675066080986
+              ],
+              "observed_joint_margins_rad": [
+                2.4403109398013876,
+                0.6732102516639651,
+                2.6831834798496064,
+                0.7578052349424171,
+                2.718004648077876,
+                1.8046627577753083,
+                -0.00026750660809859994
+              ],
+              "minimum_margin_rad": -0.00026750660809859994,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.1729143261909485,
+                0.6479622721672058,
+                0.1257421225309372,
+                -0.04177497699856758,
+                0.02761644870042801,
+                -0.08419542014598846,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 265,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.47021662728578884,
+                1.1221027298953477,
+                0.21110551604699,
+                -0.7703506051181019,
+                -0.17879471428113694,
+                1.9296334798533374,
+                2.897570145523411
+              ],
+              "observed_joint_margins_rad": [
+                2.427083372714211,
+                0.6406972701046523,
+                2.68619448395301,
+                0.700550605118102,
+                2.718505285718863,
+                1.8228665201466625,
+                -0.00027014552341109166
+              ],
+              "minimum_margin_rad": -0.00027014552341109166,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.15714561939239502,
+                0.5874748826026917,
+                0.1322437971830368,
+                -0.0443347729742527,
+                0.03224491328001022,
+                -0.08555341511964798,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 266,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.4838146483615722,
+                1.1557561152890246,
+                0.20769320717551662,
+                -0.7113528515123366,
+                -0.17793242637945006,
+                1.9118548010168572,
+                2.8975724576893853
+              ],
+              "observed_joint_margins_rad": [
+                2.413485351638428,
+                0.6070438847109754,
+                2.6896067928244833,
+                0.6415528515123367,
+                2.71936757362055,
+                1.8406451989831427,
+                -0.0002724576893853303
+              ],
+              "minimum_margin_rad": -0.0002724576893853303,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.1447669267654419,
+                0.5278648734092712,
+                0.13989107310771942,
+                -0.0472840815782547,
+                0.03771303966641426,
+                -0.08676574379205704,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 267,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.49772715923225747,
+                1.190464046588915,
+                0.20368303259185425,
+                -0.6507686624242309,
+                -0.17657744014207594,
+                1.894433943734037,
+                2.897573791072938
+              ],
+              "observed_joint_margins_rad": [
+                2.3995728407677426,
+                0.572335953411085,
+                2.6936169674081456,
+                0.580968662424231,
+                2.720722559857924,
+                1.858066056265963,
+                -0.00027379107293823424
+              ],
+              "minimum_margin_rad": -0.00027379107293823424,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.13615882396697998,
+                0.47010794281959534,
+                0.1488162726163864,
+                -0.05050923675298691,
+                0.04397943988442421,
+                -0.08779095858335495,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 268,
+              "phase": "CARRY",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5117608359229271,
+                1.2259410778806012,
+                0.19870877643316348,
+                -0.5889218963636427,
+                -0.17451980170102796,
+                1.876733109148971,
+                2.8975721753249326
+              ],
+              "observed_joint_margins_rad": [
+                2.385539164077073,
+                0.5368589221193987,
+                2.6985912235668366,
+                0.5191218963636427,
+                2.722780198298972,
+                1.875766890851029,
+                -0.000272175324932622
+              ],
+              "minimum_margin_rad": -0.000272175324932622,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.13179725408554077,
+                0.4168848693370819,
+                0.15895263850688934,
+                -0.053524117916822433,
+                0.050627026706933975,
+                -0.08847169578075409,
+                1.0
+              ],
+              "state_before_physics": true
+            }
+          ]
+        },
+        "PLACE": {
+          "first_step": 269,
+          "last_step": 285,
+          "observed_steps": 17,
+          "minimum_margin_rad": -0.0015408932353440097,
+          "minimum_margin_evidence": {
+            "step": 281,
+            "phase": "PLACE",
+            "next_phase": "PLACE",
+            "observed_joint_positions_rad": [
+              0.5984569695523377,
+              1.6890880981382441,
+              0.11534558316307308,
+              -0.06825910676465599,
+              -0.11554065463824215,
+              1.8920968010739414,
+              2.897545876774506
+            ],
+            "observed_joint_margins_rad": [
+              2.2988430304476624,
+              0.0737119018617558,
+              2.781954416836927,
+              -0.0015408932353440097,
+              2.781759345361758,
+              1.8604031989260585,
+              -0.0002458767745059376
+            ],
+            "minimum_margin_rad": -0.0015408932353440097,
+            "limiting_joint_1based": 4,
+            "joints_below_004_1based": [
+              4,
+              7
+            ],
+            "joints_outside_nominal_range_1based": [
+              4,
+              7
+            ],
+            "stable_hold": true,
+            "submitted_action": [
+              0.2803114652633667,
+              0.3173370659351349,
+              -0.5574250221252441,
+              -0.073363296687603,
+              0.1129404678940773,
+              -0.07458997517824173,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 17,
+          "outside_nominal_steps": 17,
+          "every_below_004_frame": [
+            {
+              "step": 269,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5257703843127616,
+                1.2619314581609835,
+                0.19231579252874073,
+                -0.5261607599452077,
+                -0.17127279678663027,
+                1.8587173348890136,
+                2.8975667932604656
+              ],
+              "observed_joint_margins_rad": [
+                2.3715296156872383,
+                0.5008685418390164,
+                2.7049842074712593,
+                0.45636075994520775,
+                2.72602720321337,
+                1.8762173348890137,
+                -0.00026679326046563645
+              ],
+              "minimum_margin_rad": -0.00026679326046563645,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.050561245530843735,
+                0.1420624703168869,
+                -0.6835654973983765,
+                -0.056169621646404266,
+                0.0574788972735405,
+                -0.08864785730838776,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 270,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.540043034082699,
+                1.2978742167889596,
+                0.18245853634140588,
+                -0.4635280529538025,
+                -0.16473414637964467,
+                1.8411107910477613,
+                2.8975482291881085
+              ],
+              "observed_joint_margins_rad": [
+                2.357256965917301,
+                0.4649257832110403,
+                2.714841463658594,
+                0.39372805295380253,
+                2.7325658536203554,
+                1.8586107910477614,
+                -0.00024822918810851746
+              ],
+              "minimum_margin_rad": -0.00024822918810851746,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.052667248994112015,
+                0.1278151273727417,
+                -0.6862138509750366,
+                -0.058578748255968094,
+                0.06464122980833054,
+                -0.08817076683044434,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 271,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5520581136528488,
+                1.3295449404912385,
+                0.17415041852704138,
+                -0.40964782985465603,
+                -0.15972898932701632,
+                1.827752200464366,
+                2.897578776341053
+              ],
+              "observed_joint_margins_rad": [
+                2.345241886347151,
+                0.4332550595087614,
+                2.7231495814729585,
+                0.339847829854656,
+                2.737571010672984,
+                1.845252200464366,
+                -0.00027877634105299975
+              ],
+              "minimum_margin_rad": -0.00027877634105299975,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.056110430508852005,
+                0.11567778140306473,
+                -0.6880917549133301,
+                -0.06080718711018562,
+                0.07213394343852997,
+                -0.08807187527418137,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 272,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.561187592687315,
+                1.3652615454097865,
+                0.16814648997465387,
+                -0.3606029098758992,
+                -0.15824044705076645,
+                1.8177065281012266,
+                2.8975682424560656
+              ],
+              "observed_joint_margins_rad": [
+                2.336112407312685,
+                0.3975384545902134,
+                2.729153510025346,
+                0.2908029098758992,
+                2.7390595529492336,
+                1.8352065281012266,
+                -0.0002682424560656038
+              ],
+              "minimum_margin_rad": -0.0002682424560656038,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.06231160834431648,
+                0.11273516714572906,
+                -0.6880465149879456,
+                -0.05981731414794922,
+                0.07648377865552902,
+                -0.08789891749620438,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 273,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5683757564131666,
+                1.4042689590600856,
+                0.16251235293005947,
+                -0.31524501167826835,
+                -0.15672092227626125,
+                1.8129017761736184,
+                2.8975486052659325
+              ],
+              "observed_joint_margins_rad": [
+                2.328924243586833,
+                0.3585310409399143,
+                2.7347876470699406,
+                0.24544501167826835,
+                2.740579077723739,
+                1.8304017761736184,
+                -0.0002486052659325111
+              ],
+              "minimum_margin_rad": -0.0002486052659325111,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.07117806375026703,
+                0.11847694218158722,
+                -0.6862192749977112,
+                -0.05752652511000633,
+                0.07871527224779129,
+                -0.08677198737859726,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 274,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5744627923190684,
+                1.4438612871477443,
+                0.1571422279507469,
+                -0.2717047142136825,
+                -0.1543361359128045,
+                1.8110656117838912,
+                2.8975367831800347
+              ],
+              "observed_joint_margins_rad": [
+                2.322837207680932,
+                0.3189387128522556,
+                2.740157772049253,
+                0.20190471421368247,
+                2.7429638640871956,
+                1.8285656117838913,
+                -0.00023678318003472754
+              ],
+              "minimum_margin_rad": -0.00023678318003472754,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.08208293467760086,
+                0.12811531126499176,
+                -0.68326336145401,
+                -0.05631806701421738,
+                0.08101926743984222,
+                -0.08505353331565857,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 275,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5797525220350582,
+                1.483281824101018,
+                0.15176631803516935,
+                -0.23007724034177388,
+                -0.15099081228379135,
+                1.8117925862380615,
+                2.897530341737516
+              ],
+              "observed_joint_margins_rad": [
+                2.3175474779649416,
+                0.279518175898982,
+                2.745533681964831,
+                0.16027724034177387,
+                2.7463091877162085,
+                1.8292925862380616,
+                -0.00023034173751579345
+              ],
+              "minimum_margin_rad": -0.00023034173751579345,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.09557077288627625,
+                0.14121517539024353,
+                -0.6789141893386841,
+                -0.056148916482925415,
+                0.08368092030286789,
+                -0.08303005248308182,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 276,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5843915477968329,
+                1.522148194338667,
+                0.14625118702095674,
+                -0.19085002965501124,
+                -0.1466831406074388,
+                1.815563981847878,
+                2.8975262836556337
+              ],
+              "observed_joint_margins_rad": [
+                2.312908452203167,
+                0.24065180566133293,
+                2.751048812979043,
+                0.12105002965501124,
+                2.750616859392561,
+                1.833063981847878,
+                -0.00022628365563370778
+              ],
+              "minimum_margin_rad": -0.00022628365563370778,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.1121077612042427,
+                0.15766684710979462,
+                -0.6727354526519775,
+                -0.05713294446468353,
+                0.08706647902727127,
+                -0.08092185854911804,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 277,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5884414956495244,
+                1.560104556816449,
+                0.14052078563582251,
+                -0.15470253895449723,
+                -0.1415133581676293,
+                1.8227489101441,
+                2.897524065922675
+              ],
+              "observed_joint_margins_rad": [
+                2.3088585043504755,
+                0.20269544318355082,
+                2.7567792143641774,
+                0.08490253895449723,
+                2.755786641832371,
+                1.8402489101441,
+                -0.0002240659226750985
+              ],
+              "minimum_margin_rad": -0.0002240659226750985,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.1323767900466919,
+                0.17780162394046783,
+                -0.6639751195907593,
+                -0.059221409261226654,
+                0.09133527427911758,
+                -0.07890593260526657,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 278,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5919218186097654,
+                1.5967529134731675,
+                0.13454688913938948,
+                -0.12235083230050083,
+                -0.13563113380018924,
+                1.8335380736003521,
+                2.8975234740182603
+              ],
+              "observed_joint_margins_rad": [
+                2.3053781813902345,
+                0.16604708652683242,
+                2.7627531108606105,
+                0.052550832300500824,
+                2.761668866199811,
+                1.8510380736003522,
+                -0.00022347401826028346
+              ],
+              "minimum_margin_rad": -0.00022347401826028346,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.15732523798942566,
+                0.20235727727413177,
+                -0.6513833999633789,
+                -0.062239255756139755,
+                0.09646018594503403,
+                -0.07711098343133926,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 279,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.594835675520303,
+                1.6316612583018597,
+                0.12834340344303993,
+                -0.09451889417843137,
+                -0.1292010442357345,
+                1.8480590496222544,
+                2.897524369179344
+              ],
+              "observed_joint_margins_rad": [
+                2.302464324479697,
+                0.13113874169814022,
+                2.76895659655696,
+                0.024718894178431372,
+                2.7680989557642657,
+                1.8655590496222545,
+                -0.0002243691793442082
+              ],
+              "minimum_margin_rad": -0.0002243691793442082,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                4,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.18812914192676544,
+                0.23233769834041595,
+                -0.6329507231712341,
+                -0.0660179853439331,
+                0.10236028581857681,
+                -0.07562211900949478,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 280,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5971846222751197,
+                1.6643720732149165,
+                0.12195490164560886,
+                -0.07192501017618637,
+                -0.12239418882510585,
+                1.8664044818479244,
+                2.897526555915989
+              ],
+              "observed_joint_margins_rad": [
+                2.30011537772488,
+                0.09842792678508339,
+                2.775345098354391,
+                0.0021250101761863677,
+                2.7749058111748943,
+                1.8839044818479245,
+                -0.0002265559159888575
+              ],
+              "minimum_margin_rad": -0.0002265559159888575,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                4,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2261892855167389,
+                0.26896241307258606,
+                -0.6053904891014099,
+                -0.07040675729513168,
+                0.1089276447892189,
+                -0.07448793202638626,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 281,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5984569695523377,
+                1.6890880981382441,
+                0.11534558316307308,
+                -0.06825910676465599,
+                -0.11554065463824215,
+                1.8920968010739414,
+                2.897545876774506
+              ],
+              "observed_joint_margins_rad": [
+                2.2988430304476624,
+                0.0737119018617558,
+                2.781954416836927,
+                -0.0015408932353440097,
+                2.781759345361758,
+                1.8604031989260585,
+                -0.0002458767745059376
+              ],
+              "minimum_margin_rad": -0.0015408932353440097,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                4,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                4,
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.2803114652633667,
+                0.3173370659351349,
+                -0.5574250221252441,
+                -0.073363296687603,
+                0.1129404678940773,
+                -0.07458997517824173,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 282,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5988505683395594,
+                1.707474935390341,
+                0.10871908295869732,
+                -0.07279958654068218,
+                -0.10880178314433045,
+                1.9212808875110965,
+                2.897548835328708
+              ],
+              "observed_joint_margins_rad": [
+                2.2984494316604405,
+                0.055325064609659025,
+                2.7885809170413025,
+                0.002999586540682178,
+                2.7884982168556696,
+                1.8312191124889035,
+                -0.00024883532870800806
+              ],
+              "minimum_margin_rad": -0.00024883532870800806,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                4,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.3005885183811188,
+                0.3303636610507965,
+                -0.4362778961658478,
+                -0.07684722542762756,
+                0.11786952614784241,
+                -0.07497301697731018,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 283,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.5988183917847556,
+                1.7224999487229022,
+                0.10239558991212365,
+                -0.08228637709746014,
+                -0.10219459455746954,
+                1.9532035308156765,
+                2.8975488650203953
+              ],
+              "observed_joint_margins_rad": [
+                2.298481608215244,
+                0.04030005127709768,
+                2.7949044100878764,
+                0.012486377097460144,
+                2.7951054054425306,
+                1.7992964691843234,
+                -0.0002488650203953391
+              ],
+              "minimum_margin_rad": -0.0002488650203953391,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                4,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.30771946907043457,
+                0.3312389552593231,
+                -0.3032504618167877,
+                -0.08123195916414261,
+                0.12374164909124374,
+                -0.07528035342693329,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 284,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.598490723813461,
+                1.7341949079659296,
+                0.09648522998284988,
+                -0.09788306813961163,
+                -0.09601613998827667,
+                1.9894633060647928,
+                2.897551757581782
+              ],
+              "observed_joint_margins_rad": [
+                2.298809276186539,
+                0.028605092034070356,
+                2.80081477001715,
+                0.02808306813961163,
+                2.8012838600117234,
+                1.7630366939352071,
+                -0.0002517575817821971
+              ],
+              "minimum_margin_rad": -0.0002517575817821971,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                2,
+                4,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.31204020977020264,
+                0.3297828137874603,
+                -0.1717393696308136,
+                -0.08653479814529419,
+                0.1307910978794098,
+                -0.0757371261715889,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 285,
+              "phase": "PLACE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5979059818014233,
+                1.7418985939483842,
+                0.09110561079657857,
+                -0.11898241385290183,
+                -0.0904788025126092,
+                2.027477406857549,
+                2.897555637954314
+              ],
+              "observed_joint_margins_rad": [
+                2.299394018198577,
+                0.020901406051615723,
+                2.8061943892034216,
+                0.04918241385290183,
+                2.8068211974873907,
+                1.7250225931424508,
+                -0.00025563795431393643
+              ],
+              "minimum_margin_rad": -0.00025563795431393643,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                2,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.31443214416503906,
+                0.32704219222068787,
+                -0.04588117450475693,
+                -0.09212914854288101,
+                0.1382507085800171,
+                -0.07631674408912659,
+                1.0
+              ],
+              "state_before_physics": true
+            }
+          ]
+        },
+        "RELEASE": {
+          "first_step": 286,
+          "last_step": 295,
+          "observed_steps": 10,
+          "minimum_margin_rad": -0.0003917280884326857,
+          "minimum_margin_evidence": {
+            "step": 288,
+            "phase": "RELEASE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.5953600605624912,
+              1.725052741161642,
+              0.08079812459294095,
+              -0.18153036521418905,
+              -0.07722611731798093,
+              2.0687440795160907,
+              2.8976917280884327
+            ],
+            "observed_joint_margins_rad": [
+              2.3019399394375086,
+              0.03774725883835783,
+              2.816501875407059,
+              0.11173036521418905,
+              2.820073882682019,
+              1.6837559204839092,
+              -0.0003917280884326857
+            ],
+            "minimum_margin_rad": -0.0003917280884326857,
+            "limiting_joint_1based": 7,
+            "joints_below_004_1based": [
+              2,
+              7
+            ],
+            "joints_outside_nominal_range_1based": [
+              7
+            ],
+            "stable_hold": false,
+            "submitted_action": [
+              0.005910396575927734,
+              -0.002090632915496826,
+              0.1469874382019043,
+              -0.09399793297052383,
+              0.1341608762741089,
+              -0.07606223970651627,
+              -1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 10,
+          "outside_nominal_steps": 9,
+          "every_below_004_frame": [
+            {
+              "step": 286,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5970962035472586,
+                1.7450629128094772,
+                0.08638378566116266,
+                -0.144307119423979,
+                -0.08571639335516403,
+                2.0641596862563913,
+                2.897558556585931
+              ],
+              "observed_joint_margins_rad": [
+                2.3002037964527413,
+                0.017737087190522693,
+                2.8109162143388375,
+                0.074507119423979,
+                2.811583606644836,
+                1.6883403137436086,
+                -0.00025855658593121333
+              ],
+              "minimum_margin_rad": -0.00025855658593121333,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                2,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                0.0012007355690002441,
+                -0.0027880072593688965,
+                0.11250853538513184,
+                -0.09721124172210693,
+                0.14496253430843353,
+                -0.07692113518714905,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 287,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5962977087534309,
+                1.7371347988575196,
+                0.0831784920001978,
+                -0.16283208539596167,
+                -0.08086759026237002,
+                2.070369124272603,
+                2.8970014893093734
+              ],
+              "observed_joint_margins_rad": [
+                2.301002291246569,
+                0.025665201142480276,
+                2.8141215079998023,
+                0.09303208539596167,
+                2.81643240973763,
+                1.6821308757273972,
+                0.00029851069062658553
+              ],
+              "minimum_margin_rad": 0.00029851069062658553,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                2,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                0.003547966480255127,
+                -0.0036409497261047363,
+                0.1484084129333496,
+                -0.09730780869722366,
+                0.1421140879392624,
+                -0.07738354802131653,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 288,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5953600605624912,
+                1.725052741161642,
+                0.08079812459294095,
+                -0.18153036521418905,
+                -0.07722611731798093,
+                2.0687440795160907,
+                2.8976917280884327
+              ],
+              "observed_joint_margins_rad": [
+                2.3019399394375086,
+                0.03774725883835783,
+                2.816501875407059,
+                0.11173036521418905,
+                2.820073882682019,
+                1.6837559204839092,
+                -0.0003917280884326857
+              ],
+              "minimum_margin_rad": -0.0003917280884326857,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                2,
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                0.005910396575927734,
+                -0.002090632915496826,
+                0.1469874382019043,
+                -0.09399793297052383,
+                0.1341608762741089,
+                -0.07606223970651627,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 289,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5938938484308088,
+                1.711534707852443,
+                0.07880480586209047,
+                -0.20211370908858392,
+                -0.07470550239077986,
+                2.0629024262854,
+                2.897562246592282
+              ],
+              "observed_joint_margins_rad": [
+                2.3034061515691913,
+                0.05126529214755693,
+                2.8184951941379097,
+                0.13231370908858392,
+                2.82259449760922,
+                1.6895975737145998,
+                -0.0002622465922819117
+              ],
+              "minimum_margin_rad": -0.0002622465922819117,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                0.011239945888519287,
+                0.005696713924407959,
+                0.14909982681274414,
+                -0.08823299407958984,
+                0.12363789975643158,
+                -0.07584664225578308,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 290,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.591853072355266,
+                1.6970017738980079,
+                0.07722996600283345,
+                -0.22284637053852457,
+                -0.0730183807076656,
+                2.0536627275454182,
+                2.897538017642231
+              ],
+              "observed_joint_margins_rad": [
+                2.3054469276447342,
+                0.06579822610199204,
+                2.8200700339971667,
+                0.15304637053852457,
+                2.8242816192923343,
+                1.6988372724545817,
+                -0.00023801764223119193
+              ],
+              "minimum_margin_rad": -0.00023801764223119193,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                0.01781374216079712,
+                0.021521151065826416,
+                0.1477980613708496,
+                -0.08015231788158417,
+                0.11052348464727402,
+                -0.07512488961219788,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 291,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5895933291898241,
+                1.6819168783250806,
+                0.07631563166254508,
+                -0.24393250644758305,
+                -0.07192729028765053,
+                2.044881965715803,
+                2.897530402421532
+              ],
+              "observed_joint_margins_rad": [
+                2.307706670810176,
+                0.08088312167491929,
+                2.820984368337455,
+                0.17413250644758305,
+                2.8253727097123496,
+                1.707618034284197,
+                -0.00023040242153182788
+              ],
+              "minimum_margin_rad": -0.00023040242153182788,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                0.022921115159988403,
+                0.03785222768783569,
+                0.14198601245880127,
+                -0.07244137674570084,
+                0.09784399718046188,
+                -0.07422676682472229,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 292,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5872093754727804,
+                1.6666098974313721,
+                0.07603471766866414,
+                -0.2655549741770413,
+                -0.07145369630061855,
+                2.0376126736305915,
+                2.8975273459735114
+              ],
+              "observed_joint_margins_rad": [
+                2.3100906245272195,
+                0.09619010256862781,
+                2.821265282331336,
+                0.19575497417704132,
+                2.8258463036993815,
+                1.7148873263694084,
+                -0.00022734597351137253
+              ],
+              "minimum_margin_rad": -0.00022734597351137253,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                0.02690061926841736,
+                0.053599774837493896,
+                0.1345360279083252,
+                -0.06540356576442719,
+                0.0861094668507576,
+                -0.07333775609731674,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 293,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5847772611711015,
+                1.6512611318688786,
+                0.07625344873628273,
+                -0.2876770089237419,
+                -0.07143006854904632,
+                2.03246157803251,
+                2.897525938995125
+              ],
+              "observed_joint_margins_rad": [
+                2.3125227388288985,
+                0.11153886813112135,
+                2.8210465512637173,
+                0.21787700892374187,
+                2.8258699314509537,
+                1.72003842196749,
+                -0.00022593899512513005
+              ],
+              "minimum_margin_rad": -0.00022593899512513005,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                0.02960875630378723,
+                0.06790965795516968,
+                0.1261889934539795,
+                -0.05929885059595108,
+                0.07570019364356995,
+                -0.07252921164035797,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 294,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5823419249087616,
+                1.6360184102017623,
+                0.07687681228799148,
+                -0.3102608935854147,
+                -0.07168436516499241,
+                2.029649296311359,
+                2.8975254648429143
+              ],
+              "observed_joint_margins_rad": [
+                2.3149580750912384,
+                0.12678158979823761,
+                2.8204231877120085,
+                0.2404608935854147,
+                2.8256156348350077,
+                1.722850703688641,
+                -0.00022546484291430247
+              ],
+              "minimum_margin_rad": -0.00022546484291430247,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                0.03125682473182678,
+                0.08026987314224243,
+                0.11780083179473877,
+                -0.05429290980100632,
+                0.06670773029327393,
+                -0.07180873304605484,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 295,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.5799150819202522,
+                1.6209720349170988,
+                0.07790960059456747,
+                -0.33322241438903416,
+                -0.07231596754045247,
+                2.0290915466795743,
+                2.8975260220322725
+              ],
+              "observed_joint_margins_rad": [
+                2.317384918079748,
+                0.14182796508290108,
+                2.8193903994054326,
+                0.26342241438903413,
+                2.8249840324595477,
+                1.7234084533204257,
+                -0.0002260220322725104
+              ],
+              "minimum_margin_rad": -0.0002260220322725104,
+              "limiting_joint_1based": 7,
+              "joints_below_004_1based": [
+                7
+              ],
+              "joints_outside_nominal_range_1based": [
+                7
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                0.03207862377166748,
+                0.09073644876480103,
+                0.10994851589202881,
+                -0.0502769872546196,
+                0.05911659449338913,
+                -0.07124704867601395,
+                -1.0
+              ],
+              "state_before_physics": true
+            }
+          ]
+        }
+      },
+      "carry_or_place_below_004": true,
+      "carry_or_place_observed": true
+    },
+    {
+      "job": "budget_known_full_s23_clean_demo_12000036",
+      "profile": "known_full_s23_clean_demo_12000036",
+      "success": true,
+      "steps": 340,
+      "dataset": "reproduction/improvement_v12_20261015_01/confirmation_starts.hdf5",
+      "demo": "demo_12000036",
+      "carry_path_enabled": false,
+      "segmented_edge_enabled": false,
+      "later_v16_v17_live_held_guard_executed": false,
+      "required_later_held_margin_rad": 0.04,
+      "source_result_sha256": "eed31a60e26f85fca49338cc05276a3bbe27dc925e7bb13049f435d167eb3f2f",
+      "source_trace_sha256": "32a88745dcebf7ddb0dea9ced4a3bc913aab00bd1f8d6d1c59611cba33c8882b",
+      "phases": {
+        "LIFT": {
+          "first_step": 249,
+          "last_step": 264,
+          "observed_steps": 16,
+          "minimum_margin_rad": 0.811661891513058,
+          "minimum_margin_evidence": {
+            "step": 260,
+            "phase": "LIFT",
+            "next_phase": "LIFT",
+            "observed_joint_positions_rad": [
+              0.0003933584833368674,
+              0.286387378177511,
+              0.22091969939357295,
+              -2.260138108486942,
+              -0.11398206634292735,
+              2.5463735013143687,
+              -0.4162251145720245
+            ],
+            "observed_joint_margins_rad": [
+              2.8969066415166633,
+              1.476412621822489,
+              2.676380300606427,
+              0.811661891513058,
+              2.783317933657073,
+              1.2061264986856313,
+              2.4810748854279754
+            ],
+            "minimum_margin_rad": 0.811661891513058,
+            "limiting_joint_1based": 4,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.03752516582608223,
+              -0.025576669722795486,
+              0.35686391592025757,
+              -6.332500925054774e-05,
+              0.0096566341817379,
+              0.0026939474046230316,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "CARRY": {
+          "first_step": 265,
+          "last_step": 312,
+          "observed_steps": 48,
+          "minimum_margin_rad": 0.6222561031111027,
+          "minimum_margin_evidence": {
+            "step": 312,
+            "phase": "CARRY",
+            "next_phase": "PLACE",
+            "observed_joint_positions_rad": [
+              0.4420721678155039,
+              1.1405438968888972,
+              0.3621480692763077,
+              -0.7688954998438042,
+              -0.3484031908491697,
+              1.930605172077625,
+              -0.017602178295980545
+            ],
+            "observed_joint_margins_rad": [
+              2.4552278321844963,
+              0.6222561031111027,
+              2.5351519307236923,
+              0.6990954998438043,
+              2.5488968091508304,
+              1.821894827922375,
+              2.8796978217040192
+            ],
+            "minimum_margin_rad": 0.6222561031111027,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.27682653069496155,
+              0.3478226959705353,
+              0.1623334139585495,
+              -0.03763406723737717,
+              0.05146214738488197,
+              0.0035552142653614283,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "PLACE": {
+          "first_step": 313,
+          "last_step": 329,
+          "observed_steps": 17,
+          "minimum_margin_rad": 0.05292049794654097,
+          "minimum_margin_evidence": {
+            "step": 329,
+            "phase": "PLACE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.6070387159179862,
+              1.709879502053459,
+              0.20837246388792705,
+              -0.1367130408166473,
+              -0.227006070930786,
+              1.995611903212943,
+              -0.0827192680622708
+            ],
+            "observed_joint_margins_rad": [
+              2.290261284082014,
+              0.05292049794654097,
+              2.688927536112073,
+              0.06691304081664731,
+              2.670293929069214,
+              1.756888096787057,
+              2.8145807319377294
+            ],
+            "minimum_margin_rad": 0.05292049794654097,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.373735636472702,
+              0.1923716813325882,
+              -0.16139736771583557,
+              -0.08026004582643509,
+              0.12785157561302185,
+              0.002008089330047369,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "RELEASE": {
+          "first_step": 330,
+          "last_step": 340,
+          "observed_steps": 11,
+          "minimum_margin_rad": 0.011206498022180655,
+          "minimum_margin_evidence": {
+            "step": 332,
+            "phase": "RELEASE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.6054452549503351,
+              1.7515935019778193,
+              0.18123942146912178,
+              -0.14541474769683102,
+              -0.1994266122114862,
+              2.0857942523139728,
+              -0.0847961846174444
+            ],
+            "observed_joint_margins_rad": [
+              2.291854745049665,
+              0.011206498022180655,
+              2.716060578530878,
+              0.07561474769683102,
+              2.6978733877885137,
+              1.6667057476860272,
+              2.8125038153825557
+            ],
+            "minimum_margin_rad": 0.011206498022180655,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [
+              2
+            ],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": false,
+            "submitted_action": [
+              -0.008940249681472778,
+              0.014879405498504639,
+              0.28921782970428467,
+              -0.10485775768756866,
+              0.1596449911594391,
+              0.003173389006406069,
+              -1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 7,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": [
+            {
+              "step": 330,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6072656831845031,
+                1.7304521530312955,
+                0.19884868646266673,
+                -0.1367491119202654,
+                -0.21763497911152543,
+                2.0292926844087082,
+                -0.08329103865947546
+              ],
+              "observed_joint_margins_rad": [
+                2.290034316815497,
+                0.03234784696870441,
+                2.6984513135373334,
+                0.0669491119202654,
+                2.6796650208884745,
+                1.7232073155912917,
+                2.8140089613405244
+              ],
+              "minimum_margin_rad": 0.03234784696870441,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.005473196506500244,
+                0.0071051716804504395,
+                0.12964963912963867,
+                -0.08810007572174072,
+                0.13813069462776184,
+                0.0020776072051376104,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 331,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6066853637690095,
+                1.7445029338073292,
+                0.1896521724442537,
+                -0.13933445689668084,
+                -0.2085291423207762,
+                2.0608390316569296,
+                -0.08369018431051213
+              ],
+              "observed_joint_margins_rad": [
+                2.2906146362309903,
+                0.018297066192670686,
+                2.7076478275557463,
+                0.06953445689668084,
+                2.688770857679224,
+                1.6916609683430703,
+                2.813609815689488
+              ],
+              "minimum_margin_rad": 0.018297066192670686,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                0.0018693506717681885,
+                0.011784136295318604,
+                0.2263796329498291,
+                -0.09672798961400986,
+                0.14951856434345245,
+                0.0025945263914763927,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 332,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6054452549503351,
+                1.7515935019778193,
+                0.18123942146912178,
+                -0.14541474769683102,
+                -0.1994266122114862,
+                2.0857942523139728,
+                -0.0847961846174444
+              ],
+              "observed_joint_margins_rad": [
+                2.291854745049665,
+                0.011206498022180655,
+                2.716060578530878,
+                0.07561474769683102,
+                2.6978733877885137,
+                1.6667057476860272,
+                2.8125038153825557
+              ],
+              "minimum_margin_rad": 0.011206498022180655,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                -0.008940249681472778,
+                0.014879405498504639,
+                0.28921782970428467,
+                -0.10485775768756866,
+                0.1596449911594391,
+                0.003173389006406069,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 333,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6053851682339162,
+                1.7492370442321832,
+                0.1748064950158253,
+                -0.1472230600550072,
+                -0.18931076699994948,
+                2.0808142985256315,
+                -0.08738934750448517
+              ],
+              "observed_joint_margins_rad": [
+                2.291914831766084,
+                0.013562955767816742,
+                2.7224935049841745,
+                0.07742306005500721,
+                2.7079892330000503,
+                1.6716857014743685,
+                2.809910652495515
+              ],
+              "minimum_margin_rad": 0.013562955767816742,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                -0.005678236484527588,
+                0.016394853591918945,
+                0.290183424949646,
+                -0.1054234728217125,
+                0.1555270254611969,
+                0.002473416505381465,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 334,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6052817256340774,
+                1.7446212564245283,
+                0.16853746668977745,
+                -0.150262266279733,
+                -0.1809297298070305,
+                2.067666246452062,
+                -0.08835069103868044
+              ],
+              "observed_joint_margins_rad": [
+                2.2920182743659225,
+                0.018178743575471668,
+                2.7287625333102223,
+                0.08046226627973299,
+                2.7163702701929693,
+                1.684833753547938,
+                2.8089493089613193
+              ],
+              "minimum_margin_rad": 0.018178743575471668,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                0.005528479814529419,
+                0.025265514850616455,
+                0.2854257822036743,
+                -0.10010425001382828,
+                0.14539353549480438,
+                0.0028804235626012087,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 335,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6051105788866158,
+                1.7382500481060577,
+                0.16275015433330933,
+                -0.15445544787082355,
+                -0.17373788814293095,
+                2.051644278998148,
+                -0.08895632356614414
+              ],
+              "observed_joint_margins_rad": [
+                2.292189421113384,
+                0.024549951893942268,
+                2.734549845666691,
+                0.08465544787082355,
+                2.723562111857069,
+                1.7008557210018518,
+                2.808343676433856
+              ],
+              "minimum_margin_rad": 0.024549951893942268,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                0.018138587474822998,
+                0.03574758768081665,
+                0.2760237455368042,
+                -0.09285861253738403,
+                0.13372386991977692,
+                0.003212734591215849,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 336,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6048282857008315,
+                1.7301864802601088,
+                0.15753175480826975,
+                -0.15956035277168426,
+                -0.16755682997740987,
+                2.0342814885061267,
+                -0.08945201613415774
+              ],
+              "observed_joint_margins_rad": [
+                2.2924717142991686,
+                0.03261351973989113,
+                2.7397682451917302,
+                0.08976035277168426,
+                2.7297431700225903,
+                1.7182185114938733,
+                2.8078479838658423
+              ],
+              "minimum_margin_rad": 0.03261351973989113,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                0.029839426279067993,
+                0.04608124494552612,
+                0.2585136890411377,
+                -0.084861621260643,
+                0.12161597609519958,
+                0.0033948940690606833,
+                -1.0
+              ],
+              "state_before_physics": true
+            }
+          ]
+        }
+      },
+      "carry_or_place_below_004": false,
+      "carry_or_place_observed": true
+    },
+    {
+      "job": "budget_known_full_s23_noise005_demo_12000021",
+      "profile": "known_full_s23_noise005_demo_12000021",
+      "success": true,
+      "steps": 377,
+      "dataset": "reproduction/improvement_v12_20261015_01/confirmation_starts.hdf5",
+      "demo": "demo_12000021",
+      "carry_path_enabled": false,
+      "segmented_edge_enabled": false,
+      "later_v16_v17_live_held_guard_executed": false,
+      "required_later_held_margin_rad": 0.04,
+      "source_result_sha256": "a21035cc670e38d6d97b1bda878819d25705a00f54f3b912cfe017580d452768",
+      "source_trace_sha256": "2ec71245580d08d5b08ae82c13a7a3802f800281546c0dbbaa7e56f7a034e05f",
+      "phases": {
+        "LIFT": {
+          "first_step": 294,
+          "last_step": 312,
+          "observed_steps": 19,
+          "minimum_margin_rad": 0.886885052081777,
+          "minimum_margin_evidence": {
+            "step": 294,
+            "phase": "LIFT",
+            "next_phase": "LIFT",
+            "observed_joint_positions_rad": [
+              0.07742426950155473,
+              0.8759149479182229,
+              -0.017780043887992605,
+              -1.6756761131937292,
+              0.02632137651653494,
+              2.544743168762314,
+              1.664970729869028
+            ],
+            "observed_joint_margins_rad": [
+              2.8198757304984454,
+              0.886885052081777,
+              2.8795199561120075,
+              1.3961238868062709,
+              2.870978623483465,
+              1.207756831237686,
+              1.232329270130972
+            ],
+            "minimum_margin_rad": 0.886885052081777,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              -4.307948074711021e-06,
+              -0.0033080854918807745,
+              0.9999945163726807,
+              -0.0006547168013639748,
+              -0.006790193263441324,
+              -0.0006102921324782073,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "CARRY": {
+          "first_step": 313,
+          "last_step": 351,
+          "observed_steps": 39,
+          "minimum_margin_rad": 0.5885466266518133,
+          "minimum_margin_evidence": {
+            "step": 351,
+            "phase": "CARRY",
+            "next_phase": "PLACE",
+            "observed_joint_positions_rad": [
+              0.4845078588367007,
+              1.1742533733481866,
+              0.27287184665761854,
+              -0.6947335164960365,
+              -0.2684015602368947,
+              1.9366186424997593,
+              2.2929529934912005
+            ],
+            "observed_joint_margins_rad": [
+              2.4127921411632993,
+              0.5885466266518133,
+              2.6244281533423814,
+              0.6249335164960366,
+              2.6288984397631054,
+              1.8158813575002406,
+              0.6043470065087995
+            ],
+            "minimum_margin_rad": 0.5885466266518133,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.23045474290847778,
+              0.3995916545391083,
+              0.2123202532529831,
+              -0.050354909151792526,
+              0.07450403273105621,
+              0.004465732257813215,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "PLACE": {
+          "first_step": 352,
+          "last_step": 367,
+          "observed_steps": 16,
+          "minimum_margin_rad": 0.006467522116417851,
+          "minimum_margin_evidence": {
+            "step": 366,
+            "phase": "PLACE",
+            "next_phase": "PLACE",
+            "observed_joint_positions_rad": [
+              0.6203088179430298,
+              1.726050239067907,
+              0.15422498863639078,
+              -0.07626752211641785,
+              -0.16751040096285177,
+              1.9666891246272187,
+              2.2595787104732614
+            ],
+            "observed_joint_margins_rad": [
+              2.27699118205697,
+              0.03674976093209281,
+              2.7430750113636093,
+              0.006467522116417851,
+              2.729789599037148,
+              1.7858108753727813,
+              0.6377212895267386
+            ],
+            "minimum_margin_rad": 0.006467522116417851,
+            "limiting_joint_1based": 4,
+            "joints_below_004_1based": [
+              2,
+              4
+            ],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.44279226660728455,
+              0.21940533816814423,
+              -0.24957767128944397,
+              -0.08869415521621704,
+              0.13819287717342377,
+              0.0024332241155207157,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 4,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": [
+            {
+              "step": 364,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.6183302817395564,
+                1.6689529800472838,
+                0.17172962367724712,
+                -0.09881650582003784,
+                -0.18783490125675228,
+                1.9088778560575712,
+                2.2634852262632723
+              ],
+              "observed_joint_margins_rad": [
+                2.2789697182604436,
+                0.09384701995271616,
+                2.725570376322753,
+                0.02901650582003784,
+                2.7094650987432476,
+                1.8436221439424287,
+                0.6338147737367277
+              ],
+              "minimum_margin_rad": 0.02901650582003784,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                4
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.4171355664730072,
+                0.1967771202325821,
+                -0.5265706777572632,
+                -0.07373231649398804,
+                0.12143639475107193,
+                0.002956902142614126,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 365,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.6196654743776356,
+                1.6992781698092385,
+                0.16299075234091553,
+                -0.08382642665350573,
+                -0.177726286427848,
+                1.935264828186741,
+                2.261205587282216
+              ],
+              "observed_joint_margins_rad": [
+                2.2776345256223642,
+                0.06352183019076141,
+                2.7343092476590845,
+                0.01402642665350573,
+                2.719573713572152,
+                1.8172351718132589,
+                0.6360944127177839
+              ],
+              "minimum_margin_rad": 0.01402642665350573,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                4
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.43342748284339905,
+                0.21082435548305511,
+                -0.3920816481113434,
+                -0.080701544880867,
+                0.12934993207454681,
+                0.0027030331548303366,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 366,
+              "phase": "PLACE",
+              "next_phase": "PLACE",
+              "observed_joint_positions_rad": [
+                0.6203088179430298,
+                1.726050239067907,
+                0.15422498863639078,
+                -0.07626752211641785,
+                -0.16751040096285177,
+                1.9666891246272187,
+                2.2595787104732614
+              ],
+              "observed_joint_margins_rad": [
+                2.27699118205697,
+                0.03674976093209281,
+                2.7430750113636093,
+                0.006467522116417851,
+                2.729789599037148,
+                1.7858108753727813,
+                0.6377212895267386
+              ],
+              "minimum_margin_rad": 0.006467522116417851,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                2,
+                4
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.44279226660728455,
+                0.21940533816814423,
+                -0.24957767128944397,
+                -0.08869415521621704,
+                0.13819287717342377,
+                0.0024332241155207157,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 367,
+              "phase": "PLACE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6198797200103202,
+                1.7486126402302442,
+                0.1453058903078226,
+                -0.07642003042838542,
+                -0.15789811295246056,
+                2.0020812376941906,
+                2.258567875207106
+              ],
+              "observed_joint_margins_rad": [
+                2.2774202799896797,
+                0.014187359769755714,
+                2.7519941096921774,
+                0.006620030428385423,
+                2.7394018870475394,
+                1.7504187623058094,
+                0.6387321247928939
+              ],
+              "minimum_margin_rad": 0.006620030428385423,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                2,
+                4
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.44862696528434753,
+                0.2283180207014084,
+                -0.10776033252477646,
+                -0.09676695615053177,
+                0.14781594276428223,
+                0.0023916170466691256,
+                1.0
+              ],
+              "state_before_physics": true
+            }
+          ]
+        },
+        "RELEASE": {
+          "first_step": 368,
+          "last_step": 377,
+          "observed_steps": 10,
+          "minimum_margin_rad": -0.001989359988948669,
+          "minimum_margin_evidence": {
+            "step": 368,
+            "phase": "RELEASE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.6181862681593993,
+              1.7647893599889486,
+              0.1364635943942397,
+              -0.08560847550826256,
+              -0.1489396472047062,
+              2.0416685274516686,
+              2.257768416503018
+            ],
+            "observed_joint_margins_rad": [
+              2.2791137318406007,
+              -0.001989359988948669,
+              2.7608364056057604,
+              0.01580847550826256,
+              2.748360352795294,
+              1.7108314725483313,
+              0.6395315834969821
+            ],
+            "minimum_margin_rad": -0.001989359988948669,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [
+              2,
+              4
+            ],
+            "joints_outside_nominal_range_1based": [
+              2
+            ],
+            "stable_hold": false,
+            "submitted_action": [
+              -0.0016225874423980713,
+              0.009653270244598389,
+              0.13472795486450195,
+              -0.10537918657064438,
+              0.1588224321603775,
+              0.0025293424259871244,
+              -1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 4,
+          "outside_nominal_steps": 1,
+          "every_below_004_frame": [
+            {
+              "step": 368,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6181862681593993,
+                1.7647893599889486,
+                0.1364635943942397,
+                -0.08560847550826256,
+                -0.1489396472047062,
+                2.0416685274516686,
+                2.257768416503018
+              ],
+              "observed_joint_margins_rad": [
+                2.2791137318406007,
+                -0.001989359988948669,
+                2.7608364056057604,
+                0.01580847550826256,
+                2.748360352795294,
+                1.7108314725483313,
+                0.6395315834969821
+              ],
+              "minimum_margin_rad": -0.001989359988948669,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2,
+                4
+              ],
+              "joints_outside_nominal_range_1based": [
+                2
+              ],
+              "stable_hold": false,
+              "submitted_action": [
+                -0.0016225874423980713,
+                0.009653270244598389,
+                0.13472795486450195,
+                -0.10537918657064438,
+                0.1588224321603775,
+                0.0025293424259871244,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 369,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6150411910960324,
+                1.7618613274578123,
+                0.12779568111803652,
+                -0.11221030582001955,
+                -0.1407920143594151,
+                2.0715170778301815,
+                2.2581512910643915
+              ],
+              "observed_joint_margins_rad": [
+                2.2822588089039675,
+                0.0009386725421876019,
+                2.7695043188819635,
+                0.04241030582001955,
+                2.7565079856405847,
+                1.6809829221698185,
+                0.6391487089356085
+              ],
+              "minimum_margin_rad": 0.0009386725421876019,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                -0.015546530485153198,
+                0.012652873992919922,
+                0.21846234798431396,
+                -0.11065024137496948,
+                0.16548793017864227,
+                0.0026062559336423874,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 370,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6132217705739137,
+                1.747484815752777,
+                0.12052383135438623,
+                -0.13471993484579237,
+                -0.13312468319187962,
+                2.069762383524683,
+                2.2621498561620887
+              ],
+              "observed_joint_margins_rad": [
+                2.284078229426086,
+                0.015315184247223002,
+                2.776776168645614,
+                0.06491993484579237,
+                2.7641753168081205,
+                1.682737616475317,
+                0.6351501438379112
+              ],
+              "minimum_margin_rad": 0.015315184247223002,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                -0.017639100551605225,
+                0.01673281192779541,
+                0.2230513095855713,
+                -0.10627421736717224,
+                0.15747645497322083,
+                0.006765835452824831,
+                -1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 371,
+              "phase": "RELEASE",
+              "next_phase": "RELEASE",
+              "observed_joint_positions_rad": [
+                0.6124962279636824,
+                1.730655049449321,
+                0.11482340051286331,
+                -0.16047349924581264,
+                -0.12618145924086846,
+                2.064012413465399,
+                2.2641298961643432
+              ],
+              "observed_joint_margins_rad": [
+                2.2848037720363177,
+                0.03214495055067901,
+                2.7824765994871368,
+                0.09067349924581264,
+                2.7711185407591317,
+                1.6884875865346007,
+                0.6331701038356568
+              ],
+              "minimum_margin_rad": 0.03214495055067901,
+              "limiting_joint_1based": 2,
+              "joints_below_004_1based": [
+                2
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": false,
+              "submitted_action": [
+                -0.0088481605052948,
+                0.01622527837753296,
+                0.22552132606506348,
+                -0.09941232949495316,
+                0.1452103555202484,
+                0.008205640129745007,
+                -1.0
+              ],
+              "state_before_physics": true
+            }
+          ]
+        }
+      },
+      "carry_or_place_below_004": true,
+      "carry_or_place_observed": true
+    },
+    {
+      "job": "budget_known13_bc_k2_noise005_demo_13000021",
+      "profile": "known13_bc_k2_noise005_demo_13000021",
+      "success": false,
+      "steps": 400,
+      "dataset": "reproduction/improvement_v13_20261016_01/confirmation_starts.hdf5",
+      "demo": "demo_13000021",
+      "carry_path_enabled": false,
+      "segmented_edge_enabled": false,
+      "later_v16_v17_live_held_guard_executed": false,
+      "required_later_held_margin_rad": 0.04,
+      "source_result_sha256": "b249ac83cca283d3e62fcc09f1ddf1dd3fd317570d384c61abcb20b8cc7e0bc0",
+      "source_trace_sha256": "8867e089e7cb0ca04bf859e8450d9b87c2e505b05d720ed8540d721d6b010282",
+      "phases": {
+        "LIFT": {
+          "first_step": 295,
+          "last_step": 311,
+          "observed_steps": 17,
+          "minimum_margin_rad": 0.8896752255467215,
+          "minimum_margin_evidence": {
+            "step": 295,
+            "phase": "LIFT",
+            "next_phase": "LIFT",
+            "observed_joint_positions_rad": [
+              -0.038507228668921346,
+              0.8731247744532784,
+              -0.08200659191170835,
+              -1.726019991842275,
+              -0.08096822770131201,
+              1.7568695768899552,
+              0.6445357846182723
+            ],
+            "observed_joint_margins_rad": [
+              2.858792771331079,
+              0.8896752255467215,
+              2.8152934080882916,
+              1.3457800081577251,
+              2.816331772298688,
+              1.7743695768899552,
+              2.2527642153817276
+            ],
+            "minimum_margin_rad": 0.8896752255467215,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              -0.0013247518800199032,
+              -0.0005298262112773955,
+              0.9999989867210388,
+              -8.810071449261159e-05,
+              -0.02102963626384735,
+              0.002804689109325409,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "CARRY": {
+          "first_step": 312,
+          "last_step": 400,
+          "observed_steps": 89,
+          "minimum_margin_rad": -0.0042031223560664716,
+          "minimum_margin_evidence": {
+            "step": 358,
+            "phase": "CARRY",
+            "next_phase": "CARRY",
+            "observed_joint_positions_rad": [
+              0.4635378059049325,
+              1.530085354172139,
+              0.27961427121936233,
+              -0.06559687764393353,
+              0.10347535706376064,
+              1.1246923323979476,
+              1.3303102914939309
+            ],
+            "observed_joint_margins_rad": [
+              2.4337621940950673,
+              0.23271464582786083,
+              2.6176857287806374,
+              -0.0042031223560664716,
+              2.793824642936239,
+              1.1421923323979477,
+              1.5669897085060691
+            ],
+            "minimum_margin_rad": -0.0042031223560664716,
+            "limiting_joint_1based": 4,
+            "joints_below_004_1based": [
+              4
+            ],
+            "joints_outside_nominal_range_1based": [
+              4
+            ],
+            "stable_hold": true,
+            "submitted_action": [
+              0.7157151699066162,
+              0.6691542267799377,
+              0.19996117055416107,
+              -0.10904412716627121,
+              0.23636731505393982,
+              0.09603675454854965,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 5,
+          "outside_nominal_steps": 1,
+          "every_below_004_frame": [
+            {
+              "step": 357,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.4509124683212088,
+                1.5120728281727145,
+                0.28737556159380495,
+                -0.08311240756346809,
+                0.09263706643418268,
+                1.1080612980300846,
+                1.3224152571393597
+              ],
+              "observed_joint_margins_rad": [
+                2.4463875316787913,
+                0.25072717182728543,
+                2.6099244384061953,
+                0.01331240756346809,
+                2.804662933565817,
+                1.1255612980300846,
+                1.5748847428606403
+              ],
+              "minimum_margin_rad": 0.01331240756346809,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                4
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.6937046647071838,
+                0.7014989852905273,
+                0.16331878304481506,
+                -0.1035410538315773,
+                0.22488555312156677,
+                0.09005460143089294,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 358,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.4635378059049325,
+                1.530085354172139,
+                0.27961427121936233,
+                -0.06559687764393353,
+                0.10347535706376064,
+                1.1246923323979476,
+                1.3303102914939309
+              ],
+              "observed_joint_margins_rad": [
+                2.4337621940950673,
+                0.23271464582786083,
+                2.6176857287806374,
+                -0.0042031223560664716,
+                2.793824642936239,
+                1.1421923323979477,
+                1.5669897085060691
+              ],
+              "minimum_margin_rad": -0.0042031223560664716,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                4
+              ],
+              "joints_outside_nominal_range_1based": [
+                4
+              ],
+              "stable_hold": true,
+              "submitted_action": [
+                0.7157151699066162,
+                0.6691542267799377,
+                0.19996117055416107,
+                -0.10904412716627121,
+                0.23636731505393982,
+                0.09603675454854965,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 359,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.47126648375769037,
+                1.5326514295736329,
+                0.27133601855682893,
+                -0.07202300633658894,
+                0.1148860674937175,
+                1.1483638532555238,
+                1.3365390126822285
+              ],
+              "observed_joint_margins_rad": [
+                2.4260335162423097,
+                0.23014857042636705,
+                2.6259639814431712,
+                0.002223006336588937,
+                2.7824139325062824,
+                1.1658638532555239,
+                1.5607609873177715
+              ],
+              "minimum_margin_rad": 0.002223006336588937,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                4
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.7329828143119812,
+                0.6394910216331482,
+                0.23192112147808075,
+                -0.11381689459085464,
+                0.245694100856781,
+                0.10124047100543976,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 360,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.4770696333520049,
+                1.5292755210233255,
+                0.2632091124564391,
+                -0.0845178240576099,
+                0.12685480187626977,
+                1.170710800059265,
+                1.3420313324757045
+              ],
+              "observed_joint_margins_rad": [
+                2.420230366647995,
+                0.2335244789766744,
+                2.634090887543561,
+                0.014717824057609893,
+                2.7704451981237304,
+                1.188210800059265,
+                1.5552686675242955
+              ],
+              "minimum_margin_rad": 0.014717824057609893,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                4
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.7491229772567749,
+                0.6130678057670593,
+                0.25092342495918274,
+                -0.11940811574459076,
+                0.25391337275505066,
+                0.10615885257720947,
+                1.0
+              ],
+              "state_before_physics": true
+            },
+            {
+              "step": 361,
+              "phase": "CARRY",
+              "next_phase": "CARRY",
+              "observed_joint_positions_rad": [
+                0.4809111050026419,
+                1.5213733634472215,
+                0.2550417644654988,
+                -0.10400555482273961,
+                0.1381016299443547,
+                1.1925784391758012,
+                1.3464123721206487
+              ],
+              "observed_joint_margins_rad": [
+                2.416388894997358,
+                0.2414266365527784,
+                2.6422582355345012,
+                0.03420555482273961,
+                2.7591983700556453,
+                1.2100784391758013,
+                1.5508876278793513
+              ],
+              "minimum_margin_rad": 0.03420555482273961,
+              "limiting_joint_1based": 4,
+              "joints_below_004_1based": [
+                4
+              ],
+              "joints_outside_nominal_range_1based": [],
+              "stable_hold": true,
+              "submitted_action": [
+                0.7628157138824463,
+                0.5890852212905884,
+                0.2666286528110504,
+                -0.12032892554998398,
+                0.25296708941459656,
+                0.10737135261297226,
+                1.0
+              ],
+              "state_before_physics": true
+            }
+          ]
+        }
+      },
+      "carry_or_place_below_004": true,
+      "carry_or_place_observed": true
+    },
+    {
+      "job": "budget_known13_full_s41_noise005_demo_13000022",
+      "profile": "known13_full_s41_noise005_demo_13000022",
+      "success": false,
+      "steps": 400,
+      "dataset": "reproduction/improvement_v13_20261016_01/confirmation_starts.hdf5",
+      "demo": "demo_13000022",
+      "carry_path_enabled": false,
+      "segmented_edge_enabled": false,
+      "later_v16_v17_live_held_guard_executed": false,
+      "required_later_held_margin_rad": 0.04,
+      "source_result_sha256": "d7f26852e4d8398c242c4500295b7d5cbac4a4fbaad16deb154694e2a021e0c5",
+      "source_trace_sha256": "cdd3e1691c62a8e28fe5a68521b28a60ef8b535d4a945e8e9635794c9867f064",
+      "phases": {},
+      "carry_or_place_below_004": false,
+      "carry_or_place_observed": false
+    },
+    {
+      "job": "budget_clearance_profile_6000005",
+      "profile": "clearance_profile_6000005",
+      "success": true,
+      "steps": 382,
+      "dataset": "reproduction/recovery_v3_20261012_01/confirmation_starts.hdf5",
+      "demo": "demo_6000005",
+      "carry_path_enabled": false,
+      "segmented_edge_enabled": false,
+      "later_v16_v17_live_held_guard_executed": false,
+      "required_later_held_margin_rad": 0.04,
+      "source_result_sha256": "14dfdb4dfd191fcdec3ca63c7444c7958002cbcbeeaa8254e81c2b169407e14f",
+      "source_trace_sha256": "250ca42ab644fb0c513e1e2e465ec2152c1ede07272b7e4777385259a3970ef5",
+      "phases": {
+        "LIFT": {
+          "first_step": 327,
+          "last_step": 337,
+          "observed_steps": 11,
+          "minimum_margin_rad": 0.43267651412140196,
+          "minimum_margin_evidence": {
+            "step": 327,
+            "phase": "LIFT",
+            "next_phase": "LIFT",
+            "observed_joint_positions_rad": [
+              0.40755883518836117,
+              1.330123485878598,
+              0.11804816457343544,
+              -0.8267785361802116,
+              -0.20037344120297704,
+              2.7982872115723674,
+              0.8755819558063667
+            ],
+            "observed_joint_margins_rad": [
+              2.489741164811639,
+              0.43267651412140196,
+              2.7792518354265647,
+              0.7569785361802116,
+              2.696926558797023,
+              0.9542127884276326,
+              2.0217180441936335
+            ],
+            "minimum_margin_rad": 0.43267651412140196,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              -0.007050785236060619,
+              -0.004276278894394636,
+              0.999966025352478,
+              -0.018124593421816826,
+              0.03248729556798935,
+              -0.0007370574749074876,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "CARRY": {
+          "first_step": 338,
+          "last_step": 349,
+          "observed_steps": 12,
+          "minimum_margin_rad": 0.6702127929204102,
+          "minimum_margin_evidence": {
+            "step": 338,
+            "phase": "CARRY",
+            "next_phase": "CARRY",
+            "observed_joint_positions_rad": [
+              0.38243699825839805,
+              1.0925872070795897,
+              0.1542782201529635,
+              -0.96993785770732,
+              -0.2176473056647286,
+              2.65361152484954,
+              0.8832630908395434
+            ],
+            "observed_joint_margins_rad": [
+              2.514863001741602,
+              0.6702127929204102,
+              2.7430217798470364,
+              0.90013785770732,
+              2.6796526943352714,
+              1.09888847515046,
+              2.0140369091604566
+            ],
+            "minimum_margin_rad": 0.6702127929204102,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              -0.702155351638794,
+              0.7101210355758667,
+              0.0520189143717289,
+              0.004747618921101093,
+              -0.007451189216226339,
+              -0.0011494080536067486,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "PLACE": {
+          "first_step": 350,
+          "last_step": 372,
+          "observed_steps": 23,
+          "minimum_margin_rad": 0.4510366417159526,
+          "minimum_margin_evidence": {
+            "step": 372,
+            "phase": "PLACE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.5662018036430146,
+              1.3117633582840473,
+              0.060023462162268934,
+              -1.0243241088096038,
+              -0.5594252171745405,
+              2.9328198782167676,
+              1.3896464892994869
+            ],
+            "observed_joint_margins_rad": [
+              2.3310981963569852,
+              0.4510366417159526,
+              2.837276537837731,
+              0.9545241088096038,
+              2.3378747828254594,
+              0.8196801217832324,
+              1.5076535107005131
+            ],
+            "minimum_margin_rad": 0.4510366417159526,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              0.09718398004770279,
+              0.00398364057764411,
+              -0.13149431347846985,
+              -0.0084951501339674,
+              0.015117048285901546,
+              0.0006492081447504461,
+              1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        },
+        "RELEASE": {
+          "first_step": 373,
+          "last_step": 382,
+          "observed_steps": 10,
+          "minimum_margin_rad": 0.399394053823225,
+          "minimum_margin_evidence": {
+            "step": 376,
+            "phase": "RELEASE",
+            "next_phase": "RELEASE",
+            "observed_joint_positions_rad": [
+              0.5753586947852536,
+              1.363405946176775,
+              0.048662500120648114,
+              -0.9662393050863259,
+              -0.5281693798769227,
+              2.9280589563966704,
+              1.3681450429286124
+            ],
+            "observed_joint_margins_rad": [
+              2.3219413052147466,
+              0.399394053823225,
+              2.8486374998793518,
+              0.896439305086326,
+              2.3691306201230775,
+              0.8244410436033296,
+              1.5291549570713876
+            ],
+            "minimum_margin_rad": 0.399394053823225,
+            "limiting_joint_1based": 2,
+            "joints_below_004_1based": [],
+            "joints_outside_nominal_range_1based": [],
+            "stable_hold": true,
+            "submitted_action": [
+              -0.018882155418395996,
+              0.0017538666725158691,
+              0.1524651050567627,
+              -0.0065946741960942745,
+              0.01595476269721985,
+              0.002932598115876317,
+              -1.0
+            ],
+            "state_before_physics": true
+          },
+          "below_004_steps": 0,
+          "outside_nominal_steps": 0,
+          "every_below_004_frame": []
+        }
+      },
+      "carry_or_place_below_004": false,
+      "carry_or_place_observed": true
+    }
+  ],
+  "interpretation": [
+    "Budget 7/9 is a task-success count, not an adoptable result under all current protections.",
+    "Budget disables carry_path and segmented_edge; the later v16/v17 live held joint guard is not executed.",
+    "CARRY and PLACE are separated from RELEASE: current held guards do not apply unchanged to the intentional-release phase.",
+    "A negative margin means the saved observed q lies outside these nominal limits; it does not by itself prove a collision or hardware safety violation.",
+    "A positive joint margin does not certify hand/can geometry, full-arm collisions, force closure or future tracking.",
+    "The two 6000005 profiles share one physical start. Their successful short carry is a local design reference only, not independent generalization evidence.",
+    "Do not remove current guards to reproduce budget successes. Any future local transfer needs the same protection thresholds and new predeclared paired verification."
+  ]
+}

@@ -1,0 +1,4235 @@
+{
+  "passed": true,
+  "new_physical_episodes": 0,
+  "new_evaluation_samples": 0,
+  "scope": "Nominal geometric certificates, finite grids, explicit servo-state tests and proposals on saved old observations. No closed-loop improvement claim.",
+  "positive_saved_state_proposals": [
+    {
+      "job": "v16_known13_full_s41_noise005_demo_13000022",
+      "step": 156,
+      "action": [
+        0.14570221304893494,
+        -0.6431993842124939,
+        -0.03955650329589844,
+        -0.002813678700476885,
+        0.0038587721064686775,
+        -0.009105087257921696,
+        -1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.12145592554479519,
+            "can_margin_m": 0.1333146172511116,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.12145592554479519,
+                "can_margin_m": 0.1335077818089847
+              },
+              {
+                "hand_margin_m": 0.12164573202097025,
+                "can_margin_m": 0.1333146172511116
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": true,
+            "aperture_range_m": [
+              0.0,
+              0.085
+            ],
+            "hand_margin_m": 0.12145592554479519,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.007285110652446747,
+              -0.032159969210624695,
+              -0.001977825164794922
+            ],
+            "rotation_vector_rad": [
+              -0.0014068393502384424,
+              0.0019293860532343388,
+              -0.004552543628960848
+            ],
+            "hand_arc_bound_m": 0.0004984182710721014,
+            "second_arc_bound_m": 0.0004984182710721014,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.14570221304893494,
+              -0.6431993842124939,
+              -0.03955650329589844,
+              -0.002813678700476885,
+              0.0038587721064686775,
+              -0.009105087257921696,
+              -1.0
+            ],
+            "grip_command": -1.0
+          }
+        ],
+        "box_margin_m": 0.12145592554479519,
+        "can_margin_m": 0.1333146172511116,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.007285110652446747,
+          -0.032159969210624695,
+          -0.001977825164794922
+        ],
+        "rotation_vector_rad": [
+          -0.0014068393502384424,
+          0.0019293860532343388,
+          -0.004552543628960848
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.05543503661637347,
+        "orientation_error_rad": 0.010089262768576777,
+        "observed_translation_per_step_m": [
+          -0.00013856729492545128,
+          -0.00020578503608703613,
+          0.0003769397735595703
+        ],
+        "observed_rotation_per_step_rad": [
+          -5.666644777985584e-05,
+          -0.0008305753828894965,
+          4.685239585509576e-05
+        ],
+        "position_bias_m": [
+          0.0011795432632559825,
+          -0.005411441227630998,
+          -0.00023540258407592774
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_PRETRANSLATE')",
+          "held": false,
+          "goal": [
+            0.014396112505117345,
+            0.09702156880660628,
+            1.0510916709899902
+          ],
+          "rotation": [
+            [
+              0.10577232760477799,
+              -0.8414442302947893,
+              0.5298903867939833
+            ],
+            [
+              -0.9392797796724746,
+              0.09039353807289424,
+              0.33103248144720193
+            ],
+            [
+              -0.32644403840703745,
+              -0.532729401833871,
+              -0.7807904163155635
+            ]
+          ],
+          "bias": [
+            0.0011795432632559825,
+            -0.005411441227630998,
+            -0.00023540258407592774
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.12145592554479519,
+        "submitted_action": [
+          0.14570221304893494,
+          -0.6431993842124939,
+          -0.03955650329589844,
+          -0.002813678700476885,
+          0.0038587721064686775,
+          -0.009105087257921696,
+          -1.0
+        ],
+        "grip_command": -1.0,
+        "aperture_range_m": [
+          0.0,
+          0.085
+        ]
+      },
+      "old_position_error_m": 0.05543503661637347,
+      "old_angle_error_rad": 0.010089262768576777,
+      "old_submitted_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_actual_next_displacement_m": [
+        0.00013677077367901802,
+        -0.00020797550678253174,
+        -7.033348083496094e-05
+      ],
+      "dense_grid": {
+        "sampled_translation_rotation_aperture_combinations": 729,
+        "minimum_hand_box_m": 0.12195434381586728,
+        "minimum_second_margin_m": 0.1338653896518458,
+        "scope": "Finite sanity grid; analytical convex-aperture/translation and radius-arc bounds cover intervals."
+      }
+    },
+    {
+      "job": "v16_known13_full_s41_noise005_demo_13000022",
+      "step": 166,
+      "action": [
+        0.14027196168899536,
+        -0.615211546421051,
+        -0.033036231994628906,
+        -0.0013565935660153627,
+        0.0035279220901429653,
+        -0.007609746418893337,
+        -1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.12274077459164165,
+            "can_margin_m": 0.13344521010017205,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.12274077459164165,
+                "can_margin_m": 0.13362391507296176
+              },
+              {
+                "hand_margin_m": 0.1229101836233236,
+                "can_margin_m": 0.13344521010017205
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": true,
+            "aperture_range_m": [
+              0.0,
+              0.085
+            ],
+            "hand_margin_m": 0.12274077459164165,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.007013598084449769,
+              -0.030760577321052553,
+              -0.0016518115997314455
+            ],
+            "rotation_vector_rad": [
+              -0.0006782967830076814,
+              0.0017639610450714827,
+              -0.0038048732094466686
+            ],
+            "hand_arc_bound_m": 0.00041189999411530637,
+            "second_arc_bound_m": 0.00041189999411530637,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.14027196168899536,
+              -0.615211546421051,
+              -0.033036231994628906,
+              -0.0013565935660153627,
+              0.0035279220901429653,
+              -0.007609746418893337,
+              -1.0
+            ],
+            "grip_command": -1.0
+          }
+        ],
+        "box_margin_m": 0.12274077459164165,
+        "can_margin_m": 0.13344521010017205,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.007013598084449769,
+          -0.030760577321052553,
+          -0.0016518115997314455
+        ],
+        "rotation_vector_rad": [
+          -0.0006782967830076814,
+          0.0017639610450714827,
+          -0.0038048732094466686
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.053082942364036344,
+        "orientation_error_rad": 0.008758771988496193,
+        "observed_translation_per_step_m": [
+          -0.0002529267221689224,
+          -0.0002196282148361206,
+          -0.00019931793212890625
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.0002300860170732692,
+          0.0006240040930885503,
+          -0.000146524081540077
+        ],
+        "position_bias_m": [
+          0.0011057013273009944,
+          -0.005181669792370225,
+          -0.0003251314163208008
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_PRETRANSLATE')",
+          "held": false,
+          "goal": [
+            0.014396112505117345,
+            0.09702156880660628,
+            1.0510916709899902
+          ],
+          "rotation": [
+            [
+              0.10577232760477799,
+              -0.8414442302947893,
+              0.5298903867939833
+            ],
+            [
+              -0.9392797796724746,
+              0.09039353807289424,
+              0.33103248144720193
+            ],
+            [
+              -0.32644403840703745,
+              -0.532729401833871,
+              -0.7807904163155635
+            ]
+          ],
+          "bias": [
+            0.0011057013273009944,
+            -0.005181669792370225,
+            -0.0003251314163208008
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.12274077459164165,
+        "submitted_action": [
+          0.14027196168899536,
+          -0.615211546421051,
+          -0.033036231994628906,
+          -0.0013565935660153627,
+          0.0035279220901429653,
+          -0.007609746418893337,
+          -1.0
+        ],
+        "grip_command": -1.0,
+        "aperture_range_m": [
+          0.0,
+          0.085
+        ]
+      },
+      "old_position_error_m": 0.053082942364036344,
+      "old_angle_error_rad": 0.008758771988496193,
+      "old_submitted_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_actual_next_displacement_m": [
+        -0.000490076607093215,
+        -0.00022168457508087158,
+        -0.00020205974578857422
+      ]
+    },
+    {
+      "job": "v16_known13_full_s41_noise005_demo_13000022",
+      "step": 176,
+      "action": [
+        0.1622118502855301,
+        -0.5934261679649353,
+        -0.026430130004882812,
+        0.00041791523108258843,
+        0.002519553294405341,
+        -0.006214352790266275,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.12325018343017713,
+            "can_margin_m": 0.13372739302373593,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.12325018343017713,
+                "can_margin_m": 0.13388356250978573
+              },
+              {
+                "hand_margin_m": 0.12336250256065262,
+                "can_margin_m": 0.13372739302373593
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": true,
+            "aperture_range_m": [
+              0.0,
+              0.085
+            ],
+            "hand_margin_m": 0.12325018343017713,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.008110592514276505,
+              -0.029671308398246766,
+              -0.0013215065002441407
+            ],
+            "rotation_vector_rad": [
+              0.00020895761554129422,
+              0.0012597766472026706,
+              -0.0031071763951331377
+            ],
+            "hand_arc_bound_m": 0.000325706997257207,
+            "second_arc_bound_m": 0.000325706997257207,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.1622118502855301,
+              -0.5934261679649353,
+              -0.026430130004882812,
+              0.00041791523108258843,
+              0.002519553294405341,
+              -0.006214352790266275,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.12325018343017713,
+        "can_margin_m": 0.13372739302373593,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.008110592514276505,
+          -0.029671308398246766,
+          -0.0013215065002441407
+        ],
+        "rotation_vector_rad": [
+          0.00020895761554129422,
+          0.0012597766472026706,
+          -0.0031071763951331377
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.052009287180799835,
+        "orientation_error_rad": 0.007102214903707197,
+        "observed_translation_per_step_m": [
+          -9.236391633749008e-05,
+          -0.00028967857360839844,
+          -0.000431060791015625
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.00027496491248765325,
+          0.0008718346477012381,
+          -0.00033019078617229047
+        ],
+        "position_bias_m": [
+          0.0013286743988053787,
+          -0.00501763780994835,
+          -0.00032801628112792973
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_PRETRANSLATE')",
+          "held": false,
+          "goal": [
+            0.014396112505117345,
+            0.09702156880660628,
+            1.0510916709899902
+          ],
+          "rotation": [
+            [
+              0.10577232760477799,
+              -0.8414442302947893,
+              0.5298903867939833
+            ],
+            [
+              -0.9392797796724746,
+              0.09039353807289424,
+              0.33103248144720193
+            ],
+            [
+              -0.32644403840703745,
+              -0.532729401833871,
+              -0.7807904163155635
+            ]
+          ],
+          "bias": [
+            0.0013286743988053787,
+            -0.00501763780994835,
+            -0.00032801628112792973
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.12325018343017713,
+        "submitted_action": [
+          0.1622118502855301,
+          -0.5934261679649353,
+          -0.026430130004882812,
+          0.00041791523108258843,
+          0.002519553294405341,
+          -0.006214352790266275,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.0,
+          0.085
+        ]
+      },
+      "old_position_error_m": 0.052009287180799835,
+      "old_angle_error_rad": 0.007102214903707197,
+      "old_submitted_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        0.0005850656889379025,
+        -7.273256778717041e-05,
+        -0.0007113218307495117
+      ]
+    },
+    {
+      "job": "v16_known13_full_s41_noise005_demo_13000022",
+      "step": 204,
+      "action": [
+        -0.0024795893114060163,
+        -0.040076132863759995,
+        -0.010628700256347656,
+        -0.0008747637621127069,
+        -0.001923083676956594,
+        -0.003955387976020575,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.12292618961269229,
+            "can_margin_m": 0.11962250569191189,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.12300787600320016,
+                "can_margin_m": 0.11962250569191189
+              },
+              {
+                "hand_margin_m": 0.12292618961269229,
+                "can_margin_m": 0.11962623542070515
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.06139034996926784,
+              0.06539034996926785
+            ],
+            "hand_margin_m": 0.12292618961269229,
+            "rotation_samples": 2,
+            "translation_m": [
+              -0.00012397946557030082,
+              -0.0020038066431879997,
+              -0.0005314350128173828
+            ],
+            "rotation_vector_rad": [
+              -0.00043738188105635345,
+              -0.000961541838478297,
+              -0.0019776939880102873
+            ],
+            "hand_arc_bound_m": 0.0002063977338006179,
+            "second_arc_bound_m": 0.0002063977338006179,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              -0.0024795893114060163,
+              -0.040076132863759995,
+              -0.010628700256347656,
+              -0.0008747637621127069,
+              -0.001923083676956594,
+              -0.003955387976020575,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.12292618961269229,
+        "can_margin_m": 0.11962250569191189,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.00012397946557030082,
+          -0.0020038066431879997,
+          -0.0005314350128173828
+        ],
+        "rotation_vector_rad": [
+          -0.00043738188105635345,
+          -0.000961541838478297,
+          -0.0019776939880102873
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.0048945605998469395,
+        "orientation_error_rad": 0.0035976546027796145,
+        "observed_translation_per_step_m": [
+          0.0006114505231380463,
+          -0.00044902414083480835,
+          -0.00025200843811035156
+        ],
+        "observed_rotation_per_step_rad": [
+          0.0006874016866375932,
+          0.0014194133552232519,
+          0.0009204037825619704
+        ],
+        "position_bias_m": [
+          0.0001321993861118245,
+          -0.00044622381611290066,
+          -0.00015157461166381836
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_PRETRANSLATE')",
+          "held": false,
+          "goal": [
+            0.014396112505117345,
+            0.09702156880660628,
+            1.0510916709899902
+          ],
+          "rotation": [
+            [
+              0.10577232760477799,
+              -0.8414442302947893,
+              0.5298903867939833
+            ],
+            [
+              -0.9392797796724746,
+              0.09039353807289424,
+              0.33103248144720193
+            ],
+            [
+              -0.32644403840703745,
+              -0.532729401833871,
+              -0.7807904163155635
+            ]
+          ],
+          "bias": [
+            0.0001321993861118245,
+            -0.00044622381611290066,
+            -0.00015157461166381836
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.12292618961269229,
+        "submitted_action": [
+          -0.0024795893114060163,
+          -0.040076132863759995,
+          -0.010628700256347656,
+          -0.0008747637621127069,
+          -0.001923083676956594,
+          -0.003955387976020575,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.06139034996926784,
+          0.06539034996926785
+        ]
+      },
+      "old_position_error_m": 0.0048945605998469395,
+      "old_angle_error_rad": 0.0035976546027796145,
+      "old_submitted_action": [
+        -0.01735258847475052,
+        -0.022171175107359886,
+        -0.002557039260864258,
+        -0.002253411104902625,
+        -0.004759995732456446,
+        -0.00579627463594079,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        0.001817711628973484,
+        -0.0005652010440826416,
+        -0.00038623809814453125
+      ]
+    },
+    {
+      "job": "v16_known13_full_s41_noise005_demo_13000022",
+      "step": 260,
+      "action": [
+        -0.021252648904919624,
+        -0.044630032032728195,
+        -0.05690503120422363,
+        -0.059625230729579926,
+        -0.03151239827275276,
+        0.0943957194685936,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.13126033453725322,
+            "can_margin_m": 0.08509650236335566,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.13126033453725322,
+                "can_margin_m": 0.0851278449674502
+              },
+              {
+                "hand_margin_m": 0.13267081138777087,
+                "can_margin_m": 0.08509650236335566
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.061950031995773314,
+              0.06595003199577332
+            ],
+            "hand_margin_m": 0.13126033453725322,
+            "rotation_samples": 2,
+            "translation_m": [
+              -0.0010626324452459813,
+              -0.00223150160163641,
+              -0.0028452515602111817
+            ],
+            "rotation_vector_rad": [
+              -0.029812615364789963,
+              -0.01575619913637638,
+              0.0471978597342968
+            ],
+            "hand_arc_bound_m": 0.005347380387834986,
+            "second_arc_bound_m": 0.005347380387834986,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              -0.021252648904919624,
+              -0.044630032032728195,
+              -0.05690503120422363,
+              -0.059625230729579926,
+              -0.03151239827275276,
+              0.0943957194685936,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.13126033453725322,
+        "can_margin_m": 0.08509650236335566,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.0010626324452459813,
+          -0.00223150160163641,
+          -0.0028452515602111817
+        ],
+        "rotation_vector_rad": [
+          -0.029812615364789963,
+          -0.01575619913637638,
+          0.0471978597342968
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.0028429093819210666,
+        "orientation_error_rad": 0.124222301341058,
+        "observed_translation_per_step_m": [
+          8.699856698513031e-05,
+          0.0013635754585266113,
+          0.000952601432800293
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.010690353022997518,
+          -0.0025962754884212495,
+          0.009143157685300484
+        ],
+        "position_bias_m": [
+          -0.00015535577202645067,
+          -3.1023076013947386e-05,
+          -0.00023605823516845704
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_ROTATE')",
+          "held": false,
+          "goal": [
+            0.014396112505117345,
+            0.09702156880660628,
+            1.0510916709899902
+          ],
+          "rotation": [
+            [
+              0.8096269126855428,
+              0.15205546997770508,
+              0.5669068673998715
+            ],
+            [
+              0.12455654907756056,
+              -0.9883719613839008,
+              0.08721543459749555
+            ],
+            [
+              0.573576436351046,
+              1.3877787807814457e-17,
+              -0.8191520442889917
+            ]
+          ],
+          "bias": [
+            -0.00015535577202645067,
+            -3.1023076013947386e-05,
+            -0.00023605823516845704
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.13126033453725322,
+        "submitted_action": [
+          -0.021252648904919624,
+          -0.044630032032728195,
+          -0.05690503120422363,
+          -0.059625230729579926,
+          -0.03151239827275276,
+          0.0943957194685936,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.061950031995773314,
+          0.06595003199577332
+        ]
+      },
+      "old_position_error_m": 0.0028429093819210666,
+      "old_angle_error_rad": 0.124222301341058,
+      "old_submitted_action": [
+        -0.019885506480932236,
+        -0.0712810829281807,
+        -0.07123589515686035,
+        -0.03821178898215294,
+        -0.025852518156170845,
+        0.07628493756055832,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        1.2779608368873596e-05,
+        0.0010430589318275452,
+        0.0007532835006713867
+      ]
+    },
+    {
+      "job": "v16_known13_full_s41_noise005_demo_13000022",
+      "step": 274,
+      "action": [
+        -0.12164947390556335,
+        -0.12865738570690155,
+        -0.09667825698852539,
+        0.00337451184168458,
+        -0.03549310937523842,
+        0.026001395657658577,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.1423660861576253,
+            "can_margin_m": 0.09258952634076213,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.14237234436647195,
+                "can_margin_m": 0.09292252348407427
+              },
+              {
+                "hand_margin_m": 0.1423660861576253,
+                "can_margin_m": 0.09258952634076213
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.06197302076220512,
+              0.06597302076220513
+            ],
+            "hand_margin_m": 0.1423660861576253,
+            "rotation_samples": 2,
+            "translation_m": [
+              -0.006082473695278168,
+              -0.006432869285345078,
+              -0.00483391284942627
+            ],
+            "rotation_vector_rad": [
+              0.00168725592084229,
+              -0.01774655468761921,
+              0.013000697828829288
+            ],
+            "hand_arc_bound_m": 0.0020341721428189614,
+            "second_arc_bound_m": 0.0020341721428189614,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              -0.12164947390556335,
+              -0.12865738570690155,
+              -0.09667825698852539,
+              0.00337451184168458,
+              -0.03549310937523842,
+              0.026001395657658577,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.1423660861576253,
+        "can_margin_m": 0.09258952634076213,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.006082473695278168,
+          -0.006432869285345078,
+          -0.00483391284942627
+        ],
+        "rotation_vector_rad": [
+          0.00168725592084229,
+          -0.01774655468761921,
+          0.013000697828829288
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.015115055353138061,
+        "orientation_error_rad": 0.044759377948435486,
+        "observed_translation_per_step_m": [
+          0.0005272235721349716,
+          0.0008928775787353516,
+          -0.00032401084899902344
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.0009633654662413918,
+          0.001592781301760521,
+          0.003885646408588462
+        ],
+        "position_bias_m": [
+          -0.000881939744599731,
+          -0.0008489254622024545,
+          -0.0008866548538208008
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_ROTATE')",
+          "held": false,
+          "goal": [
+            0.014396112505117345,
+            0.09702156880660628,
+            1.0510916709899902
+          ],
+          "rotation": [
+            [
+              0.8096269126855428,
+              0.15205546997770508,
+              0.5669068673998715
+            ],
+            [
+              0.12455654907756056,
+              -0.9883719613839008,
+              0.08721543459749555
+            ],
+            [
+              0.573576436351046,
+              1.3877787807814457e-17,
+              -0.8191520442889917
+            ]
+          ],
+          "bias": [
+            -0.000881939744599731,
+            -0.0008489254622024545,
+            -0.0008866548538208008
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.1423660861576253,
+        "submitted_action": [
+          -0.12164947390556335,
+          -0.12865738570690155,
+          -0.09667825698852539,
+          0.00337451184168458,
+          -0.03549310937523842,
+          0.026001395657658577,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.06197302076220512,
+          0.06597302076220513
+        ]
+      },
+      "old_position_error_m": 0.015115055353138061,
+      "old_angle_error_rad": 0.044759377948435486,
+      "old_submitted_action": [
+        -0.11455515027046204,
+        -0.12953642010688782,
+        -0.0724649429321289,
+        0.0054801893420517445,
+        -0.03863943740725517,
+        0.018259864300489426,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        0.0001501627266407013,
+        0.0007188171148300171,
+        0.00032210350036621094
+      ]
+    },
+    {
+      "job": "v16_known13_full_s41_noise005_demo_13000022",
+      "step": 394,
+      "action": [
+        -0.008201731368899345,
+        0.09232749789953232,
+        -0.07082921266555786,
+        -0.009695678949356079,
+        -0.0009039459400810301,
+        -0.028548844158649445,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.11649305473854249,
+            "can_margin_m": 0.05038255264583508,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.11652494995023996,
+                "can_margin_m": 0.05038255264583508
+              },
+              {
+                "hand_margin_m": 0.11649305473854249,
+                "can_margin_m": 0.05080423617571611
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.061999895006418226,
+              0.06599989500641823
+            ],
+            "hand_margin_m": 0.11649305473854249,
+            "rotation_samples": 2,
+            "translation_m": [
+              -0.0004100865684449673,
+              0.004616374894976616,
+              -0.0035414606332778934
+            ],
+            "rotation_vector_rad": [
+              -0.0048478394746780396,
+              -0.00045197297004051507,
+              -0.014274422079324722
+            ],
+            "hand_arc_bound_m": 0.001390596593847823,
+            "second_arc_bound_m": 0.001390596593847823,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              -0.008201731368899345,
+              0.09232749789953232,
+              -0.07082921266555786,
+              -0.009695678949356079,
+              -0.0009039459400810301,
+              -0.028548844158649445,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.11649305473854249,
+        "can_margin_m": 0.05038255264583508,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.0004100865684449673,
+          0.004616374894976616,
+          -0.0035414606332778934
+        ],
+        "rotation_vector_rad": [
+          -0.0048478394746780396,
+          -0.00045197297004051507,
+          -0.014274422079324722
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.008615391929051378,
+        "orientation_error_rad": 0.02781984337917783,
+        "observed_translation_per_step_m": [
+          -0.00020386278629302979,
+          -0.0009296964854001999,
+          -0.0002913475036621094
+        ],
+        "observed_rotation_per_step_rad": [
+          0.001126677338444395,
+          0.0011069701511846307,
+          0.0037214126036652076
+        ],
+        "position_bias_m": [
+          -0.00011931346074911046,
+          0.0005369716661068578,
+          -0.0006630803185091017
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(2, 'EDGE_APPROACH')",
+          "held": false,
+          "goal": [
+            0.04301860692936459,
+            -0.016458560375479082,
+            1.0256467808908367
+          ],
+          "rotation": [
+            [
+              0.809626670771106,
+              0.15205738958693688,
+              0.5669066980095593
+            ],
+            [
+              0.12455812152938699,
+              -0.9883716660609035,
+              0.08721653564011791
+            ],
+            [
+              0.573576436351046,
+              1.3877787807814457e-17,
+              -0.8191520442889917
+            ]
+          ],
+          "bias": [
+            -0.00011931346074911046,
+            0.0005369716661068578,
+            -0.0006630803185091017
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.11649305473854249,
+        "submitted_action": [
+          -0.008201731368899345,
+          0.09232749789953232,
+          -0.07082921266555786,
+          -0.009695678949356079,
+          -0.0009039459400810301,
+          -0.028548844158649445,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.061999895006418226,
+          0.06599989500641823
+        ]
+      },
+      "old_position_error_m": 0.008615391929051378,
+      "old_angle_error_rad": 0.02781984337917783,
+      "old_submitted_action": [
+        -0.0017382067162543535,
+        0.10018198937177658,
+        -0.05174065753817558,
+        -0.011977281421422958,
+        -0.0031217029318213463,
+        -0.03598194196820259,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        0.00010914355516433716,
+        -0.001218259334564209,
+        -0.0003992319107055664
+      ]
+    },
+    {
+      "job": "v16_known13_full_s41_noise005_demo_13000022",
+      "step": 400,
+      "action": [
+        -0.07076973468065262,
+        0.14805203676223755,
+        -0.069735586643219,
+        -0.010530779138207436,
+        -0.00345405749976635,
+        -0.02890048734843731,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.11538051014873138,
+            "can_margin_m": 0.04790484139286832,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.11543142304318404,
+                "can_margin_m": 0.04833697710287465
+              },
+              {
+                "hand_margin_m": 0.11538051014873138,
+                "can_margin_m": 0.04790484139286832
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.061999921083450316,
+              0.06599992108345032
+            ],
+            "hand_margin_m": 0.11538051014873138,
+            "rotation_samples": 2,
+            "translation_m": [
+              -0.003538486734032631,
+              0.007402601838111878,
+              -0.00348677933216095
+            ],
+            "rotation_vector_rad": [
+              -0.005265389569103718,
+              -0.001727028749883175,
+              -0.014450243674218655
+            ],
+            "hand_arc_bound_m": 0.0014269591109027427,
+            "second_arc_bound_m": 0.0014269591109027427,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              -0.07076973468065262,
+              0.14805203676223755,
+              -0.069735586643219,
+              -0.010530779138207436,
+              -0.00345405749976635,
+              -0.02890048734843731,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.11538051014873138,
+        "can_margin_m": 0.04790484139286832,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.003538486734032631,
+          0.007402601838111878,
+          -0.00348677933216095
+        ],
+        "rotation_vector_rad": [
+          -0.005265389569103718,
+          -0.001727028749883175,
+          -0.014450243674218655
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.013228414184334875,
+        "orientation_error_rad": 0.031210641409669386,
+        "observed_translation_per_step_m": [
+          0.0004884041845798492,
+          -0.0004967767745256424,
+          0.00013339519500732422
+        ],
+        "observed_rotation_per_step_rad": [
+          1.6847489745871207e-05,
+          -2.654084344735473e-05,
+          -0.0004631817773070407
+        ],
+        "position_bias_m": [
+          -0.00046764673010679176,
+          0.0011095728131028792,
+          -0.000547781093655586
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(2, 'EDGE_APPROACH')",
+          "held": false,
+          "goal": [
+            0.04301860692936459,
+            -0.016458560375479082,
+            1.0256467808908367
+          ],
+          "rotation": [
+            [
+              0.809626670771106,
+              0.15205738958693688,
+              0.5669066980095593
+            ],
+            [
+              0.12455812152938699,
+              -0.9883716660609035,
+              0.08721653564011791
+            ],
+            [
+              0.573576436351046,
+              1.3877787807814457e-17,
+              -0.8191520442889917
+            ]
+          ],
+          "bias": [
+            -0.00046764673010679176,
+            0.0011095728131028792,
+            -0.000547781093655586
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.11538051014873138,
+        "submitted_action": [
+          -0.07076973468065262,
+          0.14805203676223755,
+          -0.069735586643219,
+          -0.010530779138207436,
+          -0.00345405749976635,
+          -0.02890048734843731,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.061999921083450316,
+          0.06599992108345032
+        ]
+      },
+      "old_position_error_m": 0.013228414184334875,
+      "old_angle_error_rad": 0.031210641409669386,
+      "old_submitted_action": [
+        -0.07118488103151321,
+        0.13579611480236053,
+        -0.0614478699862957,
+        -0.010565279982984066,
+        -0.0033956076949834824,
+        -0.02797447144985199,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        -0.0008255578577518463,
+        -0.0003359895199537277,
+        0.0003846883773803711
+      ]
+    },
+    {
+      "job": "v16_regression_6000005",
+      "step": 186,
+      "action": [
+        0.20093023777008057,
+        -0.4712640047073364,
+        -0.007490873336791992,
+        -0.0018014078959822655,
+        0.0020496302749961615,
+        -5.645838609780185e-05,
+        -1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.1056387699933362,
+            "can_margin_m": 0.09639190441568186,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.1056387699933362,
+                "can_margin_m": 0.09640869894868516
+              },
+              {
+                "hand_margin_m": 0.10566240426078018,
+                "can_margin_m": 0.09639190441568186
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": true,
+            "aperture_range_m": [
+              0.0,
+              0.085
+            ],
+            "hand_margin_m": 0.1056387699933362,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.010046511888504028,
+              -0.023563200235366823,
+              -0.0003745436668395996
+            ],
+            "rotation_vector_rad": [
+              -0.0009007039479911327,
+              0.0010248151374980807,
+              -2.8229193048900925e-05
+            ],
+            "hand_arc_bound_m": 0.00013231746285751456,
+            "second_arc_bound_m": 0.00013231746285751456,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.20093023777008057,
+              -0.4712640047073364,
+              -0.007490873336791992,
+              -0.0018014078959822655,
+              0.0020496302749961615,
+              -5.645838609780185e-05,
+              -1.0
+            ],
+            "grip_command": -1.0
+          }
+        ],
+        "box_margin_m": 0.1056387699933362,
+        "can_margin_m": 0.09639190441568186,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.010046511888504028,
+          -0.023563200235366823,
+          -0.0003745436668395996
+        ],
+        "rotation_vector_rad": [
+          -0.0009007039479911327,
+          0.0010248151374980807,
+          -2.8229193048900925e-05
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.0449762763862643,
+        "orientation_error_rad": 0.002383026527777476,
+        "observed_translation_per_step_m": [
+          0.0008954852819442749,
+          -0.000600278377532959,
+          0.0003775358200073242
+        ],
+        "observed_rotation_per_step_rad": [
+          -1.8082127822369812e-05,
+          -0.0010317837225299936,
+          -0.0008891480052188525
+        ],
+        "position_bias_m": [
+          0.0018982899353351262,
+          -0.004077269705926839,
+          3.1960010528564456e-05
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_PRETRANSLATE')",
+          "held": false,
+          "goal": [
+            0.21271863298162427,
+            0.36529923406446513,
+            1.0370047092437744
+          ],
+          "rotation": [
+            [
+              0.2978970351019095,
+              -0.8385652996687513,
+              0.4561420772839847
+            ],
+            [
+              -0.9003012528918685,
+              -0.08794574312486775,
+              0.42629004246820773
+            ],
+            [
+              -0.3173562832508965,
+              -0.5376558234202172,
+              -0.7811601660501544
+            ]
+          ],
+          "bias": [
+            0.0018982899353351262,
+            -0.004077269705926839,
+            3.1960010528564456e-05
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.1056387699933362,
+        "submitted_action": [
+          0.20093023777008057,
+          -0.4712640047073364,
+          -0.007490873336791992,
+          -0.0018014078959822655,
+          0.0020496302749961615,
+          -5.645838609780185e-05,
+          -1.0
+        ],
+        "grip_command": -1.0,
+        "aperture_range_m": [
+          0.0,
+          0.085
+        ]
+      },
+      "old_position_error_m": 0.0449762763862643,
+      "old_angle_error_rad": 0.002383026527777476,
+      "old_submitted_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "old_actual_next_displacement_m": [
+        0.0006873756647109985,
+        -0.0005622208118438721,
+        0.0006411075592041016
+      ]
+    },
+    {
+      "job": "v16_regression_6000005",
+      "step": 196,
+      "action": [
+        0.17919379472732544,
+        -0.44754183292388916,
+        -0.04761528968811035,
+        -0.0015746767167001963,
+        0.002546520670875907,
+        0.0016624812269583344,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.10802537325335812,
+            "can_margin_m": 0.09523031486285169,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.10802537325335812,
+                "can_margin_m": 0.09524133431394774
+              },
+              {
+                "hand_margin_m": 0.10816302290071056,
+                "can_margin_m": 0.09523031486285169
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": true,
+            "aperture_range_m": [
+              0.0,
+              0.085
+            ],
+            "hand_margin_m": 0.10802537325335812,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.008959689736366272,
+              -0.02237709164619446,
+              -0.002380764484405518
+            ],
+            "rotation_vector_rad": [
+              -0.0007873383583500981,
+              0.0012732603354379535,
+              0.0008312406134791672
+            ],
+            "hand_arc_bound_m": 0.0001660238440182337,
+            "second_arc_bound_m": 0.0001660238440182337,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.17919379472732544,
+              -0.44754183292388916,
+              -0.04761528968811035,
+              -0.0015746767167001963,
+              0.002546520670875907,
+              0.0016624812269583344,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.10802537325335812,
+        "can_margin_m": 0.09523031486285169,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.008959689736366272,
+          -0.02237709164619446,
+          -0.002380764484405518
+        ],
+        "rotation_vector_rad": [
+          -0.0007873383583500981,
+          0.0012732603354379535,
+          0.0008312406134791672
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.0411297792061684,
+        "orientation_error_rad": 0.003648990649939629,
+        "observed_translation_per_step_m": [
+          0.00011266767978668213,
+          -0.00031322240829467773,
+          0.00030791759490966797
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.0003162470426538848,
+          0.00033515219907331986,
+          -5.6351800061475434e-05
+        ],
+        "position_bias_m": [
+          0.0015214485094394354,
+          -0.0038078209487552085,
+          -0.00031981468200683596
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_PRETRANSLATE')",
+          "held": false,
+          "goal": [
+            0.21271863298162427,
+            0.36529923406446513,
+            1.0370047092437744
+          ],
+          "rotation": [
+            [
+              0.2978970351019095,
+              -0.8385652996687513,
+              0.4561420772839847
+            ],
+            [
+              -0.9003012528918685,
+              -0.08794574312486775,
+              0.42629004246820773
+            ],
+            [
+              -0.3173562832508965,
+              -0.5376558234202172,
+              -0.7811601660501544
+            ]
+          ],
+          "bias": [
+            0.0015214485094394354,
+            -0.0038078209487552085,
+            -0.00031981468200683596
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.10802537325335812,
+        "submitted_action": [
+          0.17919379472732544,
+          -0.44754183292388916,
+          -0.04761528968811035,
+          -0.0015746767167001963,
+          0.002546520670875907,
+          0.0016624812269583344,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.0,
+          0.085
+        ]
+      },
+      "old_position_error_m": 0.0411297792061684,
+      "old_angle_error_rad": 0.003648990649939629,
+      "old_submitted_action": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        0.0004104822874069214,
+        -0.0003847181797027588,
+        0.0006086826324462891
+      ]
+    },
+    {
+      "job": "v16_regression_6000005",
+      "step": 202,
+      "action": [
+        0.19070333242416382,
+        -0.44544684886932373,
+        -0.04826545715332031,
+        -0.001404613722115755,
+        0.0012754556955769658,
+        0.0015376389492303133,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.10912786721683453,
+            "can_margin_m": 0.09476363655678653,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.10912786721683453,
+                "can_margin_m": 0.09476363655678653
+              },
+              {
+                "hand_margin_m": 0.10920754029154499,
+                "can_margin_m": 0.09476422705241304
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.06001040558516979,
+              0.0640104055851698
+            ],
+            "hand_margin_m": 0.10912786721683453,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.009535166621208192,
+              -0.022272342443466188,
+              -0.0024132728576660156
+            ],
+            "rotation_vector_rad": [
+              -0.0007023068610578775,
+              0.0006377278477884829,
+              0.0007688194746151567
+            ],
+            "hand_arc_bound_m": 0.00011198827080052004,
+            "second_arc_bound_m": 0.00011198827080052004,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.19070333242416382,
+              -0.44544684886932373,
+              -0.04826545715332031,
+              -0.001404613722115755,
+              0.0012754556955769658,
+              0.0015376389492303133,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.10912786721683453,
+        "can_margin_m": 0.09476363655678653,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.009535166621208192,
+          -0.022272342443466188,
+          -0.0024132728576660156
+        ],
+        "rotation_vector_rad": [
+          -0.0007023068610578775,
+          0.0006377278477884829,
+          0.0007688194746151567
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.0398881651249732,
+        "orientation_error_rad": 0.0029437312061665454,
+        "observed_translation_per_step_m": [
+          -0.00040943920612335205,
+          0.00013440847396850586,
+          -3.528594970703125e-05
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.00024661322117618524,
+          0.0007794284007543845,
+          0.00042641617760690644
+        ],
+        "position_bias_m": [
+          0.0014868346021022468,
+          -0.0036784550277347006,
+          -0.00041103363037109375
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_PRETRANSLATE')",
+          "held": false,
+          "goal": [
+            0.21271863298162427,
+            0.36529923406446513,
+            1.0370047092437744
+          ],
+          "rotation": [
+            [
+              0.2978970351019095,
+              -0.8385652996687513,
+              0.4561420772839847
+            ],
+            [
+              -0.9003012528918685,
+              -0.08794574312486775,
+              0.42629004246820773
+            ],
+            [
+              -0.3173562832508965,
+              -0.5376558234202172,
+              -0.7811601660501544
+            ]
+          ],
+          "bias": [
+            0.0014868346021022468,
+            -0.0036784550277347006,
+            -0.00041103363037109375
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.10912786721683453,
+        "submitted_action": [
+          0.19070333242416382,
+          -0.44544684886932373,
+          -0.04826545715332031,
+          -0.001404613722115755,
+          0.0012754556955769658,
+          0.0015376389492303133,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.06001040558516979,
+          0.0640104055851698
+        ]
+      },
+      "old_position_error_m": 0.0398881651249732,
+      "old_angle_error_rad": 0.0029437312061665454,
+      "old_submitted_action": [
+        0.16915541887283325,
+        -0.3745659291744232,
+        -0.03933906555175781,
+        -0.0009107321966439486,
+        -0.0002836202911566943,
+        0.0006855865358375013,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        -0.00012317299842834473,
+        0.00013697147369384766,
+        -0.00017654895782470703
+      ]
+    },
+    {
+      "job": "v16_regression_6000005",
+      "step": 224,
+      "action": [
+        0.03717323765158653,
+        -0.05734998732805252,
+        -0.039427757263183594,
+        -0.001198587124235928,
+        -0.0003820460697170347,
+        -0.0009548648959025741,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.10869757241718404,
+            "can_margin_m": 0.08536474836610101,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.10869757241718404,
+                "can_margin_m": 0.08536474836610101
+              },
+              {
+                "hand_margin_m": 0.10869962352500859,
+                "can_margin_m": 0.0853666349703273
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.061241533935070036,
+              0.06524153393507004
+            ],
+            "hand_margin_m": 0.10869757241718404,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.0018586618825793266,
+              -0.002867499366402626,
+              -0.0019713878631591798
+            ],
+            "rotation_vector_rad": [
+              -0.000599293562117964,
+              -0.00019102303485851735,
+              -0.00047743244795128703
+            ],
+            "hand_arc_bound_m": 7.267001388929115e-05,
+            "second_arc_bound_m": 7.267001388929115e-05,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.03717323765158653,
+              -0.05734998732805252,
+              -0.039427757263183594,
+              -0.001198587124235928,
+              -0.0003820460697170347,
+              -0.0009548648959025741,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.10869757241718404,
+        "can_margin_m": 0.08536474836610101,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.0018586618825793266,
+          -0.002867499366402626,
+          -0.0019713878631591798
+        ],
+        "rotation_vector_rad": [
+          -0.000599293562117964,
+          -0.00019102303485851735,
+          -0.00047743244795128703
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.00660149247030674,
+        "orientation_error_rad": 0.0013098277505212473,
+        "observed_translation_per_step_m": [
+          -6.42538070678711e-05,
+          -0.00022163987159729004,
+          0.000293731689453125
+        ],
+        "observed_rotation_per_step_rad": [
+          0.0001847510205296486,
+          0.00027079827427629644,
+          0.00043161832987922164
+        ],
+        "position_bias_m": [
+          0.00029371352647205863,
+          -0.0005333265391940512,
+          -0.00025513172149658206
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_PRETRANSLATE')",
+          "held": false,
+          "goal": [
+            0.21271863298162427,
+            0.36529923406446513,
+            1.0370047092437744
+          ],
+          "rotation": [
+            [
+              0.2978970351019095,
+              -0.8385652996687513,
+              0.4561420772839847
+            ],
+            [
+              -0.9003012528918685,
+              -0.08794574312486775,
+              0.42629004246820773
+            ],
+            [
+              -0.3173562832508965,
+              -0.5376558234202172,
+              -0.7811601660501544
+            ]
+          ],
+          "bias": [
+            0.00029371352647205863,
+            -0.0005333265391940512,
+            -0.00025513172149658206
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.10869757241718404,
+        "submitted_action": [
+          0.03717323765158653,
+          -0.05734998732805252,
+          -0.039427757263183594,
+          -0.001198587124235928,
+          -0.0003820460697170347,
+          -0.0009548648959025741,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.061241533935070036,
+          0.06524153393507004
+        ]
+      },
+      "old_position_error_m": 0.00660149247030674,
+      "old_angle_error_rad": 0.0013098277505212473,
+      "old_submitted_action": [
+        0.032584041357040405,
+        -0.04225065931677818,
+        -0.04019975662231445,
+        -0.0015681828372180462,
+        -0.0009239835198968649,
+        -0.001817847485654056,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        3.7789344787597656e-05,
+        -0.0003876984119415283,
+        0.00017595291137695312
+      ]
+    },
+    {
+      "job": "v16_regression_6000005",
+      "step": 293,
+      "action": [
+        -0.027393970638513565,
+        -0.011441119946539402,
+        -0.02364492416381836,
+        -0.02302582375705242,
+        -0.01487614307552576,
+        0.03220409154891968,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.1265802432589209,
+            "can_margin_m": 0.058049743073294614,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.1265802432589209,
+                "can_margin_m": 0.058049743073294614
+              },
+              {
+                "hand_margin_m": 0.12712098992682327,
+                "can_margin_m": 0.05807405070900499
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.0619648474752903,
+              0.0659648474752903
+            ],
+            "hand_margin_m": 0.1265802432589209,
+            "rotation_samples": 2,
+            "translation_m": [
+              -0.0013696985319256783,
+              -0.0005720559973269702,
+              -0.0011822462081909181
+            ],
+            "rotation_vector_rad": [
+              -0.01151291187852621,
+              -0.00743807153776288,
+              0.01610204577445984
+            ],
+            "hand_arc_bound_m": 0.0019495140274446653,
+            "second_arc_bound_m": 0.0019495140274446653,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              -0.027393970638513565,
+              -0.011441119946539402,
+              -0.02364492416381836,
+              -0.02302582375705242,
+              -0.01487614307552576,
+              0.03220409154891968,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.1265802432589209,
+        "can_margin_m": 0.058049743073294614,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.0013696985319256783,
+          -0.0005720559973269702,
+          -0.0011822462081909181
+        ],
+        "rotation_vector_rad": [
+          -0.01151291187852621,
+          -0.00743807153776288,
+          0.01610204577445984
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.002706844424697239,
+        "orientation_error_rad": 0.04572750929072767,
+        "observed_translation_per_step_m": [
+          0.00035640597343444824,
+          -3.725290298461914e-05,
+          -4.076957702636719e-05
+        ],
+        "observed_rotation_per_step_rad": [
+          -0.0027115929167816108,
+          -0.002907996468324391,
+          0.004229448892569065
+        ],
+        "position_bias_m": [
+          -0.00013918159748652902,
+          -0.00010465589443391932,
+          -0.00020723342895507814
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_ROTATE')",
+          "held": false,
+          "goal": [
+            0.21271863298162427,
+            0.36529923406446513,
+            1.0370047092437744
+          ],
+          "rotation": [
+            [
+              0.728943294407555,
+              0.4562035539835058,
+              0.5104115896715897
+            ],
+            [
+              0.37370007385749215,
+              -0.8898754504608039,
+              0.2616676087445413
+            ],
+            [
+              0.5735764363510462,
+              -2.7755575615628914e-17,
+              -0.8191520442889919
+            ]
+          ],
+          "bias": [
+            -0.00013918159748652902,
+            -0.00010465589443391932,
+            -0.00020723342895507814
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.1265802432589209,
+        "submitted_action": [
+          -0.027393970638513565,
+          -0.011441119946539402,
+          -0.02364492416381836,
+          -0.02302582375705242,
+          -0.01487614307552576,
+          0.03220409154891968,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.0619648474752903,
+          0.0659648474752903
+        ]
+      },
+      "old_position_error_m": 0.002706844424697239,
+      "old_angle_error_rad": 0.04572750929072767,
+      "old_submitted_action": [
+        -0.031738460063934326,
+        -0.008602944202721119,
+        -0.018684864044189453,
+        -0.017633195966482162,
+        -0.009070566855370998,
+        0.02371850796043873,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        0.0007540285587310791,
+        6.783008575439453e-05,
+        -0.0008558034896850586
+      ]
+    },
+    {
+      "job": "v16_regression_6000005",
+      "step": 324,
+      "action": [
+        0.006165855098515749,
+        -0.04470188915729523,
+        -0.026572048664093018,
+        -0.0030883236322551966,
+        0.002000422915443778,
+        0.00012139577302150428,
+        0.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": false,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": false,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.11593840989241992,
+            "can_margin_m": 0.048135098109552604,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.1159390355387019,
+                "can_margin_m": 0.048135098109552604
+              },
+              {
+                "hand_margin_m": 0.11593840989241992,
+                "can_margin_m": 0.04814685913843489
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.06199097666144371,
+              0.06599097666144371
+            ],
+            "hand_margin_m": 0.11593840989241992,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.00030829275492578746,
+              -0.0022350944578647613,
+              -0.0013286024332046509
+            ],
+            "rotation_vector_rad": [
+              -0.0015441618161275983,
+              0.001000211457721889,
+              6.069788651075214e-05
+            ],
+            "hand_arc_bound_m": 0.00016973186637905571,
+            "second_arc_bound_m": 0.00016973186637905571,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.006165855098515749,
+              -0.04470188915729523,
+              -0.026572048664093018,
+              -0.0030883236322551966,
+              0.002000422915443778,
+              0.00012139577302150428,
+              0.0
+            ],
+            "grip_command": 0.0
+          }
+        ],
+        "box_margin_m": 0.11593840989241992,
+        "can_margin_m": 0.048135098109552604,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.00030829275492578746,
+          -0.0022350944578647613,
+          -0.0013286024332046509
+        ],
+        "rotation_vector_rad": [
+          -0.0015441618161275983,
+          0.001000211457721889,
+          6.069788651075214e-05
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.005149602600981018,
+        "orientation_error_rad": 0.0034727204170937652,
+        "observed_translation_per_step_m": [
+          0.0004991441965103149,
+          -0.00015789270401000977,
+          -0.00012946128845214844
+        ],
+        "observed_rotation_per_step_rad": [
+          0.0002742742795455738,
+          -0.00026285764307671766,
+          0.00036494396017169433
+        ],
+        "position_bias_m": [
+          0.00017616817367816507,
+          -0.0004119889304622759,
+          -0.0002537990646944044
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "(1, 'EDGE_APPROACH')",
+          "held": false,
+          "goal": [
+            0.24968644172079807,
+            0.2843342558884772,
+            1.0257736195749187
+          ],
+          "rotation": [
+            [
+              0.728943294407555,
+              0.4562035539835058,
+              0.5104115896715897
+            ],
+            [
+              0.37370007385749215,
+              -0.8898754504608039,
+              0.2616676087445413
+            ],
+            [
+              0.5735764363510462,
+              -2.7755575615628914e-17,
+              -0.8191520442889919
+            ]
+          ],
+          "bias": [
+            0.00017616817367816507,
+            -0.0004119889304622759,
+            -0.0002537990646944044
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.11593840989241992,
+        "submitted_action": [
+          0.006165855098515749,
+          -0.04470188915729523,
+          -0.026572048664093018,
+          -0.0030883236322551966,
+          0.002000422915443778,
+          0.00012139577302150428,
+          0.0
+        ],
+        "grip_command": 0.0,
+        "aperture_range_m": [
+          0.06199097666144371,
+          0.06599097666144371
+        ]
+      },
+      "old_position_error_m": 0.005149602600981018,
+      "old_angle_error_rad": 0.0034727204170937652,
+      "old_submitted_action": [
+        -0.00734039256349206,
+        -0.033304259181022644,
+        -0.018906842917203903,
+        -0.0036376339849084616,
+        0.0025249775499105453,
+        -0.000608754635322839,
+        0.0
+      ],
+      "old_actual_next_displacement_m": [
+        8.70823860168457e-05,
+        -0.00018852949142456055,
+        -0.00014603137969970703
+      ]
+    },
+    {
+      "family": "held_carry",
+      "step": 325,
+      "segment": "reorient",
+      "action": [
+        0.039009176194667816,
+        -0.0010234415531158447,
+        0.010633907280862331,
+        0.02028852514922619,
+        -0.08057302236557007,
+        -0.006449856795370579,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.163310969546057,
+            "can_margin_m": 0.13064674503633056,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.163310969546057,
+                "carried_can_margin_m": 0.13064674503633056
+              },
+              {
+                "hand_margin_m": 0.1648531100378106,
+                "carried_can_margin_m": 0.1308031618388713
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.04737281459569931,
+              0.05137281459569931
+            ],
+            "hand_margin_m": 0.163310969546057,
+            "carried_can_margin_m": 0.13064674503633056,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.001950458809733391,
+              -5.117207765579224e-05,
+              0.0005316953640431166
+            ],
+            "rotation_vector_rad": [
+              0.010144262574613094,
+              -0.040286511182785034,
+              -0.0032249283976852894
+            ],
+            "hand_arc_bound_m": 0.0038692914536666055,
+            "second_arc_bound_m": 0.0010869317827323956,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.039009176194667816,
+              -0.0010234415531158447,
+              0.010633907280862331,
+              0.02028852514922619,
+              -0.08057302236557007,
+              -0.006449856795370579,
+              1.0
+            ],
+            "grip_command": 1.0
+          }
+        ],
+        "box_margin_m": 0.163310969546057,
+        "can_margin_m": 0.13064674503633056,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.001950458809733391,
+          -5.117207765579224e-05,
+          0.0005316953640431166
+        ],
+        "rotation_vector_rad": [
+          0.010144262574613094,
+          -0.040286511182785034,
+          -0.0032249283976852894
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.005269779453934317,
+        "orientation_error_rad": 1.0335779226944766,
+        "observed_translation_per_step_m": [
+          0.0002862773835659027,
+          -6.939470767974854e-05,
+          0.0010294914245605469
+        ],
+        "observed_rotation_per_step_rad": [
+          6.366255494631232e-08,
+          0.00042847876690822723,
+          -0.00019930293199565887
+        ],
+        "position_bias_m": [
+          0.00039664581418037416,
+          -2.5877356529235842e-05,
+          0.0003459887504577708
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.04103761166334152,
+          0.017676055431365967,
+          0.004648732952773571,
+          0.001341815572232008,
+          0.017503244802355766,
+          -0.0017522393027320504,
+          1.0
+        ],
+        "held_command_slew_limited": true,
+        "state_update": {
+          "phase": "('carry', 'reorient')",
+          "held": true,
+          "goal": [
+            -0.04071790724992752,
+            -0.17924723029136658,
+            1.078875617980957
+          ],
+          "rotation": [
+            [
+              0.9737733695076487,
+              0.0875579142805324,
+              0.20999770590309666
+            ],
+            [
+              0.05611188436525977,
+              -0.986895736544526,
+              0.15128866984416645
+            ],
+            [
+              0.22049236102572867,
+              -0.13553751081187976,
+              -0.9659258262890682
+            ]
+          ],
+          "bias": [
+            0.00039664581418037416,
+            -2.5877356529235842e-05,
+            0.0003459887504577708
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.163310969546057,
+        "submitted_action": [
+          0.039009176194667816,
+          -0.0010234415531158447,
+          0.010633907280862331,
+          0.02028852514922619,
+          -0.08057302236557007,
+          -0.006449856795370579,
+          1.0
+        ],
+        "grip_command": 1.0,
+        "aperture_range_m": [
+          0.04737281459569931,
+          0.05137281459569931
+        ],
+        "carried_can_margin_m": 0.13064674503633056
+      },
+      "dense_grid": {
+        "sampled_translation_rotation_aperture_combinations": 81,
+        "minimum_hand_box_m": 0.16663247009794113,
+        "minimum_second_margin_m": 0.13173367681906295,
+        "scope": "Finite sanity grid; analytical convex-aperture/translation and radius-arc bounds cover intervals."
+      }
+    },
+    {
+      "family": "held_carry",
+      "step": 345,
+      "segment": "reorient",
+      "action": [
+        -0.015383273363113403,
+        0.020498335361480713,
+        0.00271745678037405,
+        0.050379298627376556,
+        -0.29534122347831726,
+        -0.01534550916403532,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 6,
+        "work": 6,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 6,
+            "work": 6,
+            "box_margin_m": 0.16625869597779366,
+            "can_margin_m": 0.14020998569744259,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.16761819004811965,
+                "carried_can_margin_m": 0.14020998569744259
+              },
+              {
+                "hand_margin_m": 0.16695777700382888,
+                "carried_can_margin_m": 0.14209966026215004
+              },
+              {
+                "hand_margin_m": 0.16625869597779366,
+                "carried_can_margin_m": 0.144183975594931
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.047304401502013205,
+              0.05130440150201321
+            ],
+            "hand_margin_m": 0.16625869597779366,
+            "carried_can_margin_m": 0.14020998569744259,
+            "rotation_samples": 3,
+            "translation_m": [
+              -0.0007691636681556702,
+              0.0010249167680740356,
+              0.0001358728390187025
+            ],
+            "rotation_vector_rad": [
+              0.025189649313688278,
+              -0.14767061173915863,
+              -0.00767275458201766
+            ],
+            "hand_arc_bound_m": 0.006965319735700787,
+            "second_arc_bound_m": 0.0019563906037523646,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              -0.015383273363113403,
+              0.020498335361480713,
+              0.00271745678037405,
+              0.050379298627376556,
+              -0.29534122347831726,
+              -0.01534550916403532,
+              1.0
+            ],
+            "grip_command": 1.0
+          }
+        ],
+        "box_margin_m": 0.16625869597779366,
+        "can_margin_m": 0.14020998569744259,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          -0.0007691636681556702,
+          0.0010249167680740356,
+          0.0001358728390187025
+        ],
+        "rotation_vector_rad": [
+          0.025189649313688278,
+          -0.14767061173915863,
+          -0.00767275458201766
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.003635031889820201,
+        "orientation_error_rad": 0.5016636685725453,
+        "observed_translation_per_step_m": [
+          -0.0009407103061676025,
+          -0.0007131397724151611,
+          -0.00011587142944335938
+        ],
+        "observed_rotation_per_step_rad": [
+          0.006136647554165592,
+          -0.03385251062817097,
+          -0.0019452406170622986
+        ],
+        "position_bias_m": [
+          -0.00036337152123451234,
+          -7.465481758117676e-06,
+          -6.32238388060813e-06
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0015086308121681213,
+          0.02084776759147644,
+          0.025841761380434036,
+          0.05027377977967262,
+          -0.29538196325302124,
+          -0.014900890178978443,
+          1.0
+        ],
+        "held_command_slew_limited": true,
+        "state_update": {
+          "phase": "('carry', 'reorient')",
+          "held": true,
+          "goal": [
+            -0.04071790724992752,
+            -0.17924723029136658,
+            1.078875617980957
+          ],
+          "rotation": [
+            [
+              0.9737733695076487,
+              0.0875579142805324,
+              0.20999770590309666
+            ],
+            [
+              0.05611188436525977,
+              -0.986895736544526,
+              0.15128866984416645
+            ],
+            [
+              0.22049236102572867,
+              -0.13553751081187976,
+              -0.9659258262890682
+            ]
+          ],
+          "bias": [
+            -0.00036337152123451234,
+            -7.465481758117676e-06,
+            -6.32238388060813e-06
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.16625869597779366,
+        "submitted_action": [
+          -0.015383273363113403,
+          0.020498335361480713,
+          0.00271745678037405,
+          0.050379298627376556,
+          -0.29534122347831726,
+          -0.01534550916403532,
+          1.0
+        ],
+        "grip_command": 1.0,
+        "aperture_range_m": [
+          0.047304401502013205,
+          0.05130440150201321
+        ],
+        "carried_can_margin_m": 0.14020998569744259
+      }
+    },
+    {
+      "family": "held_carry",
+      "step": 365,
+      "segment": "reorient",
+      "action": [
+        0.04739472270011902,
+        -0.025576472282409668,
+        0.0673651322722435,
+        0.01234390214085579,
+        -0.032689157873392105,
+        -0.001633805688470602,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.16208676764039628,
+            "can_margin_m": 0.13667787676436463,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.16235678339493262,
+                "carried_can_margin_m": 0.1372701466480251
+              },
+              {
+                "hand_margin_m": 0.16208676764039628,
+                "carried_can_margin_m": 0.13667787676436463
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.04725442114472389,
+              0.051254421144723894
+            ],
+            "hand_margin_m": 0.16208676764039628,
+            "carried_can_margin_m": 0.13667787676436463,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.002369736135005951,
+              -0.0012788236141204835,
+              0.003368256613612175
+            ],
+            "rotation_vector_rad": [
+              0.006171951070427895,
+              -0.016344578936696053,
+              -0.000816902844235301
+            ],
+            "hand_arc_bound_m": 0.001624643328731108,
+            "second_arc_bound_m": 0.00045600200359533535,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.04739472270011902,
+              -0.025576472282409668,
+              0.0673651322722435,
+              0.01234390214085579,
+              -0.032689157873392105,
+              -0.001633805688470602,
+              1.0
+            ],
+            "grip_command": 1.0
+          }
+        ],
+        "box_margin_m": 0.16208676764039628,
+        "can_margin_m": 0.13667787676436463,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.002369736135005951,
+          -0.0012788236141204835,
+          0.003368256613612175
+        ],
+        "rotation_vector_rad": [
+          0.006171951070427895,
+          -0.016344578936696053,
+          -0.000816902844235301
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.0070832592549121545,
+        "orientation_error_rad": 0.03879556122959923,
+        "observed_translation_per_step_m": [
+          0.0004101097583770752,
+          0.0005182027816772461,
+          -0.00025653839111328125
+        ],
+        "observed_rotation_per_step_rad": [
+          0.0015430710088961766,
+          -0.006214676064863234,
+          -3.645528371492827e-05
+        ],
+        "position_bias_m": [
+          0.0004974834620952607,
+          -8.358657360076905e-05,
+          0.000497241497039802
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.06130766123533249,
+          -0.018232762813568115,
+          0.09250001609325409,
+          0.010988335125148296,
+          -0.027911292389035225,
+          -0.0012771696783602238,
+          1.0
+        ],
+        "held_command_slew_limited": true,
+        "state_update": {
+          "phase": "('carry', 'reorient')",
+          "held": true,
+          "goal": [
+            -0.04071790724992752,
+            -0.17924723029136658,
+            1.078875617980957
+          ],
+          "rotation": [
+            [
+              0.9737733695076487,
+              0.0875579142805324,
+              0.20999770590309666
+            ],
+            [
+              0.05611188436525977,
+              -0.986895736544526,
+              0.15128866984416645
+            ],
+            [
+              0.22049236102572867,
+              -0.13553751081187976,
+              -0.9659258262890682
+            ]
+          ],
+          "bias": [
+            0.0004974834620952607,
+            -8.358657360076905e-05,
+            0.000497241497039802
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.16208676764039628,
+        "submitted_action": [
+          0.04739472270011902,
+          -0.025576472282409668,
+          0.0673651322722435,
+          0.01234390214085579,
+          -0.032689157873392105,
+          -0.001633805688470602,
+          1.0
+        ],
+        "grip_command": 1.0,
+        "aperture_range_m": [
+          0.04725442114472389,
+          0.051254421144723894
+        ],
+        "carried_can_margin_m": 0.13667787676436463
+      }
+    },
+    {
+      "family": "held_carry",
+      "step": 366,
+      "segment": "transport",
+      "action": [
+        0.10175056755542755,
+        0.18691514432430267,
+        0.046280208975076675,
+        0.010689857415854931,
+        -0.02637591026723385,
+        -0.0019151634769514203,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.16276839448458102,
+            "can_margin_m": 0.137069220937493,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.16299742789122673,
+                "carried_can_margin_m": 0.13754535713017027
+              },
+              {
+                "hand_margin_m": 0.16276839448458102,
+                "carried_can_margin_m": 0.137069220937493
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.04725442114472389,
+              0.051254421144723894
+            ],
+            "hand_margin_m": 0.16276839448458102,
+            "carried_can_margin_m": 0.137069220937493,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.0050875283777713776,
+              0.009345757216215134,
+              0.002314010448753834
+            ],
+            "rotation_vector_rad": [
+              0.0053449287079274654,
+              -0.013187955133616924,
+              -0.0009575817384757102
+            ],
+            "hand_arc_bound_m": 0.0013247952640545345,
+            "second_arc_bound_m": 0.0003718453948770346,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.10175056755542755,
+              0.18691514432430267,
+              0.046280208975076675,
+              0.010689857415854931,
+              -0.02637591026723385,
+              -0.0019151634769514203,
+              1.0
+            ],
+            "grip_command": 1.0
+          }
+        ],
+        "box_margin_m": 0.16276839448458102,
+        "can_margin_m": 0.137069220937493,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.0050875283777713776,
+          0.009345757216215134,
+          0.002314010448753834
+        ],
+        "rotation_vector_rad": [
+          0.0053449287079274654,
+          -0.013187955133616924,
+          -0.0009575817384757102
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.6007244592288985,
+        "orientation_error_rad": 0.03236848062692994,
+        "observed_translation_per_step_m": [
+          0.0006782487034797668,
+          0.0006995946168899536,
+          0.0004202127456665039
+        ],
+        "observed_rotation_per_step_rad": [
+          0.001617555298497453,
+          -0.0062747632350253725,
+          0.00016982978471283394
+        ],
+        "position_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": false,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.029242858290672302,
+          -0.03426879644393921,
+          0.06255106627941132,
+          0.009266508743166924,
+          -0.02025781013071537,
+          -0.0015345459105446935,
+          1.0
+        ],
+        "held_command_slew_limited": true,
+        "state_update": {
+          "phase": "('carry', 'transport')",
+          "held": true,
+          "goal": [
+            0.17316960547350352,
+            0.38189384259310916,
+            1.0846739442097018
+          ],
+          "rotation": [
+            [
+              0.9737733695076487,
+              0.0875579142805324,
+              0.20999770590309666
+            ],
+            [
+              0.05611188436525977,
+              -0.986895736544526,
+              0.15128866984416645
+            ],
+            [
+              0.22049236102572867,
+              -0.13553751081187976,
+              -0.9659258262890682
+            ]
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.16276839448458102,
+        "submitted_action": [
+          0.10175056755542755,
+          0.18691514432430267,
+          0.046280208975076675,
+          0.010689857415854931,
+          -0.02637591026723385,
+          -0.0019151634769514203,
+          1.0
+        ],
+        "grip_command": 1.0,
+        "aperture_range_m": [
+          0.04725442114472389,
+          0.051254421144723894
+        ],
+        "carried_can_margin_m": 0.137069220937493
+      }
+    },
+    {
+      "family": "held_carry",
+      "step": 380,
+      "segment": "transport",
+      "action": [
+        0.2597295045852661,
+        0.6497834324836731,
+        0.017946267500519753,
+        -0.0004909202107228339,
+        0.008383202366530895,
+        -0.00432296609506011,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.16083475603522723,
+            "can_margin_m": 0.1339410848229912,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.16083475603522723,
+                "carried_can_margin_m": 0.1339410848229912
+              },
+              {
+                "hand_margin_m": 0.16085865345875083,
+                "carried_can_margin_m": 0.1340847426783838
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.047254458397626875,
+              0.05125445839762688
+            ],
+            "hand_margin_m": 0.16083475603522723,
+            "carried_can_margin_m": 0.1339410848229912,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.012986475229263307,
+              0.03248917162418365,
+              0.0008973133750259876
+            ],
+            "rotation_vector_rad": [
+              -0.00024546010536141694,
+              0.004191601183265448,
+              -0.002161483047530055
+            ],
+            "hand_arc_bound_m": 0.0004386746818392752,
+            "second_arc_bound_m": 0.0001230409394408479,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.2597295045852661,
+              0.6497834324836731,
+              0.017946267500519753,
+              -0.0004909202107228339,
+              0.008383202366530895,
+              -0.00432296609506011,
+              1.0
+            ],
+            "grip_command": 1.0
+          }
+        ],
+        "box_margin_m": 0.16083475603522723,
+        "can_margin_m": 0.1339410848229912,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.012986475229263307,
+          0.03248917162418365,
+          0.0008973133750259876
+        ],
+        "rotation_vector_rad": [
+          -0.00024546010536141694,
+          0.004191601183265448,
+          -0.002161483047530055
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.5015062972387538,
+        "orientation_error_rad": 0.008567976376289416,
+        "observed_translation_per_step_m": [
+          0.002634243108332157,
+          0.008624643087387085,
+          -0.00011801719665527344
+        ],
+        "observed_rotation_per_step_rad": [
+          0.0002426204766439655,
+          -0.0018826799914373896,
+          -0.0003735939350467858
+        ],
+        "position_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": false,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.2645054757595062,
+          0.6478173136711121,
+          0.01922406256198883,
+          -0.0012005710741505027,
+          0.010733658447861671,
+          -0.004180846270173788,
+          1.0
+        ],
+        "held_command_slew_limited": true,
+        "state_update": {
+          "phase": "('carry', 'transport')",
+          "held": true,
+          "goal": [
+            0.17316960547350352,
+            0.38189384259310916,
+            1.0846739442097018
+          ],
+          "rotation": [
+            [
+              0.9737733695076487,
+              0.0875579142805324,
+              0.20999770590309666
+            ],
+            [
+              0.05611188436525977,
+              -0.986895736544526,
+              0.15128866984416645
+            ],
+            [
+              0.22049236102572867,
+              -0.13553751081187976,
+              -0.9659258262890682
+            ]
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.16083475603522723,
+        "submitted_action": [
+          0.2597295045852661,
+          0.6497834324836731,
+          0.017946267500519753,
+          -0.0004909202107228339,
+          0.008383202366530895,
+          -0.00432296609506011,
+          1.0
+        ],
+        "grip_command": 1.0,
+        "aperture_range_m": [
+          0.047254458397626875,
+          0.05125445839762688
+        ],
+        "carried_can_margin_m": 0.1339410848229912
+      }
+    },
+    {
+      "family": "held_carry",
+      "step": 400,
+      "segment": "transport",
+      "action": [
+        0.27061906456947327,
+        0.6442409157752991,
+        0.04144865646958351,
+        -0.0028077661991119385,
+        0.011864064261317253,
+        2.4031842258409597e-05,
+        1.0
+      ],
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": true,
+        "held": true,
+        "work_units": 4,
+        "work": 4,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": true,
+            "held": true,
+            "work_units": 4,
+            "work": 4,
+            "box_margin_m": 0.1494491609615165,
+            "can_margin_m": 0.12741431182546076,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.1494491609615165,
+                "carried_can_margin_m": 0.12741431182546076
+              },
+              {
+                "hand_margin_m": 0.14950078450118065,
+                "carried_can_margin_m": 0.12761790065897533
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": false,
+            "aperture_range_m": [
+              0.047254462122917174,
+              0.05125446212291718
+            ],
+            "hand_margin_m": 0.1494491609615165,
+            "carried_can_margin_m": 0.12741431182546076,
+            "rotation_samples": 2,
+            "translation_m": [
+              0.013530953228473664,
+              0.03221204578876496,
+              0.002072432823479176
+            ],
+            "rotation_vector_rad": [
+              -0.0014038830995559692,
+              0.0059320321306586266,
+              1.2015921129204798e-05
+            ],
+            "hand_arc_bound_m": 0.0005662504677924592,
+            "second_arc_bound_m": 0.00015859167073138767,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_validated",
+            "submitted_action": [
+              0.27061906456947327,
+              0.6442409157752991,
+              0.04144865646958351,
+              -0.0028077661991119385,
+              0.011864064261317253,
+              2.4031842258409597e-05,
+              1.0
+            ],
+            "grip_command": 1.0
+          }
+        ],
+        "box_margin_m": 0.1494491609615165,
+        "can_margin_m": 0.12741431182546076,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.013530953228473664,
+          0.03221204578876496,
+          0.002072432823479176
+        ],
+        "rotation_vector_rad": [
+          -0.0014038830995559692,
+          0.0059320321306586266,
+          1.2015921129204798e-05
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": false,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.3235924083392243,
+        "orientation_error_rad": 0.012438659902420667,
+        "observed_translation_per_step_m": [
+          0.0032725445926189423,
+          0.008593238890171051,
+          -0.00034546852111816406
+        ],
+        "observed_rotation_per_step_rad": [
+          6.13005581767745e-05,
+          0.0004362185464274733,
+          9.933852002981319e-05
+        ],
+        "position_bias_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": false,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.2729804813861847,
+          0.642277717590332,
+          0.05441485717892647,
+          -0.002786782803013921,
+          0.009552599862217903,
+          -7.175440987339243e-05,
+          1.0
+        ],
+        "held_command_slew_limited": true,
+        "state_update": {
+          "phase": "('carry', 'transport')",
+          "held": true,
+          "goal": [
+            0.17316960547350352,
+            0.38189384259310916,
+            1.0846739442097018
+          ],
+          "rotation": [
+            [
+              0.9737733695076487,
+              0.0875579142805324,
+              0.20999770590309666
+            ],
+            [
+              0.05611188436525977,
+              -0.986895736544526,
+              0.15128866984416645
+            ],
+            [
+              0.22049236102572867,
+              -0.13553751081187976,
+              -0.9659258262890682
+            ]
+          ],
+          "bias": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "reason": "achieved_delta_feedback_step_validated",
+        "selected_scale": 1.0,
+        "hand_margin_m": 0.1494491609615165,
+        "submitted_action": [
+          0.27061906456947327,
+          0.6442409157752991,
+          0.04144865646958351,
+          -0.0028077661991119385,
+          0.011864064261317253,
+          2.4031842258409597e-05,
+          1.0
+        ],
+        "grip_command": 1.0,
+        "aperture_range_m": [
+          0.047254462122917174,
+          0.05125446212291718
+        ],
+        "carried_can_margin_m": 0.12741431182546076
+      }
+    }
+  ],
+  "negative_checks": [
+    {
+      "check": "pulse_without_full_aperture_certificate_rejected",
+      "passed": true,
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": false,
+        "held": false,
+        "work": 0,
+        "work_units": 0,
+        "reason": "empty_grip_pulse_requires_full_aperture_certificate"
+      }
+    },
+    {
+      "check": "observed_gap_outside_certified_range_rejected",
+      "passed": true
+    },
+    {
+      "check": "full_aperture_can_overlap_rejected",
+      "passed": true,
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": false,
+        "held": false,
+        "work_units": 6,
+        "work": 6,
+        "trials": [
+          {
+            "scale": 1.0,
+            "kind": "mixed_pose",
+            "accepted": false,
+            "held": false,
+            "work_units": 2,
+            "work": 2,
+            "box_margin_m": 0.12374927591770767,
+            "can_margin_m": -0.05707443362349047,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.12374927591770767,
+                "can_margin_m": -0.05707443362349047
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": true,
+            "aperture_range_m": [
+              0.0,
+              0.085
+            ],
+            "hand_margin_m": 0.12374927591770767,
+            "rotation_samples": 1,
+            "translation_m": [
+              0.0119999997317791,
+              0.0,
+              0.0
+            ],
+            "rotation_vector_rad": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "hand_arc_bound_m": 1e-08,
+            "second_arc_bound_m": 1e-08,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_clearance_unconfirmed",
+            "submitted_action": [
+              0.23999999463558197,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "grip_command": -1.0
+          },
+          {
+            "scale": 0.5,
+            "kind": "mixed_pose",
+            "accepted": false,
+            "held": false,
+            "work_units": 2,
+            "work": 2,
+            "box_margin_m": 0.12374927591770767,
+            "can_margin_m": -0.05697003358790654,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.12374927591770767,
+                "can_margin_m": -0.05697003358790654
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": true,
+            "aperture_range_m": [
+              0.0,
+              0.085
+            ],
+            "hand_margin_m": 0.12374927591770767,
+            "rotation_samples": 1,
+            "translation_m": [
+              0.00599999986588955,
+              0.0,
+              0.0
+            ],
+            "rotation_vector_rad": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "hand_arc_bound_m": 1e-08,
+            "second_arc_bound_m": 1e-08,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_clearance_unconfirmed",
+            "submitted_action": [
+              0.11999999731779099,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "grip_command": -1.0
+          },
+          {
+            "scale": 0.25,
+            "kind": "mixed_pose",
+            "accepted": false,
+            "held": false,
+            "work_units": 2,
+            "work": 2,
+            "box_margin_m": 0.12374927591770767,
+            "can_margin_m": -0.05691783357011455,
+            "required_can_margin_m": 0.001,
+            "required_hand_box_margin_m": 0.001,
+            "required_second_margin_m": 0.001,
+            "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+            "samples": [
+              {
+                "hand_margin_m": 0.12374927591770767,
+                "can_margin_m": -0.05691783357011455
+              }
+            ],
+            "arc_bounds_applied": true,
+            "aperture_motion": true,
+            "aperture_range_m": [
+              0.0,
+              0.085
+            ],
+            "hand_margin_m": 0.12374927591770767,
+            "rotation_samples": 1,
+            "translation_m": [
+              0.002999999932944775,
+              0.0,
+              0.0
+            ],
+            "rotation_vector_rad": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "hand_arc_bound_m": 1e-08,
+            "second_arc_bound_m": 1e-08,
+            "whole_translation_sweep_at_each_orientation": true,
+            "reason": "mixed_envelope_clearance_unconfirmed",
+            "submitted_action": [
+              0.05999999865889549,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "grip_command": -1.0
+          }
+        ],
+        "box_margin_m": null,
+        "can_margin_m": null,
+        "required_can_margin_m": 0.001,
+        "translation_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_vector_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "certificate_scope": "Current-observation nominal envelope only; not future D2 execution or full-arm safety",
+        "delay": 2,
+        "observation_prediction_only": false,
+        "servo_semantics": "achieved_pose_plus_command",
+        "aperture_motion": true,
+        "settling_and_clock_owned_by_caller": true,
+        "position_error_m": 0.02,
+        "orientation_error_rad": 0.0,
+        "observed_translation_per_step_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "observed_rotation_per_step_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "position_bias_m": [
+          0.002,
+          0.0,
+          0.0
+        ],
+        "bias_limit_m": 0.009,
+        "bias_gain_per_control": 0.1,
+        "near_goal_feedback": true,
+        "state_reset_reason": "new_servo_state",
+        "previous_submitted_action": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "held_command_slew_limited": false,
+        "state_update": {
+          "phase": "'blocked'",
+          "held": false,
+          "goal": [
+            0.02260067987255752,
+            0.15113598108291626,
+            1.0534456968307495
+          ],
+          "rotation": [
+            [
+              0.11539029571350072,
+              -0.8404424514331418,
+              0.5294729128899816
+            ],
+            [
+              -0.9373431363030639,
+              0.08428097584216014,
+              0.33805999753982896
+            ],
+            [
+              -0.32874446684421443,
+              -0.5353066438408404,
+              -0.7780577565831273
+            ]
+          ],
+          "bias": [
+            0.002,
+            0.0,
+            0.0
+          ]
+        },
+        "reason": "no_certified_mixed_step"
+      }
+    },
+    {
+      "check": "full_aperture_box_overlap_rejected",
+      "passed": true,
+      "receipt": {
+        "kind": "mixed_pose",
+        "accepted": false,
+        "held": false,
+        "work_units": 6,
+        "work": 6,
+        "box_margin_m": -0.10783770659803357,
+        "can_margin_m": 0.150350788436231,
+        "required_can_margin_m": 0.001,
+        "required_hand_box_margin_m": 0.001,
+        "required_second_margin_m": 0.001,
+        "certificate_scope": "Current-observation straight-segment x orientation-arc envelope; excludes tracking/queued-motion uncertainty and full arm",
+        "samples": [
+          {
+            "hand_margin_m": -0.10783770659803357,
+            "can_margin_m": 0.15380291677684926
+          },
+          {
+            "hand_margin_m": -0.10315741901891737,
+            "can_margin_m": 0.15181275483984902
+          },
+          {
+            "hand_margin_m": -0.09841460415961154,
+            "can_margin_m": 0.150350788436231
+          }
+        ],
+        "arc_bounds_applied": true,
+        "aperture_motion": true,
+        "aperture_range_m": [
+          0.0,
+          0.085
+        ],
+        "hand_margin_m": -0.10783770659803357,
+        "rotation_samples": 3,
+        "translation_m": [
+          0.005,
+          0.0,
+          0.0
+        ],
+        "rotation_vector_rad": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "hand_arc_bound_m": 0.004847500783075489,
+        "second_arc_bound_m": 0.004847500783075489,
+        "whole_translation_sweep_at_each_orientation": true,
+        "reason": "mixed_envelope_clearance_unconfirmed"
+      }
+    },
+    {
+      "check": "original_motion_caps_preserved",
+      "passed": true
+    },
+    {
+      "check": "nonfinite_input_rejected_preserves_hold",
+      "passed": true
+    },
+    {
+      "check": "loosened_clearance_rejected",
+      "passed": true
+    }
+  ],
+  "state_checks": [
+    {
+      "check": "propose_does_not_mutate_and_committed_bias_bounded",
+      "passed": true,
+      "bias_after_30_fixed_observations_m": [
+        0.009,
+        0.0,
+        0.0
+      ],
+      "not_a_simulation": true
+    },
+    {
+      "check": "exact_phase_goal_change_and_replaced_command_reset",
+      "passed": true
+    }
+  ],
+  "osc_evidence": {
+    "metadata": {
+      "type": "BASIC",
+      "body_parts": {
+        "right": {
+          "type": "OSC_POSE",
+          "input_max": 1,
+          "input_min": -1,
+          "output_max": [
+            0.05,
+            0.05,
+            0.05,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "output_min": [
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.5,
+            -0.5,
+            -0.5
+          ],
+          "kp": 150,
+          "damping": 1,
+          "impedance_mode": "fixed",
+          "kp_limits": [
+            0,
+            300
+          ],
+          "damping_limits": [
+            0,
+            10
+          ],
+          "position_limits": null,
+          "orientation_limits": null,
+          "uncouple_pos_ori": true,
+          "control_delta": true,
+          "interpolation": null,
+          "ramp_ratio": 0.2,
+          "input_ref_frame": "world",
+          "gripper": {
+            "type": "GRIP"
+          }
+        }
+      }
+    },
+    "source_verified_semantics": "BASIC set_goal -> OSC scaled delta; reset_goal defaults achieved, goal=achieved_pose+delta; kp150 and kd=2sqrt(kp), no interpolator.",
+    "v16_translation_equivalent": "For unclipped commands: 0.5*error - (0.5*2+1.5)*observed_displacement = 0.5*error-2.5*displacement.",
+    "v16_angular_local_equivalent": "Locally near a fixed orientation axis: 0.5*angle_error-(0.5*2+0.3)*observed_angle = 0.5*error-1.3*observed_angle; SO(3) rotations need not commute.",
+    "v17_command_change": "One near-goal observed damping term, bounded committed position bias; far translation retains original proportional command. Original arrival/queue/phase rules remain external.",
+    "gripper_semantics": "sign(grip) changes hidden desired gripper target; no small-amplitude continuous aperture guarantee. Parallel empty motion therefore certifies full 0..85mm aperture.",
+    "inference_limit": "The saved drift and source semantics motivate a controlled candidate; neither proves these gains improve future dynamics."
+  },
+  "source_sha256": {
+    "reproduction/improvement_v17_20261019_01/inspect_pose_servo.py": "5aae6b85cbdbf92f6e7ee9bebfce05806af3fb1ad9b32076d8ee5bdba53b89b6",
+    "reproduction/improvement_v17_20261019_01/recovery/pose_servo.py": "de4424b1b2b11bc3b01928bbc4f86235c04b961769a8c97a77d02d221014018b",
+    ".venv/Lib/site-packages/robosuite/controllers/parts/arm/osc.py": "bcc238dbe7a95fe64f48469ef4d6a4f3ed3869992c8805452e0c881ae457873b",
+    ".venv/Lib/site-packages/robosuite/controllers/composite/composite_controller.py": "335147a75b4a7fca6b79456037723bfab953536a9fef60086532af20f6ce695e",
+    ".venv/Lib/site-packages/robosuite/models/grippers/panda_gripper.py": "df0449a9b003e9a019fad4ef59b435ae2b9accd2705026da041165dd99faab8d",
+    "common.py": "7618e9b1e05407d97727001ecc8f012ecca4876bccb423368f8d90500e8a5db0",
+    "reproduction/improvement_v16_20261016_01/analysis/smoke_a_edge_diagnosis.json": "53bc68464287037c01c1a0229faa368b78f848c566cc3b299bd8b1f0a397c5ab",
+    "reproduction/improvement_v16_20261016_01/smoke_a/v16_known13_full_s41_noise005_demo_13000022/trace.jsonl": "bbcde58e0f5afb8dd6f3df2bbc88b1c8335d10284572664d3bf1dd0a1db35451",
+    "reproduction/improvement_v16_20261016_01/smoke_a/v16_regression_6000005/trace.jsonl": "f5a9bbd3dc4202f9340577191f4289203b32047b9f0c6e2cda24b5469042c531",
+    "reproduction/improvement_v16_20261016_01/smoke_a/v16_known13_bc_k2_noise005_demo_13000021/result.json": "863079929be3f9f62ad9ff3ae73291de6ef6684ef6d7b6b2cebdff5e01bb2b53",
+    "reproduction/improvement_v16_20261016_01/smoke_a/v16_known13_bc_k2_noise005_demo_13000021/trace.jsonl": "7aea1eb174d1f9ce86e2f1ccf7d3a1bc0c6980d66504ced834216f6128e9847a",
+    "reproduction/improvement_v16_20261016_01/smoke_a/started.json": "668541cb0a54ae3bbf3ccb464863995a85eedb32c5bc6527cda9a3292fe31c8d"
+  },
+  "unchanged": {
+    "delay": 2,
+    "total_controls": 400,
+    "phase_timeout": 70,
+    "arrival_position_m": 0.009,
+    "arrival_angle_rad": 0.08,
+    "arrival_frames": 5,
+    "translation_cap_m": 0.035,
+    "rotation_cap_rad": 0.15,
+    "work_cap": 16,
+    "hand_box_m": 0.001,
+    "held_can_box_m": 0.001,
+    "empty_execution_can_m": 0.001,
+    "empty_planning_can_m": 0.003
+  },
+  "archived_v16_decisions_replayed": 400,
+  "rotation_arc_test": {
+    "passed": true,
+    "vertices": 64,
+    "fractions": 1001,
+    "bound_m": 0.008624494637789653,
+    "observed_max_m": 0.008297347159132638
+  },
+  "maximum_proposal_work": 6,
+  "limitations": [
+    "No v17 physics or closed-loop success result.",
+    "Static certificate does not cover future D2 tracking error or full-arm collision.",
+    "A rigid carried hull does not prove force closure or absence of slip.",
+    "Pure held servo does not decide whether a large-angle candidate fits remaining task budget."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "scope": "Failed outcome gate blocks development before jobs or freeze are written",
+  "expected_exit_code": 1,
+  "smoke_outcome_gate_passed": false,
+  "new_experiments": 0,
+  "analysis_sha256": "af4265302daf405b9c62a1cacae288ba5eeab85aa0f6a3222985d1460dd87ff7",
+  "freeze_script_sha256": "668815355e3800ece1523668ada40c59fc26cd65af5eb98ea7d5366b4c7f0c3f",
+  "output": "Traceback (most recent call last):\n  File \"C:\\Users\\Livio\\Desktop\\robot_can\\reproduction\\improvement_v17_20261019_01\\freeze_development.py\", line 49, in <module>\n    for stage,expected in [(a.smoke,63),(a.pilot,658)]:evidence+=verify_stage(stage,expected)\n  File \"C:\\Users\\Livio\\Desktop\\robot_can\\reproduction\\improvement_v17_20261019_01\\freeze_development.py\", line 14, in verify_stage\n    assert analysis['stage']==stage and analysis['outcome_gate_passed'],stage\nAssertionError: smoke_a\n",
+  "development_and_confirmation_not_created": true
+}

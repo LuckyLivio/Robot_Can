@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "all_103_inherited_fields_exact",
+      "passed": true,
+      "scope": "Real Config values for disabled, each single repair and full v17"
+    },
+    {
+      "name": "carry_and_place_keep_original_five_frame_loss",
+      "passed": true,
+      "scope": "Only hold observation stubbed; actual choose and parent loss guards retain route during four-frame pause and recover on fifth"
+    },
+    {
+      "name": "equal_zero_pose_pause_explicitly_resets_bias",
+      "passed": true,
+      "scope": "Real choose with only hold observation stubbed: identical previous/paused zero-pose closed commands still clear feedback memory in CARRY_HOLD and PLACE_HOLD"
+    },
+    {
+      "name": "held_guards_and_postprocessor_clock",
+      "passed": true,
+      "scope": "Stub relative/certificate; inherited joint .04rad, relative .012m and 70-step limits protect motion; carry postprocessor adds no clock tick"
+    },
+    {
+      "name": "edge_protections_single_clock_all_three_phases",
+      "passed": true,
+      "scope": "Stub support/pose/geometry; true joint/time and control-flow guards prevent motion/descent and advance exactly once"
+    },
+    {
+      "name": "edge_arrival_five_consecutive_frames_and_original_thresholds",
+      "passed": true,
+      "scope": "Stub geometry/feasibility; each edge transition retains position .009, angle .08, gap and five-frame rules; approach additionally requires D2 .009 and 3mm tail"
+    },
+    {
+      "name": "rejected_full_aperture_proposal_uses_one_parent_pulse",
+      "passed": true,
+      "scope": "Stub mixed rejection; one proposal only, no pose motion, original gap pulse/settling, rejected proposal never committed"
+    },
+    {
+      "name": "certified_aperture_motion_commits_submitted_command",
+      "passed": true,
+      "scope": "Stub full-range positive certificate; exact action and pulse submitted once; unmet gap still prevents arrival"
+    },
+    {
+      "name": "short_transport_keeps_reference_and_five_frame_arrival",
+      "passed": true,
+      "scope": "Stub positive pose certificate; direct stage cannot skip four waits or discard carried-relative reference"
+    },
+    {
+      "name": "terminal_metadata_preserves_last_segment_age",
+      "passed": true,
+      "scope": "Stub valid pose; real fifth confirmation copies elapsed segment age before reset rather than creating a fresh timeout allowance"
+    },
+    {
+      "name": "terminal_age70_allowed_71_guarded",
+      "passed": true,
+      "scope": "Stub positive mixed proposal; old servo for route-only/new servo for held-only, same final segment timeout across terminal continuation, no extra postprocessor clock"
+    },
+    {
+      "name": "terminal_missing_metadata_joint_relative_and_geometry_rejected",
+      "passed": true,
+      "scope": "Stub geometry/relative error; unconfirmed tail, stale attempt and original guards never submit uncertified motion"
+    },
+    {
+      "name": "real_choose_cannot_fall_back_to_uncertified_terminal_carry",
+      "passed": true,
+      "scope": "Saved non-target can pose plus hold/geometry stubs; actual choose replaces original nonzero policy with certified tail or joint-guard stop, exactly one clock tick"
+    },
+    {
+      "name": "parent_place_release_transition_guards_retained",
+      "passed": true,
+      "scope": "Real parent enter checks block pending-route PLACE and transient-hold-loss RELEASE"
+    },
+    {
+      "name": "place_joint_relative_and_certificate_guards",
+      "passed": true,
+      "scope": "Stub relative/geometry; original PLACE guards reject to closed zero motion without extra clock or memory commit"
+    },
+    {
+      "name": "last_place_command_still_protected_after_release_transition",
+      "passed": true,
+      "scope": "Stub parent transition/geometry; terminal PLACE command remains certified and committed exactly once"
+    },
+    {
+      "name": "held_pause_invalidates_old_bias_and_only_exact_submission_commits",
+      "passed": true,
+      "scope": "Real helper/adapter with stub separators: changed submitted hold resets prior phase bias, proposals do not mutate, exact commit updates and replaced action clears memory"
+    },
+    {
+      "name": "rejected_helper_proposal_clears_controller_bias",
+      "passed": true,
+      "scope": "Stub failed helper; real propose17 adapter explicitly resets uncommitted state"
+    },
+    {
+      "name": "one_bounded_route_search_per_attempt",
+      "passed": true,
+      "scope": "Stub bounded unfinished search; real route factory/inherited advance keeps reference and never starts a repeated search within one attempt"
+    }
+  ],
+  "source_sha256": {
+    "reproduction/improvement_v17_20261019_01/recovery/carry_search.py": "679d3c5202c6449b38a4463ac42cee2c61e8bd3841e3421259007cac7ec536f0",
+    "reproduction/improvement_v17_20261019_01/recovery/pose_servo.py": "55455da8fabe2ca251cd9aaaa1a54c82c500f43a9ebcef223aeee517cce6106f",
+    "reproduction/improvement_v17_20261019_01/recovery/recovery_controller.py": "25cbacdf9d4af15ff10ec38c6aabbf88620248bbae7b710b3cb61e740ec47ec4",
+    "reproduction/improvement_v17_20261019_01/verify_components.py": "3c8371010c063219b76bdafdad15b1f2b1410e4a5bf52d96724124a3394b683b",
+    "reproduction/improvement_v16_20261016_01/smoke_a/v16_known13_bc_k2_noise005_demo_13000021/trace.jsonl": "7aea1eb174d1f9ce86e2f1ccf7d3a1bc0c6980d66504ced834216f6128e9847a",
+    "reproduction/improvement_v15_20261016_01/recovery/carry_path.py": "cb926f1bddd73734c5f13a824dd9467bb20aa22637d04ab6a7d28664eb4b25e7",
+    "reproduction/improvement_v15_20261016_01/recovery/edge_path.py": "e04a4c8c2ad03645ef1e1a76ec880082c30664ee55c08c0d72b9855923e82ec6",
+    "reproduction/improvement_v15_20261016_01/recovery/recovery_controller.py": "57aab4ac4024e3f9915b760981603b5d9f5f8b305832a32de207b1bdd09f462e",
+    "reproduction/improvement_v16_20261016_01/recovery/carry_search.py": "484a8e1c9326f829b5ce359a46a41b1d67417f51e21a3bfca914ef6a245c35af",
+    "reproduction/improvement_v16_20261016_01/recovery/pose_servo.py": "9a914a6d2de37e0fe739233f0f9107235ff4b642dd1663cf2828f1f5c71d6fab",
+    "reproduction/improvement_v16_20261016_01/recovery/recovery_controller.py": "4631ae69d893eaf61540468919157426ed117132e70b18f8721bd31516143c11"
+  },
+  "new_evaluation_samples": 0,
+  "physical_simulation_run": false,
+  "scope": "Focused v17 integration branches using one saved observation and explicit support, geometry, hold and search stubs. Independent helper static tests and closed-loop gates remain necessary."
+}
