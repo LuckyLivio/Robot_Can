@@ -1,0 +1,5048 @@
+{
+  "source_sha256": {
+    "reproduction/improvement_v18_20261019_01/inspect_smoke_route_findings.py": "1d2ac7364e19031e9c4db8e33cc75b56ee0be1b85b4ed0b554d7418c10efc85f",
+    "reproduction/improvement_v18_20261019_01/analysis/smoke_a_route_diagnosis.json": "635ca5ec691561ea8f68f1f2360c106ec401044aa48fd25d1874c7c3fb44aaf1",
+    "reproduction/improvement_v18_20261019_01/smoke_a/handoff_regression_6000005/trace.jsonl": "73abbbc3fd740ca02cccc8a387821fd5aeb03905836cab2074db21a08f466b3f",
+    "reproduction/improvement_v18_20261019_01/smoke_a/v18_regression_6000005/trace.jsonl": "876652ebd22f9ca6fa108424ea6a31f83c39c586223caa3c796a4ceb9efa5b3b",
+    "reproduction/improvement_v18_20261019_01/smoke_a/handoff_clearance_profile_6000005/trace.jsonl": "37af74ecb39cd262919d43973ce8c24eb79eb3127c16643cd7097dc2a9e5c12c",
+    "reproduction/improvement_v18_20261019_01/smoke_a/v18_clearance_profile_6000005/trace.jsonl": "3a6a4a5f872d4369c53d682d5e15025b32ba1bdf11144814fd47590a540c68c7"
+  },
+  "new_physical_episodes": 0,
+  "new_controller_replays": 0,
+  "new_ik_searches": 0,
+  "regression_12000036": [
+    {
+      "job": "v17_known_full_s23_clean_demo_12000036",
+      "success": true,
+      "steps": 400,
+      "carry_search_start": 276,
+      "search_finish": 284,
+      "planning_work": 125,
+      "planning_calls": 9,
+      "selected_candidate": "outward_15_inset",
+      "phase_transition_events": [
+        {
+          "step": 276,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.029472244903445244,
+            0.028496887534856796,
+            1.067584753036499
+          ]
+        },
+        {
+          "step": 362,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.1719951629638672,
+            0.3882003128528595,
+            1.0806167125701904
+          ]
+        },
+        {
+          "step": 390,
+          "from": "PLACE",
+          "to": "RELEASE",
+          "reason": "at_release_height",
+          "attempt": 1,
+          "object_position": [
+            0.16983042657375336,
+            0.38350099325180054,
+            0.8996330499649048
+          ]
+        }
+      ],
+      "first_submitted_place_step": 363,
+      "first_submitted_release_step": 391,
+      "segment_steps": [
+        {
+          "segment": "clearance",
+          "first_step": 285,
+          "last_step": 289,
+          "observed_steps": 5,
+          "minimum_actual_joint_margin_rad": 0.8291736746838652,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "reorient",
+          "first_step": 290,
+          "last_step": 306,
+          "observed_steps": 17,
+          "minimum_actual_joint_margin_rad": 0.6513464992451872,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "transport",
+          "first_step": 307,
+          "last_step": 361,
+          "observed_steps": 55,
+          "minimum_actual_joint_margin_rad": 0.6354351668278349,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "placement",
+          "first_step": 363,
+          "last_step": 390,
+          "observed_steps": 28,
+          "minimum_actual_joint_margin_rad": 0.4625928854482546,
+          "hold_false_steps": []
+        }
+      ],
+      "first_execution_guard": null,
+      "original_short_candidate_reasons": [
+        [
+          "current_exact",
+          "local_ik_unconverged"
+        ],
+        [
+          "outward_15_inset",
+          "sequential_ik_and_whole_route_geometry_validated"
+        ]
+      ]
+    },
+    {
+      "job": "handoff_known_full_s23_clean_demo_12000036",
+      "success": false,
+      "steps": 400,
+      "carry_search_start": 283,
+      "search_finish": 291,
+      "planning_work": 125,
+      "planning_calls": 9,
+      "selected_candidate": "outward_15_inset",
+      "phase_transition_events": [
+        {
+          "step": 283,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.029773233458399773,
+            0.02886447124183178,
+            1.0675889253616333
+          ]
+        },
+        {
+          "step": 369,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.17252658307552338,
+            0.38872790336608887,
+            1.0787376165390015
+          ]
+        },
+        {
+          "step": 397,
+          "from": "PLACE",
+          "to": "RELEASE",
+          "reason": "at_release_height",
+          "attempt": 1,
+          "object_position": [
+            0.17067734897136688,
+            0.3838597238063812,
+            0.8976770043373108
+          ]
+        }
+      ],
+      "first_submitted_place_step": 370,
+      "first_submitted_release_step": 398,
+      "segment_steps": [
+        {
+          "segment": "clearance",
+          "first_step": 292,
+          "last_step": 296,
+          "observed_steps": 5,
+          "minimum_actual_joint_margin_rad": 0.8344156377586285,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "reorient",
+          "first_step": 297,
+          "last_step": 313,
+          "observed_steps": 17,
+          "minimum_actual_joint_margin_rad": 0.6557625455477729,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "transport",
+          "first_step": 314,
+          "last_step": 368,
+          "observed_steps": 55,
+          "minimum_actual_joint_margin_rad": 0.6397321387734598,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "placement",
+          "first_step": 370,
+          "last_step": 397,
+          "observed_steps": 28,
+          "minimum_actual_joint_margin_rad": 0.4719720242164147,
+          "hold_false_steps": []
+        }
+      ],
+      "first_execution_guard": null,
+      "original_short_candidate_reasons": [
+        [
+          "current_exact",
+          "local_ik_unconverged"
+        ],
+        [
+          "outward_15_inset",
+          "sequential_ik_and_whole_route_geometry_validated"
+        ]
+      ]
+    },
+    {
+      "job": "short_known_full_s23_clean_demo_12000036",
+      "success": false,
+      "steps": 400,
+      "carry_search_start": 276,
+      "search_finish": 288,
+      "planning_work": 198,
+      "planning_calls": 13,
+      "selected_candidate": "outward_15_inset",
+      "phase_transition_events": [
+        {
+          "step": 276,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.029472244903445244,
+            0.028496887534856796,
+            1.067584753036499
+          ]
+        },
+        {
+          "step": 366,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.17203162610530853,
+            0.38822686672210693,
+            1.080434799194336
+          ]
+        },
+        {
+          "step": 394,
+          "from": "PLACE",
+          "to": "RELEASE",
+          "reason": "at_release_height",
+          "attempt": 1,
+          "object_position": [
+            0.16989080607891083,
+            0.3835401237010956,
+            0.8993898034095764
+          ]
+        }
+      ],
+      "first_submitted_place_step": 367,
+      "first_submitted_release_step": 395,
+      "segment_steps": [
+        {
+          "segment": "clearance",
+          "first_step": 289,
+          "last_step": 293,
+          "observed_steps": 5,
+          "minimum_actual_joint_margin_rad": 0.8291787011553353,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "reorient",
+          "first_step": 294,
+          "last_step": 310,
+          "observed_steps": 17,
+          "minimum_actual_joint_margin_rad": 0.6513719389404105,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "transport",
+          "first_step": 311,
+          "last_step": 365,
+          "observed_steps": 55,
+          "minimum_actual_joint_margin_rad": 0.6354574856419744,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "placement",
+          "first_step": 367,
+          "last_step": 394,
+          "observed_steps": 28,
+          "minimum_actual_joint_margin_rad": 0.46259302929352875,
+          "hold_false_steps": []
+        }
+      ],
+      "first_execution_guard": null,
+      "original_short_candidate_reasons": [
+        [
+          "current_exact",
+          "local_ik_unconverged"
+        ],
+        [
+          "current_rotation_inset",
+          "local_ik_unconverged"
+        ],
+        [
+          "outward_15_inset",
+          "sequential_ik_and_whole_route_geometry_validated"
+        ]
+      ]
+    },
+    {
+      "job": "v18_known_full_s23_clean_demo_12000036",
+      "success": false,
+      "steps": 400,
+      "carry_search_start": 283,
+      "search_finish": 295,
+      "planning_work": 198,
+      "planning_calls": 13,
+      "selected_candidate": "outward_15_inset",
+      "phase_transition_events": [
+        {
+          "step": 283,
+          "from": "LIFT",
+          "to": "CARRY",
+          "reason": "clearance_reached",
+          "attempt": 1,
+          "object_position": [
+            0.029773233458399773,
+            0.02886447124183178,
+            1.0675889253616333
+          ]
+        },
+        {
+          "step": 373,
+          "from": "CARRY",
+          "to": "PLACE",
+          "reason": "above_target",
+          "attempt": 1,
+          "object_position": [
+            0.17258168756961823,
+            0.3887636661529541,
+            1.078488826751709
+          ]
+        }
+      ],
+      "first_submitted_place_step": 374,
+      "first_submitted_release_step": null,
+      "segment_steps": [
+        {
+          "segment": "clearance",
+          "first_step": 296,
+          "last_step": 300,
+          "observed_steps": 5,
+          "minimum_actual_joint_margin_rad": 0.834421620129465,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "reorient",
+          "first_step": 301,
+          "last_step": 317,
+          "observed_steps": 17,
+          "minimum_actual_joint_margin_rad": 0.6557857496218436,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "transport",
+          "first_step": 318,
+          "last_step": 372,
+          "observed_steps": 55,
+          "minimum_actual_joint_margin_rad": 0.6397534203759894,
+          "hold_false_steps": []
+        },
+        {
+          "segment": "placement",
+          "first_step": 374,
+          "last_step": 400,
+          "observed_steps": 27,
+          "minimum_actual_joint_margin_rad": 0.47705333145101814,
+          "hold_false_steps": []
+        }
+      ],
+      "first_execution_guard": null,
+      "original_short_candidate_reasons": [
+        [
+          "current_exact",
+          "local_ik_unconverged"
+        ],
+        [
+          "current_rotation_inset",
+          "local_ik_unconverged"
+        ],
+        [
+          "outward_15_inset",
+          "sequential_ik_and_whole_route_geometry_validated"
+        ]
+      ]
+    }
+  ],
+  "new_inset_actual_selections": [
+    {
+      "job": "short_held_wait_demo87",
+      "search_start": 165,
+      "search_finish": 173,
+      "work": 130,
+      "calls": 9,
+      "episode_success": true,
+      "episode_steps": 283,
+      "route_lifecycle": "selected_and_success_before_next_attempt",
+      "first_submitted_place_step": 243,
+      "reference_success": true,
+      "reference_steps": 300
+    },
+    {
+      "job": "v18_held_wait_demo87",
+      "search_start": 165,
+      "search_finish": 173,
+      "work": 130,
+      "calls": 9,
+      "episode_success": true,
+      "episode_steps": 283,
+      "route_lifecycle": "selected_and_success_before_next_attempt",
+      "first_submitted_place_step": 243,
+      "reference_success": true,
+      "reference_steps": 300
+    },
+    {
+      "job": "short_known_bc_k2_clean_demo_12000011",
+      "search_start": 311,
+      "search_finish": 313,
+      "work": 39,
+      "calls": 3,
+      "episode_success": false,
+      "episode_steps": 400,
+      "route_lifecycle": "selected_and_executed_without_success",
+      "first_submitted_place_step": 375,
+      "reference_success": false,
+      "reference_steps": 400
+    },
+    {
+      "job": "v18_known_bc_k2_clean_demo_12000011",
+      "search_start": 320,
+      "search_finish": 327,
+      "work": 116,
+      "calls": 8,
+      "episode_success": false,
+      "episode_steps": 400,
+      "route_lifecycle": "selected_and_executed_without_success",
+      "first_submitted_place_step": 388,
+      "reference_success": false,
+      "reference_steps": 400
+    }
+  ],
+  "6000005_tracking": [
+    {
+      "job": "handoff_regression_6000005",
+      "same_start_profile_duplicate": true,
+      "first_changed_command_step": 300,
+      "first_changed_observation_step": 303,
+      "carry_start": 358,
+      "v17_carry_start": 373,
+      "search_start": 358,
+      "search_finish": 359,
+      "work": 25,
+      "calls": 2,
+      "selected": "current_exact",
+      "selected_schedule": {
+        "minimum_command_schedule": 35,
+        "estimated_steps": 59,
+        "remaining_steps_observed": 41,
+        "nominal_estimate_fits": false,
+        "minimum_command_schedule_fits": true,
+        "stage_schedules": [
+          {
+            "stage": "direct_transport",
+            "distance_m": 0.138534406338218,
+            "angle_rad": 0.0540880072003835,
+            "minimum_command_steps": 11,
+            "estimated_steps": 21
+          }
+        ],
+        "placement_minimum_steps": 8,
+        "placement_estimated_steps": 22,
+        "release_reserved_steps": 16,
+        "planning_steps_already_spent": 2,
+        "interpretation": "Nominal commanded-motion and phase-wait budget; not a physical lower bound or guarantee."
+      },
+      "execution": {
+        "first_step": 360,
+        "last_step": 400,
+        "observed_steps": 41,
+        "minimum_actual_joint_margin_rad": 0.4165143642439495,
+        "minimum_margin_step": 360,
+        "actual_margin_below_004_steps": [],
+        "stable_hold_steps": 41,
+        "hold_false_steps": [],
+        "object_start_m": [
+          0.3049793541431427,
+          0.3171292543411255,
+          1.0854166746139526
+        ],
+        "object_last_m": [
+          0.1951393038034439,
+          0.4008955657482147,
+          1.0723183155059814
+        ],
+        "eef_displacement_m": 0.1399397747105036,
+        "object_displacement_m": 0.13875589571869867,
+        "remaining_budget_at_last_observation": 0,
+        "maximum_held_relative_position_change_m": 0.000573235673194402,
+        "maximum_held_relative_orientation_change_rad": 0.031774922548663855
+      },
+      "strict_ready_runs": [
+        [
+          389,
+          390,
+          391
+        ],
+        [
+          400
+        ]
+      ],
+      "maximum_consecutive_ready": 3,
+      "final_derived_consecutive_ready": 1,
+      "derived_count_note": "Computed from saved position <9mm, angle <.08rad, stable_hold. No private controller replay.",
+      "remaining_episode_steps": 0,
+      "placement_started": false,
+      "release_started": false,
+      "original_reserved_placement_steps": 8,
+      "original_reserved_release_steps": 16,
+      "task_success": false,
+      "actual_direct_transport_rows": [
+        {
+          "step": 360,
+          "position_error_m": 0.1378869716199767,
+          "orientation_error_rad": 0.06156720387667453,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4646322159897257,
+            1.31730543035262,
+            0.04582861483196047,
+            -0.48631436424394947,
+            -0.05561059949797905,
+            2.352306920563573,
+            0.8027766137497867
+          ],
+          "submitted_action": [
+            -0.18398413062095642,
+            0.14315351843833923,
+            -0.010067552328109741,
+            0.02932540699839592,
+            -0.055475540459156036,
+            -0.00100265396758914,
+            1.0
+          ]
+        },
+        {
+          "step": 361,
+          "position_error_m": 0.1380906005147194,
+          "orientation_error_rad": 0.06226354380261422,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.46352778366248093,
+            1.308634215358355,
+            0.04857962900902473,
+            -0.4930783125678796,
+            -0.05877214143884543,
+            2.3496156818285523,
+            0.8034169291936217
+          ],
+          "submitted_action": [
+            -0.36735373735427856,
+            0.2860548496246338,
+            -0.030048543587327003,
+            0.029660692438483238,
+            -0.05521189421415329,
+            -0.0009308046428486705,
+            1.0
+          ]
+        },
+        {
+          "step": 362,
+          "position_error_m": 0.13839972195629818,
+          "orientation_error_rad": 0.061750401762988634,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4621134783575795,
+            1.3025300674974067,
+            0.05192654708296634,
+            -0.5009605830860754,
+            -0.062467059681326625,
+            2.352061541501388,
+            0.8040491095196038
+          ],
+          "submitted_action": [
+            -0.5499285459518433,
+            0.4286472499370575,
+            -0.057946283370256424,
+            0.029239684343338013,
+            -0.054029110819101334,
+            -0.001058564754202962,
+            1.0
+          ]
+        },
+        {
+          "step": 363,
+          "position_error_m": 0.13752329083606343,
+          "orientation_error_rad": 0.06306708358923827,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4615594976914261,
+            1.2961265460797569,
+            0.05685449098263282,
+            -0.5092385671332255,
+            -0.06694564551913731,
+            2.352003693227488,
+            0.8055313145284725
+          ],
+          "submitted_action": [
+            -0.5504520535469055,
+            0.42771589756011963,
+            -0.0637233704328537,
+            0.028969241306185722,
+            -0.05687043070793152,
+            -0.002408175030723214,
+            1.0
+          ]
+        },
+        {
+          "step": 364,
+          "position_error_m": 0.1349419627916385,
+          "orientation_error_rad": 0.0665296348280255,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4626372270853,
+            1.287585743153052,
+            0.06340369966639273,
+            -0.5169956685717505,
+            -0.07300441342866602,
+            2.347576021017907,
+            0.8090926061190153
+          ],
+          "submitted_action": [
+            -0.5517930388450623,
+            0.4237927794456482,
+            -0.07696820795536041,
+            0.028853798285126686,
+            -0.06212778761982918,
+            -0.004475438501685858,
+            1.0
+          ]
+        },
+        {
+          "step": 365,
+          "position_error_m": 0.12992711119305403,
+          "orientation_error_rad": 0.07569295780999587,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4662059152704079,
+            1.2755449900627658,
+            0.07174452188567892,
+            -0.5250209432342225,
+            -0.08108624071683257,
+            2.3334235758042787,
+            0.8157373156599752
+          ],
+          "submitted_action": [
+            -0.5532903671264648,
+            0.4170040488243103,
+            -0.09988221526145935,
+            0.03144630417227745,
+            -0.07454635947942734,
+            -0.00741354376077652,
+            1.0
+          ]
+        },
+        {
+          "step": 366,
+          "position_error_m": 0.1239895899454936,
+          "orientation_error_rad": 0.08541414479213755,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4709093389342192,
+            1.2635759723245905,
+            0.07976689151245288,
+            -0.5339433786993559,
+            -0.09195303473557515,
+            2.3209745999862537,
+            0.8256800684618075
+          ],
+          "submitted_action": [
+            -0.5549957156181335,
+            0.40752851963043213,
+            -0.12609614431858063,
+            0.03510958328843117,
+            -0.08378671854734421,
+            -0.008652020245790482,
+            1.0
+          ]
+        },
+        {
+          "step": 367,
+          "position_error_m": 0.11743800251628325,
+          "orientation_error_rad": 0.09468177179945023,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4766436198312984,
+            1.2517094631096803,
+            0.08792106650609849,
+            -0.5442604881388122,
+            -0.10438266765342705,
+            2.309566096948775,
+            0.8378434114019769
+          ],
+          "submitted_action": [
+            -0.5573956966400146,
+            0.3957839012145996,
+            -0.1505463719367981,
+            0.03885446488857269,
+            -0.09192615002393723,
+            -0.00940975546836853,
+            1.0
+          ]
+        },
+        {
+          "step": 368,
+          "position_error_m": 0.11097297259896653,
+          "orientation_error_rad": 0.10340020089367664,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4828286557203174,
+            1.2384765012923038,
+            0.09549556352583852,
+            -0.5549501063336844,
+            -0.11842752146509329,
+            2.297823085050984,
+            0.8520119115079511
+          ],
+          "submitted_action": [
+            -0.5580071210861206,
+            0.3808949887752533,
+            -0.18315601348876953,
+            0.043684445321559906,
+            -0.09905695170164108,
+            -0.00901761744171381,
+            1.0
+          ]
+        },
+        {
+          "step": 369,
+          "position_error_m": 0.10439065112623228,
+          "orientation_error_rad": 0.11307363026956856,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4898970944071015,
+            1.223351027850289,
+            0.10341706914517217,
+            -0.5668010730983079,
+            -0.13313399899926862,
+            2.2836475699934935,
+            0.8675655984349352
+          ],
+          "submitted_action": [
+            -0.5552462339401245,
+            0.3620617389678955,
+            -0.22497309744358063,
+            0.04933934286236763,
+            -0.10781767964363098,
+            -0.008684194646775723,
+            1.0
+          ]
+        },
+        {
+          "step": 370,
+          "position_error_m": 0.09823652849702964,
+          "orientation_error_rad": 0.12038406537233705,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4970959960338614,
+            1.208577854376478,
+            0.11057144746459428,
+            -0.5799077083615221,
+            -0.14896799889010104,
+            2.274051828435423,
+            0.8845247686946981
+          ],
+          "submitted_action": [
+            -0.5498983860015869,
+            0.33788827061653137,
+            -0.27100417017936707,
+            0.05413488298654556,
+            -0.11219605058431625,
+            -0.007405442651361227,
+            1.0
+          ]
+        },
+        {
+          "step": 371,
+          "position_error_m": 0.09257015360725777,
+          "orientation_error_rad": 0.1251922543801173,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5042587390452439,
+            1.1943652357723398,
+            0.11741245187030759,
+            -0.5947236643803261,
+            -0.16497830519316944,
+            2.268501978830789,
+            0.9020230725383008
+          ],
+          "submitted_action": [
+            -0.5429574847221375,
+            0.3093786835670471,
+            -0.3154076635837555,
+            0.057842548936605453,
+            -0.11415054649114609,
+            -0.005904613994061947,
+            1.0
+          ]
+        },
+        {
+          "step": 372,
+          "position_error_m": 0.08698900456794416,
+          "orientation_error_rad": 0.13042955126548225,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.511290036448299,
+            1.179882286484695,
+            0.1238974908408576,
+            -0.6118333091594377,
+            -0.18117639600855234,
+            2.2641248404702954,
+            0.9200873870932639
+          ],
+          "submitted_action": [
+            -0.5328046083450317,
+            0.27772247791290283,
+            -0.35915103554725647,
+            0.06281185895204544,
+            -0.11784408986568451,
+            -0.004246949218213558,
+            1.0
+          ]
+        },
+        {
+          "step": 373,
+          "position_error_m": 0.0818925827761419,
+          "orientation_error_rad": 0.1344699773013692,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5176370054131864,
+            1.1658652878123044,
+            0.129670980458525,
+            -0.6311377344364599,
+            -0.1974242765971235,
+            2.2638433175155637,
+            0.9382846442750559
+          ],
+          "submitted_action": [
+            -0.5209073424339294,
+            0.2446385771036148,
+            -0.3985053300857544,
+            0.06738269329071045,
+            -0.11919964104890823,
+            -0.002012126613408327,
+            1.0
+          ]
+        },
+        {
+          "step": 374,
+          "position_error_m": 0.07715664839275366,
+          "orientation_error_rad": 0.1372694226233587,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5233695843973958,
+            1.1517380087246145,
+            0.1352266548853094,
+            -0.6525905962740681,
+            -0.2132959631576038,
+            2.2665106421453443,
+            0.9563222405873136
+          ],
+          "submitted_action": [
+            -0.5071104168891907,
+            0.20920336246490479,
+            -0.43482518196105957,
+            0.07089065760374069,
+            -0.11955460160970688,
+            -5.30107608938124e-05,
+            1.0
+          ]
+        },
+        {
+          "step": 375,
+          "position_error_m": 0.07295679302141334,
+          "orientation_error_rad": 0.13717832598327218,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.528286757563923,
+            1.1383114537294985,
+            0.14029266490045195,
+            -0.6757744560440428,
+            -0.22902755223856305,
+            2.2748652530252196,
+            0.9742365713482531
+          ],
+          "submitted_action": [
+            -0.49251654744148254,
+            0.1704372614622116,
+            -0.4673088788986206,
+            0.07229433208703995,
+            -0.11655081063508987,
+            0.0017403600504621863,
+            1.0
+          ]
+        },
+        {
+          "step": 376,
+          "position_error_m": 0.06903007289724535,
+          "orientation_error_rad": 0.1356332844572586,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5325234605519438,
+            1.1245048087264233,
+            0.14530494245328468,
+            -0.7010526217374624,
+            -0.24435154587520314,
+            2.2857635498761297,
+            0.9919685323784598
+          ],
+          "submitted_action": [
+            -0.4697485864162445,
+            0.12739714980125427,
+            -0.48951131105422974,
+            0.07288908958435059,
+            -0.11327436566352844,
+            0.0031616478227078915,
+            1.0
+          ]
+        },
+        {
+          "step": 377,
+          "position_error_m": 0.06492436228626239,
+          "orientation_error_rad": 0.13401047843580724,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5361225889658651,
+            1.1106131284399665,
+            0.1501891309442152,
+            -0.7290695282825882,
+            -0.2595490432336718,
+            2.2993697903146715,
+            1.0098259054507028
+          ],
+          "submitted_action": [
+            -0.4250684976577759,
+            0.07956620305776596,
+            -0.4842553734779358,
+            0.07358872145414352,
+            -0.11077691614627838,
+            0.0042360518127679825,
+            1.0
+          ]
+        },
+        {
+          "step": 378,
+          "position_error_m": 0.060695836384721036,
+          "orientation_error_rad": 0.13270113063589659,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5391888635012788,
+            1.0953150798255098,
+            0.15519314480966467,
+            -0.7600340651954942,
+            -0.27469394026131616,
+            2.3139047202919625,
+            1.0280435920763162
+          ],
+          "submitted_action": [
+            -0.37767505645751953,
+            0.03418978303670883,
+            -0.473910391330719,
+            0.07430268824100494,
+            -0.10889934003353119,
+            0.005101120565086603,
+            1.0
+          ]
+        },
+        {
+          "step": 379,
+          "position_error_m": 0.05666783868324046,
+          "orientation_error_rad": 0.13031424137371564,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5413459315637098,
+            1.0797752137900412,
+            0.15965173439135655,
+            -0.793636426101026,
+            -0.290133270038672,
+            2.332141881226682,
+            1.0466449059492158
+          ],
+          "submitted_action": [
+            -0.25824815034866333,
+            -0.1294509619474411,
+            -0.509141743183136,
+            0.07421449571847916,
+            -0.10521745681762695,
+            0.006067951209843159,
+            1.0
+          ]
+        },
+        {
+          "step": 380,
+          "position_error_m": 0.052588468106230774,
+          "orientation_error_rad": 0.12724613250133013,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.54204910411135,
+            1.0636132765054314,
+            0.16313263797851776,
+            -0.8300261433538669,
+            -0.30553896335313147,
+            2.3529622944688824,
+            1.0651274002253484
+          ],
+          "submitted_action": [
+            -0.267002671957016,
+            -0.1297009289264679,
+            -0.5187923312187195,
+            0.07436367869377136,
+            -0.1007247269153595,
+            0.007678982801735401,
+            1.0
+          ]
+        },
+        {
+          "step": 381,
+          "position_error_m": 0.04848331545603523,
+          "orientation_error_rad": 0.12490853805444922,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5416875874391841,
+            1.0455406978753543,
+            0.16655008684935196,
+            -0.8700170598054682,
+            -0.3204598281398234,
+            2.3746422923212758,
+            1.0833494495851905
+          ],
+          "submitted_action": [
+            -0.21535590291023254,
+            -0.13009102642536163,
+            -0.4925992786884308,
+            0.07475102692842484,
+            -0.09795349836349487,
+            0.008793257176876068,
+            1.0
+          ]
+        },
+        {
+          "step": 382,
+          "position_error_m": 0.04411220609738966,
+          "orientation_error_rad": 0.1185097758961999,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5396804955153096,
+            1.0296425179409734,
+            0.16824722197386774,
+            -0.9110614414371531,
+            -0.335636372441973,
+            2.404811464693099,
+            1.1013295577287974
+          ],
+          "submitted_action": [
+            -0.20804879069328308,
+            -0.11587445437908173,
+            -0.43237102031707764,
+            0.0714288204908371,
+            -0.08920793980360031,
+            0.009876269847154617,
+            1.0
+          ]
+        },
+        {
+          "step": 383,
+          "position_error_m": 0.0391789037523106,
+          "orientation_error_rad": 0.10980171999525312,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5364185979821497,
+            1.0141138747366942,
+            0.16949707609125098,
+            -0.953590780352833,
+            -0.3500776404774852,
+            2.4384903538161837,
+            1.1184392057692718
+          ],
+          "submitted_action": [
+            -0.19555607438087463,
+            -0.09391681104898453,
+            -0.36461490392684937,
+            0.06637614965438843,
+            -0.08020114153623581,
+            0.01019286923110485,
+            1.0
+          ]
+        },
+        {
+          "step": 384,
+          "position_error_m": 0.034208324204976576,
+          "orientation_error_rad": 0.10044715660288238,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5322971907969837,
+            0.9979519883815896,
+            0.17046880129015152,
+            -0.9976224003187047,
+            -0.36426080772920894,
+            2.474043009784342,
+            1.1352336730582198
+          ],
+          "submitted_action": [
+            -0.15899907052516937,
+            -0.07703197002410889,
+            -0.32866519689559937,
+            0.0608430840075016,
+            -0.07208938151597977,
+            0.009863982908427715,
+            1.0
+          ]
+        },
+        {
+          "step": 385,
+          "position_error_m": 0.02904076828860248,
+          "orientation_error_rad": 0.08933314691269315,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.527305843137758,
+            0.9823629934808293,
+            0.1707128587203112,
+            -1.04190651341866,
+            -0.3783538580746666,
+            2.51248750153043,
+            1.1516504215331793
+          ],
+          "submitted_action": [
+            -0.13909895718097687,
+            -0.04592079669237137,
+            -0.27938568592071533,
+            0.05364369973540306,
+            -0.062222857028245926,
+            0.009260672144591808,
+            1.0
+          ]
+        },
+        {
+          "step": 386,
+          "position_error_m": 0.023379981290979304,
+          "orientation_error_rad": 0.07839193132490754,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5219531435017903,
+            0.9666097731014167,
+            0.1709805758728724,
+            -1.0871795520952572,
+            -0.39228265968647386,
+            2.5512533870475425,
+            1.1678729614844792
+          ],
+          "submitted_action": [
+            -0.0953984335064888,
+            -0.01922493614256382,
+            -0.22521893680095673,
+            0.046423960477113724,
+            -0.05425352603197098,
+            0.007782937493175268,
+            1.0
+          ]
+        },
+        {
+          "step": 387,
+          "position_error_m": 0.017604664715217145,
+          "orientation_error_rad": 0.06532075487479763,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5164525976584451,
+            0.953094800819838,
+            0.17052377101012106,
+            -1.1302328302648625,
+            -0.40674247515049483,
+            2.593041465483773,
+            1.1842980996017571
+          ],
+          "submitted_action": [
+            -0.06732524186372757,
+            0.0026720697060227394,
+            -0.17243489623069763,
+            0.036677658557891846,
+            -0.04388789087533951,
+            0.00570692541077733,
+            1.0
+          ]
+        },
+        {
+          "step": 388,
+          "position_error_m": 0.011140086499482924,
+          "orientation_error_rad": 0.05021353779252136,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5113715565285961,
+            0.9439040045826435,
+            0.1696651861307359,
+            -1.1691230749788757,
+            -0.4217053818757414,
+            2.6368353587970708,
+            1.2008415461027484
+          ],
+          "submitted_action": [
+            -0.04524024575948715,
+            0.011688421480357647,
+            -0.0875851958990097,
+            0.024832580238580704,
+            -0.03276953101158142,
+            0.0025328216142952442,
+            1.0
+          ]
+        },
+        {
+          "step": 389,
+          "position_error_m": 0.0052411220933507524,
+          "orientation_error_rad": 0.035263283686713755,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 1,
+          "joint_positions": [
+            0.5066415520407171,
+            0.9357073205956834,
+            0.16801778991774224,
+            -1.204320214651357,
+            -0.4371281637234105,
+            2.6780179605950614,
+            1.2175867094949993
+          ],
+          "submitted_action": [
+            -0.02495897375047207,
+            0.05772737041115761,
+            -0.046360600739717484,
+            0.014252761378884315,
+            -0.022235896438360214,
+            9.475511615164578e-05,
+            1.0
+          ]
+        },
+        {
+          "step": 390,
+          "position_error_m": 0.002562995221047845,
+          "orientation_error_rad": 0.020758917669526984,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 2,
+          "joint_positions": [
+            0.5024328426297574,
+            0.9296724713477617,
+            0.16582572791453382,
+            -1.23445776616205,
+            -0.452352189041313,
+            2.7164864295545565,
+            1.233797732037736
+          ],
+          "submitted_action": [
+            0.06703978031873703,
+            0.08183059096336365,
+            -0.021229101344943047,
+            0.0038777347654104233,
+            -0.011807110160589218,
+            -0.002130183856934309,
+            1.0
+          ]
+        },
+        {
+          "step": 391,
+          "position_error_m": 0.006354936729826244,
+          "orientation_error_rad": 0.00846689718148469,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 3,
+          "joint_positions": [
+            0.4990639286541788,
+            0.9273348730524161,
+            0.1630526798997619,
+            -1.2578422701421534,
+            -0.46717882557635926,
+            2.751827212888033,
+            1.2492647574306828
+          ],
+          "submitted_action": [
+            0.07047341763973236,
+            0.09563156217336655,
+            0.1984536200761795,
+            -0.006372790317982435,
+            -0.0017909854650497437,
+            -0.004413160495460033,
+            1.0
+          ]
+        },
+        {
+          "step": 392,
+          "position_error_m": 0.010511933073292243,
+          "orientation_error_rad": 0.011241020499497437,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4968057630655928,
+            0.9273259250005553,
+            0.16037239210981147,
+            -1.274878070121486,
+            -0.48121063735087,
+            2.7821144776217617,
+            1.2637861913440742
+          ],
+          "submitted_action": [
+            0.07866284251213074,
+            0.09638674557209015,
+            0.24187827110290527,
+            -0.015592649579048157,
+            0.007159979082643986,
+            -0.006619803141802549,
+            1.0
+          ]
+        },
+        {
+          "step": 393,
+          "position_error_m": 0.014055402494742214,
+          "orientation_error_rad": 0.021201492520709214,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49525559481398196,
+            0.9290714740508587,
+            0.1570722565883294,
+            -1.2859321034717732,
+            -0.49396057503599017,
+            2.8062531717754418,
+            1.2769167269377153
+          ],
+          "submitted_action": [
+            0.07137789577245712,
+            0.11468756943941116,
+            0.2815382778644562,
+            -0.022187218070030212,
+            0.015011860057711601,
+            -0.007284944411367178,
+            1.0
+          ]
+        },
+        {
+          "step": 394,
+          "position_error_m": 0.0164578629324119,
+          "orientation_error_rad": 0.0301034051208886,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4944348710767371,
+            0.9308989606554282,
+            0.1543950193931442,
+            -1.2925988354912268,
+            -0.504757762370097,
+            2.824108634392157,
+            1.2879979786603177
+          ],
+          "submitted_action": [
+            0.0689905434846878,
+            0.12308794260025024,
+            0.3024676442146301,
+            -0.027269816026091576,
+            0.021514248102903366,
+            -0.007739376742392778,
+            1.0
+          ]
+        },
+        {
+          "step": 395,
+          "position_error_m": 0.01729419509886793,
+          "orientation_error_rad": 0.035788133953538144,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4942816573359632,
+            0.9292695363184487,
+            0.15302191211876107,
+            -1.299131392064122,
+            -0.5137256103305009,
+            2.834199587359793,
+            1.297491844430189
+          ],
+          "submitted_action": [
+            0.10063287615776062,
+            0.1198381707072258,
+            0.29022011160850525,
+            -0.029333757236599922,
+            0.024774178862571716,
+            -0.008087703958153725,
+            1.0
+          ]
+        },
+        {
+          "step": 396,
+          "position_error_m": 0.01658572211489427,
+          "orientation_error_rad": 0.040401878040899765,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49474919111249843,
+            0.9277481642506821,
+            0.15244938497271426,
+            -1.3015800062392069,
+            -0.5208694866909387,
+            2.839698786054249,
+            1.305361317586374
+          ],
+          "submitted_action": [
+            0.11136793345212936,
+            0.10772477090358734,
+            0.26805245876312256,
+            -0.031597547233104706,
+            0.028377877548336983,
+            -0.007900134660303593,
+            1.0
+          ]
+        },
+        {
+          "step": 397,
+          "position_error_m": 0.014752331715927087,
+          "orientation_error_rad": 0.04413150089411365,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49550019272731116,
+            0.9269171583974403,
+            0.15244516259260854,
+            -1.299642194008423,
+            -0.5258892096523431,
+            2.8402803109350208,
+            1.3109068397980903
+          ],
+          "submitted_action": [
+            0.0952296257019043,
+            0.09152880311012268,
+            0.23753246665000916,
+            -0.03299792855978012,
+            0.03189091011881828,
+            -0.006920273881405592,
+            1.0
+          ]
+        },
+        {
+          "step": 398,
+          "position_error_m": 0.0126907451301802,
+          "orientation_error_rad": 0.04598254391764696,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4965315108825201,
+            0.927749326501382,
+            0.15324059423405312,
+            -1.2942461007899226,
+            -0.5287504104588795,
+            2.8369881356962994,
+            1.3140000818059867
+          ],
+          "submitted_action": [
+            0.08560718595981598,
+            0.0691789984703064,
+            0.21746152639389038,
+            -0.03283378481864929,
+            0.033275555819272995,
+            -0.005923535209149122,
+            1.0
+          ]
+        },
+        {
+          "step": 399,
+          "position_error_m": 0.010953457901283332,
+          "orientation_error_rad": 0.045166121933096826,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4973141145557771,
+            0.9289239607948416,
+            0.1540813246460652,
+            -1.2875457446679524,
+            -0.5297702117970572,
+            2.8299872974874534,
+            1.3148771900723724
+          ],
+          "submitted_action": [
+            0.07083120197057724,
+            0.06967557221651077,
+            0.21431513130664825,
+            -0.030138352885842323,
+            0.032796818763017654,
+            -0.003990975208580494,
+            1.0
+          ]
+        },
+        {
+          "step": 400,
+          "position_error_m": 0.008898854251300771,
+          "orientation_error_rad": 0.041650337018988765,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 1,
+          "joint_positions": [
+            0.4976303830097056,
+            0.9267838880725797,
+            0.15596757569703107,
+            -1.2837290429553345,
+            -0.5293344181807803,
+            2.8196396067080793,
+            1.3141066312688452
+          ],
+          "submitted_action": [
+            0.08161310851573944,
+            0.07597612589597702,
+            0.17497657239437103,
+            -0.025639671832323074,
+            0.03009539470076561,
+            -0.0020938203670084476,
+            1.0
+          ]
+        }
+      ],
+      "interpretation": "Existing current_exact was validated after upstream earlier CARRY. Actual transport never maintained five strict ready frames; neither PLACE nor RELEASE began. Static selection is not execution success."
+    },
+    {
+      "job": "v18_regression_6000005",
+      "same_start_profile_duplicate": true,
+      "first_changed_command_step": 300,
+      "first_changed_observation_step": 303,
+      "carry_start": 358,
+      "v17_carry_start": 373,
+      "search_start": 358,
+      "search_finish": 359,
+      "work": 25,
+      "calls": 2,
+      "selected": "current_exact",
+      "selected_schedule": {
+        "minimum_command_schedule": 35,
+        "estimated_steps": 59,
+        "remaining_steps_observed": 41,
+        "nominal_estimate_fits": false,
+        "minimum_command_schedule_fits": true,
+        "stage_schedules": [
+          {
+            "stage": "direct_transport",
+            "distance_m": 0.138534406338218,
+            "angle_rad": 0.0540880072003835,
+            "minimum_command_steps": 11,
+            "estimated_steps": 21
+          }
+        ],
+        "placement_minimum_steps": 8,
+        "placement_estimated_steps": 22,
+        "release_reserved_steps": 16,
+        "planning_steps_already_spent": 2,
+        "interpretation": "Nominal commanded-motion and phase-wait budget; not a physical lower bound or guarantee."
+      },
+      "execution": {
+        "first_step": 360,
+        "last_step": 400,
+        "observed_steps": 41,
+        "minimum_actual_joint_margin_rad": 0.4165143642439495,
+        "minimum_margin_step": 360,
+        "actual_margin_below_004_steps": [],
+        "stable_hold_steps": 41,
+        "hold_false_steps": [],
+        "object_start_m": [
+          0.3049793541431427,
+          0.3171292543411255,
+          1.0854166746139526
+        ],
+        "object_last_m": [
+          0.1951393038034439,
+          0.4008955657482147,
+          1.0723183155059814
+        ],
+        "eef_displacement_m": 0.1399397747105036,
+        "object_displacement_m": 0.13875589571869867,
+        "remaining_budget_at_last_observation": 0,
+        "maximum_held_relative_position_change_m": 0.000573235673194402,
+        "maximum_held_relative_orientation_change_rad": 0.031774922548663855
+      },
+      "strict_ready_runs": [
+        [
+          389,
+          390,
+          391
+        ],
+        [
+          400
+        ]
+      ],
+      "maximum_consecutive_ready": 3,
+      "final_derived_consecutive_ready": 1,
+      "derived_count_note": "Computed from saved position <9mm, angle <.08rad, stable_hold. No private controller replay.",
+      "remaining_episode_steps": 0,
+      "placement_started": false,
+      "release_started": false,
+      "original_reserved_placement_steps": 8,
+      "original_reserved_release_steps": 16,
+      "task_success": false,
+      "actual_direct_transport_rows": [
+        {
+          "step": 360,
+          "position_error_m": 0.1378869716199767,
+          "orientation_error_rad": 0.06156720387667453,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4646322159897257,
+            1.31730543035262,
+            0.04582861483196047,
+            -0.48631436424394947,
+            -0.05561059949797905,
+            2.352306920563573,
+            0.8027766137497867
+          ],
+          "submitted_action": [
+            -0.18398413062095642,
+            0.14315351843833923,
+            -0.010067552328109741,
+            0.02932540699839592,
+            -0.055475540459156036,
+            -0.00100265396758914,
+            1.0
+          ]
+        },
+        {
+          "step": 361,
+          "position_error_m": 0.1380906005147194,
+          "orientation_error_rad": 0.06226354380261422,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.46352778366248093,
+            1.308634215358355,
+            0.04857962900902473,
+            -0.4930783125678796,
+            -0.05877214143884543,
+            2.3496156818285523,
+            0.8034169291936217
+          ],
+          "submitted_action": [
+            -0.36735373735427856,
+            0.2860548496246338,
+            -0.030048543587327003,
+            0.029660692438483238,
+            -0.05521189421415329,
+            -0.0009308046428486705,
+            1.0
+          ]
+        },
+        {
+          "step": 362,
+          "position_error_m": 0.13839972195629818,
+          "orientation_error_rad": 0.061750401762988634,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4621134783575795,
+            1.3025300674974067,
+            0.05192654708296634,
+            -0.5009605830860754,
+            -0.062467059681326625,
+            2.352061541501388,
+            0.8040491095196038
+          ],
+          "submitted_action": [
+            -0.5499285459518433,
+            0.4286472499370575,
+            -0.057946283370256424,
+            0.029239684343338013,
+            -0.054029110819101334,
+            -0.001058564754202962,
+            1.0
+          ]
+        },
+        {
+          "step": 363,
+          "position_error_m": 0.13752329083606343,
+          "orientation_error_rad": 0.06306708358923827,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4615594976914261,
+            1.2961265460797569,
+            0.05685449098263282,
+            -0.5092385671332255,
+            -0.06694564551913731,
+            2.352003693227488,
+            0.8055313145284725
+          ],
+          "submitted_action": [
+            -0.5504520535469055,
+            0.42771589756011963,
+            -0.0637233704328537,
+            0.028969241306185722,
+            -0.05687043070793152,
+            -0.002408175030723214,
+            1.0
+          ]
+        },
+        {
+          "step": 364,
+          "position_error_m": 0.1349419627916385,
+          "orientation_error_rad": 0.0665296348280255,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4626372270853,
+            1.287585743153052,
+            0.06340369966639273,
+            -0.5169956685717505,
+            -0.07300441342866602,
+            2.347576021017907,
+            0.8090926061190153
+          ],
+          "submitted_action": [
+            -0.5517930388450623,
+            0.4237927794456482,
+            -0.07696820795536041,
+            0.028853798285126686,
+            -0.06212778761982918,
+            -0.004475438501685858,
+            1.0
+          ]
+        },
+        {
+          "step": 365,
+          "position_error_m": 0.12992711119305403,
+          "orientation_error_rad": 0.07569295780999587,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4662059152704079,
+            1.2755449900627658,
+            0.07174452188567892,
+            -0.5250209432342225,
+            -0.08108624071683257,
+            2.3334235758042787,
+            0.8157373156599752
+          ],
+          "submitted_action": [
+            -0.5532903671264648,
+            0.4170040488243103,
+            -0.09988221526145935,
+            0.03144630417227745,
+            -0.07454635947942734,
+            -0.00741354376077652,
+            1.0
+          ]
+        },
+        {
+          "step": 366,
+          "position_error_m": 0.1239895899454936,
+          "orientation_error_rad": 0.08541414479213755,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4709093389342192,
+            1.2635759723245905,
+            0.07976689151245288,
+            -0.5339433786993559,
+            -0.09195303473557515,
+            2.3209745999862537,
+            0.8256800684618075
+          ],
+          "submitted_action": [
+            -0.5549957156181335,
+            0.40752851963043213,
+            -0.12609614431858063,
+            0.03510958328843117,
+            -0.08378671854734421,
+            -0.008652020245790482,
+            1.0
+          ]
+        },
+        {
+          "step": 367,
+          "position_error_m": 0.11743800251628325,
+          "orientation_error_rad": 0.09468177179945023,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4766436198312984,
+            1.2517094631096803,
+            0.08792106650609849,
+            -0.5442604881388122,
+            -0.10438266765342705,
+            2.309566096948775,
+            0.8378434114019769
+          ],
+          "submitted_action": [
+            -0.5573956966400146,
+            0.3957839012145996,
+            -0.1505463719367981,
+            0.03885446488857269,
+            -0.09192615002393723,
+            -0.00940975546836853,
+            1.0
+          ]
+        },
+        {
+          "step": 368,
+          "position_error_m": 0.11097297259896653,
+          "orientation_error_rad": 0.10340020089367664,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4828286557203174,
+            1.2384765012923038,
+            0.09549556352583852,
+            -0.5549501063336844,
+            -0.11842752146509329,
+            2.297823085050984,
+            0.8520119115079511
+          ],
+          "submitted_action": [
+            -0.5580071210861206,
+            0.3808949887752533,
+            -0.18315601348876953,
+            0.043684445321559906,
+            -0.09905695170164108,
+            -0.00901761744171381,
+            1.0
+          ]
+        },
+        {
+          "step": 369,
+          "position_error_m": 0.10439065112623228,
+          "orientation_error_rad": 0.11307363026956856,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4898970944071015,
+            1.223351027850289,
+            0.10341706914517217,
+            -0.5668010730983079,
+            -0.13313399899926862,
+            2.2836475699934935,
+            0.8675655984349352
+          ],
+          "submitted_action": [
+            -0.5552462339401245,
+            0.3620617389678955,
+            -0.22497309744358063,
+            0.04933934286236763,
+            -0.10781767964363098,
+            -0.008684194646775723,
+            1.0
+          ]
+        },
+        {
+          "step": 370,
+          "position_error_m": 0.09823652849702964,
+          "orientation_error_rad": 0.12038406537233705,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4970959960338614,
+            1.208577854376478,
+            0.11057144746459428,
+            -0.5799077083615221,
+            -0.14896799889010104,
+            2.274051828435423,
+            0.8845247686946981
+          ],
+          "submitted_action": [
+            -0.5498983860015869,
+            0.33788827061653137,
+            -0.27100417017936707,
+            0.05413488298654556,
+            -0.11219605058431625,
+            -0.007405442651361227,
+            1.0
+          ]
+        },
+        {
+          "step": 371,
+          "position_error_m": 0.09257015360725777,
+          "orientation_error_rad": 0.1251922543801173,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5042587390452439,
+            1.1943652357723398,
+            0.11741245187030759,
+            -0.5947236643803261,
+            -0.16497830519316944,
+            2.268501978830789,
+            0.9020230725383008
+          ],
+          "submitted_action": [
+            -0.5429574847221375,
+            0.3093786835670471,
+            -0.3154076635837555,
+            0.057842548936605453,
+            -0.11415054649114609,
+            -0.005904613994061947,
+            1.0
+          ]
+        },
+        {
+          "step": 372,
+          "position_error_m": 0.08698900456794416,
+          "orientation_error_rad": 0.13042955126548225,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.511290036448299,
+            1.179882286484695,
+            0.1238974908408576,
+            -0.6118333091594377,
+            -0.18117639600855234,
+            2.2641248404702954,
+            0.9200873870932639
+          ],
+          "submitted_action": [
+            -0.5328046083450317,
+            0.27772247791290283,
+            -0.35915103554725647,
+            0.06281185895204544,
+            -0.11784408986568451,
+            -0.004246949218213558,
+            1.0
+          ]
+        },
+        {
+          "step": 373,
+          "position_error_m": 0.0818925827761419,
+          "orientation_error_rad": 0.1344699773013692,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5176370054131864,
+            1.1658652878123044,
+            0.129670980458525,
+            -0.6311377344364599,
+            -0.1974242765971235,
+            2.2638433175155637,
+            0.9382846442750559
+          ],
+          "submitted_action": [
+            -0.5209073424339294,
+            0.2446385771036148,
+            -0.3985053300857544,
+            0.06738269329071045,
+            -0.11919964104890823,
+            -0.002012126613408327,
+            1.0
+          ]
+        },
+        {
+          "step": 374,
+          "position_error_m": 0.07715664839275366,
+          "orientation_error_rad": 0.1372694226233587,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5233695843973958,
+            1.1517380087246145,
+            0.1352266548853094,
+            -0.6525905962740681,
+            -0.2132959631576038,
+            2.2665106421453443,
+            0.9563222405873136
+          ],
+          "submitted_action": [
+            -0.5071104168891907,
+            0.20920336246490479,
+            -0.43482518196105957,
+            0.07089065760374069,
+            -0.11955460160970688,
+            -5.30107608938124e-05,
+            1.0
+          ]
+        },
+        {
+          "step": 375,
+          "position_error_m": 0.07295679302141334,
+          "orientation_error_rad": 0.13717832598327218,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.528286757563923,
+            1.1383114537294985,
+            0.14029266490045195,
+            -0.6757744560440428,
+            -0.22902755223856305,
+            2.2748652530252196,
+            0.9742365713482531
+          ],
+          "submitted_action": [
+            -0.49251654744148254,
+            0.1704372614622116,
+            -0.4673088788986206,
+            0.07229433208703995,
+            -0.11655081063508987,
+            0.0017403600504621863,
+            1.0
+          ]
+        },
+        {
+          "step": 376,
+          "position_error_m": 0.06903007289724535,
+          "orientation_error_rad": 0.1356332844572586,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5325234605519438,
+            1.1245048087264233,
+            0.14530494245328468,
+            -0.7010526217374624,
+            -0.24435154587520314,
+            2.2857635498761297,
+            0.9919685323784598
+          ],
+          "submitted_action": [
+            -0.4697485864162445,
+            0.12739714980125427,
+            -0.48951131105422974,
+            0.07288908958435059,
+            -0.11327436566352844,
+            0.0031616478227078915,
+            1.0
+          ]
+        },
+        {
+          "step": 377,
+          "position_error_m": 0.06492436228626239,
+          "orientation_error_rad": 0.13401047843580724,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5361225889658651,
+            1.1106131284399665,
+            0.1501891309442152,
+            -0.7290695282825882,
+            -0.2595490432336718,
+            2.2993697903146715,
+            1.0098259054507028
+          ],
+          "submitted_action": [
+            -0.4250684976577759,
+            0.07956620305776596,
+            -0.4842553734779358,
+            0.07358872145414352,
+            -0.11077691614627838,
+            0.0042360518127679825,
+            1.0
+          ]
+        },
+        {
+          "step": 378,
+          "position_error_m": 0.060695836384721036,
+          "orientation_error_rad": 0.13270113063589659,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5391888635012788,
+            1.0953150798255098,
+            0.15519314480966467,
+            -0.7600340651954942,
+            -0.27469394026131616,
+            2.3139047202919625,
+            1.0280435920763162
+          ],
+          "submitted_action": [
+            -0.37767505645751953,
+            0.03418978303670883,
+            -0.473910391330719,
+            0.07430268824100494,
+            -0.10889934003353119,
+            0.005101120565086603,
+            1.0
+          ]
+        },
+        {
+          "step": 379,
+          "position_error_m": 0.05666783868324046,
+          "orientation_error_rad": 0.13031424137371564,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5413459315637098,
+            1.0797752137900412,
+            0.15965173439135655,
+            -0.793636426101026,
+            -0.290133270038672,
+            2.332141881226682,
+            1.0466449059492158
+          ],
+          "submitted_action": [
+            -0.25824815034866333,
+            -0.1294509619474411,
+            -0.509141743183136,
+            0.07421449571847916,
+            -0.10521745681762695,
+            0.006067951209843159,
+            1.0
+          ]
+        },
+        {
+          "step": 380,
+          "position_error_m": 0.052588468106230774,
+          "orientation_error_rad": 0.12724613250133013,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.54204910411135,
+            1.0636132765054314,
+            0.16313263797851776,
+            -0.8300261433538669,
+            -0.30553896335313147,
+            2.3529622944688824,
+            1.0651274002253484
+          ],
+          "submitted_action": [
+            -0.267002671957016,
+            -0.1297009289264679,
+            -0.5187923312187195,
+            0.07436367869377136,
+            -0.1007247269153595,
+            0.007678982801735401,
+            1.0
+          ]
+        },
+        {
+          "step": 381,
+          "position_error_m": 0.04848331545603523,
+          "orientation_error_rad": 0.12490853805444922,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5416875874391841,
+            1.0455406978753543,
+            0.16655008684935196,
+            -0.8700170598054682,
+            -0.3204598281398234,
+            2.3746422923212758,
+            1.0833494495851905
+          ],
+          "submitted_action": [
+            -0.21535590291023254,
+            -0.13009102642536163,
+            -0.4925992786884308,
+            0.07475102692842484,
+            -0.09795349836349487,
+            0.008793257176876068,
+            1.0
+          ]
+        },
+        {
+          "step": 382,
+          "position_error_m": 0.04411220609738966,
+          "orientation_error_rad": 0.1185097758961999,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5396804955153096,
+            1.0296425179409734,
+            0.16824722197386774,
+            -0.9110614414371531,
+            -0.335636372441973,
+            2.404811464693099,
+            1.1013295577287974
+          ],
+          "submitted_action": [
+            -0.20804879069328308,
+            -0.11587445437908173,
+            -0.43237102031707764,
+            0.0714288204908371,
+            -0.08920793980360031,
+            0.009876269847154617,
+            1.0
+          ]
+        },
+        {
+          "step": 383,
+          "position_error_m": 0.0391789037523106,
+          "orientation_error_rad": 0.10980171999525312,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5364185979821497,
+            1.0141138747366942,
+            0.16949707609125098,
+            -0.953590780352833,
+            -0.3500776404774852,
+            2.4384903538161837,
+            1.1184392057692718
+          ],
+          "submitted_action": [
+            -0.19555607438087463,
+            -0.09391681104898453,
+            -0.36461490392684937,
+            0.06637614965438843,
+            -0.08020114153623581,
+            0.01019286923110485,
+            1.0
+          ]
+        },
+        {
+          "step": 384,
+          "position_error_m": 0.034208324204976576,
+          "orientation_error_rad": 0.10044715660288238,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5322971907969837,
+            0.9979519883815896,
+            0.17046880129015152,
+            -0.9976224003187047,
+            -0.36426080772920894,
+            2.474043009784342,
+            1.1352336730582198
+          ],
+          "submitted_action": [
+            -0.15899907052516937,
+            -0.07703197002410889,
+            -0.32866519689559937,
+            0.0608430840075016,
+            -0.07208938151597977,
+            0.009863982908427715,
+            1.0
+          ]
+        },
+        {
+          "step": 385,
+          "position_error_m": 0.02904076828860248,
+          "orientation_error_rad": 0.08933314691269315,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.527305843137758,
+            0.9823629934808293,
+            0.1707128587203112,
+            -1.04190651341866,
+            -0.3783538580746666,
+            2.51248750153043,
+            1.1516504215331793
+          ],
+          "submitted_action": [
+            -0.13909895718097687,
+            -0.04592079669237137,
+            -0.27938568592071533,
+            0.05364369973540306,
+            -0.062222857028245926,
+            0.009260672144591808,
+            1.0
+          ]
+        },
+        {
+          "step": 386,
+          "position_error_m": 0.023379981290979304,
+          "orientation_error_rad": 0.07839193132490754,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5219531435017903,
+            0.9666097731014167,
+            0.1709805758728724,
+            -1.0871795520952572,
+            -0.39228265968647386,
+            2.5512533870475425,
+            1.1678729614844792
+          ],
+          "submitted_action": [
+            -0.0953984335064888,
+            -0.01922493614256382,
+            -0.22521893680095673,
+            0.046423960477113724,
+            -0.05425352603197098,
+            0.007782937493175268,
+            1.0
+          ]
+        },
+        {
+          "step": 387,
+          "position_error_m": 0.017604664715217145,
+          "orientation_error_rad": 0.06532075487479763,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5164525976584451,
+            0.953094800819838,
+            0.17052377101012106,
+            -1.1302328302648625,
+            -0.40674247515049483,
+            2.593041465483773,
+            1.1842980996017571
+          ],
+          "submitted_action": [
+            -0.06732524186372757,
+            0.0026720697060227394,
+            -0.17243489623069763,
+            0.036677658557891846,
+            -0.04388789087533951,
+            0.00570692541077733,
+            1.0
+          ]
+        },
+        {
+          "step": 388,
+          "position_error_m": 0.011140086499482924,
+          "orientation_error_rad": 0.05021353779252136,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5113715565285961,
+            0.9439040045826435,
+            0.1696651861307359,
+            -1.1691230749788757,
+            -0.4217053818757414,
+            2.6368353587970708,
+            1.2008415461027484
+          ],
+          "submitted_action": [
+            -0.04524024575948715,
+            0.011688421480357647,
+            -0.0875851958990097,
+            0.024832580238580704,
+            -0.03276953101158142,
+            0.0025328216142952442,
+            1.0
+          ]
+        },
+        {
+          "step": 389,
+          "position_error_m": 0.0052411220933507524,
+          "orientation_error_rad": 0.035263283686713755,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 1,
+          "joint_positions": [
+            0.5066415520407171,
+            0.9357073205956834,
+            0.16801778991774224,
+            -1.204320214651357,
+            -0.4371281637234105,
+            2.6780179605950614,
+            1.2175867094949993
+          ],
+          "submitted_action": [
+            -0.02495897375047207,
+            0.05772737041115761,
+            -0.046360600739717484,
+            0.014252761378884315,
+            -0.022235896438360214,
+            9.475511615164578e-05,
+            1.0
+          ]
+        },
+        {
+          "step": 390,
+          "position_error_m": 0.002562995221047845,
+          "orientation_error_rad": 0.020758917669526984,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 2,
+          "joint_positions": [
+            0.5024328426297574,
+            0.9296724713477617,
+            0.16582572791453382,
+            -1.23445776616205,
+            -0.452352189041313,
+            2.7164864295545565,
+            1.233797732037736
+          ],
+          "submitted_action": [
+            0.06703978031873703,
+            0.08183059096336365,
+            -0.021229101344943047,
+            0.0038777347654104233,
+            -0.011807110160589218,
+            -0.002130183856934309,
+            1.0
+          ]
+        },
+        {
+          "step": 391,
+          "position_error_m": 0.006354936729826244,
+          "orientation_error_rad": 0.00846689718148469,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 3,
+          "joint_positions": [
+            0.4990639286541788,
+            0.9273348730524161,
+            0.1630526798997619,
+            -1.2578422701421534,
+            -0.46717882557635926,
+            2.751827212888033,
+            1.2492647574306828
+          ],
+          "submitted_action": [
+            0.07047341763973236,
+            0.09563156217336655,
+            0.1984536200761795,
+            -0.006372790317982435,
+            -0.0017909854650497437,
+            -0.004413160495460033,
+            1.0
+          ]
+        },
+        {
+          "step": 392,
+          "position_error_m": 0.010511933073292243,
+          "orientation_error_rad": 0.011241020499497437,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4968057630655928,
+            0.9273259250005553,
+            0.16037239210981147,
+            -1.274878070121486,
+            -0.48121063735087,
+            2.7821144776217617,
+            1.2637861913440742
+          ],
+          "submitted_action": [
+            0.07866284251213074,
+            0.09638674557209015,
+            0.24187827110290527,
+            -0.015592649579048157,
+            0.007159979082643986,
+            -0.006619803141802549,
+            1.0
+          ]
+        },
+        {
+          "step": 393,
+          "position_error_m": 0.014055402494742214,
+          "orientation_error_rad": 0.021201492520709214,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49525559481398196,
+            0.9290714740508587,
+            0.1570722565883294,
+            -1.2859321034717732,
+            -0.49396057503599017,
+            2.8062531717754418,
+            1.2769167269377153
+          ],
+          "submitted_action": [
+            0.07137789577245712,
+            0.11468756943941116,
+            0.2815382778644562,
+            -0.022187218070030212,
+            0.015011860057711601,
+            -0.007284944411367178,
+            1.0
+          ]
+        },
+        {
+          "step": 394,
+          "position_error_m": 0.0164578629324119,
+          "orientation_error_rad": 0.0301034051208886,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4944348710767371,
+            0.9308989606554282,
+            0.1543950193931442,
+            -1.2925988354912268,
+            -0.504757762370097,
+            2.824108634392157,
+            1.2879979786603177
+          ],
+          "submitted_action": [
+            0.0689905434846878,
+            0.12308794260025024,
+            0.3024676442146301,
+            -0.027269816026091576,
+            0.021514248102903366,
+            -0.007739376742392778,
+            1.0
+          ]
+        },
+        {
+          "step": 395,
+          "position_error_m": 0.01729419509886793,
+          "orientation_error_rad": 0.035788133953538144,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4942816573359632,
+            0.9292695363184487,
+            0.15302191211876107,
+            -1.299131392064122,
+            -0.5137256103305009,
+            2.834199587359793,
+            1.297491844430189
+          ],
+          "submitted_action": [
+            0.10063287615776062,
+            0.1198381707072258,
+            0.29022011160850525,
+            -0.029333757236599922,
+            0.024774178862571716,
+            -0.008087703958153725,
+            1.0
+          ]
+        },
+        {
+          "step": 396,
+          "position_error_m": 0.01658572211489427,
+          "orientation_error_rad": 0.040401878040899765,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49474919111249843,
+            0.9277481642506821,
+            0.15244938497271426,
+            -1.3015800062392069,
+            -0.5208694866909387,
+            2.839698786054249,
+            1.305361317586374
+          ],
+          "submitted_action": [
+            0.11136793345212936,
+            0.10772477090358734,
+            0.26805245876312256,
+            -0.031597547233104706,
+            0.028377877548336983,
+            -0.007900134660303593,
+            1.0
+          ]
+        },
+        {
+          "step": 397,
+          "position_error_m": 0.014752331715927087,
+          "orientation_error_rad": 0.04413150089411365,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49550019272731116,
+            0.9269171583974403,
+            0.15244516259260854,
+            -1.299642194008423,
+            -0.5258892096523431,
+            2.8402803109350208,
+            1.3109068397980903
+          ],
+          "submitted_action": [
+            0.0952296257019043,
+            0.09152880311012268,
+            0.23753246665000916,
+            -0.03299792855978012,
+            0.03189091011881828,
+            -0.006920273881405592,
+            1.0
+          ]
+        },
+        {
+          "step": 398,
+          "position_error_m": 0.0126907451301802,
+          "orientation_error_rad": 0.04598254391764696,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4965315108825201,
+            0.927749326501382,
+            0.15324059423405312,
+            -1.2942461007899226,
+            -0.5287504104588795,
+            2.8369881356962994,
+            1.3140000818059867
+          ],
+          "submitted_action": [
+            0.08560718595981598,
+            0.0691789984703064,
+            0.21746152639389038,
+            -0.03283378481864929,
+            0.033275555819272995,
+            -0.005923535209149122,
+            1.0
+          ]
+        },
+        {
+          "step": 399,
+          "position_error_m": 0.010953457901283332,
+          "orientation_error_rad": 0.045166121933096826,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4973141145557771,
+            0.9289239607948416,
+            0.1540813246460652,
+            -1.2875457446679524,
+            -0.5297702117970572,
+            2.8299872974874534,
+            1.3148771900723724
+          ],
+          "submitted_action": [
+            0.07083120197057724,
+            0.06967557221651077,
+            0.21431513130664825,
+            -0.030138352885842323,
+            0.032796818763017654,
+            -0.003990975208580494,
+            1.0
+          ]
+        },
+        {
+          "step": 400,
+          "position_error_m": 0.008898854251300771,
+          "orientation_error_rad": 0.041650337018988765,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 1,
+          "joint_positions": [
+            0.4976303830097056,
+            0.9267838880725797,
+            0.15596757569703107,
+            -1.2837290429553345,
+            -0.5293344181807803,
+            2.8196396067080793,
+            1.3141066312688452
+          ],
+          "submitted_action": [
+            0.08161310851573944,
+            0.07597612589597702,
+            0.17497657239437103,
+            -0.025639671832323074,
+            0.03009539470076561,
+            -0.0020938203670084476,
+            1.0
+          ]
+        }
+      ],
+      "interpretation": "Existing current_exact was validated after upstream earlier CARRY. Actual transport never maintained five strict ready frames; neither PLACE nor RELEASE began. Static selection is not execution success."
+    },
+    {
+      "job": "handoff_clearance_profile_6000005",
+      "same_start_profile_duplicate": true,
+      "first_changed_command_step": 300,
+      "first_changed_observation_step": 303,
+      "carry_start": 358,
+      "v17_carry_start": 373,
+      "search_start": 358,
+      "search_finish": 359,
+      "work": 25,
+      "calls": 2,
+      "selected": "current_exact",
+      "selected_schedule": {
+        "minimum_command_schedule": 35,
+        "estimated_steps": 59,
+        "remaining_steps_observed": 41,
+        "nominal_estimate_fits": false,
+        "minimum_command_schedule_fits": true,
+        "stage_schedules": [
+          {
+            "stage": "direct_transport",
+            "distance_m": 0.138534406338218,
+            "angle_rad": 0.0540880072003835,
+            "minimum_command_steps": 11,
+            "estimated_steps": 21
+          }
+        ],
+        "placement_minimum_steps": 8,
+        "placement_estimated_steps": 22,
+        "release_reserved_steps": 16,
+        "planning_steps_already_spent": 2,
+        "interpretation": "Nominal commanded-motion and phase-wait budget; not a physical lower bound or guarantee."
+      },
+      "execution": {
+        "first_step": 360,
+        "last_step": 400,
+        "observed_steps": 41,
+        "minimum_actual_joint_margin_rad": 0.4165143642439495,
+        "minimum_margin_step": 360,
+        "actual_margin_below_004_steps": [],
+        "stable_hold_steps": 41,
+        "hold_false_steps": [],
+        "object_start_m": [
+          0.3049793541431427,
+          0.3171292543411255,
+          1.0854166746139526
+        ],
+        "object_last_m": [
+          0.1951393038034439,
+          0.4008955657482147,
+          1.0723183155059814
+        ],
+        "eef_displacement_m": 0.1399397747105036,
+        "object_displacement_m": 0.13875589571869867,
+        "remaining_budget_at_last_observation": 0,
+        "maximum_held_relative_position_change_m": 0.000573235673194402,
+        "maximum_held_relative_orientation_change_rad": 0.031774922548663855
+      },
+      "strict_ready_runs": [
+        [
+          389,
+          390,
+          391
+        ],
+        [
+          400
+        ]
+      ],
+      "maximum_consecutive_ready": 3,
+      "final_derived_consecutive_ready": 1,
+      "derived_count_note": "Computed from saved position <9mm, angle <.08rad, stable_hold. No private controller replay.",
+      "remaining_episode_steps": 0,
+      "placement_started": false,
+      "release_started": false,
+      "original_reserved_placement_steps": 8,
+      "original_reserved_release_steps": 16,
+      "task_success": false,
+      "actual_direct_transport_rows": [
+        {
+          "step": 360,
+          "position_error_m": 0.1378869716199767,
+          "orientation_error_rad": 0.06156720387667453,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4646322159897257,
+            1.31730543035262,
+            0.04582861483196047,
+            -0.48631436424394947,
+            -0.05561059949797905,
+            2.352306920563573,
+            0.8027766137497867
+          ],
+          "submitted_action": [
+            -0.18398413062095642,
+            0.14315351843833923,
+            -0.010067552328109741,
+            0.02932540699839592,
+            -0.055475540459156036,
+            -0.00100265396758914,
+            1.0
+          ]
+        },
+        {
+          "step": 361,
+          "position_error_m": 0.1380906005147194,
+          "orientation_error_rad": 0.06226354380261422,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.46352778366248093,
+            1.308634215358355,
+            0.04857962900902473,
+            -0.4930783125678796,
+            -0.05877214143884543,
+            2.3496156818285523,
+            0.8034169291936217
+          ],
+          "submitted_action": [
+            -0.36735373735427856,
+            0.2860548496246338,
+            -0.030048543587327003,
+            0.029660692438483238,
+            -0.05521189421415329,
+            -0.0009308046428486705,
+            1.0
+          ]
+        },
+        {
+          "step": 362,
+          "position_error_m": 0.13839972195629818,
+          "orientation_error_rad": 0.061750401762988634,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4621134783575795,
+            1.3025300674974067,
+            0.05192654708296634,
+            -0.5009605830860754,
+            -0.062467059681326625,
+            2.352061541501388,
+            0.8040491095196038
+          ],
+          "submitted_action": [
+            -0.5499285459518433,
+            0.4286472499370575,
+            -0.057946283370256424,
+            0.029239684343338013,
+            -0.054029110819101334,
+            -0.001058564754202962,
+            1.0
+          ]
+        },
+        {
+          "step": 363,
+          "position_error_m": 0.13752329083606343,
+          "orientation_error_rad": 0.06306708358923827,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4615594976914261,
+            1.2961265460797569,
+            0.05685449098263282,
+            -0.5092385671332255,
+            -0.06694564551913731,
+            2.352003693227488,
+            0.8055313145284725
+          ],
+          "submitted_action": [
+            -0.5504520535469055,
+            0.42771589756011963,
+            -0.0637233704328537,
+            0.028969241306185722,
+            -0.05687043070793152,
+            -0.002408175030723214,
+            1.0
+          ]
+        },
+        {
+          "step": 364,
+          "position_error_m": 0.1349419627916385,
+          "orientation_error_rad": 0.0665296348280255,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4626372270853,
+            1.287585743153052,
+            0.06340369966639273,
+            -0.5169956685717505,
+            -0.07300441342866602,
+            2.347576021017907,
+            0.8090926061190153
+          ],
+          "submitted_action": [
+            -0.5517930388450623,
+            0.4237927794456482,
+            -0.07696820795536041,
+            0.028853798285126686,
+            -0.06212778761982918,
+            -0.004475438501685858,
+            1.0
+          ]
+        },
+        {
+          "step": 365,
+          "position_error_m": 0.12992711119305403,
+          "orientation_error_rad": 0.07569295780999587,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4662059152704079,
+            1.2755449900627658,
+            0.07174452188567892,
+            -0.5250209432342225,
+            -0.08108624071683257,
+            2.3334235758042787,
+            0.8157373156599752
+          ],
+          "submitted_action": [
+            -0.5532903671264648,
+            0.4170040488243103,
+            -0.09988221526145935,
+            0.03144630417227745,
+            -0.07454635947942734,
+            -0.00741354376077652,
+            1.0
+          ]
+        },
+        {
+          "step": 366,
+          "position_error_m": 0.1239895899454936,
+          "orientation_error_rad": 0.08541414479213755,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4709093389342192,
+            1.2635759723245905,
+            0.07976689151245288,
+            -0.5339433786993559,
+            -0.09195303473557515,
+            2.3209745999862537,
+            0.8256800684618075
+          ],
+          "submitted_action": [
+            -0.5549957156181335,
+            0.40752851963043213,
+            -0.12609614431858063,
+            0.03510958328843117,
+            -0.08378671854734421,
+            -0.008652020245790482,
+            1.0
+          ]
+        },
+        {
+          "step": 367,
+          "position_error_m": 0.11743800251628325,
+          "orientation_error_rad": 0.09468177179945023,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4766436198312984,
+            1.2517094631096803,
+            0.08792106650609849,
+            -0.5442604881388122,
+            -0.10438266765342705,
+            2.309566096948775,
+            0.8378434114019769
+          ],
+          "submitted_action": [
+            -0.5573956966400146,
+            0.3957839012145996,
+            -0.1505463719367981,
+            0.03885446488857269,
+            -0.09192615002393723,
+            -0.00940975546836853,
+            1.0
+          ]
+        },
+        {
+          "step": 368,
+          "position_error_m": 0.11097297259896653,
+          "orientation_error_rad": 0.10340020089367664,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4828286557203174,
+            1.2384765012923038,
+            0.09549556352583852,
+            -0.5549501063336844,
+            -0.11842752146509329,
+            2.297823085050984,
+            0.8520119115079511
+          ],
+          "submitted_action": [
+            -0.5580071210861206,
+            0.3808949887752533,
+            -0.18315601348876953,
+            0.043684445321559906,
+            -0.09905695170164108,
+            -0.00901761744171381,
+            1.0
+          ]
+        },
+        {
+          "step": 369,
+          "position_error_m": 0.10439065112623228,
+          "orientation_error_rad": 0.11307363026956856,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4898970944071015,
+            1.223351027850289,
+            0.10341706914517217,
+            -0.5668010730983079,
+            -0.13313399899926862,
+            2.2836475699934935,
+            0.8675655984349352
+          ],
+          "submitted_action": [
+            -0.5552462339401245,
+            0.3620617389678955,
+            -0.22497309744358063,
+            0.04933934286236763,
+            -0.10781767964363098,
+            -0.008684194646775723,
+            1.0
+          ]
+        },
+        {
+          "step": 370,
+          "position_error_m": 0.09823652849702964,
+          "orientation_error_rad": 0.12038406537233705,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4970959960338614,
+            1.208577854376478,
+            0.11057144746459428,
+            -0.5799077083615221,
+            -0.14896799889010104,
+            2.274051828435423,
+            0.8845247686946981
+          ],
+          "submitted_action": [
+            -0.5498983860015869,
+            0.33788827061653137,
+            -0.27100417017936707,
+            0.05413488298654556,
+            -0.11219605058431625,
+            -0.007405442651361227,
+            1.0
+          ]
+        },
+        {
+          "step": 371,
+          "position_error_m": 0.09257015360725777,
+          "orientation_error_rad": 0.1251922543801173,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5042587390452439,
+            1.1943652357723398,
+            0.11741245187030759,
+            -0.5947236643803261,
+            -0.16497830519316944,
+            2.268501978830789,
+            0.9020230725383008
+          ],
+          "submitted_action": [
+            -0.5429574847221375,
+            0.3093786835670471,
+            -0.3154076635837555,
+            0.057842548936605453,
+            -0.11415054649114609,
+            -0.005904613994061947,
+            1.0
+          ]
+        },
+        {
+          "step": 372,
+          "position_error_m": 0.08698900456794416,
+          "orientation_error_rad": 0.13042955126548225,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.511290036448299,
+            1.179882286484695,
+            0.1238974908408576,
+            -0.6118333091594377,
+            -0.18117639600855234,
+            2.2641248404702954,
+            0.9200873870932639
+          ],
+          "submitted_action": [
+            -0.5328046083450317,
+            0.27772247791290283,
+            -0.35915103554725647,
+            0.06281185895204544,
+            -0.11784408986568451,
+            -0.004246949218213558,
+            1.0
+          ]
+        },
+        {
+          "step": 373,
+          "position_error_m": 0.0818925827761419,
+          "orientation_error_rad": 0.1344699773013692,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5176370054131864,
+            1.1658652878123044,
+            0.129670980458525,
+            -0.6311377344364599,
+            -0.1974242765971235,
+            2.2638433175155637,
+            0.9382846442750559
+          ],
+          "submitted_action": [
+            -0.5209073424339294,
+            0.2446385771036148,
+            -0.3985053300857544,
+            0.06738269329071045,
+            -0.11919964104890823,
+            -0.002012126613408327,
+            1.0
+          ]
+        },
+        {
+          "step": 374,
+          "position_error_m": 0.07715664839275366,
+          "orientation_error_rad": 0.1372694226233587,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5233695843973958,
+            1.1517380087246145,
+            0.1352266548853094,
+            -0.6525905962740681,
+            -0.2132959631576038,
+            2.2665106421453443,
+            0.9563222405873136
+          ],
+          "submitted_action": [
+            -0.5071104168891907,
+            0.20920336246490479,
+            -0.43482518196105957,
+            0.07089065760374069,
+            -0.11955460160970688,
+            -5.30107608938124e-05,
+            1.0
+          ]
+        },
+        {
+          "step": 375,
+          "position_error_m": 0.07295679302141334,
+          "orientation_error_rad": 0.13717832598327218,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.528286757563923,
+            1.1383114537294985,
+            0.14029266490045195,
+            -0.6757744560440428,
+            -0.22902755223856305,
+            2.2748652530252196,
+            0.9742365713482531
+          ],
+          "submitted_action": [
+            -0.49251654744148254,
+            0.1704372614622116,
+            -0.4673088788986206,
+            0.07229433208703995,
+            -0.11655081063508987,
+            0.0017403600504621863,
+            1.0
+          ]
+        },
+        {
+          "step": 376,
+          "position_error_m": 0.06903007289724535,
+          "orientation_error_rad": 0.1356332844572586,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5325234605519438,
+            1.1245048087264233,
+            0.14530494245328468,
+            -0.7010526217374624,
+            -0.24435154587520314,
+            2.2857635498761297,
+            0.9919685323784598
+          ],
+          "submitted_action": [
+            -0.4697485864162445,
+            0.12739714980125427,
+            -0.48951131105422974,
+            0.07288908958435059,
+            -0.11327436566352844,
+            0.0031616478227078915,
+            1.0
+          ]
+        },
+        {
+          "step": 377,
+          "position_error_m": 0.06492436228626239,
+          "orientation_error_rad": 0.13401047843580724,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5361225889658651,
+            1.1106131284399665,
+            0.1501891309442152,
+            -0.7290695282825882,
+            -0.2595490432336718,
+            2.2993697903146715,
+            1.0098259054507028
+          ],
+          "submitted_action": [
+            -0.4250684976577759,
+            0.07956620305776596,
+            -0.4842553734779358,
+            0.07358872145414352,
+            -0.11077691614627838,
+            0.0042360518127679825,
+            1.0
+          ]
+        },
+        {
+          "step": 378,
+          "position_error_m": 0.060695836384721036,
+          "orientation_error_rad": 0.13270113063589659,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5391888635012788,
+            1.0953150798255098,
+            0.15519314480966467,
+            -0.7600340651954942,
+            -0.27469394026131616,
+            2.3139047202919625,
+            1.0280435920763162
+          ],
+          "submitted_action": [
+            -0.37767505645751953,
+            0.03418978303670883,
+            -0.473910391330719,
+            0.07430268824100494,
+            -0.10889934003353119,
+            0.005101120565086603,
+            1.0
+          ]
+        },
+        {
+          "step": 379,
+          "position_error_m": 0.05666783868324046,
+          "orientation_error_rad": 0.13031424137371564,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5413459315637098,
+            1.0797752137900412,
+            0.15965173439135655,
+            -0.793636426101026,
+            -0.290133270038672,
+            2.332141881226682,
+            1.0466449059492158
+          ],
+          "submitted_action": [
+            -0.25824815034866333,
+            -0.1294509619474411,
+            -0.509141743183136,
+            0.07421449571847916,
+            -0.10521745681762695,
+            0.006067951209843159,
+            1.0
+          ]
+        },
+        {
+          "step": 380,
+          "position_error_m": 0.052588468106230774,
+          "orientation_error_rad": 0.12724613250133013,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.54204910411135,
+            1.0636132765054314,
+            0.16313263797851776,
+            -0.8300261433538669,
+            -0.30553896335313147,
+            2.3529622944688824,
+            1.0651274002253484
+          ],
+          "submitted_action": [
+            -0.267002671957016,
+            -0.1297009289264679,
+            -0.5187923312187195,
+            0.07436367869377136,
+            -0.1007247269153595,
+            0.007678982801735401,
+            1.0
+          ]
+        },
+        {
+          "step": 381,
+          "position_error_m": 0.04848331545603523,
+          "orientation_error_rad": 0.12490853805444922,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5416875874391841,
+            1.0455406978753543,
+            0.16655008684935196,
+            -0.8700170598054682,
+            -0.3204598281398234,
+            2.3746422923212758,
+            1.0833494495851905
+          ],
+          "submitted_action": [
+            -0.21535590291023254,
+            -0.13009102642536163,
+            -0.4925992786884308,
+            0.07475102692842484,
+            -0.09795349836349487,
+            0.008793257176876068,
+            1.0
+          ]
+        },
+        {
+          "step": 382,
+          "position_error_m": 0.04411220609738966,
+          "orientation_error_rad": 0.1185097758961999,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5396804955153096,
+            1.0296425179409734,
+            0.16824722197386774,
+            -0.9110614414371531,
+            -0.335636372441973,
+            2.404811464693099,
+            1.1013295577287974
+          ],
+          "submitted_action": [
+            -0.20804879069328308,
+            -0.11587445437908173,
+            -0.43237102031707764,
+            0.0714288204908371,
+            -0.08920793980360031,
+            0.009876269847154617,
+            1.0
+          ]
+        },
+        {
+          "step": 383,
+          "position_error_m": 0.0391789037523106,
+          "orientation_error_rad": 0.10980171999525312,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5364185979821497,
+            1.0141138747366942,
+            0.16949707609125098,
+            -0.953590780352833,
+            -0.3500776404774852,
+            2.4384903538161837,
+            1.1184392057692718
+          ],
+          "submitted_action": [
+            -0.19555607438087463,
+            -0.09391681104898453,
+            -0.36461490392684937,
+            0.06637614965438843,
+            -0.08020114153623581,
+            0.01019286923110485,
+            1.0
+          ]
+        },
+        {
+          "step": 384,
+          "position_error_m": 0.034208324204976576,
+          "orientation_error_rad": 0.10044715660288238,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5322971907969837,
+            0.9979519883815896,
+            0.17046880129015152,
+            -0.9976224003187047,
+            -0.36426080772920894,
+            2.474043009784342,
+            1.1352336730582198
+          ],
+          "submitted_action": [
+            -0.15899907052516937,
+            -0.07703197002410889,
+            -0.32866519689559937,
+            0.0608430840075016,
+            -0.07208938151597977,
+            0.009863982908427715,
+            1.0
+          ]
+        },
+        {
+          "step": 385,
+          "position_error_m": 0.02904076828860248,
+          "orientation_error_rad": 0.08933314691269315,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.527305843137758,
+            0.9823629934808293,
+            0.1707128587203112,
+            -1.04190651341866,
+            -0.3783538580746666,
+            2.51248750153043,
+            1.1516504215331793
+          ],
+          "submitted_action": [
+            -0.13909895718097687,
+            -0.04592079669237137,
+            -0.27938568592071533,
+            0.05364369973540306,
+            -0.062222857028245926,
+            0.009260672144591808,
+            1.0
+          ]
+        },
+        {
+          "step": 386,
+          "position_error_m": 0.023379981290979304,
+          "orientation_error_rad": 0.07839193132490754,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5219531435017903,
+            0.9666097731014167,
+            0.1709805758728724,
+            -1.0871795520952572,
+            -0.39228265968647386,
+            2.5512533870475425,
+            1.1678729614844792
+          ],
+          "submitted_action": [
+            -0.0953984335064888,
+            -0.01922493614256382,
+            -0.22521893680095673,
+            0.046423960477113724,
+            -0.05425352603197098,
+            0.007782937493175268,
+            1.0
+          ]
+        },
+        {
+          "step": 387,
+          "position_error_m": 0.017604664715217145,
+          "orientation_error_rad": 0.06532075487479763,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5164525976584451,
+            0.953094800819838,
+            0.17052377101012106,
+            -1.1302328302648625,
+            -0.40674247515049483,
+            2.593041465483773,
+            1.1842980996017571
+          ],
+          "submitted_action": [
+            -0.06732524186372757,
+            0.0026720697060227394,
+            -0.17243489623069763,
+            0.036677658557891846,
+            -0.04388789087533951,
+            0.00570692541077733,
+            1.0
+          ]
+        },
+        {
+          "step": 388,
+          "position_error_m": 0.011140086499482924,
+          "orientation_error_rad": 0.05021353779252136,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5113715565285961,
+            0.9439040045826435,
+            0.1696651861307359,
+            -1.1691230749788757,
+            -0.4217053818757414,
+            2.6368353587970708,
+            1.2008415461027484
+          ],
+          "submitted_action": [
+            -0.04524024575948715,
+            0.011688421480357647,
+            -0.0875851958990097,
+            0.024832580238580704,
+            -0.03276953101158142,
+            0.0025328216142952442,
+            1.0
+          ]
+        },
+        {
+          "step": 389,
+          "position_error_m": 0.0052411220933507524,
+          "orientation_error_rad": 0.035263283686713755,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 1,
+          "joint_positions": [
+            0.5066415520407171,
+            0.9357073205956834,
+            0.16801778991774224,
+            -1.204320214651357,
+            -0.4371281637234105,
+            2.6780179605950614,
+            1.2175867094949993
+          ],
+          "submitted_action": [
+            -0.02495897375047207,
+            0.05772737041115761,
+            -0.046360600739717484,
+            0.014252761378884315,
+            -0.022235896438360214,
+            9.475511615164578e-05,
+            1.0
+          ]
+        },
+        {
+          "step": 390,
+          "position_error_m": 0.002562995221047845,
+          "orientation_error_rad": 0.020758917669526984,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 2,
+          "joint_positions": [
+            0.5024328426297574,
+            0.9296724713477617,
+            0.16582572791453382,
+            -1.23445776616205,
+            -0.452352189041313,
+            2.7164864295545565,
+            1.233797732037736
+          ],
+          "submitted_action": [
+            0.06703978031873703,
+            0.08183059096336365,
+            -0.021229101344943047,
+            0.0038777347654104233,
+            -0.011807110160589218,
+            -0.002130183856934309,
+            1.0
+          ]
+        },
+        {
+          "step": 391,
+          "position_error_m": 0.006354936729826244,
+          "orientation_error_rad": 0.00846689718148469,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 3,
+          "joint_positions": [
+            0.4990639286541788,
+            0.9273348730524161,
+            0.1630526798997619,
+            -1.2578422701421534,
+            -0.46717882557635926,
+            2.751827212888033,
+            1.2492647574306828
+          ],
+          "submitted_action": [
+            0.07047341763973236,
+            0.09563156217336655,
+            0.1984536200761795,
+            -0.006372790317982435,
+            -0.0017909854650497437,
+            -0.004413160495460033,
+            1.0
+          ]
+        },
+        {
+          "step": 392,
+          "position_error_m": 0.010511933073292243,
+          "orientation_error_rad": 0.011241020499497437,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4968057630655928,
+            0.9273259250005553,
+            0.16037239210981147,
+            -1.274878070121486,
+            -0.48121063735087,
+            2.7821144776217617,
+            1.2637861913440742
+          ],
+          "submitted_action": [
+            0.07866284251213074,
+            0.09638674557209015,
+            0.24187827110290527,
+            -0.015592649579048157,
+            0.007159979082643986,
+            -0.006619803141802549,
+            1.0
+          ]
+        },
+        {
+          "step": 393,
+          "position_error_m": 0.014055402494742214,
+          "orientation_error_rad": 0.021201492520709214,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49525559481398196,
+            0.9290714740508587,
+            0.1570722565883294,
+            -1.2859321034717732,
+            -0.49396057503599017,
+            2.8062531717754418,
+            1.2769167269377153
+          ],
+          "submitted_action": [
+            0.07137789577245712,
+            0.11468756943941116,
+            0.2815382778644562,
+            -0.022187218070030212,
+            0.015011860057711601,
+            -0.007284944411367178,
+            1.0
+          ]
+        },
+        {
+          "step": 394,
+          "position_error_m": 0.0164578629324119,
+          "orientation_error_rad": 0.0301034051208886,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4944348710767371,
+            0.9308989606554282,
+            0.1543950193931442,
+            -1.2925988354912268,
+            -0.504757762370097,
+            2.824108634392157,
+            1.2879979786603177
+          ],
+          "submitted_action": [
+            0.0689905434846878,
+            0.12308794260025024,
+            0.3024676442146301,
+            -0.027269816026091576,
+            0.021514248102903366,
+            -0.007739376742392778,
+            1.0
+          ]
+        },
+        {
+          "step": 395,
+          "position_error_m": 0.01729419509886793,
+          "orientation_error_rad": 0.035788133953538144,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4942816573359632,
+            0.9292695363184487,
+            0.15302191211876107,
+            -1.299131392064122,
+            -0.5137256103305009,
+            2.834199587359793,
+            1.297491844430189
+          ],
+          "submitted_action": [
+            0.10063287615776062,
+            0.1198381707072258,
+            0.29022011160850525,
+            -0.029333757236599922,
+            0.024774178862571716,
+            -0.008087703958153725,
+            1.0
+          ]
+        },
+        {
+          "step": 396,
+          "position_error_m": 0.01658572211489427,
+          "orientation_error_rad": 0.040401878040899765,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49474919111249843,
+            0.9277481642506821,
+            0.15244938497271426,
+            -1.3015800062392069,
+            -0.5208694866909387,
+            2.839698786054249,
+            1.305361317586374
+          ],
+          "submitted_action": [
+            0.11136793345212936,
+            0.10772477090358734,
+            0.26805245876312256,
+            -0.031597547233104706,
+            0.028377877548336983,
+            -0.007900134660303593,
+            1.0
+          ]
+        },
+        {
+          "step": 397,
+          "position_error_m": 0.014752331715927087,
+          "orientation_error_rad": 0.04413150089411365,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49550019272731116,
+            0.9269171583974403,
+            0.15244516259260854,
+            -1.299642194008423,
+            -0.5258892096523431,
+            2.8402803109350208,
+            1.3109068397980903
+          ],
+          "submitted_action": [
+            0.0952296257019043,
+            0.09152880311012268,
+            0.23753246665000916,
+            -0.03299792855978012,
+            0.03189091011881828,
+            -0.006920273881405592,
+            1.0
+          ]
+        },
+        {
+          "step": 398,
+          "position_error_m": 0.0126907451301802,
+          "orientation_error_rad": 0.04598254391764696,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4965315108825201,
+            0.927749326501382,
+            0.15324059423405312,
+            -1.2942461007899226,
+            -0.5287504104588795,
+            2.8369881356962994,
+            1.3140000818059867
+          ],
+          "submitted_action": [
+            0.08560718595981598,
+            0.0691789984703064,
+            0.21746152639389038,
+            -0.03283378481864929,
+            0.033275555819272995,
+            -0.005923535209149122,
+            1.0
+          ]
+        },
+        {
+          "step": 399,
+          "position_error_m": 0.010953457901283332,
+          "orientation_error_rad": 0.045166121933096826,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4973141145557771,
+            0.9289239607948416,
+            0.1540813246460652,
+            -1.2875457446679524,
+            -0.5297702117970572,
+            2.8299872974874534,
+            1.3148771900723724
+          ],
+          "submitted_action": [
+            0.07083120197057724,
+            0.06967557221651077,
+            0.21431513130664825,
+            -0.030138352885842323,
+            0.032796818763017654,
+            -0.003990975208580494,
+            1.0
+          ]
+        },
+        {
+          "step": 400,
+          "position_error_m": 0.008898854251300771,
+          "orientation_error_rad": 0.041650337018988765,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 1,
+          "joint_positions": [
+            0.4976303830097056,
+            0.9267838880725797,
+            0.15596757569703107,
+            -1.2837290429553345,
+            -0.5293344181807803,
+            2.8196396067080793,
+            1.3141066312688452
+          ],
+          "submitted_action": [
+            0.08161310851573944,
+            0.07597612589597702,
+            0.17497657239437103,
+            -0.025639671832323074,
+            0.03009539470076561,
+            -0.0020938203670084476,
+            1.0
+          ]
+        }
+      ],
+      "interpretation": "Existing current_exact was validated after upstream earlier CARRY. Actual transport never maintained five strict ready frames; neither PLACE nor RELEASE began. Static selection is not execution success."
+    },
+    {
+      "job": "v18_clearance_profile_6000005",
+      "same_start_profile_duplicate": true,
+      "first_changed_command_step": 300,
+      "first_changed_observation_step": 303,
+      "carry_start": 358,
+      "v17_carry_start": 373,
+      "search_start": 358,
+      "search_finish": 359,
+      "work": 25,
+      "calls": 2,
+      "selected": "current_exact",
+      "selected_schedule": {
+        "minimum_command_schedule": 35,
+        "estimated_steps": 59,
+        "remaining_steps_observed": 41,
+        "nominal_estimate_fits": false,
+        "minimum_command_schedule_fits": true,
+        "stage_schedules": [
+          {
+            "stage": "direct_transport",
+            "distance_m": 0.138534406338218,
+            "angle_rad": 0.0540880072003835,
+            "minimum_command_steps": 11,
+            "estimated_steps": 21
+          }
+        ],
+        "placement_minimum_steps": 8,
+        "placement_estimated_steps": 22,
+        "release_reserved_steps": 16,
+        "planning_steps_already_spent": 2,
+        "interpretation": "Nominal commanded-motion and phase-wait budget; not a physical lower bound or guarantee."
+      },
+      "execution": {
+        "first_step": 360,
+        "last_step": 400,
+        "observed_steps": 41,
+        "minimum_actual_joint_margin_rad": 0.4165143642439495,
+        "minimum_margin_step": 360,
+        "actual_margin_below_004_steps": [],
+        "stable_hold_steps": 41,
+        "hold_false_steps": [],
+        "object_start_m": [
+          0.3049793541431427,
+          0.3171292543411255,
+          1.0854166746139526
+        ],
+        "object_last_m": [
+          0.1951393038034439,
+          0.4008955657482147,
+          1.0723183155059814
+        ],
+        "eef_displacement_m": 0.1399397747105036,
+        "object_displacement_m": 0.13875589571869867,
+        "remaining_budget_at_last_observation": 0,
+        "maximum_held_relative_position_change_m": 0.000573235673194402,
+        "maximum_held_relative_orientation_change_rad": 0.031774922548663855
+      },
+      "strict_ready_runs": [
+        [
+          389,
+          390,
+          391
+        ],
+        [
+          400
+        ]
+      ],
+      "maximum_consecutive_ready": 3,
+      "final_derived_consecutive_ready": 1,
+      "derived_count_note": "Computed from saved position <9mm, angle <.08rad, stable_hold. No private controller replay.",
+      "remaining_episode_steps": 0,
+      "placement_started": false,
+      "release_started": false,
+      "original_reserved_placement_steps": 8,
+      "original_reserved_release_steps": 16,
+      "task_success": false,
+      "actual_direct_transport_rows": [
+        {
+          "step": 360,
+          "position_error_m": 0.1378869716199767,
+          "orientation_error_rad": 0.06156720387667453,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4646322159897257,
+            1.31730543035262,
+            0.04582861483196047,
+            -0.48631436424394947,
+            -0.05561059949797905,
+            2.352306920563573,
+            0.8027766137497867
+          ],
+          "submitted_action": [
+            -0.18398413062095642,
+            0.14315351843833923,
+            -0.010067552328109741,
+            0.02932540699839592,
+            -0.055475540459156036,
+            -0.00100265396758914,
+            1.0
+          ]
+        },
+        {
+          "step": 361,
+          "position_error_m": 0.1380906005147194,
+          "orientation_error_rad": 0.06226354380261422,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.46352778366248093,
+            1.308634215358355,
+            0.04857962900902473,
+            -0.4930783125678796,
+            -0.05877214143884543,
+            2.3496156818285523,
+            0.8034169291936217
+          ],
+          "submitted_action": [
+            -0.36735373735427856,
+            0.2860548496246338,
+            -0.030048543587327003,
+            0.029660692438483238,
+            -0.05521189421415329,
+            -0.0009308046428486705,
+            1.0
+          ]
+        },
+        {
+          "step": 362,
+          "position_error_m": 0.13839972195629818,
+          "orientation_error_rad": 0.061750401762988634,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4621134783575795,
+            1.3025300674974067,
+            0.05192654708296634,
+            -0.5009605830860754,
+            -0.062467059681326625,
+            2.352061541501388,
+            0.8040491095196038
+          ],
+          "submitted_action": [
+            -0.5499285459518433,
+            0.4286472499370575,
+            -0.057946283370256424,
+            0.029239684343338013,
+            -0.054029110819101334,
+            -0.001058564754202962,
+            1.0
+          ]
+        },
+        {
+          "step": 363,
+          "position_error_m": 0.13752329083606343,
+          "orientation_error_rad": 0.06306708358923827,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4615594976914261,
+            1.2961265460797569,
+            0.05685449098263282,
+            -0.5092385671332255,
+            -0.06694564551913731,
+            2.352003693227488,
+            0.8055313145284725
+          ],
+          "submitted_action": [
+            -0.5504520535469055,
+            0.42771589756011963,
+            -0.0637233704328537,
+            0.028969241306185722,
+            -0.05687043070793152,
+            -0.002408175030723214,
+            1.0
+          ]
+        },
+        {
+          "step": 364,
+          "position_error_m": 0.1349419627916385,
+          "orientation_error_rad": 0.0665296348280255,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4626372270853,
+            1.287585743153052,
+            0.06340369966639273,
+            -0.5169956685717505,
+            -0.07300441342866602,
+            2.347576021017907,
+            0.8090926061190153
+          ],
+          "submitted_action": [
+            -0.5517930388450623,
+            0.4237927794456482,
+            -0.07696820795536041,
+            0.028853798285126686,
+            -0.06212778761982918,
+            -0.004475438501685858,
+            1.0
+          ]
+        },
+        {
+          "step": 365,
+          "position_error_m": 0.12992711119305403,
+          "orientation_error_rad": 0.07569295780999587,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4662059152704079,
+            1.2755449900627658,
+            0.07174452188567892,
+            -0.5250209432342225,
+            -0.08108624071683257,
+            2.3334235758042787,
+            0.8157373156599752
+          ],
+          "submitted_action": [
+            -0.5532903671264648,
+            0.4170040488243103,
+            -0.09988221526145935,
+            0.03144630417227745,
+            -0.07454635947942734,
+            -0.00741354376077652,
+            1.0
+          ]
+        },
+        {
+          "step": 366,
+          "position_error_m": 0.1239895899454936,
+          "orientation_error_rad": 0.08541414479213755,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4709093389342192,
+            1.2635759723245905,
+            0.07976689151245288,
+            -0.5339433786993559,
+            -0.09195303473557515,
+            2.3209745999862537,
+            0.8256800684618075
+          ],
+          "submitted_action": [
+            -0.5549957156181335,
+            0.40752851963043213,
+            -0.12609614431858063,
+            0.03510958328843117,
+            -0.08378671854734421,
+            -0.008652020245790482,
+            1.0
+          ]
+        },
+        {
+          "step": 367,
+          "position_error_m": 0.11743800251628325,
+          "orientation_error_rad": 0.09468177179945023,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4766436198312984,
+            1.2517094631096803,
+            0.08792106650609849,
+            -0.5442604881388122,
+            -0.10438266765342705,
+            2.309566096948775,
+            0.8378434114019769
+          ],
+          "submitted_action": [
+            -0.5573956966400146,
+            0.3957839012145996,
+            -0.1505463719367981,
+            0.03885446488857269,
+            -0.09192615002393723,
+            -0.00940975546836853,
+            1.0
+          ]
+        },
+        {
+          "step": 368,
+          "position_error_m": 0.11097297259896653,
+          "orientation_error_rad": 0.10340020089367664,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4828286557203174,
+            1.2384765012923038,
+            0.09549556352583852,
+            -0.5549501063336844,
+            -0.11842752146509329,
+            2.297823085050984,
+            0.8520119115079511
+          ],
+          "submitted_action": [
+            -0.5580071210861206,
+            0.3808949887752533,
+            -0.18315601348876953,
+            0.043684445321559906,
+            -0.09905695170164108,
+            -0.00901761744171381,
+            1.0
+          ]
+        },
+        {
+          "step": 369,
+          "position_error_m": 0.10439065112623228,
+          "orientation_error_rad": 0.11307363026956856,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4898970944071015,
+            1.223351027850289,
+            0.10341706914517217,
+            -0.5668010730983079,
+            -0.13313399899926862,
+            2.2836475699934935,
+            0.8675655984349352
+          ],
+          "submitted_action": [
+            -0.5552462339401245,
+            0.3620617389678955,
+            -0.22497309744358063,
+            0.04933934286236763,
+            -0.10781767964363098,
+            -0.008684194646775723,
+            1.0
+          ]
+        },
+        {
+          "step": 370,
+          "position_error_m": 0.09823652849702964,
+          "orientation_error_rad": 0.12038406537233705,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4970959960338614,
+            1.208577854376478,
+            0.11057144746459428,
+            -0.5799077083615221,
+            -0.14896799889010104,
+            2.274051828435423,
+            0.8845247686946981
+          ],
+          "submitted_action": [
+            -0.5498983860015869,
+            0.33788827061653137,
+            -0.27100417017936707,
+            0.05413488298654556,
+            -0.11219605058431625,
+            -0.007405442651361227,
+            1.0
+          ]
+        },
+        {
+          "step": 371,
+          "position_error_m": 0.09257015360725777,
+          "orientation_error_rad": 0.1251922543801173,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5042587390452439,
+            1.1943652357723398,
+            0.11741245187030759,
+            -0.5947236643803261,
+            -0.16497830519316944,
+            2.268501978830789,
+            0.9020230725383008
+          ],
+          "submitted_action": [
+            -0.5429574847221375,
+            0.3093786835670471,
+            -0.3154076635837555,
+            0.057842548936605453,
+            -0.11415054649114609,
+            -0.005904613994061947,
+            1.0
+          ]
+        },
+        {
+          "step": 372,
+          "position_error_m": 0.08698900456794416,
+          "orientation_error_rad": 0.13042955126548225,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.511290036448299,
+            1.179882286484695,
+            0.1238974908408576,
+            -0.6118333091594377,
+            -0.18117639600855234,
+            2.2641248404702954,
+            0.9200873870932639
+          ],
+          "submitted_action": [
+            -0.5328046083450317,
+            0.27772247791290283,
+            -0.35915103554725647,
+            0.06281185895204544,
+            -0.11784408986568451,
+            -0.004246949218213558,
+            1.0
+          ]
+        },
+        {
+          "step": 373,
+          "position_error_m": 0.0818925827761419,
+          "orientation_error_rad": 0.1344699773013692,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5176370054131864,
+            1.1658652878123044,
+            0.129670980458525,
+            -0.6311377344364599,
+            -0.1974242765971235,
+            2.2638433175155637,
+            0.9382846442750559
+          ],
+          "submitted_action": [
+            -0.5209073424339294,
+            0.2446385771036148,
+            -0.3985053300857544,
+            0.06738269329071045,
+            -0.11919964104890823,
+            -0.002012126613408327,
+            1.0
+          ]
+        },
+        {
+          "step": 374,
+          "position_error_m": 0.07715664839275366,
+          "orientation_error_rad": 0.1372694226233587,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5233695843973958,
+            1.1517380087246145,
+            0.1352266548853094,
+            -0.6525905962740681,
+            -0.2132959631576038,
+            2.2665106421453443,
+            0.9563222405873136
+          ],
+          "submitted_action": [
+            -0.5071104168891907,
+            0.20920336246490479,
+            -0.43482518196105957,
+            0.07089065760374069,
+            -0.11955460160970688,
+            -5.30107608938124e-05,
+            1.0
+          ]
+        },
+        {
+          "step": 375,
+          "position_error_m": 0.07295679302141334,
+          "orientation_error_rad": 0.13717832598327218,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.528286757563923,
+            1.1383114537294985,
+            0.14029266490045195,
+            -0.6757744560440428,
+            -0.22902755223856305,
+            2.2748652530252196,
+            0.9742365713482531
+          ],
+          "submitted_action": [
+            -0.49251654744148254,
+            0.1704372614622116,
+            -0.4673088788986206,
+            0.07229433208703995,
+            -0.11655081063508987,
+            0.0017403600504621863,
+            1.0
+          ]
+        },
+        {
+          "step": 376,
+          "position_error_m": 0.06903007289724535,
+          "orientation_error_rad": 0.1356332844572586,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5325234605519438,
+            1.1245048087264233,
+            0.14530494245328468,
+            -0.7010526217374624,
+            -0.24435154587520314,
+            2.2857635498761297,
+            0.9919685323784598
+          ],
+          "submitted_action": [
+            -0.4697485864162445,
+            0.12739714980125427,
+            -0.48951131105422974,
+            0.07288908958435059,
+            -0.11327436566352844,
+            0.0031616478227078915,
+            1.0
+          ]
+        },
+        {
+          "step": 377,
+          "position_error_m": 0.06492436228626239,
+          "orientation_error_rad": 0.13401047843580724,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5361225889658651,
+            1.1106131284399665,
+            0.1501891309442152,
+            -0.7290695282825882,
+            -0.2595490432336718,
+            2.2993697903146715,
+            1.0098259054507028
+          ],
+          "submitted_action": [
+            -0.4250684976577759,
+            0.07956620305776596,
+            -0.4842553734779358,
+            0.07358872145414352,
+            -0.11077691614627838,
+            0.0042360518127679825,
+            1.0
+          ]
+        },
+        {
+          "step": 378,
+          "position_error_m": 0.060695836384721036,
+          "orientation_error_rad": 0.13270113063589659,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5391888635012788,
+            1.0953150798255098,
+            0.15519314480966467,
+            -0.7600340651954942,
+            -0.27469394026131616,
+            2.3139047202919625,
+            1.0280435920763162
+          ],
+          "submitted_action": [
+            -0.37767505645751953,
+            0.03418978303670883,
+            -0.473910391330719,
+            0.07430268824100494,
+            -0.10889934003353119,
+            0.005101120565086603,
+            1.0
+          ]
+        },
+        {
+          "step": 379,
+          "position_error_m": 0.05666783868324046,
+          "orientation_error_rad": 0.13031424137371564,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5413459315637098,
+            1.0797752137900412,
+            0.15965173439135655,
+            -0.793636426101026,
+            -0.290133270038672,
+            2.332141881226682,
+            1.0466449059492158
+          ],
+          "submitted_action": [
+            -0.25824815034866333,
+            -0.1294509619474411,
+            -0.509141743183136,
+            0.07421449571847916,
+            -0.10521745681762695,
+            0.006067951209843159,
+            1.0
+          ]
+        },
+        {
+          "step": 380,
+          "position_error_m": 0.052588468106230774,
+          "orientation_error_rad": 0.12724613250133013,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.54204910411135,
+            1.0636132765054314,
+            0.16313263797851776,
+            -0.8300261433538669,
+            -0.30553896335313147,
+            2.3529622944688824,
+            1.0651274002253484
+          ],
+          "submitted_action": [
+            -0.267002671957016,
+            -0.1297009289264679,
+            -0.5187923312187195,
+            0.07436367869377136,
+            -0.1007247269153595,
+            0.007678982801735401,
+            1.0
+          ]
+        },
+        {
+          "step": 381,
+          "position_error_m": 0.04848331545603523,
+          "orientation_error_rad": 0.12490853805444922,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5416875874391841,
+            1.0455406978753543,
+            0.16655008684935196,
+            -0.8700170598054682,
+            -0.3204598281398234,
+            2.3746422923212758,
+            1.0833494495851905
+          ],
+          "submitted_action": [
+            -0.21535590291023254,
+            -0.13009102642536163,
+            -0.4925992786884308,
+            0.07475102692842484,
+            -0.09795349836349487,
+            0.008793257176876068,
+            1.0
+          ]
+        },
+        {
+          "step": 382,
+          "position_error_m": 0.04411220609738966,
+          "orientation_error_rad": 0.1185097758961999,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5396804955153096,
+            1.0296425179409734,
+            0.16824722197386774,
+            -0.9110614414371531,
+            -0.335636372441973,
+            2.404811464693099,
+            1.1013295577287974
+          ],
+          "submitted_action": [
+            -0.20804879069328308,
+            -0.11587445437908173,
+            -0.43237102031707764,
+            0.0714288204908371,
+            -0.08920793980360031,
+            0.009876269847154617,
+            1.0
+          ]
+        },
+        {
+          "step": 383,
+          "position_error_m": 0.0391789037523106,
+          "orientation_error_rad": 0.10980171999525312,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5364185979821497,
+            1.0141138747366942,
+            0.16949707609125098,
+            -0.953590780352833,
+            -0.3500776404774852,
+            2.4384903538161837,
+            1.1184392057692718
+          ],
+          "submitted_action": [
+            -0.19555607438087463,
+            -0.09391681104898453,
+            -0.36461490392684937,
+            0.06637614965438843,
+            -0.08020114153623581,
+            0.01019286923110485,
+            1.0
+          ]
+        },
+        {
+          "step": 384,
+          "position_error_m": 0.034208324204976576,
+          "orientation_error_rad": 0.10044715660288238,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5322971907969837,
+            0.9979519883815896,
+            0.17046880129015152,
+            -0.9976224003187047,
+            -0.36426080772920894,
+            2.474043009784342,
+            1.1352336730582198
+          ],
+          "submitted_action": [
+            -0.15899907052516937,
+            -0.07703197002410889,
+            -0.32866519689559937,
+            0.0608430840075016,
+            -0.07208938151597977,
+            0.009863982908427715,
+            1.0
+          ]
+        },
+        {
+          "step": 385,
+          "position_error_m": 0.02904076828860248,
+          "orientation_error_rad": 0.08933314691269315,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.527305843137758,
+            0.9823629934808293,
+            0.1707128587203112,
+            -1.04190651341866,
+            -0.3783538580746666,
+            2.51248750153043,
+            1.1516504215331793
+          ],
+          "submitted_action": [
+            -0.13909895718097687,
+            -0.04592079669237137,
+            -0.27938568592071533,
+            0.05364369973540306,
+            -0.062222857028245926,
+            0.009260672144591808,
+            1.0
+          ]
+        },
+        {
+          "step": 386,
+          "position_error_m": 0.023379981290979304,
+          "orientation_error_rad": 0.07839193132490754,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5219531435017903,
+            0.9666097731014167,
+            0.1709805758728724,
+            -1.0871795520952572,
+            -0.39228265968647386,
+            2.5512533870475425,
+            1.1678729614844792
+          ],
+          "submitted_action": [
+            -0.0953984335064888,
+            -0.01922493614256382,
+            -0.22521893680095673,
+            0.046423960477113724,
+            -0.05425352603197098,
+            0.007782937493175268,
+            1.0
+          ]
+        },
+        {
+          "step": 387,
+          "position_error_m": 0.017604664715217145,
+          "orientation_error_rad": 0.06532075487479763,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5164525976584451,
+            0.953094800819838,
+            0.17052377101012106,
+            -1.1302328302648625,
+            -0.40674247515049483,
+            2.593041465483773,
+            1.1842980996017571
+          ],
+          "submitted_action": [
+            -0.06732524186372757,
+            0.0026720697060227394,
+            -0.17243489623069763,
+            0.036677658557891846,
+            -0.04388789087533951,
+            0.00570692541077733,
+            1.0
+          ]
+        },
+        {
+          "step": 388,
+          "position_error_m": 0.011140086499482924,
+          "orientation_error_rad": 0.05021353779252136,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.5113715565285961,
+            0.9439040045826435,
+            0.1696651861307359,
+            -1.1691230749788757,
+            -0.4217053818757414,
+            2.6368353587970708,
+            1.2008415461027484
+          ],
+          "submitted_action": [
+            -0.04524024575948715,
+            0.011688421480357647,
+            -0.0875851958990097,
+            0.024832580238580704,
+            -0.03276953101158142,
+            0.0025328216142952442,
+            1.0
+          ]
+        },
+        {
+          "step": 389,
+          "position_error_m": 0.0052411220933507524,
+          "orientation_error_rad": 0.035263283686713755,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 1,
+          "joint_positions": [
+            0.5066415520407171,
+            0.9357073205956834,
+            0.16801778991774224,
+            -1.204320214651357,
+            -0.4371281637234105,
+            2.6780179605950614,
+            1.2175867094949993
+          ],
+          "submitted_action": [
+            -0.02495897375047207,
+            0.05772737041115761,
+            -0.046360600739717484,
+            0.014252761378884315,
+            -0.022235896438360214,
+            9.475511615164578e-05,
+            1.0
+          ]
+        },
+        {
+          "step": 390,
+          "position_error_m": 0.002562995221047845,
+          "orientation_error_rad": 0.020758917669526984,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 2,
+          "joint_positions": [
+            0.5024328426297574,
+            0.9296724713477617,
+            0.16582572791453382,
+            -1.23445776616205,
+            -0.452352189041313,
+            2.7164864295545565,
+            1.233797732037736
+          ],
+          "submitted_action": [
+            0.06703978031873703,
+            0.08183059096336365,
+            -0.021229101344943047,
+            0.0038777347654104233,
+            -0.011807110160589218,
+            -0.002130183856934309,
+            1.0
+          ]
+        },
+        {
+          "step": 391,
+          "position_error_m": 0.006354936729826244,
+          "orientation_error_rad": 0.00846689718148469,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 3,
+          "joint_positions": [
+            0.4990639286541788,
+            0.9273348730524161,
+            0.1630526798997619,
+            -1.2578422701421534,
+            -0.46717882557635926,
+            2.751827212888033,
+            1.2492647574306828
+          ],
+          "submitted_action": [
+            0.07047341763973236,
+            0.09563156217336655,
+            0.1984536200761795,
+            -0.006372790317982435,
+            -0.0017909854650497437,
+            -0.004413160495460033,
+            1.0
+          ]
+        },
+        {
+          "step": 392,
+          "position_error_m": 0.010511933073292243,
+          "orientation_error_rad": 0.011241020499497437,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4968057630655928,
+            0.9273259250005553,
+            0.16037239210981147,
+            -1.274878070121486,
+            -0.48121063735087,
+            2.7821144776217617,
+            1.2637861913440742
+          ],
+          "submitted_action": [
+            0.07866284251213074,
+            0.09638674557209015,
+            0.24187827110290527,
+            -0.015592649579048157,
+            0.007159979082643986,
+            -0.006619803141802549,
+            1.0
+          ]
+        },
+        {
+          "step": 393,
+          "position_error_m": 0.014055402494742214,
+          "orientation_error_rad": 0.021201492520709214,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49525559481398196,
+            0.9290714740508587,
+            0.1570722565883294,
+            -1.2859321034717732,
+            -0.49396057503599017,
+            2.8062531717754418,
+            1.2769167269377153
+          ],
+          "submitted_action": [
+            0.07137789577245712,
+            0.11468756943941116,
+            0.2815382778644562,
+            -0.022187218070030212,
+            0.015011860057711601,
+            -0.007284944411367178,
+            1.0
+          ]
+        },
+        {
+          "step": 394,
+          "position_error_m": 0.0164578629324119,
+          "orientation_error_rad": 0.0301034051208886,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4944348710767371,
+            0.9308989606554282,
+            0.1543950193931442,
+            -1.2925988354912268,
+            -0.504757762370097,
+            2.824108634392157,
+            1.2879979786603177
+          ],
+          "submitted_action": [
+            0.0689905434846878,
+            0.12308794260025024,
+            0.3024676442146301,
+            -0.027269816026091576,
+            0.021514248102903366,
+            -0.007739376742392778,
+            1.0
+          ]
+        },
+        {
+          "step": 395,
+          "position_error_m": 0.01729419509886793,
+          "orientation_error_rad": 0.035788133953538144,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4942816573359632,
+            0.9292695363184487,
+            0.15302191211876107,
+            -1.299131392064122,
+            -0.5137256103305009,
+            2.834199587359793,
+            1.297491844430189
+          ],
+          "submitted_action": [
+            0.10063287615776062,
+            0.1198381707072258,
+            0.29022011160850525,
+            -0.029333757236599922,
+            0.024774178862571716,
+            -0.008087703958153725,
+            1.0
+          ]
+        },
+        {
+          "step": 396,
+          "position_error_m": 0.01658572211489427,
+          "orientation_error_rad": 0.040401878040899765,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49474919111249843,
+            0.9277481642506821,
+            0.15244938497271426,
+            -1.3015800062392069,
+            -0.5208694866909387,
+            2.839698786054249,
+            1.305361317586374
+          ],
+          "submitted_action": [
+            0.11136793345212936,
+            0.10772477090358734,
+            0.26805245876312256,
+            -0.031597547233104706,
+            0.028377877548336983,
+            -0.007900134660303593,
+            1.0
+          ]
+        },
+        {
+          "step": 397,
+          "position_error_m": 0.014752331715927087,
+          "orientation_error_rad": 0.04413150089411365,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.49550019272731116,
+            0.9269171583974403,
+            0.15244516259260854,
+            -1.299642194008423,
+            -0.5258892096523431,
+            2.8402803109350208,
+            1.3109068397980903
+          ],
+          "submitted_action": [
+            0.0952296257019043,
+            0.09152880311012268,
+            0.23753246665000916,
+            -0.03299792855978012,
+            0.03189091011881828,
+            -0.006920273881405592,
+            1.0
+          ]
+        },
+        {
+          "step": 398,
+          "position_error_m": 0.0126907451301802,
+          "orientation_error_rad": 0.04598254391764696,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4965315108825201,
+            0.927749326501382,
+            0.15324059423405312,
+            -1.2942461007899226,
+            -0.5287504104588795,
+            2.8369881356962994,
+            1.3140000818059867
+          ],
+          "submitted_action": [
+            0.08560718595981598,
+            0.0691789984703064,
+            0.21746152639389038,
+            -0.03283378481864929,
+            0.033275555819272995,
+            -0.005923535209149122,
+            1.0
+          ]
+        },
+        {
+          "step": 399,
+          "position_error_m": 0.010953457901283332,
+          "orientation_error_rad": 0.045166121933096826,
+          "stable_hold": true,
+          "strict_ready": false,
+          "derived_consecutive_ready": 0,
+          "joint_positions": [
+            0.4973141145557771,
+            0.9289239607948416,
+            0.1540813246460652,
+            -1.2875457446679524,
+            -0.5297702117970572,
+            2.8299872974874534,
+            1.3148771900723724
+          ],
+          "submitted_action": [
+            0.07083120197057724,
+            0.06967557221651077,
+            0.21431513130664825,
+            -0.030138352885842323,
+            0.032796818763017654,
+            -0.003990975208580494,
+            1.0
+          ]
+        },
+        {
+          "step": 400,
+          "position_error_m": 0.008898854251300771,
+          "orientation_error_rad": 0.041650337018988765,
+          "stable_hold": true,
+          "strict_ready": true,
+          "derived_consecutive_ready": 1,
+          "joint_positions": [
+            0.4976303830097056,
+            0.9267838880725797,
+            0.15596757569703107,
+            -1.2837290429553345,
+            -0.5293344181807803,
+            2.8196396067080793,
+            1.3141066312688452
+          ],
+          "submitted_action": [
+            0.08161310851573944,
+            0.07597612589597702,
+            0.17497657239437103,
+            -0.025639671832323074,
+            0.03009539470076561,
+            -0.0020938203670084476,
+            1.0
+          ]
+        }
+      ],
+      "interpretation": "Existing current_exact was validated after upstream earlier CARRY. Actual transport never maintained five strict ready frames; neither PLACE nor RELEASE began. Static selection is not execution success."
+    }
+  ],
+  "findings": [
+    "12000036: short-only uses the same initial carry state and selects the same outward_15_inset route, but an unsuccessful new candidate costs 73 work and four control steps. Identical 5/17/55/28-stage durations shift PLACE and RELEASE four steps later and consume the original zero-slack success window.",
+    "12000036 full: upstream handoff adds seven steps before CARRY, then short-route search adds four planning steps. PLACE begins eleven steps later, and RELEASE is not reached by 400. This is actual closed-loop delay, not the separate old route@330 static rejection.",
+    "6000005: handoff and full enter CARRY 15 steps earlier, allowing the already-existing current_exact route to be selected. The new inset is never attempted there. Forty-one executed transport steps maintain grasp/joint protection but never five consecutive arrival frames.",
+    "The new inset is selected four times across short/full: two duplicate executions of demo87 accelerate an existing success 300 to 283; two 12000011 second attempts improve progress but still fail at 400. There are no newly recovered successful profiles.",
+    "Next-step evidence supports bounded candidate scheduling that protects existing route budgets, and separately observed near-goal settling. It does not support lowering arrival/guard thresholds, accepting budget-profile safety bypasses, or claiming generalization."
+  ],
+  "limits": [
+    "Known diagnostic cases, repeated profile/start data; no independent confirmation.",
+    "Consecutive-ready counts are derived from saved inputs, not newly simulated trajectories.",
+    "A phase-transition event and the first submitted command in that phase differ by one control step. Both are explicitly labeled.",
+    "Reserved schedule steps are controller heuristics, not physical completion guarantees."
+  ]
+}

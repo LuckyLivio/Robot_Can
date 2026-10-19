@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "scope": "Manual review of both rendered PDF previews by the edge diagnostic agent and both PNG figures by the parent agent; data, dimensions, vector/font and rendered alignment receipts cross-checked. No browser acceptance.",
+  "figures": [
+    {
+      "id": "V18_smoke_a_profiles",
+      "reviewed_pdf_preview": "reproduction/improvement_v18_20261019_01/validation/artifacts_preflight_previews/V18_smoke_a_profiles.png",
+      "png_size": [
+        4320,
+        2640
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "minimum_pdf_font_pt": 8.0,
+      "pdf_font_runs": 28,
+      "embedded_fonts": true,
+      "vector_only_pdf": true,
+      "editable_svg_text": true,
+      "csv_rows": 12,
+      "manual_visual_checks": {
+        "no_clipped_or_overlapping_labels": true,
+        "chinese_labels_legible": true,
+        "six_versions_in_registered_order": true,
+        "nominal_profile_separated_from_standard_conditions": true,
+        "budget_protection_caveat_visible": true
+      },
+      "data_note": "Standard successes 2/3/6/2/2/2 out of 8 plus the separate clearance profile (budget success at 382; remaining five incomplete at 400).",
+      "render_time_alignment_receipt": "validation/V18_smoke_a_profiles.skill_alignment.json"
+    },
+    {
+      "id": "V18_smoke_a_targets",
+      "reviewed_pdf_preview": "reproduction/improvement_v18_20261019_01/validation/artifacts_preflight_previews/V18_smoke_a_targets.png",
+      "png_size": [
+        4320,
+        2100
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "minimum_pdf_font_pt": 8.0,
+      "pdf_font_runs": 47,
+      "embedded_fonts": true,
+      "vector_only_pdf": true,
+      "editable_svg_text": true,
+      "csv_rows": 18,
+      "manual_visual_checks": {
+        "no_clipped_or_overlapping_labels": true,
+        "chinese_labels_legible": true,
+        "six_versions_in_registered_order": true,
+        "nominal_profile_separated_from_standard_conditions": true,
+        "budget_protection_caveat_visible": true
+      },
+      "data_note": "All six versions fail both task targets at 400; only budget completes the separate clearance profile at 382.",
+      "render_time_alignment_receipt": "validation/V18_smoke_a_targets.skill_alignment.json"
+    }
+  ],
+  "new_evaluation_samples": 0,
+  "automatic_pdf_text_audit": {
+    "passed": true,
+    "minimum_required_pt": 5,
+    "minimum_observed_pt": 8,
+    "below_minimum_count": 0
+  },
+  "automatic_pdf_collision_audit": {
+    "status": "not_auditable",
+    "passed": null,
+    "reason": "PyMuPDF is unavailable in both the project and bundled Python runtimes. No packages were installed and no automated collision pass is claimed. Both PDF previews and PNG figures were visually inspected without visible label overlaps or clipping."
+  },
+  "external_source_validator_note": "The external source heuristic did not recognize the project-specific render-time alignment gate. The actual final Matplotlib figures were additionally checked with require_matplotlib_panel_alignment before export; receipts are retained. PNG+PDF/SVG is the requested output; no TIFF requirement is claimed.",
+  "source_sha256": {
+    "reproduction/improvement_v18_20261019_01/build_report.py": "ca22cc05af8a0d6d8539f3920c622fe1a0816f8c03d47368f278dc1fb4178ef8",
+    "reproduction/improvement_v18_20261019_01/validate_artifacts.py": "b66ccd4b939e63c107938ea4e6f933885f71d64648db2d1304e081c2c64cfb23",
+    "reproduction/improvement_v18_20261019_01/validation/artifacts_preflight.json": "a277cd018359d51120a4902aea75fddfe691e55ee3bbccca8431b50207a36fda",
+    "reproduction/improvement_v18_20261019_01/figures/CATALOG.json": "48fbf3b08f304da020875cf64fc4b3f22731cfa134be58d91b16fe1a1b79f029",
+    "reproduction/improvement_v18_20261019_01/validation/V18_smoke_a_profiles.skill_alignment.json": "61ae662220611987dd2ee813fdfee650f80c93a0cabcffd67719230e393b7ae4",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_profiles.png": "0953ccc7becc72747a282ada130a4c25bf15c4ff537499db9c2a41e90583213c",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_profiles.pdf": "c4bdce91536c5f53d7ccac61ad0df6710b1ecbdfd73815972c90e810a5094b45",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_profiles.svg": "1d03d110468017505038f976930e7fadc8dd1e1ceb238da1f0a6605572a056b3",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_profiles.csv": "268ae9cd6ccc571688913e80f887833254129dbebe428e2c1f69757aab8170bd",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_profiles.alignment.json": "46bda7753b7ce1dedccdea052139807244a9699419661761b80692e284ec2053",
+    "reproduction/improvement_v18_20261019_01/validation/V18_smoke_a_targets.skill_alignment.json": "f636ed18647a5940b92c221b81e7dcc57171d494605d0ebdfacdc581a322f677",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_targets.png": "a95b6d0d8854dd86b582acf48c1bc81ddd94c91b50e185ce61ba703524a8577a",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_targets.pdf": "62ae25213e8d48919efc70f99beb210e789530c57c3bc101889a9b4a3510ad16",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_targets.svg": "b8e548b36356feacbed514c5ea9af0e5b18ab48cbfb20e47fc6399fe31960068",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_targets.csv": "02bffa2e5d7e5ac95b52e135db7b583f675a9b20f5567c6422e5a464de79c095",
+    "reproduction/improvement_v18_20261019_01/figures/V18_smoke_a_targets.alignment.json": "82edfb6358b68838ee39b6747526c450cdb7a80ce598689b57d59ae2b324e192"
+  }
+}
