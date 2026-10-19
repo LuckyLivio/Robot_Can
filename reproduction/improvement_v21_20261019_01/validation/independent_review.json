@@ -1,0 +1,218 @@
+{
+  "passed": true,
+  "utc": "2026-10-19T13:00:33.334456+00:00",
+  "reviewer": "experiment_harness",
+  "scope": "Independent read-only scientific and protocol review of six final report findings. Existing saved traces and source were inspected; no new controller decisions, simulation, experiments or training. Rendering/root-document/Git/preservation-manifest review are outside this receipt.",
+  "new_evaluation_samples": 0,
+  "new_controller_replay_controls": 0,
+  "new_physical_replay_controls": 0,
+  "findings_review": [
+    {
+      "index": 1,
+      "title": "本轮小测试未达门槛，v21不采用",
+      "supported": true,
+      "review": "Six group counts, 54/20255, 9 profiles/8 physical starts, three failed targets, actual v20 and historical v17 regression, and the distinct 10/4000 saved-input diagnostic count are supported. No v21 adoption or independent generalization is claimed.",
+      "sources": [
+        "analysis/smoke_a.json",
+        "analysis/control_conclusions_a.json",
+        "analysis/smoke_a_recenter_diagnosis.json",
+        "validation/development_gate.json"
+      ]
+    },
+    {
+      "index": 2,
+      "title": "A恢复了重定位五帧，但没有提前进入搬运",
+      "supported": true,
+      "review": "Exact recenter replay supports preserved entry, first action/state differences, five original predicates, restored 316-320 streak and unchanged final CLOSE/CARRY times. Related frames and pure PATH_RECENTER commands are now explicitly separated.",
+      "sources": [
+        "analysis/smoke_a_handoff_diagnosis.json",
+        "analysis/smoke_a_recenter_diagnosis.json",
+        "analysis/control_conclusions_a.json"
+      ]
+    },
+    {
+      "index": 3,
+      "title": "6000005的瓶颈转到搬运稳定与剩余预算",
+      "supported": true,
+      "review": "The observed maximum CARRY streak rises from three to four, with the stated final errors and no PLACE. B has no scope here. The report correctly avoids treating a hypothetical fifth frame as whole-task success.",
+      "sources": [
+        "analysis/smoke_a_handoff_diagnosis.json",
+        "analysis/control_conclusions_a.json"
+      ]
+    },
+    {
+      "index": 4,
+      "title": "只把B放进PLACE没有复现v20的一步释放收益",
+      "supported": true,
+      "review": "Raw trace equality/differences, height .9006645083427429 versus .8991414308547974, original floor+.10 threshold, release/FIFO timing and distinct PLACE entry states are verified. Source order confirms the release predicate runs before placement feedback; the final fallback cannot cause the prior failed predicate.",
+      "sources": [
+        "analysis/control_conclusions_a.json",
+        "analysis/smoke_a_handoff_diagnosis.json",
+        "smoke_a/place_known_full_s23_clean_demo_12000036/trace.jsonl",
+        "smoke_a/v20_known_full_s23_clean_demo_12000036/trace.jsonl"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "B范围收窄消除了旧搬运退步，但12000011仍太晚",
+      "supported": true,
+      "review": "First 70-control rotation timeout and second-attempt 5/10/60 stages are supported, as is exact B-only equality to v19 and zero integral trigger in its five PLACE proposals. Scope proposal versus actual brake trigger is distinguished. The incorrect all-groups wording was corrected to exclude budget.",
+      "sources": [
+        "analysis/smoke_a_handoff_diagnosis.json",
+        "analysis/control_conclusions_a.json"
+      ]
+    },
+    {
+      "index": 6,
+      "title": "另外两个预登记目标仍由上游问题限制",
+      "supported": true,
+      "review": "Both upstream target histories and unchanged inherited arrival rules are supported. The corrected five-group wording excludes budget. Search nonconfirmation remains explicitly distinct from physical impossibility.",
+      "sources": [
+        "analysis/smoke_a_handoff_diagnosis.json",
+        "analysis/smoke_a_handoff_diagnosis.csv",
+        "analysis/control_conclusions_a.json"
+      ]
+    }
+  ],
+  "completed_stages": [
+    {
+      "stage": "smoke_a",
+      "executions": 54,
+      "controls": 20255,
+      "profiles_per_version": 9,
+      "unique_physical_starts": 8,
+      "decision_verification_passed": true,
+      "physical_verification_passed": true,
+      "source_snapshot_verified": true,
+      "fixed_wave_executions": [
+        36,
+        18
+      ]
+    }
+  ],
+  "success_counts": {
+    "v19": 2,
+    "v20": 3,
+    "budget": 7,
+    "recenter": 2,
+    "place": 2,
+    "v21": 2
+  },
+  "scope_counters": {
+    "v21_handoff_steps": 212,
+    "v21_handoff_entry_steps": 42,
+    "v21_handoff_postentry_steps": 170,
+    "v21_handoff_axial_feedback": 56,
+    "v21_handoff_lateral_feedback": 132,
+    "v21_handoff_axial_away": 46,
+    "v21_place_scope_proposals": 184,
+    "v21_place_scope_submitted": 184,
+    "v21_place_braking_law_steps": 184,
+    "v21_place_braking_triggers": 54,
+    "v21_place_braking_submitted": 54,
+    "v21_place_inside_position_ball": 2
+  },
+  "outcome_gate": {
+    "passed": false,
+    "adopted": false,
+    "target_successes": 0,
+    "required_targets": 3,
+    "regressions": {
+      "v6": 7,
+      "v13": 5,
+      "v14": 4,
+      "v15": 2,
+      "v16": 0,
+      "v17": 1,
+      "v18": 0,
+      "v19": 0,
+      "v20": 1,
+      "budget": 5
+    },
+    "historical_reference_coverage": {
+      "v6": 8,
+      "v13": 9,
+      "v14": 9,
+      "v15": 9,
+      "v16": 9,
+      "v17": 9,
+      "v18": 9
+    },
+    "actual_baselines": [
+      "v19",
+      "v20",
+      "budget"
+    ],
+    "v17_historical_only": true,
+    "failed_gate_enforcement_passed": true,
+    "unexecuted_planned_counts": {
+      "pilot": 564,
+      "development": 720,
+      "confirmation": 1440
+    },
+    "not_created": [
+      "protocols/dev_jobs.json",
+      "protocols/development_freeze.json",
+      "protocols/confirmation_jobs.json",
+      "protocols/confirmation_lock.json"
+    ],
+    "pilot_jobs_pre_registered_only": true
+  },
+  "release_check": {
+    "original_height_threshold_m": 0.9,
+    "place_v21_control390_object_z_m": 0.9006645083427429,
+    "actual_v20_control390_object_z_m": 0.8991414308547974,
+    "original_predicate_precedes_helper": true,
+    "place_entry_eef_difference_m": 0.002629851522029734,
+    "place_entry_object_difference_m": 0.002679061635474144
+  },
+  "diagnostic_hash_sources_verified": 238,
+  "corrections_resolved": [
+    "Clarified recenter-related versus pure PATH_RECENTER counts.",
+    "Limited held-pose five-frame language while retaining EDGE/recenter confirmation.",
+    "Excluded budget from common CARRY/PLACE timing and 13000022 DESCEND claims."
+  ],
+  "limitations": [
+    "Mixed rejection, parent replacement, CARRY_HOLD, PLACE_HOLD and terminal tail had zero smoke occurrences; negative paths rely on existing static/components, not physical branch coverage.",
+    "Nominal envelope checks and delayed-error heuristics do not prove future tracking, full-arm safety or dynamic stability.",
+    "Same event time does not imply the same continuous state or establish a single-coefficient causal explanation.",
+    "Budget comparator uses different protections; 7/9 does not authorize adoption.",
+    "The two 6000005 profiles share one physical start and diagnostic replay adds no evaluation samples."
+  ],
+  "source_sha256": {
+    "reproduction/improvement_v21_20261019_01/analysis/components_a.json": "d0e493c76273bafab925aa5d4779ec2eaee6ed81cfacca245002d5d3ae18b6d6",
+    "reproduction/improvement_v21_20261019_01/analysis/control_conclusions_a.json": "5e284bea37335e3699a3e02586b069fe0f678fbc96a383ec26fa78fc7992a4e6",
+    "reproduction/improvement_v21_20261019_01/analysis/mechanisms_a.json": "192387f9bedd8092d1878b6f7a842dcb1a0f601ea024459d15b9b4c8c819ae20",
+    "reproduction/improvement_v21_20261019_01/analysis/place_scope_static_b.json": "46037cfe6d6962afcda299fa90b86d2eff6df5f351e05b236f261ca9d83e874b",
+    "reproduction/improvement_v21_20261019_01/analysis/report_findings.json": "65a256abfe45653da8d2e70a87bc1fc5cd678b991befa18c57e06114dc32a3cf",
+    "reproduction/improvement_v21_20261019_01/analysis/smoke_a.json": "20ea1b009018a0dfb1b2a85aa197dafacc8a2d3bee9eefabef28ac173e86e24d",
+    "reproduction/improvement_v21_20261019_01/analysis/smoke_a_handoff_diagnosis.csv": "d08de0441c83efb394fab89c93fe5344cdbe304fbc761e0254c33ecd5a883e97",
+    "reproduction/improvement_v21_20261019_01/analysis/smoke_a_handoff_diagnosis.json": "3e0fc46d11e5bb662b39d956fb6e235c73e66835d995f14d1565011509eefdbe",
+    "reproduction/improvement_v21_20261019_01/analysis/smoke_a_physics.json": "579852d527947fb8908c16ccb4eec8913310849115de2f6589dbde0b399baf5a",
+    "reproduction/improvement_v21_20261019_01/analysis/smoke_a_recenter_diagnosis.json": "671cdcc24d12299707353a618c92b4439ec51a4e9cf9845f417f20f9493cab1c",
+    "reproduction/improvement_v21_20261019_01/analysis/smoke_a_verification.json": "2e7e4265a763af25188d477674f8384ae2b4d0e7d013653692bee765ff087ea2",
+    "reproduction/improvement_v21_20261019_01/analysis/transition_static_a.json": "bfc7c623a39286b211a4b355f8077d0f554c014bfe99eb0f324e8ea1eb274a5b",
+    "reproduction/improvement_v21_20261019_01/freeze_development.py": "2c6147ccbdc5caffa79dce418b1d05d433da6c7b37af250dd84826a8d2dd00c2",
+    "reproduction/improvement_v21_20261019_01/protocols/PLAN.md": "ecf6b0a77a0c725047d7b63386613c2a9682823ccf3ffb2e1fb9f8f3f640884a",
+    "reproduction/improvement_v21_20261019_01/protocols/pilot_jobs.json": "8b46e890f0e853895c89d6f06fae5e145c61a817cd6dc12299da743da061e6cd",
+    "reproduction/improvement_v21_20261019_01/protocols/protocol_lock.json": "fe524cbcfee92542b6ee3f42470509de3fb5b627f72f5037f0a9147ff55842a6",
+    "reproduction/improvement_v21_20261019_01/protocols/smoke_jobs.json": "b36e806f21bb82ea153180b455308cc0b36b109fbaf303cb3ccd5de1be4cb459",
+    "reproduction/improvement_v21_20261019_01/smoke_a/completed.json": "f3fef97c4dc65c04740b11187ad758cddcc93761a8ed49f8db2f958097b4d227",
+    "reproduction/improvement_v21_20261019_01/smoke_a/place_known_bc_k2_clean_demo_12000011/trace.jsonl": "62b2b1a8b1ac46edf235b4886c45cc69642884eacce70b7aa550eeec29c4f6be",
+    "reproduction/improvement_v21_20261019_01/smoke_a/place_known_full_s23_clean_demo_12000036/trace.jsonl": "591c2a6806d9d7b45791c11d45dfb252350d9b2188eb0250cba9f98eb5fc5c3f",
+    "reproduction/improvement_v21_20261019_01/smoke_a/recenter_known_full_s23_clean_demo_12000036/trace.jsonl": "0791a649405d5856715409b52767160f300e5ca46b7225b5da59d9eb968b2521",
+    "reproduction/improvement_v21_20261019_01/smoke_a/started.json": "24d345b0fc8ce1e2c16f9235c05104e68cbbd9d9cc66e4a29a7eadadc746b670",
+    "reproduction/improvement_v21_20261019_01/smoke_a/v19_known_bc_k2_clean_demo_12000011/trace.jsonl": "da0fa78616c868381fa34b03316652e71521e3e09087f8da1d90d515d1436c4b",
+    "reproduction/improvement_v21_20261019_01/smoke_a/v19_known_full_s23_clean_demo_12000036/trace.jsonl": "9d827c35d052e2d168da635e10deff0c504d5220326edb1d477c2d334db996b7",
+    "reproduction/improvement_v21_20261019_01/smoke_a/v20_known_full_s23_clean_demo_12000036/trace.jsonl": "5c1fd0953c1ea8ed934efc810522c3fe4a3111b8c4558880acf430347d1312b7",
+    "reproduction/improvement_v21_20261019_01/smoke_a/v21_known_full_s23_clean_demo_12000036/trace.jsonl": "60968dac1f2a8c2df38a968425f84550b18100a3f078f3839e40a6c8c97ae9a4",
+    "reproduction/improvement_v21_20261019_01/smoke_a/wave_1_completed.json": "2112f7146749feeb2a9413243a95e279f67f0753592235c6668d48d533ceed94",
+    "reproduction/improvement_v21_20261019_01/smoke_a/wave_2_completed.json": "f0d910cd65a0730a547a97f323125dee867471935d5e71847130acf9a7516b17",
+    "reproduction/improvement_v21_20261019_01/validation/development_gate.json": "0ff51e7726ed39e5afcb183acb0a413aaa7279440c834848c4d1ac8984057c62",
+    "reproduction/improvement_v21_20261019_01/validation/handoff_editorial_correction_a.json": "38f47bb8e3c8902e9cf627d58c9d0fb7e9dbd79f84abbe4491a48addda069956",
+    "reproduction/improvement_v21_20261019_01/variants.py": "8140c5894651c33651a7c33b7059edc6a571c659ca2585f2c032fbcb036935b6",
+    "reproduction/recovery_v5_20261012_01/recovery_controller.py": "88ee635f5cefbe30927d549910a5237b82f8275c0ea88da273874c4e7b637ecf",
+    "reproduction/improvement_v16_20261016_01/recovery/recovery_controller.py": "4631ae69d893eaf61540468919157426ed117132e70b18f8721bd31516143c11",
+    "reproduction/improvement_v21_20261019_01/recovery/recovery_controller.py": "4c863de3954ddb1d22b774a26a25ac929d45a3a9bb31bc74214df63f95447e76"
+  }
+}

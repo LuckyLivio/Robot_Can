@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "scope": "Both final PDF-rendered previews manually inspected after source, raw CSV, vector, font and layout validation. Automatic PDF geometry collision audit is separately unavailable.",
+  "manually_inspected": [
+    "V21_smoke_a_profiles",
+    "V21_smoke_a_targets"
+  ],
+  "findings": [
+    "All six groups and both profile panels are legible; no clipping, text overlap or missing Chinese glyphs observed in the actual PDF previews.",
+    "Profiles chart standard counts are2,3,6,2,2,2 out of8; the reused clearance profile is separate and succeeds only for oldbudget at382.",
+    "Target matrix shows17 unfinished cells at400 and the single oldbudget clearance success at382; outcomes also have text labels, not color alone.",
+    "Displayed source footnotes distinguish oldbudget protection and the paired component parent. No unordered conditions are joined by lines."
+  ],
+  "pdf_text_minimum_pt": 8,
+  "raw_csv_values_recomputed": true,
+  "automatic_collision_audit": {
+    "status": "not_auditable",
+    "passed": null,
+    "reason": "PyMuPDF unavailable in existing environment; no dependency installed. Per-figure audit attempts and errors are retained."
+  },
+  "new_physical_episodes": 0,
+  "source_sha256": {
+    "reproduction/improvement_v21_20261019_01/build_report.py": "bf41fe4c6ce60b21fdfccaef09119abf53e610402d2fd809cf3dd22219550627",
+    "reproduction/improvement_v21_20261019_01/validate_artifacts.py": "c1ec34db936f32087e7ebe957d1e6e41d5af4538f04184fff59a1f08cc5787fd",
+    "reproduction/improvement_v21_20261019_01/figures/CATALOG.json": "14d0da4e8f499347b228be20d4dd8ed9c6897fa1cc49ebd3e00cd1cce2dc5e59",
+    "reproduction/improvement_v21_20261019_01/validation/artifacts_final.json": "33340d34ac3825d94f30728f75edbc28bef5e2fc651a41459a54b213cc4e6598",
+    "reproduction/improvement_v21_20261019_01/validation/V21_smoke_a_profiles.text_and_collision_audit.json": "c7b20bc1af352be246f8f44daa30acf9a165b38c4d3f67c73feb5e6c71b4f420",
+    "reproduction/improvement_v21_20261019_01/validation/V21_smoke_a_targets.text_and_collision_audit.json": "0c2014a2f7fbb9bd5939d087f8744586fc8430d5d4da2361158741e0b1cc5c39",
+    "reproduction/improvement_v21_20261019_01/figures/V21_smoke_a_profiles.pdf": "8eb99ec173ee99ec02ba85dbd95aa380243104db35713699b0fe04255e7f3153",
+    "reproduction/improvement_v21_20261019_01/figures/V21_smoke_a_targets.pdf": "b7020dc7f474b72f9898172c399d1bbac36b0be267b366744cba4ec9ae49dd0b",
+    "reproduction/improvement_v21_20261019_01/validation/artifacts_final_previews/V21_smoke_a_profiles.png": "50f62f7db6ca851b34fd390f45774c172b2a88a4f4e33a0a509c60bbf4109fa5",
+    "reproduction/improvement_v21_20261019_01/validation/artifacts_final_previews/V21_smoke_a_targets.png": "45ed342cbe3148a8bdf370bf8597b3da4cc4c27eda5041bf6c7f4b24a39f879f"
+  },
+  "external_auditor_sha256": {
+    "audit_pdf_text.py": "3da7faaef0b4ceb44d3e27dc9a40ec244651680ad604cc29719c24b0a4a7740b",
+    "audit_figure_collisions.py": "5800e2f6c8e9346f483abd972901eb5d1cfbc671c39d7f1a8a11d8e12c1b1090"
+  }
+}

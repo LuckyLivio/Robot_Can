@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "tolerance_pt": 1.5,
+  "method": "Final Matplotlib renderer panel extents in physical points",
+  "panels": [
+    {
+      "id": "a",
+      "left_pt": 68.95024000000001,
+      "right_pt": 345.1640447457626,
+      "bottom_pt": 46.921969999999995,
+      "top_pt": 273.68303,
+      "width_pt": 276.2138047457626,
+      "height_pt": 226.76106
+    },
+    {
+      "id": "b",
+      "left_pt": 351.16452474576266,
+      "right_pt": 515.3997600000001,
+      "bottom_pt": 46.921969999999995,
+      "top_pt": 273.68303,
+      "width_pt": 164.2352352542374,
+      "height_pt": 226.76106
+    }
+  ],
+  "checks": [
+    {
+      "check": "top_pt",
+      "difference_pt": 0.0,
+      "passed": true
+    },
+    {
+      "check": "bottom_pt",
+      "difference_pt": 0.0,
+      "passed": true
+    },
+    {
+      "check": "height_pt",
+      "difference_pt": 0.0,
+      "passed": true
+    }
+  ],
+  "minimum_visible_font_size_pt": 8.0,
+  "width_exemption": "Count axis and one-profile text axis intentionally use 3.7:2.2 widths.",
+  "formal_audit": {
+    "path": "V21_smoke_a_profiles.alignment_audit.json",
+    "sha256": "062ab9d52338a96fad0d789383d4deb9e81c56cac3cc33972d158ea1cb8750c2",
+    "verdict": "PASS",
+    "auditor_sha256": "0ac6e3aa71b4f27c35880bf96f535191566b0884fd6857e105149b43704777b9"
+  },
+  "summary": {
+    "fail": 0
+  },
+  "source_sha256": {
+    "reproduction/improvement_v21_20261019_01/build_report.py": "bf41fe4c6ce60b21fdfccaef09119abf53e610402d2fd809cf3dd22219550627",
+    "reproduction/improvement_v21_20261019_01/figure_qa/audit_panel_alignment.py": "0ac6e3aa71b4f27c35880bf96f535191566b0884fd6857e105149b43704777b9"
+  },
+  "limits": "Panel alignment and font floor only; PDF rendering, text collisions and human visual review remain separate."
+}
