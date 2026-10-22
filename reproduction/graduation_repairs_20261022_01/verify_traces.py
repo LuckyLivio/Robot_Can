@@ -269,6 +269,25 @@ def verify_stage(stage):
                 path = relative_file(ROOT, relative)
                 require(sha(path) == digest, f'Input hash mismatch: {relative}')
                 verified_inputs[relative] = {'sha256': digest, 'provenance': 'stage started.json'}
+        # Confirmation has an additional prospective lock containing its
+        # amendment, design, native starts and registration. Validate Python
+        # entries against the archived snapshot; intentional later active-code
+        # changes are outside the frozen experiment.
+        confirmation_lock = stage.parent / 'confirmation_lock.json'
+        if stage.name == 'confirmation':
+            lock = read_json(confirmation_lock)
+            require(lock.get('episodes') == expected_episodes, 'Confirmation lock episode count mismatch')
+            independent = len({name for job in jobs for name in job['demos']})
+            require(lock.get('independent_starts') == independent, 'Confirmation lock start count mismatch')
+            for relative, digest in lock.get('source_sha256', {}).items():
+                if relative.endswith('.py'):
+                    require(verified_sources.get(relative) == digest, f'Confirmation Python snapshot lock mismatch: {relative}')
+                elif relative in verified_inputs:
+                    require(verified_inputs[relative]['sha256'] == digest, f'Confirmation input lock mismatch: {relative}')
+                else:
+                    require(sha(relative_file(ROOT, relative)) == digest, f'Confirmation metadata/input hash mismatch: {relative}')
+                    verified_inputs[relative] = {'sha256': digest, 'provenance': 'confirmation_lock.json'}
+            receipt['confirmation_lock_sha256'] = sha(confirmation_lock)
         # Development startup locks predate explicit inclusion of the default
         # HDF5. Its pre-edit preservation manifest supplies an honest fallback;
         # do not pretend that this hash was recorded in the stage startup lock.
