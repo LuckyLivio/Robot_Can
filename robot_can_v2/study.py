@@ -3,6 +3,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 import hashlib
+import importlib.metadata
 import json
 from pathlib import Path
 import random
@@ -34,7 +35,7 @@ def write_new(path, data):
 def sources():
     paths = list((ROOT / 'robot_can_v2').glob('*.py'))
     paths += list((ROOT / 'reproduction/recovery_v5_20261012_01').glob('*.py'))
-    paths += [ROOT / p for p in ('common.py', 'world_model.py', 'data/splits.json', 'policy/bc_chunk_dev_v4/policy_15000.pt')]
+    paths += [DATA] + [ROOT / p for p in ('common.py', 'world_model.py', 'data/splits.json', 'policy/bc_chunk_dev_v4/policy_15000.pt')]
     paths += [ROOT / f'models/multiseed_20261012_01_full_s{s}/model.pt' for s in (17, 23, 41)]
     return sorted(set(paths))
 
@@ -65,6 +66,14 @@ def prepare_development():
 
 def run_batch(job_file, stage, workers=4):
     jobs = json.loads(Path(job_file).read_text())
+    confirmation_dataset = (RUN / 'confirmation_starts.hdf5').relative_to(ROOT).as_posix()
+    if any(job.get('dataset') == confirmation_dataset for job in jobs):
+        lock = json.loads((RUN / 'confirmation_lock.json').read_text())
+        if sha(job_file) != lock['source_sha256'][(RUN / 'confirmation_jobs.json').relative_to(ROOT).as_posix()]:
+            raise ValueError('Confirmation jobs drifted after prospective lock')
+        for relative, expected in lock['source_sha256'].items():
+            if not (ROOT / relative).is_file() or sha(ROOT / relative) != expected:
+                raise ValueError(f'Confirmation source/input drift after freeze: {relative}')
     if len({j['id'] for j in jobs}) != len(jobs):
         raise ValueError('Duplicate job IDs')
     from robot_can_v2.evaluate import validate_job
@@ -83,7 +92,8 @@ def run_batch(job_file, stage, workers=4):
     write_new(stage / 'jobs.json', jobs)
     write_new(stage / 'started.json', {'started_utc': datetime.now(timezone.utc).isoformat(),
         'source_sha256': current, 'jobs_sha256': sha(stage / 'jobs.json'),
-        'workers': workers, 'registered_episodes': sum(len(j['demos']) for j in jobs)})
+        'workers': workers, 'registered_episodes': sum(len(j['demos']) for j in jobs),
+        'packages': {p: importlib.metadata.version(p) for p in ('torch', 'numpy', 'robosuite', 'mujoco', 'h5py', 'scipy')}})
     def execute(job):
         log = stage / (job['id'] + '.log')
         command = [sys.executable, '-B', '-X', 'utf8', '-m', 'robot_can_v2.evaluate',
@@ -98,13 +108,17 @@ def run_batch(job_file, stage, workers=4):
             item = future.result(); outcomes.append(item)
             print(json.dumps({'finished_jobs': len(outcomes), 'total_jobs': len(jobs), **item}), flush=True)
     unchanged = all((ROOT / p).is_file() and sha(ROOT / p) == digest for p, digest in current.items())
-    episodes = 0
+    episodes = 0; complete_jobs = True
     for job in jobs:
         path = stage / job['id'] / 'result.json'
         if path.exists():
             result = json.loads(path.read_text())
             episodes += len(result['records'])
-    success = all(o['returncode'] == 0 for o in outcomes) and unchanged and episodes == sum(len(j['demos']) for j in jobs)
+            complete_jobs &= (result['status'] == 'complete' and result['job'] == job
+                              and [r['demo'] for r in result['records']] == job['demos'])
+        else:
+            complete_jobs = False
+    success = all(o['returncode'] == 0 for o in outcomes) and unchanged and complete_jobs and episodes == sum(len(j['demos']) for j in jobs)
     receipt = {'passed': success, 'finished_utc': datetime.now(timezone.utc).isoformat(),
                'source_unchanged': unchanged, 'episodes': episodes, 'jobs': outcomes,
                'elapsed_s': time.perf_counter() - started}
@@ -123,10 +137,15 @@ def prepare_confirmation(include_candidate=False):
               'native_initialization_seeds': seeds, 'state_names': names,
               'conditions': ['clean', 'noise005'], 'world_model_seeds': [17, 23, 41],
               'primary_episodes': 960, 'additional_queue_candidate_episodes': 480 if include_candidate else 0,
+              'observation_confirmation_episodes': 240,
               'bootstrap_unit': '60 paired independent starts; fixed WM seeds averaged within start',
               'bootstrap_draws': 20000, 'bootstrap_seed': 20261022,
               'selection': 'All 60 registered seeds retained without policy outcome filtering.',
               'include_candidate': include_candidate}
+    for semantics in ('legacy', 'canonical'):
+        path = RUN / f'policies/{semantics}_s17/final.pt'
+        locked[path.relative_to(ROOT).as_posix()] = sha(path)
+    locked[(RUN / 'CONFIRMATION_AMENDMENT.md').relative_to(ROOT).as_posix()] = sha(RUN / 'CONFIRMATION_AMENDMENT.md')
     write_new(design_file, design)
     with h5py.File(DATA, 'r') as old:
         previous = [d['states'][0] for d in old['data'].values()]
@@ -177,9 +196,16 @@ def prepare_confirmation(include_candidate=False):
         for method, seed in [('bc', None), ('full', 17), ('full', 23), ('full', 41)]:
             for noise in (0., .05):
                 jobs.append({'id': f'{controller}_{method}_s{seed}_{noise:g}', 'controller': controller,
-                    'method': method, 'seed': seed, 'noise': noise, 'demos': names,
+                    'method': method, 'seed': seed, 'noise': noise, 'demos': names, 'study_arm': 'recovery_factorial',
                     'steps': 400, 'delay': 2, 'semantics': 'legacy',
                     'dataset': destination.relative_to(ROOT).as_posix()})
+    for semantics in ('legacy', 'canonical'):
+        for noise in (0., .05):
+            jobs.append({'id': f'observation_{semantics}_{noise:g}', 'study_arm': 'observation_confirmation',
+                'controller': 'none', 'method': 'bc', 'seed': None, 'noise': noise, 'demos': names,
+                'steps': 400, 'delay': 2, 'semantics': semantics,
+                'policy': (RUN / f'policies/{semantics}_s17/final.pt').relative_to(ROOT).as_posix(),
+                'dataset': destination.relative_to(ROOT).as_posix()})
     write_new(RUN / 'confirmation_jobs.json', jobs)
     write_new(RUN / 'confirmation_state_validation.json', {'passed': True, 'old_states_compared': len(previous),
         'old_start_files': [p.relative_to(ROOT).as_posix() for p in old_files],
@@ -187,6 +213,9 @@ def prepare_confirmation(include_candidate=False):
         'policy_outcome_filtering': False, 'source_frozen_before_states': True})
     locked.update({p.relative_to(ROOT).as_posix(): sha(p) for p in
                    (design_file, destination, RUN / 'confirmation_jobs.json')})
+    for relative, expected in design['source_sha256'].items():
+        if sha(ROOT / relative) != expected:
+            raise ValueError(f'Source/input changed during start generation: {relative}')
     write_new(RUN / 'confirmation_lock.json', {'source_sha256': locked,
         'episodes': sum(len(j['demos']) for j in jobs), 'independent_starts': 60})
     print(json.dumps({'starts': 60, 'episodes': sum(len(j['demos']) for j in jobs), 'native_exact': True}), flush=True)

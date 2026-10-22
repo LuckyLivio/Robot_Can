@@ -30,6 +30,9 @@ def validate_job(job):
         raise ValueError('Unknown observation semantics')
     if job.get('steps', 400) != 400 or job.get('delay', 2) != 2:
         raise ValueError('This frozen recovery study requires exactly 400 steps and D2')
+    if any(not isinstance(job.get(k, default), int) or isinstance(job.get(k, default), bool)
+           for k, default in [('steps', 400), ('delay', 2)]):
+        raise ValueError('steps and delay must be integers')
     cfg = Config(**job.get('config', {}))
     if cfg.delay != job.get('delay', 2) or cfg.horizon_steps != job.get('steps', 400):
         raise ValueError('Controller delay/horizon conflicts with actual FIFO or episode budget')
@@ -37,6 +40,8 @@ def validate_job(job):
         raise ValueError('Study must retain two attempts and five holding confirmation frames')
     if job.get('method') == 'full' and job.get('semantics', 'legacy') != 'legacy':
         raise ValueError('Historical WM was trained on legacy inputs; canonical requires matched new WM')
+    if job.get('method') == 'full' and job.get('seed') not in (17, 23, 41):
+        raise ValueError('Full uses the three registered frozen training seeds')
     names = job.get('demos', [])
     if not names or len(set(names)) != len(names):
         raise ValueError('demos must be nonempty and unique')
@@ -51,6 +56,10 @@ def load_world(seed):
     path = ROOT / f'models/multiseed_20261012_01_full_s{seed}/model.pt'
     ck = torch.load(path, map_location='cpu', weights_only=True)
     c = ck['config']
+    from robot_can_v2.train_world import validate_model_config
+    validate_model_config(c, horizon=8, observation_semantics='legacy')
+    if (c.get('method'), c.get('dim'), c.get('seed'), c.get('future_only')) != ('full', 23, seed, True):
+        raise ValueError('Checkpoint is not the registered Full model')
     model = WorldModel(c['dim'], c['width'], c['future_only'])
     model.load_state_dict(ck['state_dict'])
     return model.eval()
@@ -118,6 +127,8 @@ def run(job, output):
     actual_semantics = ck['config'].get('observation_semantics', 'legacy')
     if actual_semantics != job.get('semantics', 'legacy'):
         raise ValueError('Policy observation semantics mismatch')
+    if ck['config'].get('dim') != 23 or ck['config'].get('horizon') != 8:
+        raise ValueError('Study policy must have dim=23 and horizon=8')
     dataset = ROOT / job['dataset'] if job.get('dataset') else DATA
     with h5py.File(dataset, 'r') as f:
         if any(name not in f['data'] for name in job['demos']):
@@ -141,7 +152,8 @@ def run(job, output):
         env = make_env(False)
         arm = env.robots[0].part_controllers['right']
         if not (arm.input_type == 'delta' and arm.input_ref_frame == 'world'
-                and env.control_freq == 20 and np.array_equal(arm.output_max, [.05, .05, .05, .5, .5, .5])):
+                and env.control_freq == 20 and np.array_equal(arm.output_max, [.05, .05, .05, .5, .5, .5])
+                and np.array_equal(arm.output_min, [-.05, -.05, -.05, -.5, -.5, -.5])):
             raise ValueError('Unexpected OSC/controller units')
         with h5py.File(dataset, 'r') as data, (output / 'trace.jsonl').open('x', encoding='utf-8') as trace, \
                 (output / 'settling_trace.jsonl').open('x', encoding='utf-8') as settling_trace:

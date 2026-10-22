@@ -32,7 +32,8 @@ class FakeEnvironment:
     """Succeed at control 3, then stay stationary during 20 settling controls."""
     def __init__(self, success_at=3):
         controller = SimpleNamespace(input_type="delta", input_ref_frame="world",
-                                     output_max=np.array([.05, .05, .05, .5, .5, .5]))
+                                     output_max=np.array([.05, .05, .05, .5, .5, .5]),
+                                     output_min=np.array([-.05, -.05, -.05, -.5, -.5, -.5]))
         self.robots = [SimpleNamespace(part_controllers={"right": controller})]
         self.control_freq = 20
         self.object_to_id = {"can": 0}
@@ -72,7 +73,7 @@ class EvaluationTests(unittest.TestCase):
     def test_historical_world_model_cannot_take_canonical_observations(self):
         with self.assertRaisesRegex(ValueError, "Historical WM"):
             evaluate.validate_job(valid_job(method="full", semantics="canonical"))
-        evaluate.validate_job(valid_job(method="full", semantics="legacy"))
+        evaluate.validate_job(valid_job(method="full", seed=17, semantics="legacy"))
 
     def test_corrected_policy_semantics_mismatch_rejected_before_data_or_sim(self):
         with tempfile.TemporaryDirectory() as tmp, \
@@ -138,7 +139,7 @@ class EvaluationTests(unittest.TestCase):
                     env, policy = FakeEnvironment(), FakePolicy()
                     stack.enter_context(mock.patch.object(evaluate, "ROOT", root))
                     stack.enter_context(mock.patch.object(evaluate, "DATA", root / "fixture.hdf5"))
-                    stack.enter_context(mock.patch.object(evaluate.torch, "load", return_value={"config": {}}))
+                    stack.enter_context(mock.patch.object(evaluate.torch, "load", return_value={"config": {"dim": 23, "horizon": 8}}))
                     h5 = stack.enter_context(mock.patch.object(evaluate.h5py, "File"))
                     h5.return_value.__enter__.return_value = {"data": {"demo_0": object()}}
                     stack.enter_context(mock.patch.object(evaluate, "load_policy", return_value=policy))
