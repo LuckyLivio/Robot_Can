@@ -66,6 +66,9 @@ def main():
     source_paths=[HERE/'详细设计.md',Path(__file__),OLD/'build_design.py',
                   OLD/'research/references_verified.json',ROOT/'common.py',ROOT/'world_model.py',
                   ROOT/'robot_can_v2/observations.py',ROOT/'robot_can_v2/evaluate.py',ROOT/'robot_can_v2/train_world.py',
+                  ROOT/'robot_can_v2/train_policy.py',ROOT/'train_policy.py',ROOT/'collect_rollout_branches.py',
+                  ROOT/'collect_branches.py',ROOT/'reproduction/multiseed_20261012_01/train_suite.py',
+                  *[ROOT/f'models/multiseed_20261012_01_full_s{seed}/config.json' for seed in (17,23,41)],
                   ROOT/'reproduction/recovery_v5_20261012_01/recovery_controller.py']
     manifest={'title':TITLE,'built_utc':datetime.now(timezone.utc).isoformat(),
               'scope':'Standalone Chapter 4 detailed design; no abstract, introduction, full evaluation chapter or appendices',

@@ -129,12 +129,12 @@ def world_model():
     arrow(d, [(1050, 232), (1145, 232)])
     text(d, "联合损失：状态误差 + 进展监督 + 失持监督 + 组内排序", (950, 375), 38)
     band(d, (45, 450, 1855, 520), "在线控制：冻结权重与标准化量，逐周期重新预测")
-    box(d, (70, 595, 455, 755), "当前状态与队列", "真实 D2 前缀")
+    box(d, (70, 595, 455, 755), "状态与候选命令", "含真实 D2 队列")
     box(d, (550, 595, 1050, 755), "固定权重递推", "8 步预测 / 不注入真值", GREEN)
     box(d, (1145, 595, 1830, 755), "预测读出与候选评分", "本轮只提交 1 条新命令", GREEN)
     arrow(d, [(455, 675), (550, 675)])
     arrow(d, [(1050, 675), (1145, 675)])
-    text(d, "读出仅由预测物理状态产生；隐藏状态参与动态递推", (950, 825), 38)
+    text(d, "读出头输入为标准化预测状态；隐藏状态参与动态递推", (950, 825), 38)
     return save(im, "world_model.png")
 
 
@@ -166,7 +166,7 @@ def candidate_flow():
 
 
 def recovery_flow():
-    im, d = canvas(900)
+    im, d = canvas(1085)
     coords = []
     stages = [("正常监测", "透传策略建议"), ("回撤", "RETRACT"),
               ("对齐", "ALIGN"), ("下降", "DESCEND"),
@@ -181,7 +181,7 @@ def recovery_flow():
         bounds = (60+col*460, 60+row*210, 440+col*460, 190+row*210)
         coords.append(bounds)
         box(d, bounds, title, sub, title_size=40)
-    for n in range(11):
+    for n in range(1, 11):
         a, b = coords[n:n+2]
         if n in (3, 7):
             arrow(d, [((a[0]+a[2])/2, a[3]), ((b[0]+b[2])/2, b[1])])
@@ -189,20 +189,27 @@ def recovery_flow():
             arrow(d, [(a[2], (a[1]+a[3])/2), (b[0], (b[1]+b[3])/2)])
         else:
             arrow(d, [(a[0], (a[1]+a[3])/2), (b[2], (b[1]+b[3])/2)])
-    box(d, (70, 715, 590, 835), "恢复异常", "失持 / 超时 / 几何失效", GOLD_BG, 40)
-    box(d, (700, 715, 1190, 835), "仍有额度且可恢复？", "每回合最多 2 次", GOLD_BG, 40)
+    # This branch is only the ordinary unheld attempt.  The holding=True
+    # bypass is stated separately, rather than conflated with an observation.
+    arrow(d, [(250, 60), (250, 25), (710, 25), (710, 60)])
+    label(d, "触发且未持物", (480, 25))
+    box(d, (70, 715, 590, 835), "试抬失败 / 可重试超时", "调用 start_attempt", GOLD_BG, 40)
+    box(d, (700, 715, 1190, 835), "剩余尝试次数 > 0？", "每回合最多 2 次", GOLD_BG, 40)
     box(d, (1310, 715, 1830, 835), "EXHAUSTED", "停止覆盖，透传策略", GOLD_BG, 40)
-    # An illustrative exception edge from TEST_LIFT denotes stage failures;
-    # the stage table in the text specifies every individual condition.
+    # TEST_LIFT failure and retryable timeouts use the default holding=False.
+    # Workspace failure and loss inside the target area have direct bypasses.
     arrow(d, [(1170, 400), (1170, 435), (1870, 435),
               (1870, 665), (330, 665), (330, 715)], GOLD, 4)
-    label(d, "阶段异常统一进入额度判断", (1360, 665), fill=GOLD)
+    label(d, "试抬未确认 / 可重试超时", (1360, 665), fill=GOLD)
     arrow(d, [(590, 775), (700, 775)], GOLD, 4)
     arrow(d, [(1190, 775), (1310, 775)], GOLD, 4)
     label(d, "否", (1250, 745), fill=GOLD)
     arrow(d, [(945, 835), (945, 870), (20, 870),
-              (20, 20), (710, 20), (710, 60)], GOLD, 4)
-    label(d, "是：再次尝试恢复", (500, 870), fill=GOLD)
+              (20, 225), (710, 225), (710, 190)], GOLD, 4)
+    label(d, "是：默认 holding=False，重回 RETRACT", (500, 870), fill=GOLD)
+    text(d, "持物旁路：NORMAL 持物停滞 → start_attempt(holding=True) → LIFT", (950, 940), 38)
+    text(d, "工作区旁路：活动恢复阶段越界 → EXHAUSTED", (950, 995), 38)
+    text(d, "释放旁路：LIFT / CARRY / PLACE 失持且位于目标 XY 区 → RELEASE", (950, 1050), 38)
     return save(im, "recovery_flow.png")
 
 

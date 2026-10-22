@@ -1,37 +1,37 @@
 {
   "passed": true,
-  "verified_utc": "2026-10-22T04:25:48.202608+00:00",
+  "verified_utc": "2026-10-22T05:03:14.965849+00:00",
   "errors": [],
   "scope": "Rewritten chapter-style detailed design; no new training or simulation",
-  "implementation_baseline": "844d93e1f361996f474291dc27bbbb7e8c29dcb8",
+  "implementation_baseline": "da37c1f1babdc6632f2853406a29ae731e6813b0",
   "pages": 13,
-  "cjk_characters": 5354,
+  "cjk_characters": 5773,
   "numbered_equations": 6,
-  "office_math_objects": 23,
+  "office_math_objects": 26,
   "tables": 6,
   "figures": 6,
   "references": 6,
   "native_word_fields_updated": true,
   "blank_body_pages": [],
   "body_character_counts": [
-    434,
-    790,
-    929,
-    673,
-    975,
-    623,
-    568,
-    589,
-    814,
-    904,
-    691,
-    428,
-    1147
+    449,
+    824,
+    956,
+    770,
+    1021,
+    600,
+    971,
+    510,
+    566,
+    1006,
+    960,
+    584,
+    1421
   ],
   "math_check_scope": "All expressions checked for unconverted commands and minus preservation after native Word save",
   "visual_reviews": [
     {
-      "reviewer": "reference_design_scope",
+      "reviewer": "design_models",
       "pages": [
         1,
         2,
@@ -40,45 +40,78 @@
         5
       ],
       "all_pages_opened_original": true,
+      "render": "v1; identical PNG SHA in v2",
       "passed": true
     },
     {
-      "reviewer": "wm_design_focus",
+      "reviewer": "design_recovery",
       "pages": [
         6,
         7,
         8,
-        9,
-        10
+        9
       ],
       "all_pages_opened_original": true,
+      "render": "v2",
       "passed": true
     },
     {
-      "reviewer": "wm_design_figures",
+      "reviewer": "design_references",
       "pages": [
+        10,
         11,
         12,
         13
       ],
       "all_pages_opened_original": true,
+      "render": "v1 for 10/13 (identical PNG SHA in v2); v2 for 11/12",
       "passed": true
     }
   ],
   "layout_repairs": "State table kept together; short action intervals are Office Math; summary kept whole with following references",
   "conversion_backend": "Microsoft Word native PDF export plus packaged render_docx.py rasterizer; LibreOffice absent",
   "final_outputs_sha256": {
-    "基于世界模型的机器人抓取搬运系统设计与实现详细设计.docx": "40e37e2ab5981a2bc60c25e372d7d80a7f4d373bdb5ef088fe6e3d9d95db63c5",
-    "详细设计.md": "634f727ea19d3126b05feb090ffe70f462d1af14a67eddc4b149c99d3e17b247"
+    "基于世界模型的机器人抓取搬运系统设计与实现详细设计.docx": "8ea090a43955007bbf6ca1c8186cff2e9fce5b409078d6998bc87327b4690329",
+    "详细设计.md": "6b99115bd78fb50009d0166ba9925104d71742ab7d2c4fd63e7fd44082bf1722"
   },
-  "internal_pdf_sha256": "ef42d166c2c78f72df0bba94fd05e94132e2e7d2e967fe005feb6283063cbda1",
+  "internal_pdf_sha256": "c10bf7ec05fcb9824b586c1998ec22cec2949d28aaefd45c0db751244f5218d1",
   "reference_pdf_sha256": "7955c52863ef1dd4f50bd1d6ad794ebe50864a6b6946029be3921670e3b51c9d",
   "original_52_page_outputs_sha256": {
     "机器人抓取搬运与失败恢复系统详细设计.docx": "d7dea40aa9826df8485c4cb5e90e98f379f1e5c7d7a8a29d5a86b2a2f3c14adb",
     "详细设计.md": "cbbbfda0bf8d8718545a637dda3d04893513389bafbb013c3f3a6a2f9893985c"
   },
   "project_changes_outside_new_docs_and_navigation": [],
-  "qa_intermediates": "C:\\Users\\Livio\\AppData\\Local\\Temp\\robot_can_wm_design_20261022_01\\render_v2",
+  "qa_intermediates": "C:\\Users\\Livio\\AppData\\Local\\Temp\\robot_can_wm_design_review_20261022_01\\render_v2",
   "reference_document_content_reused": "Chapter structure and presentation conventions only; original prose and figures",
-  "not_a_new_experiment_sample": true
+  "not_a_new_experiment_sample": true,
+  "revision_audit": "research/revision_audit_20261022.md",
+  "review_scope": "All six numbered formulas, six figures, six tables, implementation contracts and Chinese undergraduate thesis language",
+  "lightweight_cpu_checks": {
+    "bc_parameters": 827445,
+    "full_parameters": 87321,
+    "bc_output": "B x 8 x 7",
+    "full_outputs": [
+      "B x 8 x 23",
+      "B x 8 x 2"
+    ]
+  },
+  "dataset_checks": {
+    "train_groups": 160,
+    "dev_groups": 64,
+    "train_parents": 20,
+    "dev_parents": 8,
+    "candidates": 4,
+    "horizon": 8
+  },
+  "acronym_check": "Advisory script executed; Chinese definitions, proper names, state constants and bibliography author names manually reviewed",
+  "runtime_success_source_sha256": "1abafb93f272c6ccda7f207b6c5c12c0c9b2f97087d60754dba402786c70c4ee",
+  "unchanged_page_sha_verified": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    10,
+    13
+  ]
 }
