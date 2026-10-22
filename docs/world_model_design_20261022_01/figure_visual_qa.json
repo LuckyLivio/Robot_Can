@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-22",
+  "scope": "Standalone figure images; document pagination is checked by the parent workflow",
+  "method": "All six PNG files opened with view_image and visually inspected",
+  "passed": true,
+  "figures_reviewed": [
+    "architecture.png",
+    "world_model.png",
+    "candidate_flow.png",
+    "recovery_flow.png",
+    "data_entities.png",
+    "control_sequence.png"
+  ],
+  "checks": [
+    "Text is legible and remains inside image bounds",
+    "Arrow paths do not pass through unrelated control boxes",
+    "World-model offline supervision is separated from online frozen inference",
+    "The pending D2 queue is an independent input to world-model comparison",
+    "Candidate sequences preserve two real pending commands and repeat each candidate six times",
+    "The recovery exhausted state passes policy actions through instead of claiming an emergency stop",
+    "Data entities are conceptual file relations and do not claim a SQL database",
+    "The control sequence distinguishes submitted and executed actions"
+  ],
+  "corrections_after_first_review": [
+    "Replaced unsupported Unicode subscripts with readable plain c0/c1/c2/c3/ck and q0/q1",
+    "Rerouted the recovery retry edge below all exception boxes to remove an ambiguous crossing",
+    "Reopened candidate_flow.png and recovery_flow.png after their final corrections"
+  ],
+  "minimum_label_size": "38 pixels at 1900 pixels width, approximately 9.07 points when printed at 16 cm width",
+  "figure_hash_manifest": "figure_manifest.json"
+}

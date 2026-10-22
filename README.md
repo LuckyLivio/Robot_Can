@@ -1,10 +1,10 @@
 # CAN LAB · 机器人抓取与恢复控制
 
-2026-10-22：完成高优先级修复、新BC配对训练、360次开发与1680次冻结后确认。本轮不写论文。
+2026-10-22：完成高优先级修复、新BC配对训练、360次开发与1680次冻结后确认；新增13页世界模型系统详细设计。
 
 [本轮完整报告](reproduction/graduation_repairs_20261022_01/REPORT.md) · [结果前端](reproduction/graduation_repairs_20261022_01/index.html) · [新活动代码与命令](robot_can_v2/README.md)
 
-[系统详细设计文档](docs/detailed_design_20261022_01/README.md) · [可编辑Word](docs/detailed_design_20261022_01/机器人抓取搬运与失败恢复系统详细设计.docx) · [设计源稿](docs/detailed_design_20261022_01/详细设计.md)
+[世界模型系统详细设计（13页）](docs/world_model_design_20261022_01/README.md) · [可编辑Word](docs/world_model_design_20261022_01/基于世界模型的机器人抓取搬运系统设计与实现详细设计.docx) · [设计源稿](docs/world_model_design_20261022_01/详细设计.md) · [原52页版本存档](docs/detailed_design_20261022_01/README.md)
 
 新实现统一观测时序，修复prediction_only与评估契约，拒绝覆盖旧产物。旧源码、权重、数据和实验结果保留；原正式v5仍是冻结参考，预算候选不因开发门槛通过就自动采用。
 
