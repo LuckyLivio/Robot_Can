@@ -1,8 +1,10 @@
-# CAN LAB · 机器人抓取与恢复控制
+# CAN LAB · 世界模型机器人实验室
+
+2026-10-28：[新版项目展台](index.html)默认展示Full＋冻结v5完整系统，可切换本批两条件综合成功率最高的BC＋v5对照。新增交互统计、3个真实案例及无恢复配对回放、控制检查器、模型说明和文档入口；支持桌面、平板与手机。前端只展示既有证据，没有启动新训练或修改研究结果。[展示与维护说明](web/README.md) · [本轮检查记录](reproduction/frontend_showcase_20261028_01/README.md)。
 
 2026-10-22：完成高优先级修复、新BC配对训练、360次开发与1680次冻结后确认；新增13页世界模型系统详细设计。
 
-[本轮完整报告](reproduction/graduation_repairs_20261022_01/REPORT.md) · [结果前端](reproduction/graduation_repairs_20261022_01/index.html) · [新活动代码与命令](robot_can_v2/README.md)
+[本轮完整报告](reproduction/graduation_repairs_20261022_01/REPORT.md) · [原结果页存档](reproduction/graduation_repairs_20261022_01/index.html) · [新活动代码与命令](robot_can_v2/README.md)
 
 [世界模型系统详细设计（13页）](docs/world_model_design_20261022_01/README.md) · [可编辑Word](docs/world_model_design_20261022_01/基于世界模型的机器人抓取搬运系统设计与实现详细设计.docx) · [设计源稿](docs/world_model_design_20261022_01/详细设计.md) · [原52页版本存档](docs/detailed_design_20261022_01/README.md)
 
